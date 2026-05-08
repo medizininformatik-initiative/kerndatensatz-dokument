@@ -180,18 +180,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
+          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
         },
-        "name": "MII VS Dokument NLP Processing Status",
-        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "name": "MII VS Dokument NLP Processing Status CS",
+        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
+          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
         },
-        "name": "MII VS Dokument NLP Processing Status",
-        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "name": "MII VS Dokument NLP Processing Status VS",
+        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {

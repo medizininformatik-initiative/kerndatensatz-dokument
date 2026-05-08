@@ -12,7 +12,7 @@
 [MII_VS_Dokument_Einrichtungsart]: ValueSet-mii-vs-dokument-einrichtungsart.html
 [MII_VS_Dokument_Fachgebiet]: ValueSet-mii-vs-dokument-fachgebiet.html
 [MII_VS_Dokument_Format_Code]: ValueSet-mii-vs-dokument-format-code.html
-[MII_VS_Dokument_NLP_Processing_Status]: ValueSet-mii-vs-dokument-nlp-processing-status.html
 [MII_CS_Dokument_NLP_Processing_Status]: CodeSystem-mii-cs-dokument-nlp-processing-status.html
+[MII_VS_Dokument_NLP_Processing_Status]: ValueSet-mii-vs-dokument-nlp-processing-status.html
 [MII_VS_Dokument_SCT_Dokument_Kategorie]: ValueSet-mii-vs-dokument-sct-dokument-kategorie.html
 [MII_VS_Dokument_SCT_Dokument_Typ]: ValueSet-mii-vs-dokument-sct-dokument-typ.html
