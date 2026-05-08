@@ -74,11 +74,15 @@
         "coding": [
           {
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-            "code": "deid"
+            "code": "preprocessed"
           },
           {
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
             "code": "format-change"
+          },
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code": "surrogated"
           }
         ]
       },

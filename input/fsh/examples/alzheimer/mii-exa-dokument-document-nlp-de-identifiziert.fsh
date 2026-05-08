@@ -19,5 +19,6 @@ Usage: #example
 * content[Binaerdaten].attachment.hash = "PO6tZryRCRFyjrsMcKnCFuqxX1s="
 * content[Binaerdaten].attachment.title = "De-ID.txt"
 * content[Binaerdaten].format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #deid
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #preprocessed
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #format-change
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #surrogated

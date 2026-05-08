@@ -1,8 +1,8 @@
 Output File                                                      Name                                      Type        FSH File                                                                    Lines
 CapabilityStatement-mii-cps-dokument-capabilitystatement.json    mii-cps-dokument-capabilitystatement      Instance    definitions/mii-cps-dokument-capabilitystatement.fsh                        1 - 64
 CodeSystem-mii-cs-dokument-nlp-processing-status.json            MII_CS_Dokument_NLP_Processing_Status     CodeSystem  terminology/mii-cs-dokument-nlp-processing-status.fsh                       1 - 37
-DocumentReference-AmandaAlzheimerAnnotiertesDokument.json        AmandaAlzheimerAnnotiertesDokument        Instance    examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh              1 - 24
-DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json  AmandaAlzheimerDeIdentifiziertesDokument  Instance    examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh       1 - 23
+DocumentReference-AmandaAlzheimerAnnotiertesDokument.json        AmandaAlzheimerAnnotiertesDokument        Instance    examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh              1 - 23
+DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json  AmandaAlzheimerDeIdentifiziertesDokument  Instance    examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh       1 - 24
 DocumentReference-AmandaAlzheimerOriginalDokument.json           AmandaAlzheimerOriginalDokument           Instance    examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh               1 - 33
 Encounter-AmandaAlzheimerAbteilungskontakt.json                  AmandaAlzheimerAbteilungskontakt          Instance    examples/alzheimer/mii-exa-dokument-encounter-abteilungskontakt.fsh         1 - 14
 Encounter-AmandaAlzheimerEinrichtungskontakt.json                AmandaAlzheimerEinrichtungskontakt        Instance    examples/alzheimer/mii-exa-dokument-encounter-einrichtungskontakt.fsh       1 - 12
