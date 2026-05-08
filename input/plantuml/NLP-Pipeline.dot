@@ -9,10 +9,10 @@ digraph pipeline {
     ]
     edge [
         fontname="sans-serif"
-        fontsize=8
+        fontsize=9
         style=dotted
-        color=grey
-        fontcolor=grey
+        color=black
+        fontcolor=black
     ]
 
     subgraph steps {
@@ -33,8 +33,8 @@ digraph pipeline {
         s2 [
             label="Preprocessing"
             style="dashed,rounded"
-            color=lightgrey
-            fontcolor=lightgrey
+            color=grey
+            fontcolor=grey
         ]
         s3 [label="De-Identification"]
         s4 [label="Annotation"]
@@ -65,9 +65,9 @@ digraph pipeline {
         r3 -> r4 [label="appends"]
     }
 
-    s1 -> r1 [label="unprocessed"]
-    s3 -> r3 [label="deid\nformat-change"]
-    s3 -> r3 [label="preprocessed\nsurrogated"]
-    s4 -> r4 [label="preprocessed\nsurrogated\nsemantic"]
+    s1 -> r1 [label="unprocessed (Lvl 1)", color=darkblue, fontcolor=darkblue]
+    s3 -> r3 [xlabel="preprocessed (Lvl 1),\nformat-change (Lvl 2)", color=darkred, fontcolor=darkred]
+    s3 -> r3 [label="surrogated (Lvl 1)", color=darkpurple, fontcolor=darkpurple]
+    s4 -> r4 [label="annotated (Lvl 1),\nsemantic (Lvl 2)", color=darkgreen, fontcolor=darkgreen]
 }
 @enddot
