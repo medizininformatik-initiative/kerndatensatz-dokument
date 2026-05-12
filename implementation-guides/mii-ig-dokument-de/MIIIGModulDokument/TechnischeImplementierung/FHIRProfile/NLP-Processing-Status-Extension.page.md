@@ -29,9 +29,10 @@ Diese Erweiterung dient der strukturierten Beschreibung des Bearbeitungsstatus e
 Die NLP Extension stellt hierfür ein Codesystem bereit, mit dem die verschiedenen Bearbeitungszustände und Zwischenprodukte eines NLP-Workflows konsistent beschrieben und archiviert werden können.
 
 Das Codesystem der NLP Extension ist hierarchisch aufgebaut und umfasst zwei Ebenen: Level 1 (Lvl 1) und Level 2 (Lvl 2).
-Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: annotated, Lvl 2: deid, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde.
+Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: annotated, Lvl 2: deid, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde. 
 
 Die Nutzung beider Hierarchieebenen ist nicht verpflichtend. Abhängig vom jeweiligen Anwendungsszenario kann frei entschieden werden, ob nur der übergeordnete Status (Lvl 1) oder zusätzlich eine spezifische Ausdifferenzierung über Lvl 2 verwendet wird.
+Bitte beachten: wird eine Lvl 2 Spezifikation genutz wie z.B. "deid" muss auch zwingend das dazugehörige Lvl 1 "annotated" verwendet werden. Andernfalls könnte deid als vollständig deidentifiziertes Dokument missverstanden werden.
 
 Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationsprojekts, das bereits aus einem Quellsystem extrahiert und anonymisiert wurde. Bis zum aktuellen Bearbeitungsstand können mehrere Verarbeitungsschritte erfolgt sein, beispielsweise:
 
