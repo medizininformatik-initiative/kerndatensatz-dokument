@@ -30,12 +30,7 @@ digraph pipeline {
         ]
 
         s1 [label="Ingestion"]
-        s2 [
-            label="Preprocessing"
-            style="dashed,rounded"
-            color=grey
-            fontcolor=grey
-        ]
+        s2 [label="Preprocessing"]
         s3 [label="De-Identification"]
         s4 [label="Annotation"]
         s1 -> s2 -> s3 -> s4
@@ -50,24 +45,25 @@ digraph pipeline {
             fillcolor=lightgrey
             width=2
         ]
-        edge [
-            dir=back
-            style=dashed
-            headport=sw
-            tailport=se
-        ]
-
+        r0 [label="Amanda_Alzheimer.docx"]
         r1 [label="Amanda_Alzheimer.txt"]
         r3 [label="De-ID.txt"]
         r4 [label="Annotat.zip"]
 
-        r1 -> r3 [label="transforms"]
-        r3 -> r4 [label="appends"]
+        // Invisible chain to pin the visual order r0 → r1 → r3 → r4
+        r0 -> r1 -> r3 -> r4 [style=invis]
+
+        // Visible relatesTo edges; constraint=false so they don't influence layout.
+        // Direction follows FHIR DocumentReference.relatesTo (target = source of transformation).
+        r1 -> r0 [label="transforms", style=dashed, constraint=false, headport=se, tailport=sw]
+        r3 -> r1 [label="transforms", style=dashed, constraint=false, headport=se, tailport=sw]
+        r4 -> r3 [label="appends",    style=dashed, constraint=false, headport=se, tailport=sw]
     }
 
-    s1 -> r1 [label="unprocessed (Lvl 1)", color=darkblue, fontcolor=darkblue]
-    s3 -> r3 [xlabel="preprocessed (Lvl 1),\nformat-change (Lvl 2)", color=darkred, fontcolor=darkred]
+    s1 -> r0 [label="unprocessed (Lvl 1)", color=darkblue, fontcolor=darkblue]
+    s2 -> r1 [xlabel="[preprocessed (Lvl 1),\nformat-change (Lvl 2)]", color=darkred, fontcolor=darkred]
+    s3 -> r3 [xlabel="[preprocessed (Lvl 1),\nformat-change (Lvl 2)]", color=darkred, fontcolor=darkred]
     s3 -> r3 [label="surrogated (Lvl 1)", color=darkpurple, fontcolor=darkpurple]
-    s4 -> r4 [label="annotated (Lvl 1),\nsemantic (Lvl 2)", color=darkgreen, fontcolor=darkgreen]
+    s4 -> r4 [label="[annotated (Lvl 1), semantic (Lvl 2)],\nsurrogated (Lvl 1),\n[preprocessed (Lvl 1), format-change (Lvl 2)]", color=darkgreen, fontcolor=darkgreen]
 }
 @enddot

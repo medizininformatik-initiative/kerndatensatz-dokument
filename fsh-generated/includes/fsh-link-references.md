@@ -3,6 +3,7 @@
 [AmandaAlzheimerAnnotiertesDokument]: DocumentReference-AmandaAlzheimerAnnotiertesDokument.html
 [AmandaAlzheimerDeIdentifiziertesDokument]: DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html
 [AmandaAlzheimerEinrichtungskontakt]: Encounter-AmandaAlzheimerEinrichtungskontakt.html
+[AmandaAlzheimerKlartextDokument]: DocumentReference-AmandaAlzheimerKlartextDokument.html
 [AmandaAlzheimerOriginalDokument]: DocumentReference-AmandaAlzheimerOriginalDokument.html
 [AmandaAlzheimerVersorgungsstellenKontakt]: Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html
 [mii-cps-dokument-capabilitystatement]: CapabilityStatement-mii-cps-dokument-capabilitystatement.html

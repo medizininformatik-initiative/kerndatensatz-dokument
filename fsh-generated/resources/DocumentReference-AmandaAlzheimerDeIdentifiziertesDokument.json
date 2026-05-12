@@ -48,7 +48,7 @@
     {
       "code": "transforms",
       "target": {
-        "reference": "DocumentReference/AmandaAlzheimerOriginalDokument"
+        "reference": "DocumentReference/AmandaAlzheimerKlartextDokument"
       }
     }
   ],

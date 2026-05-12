@@ -110,6 +110,13 @@
       },
       {
         "reference": {
+          "reference": "DocumentReference/AmandaAlzheimerKlartextDokument"
+        },
+        "name": "AmandaAlzheimerKlartextDokument",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+      },
+      {
+        "reference": {
           "reference": "DocumentReference/AmandaAlzheimerOriginalDokument"
         },
         "name": "AmandaAlzheimerOriginalDokument",

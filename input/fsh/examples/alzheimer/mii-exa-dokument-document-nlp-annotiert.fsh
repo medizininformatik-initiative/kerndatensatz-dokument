@@ -19,5 +19,12 @@ Usage: #example
 * content[Binaerdaten].attachment.hash = "1ndGSSne1BKhYNkOdut2r5gQSuY="
 * content[Binaerdaten].attachment.title = "Annotat.zip"
 * content[Binaerdaten].format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
+// Akkumulierter Verarbeitungsstatus aus allen Stufen der Pipeline:
+//   Annotation        → annotated (Lvl 1), semantic     (Lvl 2)
+//   De-Identifikation → surrogated (Lvl 1)
+//   Preprocessing     → preprocessed (Lvl 1), format-change (Lvl 2)
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #annotated
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #semantic
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #surrogated
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #preprocessed
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #format-change
