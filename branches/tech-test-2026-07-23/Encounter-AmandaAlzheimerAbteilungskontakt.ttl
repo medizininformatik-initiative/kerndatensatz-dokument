@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/Encounter/AmandaAlzheimerAbteilungskontakt> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "AmandaAlzheimerAbteilungskontakt"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter AmandaAlzheimerAbteilungskontakt</b></p><a name=\"AmandaAlzheimerAbteilungskontakt\"> </a><a name=\"hcAmandaAlzheimerAbteilungskontakt\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.base@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung\">MII PR Fall Kontakt mit einer Gesundheitseinrichtung</a></p></div><p><b>identifier</b>: Fallnummer/123456</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:\">Abteilungskontakt</span></p><p><b>serviceType</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel 0900}\">Rheumatologie</span></p><p><b>subject</b>: <a href=\"Patient-AmandaAlzheimer.html\">Alzheimer Amanda (official) Female, DoB Unknown ( Krankenaktennummer (use: usual, ))</a></p><p><b>period</b>: 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</p><p><b>partOf</b>: <a href=\"Encounter-AmandaAlzheimerEinrichtungskontakt.html\">Encounter: identifier = Fallnummer; status = finished; class = inpatient encounter (ActCode#IMP); type = Einrichtungskontakt; period = 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</a></p></div>"
+  ] ;
+  fhir:Encounter.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "VN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://uk-musterstadt.de/fid" ] ;
+     fhir:Identifier.value [ fhir:value "123456" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ] ;
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.code [ fhir:value "abteilungskontakt" ] ;
+       fhir:Coding.display [ fhir:value "Abteilungskontakt" ]
+     ]
+  ] ;
+  fhir:Encounter.serviceType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" ] ;
+       fhir:Coding.code [ fhir:value "0900" ] ;
+       fhir:Coding.display [ fhir:value "Rheumatologie" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/Patient/AmandaAlzheimer> ;
+     fhir:Reference.reference [ fhir:value "Patient/AmandaAlzheimer" ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2028-01-24T00:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2028-02-06T00:00:00+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.partOf [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/Encounter/AmandaAlzheimerEinrichtungskontakt> ;
+     fhir:Reference.reference [ fhir:value "Encounter/AmandaAlzheimerEinrichtungskontakt" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/Encounter/AmandaAlzheimerAbteilungskontakt.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

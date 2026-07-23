@@ -1,0 +1,239 @@
+{
+  "codeSystems" : [{
+    "url" : "http://dvmd.de/fhir/ValueSet/kdl",
+    "version" : "2025",
+    "status" : "active",
+    "name" : "ValueSetKDL",
+    "title" : "ValueSet Klinische Dokumentenklassen-Liste (Version 2025)",
+    "description" : "ValueSets sind Listen von Codes, die in einem bestimmten Kontext verwendet werden. Durch sog. &quot;Terminology-Binding&quot; können Attribute von FHIR-Ressourcen an ValueSets gebunden werden, um die Menge der zulässigen Werte für dieses Attribut einzuschränken.  Dieses ValueSet enthält sämtliche Codes aus dem CodeSystem &quot;KDL&quot; und ist für Bindings an Attribute geeignet, an denen alle Werte aus dem CodeSystem &quot;KDL&quot; erlaubt werden sollen.  Beispiel: DocumentReference.type",
+    "systems" : ["http://dvmd.de/fhir/CodeSystem/kdl"],
+    "oids" : ["1.2.276.0.76.11.469"],
+    "sources" : ["1.2.276.0.76.11.469"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/c80-doc-typecodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DocumentTypeValueSet",
+    "title" : "Document Type Value Set",
+    "description" : "This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.47"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.47"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DocumentClassValueSet",
+    "title" : "Document Class Value Set",
+    "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDSclassCode",
+    "version" : "2021-06-25T13:44:47",
+    "status" : "active",
+    "name" : "IHEXDSclassCode",
+    "title" : "IHE XDS classCode",
+    "description" : "**classCode (XDSDocumentEntry)**\r\n A high-level classification of XDS Documents that indicates the kind of document, e.g., report, summary, note, consent.",
+    "systems" : ["http://loinc.org",
+    "http://ihe-d.de/CodeSystems/IHEXDSclassCode"],
+    "oids" : ["1.2.276.0.76.11.32"],
+    "sources" : ["1.2.276.0.76.11.32"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDSeventCodeList",
+    "version" : "2021-07-06T21:19:41",
+    "status" : "active",
+    "name" : "IHEXDSeventCodeList",
+    "title" : "IHE XDS eventCodeList",
+    "description" : "**eventCodeList (XDSDocumentEntry)**\r\nThis list of codes represents the main clinical acts being documented in an XDS Document.",
+    "systems" : ["http://snomed.info/srt",
+    "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://dvmd.de/fhir/CodeSystem/kdl",
+    "http://ihe-d.de/CodeSystems/DokumentenWarnhinweise",
+    "http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung",
+    "urn:iso-astm:E1762-95:2013",
+    "http://dicom.nema.org/resources/ontology/DCM",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.276.0.76.11.34"],
+    "sources" : ["1.2.276.0.76.11.34"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDSformatCodeDE",
+    "version" : "2018-12-14T17:07:12",
+    "status" : "active",
+    "name" : "IHEXDSformatCodeDE",
+    "title" : "IHE XDS formatCode",
+    "description" : "**formatCode (XDSDocumentEntry)**\r\nGlobally unique code specifying the format of an XDS Document. Along with the typeCode, it should provide sufficient information to allow a potential consumer to know if it will be able to process the document.",
+    "systems" : ["urn:dicom:uid",
+    "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate"],
+    "oids" : ["1.2.276.0.76.11.35"],
+    "sources" : ["1.2.276.0.76.11.35"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-dokument-format-code.html" : "MII VS Dokument Format Code"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode",
+    "version" : "2021-07-06T21:23:52",
+    "status" : "active",
+    "name" : "IHEXDShealthcareFacilityTypeCode",
+    "title" : "IHE XDS healthcareFacilityTypeCode",
+    "description" : "**healthcareFacilityTypeCode (XDSDocumentEntry)**\r\nThis code for an XDS Document represents the type of organizational setting of the clinical encounter during which the documented act occurred.",
+    "systems" : ["http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung",
+    "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung"],
+    "oids" : ["1.2.276.0.76.11.36"],
+    "sources" : ["1.2.276.0.76.11.36"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-dokument-einrichtungsart.html" : "MII VS Dokument Einrichtungart"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+    "version" : "2019-05-17T13:46:31",
+    "status" : "active",
+    "name" : "IHEXDSpracticeSettingCode",
+    "title" : "IHE XDS practiceSettingCode",
+    "description" : "**practiceSettingCode (XDSDocumentEntry)**\r\nThe code for an XDS Document that specifies the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology).",
+    "systems" : ["http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+    "http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen"],
+    "oids" : ["1.2.276.0.76.11.37"],
+    "sources" : ["1.2.276.0.76.11.37"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-dokument-fachgebiet.html" : "MII VS Dokument Fachgebiet"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDStypeCode",
+    "version" : "2020-02-07T07:55:58",
+    "status" : "active",
+    "name" : "IHEXDStypeCode",
+    "title" : "IHE XDS typeCode",
+    "description" : "**typeCode (XDSDocumentEntry)**\r\nA low-level classification of XDS Documents within a classCode that describes class, event, specialty, and setting.",
+    "systems" : ["http://ihe-d.de/CodeSystems/IHEXDStypeCode",
+    "http://loinc.org"],
+    "oids" : ["1.2.276.0.76.11.38"],
+    "sources" : ["1.2.276.0.76.11.38"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode",
+    "version" : "1.4.0",
+    "status" : "active",
+    "name" : "IHE_FormatCode_vs",
+    "title" : "IHE ValueSet of Format Codes for use with Document Sharing",
+    "description" : "The IHE FormatCode Value set is defined to be the set of FormatCode(s) defined by IHE, DICOM and HL7. These codes are intended to be preferred.",
+    "systems" : ["urn:ietf:rfc:3986",
+    "http://dicom.nema.org/resources/ontology/DCMUID",
+    "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"],
+    "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+    "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-dokument-format-code.html" : "MII VS Dokument Format Code"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
+    "version" : "2026.0.1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_Einrichtungsart",
+    "title" : "MII VS Dokument Einrichtungart",
+    "description" : "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
+    "systems" : ["http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung",
+    "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
+    "version" : "2026.0.1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_Fachgebiet",
+    "title" : "MII VS Dokument Fachgebiet",
+    "description" : "ValueSet zum erzeugenden Fachgebiet eines Dokuments",
+    "systems" : ["http://snomed.info/sct",
+    "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+    "http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code",
+    "version" : "2026.0.1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_Format_Code",
+    "title" : "MII VS Dokument Format Code",
+    "description" : "ValueSet zum (komplexen) Format Code eines Dokuments",
+    "systems" : ["urn:ietf:rfc:3986",
+    "http://dicom.nema.org/resources/ontology/DCMUID",
+    "urn:dicom:uid",
+    "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+    "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+    "version" : "2026.0.1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_NLP_Processing_Status",
+    "title" : "MII VS Dokument NLP Processing Status",
+    "description" : "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-dokument-nlp-processing-status.html" : "MII EX Dokument NLP Processing Status"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie",
+    "version" : "2026.0.1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_SCT_Dokument_Kategorie",
+    "title" : "MII VS Dokument SCT Dokument Kategorie",
+    "description" : "SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ",
+    "version" : "2026.0.1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_SCT_Dokument_Typ",
+    "title" : "MII VS Dokument SCT Dokument Typ",
+    "description" : "SNOMED CT ValueSet zum Typ eines Dokuments",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  }]
+}

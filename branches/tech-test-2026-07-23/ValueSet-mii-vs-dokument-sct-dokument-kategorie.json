@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-dokument-sct-dokument-kategorie",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "language" : "de-DE",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de-DE\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-DE\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-dokument-sct-dokument-kategorie</b></p><a name=\"mii-vs-dokument-sct-dokument-kategorie\"> </a><a name=\"hcmii-vs-dokument-sct-dokument-kategorie\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: de-DE</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  descends from 424545009 (Record composition)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_SCT_Dokument_Kategorie",
+  "title" : "MII VS Dokument SCT Dokument Kategorie",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-23T12:41:25+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    },
+    {
+      "system" : "email",
+      "value" : "office@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "276"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "424545009"
+      }]
+    }]
+  }
+}

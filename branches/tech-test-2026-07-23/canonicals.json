@@ -1,0 +1,84 @@
+[{
+  "id" : "mii-cps-dokument-capabilitystatement",
+  "type" : "CapabilityStatement",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement",
+  "version" : "2026.0.1",
+  "name" : "MII_CPS_Dokument_CapabilityStatement"
+},
+{
+  "id" : "mii-cs-dokument-nlp-processing-status",
+  "type" : "CodeSystem",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+  "version" : "2026.0.1",
+  "name" : "MII_CS_Dokument_NLP_Processing_Status"
+},
+{
+  "id" : "mii-ig-dokument",
+  "type" : "ImplementationGuide",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
+  "version" : "2026.0.1",
+  "name" : "MII_IG_Dokument"
+},
+{
+  "id" : "mii-ex-dokument-nlp-processing-status",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
+  "version" : "2026.0.1",
+  "name" : "MII_EX_Dokument_NLP_Processing_Status"
+},
+{
+  "id" : "mii-lm-dokument",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument",
+  "version" : "2026.0.1",
+  "name" : "MII_LM_Dokument"
+},
+{
+  "id" : "mii-pr-dokument-dokument",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+  "version" : "2026.0.1",
+  "name" : "MII_PR_Dokument_Dokument"
+},
+{
+  "id" : "mii-vs-dokument-einrichtungsart",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_Einrichtungsart"
+},
+{
+  "id" : "mii-vs-dokument-fachgebiet",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_Fachgebiet"
+},
+{
+  "id" : "mii-vs-dokument-format-code",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_Format_Code"
+},
+{
+  "id" : "mii-vs-dokument-nlp-processing-status",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_NLP_Processing_Status"
+},
+{
+  "id" : "mii-vs-dokument-sct-dokument-kategorie",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_SCT_Dokument_Kategorie"
+},
+{
+  "id" : "mii-vs-dokument-sct-dokument-typ",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ",
+  "version" : "2026.0.1",
+  "name" : "MII_VS_Dokument_SCT_Dokument_Typ"
+}]

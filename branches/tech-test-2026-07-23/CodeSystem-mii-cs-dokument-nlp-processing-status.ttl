@@ -1,0 +1,157 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-dokument-nlp-processing-status"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de-DE"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"de-DE\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-DE\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-dokument-nlp-processing-status</b></p><a name=\"mii-cs-dokument-nlp-processing-status\"> </a><a name=\"hcmii-cs-dokument-nlp-processing-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: de-DE</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>English (English, en)</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">unprocessed<a name=\"mii-cs-dokument-nlp-processing-status-unprocessed\"> </a></td><td>Original</td><td>Dokument im Original</td><td>Original document</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">preprocessed<a name=\"mii-cs-dokument-nlp-processing-status-preprocessed\"> </a></td><td>Vorverarbeitetes Dokument</td><td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td><td>Preprocessed document</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  format-change<a name=\"mii-cs-dokument-nlp-processing-status-format-change\"> </a></td><td>Formatänderung</td><td>Vorverarbeitung mit Transformation des Formats</td><td>Format changed</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  content-change<a name=\"mii-cs-dokument-nlp-processing-status-content-change\"> </a></td><td>Inhaltsänderung</td><td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td><td>Content changed</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">annotated<a name=\"mii-cs-dokument-nlp-processing-status-annotated\"> </a></td><td>Annotiertes Dokument</td><td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td><td>Annotated document</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  preanno<a name=\"mii-cs-dokument-nlp-processing-status-preanno\"> </a></td><td>Vorannotiertes Dokument</td><td>Maschinelle Vorannotation</td><td>Pre-annotated document</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  deid<a name=\"mii-cs-dokument-nlp-processing-status-deid\"> </a></td><td>Deidentifiziertes Dokument</td><td>Annotationen zum Zwecke einer Deidentifizierung</td><td>De-identified document</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  semantic<a name=\"mii-cs-dokument-nlp-processing-status-semantic\"> </a></td><td>Semantisch annotiertes Dokument</td><td>Semantische Annotationen</td><td>Semantically annotated document</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">surrogated<a name=\"mii-cs-dokument-nlp-processing-status-surrogated\"> </a></td><td>Surrogiertes Dokument</td><td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte wurden durch fiktive Konzepte irreversibel ersetzt. Das Dokument lässt keinen Rückschluss mehr auf die ersetzten Informationen zu.</td><td>Surrogated document</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status"] ;
+  fhir:CodeSystem.version [ fhir:value "2026.0.1"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Dokument_NLP_Processing_Status"] ;
+  fhir:CodeSystem.title [ fhir:value "MII VS Dokument NLP Processing Status"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T12:41:25+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik-Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik-Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "office@medizininformatik-initiative.de" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Status der NLP-Verarbeitung des referenzierten Dokuments"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ] ;
+       fhir:Coding.code [ fhir:value "276" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "9"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "unprocessed" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Original" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Dokument im Original" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Original document" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "preprocessed" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Vorverarbeitetes Dokument" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Preprocessed document" ]
+     ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.code [ fhir:value "format-change" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Formatänderung" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Vorverarbeitung mit Transformation des Formats" ] ;
+       fhir:CodeSystem.concept.designation [
+         fhir:index 0 ;
+         fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+         fhir:CodeSystem.concept.designation.value [ fhir:value "Format changed" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "content-change" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Inhaltsänderung" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung" ] ;
+       fhir:CodeSystem.concept.designation [
+         fhir:index 0 ;
+         fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+         fhir:CodeSystem.concept.designation.value [ fhir:value "Content changed" ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "annotated" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Annotiertes Dokument" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren" ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Annotated document" ]
+     ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.code [ fhir:value "preanno" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Vorannotiertes Dokument" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Maschinelle Vorannotation" ] ;
+       fhir:CodeSystem.concept.designation [
+         fhir:index 0 ;
+         fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+         fhir:CodeSystem.concept.designation.value [ fhir:value "Pre-annotated document" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "deid" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Deidentifiziertes Dokument" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Annotationen zum Zwecke einer Deidentifizierung" ] ;
+       fhir:CodeSystem.concept.designation [
+         fhir:index 0 ;
+         fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+         fhir:CodeSystem.concept.designation.value [ fhir:value "De-identified document" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:CodeSystem.concept.code [ fhir:value "semantic" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Semantisch annotiertes Dokument" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Semantische Annotationen" ] ;
+       fhir:CodeSystem.concept.designation [
+         fhir:index 0 ;
+         fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+         fhir:CodeSystem.concept.designation.value [ fhir:value "Semantically annotated document" ]
+       ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "surrogated" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Surrogiertes Dokument" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte wurden durch fiktive Konzepte irreversibel ersetzt. Das Dokument lässt keinen Rückschluss mehr auf die ersetzten Informationen zu." ] ;
+     fhir:CodeSystem.concept.designation [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.designation.language [ fhir:value "en" ] ;
+       fhir:CodeSystem.concept.designation.value [ fhir:value "Surrogated document" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
