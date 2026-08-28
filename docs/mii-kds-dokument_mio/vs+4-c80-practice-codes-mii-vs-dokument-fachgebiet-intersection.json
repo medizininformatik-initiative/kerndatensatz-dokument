@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "1edfc69a-133f-426d-872f-a4f03d25d741-12",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/1edfc69a-133f-426d-872f-a4f03d25d741-12",
-  "name" : "IntersectionPracticeSettingCodeValueSetAndMII_VS_Dokument_Fachgebiet",
-  "title" : "Intersection of Practice Setting Code Value Set And MII VS Dokument Fachgebiet",
-  "status" : "active",
-  "date" : "2026-04-13T15:57:43+00:00"
-}

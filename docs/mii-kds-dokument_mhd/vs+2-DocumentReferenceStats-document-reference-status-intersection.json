@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "116168b8-2943-4139-8366-9c36f7957719-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/116168b8-2943-4139-8366-9c36f7957719-6",
-  "name" : "IntersectionDocumentReferenceStatsAndDocumentReferenceStatus",
-  "title" : "Intersection of MHD DocumentReference status codes And DocumentReferenceStatus",
-  "status" : "active",
-  "date" : "2026-04-13T15:58:07+00:00"
-}

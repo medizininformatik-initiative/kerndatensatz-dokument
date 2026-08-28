@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "459d49af-e5b0-48c0-929d-c0886c4eadf6-15",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/459d49af-e5b0-48c0-929d-c0886c4eadf6-15",
+  "name" : "IntersectionIHEXDSpracticeSettingCodeAndMII_VS_Dokument_Fachgebiet",
+  "title" : "Intersection of IHE XDS practiceSettingCode And MII VS Dokument Fachgebiet",
+  "status" : "active",
+  "date" : "2026-08-28T16:41:44+00:00"
+}

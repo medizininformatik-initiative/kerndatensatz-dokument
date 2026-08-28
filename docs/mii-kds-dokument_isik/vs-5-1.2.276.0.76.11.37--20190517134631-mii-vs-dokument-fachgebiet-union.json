@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "459d49af-e5b0-48c0-929d-c0886c4eadf6-14",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/459d49af-e5b0-48c0-929d-c0886c4eadf6-14",
+  "name" : "UnionIHEXDSpracticeSettingCodeAndMII_VS_Dokument_Fachgebiet",
+  "title" : "Union of IHE XDS practiceSettingCode And MII VS Dokument Fachgebiet",
+  "status" : "active",
+  "date" : "2026-08-28T16:41:44+00:00",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCodeDoctoral"]
+    },
+    {
+      "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCodeNonDoctoral"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "394733009"
+      }]
+    },
+    {
+      "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"]
+    }]
+  }
+}
