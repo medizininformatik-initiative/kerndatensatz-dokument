@@ -1,6 +1,6 @@
 CodeSystem: MII_CS_Dokument_NLP_Processing_Status
 Id: mii-cs-dokument-nlp-processing-status
-Title: "MII VS Dokument NLP Processing Status"
+Title: "MII CS Dokument NLP Processing Status"
 Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * insert CS_Header($mii-cs-dokument-nlp-processing-status)
 * ^hierarchyMeaning = #is-a
@@ -32,6 +32,6 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
     * ^designation.language = #en
     * ^designation.value = "Semantically annotated document"
 
-* #surrogated "Surrogiertes Dokument" "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte wurden durch fiktive Konzepte irreversibel ersetzt. Das Dokument lässt keinen Rückschluss mehr auf die ersetzten Informationen zu."
+* #surrogated "Surrogiertes Dokument" "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt."
   * ^designation.language = #en
   * ^designation.value = "Surrogated document"

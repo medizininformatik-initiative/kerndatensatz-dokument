@@ -9,9 +9,9 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR Prof
 
 | Veröffentlichung | |
 |---------|---|
-| Datum   | 11.03.2026 |
-| Version | 2026.0.1 |
-| Status  | Active |
+| Datum   | 28.08.2026 |
+| Version | 2027.0.0-ballot.rc1 |
+| Status  | Ballot |
 | Realm   | DE | 
 <!-- | Reifegrad | MII Maturity Model (MM0\|MM1\|MM2\|MM3)| -->
 

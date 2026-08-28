@@ -4,7 +4,7 @@
   "content": "complete",
   "name": "MII_CS_Dokument_NLP_Processing_Status",
   "id": "mii-cs-dokument-nlp-processing-status",
-  "title": "MII VS Dokument NLP Processing Status",
+  "title": "MII CS Dokument NLP Processing Status",
   "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
   "concept": [
@@ -103,7 +103,7 @@
     {
       "code": "surrogated",
       "display": "Surrogiertes Dokument",
-      "definition": "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte wurden durch fiktive Konzepte irreversibel ersetzt. Das Dokument lässt keinen Rückschluss mehr auf die ersetzten Informationen zu.",
+      "definition": "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.",
       "designation": [
         {
           "language": "en",
@@ -112,7 +112,7 @@
       ]
     }
   ],
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-dokument-dokument",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Dokument_Dokument",
   "title": "MII PR Dokument Dokument",
   "status": "active",
@@ -35,20 +35,6 @@
         "id": "DocumentReference.meta.profile",
         "path": "DocumentReference.meta.profile",
         "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.extension",
-        "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "DocumentReference.extension:nlp-processing-status",

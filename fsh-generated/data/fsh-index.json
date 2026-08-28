@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 30
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json",
@@ -29,7 +29,15 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 24
+  },
+  {
+    "outputFile": "DocumentReference-AmandaAlzheimerKlartextDokument.json",
+    "fshName": "AmandaAlzheimerKlartextDokument",
+    "fshType": "Instance",
+    "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-klartext.fsh",
+    "startLine": 1,
+    "endLine": 36
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerOriginalDokument.json",

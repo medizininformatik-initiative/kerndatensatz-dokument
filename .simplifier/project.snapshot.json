@@ -1,21 +1,6 @@
 {
-  "Timestamp": "2025-04-25T16:53:13.4179+00:00",
+  "Timestamp": "2026-05-12T11:56:43.04486+00:00",
   "Files": {
-    ".github/workflows/build-ig.yml": {
-      "Length": 1816,
-      "LastWriteTime": "2025-02-13T17:48:34+00:00",
-      "Hash": "21F572912A1AFE79AA1BA515BBE8AC98"
-    },
-    ".github/workflows/build-profiles.yml": {
-      "Length": 1829,
-      "LastWriteTime": "2025-02-13T17:48:34+00:00",
-      "Hash": "3DB5EE7CEB0833CFA01EE3787C9C2025"
-    },
-    ".github/workflows/main.yml": {
-      "Length": 1632,
-      "LastWriteTime": "2025-02-13T17:48:34+00:00",
-      "Hash": "F72B3DD09B850B9AC18D26834BB9AAA5"
-    },
     "fsh-generated/resources/DocumentReference-783be93b-f22a-43de-a54f-bdca08e2fdbf.json": {
       "Length": 2899,
       "LastWriteTime": "2025-02-14T11:42:46+00:00",
@@ -117,19 +102,19 @@
       "Hash": "8348BA3E8427F72153412754F51BB7EB"
     },
     "fsh-generated/fsh-index.txt": {
-      "Length": 11088,
-      "LastWriteTime": "2025-04-25T13:45:20+00:00",
-      "Hash": "4B6CE2C08ED8981898A6BD789B9031D0"
+      "Length": 3831,
+      "LastWriteTime": "2025-07-25T08:38:06+00:00",
+      "Hash": "A2211548BBFE826A42606F234BFA259B"
     },
     "fsh-generated/includes/fsh-link-references.md": {
-      "Length": 2681,
-      "LastWriteTime": "2025-04-25T13:12:36+00:00",
-      "Hash": "0BA2F249C9532AE5C4CCA28C48F03408"
+      "Length": 1592,
+      "LastWriteTime": "2025-06-20T17:40:38+00:00",
+      "Hash": "EB5531B7B4276BD9B51576EB876AF993"
     },
     "fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json": {
-      "Length": 13947,
-      "LastWriteTime": "2025-04-25T13:12:36+00:00",
-      "Hash": "5CC6BB672DFC1558516D6FE6630951BD"
+      "Length": 7782,
+      "LastWriteTime": "2026-03-06T19:24:42+00:00",
+      "Hash": "20495AECF85563F2750B064AF44E9D9D"
     },
     "input/fsh/examples/gematik-isik/isik-exa-dok-beispiel-client-with-binary-jpeg-example-short.fsh": {
       "Length": 1425,
@@ -457,19 +442,14 @@
       "Hash": "3C1F73F0FF8F8BE8C09EC1DEC39B69BA"
     },
     "package.json": {
-      "Length": 1425,
-      "LastWriteTime": "2025-02-14T11:42:46+00:00",
-      "Hash": "881BFC2AB9229377114FCCABC37C0D05"
+      "Length": 1097,
+      "LastWriteTime": "2026-03-06T19:31:18+00:00",
+      "Hash": "53E56B2286C5F8A0D11D60BD6D51E175"
     },
     "fsh-generated/resources/Patient-PatientinMusterfrau.json": {
       "Length": 3403,
       "LastWriteTime": "2025-02-13T17:48:34+00:00",
       "Hash": "5147A7668B47BDE68A65A79C97F03612"
-    },
-    "sushi-config.yaml": {
-      "Length": 11208,
-      "LastWriteTime": "2025-02-14T11:42:46+00:00",
-      "Hash": "E7DF1A385213C2BA2C0D8BF2A31B9379"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md": {
       "Length": 13480,
@@ -710,6 +690,66 @@
       "Length": 210,
       "LastWriteTime": "2025-12-05T18:44:58+00:00",
       "Hash": "4731BFC5150B347FC556D9E8C0A21B58"
+    },
+    "fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument.json": {
+      "Length": 48588,
+      "LastWriteTime": "2025-12-08T08:39:20+00:00",
+      "Hash": "1636DE0135340778BC6F1F887E1930AC"
+    },
+    "fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json": {
+      "Length": 11305,
+      "LastWriteTime": "2025-12-08T08:39:20+00:00",
+      "Hash": "60946F3A8443291A450B90CF226B8558"
+    },
+    "implementation-guides/images/NLP-Pipeline.png": {
+      "Length": 23901,
+      "LastWriteTime": "2025-12-05T16:42:06+00:00",
+      "Hash": "F378CDD1A46117A3BA22CBC752A30B69"
+    },
+    "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh": {
+      "Length": 47404,
+      "LastWriteTime": "2025-12-08T08:39:20+00:00",
+      "Hash": "8BC9082863323B0551AFB6FF26F78463"
+    },
+    "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh": {
+      "Length": 10241,
+      "LastWriteTime": "2025-12-08T08:39:20+00:00",
+      "Hash": "43F20FCC6CA97C78A1AA6D2B75425A94"
+    },
+    "input/fsh/terminology/mii-cs-dokument-nlp-processing-status.fsh": {
+      "Length": 2134,
+      "LastWriteTime": "2025-12-08T10:09:54+00:00",
+      "Hash": "A3D9CE21932F4A80F8F24241631179FC"
+    },
+    "input/fsh/terminology/mii-vs-dokument-nlp-processing-status.fsh": {
+      "Length": 346,
+      "LastWriteTime": "2025-12-08T10:09:54+00:00",
+      "Hash": "8A0BA2055D7A38C941C17655D2553DA9"
+    },
+    "input/ignoreWarnings.txt": {
+      "Length": 15335,
+      "LastWriteTime": "2025-07-31T07:01:24+00:00",
+      "Hash": "6193EF7E298E5916D601C2B734191737"
+    },
+    "input/plantuml/NLP-Pipeline.png": {
+      "Length": 23901,
+      "LastWriteTime": "2025-11-07T15:23:14+00:00",
+      "Hash": "F378CDD1A46117A3BA22CBC752A30B69"
+    },
+    "fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status.json": {
+      "Length": 3966,
+      "LastWriteTime": "2026-03-06T19:24:42+00:00",
+      "Hash": "3A7807140E35B0F11F22792BE9888307"
+    },
+    "fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status.json": {
+      "Length": 1017,
+      "LastWriteTime": "2026-03-06T19:24:42+00:00",
+      "Hash": "EF8988F77832F5079FC2DA8F28C80436"
+    },
+    "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md": {
+      "Length": 7643,
+      "LastWriteTime": "2026-05-11T07:47:46+00:00",
+      "Hash": "82B90BF20AE1AE72D7FEE30E3486896D"
     }
   }
 }

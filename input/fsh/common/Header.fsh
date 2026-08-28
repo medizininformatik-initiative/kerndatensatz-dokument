@@ -24,3 +24,4 @@ RuleSet: LM_Header(url)
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert LM_Meta({url})
+* insert Status
