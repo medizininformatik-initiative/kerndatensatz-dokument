@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "459d49af-e5b0-48c0-929d-c0886c4eadf6-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/459d49af-e5b0-48c0-929d-c0886c4eadf6-3",
+  "id" : "1cc44b1c-86b7-4599-adb6-e006353c5206-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1cc44b1c-86b7-4599-adb6-e006353c5206-3",
   "name" : "IntersectionISiKDokumentenMetadatenAndMII_PR_Dokument_Dokument",
   "title" : "Intersection of Erforderliche Metadaten für Dokumentenaustausch in ISiK And MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-08-28T16:41:44+00:00",
+  "date" : "2026-08-28T17:12:51+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
@@ -1741,7 +1741,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Security Labels from the Healthcare Privacy and Security Classification System.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/459d49af-e5b0-48c0-929d-c0886c4eadf6-6"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/1cc44b1c-86b7-4599-adb6-e006353c5206-6"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -3051,7 +3051,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/459d49af-e5b0-48c0-929d-c0886c4eadf6-12"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/1cc44b1c-86b7-4599-adb6-e006353c5206-12"
       },
       "mapping" : [{
         "identity" : "CompositionDocumentReferenceMapping",
@@ -3101,7 +3101,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/459d49af-e5b0-48c0-929d-c0886c4eadf6-15"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/1cc44b1c-86b7-4599-adb6-e006353c5206-15"
       },
       "mapping" : [{
         "identity" : "CompositionDocumentReferenceMapping",
