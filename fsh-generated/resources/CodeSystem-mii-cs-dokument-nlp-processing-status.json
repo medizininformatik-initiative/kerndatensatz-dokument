@@ -4,7 +4,7 @@
   "content": "complete",
   "name": "MII_CS_Dokument_NLP_Processing_Status",
   "id": "mii-cs-dokument-nlp-processing-status",
-  "title": "MII VS Dokument NLP Processing Status CS",
+  "title": "MII CS Dokument NLP Processing Status",
   "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
   "concept": [
@@ -112,7 +112,7 @@
       ]
     }
   ],
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {

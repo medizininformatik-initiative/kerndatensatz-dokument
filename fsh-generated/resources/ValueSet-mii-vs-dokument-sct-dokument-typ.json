@@ -6,7 +6,7 @@
   "title": "MII VS Dokument SCT Dokument Typ",
   "description": "SNOMED CT ValueSet zum Typ eines Dokuments",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ",
-  "version": "2026.0.1",
+  "version": "2027.0.0-ballot.rc1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -29,6 +29,7 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
         "filter": [
           {
             "property": "concept",

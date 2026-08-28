@@ -1,6 +1,6 @@
 CodeSystem: MII_CS_Dokument_NLP_Processing_Status
 Id: mii-cs-dokument-nlp-processing-status
-Title: "MII VS Dokument NLP Processing Status CS"
+Title: "MII CS Dokument NLP Processing Status"
 Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * insert CS_Header($mii-cs-dokument-nlp-processing-status)
 * ^hierarchyMeaning = #is-a
