@@ -15,6 +15,8 @@
     "Terminology_TX_NoValid_16@DocumentReference.content[0].attachment.contentType",
     "MSG_DRAFT@SearchParameter.extension[0].value.ofType(CodeableConcept)",
     "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
-    "IG_DEPENDENCY_DIRECT"
+    "IG_DEPENDENCY_DIRECT",
+    "MSG_DRAFT",
+    "TERMINOLOGY_TX_WARNING@StructureDefinition.*"
   ]
 }
