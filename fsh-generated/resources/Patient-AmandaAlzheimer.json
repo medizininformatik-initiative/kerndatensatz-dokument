@@ -23,11 +23,11 @@
   ],
   "name": [
     {
+      "use": "official",
+      "family": "Amanda",
       "given": [
         "Alzheimer"
-      ],
-      "use": "official",
-      "family": "Amanda"
+      ]
     }
   ],
   "gender": "female"

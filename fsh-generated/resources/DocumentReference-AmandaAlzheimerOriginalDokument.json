@@ -6,6 +6,19 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
     ]
   },
+  "extension": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code": "unprocessed"
+          }
+        ]
+      },
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status"
+    }
+  ],
   "masterIdentifier": {
     "system": "urn:ietf:rfc:3986",
     "value": "urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341"
@@ -17,6 +30,8 @@
       "use": "official"
     }
   ],
+  "status": "current",
+  "docStatus": "final",
   "type": {
     "coding": [
       {
@@ -44,6 +59,9 @@
       "text": "Brief"
     }
   ],
+  "subject": {
+    "reference": "Patient/AmandaAlzheimer"
+  },
   "securityLabel": [
     {
       "coding": [
@@ -108,23 +126,5 @@
         }
       ]
     }
-  },
-  "extension": [
-    {
-      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-            "code": "unprocessed"
-          }
-        ]
-      }
-    }
-  ],
-  "status": "current",
-  "docStatus": "final",
-  "subject": {
-    "reference": "Patient/AmandaAlzheimer"
   }
 }

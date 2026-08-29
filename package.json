@@ -9,7 +9,7 @@
     "DocumentReference"
   ],
   "type": "IG",
-  "license": "CC0-1.0",
+  "license": "CC-BY-4.0",
   "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
   "url": "https://simplifier.net/mii-erweiterungsmodul-dokument",
   "title": "MII IG Dokument",

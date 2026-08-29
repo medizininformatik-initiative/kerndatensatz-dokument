@@ -1,0 +1,17 @@
+{
+   "package-id" : "de.medizininformatikinitiative.kerndatensatz.dokument",
+   "version" : "2027.0.0-ballot.rc1",
+   "path" : "https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot.rc1",
+   "mode" : "milestone",
+   "status" : "release",
+   "sequence" : "2027",
+   "desc" : "Ballot release candidate 1 for the 2027 release cycle",
+   "first" : true,
+   "title" : "MII Implementation Guide Dokument",
+   "ci-build" : "https://medizininformatik-initiative.github.io/kerndatensatz-dokument/branches/dev/",
+   "category" : "Research",
+   "introduction" : "Medizininformatik Initiative - KDS-Modul Dokument",
+   "registry-description" : "Medizininformatik Initiative - KDS-Modul Dokument",
+   "registry-country" : "de",
+   "registry-authority" : "Medical Informatics Initiative (MII)"
+}
