@@ -139,7 +139,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-dokum
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
   "title" : "MII EX Dokument NLP Processing Status",
   "status" : "active",
-  "date" : "2026-08-30T09:13:23+00:00",
+  "date" : "2026-08-30T09:26:51+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",
