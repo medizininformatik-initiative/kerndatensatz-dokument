@@ -433,12 +433,12 @@ resources of this module (extensions, ValueSets, CodeSystems, logical models).</
       <td>Medikation</td>
     </tr>
     <tr>
-      <td>Modul Person</td>
+      <td>Modul Person (profiles in base module)</td>
       <td>modul-person</td>
       <td>Person</td>
     </tr>
     <tr>
-      <td>Modul Fall</td>
+      <td>Modul Fall (profiles in base module)</td>
       <td>modul-fall</td>
       <td>Fall</td>
     </tr>
@@ -533,6 +533,14 @@ resources of this module (extensions, ValueSets, CodeSystems, logical models).</
 <!-- TODO:REVIEW The full module names are the official German MII module
      designations and are kept verbatim (they are names, not prose). Confirm
      whether the English mirror should instead carry translated module names. -->
+
+<!-- DERIVED:bridge source=none gate=B -->
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Written during migration — review before release.</strong>
+The canonical namespaces <code class="language-plaintext highlighter-rouge">modul-person</code> and <code class="language-plaintext highlighter-rouge">modul-fall</code> remain valid; the
+corresponding profiles have been delivered in the base module (package
+<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code>) since the KDS release 2026.</p>
+</blockquote>
 
 <p>For modules added in the future, a German-language name in the singular is preferred.</p>
 
@@ -657,7 +665,7 @@ Note: the FHIR standard is CamelCase2, but the MII deviates from it for better h
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sun, Aug 30, 2026 12:43+0000">2026-08-30</span>
+          Generated <span title="Sun, Aug 30, 2026 17:48+0000">2026-08-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

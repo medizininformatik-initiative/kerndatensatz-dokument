@@ -394,12 +394,12 @@ with.</p>
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person">Person</a></td>
+      <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base">Person (in the base module)</a></td>
       <td>The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional.</td>
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall">Fall</a></td>
+      <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base">Fall (in the base module)</a></td>
       <td>Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type.</td>
       <td>No</td>
     </tr>
@@ -469,6 +469,17 @@ with.</p>
 
 <p><a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg"><img src="Paketabhaengigkeiten.png" alt="Package dependencies of the MII KDS module Dokument" /></a></p>
 
+<!-- DERIVED:bridge source=none gate=B -->
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Written during migration — review before release.</strong>
+The packages <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.person</code> and
+<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.fall</code> shown in the diagram have
+been delivered inside the base module
+(<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code>) since the KDS release
+2026; the canonical URLs of the referenced profiles are unchanged. The diagram
+shows the state approved by the NSG.</p>
+</blockquote>
+
 <!-- TODO:REVIEW The image file Paketabhaengigkeiten.png is not yet present under
      input/images/. It has to be copied there from the source repository
      (input/plantuml/Paketabhaengigkeiten.png), otherwise QA reports a broken
@@ -521,7 +532,7 @@ they apply to this module unchanged.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sun, Aug 30, 2026 12:43+0000">2026-08-30</span>
+          Generated <span title="Sun, Aug 30, 2026 17:48+0000">2026-08-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

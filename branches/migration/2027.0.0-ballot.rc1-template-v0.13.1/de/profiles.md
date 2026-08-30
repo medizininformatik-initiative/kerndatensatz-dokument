@@ -31,8 +31,8 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 | Modul Laborbefund | modul-labor | Labor |
 | Modul Prozedur | modul-prozedur | Prozedur |
 | Modul Medikation | modul-medikation | Medikation |
-| Modul Person | modul-person | Person |
-| Modul Fall | modul-fall | Fall |
+| Modul Person (Profile im Basismodul) | modul-person | Person |
+| Modul Fall (Profile im Basismodul) | modul-fall | Fall |
 | Modul Consent | modul-consent | Consent |
 | Modul Mikrobiologie | modul-mikrobio | Mikrobio |
 | Modul Symptom/klinischer Phänotyp | modul-symptom | Symptom |
@@ -50,6 +50,8 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 | Modul Lungenfunktion | modul-lufu | LuFu |
 | Modul Schlafmedizinischer Befund | **folgt** | **folgt** |
 | Modul Dokument | modul-dokument | Dokument |
+
+> **Bei der Migration verfasst — vor dem Release prüfen.** Die kanonischen Namensräume `modul-person` und `modul-fall` bleiben gültig; die zugehörigen Profile werden seit dem KDS-Release 2026 im Basismodul (Package `de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert.
 
 Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt.
 

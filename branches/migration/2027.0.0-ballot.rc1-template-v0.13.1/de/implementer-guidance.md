@@ -24,8 +24,8 @@ Dieses MII KDS-Modul greift bei bestimmten Datenelementen auf existierende Vorar
 
 | | | |
 | :--- | :--- | :--- |
-| [Person](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person) | Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet. | Ja |
-| [Fall](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall) | Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die am besten geeignete Kontaktebene des MII KDS-Moduls Fall verwiesen werden. Diese Ebene ist typisch vom Dokumenttyp abhängig. | Nein |
+| [Person (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet. | Ja |
+| [Fall (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die am besten geeignete Kontaktebene des MII KDS-Moduls Fall verwiesen werden. Diese Ebene ist typisch vom Dokumenttyp abhängig. | Nein |
 
 ## Nutzung durch andere MII KDS-Module
 
@@ -52,6 +52,8 @@ Das MII KDS-Modul Dokument ist darauf ausgelegt, dass Instanzen folgender FHIR-b
 Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Die bestehenden der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Abschnitt [Referenzen](kompatibilitaet.md)) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
 
 ![](Paketabhaengigkeiten.png)
+
+> **Bei der Migration verfasst — vor dem Release prüfen.** Die im Diagramm gezeigten Pakete `de.medizininformatikinitiative.kerndatensatz.person` und `de.medizininformatikinitiative.kerndatensatz.fall` werden seit dem KDS-Release 2026 innerhalb des Basismoduls (`de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert; die Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt den von der NSG freigegebenen Stand.
 
 Dadurch ist es möglich Ressourcen so zu attributieren, dass sie gleichzeitig MII KDS als auch ISIK bzw. IHE valide sind. Auch sind ISIK und IHE Module prinzipiell kompatibel, jedoch empfehlen wir in der Nutzung sowohl die Angabe des `type` (aus KDL /ISIK) und `category` (aus IHE), die keines der beides Profile ISIK, IHE gleichzeitig anbietet.
 

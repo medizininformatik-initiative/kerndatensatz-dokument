@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung)
+Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-fall-kontakt-gesundheitseinrichtung.html)
 
 **identifier**: Fallnummer/123456
 

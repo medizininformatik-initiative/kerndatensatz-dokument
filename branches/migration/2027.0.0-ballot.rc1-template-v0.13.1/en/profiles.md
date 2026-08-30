@@ -31,8 +31,8 @@ The following designations are agreed for the existing modules:
 | Modul Laborbefund | modul-labor | Labor |
 | Modul Prozedur | modul-prozedur | Prozedur |
 | Modul Medikation | modul-medikation | Medikation |
-| Modul Person | modul-person | Person |
-| Modul Fall | modul-fall | Fall |
+| Modul Person (profiles in base module) | modul-person | Person |
+| Modul Fall (profiles in base module) | modul-fall | Fall |
 | Modul Consent | modul-consent | Consent |
 | Modul Mikrobiologie | modul-mikrobio | Mikrobio |
 | Modul Symptom/klinischer Phänotyp | modul-symptom | Symptom |
@@ -50,6 +50,8 @@ The following designations are agreed for the existing modules:
 | Modul Lungenfunktion | modul-lufu | LuFu |
 | Modul Schlafmedizinischer Befund | **to follow** | **to follow** |
 | Modul Dokument | modul-dokument | Dokument |
+
+> **Written during migration — review before release.** The canonical namespaces `modul-person` and `modul-fall` remain valid; the corresponding profiles have been delivered in the base module (package `de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release 2026.
 
 For modules added in the future, a German-language name in the singular is preferred.
 

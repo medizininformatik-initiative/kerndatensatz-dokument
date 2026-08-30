@@ -31,7 +31,7 @@ The Core Dataset of the Medical Informatics Initiative (MII) enables the standar
 
 Using the profile is intended to make internal and external use of documents easier. The central aspects of characterization by metadata: document relationships, document status, document discoverability, corpus navigation and document archiving are addressed by the module and coordinated according to a standardized scheme.
 
-The MII KDS module enables the creation of document references with the option of establishing relationships to the Case and Person modules. The module also contains an NLP extension that represents the processing status with respect to NLP procedures such as annotations (see [UML](uml-diagrams.md) for this).
+The MII KDS module enables the creation of document references with the option of establishing relationships to the Case and Person modules, which have been folded into the base module. The module also contains an NLP extension that represents the processing status with respect to NLP procedures such as annotations (see [UML](uml-diagrams.md) for this).
 
 With regard to document processing workflows, e.g. format conversions, anonymization and NLP annotations, the relation to other documents (MII KDS module Dokument) becomes particularly significant for representing processing chains (`relatesTo`).
 

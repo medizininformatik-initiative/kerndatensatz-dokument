@@ -405,12 +405,12 @@ logische Modelle).</p>
       <td>Medikation</td>
     </tr>
     <tr>
-      <td>Modul Person</td>
+      <td>Modul Person (Profile im Basismodul)</td>
       <td>modul-person</td>
       <td>Person</td>
     </tr>
     <tr>
-      <td>Modul Fall</td>
+      <td>Modul Fall (Profile im Basismodul)</td>
       <td>modul-fall</td>
       <td>Fall</td>
     </tr>
@@ -501,6 +501,14 @@ logische Modelle).</p>
     </tr>
   </tbody>
 </table>
+
+<!-- DERIVED:bridge source=none gate=B -->
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Bei der Migration verfasst — vor dem Release prüfen.</strong>
+Die kanonischen Namensräume <code class="language-plaintext highlighter-rouge">modul-person</code> und <code class="language-plaintext highlighter-rouge">modul-fall</code> bleiben gültig; die
+zugehörigen Profile werden seit dem KDS-Release 2026 im Basismodul
+(Package <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code>) ausgeliefert.</p>
+</blockquote>
 
 <p>Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt.</p>
 
@@ -626,7 +634,7 @@ Hinweis: Der FHIR-Standard ist CamelCase2, aber wegen besserer Menschenlesbarkei
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Sun, Aug 30, 2026 12:43+0000">2026-08-30</span>
+          Erstellt <span title="Sun, Aug 30, 2026 17:48+0000">2026-08-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

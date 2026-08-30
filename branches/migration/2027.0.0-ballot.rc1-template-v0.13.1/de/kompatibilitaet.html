@@ -327,12 +327,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      Diese Seite ist im Seitenbaum unter "implementer-guidance" eingehängt und
      hat bewusst keinen eigenen Menüeintrag. -->
 
-<p>Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus Gematik ISiK Dokumentenaustausch, KBV MIO Basis und IHE MHD wurde anhand der <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">Berichte des FHIR Validators</a> und der technischen Profileigenschaften geprüft. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.</p>
+<p>Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>, Version 6.0.0), KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>, Version 1.7.0) und IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>, Package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, Version 4.2.3) wurde anhand der <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">Berichte des FHIR Validators</a>, der Profilvergleiche des HL7 FHIR Validators (<code class="language-plaintext highlighter-rouge">compare</code>-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei <code class="language-plaintext highlighter-rouge">content.attachment.title</code> und <code class="language-plaintext highlighter-rouge">description</code> ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.</p>
 
 <!-- TODO:REVIEW Der Quell-Link "Berichte des FHIR Validators" zeigt auf die
      veroeffentlichte GitHub-Pages-Seite dieses Moduls, also auf den Leitfaden
      selbst. Soll er stattdessen auf den vom IG Publisher erzeugten
-     QA-Bericht (qa.html) zeigen? -->
+     QA-Bericht (qa.html) bzw. auf die zugrunde liegenden
+     Profilvergleichsberichte zeigen, damit die Tabellenwerte nachvollziehbar
+     sind? -->
 
 <!-- TODO:REVIEW Die Simplifier-Quellseite hatte an dieser Stelle einen
      handgebauten Abschnitt "Uebersicht" als Mini-Inhaltsverzeichnis. Dessen
@@ -346,7 +348,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      in der Simplifier-Quellseite auskommentiert und damit nicht sichtbar. Er
      wird hier verbatim mitgefuehrt - unveraendert, ungekuerzt und ohne
      Neuumbruch -, damit der Inhalt bei der Migration nicht verlorengeht. Die
-     aktive Zusammenfassung steht am Seitenende. -->
+     aktive Zusammenfassung steht am Seitenende.
+     Hinweis: die Aussage im Zitat, IHE MHD sei "aehnlich flexibel" und seine
+     Felder "optional", ist durch den Profilvergleich gegen
+     IHE.MHD.UnContained.Comprehensive.DocumentReference 4.2.3 widerlegt. Der
+     Block darf nicht unveraendert reaktiviert werden. -->
 
 <!-- QUELLZITAT BEGINN (Simplifier-Quellseite, auskommentierter Abschnitt
      "Zusammenfassung"; Wortlaut unveraendert uebernommen):
@@ -361,9 +367,24 @@ Das KBV MIO Basis- und das IHE MHD-Profil sind ähnlich wie das MII KDS Dokument
 
 QUELLZITAT ENDE -->
 
+<!-- PRUEFHINWEIS (Validator-Vergleich ISiK 6.0.0): Die Aussage im obigen
+     Quellzitat, die Bindungsstaerke im MII KDS Dokument-Profil sei "nicht
+     required", trifft nur auf `type`, `category` und `securityLabel` zu.
+     `content.format`, `context.facilityType`, `context.practiceSetting` und
+     `context.event` sind required gebunden. Falls der Abschnitt reaktiviert
+     wird, ist er entsprechend zu korrigieren. -->
+
+<!-- HINWEIS zum Quellzitat (Validator-Vergleich KBV MIO Basis 1.7.0): Die
+     Aussage "Die Bindungen extensible oder preferred" trifft fuer KBV MIO
+     Basis 1.7.0 nicht durchgaengig zu; gemessen sind `type` preferred,
+     `category` example, `securityLabel` extensible, `status`/`docStatus`
+     required und die `context`-Felder example. Das Zitat bleibt
+     unveraendert. -->
+
 <!-- TODO:REVIEW Soll der oben zitierte, in der Quelle deaktivierte
      Zusammenfassungstext als sichtbarer Abschnitt reaktiviert werden, oder
-     bleibt er (wie bisher) unveroeffentlicht? -->
+     bleibt er (wie bisher) unveroeffentlicht? Eine Reaktivierung ist nur nach
+     Korrektur der oben vermerkten Pruefhinweise moeglich. -->
 
 <hr />
 
@@ -371,27 +392,35 @@ QUELLZITAT ENDE -->
 
 <h3 id="kardinalitäten-und-must-support">Kardinalitäten und Must Support</h3>
 
-<p>Im MII KDS Dokument-Profil sind die meisten Metadatenfelder optional, darunter auch die zentralen Felder <code class="language-plaintext highlighter-rouge">type</code> und <code class="language-plaintext highlighter-rouge">category</code>. Die Kardinalität für <code class="language-plaintext highlighter-rouge">type</code> ist 0..1, für <code class="language-plaintext highlighter-rouge">category</code> 0..*, und MS ist gesetzt. Das bedeutet, dass Instanzen, die aus weniger restriktiven Profilen wie KBV MIO Basis oder IHE MHD stammen, in der Regel ohne Anpassung übernommen werden können, sofern die für die jeweilige Anwendung erforderlichen Metadaten vorhanden sind.</p>
+<p>Im MII KDS Dokument-Profil sind die meisten Metadatenfelder optional, darunter auch die zentralen Felder <code class="language-plaintext highlighter-rouge">type</code> und <code class="language-plaintext highlighter-rouge">category</code>. Die Kardinalität für <code class="language-plaintext highlighter-rouge">type</code> ist 0..1, für <code class="language-plaintext highlighter-rouge">category</code> 0..*, und MS ist gesetzt. Das bedeutet, dass Instanzen aus weniger restriktiven Profilen wie KBV MIO Basis in der Regel ohne Anpassung übernommen werden können. IHE MHD (UnContained Comprehensive) ist demgegenüber <strong>restriktiver</strong> als das MII-Profil: dort sind u. a. <code class="language-plaintext highlighter-rouge">masterIdentifier</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">securityLabel</code>, <code class="language-plaintext highlighter-rouge">context</code> und <code class="language-plaintext highlighter-rouge">content.attachment.url</code> verpflichtend. Eine MHD-Instanz erfüllt die MII-Kardinalitäten daher stets; der Anpassungsbedarf liegt in der Gegenrichtung sowie bei den required gebundenen MII-Kontextterminologien.</p>
 
-<p>Im ISiK Dokumentenaustausch-Profil hingegen sind Metadatenfelder wie <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">securityLabel</code>, <code class="language-plaintext highlighter-rouge">content</code> und <code class="language-plaintext highlighter-rouge">context</code> verpflichtend (Kardinalität 1..1) und mit MS versehen. Für eine Transformation von ISiK Dokumentenaustausch nach MII KDS Dokument ist dies unproblematisch, da alle erforderlichen Informationen vorliegen. Umgekehrt – etwa bei einer möglichen Transformation von MII KDS Dokument nach ISiK Dokumentenaustausch – müssten fehlende Pflichtfelder ergänzt werden.</p>
+<p>Im ISiK Dokumentenaustausch-Profil hingegen ist eine deutlich größere Zahl von Metadatenfeldern verpflichtend: <code class="language-plaintext highlighter-rouge">masterIdentifier</code> (1..1, inkl. <code class="language-plaintext highlighter-rouge">system</code> und <code class="language-plaintext highlighter-rouge">value</code>), <code class="language-plaintext highlighter-rouge">type</code> (1..1), <code class="language-plaintext highlighter-rouge">subject</code> (1..1), <code class="language-plaintext highlighter-rouge">securityLabel</code> (1..*), <code class="language-plaintext highlighter-rouge">content</code> (1..1), <code class="language-plaintext highlighter-rouge">content.attachment.contentType</code>, <code class="language-plaintext highlighter-rouge">.language</code>, <code class="language-plaintext highlighter-rouge">.title</code> und <code class="language-plaintext highlighter-rouge">.creation</code> (je 1..1), <code class="language-plaintext highlighter-rouge">content.format</code> (1..1), <code class="language-plaintext highlighter-rouge">context</code> (1..1) sowie <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> (je 1..1). Zusätzlich schließt ISiK <code class="language-plaintext highlighter-rouge">implicitRules</code> aus (0..0). Für eine Transformation von ISiK Dokumentenaustausch nach MII KDS Dokument ist dies unproblematisch, da alle erforderlichen Informationen vorliegen. Umgekehrt – etwa bei einer möglichen Transformation von MII KDS Dokument nach ISiK Dokumentenaustausch – müssten diese Pflichtfelder ergänzt werden.</p>
 
 <h3 id="terminologie-bindungen">Terminologie-Bindungen</h3>
 
-<p>Für das Feld <code class="language-plaintext highlighter-rouge">type</code> empfiehlt das MII KDS Dokument-Profil die Verwendung von KDL- und XDS-Type-Codes, unterstützt aber ausdrücklich auch LOINC und SNOMED CT. Die Bindung ist extensible, sodass auch andere Codesysteme zulässig sind. Gleiches gilt für das Feld <code class="language-plaintext highlighter-rouge">category</code> - auch hier sind XDS-Codes empfohlen, aber LOINC und SNOMED CT werden gleichwertig unterstützt. Die Bindungsstärke ist bewusst niedrig gehalten, um maximale Flexibilität zu erreichen.</p>
+<p>Für das Feld <code class="language-plaintext highlighter-rouge">type</code> empfiehlt das MII KDS Dokument-Profil die Verwendung von KDL- und XDS-Type-Codes. Auf Ebene des Elements <code class="language-plaintext highlighter-rouge">DocumentReference.type</code> bleibt die Basis-Bindung von FHIR R4 unverändert: Die Bindung ist <strong>preferred</strong> (Wertemenge <code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>) — dieselbe Bindung in derselben Stärke wie in KBV MIO Basis und IHE MHD — und wird durch den Constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code> (Severity <code class="language-plaintext highlighter-rouge">warning</code>) um die KDL/XDS-Empfehlung ergänzt, sodass auch andere Codesysteme zulässig sind. Vorgaben zu konkreten Codesystemen werden zusätzlich über Slices auf <code class="language-plaintext highlighter-rouge">type.coding</code> ausgedrückt. Für <code class="language-plaintext highlighter-rouge">category</code> ist die Bindung <strong>example</strong> (<code class="language-plaintext highlighter-rouge">document-classcodes</code>), ergänzt um den Constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code>; auch hier sind XDS-Codes empfohlen, LOINC und SNOMED CT werden gleichwertig unterstützt. Die Bindungsstärke ist bei <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">category</code> und <code class="language-plaintext highlighter-rouge">securityLabel</code> bewusst niedrig gehalten; <code class="language-plaintext highlighter-rouge">required</code> gebunden sind im MII KDS Dokument-Profil dagegen <code class="language-plaintext highlighter-rouge">content.format</code>, <code class="language-plaintext highlighter-rouge">context.facilityType</code>, <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> und <code class="language-plaintext highlighter-rouge">context.event</code>.</p>
 
-<p>Im ISiK Dokumentenaustausch-Profil ist dies anders spezifiziert: Hier sind KDL- und XDS-Codes für <code class="language-plaintext highlighter-rouge">type</code> required, und die Kategorie wird aus dem KDL-Code abgeleitet. Andere Codesysteme sind nicht vorgesehen. Das Feld <code class="language-plaintext highlighter-rouge">securityLabel</code> ist ebenfalls required und muss einen der vorgegebenen Codes enthalten.</p>
+<table>
+  <tbody>
+    <tr>
+      <td>Im ISiK Dokumentenaustausch-Profil ist dies anders spezifiziert: Hier fordert ISiK KDL- <em>und</em> XDS-Type-Codes über Slices auf <code class="language-plaintext highlighter-rouge">type.coding</code>, und die Kategorie wird aus dem KDL-Code abgeleitet. Weitere Typisierungen (z.B. nach SNOMED CT oder LOINC) sind laut ISiK ausdrücklich erlaubt. Das Feld <code class="language-plaintext highlighter-rouge">securityLabel</code> ist required an <code class="language-plaintext highlighter-rouge">ISiKConfidentialityCodes</code> gebunden und muss eine der drei Vertraulichkeitsstufen <code class="language-plaintext highlighter-rouge">N</code></td>
+      <td><code class="language-plaintext highlighter-rouge">R</code></td>
+      <td><code class="language-plaintext highlighter-rouge">V</code> enthalten.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Im KBV MIO Basis- und IHE MHD-Profil können verschiedene Codesysteme verwendet werden, darunter LOINC, SNOMED CT und XDS. Die Profile sind damit für internationale und sektorenübergreifende Anwendungen geeignet.</p>
 
 <h3 id="weitere-unterschiede-und-gemeinsamkeiten">Weitere Unterschiede und Gemeinsamkeiten</h3>
 
-<p>Ein weiterer wichtiger Unterschied betrifft die Handhabung von Kontextfeldern wie <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code>. Im MII KDS Dokument-Profil sind diese Felder optional, im ISiK Dokumentenaustausch-Profil hingegen verpflichtend. Für die Transformation von ISiK Dokumentenaustausch nach MII KDS Dokument ist dies unproblematisch, da alle Informationen vorhanden sind. Bei der Transformation von KBV MIO Basis oder IHE MHD nach MII KDS Dokument können diese Metadatenfelder fehlen, was aber aufgrund der Flexibilität des Zielprofils zulässig ist.</p>
+<p>Ein weiterer wichtiger Unterschied betrifft die Handhabung von Kontextfeldern wie <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code>. Im MII KDS Dokument-Profil sind diese Felder optional, im ISiK Dokumentenaustausch-Profil hingegen verpflichtend. Für die Transformation von ISiK Dokumentenaustausch nach MII KDS Dokument ist dies unproblematisch, da alle Informationen vorhanden sind. In IHE MHD sind <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> dagegen mit 1..1 verpflichtend, liegen also stets vor. Bei der Übernahme nach MII KDS Dokument ist nicht die Kardinalität, sondern die <strong>Terminologie</strong> die Hürde: das MII-Profil bindet beide Felder required an <code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code> bzw. <code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>, während IHE MHD nur example-Bindungen (<code class="language-plaintext highlighter-rouge">c80-facilitycodes</code>, <code class="language-plaintext highlighter-rouge">c80-practice-codes</code>) vorgibt. Codes außerhalb der MII-Wertemengen müssen gemappt werden. Bei der Transformation von KBV MIO Basis nach MII KDS Dokument können diese Felder dagegen fehlen, was aufgrund der Flexibilität des Zielprofils zulässig ist; vorhandene Werte müssen jedoch ebenfalls auf die im MII-Profil required gebundenen Wertemengen abgebildet werden.</p>
 
-<p>Auch bei den Metadatenfelder für den Dokumentenzugriff (<code class="language-plaintext highlighter-rouge">content.attachment.data</code> und <code class="language-plaintext highlighter-rouge">content.attachment.url</code>) gibt es Unterschiede in der Kardinalität und MS-Kennzeichnung. Das MII KDS Dokument-Profil erlaubt beide Varianten und ist damit kompatibel zu den unterschiedlichen Ansätzen der Quellprofile.</p>
+<p>Bei den Metadatenfeldern für den Dokumentenzugriff (<code class="language-plaintext highlighter-rouge">content.attachment.data</code> und <code class="language-plaintext highlighter-rouge">content.attachment.url</code>) sind die Kardinalitäten in ISiK Dokumentenaustausch, KBV MIO Basis und MII KDS Dokument identisch (jeweils 0..1); Unterschiede bestehen dort ausschließlich in der Must-Support-Kennzeichnung: ISiK kennzeichnet beide Elemente als Must Support, das MII KDS Dokument-Profil nicht. Die Unterscheidung zwischen eingebettetem Dokument und Verweis erfolgt sowohl im MII KDS Dokument- als auch im KBV MIO Basis-Profil über Slices von <code class="language-plaintext highlighter-rouge">content</code> (Diskriminator <code class="language-plaintext highlighter-rouge">exists:attachment.url</code>). Das MII KDS Dokument-Profil erlaubt beide Varianten (<code class="language-plaintext highlighter-rouge">data</code> 0..1, <code class="language-plaintext highlighter-rouge">url</code> 0..1) und ist damit kompatibel zu den unterschiedlichen Ansätzen dieser Quellprofile. IHE MHD (UnContained Comprehensive) lässt dagegen ausschließlich den URL-Verweis zu: <code class="language-plaintext highlighter-rouge">content.attachment.url</code> ist 1..1, <code class="language-plaintext highlighter-rouge">content.attachment.data</code> ist 0..0. In Richtung MII → IHE MHD ist ein rein eingebettetes Dokument daher nicht abbildbar; für ISiK und KBV MIO Basis gilt diese Einschränkung nicht. Hinweis: Der Profilvergleich des Validators vergleicht keine benannten Slices; Aussagen auf Slice-Ebene sind daher nicht maschinell belegt.</p>
 
 <h2 id="fazit-und-empfehlungen">Fazit und Empfehlungen</h2>
 
-<p>Das MII KDS Dokument-Profil ist so gestaltet, dass es eine hohe Kompatibilität zu den gängigen deutschen und internationalen FHIR-Profilen für Dokumentenmetadaten bietet. Die wichtigsten Metadatenfelder sind optional und unterstützen verschiedene Codesysteme, darunter KDL, XDS, LOINC und SNOMED CT. Für die Transformation von ISiK Dokumentenaustausch nach MII KDS Dokument ist keine Anpassung der Terminologien erforderlich, da die ISiK-Anforderungen strenger sind. Bei der Transformation von KBV MIO Basis oder IHE MHD nach MII KDS Dokument können die vorhandenen Codes übernommen werden, sofern sie aus unterstützten Codesystemen stammen. Fehlende Pflichtfelder sind im Zielprofil in der Regel kein Problem, da diese dort optional sind.</p>
+<p>Das MII KDS Dokument-Profil ist so gestaltet, dass es eine hohe Kompatibilität zu den gängigen deutschen und internationalen FHIR-Profilen für Dokumentenmetadaten bietet. Die wichtigsten Metadatenfelder sind optional und unterstützen verschiedene Codesysteme, darunter KDL, XDS, LOINC und SNOMED CT. Für die Transformation von ISiK Dokumentenaustausch nach MII KDS Dokument ist keine Anpassung der Terminologien erforderlich, weil die vom MII KDS Dokument-Profil gebundenen ValueSets die ISiK-seitig gebundenen ValueSets einschließen — und nicht deshalb, weil die MII-Bindungen durchgängig schwächer wären: <code class="language-plaintext highlighter-rouge">content.format</code>, <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> sind auch im MII KDS Dokument-Profil <code class="language-plaintext highlighter-rouge">required</code> gebunden. Bei der Transformation von KBV MIO Basis oder IHE MHD nach MII KDS Dokument können die vorhandenen Codes übernommen werden, sofern sie aus unterstützten Codesystemen stammen. Fehlende Felder sind im Zielprofil in der Regel kein Problem, da diese dort optional sind. Vorhandene Werte in <code class="language-plaintext highlighter-rouge">context.event</code>, <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> müssen dagegen auf die dort required gebundenen ValueSets abgebildet werden, und <code class="language-plaintext highlighter-rouge">type</code>/<code class="language-plaintext highlighter-rouge">category</code> benötigen mindestens ein <code class="language-plaintext highlighter-rouge">coding</code>.</p>
 
 <p>Für die Praxis bedeutet dies, dass eine automatisierte Extract-Transform-Load (ETL)-Strecke von ISiK Dokumentenaustausch, KBV MIO Basis oder IHE MHD nach MII KDS Dokument technisch gut umsetzbar ist. Die größte Herausforderung besteht darin, bei Bedarf die Terminologien zu harmonisieren und sicherzustellen, dass alle für die jeweilige Anwendung relevanten Metadaten vorhanden sind. Die Flexibilität des MII KDS Dokument-Profils erleichtert die Integration und fördert die Interoperabilität im deutschen und internationalen Kontext.</p>
 
@@ -407,6 +436,10 @@ QUELLZITAT ENDE -->
 
 <p>Die Kompatibilität mit dem ISiK Dokumentenaustausch ist essenziell, um sektorenübergreifende Interoperabilität im deutschen Gesundheitswesen zu gewährleisten. ISiK definiert verbindliche Metadatenstandards für Dokumente in Krankenhäusern. Eine Harmonisierung ermöglicht die reibungslose Integration von ISiK-konformen Dokumenten in MII-Datenintegrationszentren und unterstützt die Umsetzung nationaler Interoperabilitätsziele.</p>
 
+<blockquote>
+  <p><strong>Versionsstand:</strong> Die nachfolgende Gegenüberstellung wurde gegen das Profil <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code> in Version <strong>6.0.0</strong> gemessen. Ab ISiK-Stufe 5 ist die menschenlesbare Bezeichnung des Dokuments in <code class="language-plaintext highlighter-rouge">content.attachment.title</code> zu führen; <code class="language-plaintext highlighter-rouge">DocumentReference.description</code> entfällt für diesen Zweck zugunsten einer Angleichung an IHE MHD und die ePA-Spezifikation.</p>
+</blockquote>
+
 <h4 id="kompatibilität">Kompatibilität</h4>
 
 <p>Das MII KDS Dokument Profil ist als Superset des ISiK Profils konzipiert und deckt alle ISiK-Anforderungen ab. Die wichtigsten Vergleichspunkte sind:</p>
@@ -415,8 +448,8 @@ QUELLZITAT ENDE -->
   <thead>
     <tr>
       <th>FHIR-Element</th>
-      <th>MII KDS Dokument</th>
-      <th>ISiK Dokumentenaustausch</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>ISiK Dokumentenaustausch (<code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code> 6.0.0)</th>
       <th>Kompatibilität</th>
     </tr>
   </thead>
@@ -429,21 +462,21 @@ QUELLZITAT ENDE -->
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td>0..1, Must Support, extensible (KDL/XDS, LOINC, SNOMED CT)</td>
-      <td>1..1, Must Support, required (KDL/XDS)</td>
+      <td>0..1, Must Support (KDL/XDS empfohlen, Slices auf <code class="language-plaintext highlighter-rouge">type.coding</code>)</td>
+      <td>1..1, Must Support (KDL <em>und</em> XDS über Slices gefordert)</td>
       <td>✓ MII KDS Dokument unterstützt ISiK-Codes</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
-      <td>0..*, Must Support, extensible</td>
-      <td>1..1, Must Support, derived from KDL</td>
-      <td>✓ MII KDS Dokument unterstützt ISiK-Ableitung</td>
+      <td>0..*, Must Support</td>
+      <td>0..1, Must Support, aus KDL abgeleitet</td>
+      <td>✓ MII KDS Dokument erlaubt mehrere Kategorien</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
-      <td>1..1, Must Support</td>
-      <td>✓ Vollständig kompatibel</td>
+      <td>⚠️ ISiK fordert Patientenbezug verpflichtend</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content</code></td>
@@ -453,15 +486,75 @@ QUELLZITAT ENDE -->
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
-      <td>0..*, extensible</td>
-      <td>1..*, required</td>
+      <td>0..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
+      <td>1..*, required (<code class="language-plaintext highlighter-rouge">ISiKConfidentialityCodes</code>: N | R | V)</td>
       <td>⚠️ MII KDS Dokument macht Sicherheitslabels optional</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context</code></td>
-      <td>0..1</td>
+      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
       <td>⚠️ MII KDS Dokument macht Kontext optional</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">masterIdentifier</code></td>
+      <td>0..1, Must Support</td>
+      <td>1..1, Must Support</td>
+      <td>⚠️ ISiK fordert Master Identifier</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.contentType</code></td>
+      <td>0..1, Must Support</td>
+      <td>1..1, Must Support</td>
+      <td>⚠️ ISiK fordert MIME-Typ</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.language</code></td>
+      <td>0..1, Must Support</td>
+      <td>1..1, Must Support</td>
+      <td>⚠️ ISiK fordert Sprachangabe</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.title</code></td>
+      <td>0..1</td>
+      <td>1..1, Must Support</td>
+      <td>⚠️ ISiK fordert Dokumententitel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.creation</code></td>
+      <td>0..1, Must Support</td>
+      <td>1..1, Must Support</td>
+      <td>⚠️ ISiK fordert Dokumentendatum</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
+      <td>0..1, Must Support, required</td>
+      <td>1..1, Must Support, required</td>
+      <td>⚠️ ISiK fordert Format-Code</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.facilityType</code></td>
+      <td>0..1, Must Support, required</td>
+      <td>1..1, Must Support, required</td>
+      <td>⚠️ ISiK fordert Einrichtungsart</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.practiceSetting</code></td>
+      <td>0..1, Must Support, required</td>
+      <td>1..1, Must Support, required</td>
+      <td>⚠️ ISiK fordert Fachgebiet</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.encounter</code></td>
+      <td>0..*, Must Support</td>
+      <td>0..1, Must Support</td>
+      <td>✓ MII KDS Dokument erlaubt mehrere Fallbezüge</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">implicitRules</code></td>
+      <td>0..1</td>
+      <td>0..0 (ausgeschlossen)</td>
+      <td>⚠️ ISiK schließt das Element aus</td>
     </tr>
   </tbody>
 </table>
@@ -469,17 +562,22 @@ QUELLZITAT ENDE -->
 <p>Anmerkungen:</p>
 
 <ul>
-  <li><strong>Must Support:</strong> Alle ISiK Must Support Felder sind auch im MII KDS Dokument-Profil als Must Support gekennzeichnet.</li>
-  <li><strong>Terminologie:</strong> MII unterstützt alle ISiK-verpflichtenden Codes und erweitert diese um internationale Codesysteme.</li>
+  <li><strong>Must Support:</strong> Die Must-Support-Kennzeichnungen decken sich weitgehend, aber nicht vollständig. Fünf in ISiK als Must Support gekennzeichnete Elemente sind es im MII KDS Dokument-Profil nicht: <code class="language-plaintext highlighter-rouge">DocumentReference.id</code>, <code class="language-plaintext highlighter-rouge">author</code>, <code class="language-plaintext highlighter-rouge">content.attachment.data</code>, <code class="language-plaintext highlighter-rouge">content.attachment.url</code> und <code class="language-plaintext highlighter-rouge">content.attachment.title</code>. Umgekehrt kennzeichnet das MII KDS Dokument-Profil neun Elemente als Must Support, die ISiK nicht so kennzeichnet: <code class="language-plaintext highlighter-rouge">meta</code>, <code class="language-plaintext highlighter-rouge">meta.profile</code>, <code class="language-plaintext highlighter-rouge">relatesTo.code</code>, <code class="language-plaintext highlighter-rouge">relatesTo.target</code>, <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">context.event</code> (inkl. <code class="language-plaintext highlighter-rouge">coding.system</code> und <code class="language-plaintext highlighter-rouge">coding.code</code>) und <code class="language-plaintext highlighter-rouge">context.period</code>.</li>
+  <li><strong>Terminologie:</strong> Die vom MII KDS Dokument-Profil gebundenen ValueSets schließen die von ISiK gebundenen ValueSets jeweils per Referenz ein und erweitern sie: <code class="language-plaintext highlighter-rouge">mii-vs-dokument-format-code</code> enthält <code class="language-plaintext highlighter-rouge">IHEXDSformatCodeDE</code> und zusätzlich den internationalen IHE-Format-Code-ValueSet; <code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code> enthält <code class="language-plaintext highlighter-rouge">IHEXDShealthcareFacilityTypeCode</code> und zusätzlich SNOMED-CT-Hierarchien; <code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code> enthält <code class="language-plaintext highlighter-rouge">IHEXDSpracticeSettingCode</code> und zusätzlich eine SNOMED-CT-Hierarchie. ISiK-konforme Codes sind damit ohne Mapping gültig.</li>
 </ul>
 
 <h4 id="einschränkungen">Einschränkungen</h4>
 
 <ul>
+  <li><strong>Pflichtfelder MII → ISiK:</strong> Zwölf Elemente sind in ISiK verpflichtend, im MII KDS Dokument-Profil dagegen optional (siehe Tabelle). Bei einer Transformation nach ISiK sind sie zu ergänzen; <code class="language-plaintext highlighter-rouge">implicitRules</code> ist zu entfernen und <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">content</code> sowie <code class="language-plaintext highlighter-rouge">context.encounter</code> sind auf je höchstens eine Angabe zu reduzieren.</li>
   <li><strong>Sicherheitslabels:</strong> Im MII KDS Dokument optional, in ISiK verpflichtend. Bei Transformation von MII nach ISiK müssen ggf. Sicherheitslabels ergänzt werden.</li>
   <li><strong>Kontext:</strong> ISiK verlangt Kontextinformationen, MII KDS Dokument lässt diese optional. Für ISiK-Kompatibilität müssen Kontextdaten ergänzt werden.</li>
-  <li><strong>Kategorie:</strong> Die ISiK-spezifische Ableitung der Kategorie aus KDL muss bei Transformation beachtet werden.</li>
+  <li><strong>Kategorie:</strong> ISiK begrenzt <code class="language-plaintext highlighter-rouge">category</code> auf höchstens eine Angabe (0..1), das MII KDS Dokument-Profil erlaubt mehrere (0..*). Bei einer Transformation nach ISiK ist auf eine Kategorie zu reduzieren; die ISiK-spezifische Ableitung der Kategorie aus dem KDL-Code ist dabei zu beachten.</li>
 </ul>
+
+<blockquote>
+  <p><strong>Hinweis zur Auswertung von Validator-Vergleichsberichten:</strong> Die ValueSet-Vergleiche des FHIR Validators arbeiten auf der <code class="language-plaintext highlighter-rouge">compose</code>-Definition, nicht auf der Expansion. Für die vier verglichenen ValueSets (<code class="language-plaintext highlighter-rouge">securityLabel</code>, <code class="language-plaintext highlighter-rouge">content.format</code>, <code class="language-plaintext highlighter-rouge">context.facilityType</code>, <code class="language-plaintext highlighter-rouge">context.practiceSetting</code>) meldet der Bericht deshalb jeweils eine <em>leere</em> Schnittmenge, obwohl sich die Codemengen inhaltlich überlappen: ISiK zählt die Codes bzw. Teil-ValueSets direkt auf, während das MII KDS Dokument-Profil das jeweilige ihe-d-ValueSet per Referenz einbindet. Eine leere Schnittmenge in diesen Berichten ist daher kein Beleg für Terminologie-Inkompatibilität.</p>
+</blockquote>
 
 <h3 id="kbv-mio-basis">KBV MIO Basis</h3>
 
@@ -495,8 +593,8 @@ QUELLZITAT ENDE -->
   <thead>
     <tr>
       <th>FHIR-Element</th>
-      <th>MII KDS Dokument</th>
-      <th>KBV MIO Basis</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code> 1.7.0)</th>
       <th>Kompatibilität</th>
     </tr>
   </thead>
@@ -509,21 +607,21 @@ QUELLZITAT ENDE -->
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td>0..1, Must Support, extensible</td>
-      <td>0..1, preferred (LOINC, SNOMED CT, XDS)</td>
-      <td>✓ Beide unterstützen gleiche Codes</td>
+      <td>0..1, Must Support, preferred (identische Bindung wie KBV), <code class="language-plaintext highlighter-rouge">type.coding</code> 1..*, Invariante <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code> (warning)</td>
+      <td>0..1, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>)</td>
+      <td>⚠️ Bindung identisch; MII fordert jedoch mindestens ein <code class="language-plaintext highlighter-rouge">coding</code> mit <code class="language-plaintext highlighter-rouge">system</code> und <code class="language-plaintext highlighter-rouge">code</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
-      <td>0..*, Must Support, extensible</td>
-      <td>0..*, example binding</td>
-      <td>✓ Vollständig kompatibel</td>
+      <td>0..<em>, Must Support, example (identische Bindung wie KBV), <code class="language-plaintext highlighter-rouge">category.coding</code> 1..</em>, Invariante <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code> (warning)</td>
+      <td>0..*, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>)</td>
+      <td>⚠️ Bindung identisch; MII fordert jedoch mindestens ein <code class="language-plaintext highlighter-rouge">coding</code> mit <code class="language-plaintext highlighter-rouge">system</code> und <code class="language-plaintext highlighter-rouge">code</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>1..1, Must Support</td>
-      <td>0..1</td>
-      <td>✓ MII KDS Dokument spezifiziert Pflichtfeld</td>
+      <td>0..1, Must Support, nur Reference(Patient | MII Patient | MII PatientPseudonymisiert)</td>
+      <td>0..1, Reference(Patient | Practitioner | Group | Device | KBV_PR_Base_*)</td>
+      <td>⚠️ Gleiche Kardinalität, aber MII schränkt die zulässigen Referenzziele ein</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content</code></td>
@@ -533,15 +631,51 @@ QUELLZITAT ENDE -->
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">author</code></td>
-      <td>0..*, Must Support</td>
-      <td>0..*</td>
-      <td>✓ Vollständig kompatibel</td>
+      <td>0..* (kein Must Support)</td>
+      <td>0..<em>, auf KBV_PR_Base_</em>-Profile eingeschränkt</td>
+      <td>✓ Vollständig kompatibel (MII ist hier weiter)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">custodian</code></td>
       <td>0..1</td>
       <td>0..1</td>
       <td>✓ Vollständig kompatibel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
+      <td>0..*, Must Support, extensible</td>
+      <td>0..*, extensible</td>
+      <td>✓ Vollständig kompatibel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">MII_VS_Dokument_Format_Code</code>)</td>
+      <td>0..1, preferred (IHE <code class="language-plaintext highlighter-rouge">formatcodes</code>)</td>
+      <td>⚠️ Unterschiedliche ValueSets bei gleicher Bindungsstärke</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.event</code></td>
+      <td>0..<em>, Must Support, required (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..</em></td>
+      <td>0..*, example (<code class="language-plaintext highlighter-rouge">v3-ActCode</code>)</td>
+      <td>⚠️ Bindungsstärke von example auf required verschärft</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.facilityType</code></td>
+      <td>0..1, Must Support, required (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..*</td>
+      <td>0..1, example (<code class="language-plaintext highlighter-rouge">c80-facilitycodes</code>)</td>
+      <td>⚠️ Bindungsstärke von example auf required verschärft</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.practiceSetting</code></td>
+      <td>0..1, Must Support, required (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..*</td>
+      <td>0..1, example (<code class="language-plaintext highlighter-rouge">c80-practice-codes</code>)</td>
+      <td>⚠️ example → required; 117 Codes des KBV-Beispiel-ValueSets sind im MII-ValueSet nicht enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.encounter</code></td>
+      <td>0..*, Must Support, Reference(Encounter | MII KontaktGesundheitseinrichtung)</td>
+      <td>0..*, Reference(Encounter | EpisodeOfCare)</td>
+      <td>⚠️ MII lässt <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> nicht zu</td>
     </tr>
   </tbody>
 </table>
@@ -550,15 +684,17 @@ QUELLZITAT ENDE -->
 
 <ul>
   <li><strong>Terminologie:</strong> Beide Profile unterstützen LOINC, SNOMED CT und XDS.</li>
-  <li><strong>Kardinalitäten:</strong> Weitgehend kompatibel, das MII KDS Dokument-Profil ist bei <code class="language-plaintext highlighter-rouge">subject</code> restriktiver.</li>
+  <li><strong>Kardinalitäten:</strong> Auf Element-Ebene identisch; die einzigen Verschärfungen betreffen <code class="language-plaintext highlighter-rouge">type.coding</code> und <code class="language-plaintext highlighter-rouge">category.coding</code> (jeweils 0..* → 1..<em>) sowie <code class="language-plaintext highlighter-rouge">coding</code> 1..</em> bei <code class="language-plaintext highlighter-rouge">context.event</code>, <code class="language-plaintext highlighter-rouge">context.facilityType</code> und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code>. Bei <code class="language-plaintext highlighter-rouge">subject</code> ist nicht die Kardinalität, sondern die Menge der zulässigen Referenzziele eingeschränkt.</li>
 </ul>
 
 <h4 id="einschränkungen-1">Einschränkungen</h4>
 
 <ul>
-  <li><strong>Subject:</strong> MII KDS Dokument verlangt eine Patientenreferenz, KBV MIO Basis lässt diese optional. Bei Transformation von KBV MIO Basis nach MII KDS Dokument muss ggf. eine Referenz ergänzt werden.</li>
-  <li><strong>Must Support:</strong> MII KDS Dokument kennzeichnet mehr Felder als Must Support.</li>
-  <li><strong>Weitere Einschränkungen:</strong> Keine nennenswerten Inkompatibilitäten.</li>
+  <li><strong>Subject:</strong> <code class="language-plaintext highlighter-rouge">subject</code> ist in beiden Profilen 0..1; eine Referenz muss also nicht ergänzt werden. MII schränkt jedoch die zulässigen Referenzziele auf <code class="language-plaintext highlighter-rouge">Patient</code> (bzw. die MII-Profile <code class="language-plaintext highlighter-rouge">Patient</code> und <code class="language-plaintext highlighter-rouge">PatientPseudonymisiert</code>) ein, während KBV MIO Basis auch <code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">Group</code> und <code class="language-plaintext highlighter-rouge">Device</code> sowie die Profile <code class="language-plaintext highlighter-rouge">KBV_PR_Base_Patient|1.7.0</code>, <code class="language-plaintext highlighter-rouge">KBV_PR_Base_Practitioner|1.7.0</code> und <code class="language-plaintext highlighter-rouge">KBV_PR_Base_Device|1.7.0</code> erlaubt. Instanzen mit einem nicht-patientenbezogenen <code class="language-plaintext highlighter-rouge">subject</code> sind gegen das MII-Profil nicht valide.</li>
+  <li><strong>Must Support:</strong> KBV MIO Basis 1.7.0 kennzeichnet in <code class="language-plaintext highlighter-rouge">DocumentReference</code> kein einziges Element als Must Support. Das MII KDS Dokument-Profil setzt Must Support auf 22 gemeinsame Elemente sowie auf vier weitere, die KBV nicht einschränkt (<code class="language-plaintext highlighter-rouge">meta.profile</code>, <code class="language-plaintext highlighter-rouge">content.attachment.contentType</code>, <code class="language-plaintext highlighter-rouge">content.attachment.language</code>, <code class="language-plaintext highlighter-rouge">content.attachment.creation</code>).</li>
+  <li><strong>Terminologie-Bindungen:</strong> MII verschärft drei Bindungen von <code class="language-plaintext highlighter-rouge">example</code> auf <code class="language-plaintext highlighter-rouge">required</code>: <code class="language-plaintext highlighter-rouge">context.event</code> (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>), <code class="language-plaintext highlighter-rouge">context.facilityType</code> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>) und <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>). Beim Fachgebiet meldet der Validator-Vergleich 117 Codes des KBV-seitigen Beispiel-ValueSets (<code class="language-plaintext highlighter-rouge">c80-practice-codes</code>), die im MII-ValueSet nicht enthalten sind. Vorhandene Kontext-Codes aus KBV-Instanzen können daher nicht ungeprüft übernommen werden.</li>
+  <li><strong>Referenzziele:</strong> <code class="language-plaintext highlighter-rouge">context.encounter</code> lässt in MII <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> nicht mehr zu.</li>
+  <li><strong>Kodierungen:</strong> <code class="language-plaintext highlighter-rouge">type</code> und <code class="language-plaintext highlighter-rouge">category</code> benötigen in MII mindestens ein <code class="language-plaintext highlighter-rouge">coding</code> mit <code class="language-plaintext highlighter-rouge">system</code> und <code class="language-plaintext highlighter-rouge">code</code>; Instanzen, die nur <code class="language-plaintext highlighter-rouge">text</code> führen, sind nicht valide.</li>
 </ul>
 
 <h3 id="ihe-mhd">IHE MHD</h3>
@@ -569,14 +705,14 @@ QUELLZITAT ENDE -->
 
 <h4 id="kompatibilität-2">Kompatibilität</h4>
 
-<p>Das MII KDS Dokument-Profil ist weitgehend mit dem IHE MHD Comprehensive-Profil kompatibel, mit Unterschieden in der Restriktivität:</p>
+<p>Der nachfolgende Vergleich bezieht sich auf das Profil <code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code> (IHE ITI MHD, Package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, Version 4.2.3; abgeleitet von <code class="language-plaintext highlighter-rouge">IHE.MHD.Minimal.DocumentReference</code>). Für die <em>contained</em>-Variante von MHD Comprehensive gelten abweichende Anforderungen. IHE MHD ist in dieser Variante durchgängig <strong>restriktiver</strong> als das MII KDS Dokument-Profil: zwölf Elemente sind dort verpflichtend, die im MII-Profil optional sind, und vier Elemente sind in MHD verboten bzw. enger gebunden.</p>
 
 <table>
   <thead>
     <tr>
       <th>FHIR-Element</th>
-      <th>MII KDS Dokument</th>
-      <th>IHE MHD Comprehensive</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code> 4.2.3)</th>
       <th>Kompatibilität</th>
     </tr>
   </thead>
@@ -589,51 +725,117 @@ QUELLZITAT ENDE -->
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">status</code></td>
-      <td>1..1, Must Support</td>
-      <td>1..1</td>
-      <td>✓ Vollständig kompatibel</td>
+      <td>1..1, Must Support, required (<code class="language-plaintext highlighter-rouge">document-reference-status</code>: current | superseded | entered-in-error)</td>
+      <td>1..1, required (<code class="language-plaintext highlighter-rouge">DocumentReferenceStats</code>: nur current | superseded)</td>
+      <td>⚠️ <code class="language-plaintext highlighter-rouge">entered-in-error</code> ist in IHE MHD nicht zulässig</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">docStatus</code></td>
+      <td>0..1, Must Support</td>
+      <td><strong>0..0 (verboten)</strong></td>
+      <td>❌ <code class="language-plaintext highlighter-rouge">docStatus</code> muss für IHE MHD entfallen (Informationsverlust)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td>0..1, Must Support, extensible</td>
-      <td>1..1, preferred (LOINC)</td>
-      <td>⚠️ IHE MHD fordert Dokumenttyp</td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>), Constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code></td>
+      <td>1..1, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>)</td>
+      <td>⚠️ IHE MHD fordert Dokumenttyp; Terminologie-Bindung identisch</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
-      <td>0..*, Must Support, extensible</td>
-      <td>1..1, example binding</td>
-      <td>⚠️ IHE MHD fordert Kategorie</td>
+      <td>0..*, Must Support, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>), Constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code></td>
+      <td>1..1, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>)</td>
+      <td>⚠️ IHE MHD fordert genau <strong>eine</strong> Kategorie; mehrfache <code class="language-plaintext highlighter-rouge">category</code> sind MHD-invalide</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>1..1, Must Support</td>
-      <td>1..1</td>
-      <td>✓ Vollständig kompatibel</td>
+      <td>0..1, Must Support, Reference(Patient | MII Patient | MII PatientPseudonymisiert)</td>
+      <td>1..1, Reference(Patient)</td>
+      <td>⚠️ IHE MHD fordert die Patientenreferenz</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
-      <td>0..*, extensible</td>
-      <td>1..*, extensible</td>
-      <td>⚠️ IHE MHD fordert Sicherheitslabels</td>
+      <td>0..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
+      <td>1..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
+      <td>⚠️ IHE MHD fordert mindestens ein Sicherheitslabel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content</code></td>
+      <td>1..*, Must Support, Slicing nach <code class="language-plaintext highlighter-rouge">exists:attachment.url</code></td>
+      <td>1..1</td>
+      <td>⚠️ Mehrere <code class="language-plaintext highlighter-rouge">content</code>-Einträge sind MHD-invalide</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment</code></td>
       <td>1..1, Must Support</td>
       <td>1..1</td>
-      <td>✓ Vollständig kompatibel</td>
+      <td>✓ Kardinalität identisch (MS nur im MII-Profil)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.data</code></td>
+      <td>0..1</td>
+      <td><strong>0..0 (verboten)</strong></td>
+      <td>❌ Inline-Base64 ist in dieser MHD-Variante ausgeschlossen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.url</code></td>
+      <td>0..1</td>
+      <td>1..1</td>
+      <td>❌ MHD fordert die URL; ein rein über <code class="language-plaintext highlighter-rouge">data</code> ausgeliefertes Dokument ist nicht MHD-abbildbar</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.contentType</code></td>
+      <td>0..1, Must Support</td>
+      <td>1..1</td>
+      <td>⚠️ IHE MHD fordert den MIME-Typ</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.language</code></td>
+      <td>0..1</td>
+      <td>1..1</td>
+      <td>⚠️ IHE MHD fordert die Sprachangabe</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.attachment.creation</code></td>
+      <td>0..1, Must Support</td>
+      <td>1..1</td>
+      <td>⚠️ IHE MHD fordert das Erstellungsdatum</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-format-code</code>)</td>
+      <td>1..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">ihe.formatcode.fhir/ValueSet/formatcode</code>)</td>
+      <td>⚠️ IHE MHD fordert einen Format-Code; die (preferred) Wertemengen unterscheiden sich</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context</code></td>
-      <td>0..1</td>
+      <td>0..1, Must Support</td>
       <td>1..1</td>
       <td>⚠️ IHE MHD fordert Kontext</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
+      <td><code class="language-plaintext highlighter-rouge">context.facilityType</code></td>
+      <td>0..1, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>)</td>
+      <td>1..1, example (<code class="language-plaintext highlighter-rouge">c80-facilitycodes</code>)</td>
+      <td>⚠️ Kardinalität: MHD strenger — Terminologie: <strong>MII strenger</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.practiceSetting</code></td>
+      <td>0..1, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>)</td>
+      <td>1..1, example (<code class="language-plaintext highlighter-rouge">c80-practice-codes</code>)</td>
+      <td>⚠️ Kardinalität: MHD strenger — Terminologie: <strong>MII strenger</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.event</code></td>
+      <td>0..*, Must Support, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>)</td>
+      <td>0..*, example (<code class="language-plaintext highlighter-rouge">v3-ActCode</code>)</td>
+      <td>⚠️ Terminologie: <strong>MII strenger</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code></td>
       <td>0..1</td>
-      <td>1..1, preferred (IHE Format Codes)</td>
-      <td>⚠️ IHE MHD fordert Format-Code</td>
+      <td>1..1, Must Support</td>
+      <td>⚠️ IHE MHD fordert die Quell-Patientendaten</td>
     </tr>
   </tbody>
 </table>
@@ -641,24 +843,28 @@ QUELLZITAT ENDE -->
 <p>Anmerkungen:</p>
 
 <ul>
-  <li><strong>Terminologie:</strong> Beide Profile unterstützen LOINC und internationale Codesysteme.</li>
-  <li><strong>Metadaten:</strong> IHE MHD verlangt umfangreichere Metadaten als MII KDS Dokument.</li>
+  <li><strong>Terminologie:</strong> Für <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">category</code> und <code class="language-plaintext highlighter-rouge">securityLabel</code> verwenden beide Profile <strong>dieselbe</strong> Bindung (preferred <code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>, example <code class="language-plaintext highlighter-rouge">document-classcodes</code>, extensible <code class="language-plaintext highlighter-rouge">security-labels</code>). Unterschiede bestehen bei <code class="language-plaintext highlighter-rouge">status</code> (MHD enger), <code class="language-plaintext highlighter-rouge">content.format</code> (unterschiedliche preferred-Wertemengen) sowie bei <code class="language-plaintext highlighter-rouge">context.facilityType</code>, <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> und <code class="language-plaintext highlighter-rouge">context.event</code> — dort bindet das <strong>MII-Profil required</strong>, IHE MHD nur example.</li>
+  <li><strong>Metadaten:</strong> IHE MHD verlangt umfangreichere Metadaten als MII KDS Dokument (zwölf zusätzliche Pflichtelemente).</li>
+  <li><strong>Must Support:</strong> Das MII-Profil setzt MS auf 14 Elemente, die in MHD kein MS tragen (u. a. <code class="language-plaintext highlighter-rouge">meta</code>, <code class="language-plaintext highlighter-rouge">masterIdentifier</code>, <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">content</code>, <code class="language-plaintext highlighter-rouge">context</code>); umgekehrt trägt IHE MHD MS auf <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">author</code> und <code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code>, wo das MII-Profil kein MS setzt.</li>
 </ul>
 
 <h4 id="einschränkungen-2">Einschränkungen</h4>
 
 <ul>
-  <li><strong>Pflichtfelder:</strong> IHE MHD fordert mehrere Felder als verpflichtend, die im MII KDS Dokument optional sind (<code class="language-plaintext highlighter-rouge">masterIdentifier</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">securityLabel</code>, <code class="language-plaintext highlighter-rouge">context</code>, <code class="language-plaintext highlighter-rouge">content.format</code>).</li>
+  <li><strong>Pflichtfelder:</strong> IHE MHD fordert folgende Felder verpflichtend, die im MII KDS Dokument optional sind: <code class="language-plaintext highlighter-rouge">masterIdentifier</code> (zusätzlich typisiert als <code class="language-plaintext highlighter-rouge">IHE.MHD.UniqueIdIdentifier</code>), <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">securityLabel</code>, <code class="language-plaintext highlighter-rouge">context</code>, <code class="language-plaintext highlighter-rouge">context.facilityType</code>, <code class="language-plaintext highlighter-rouge">context.practiceSetting</code>, <code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code>, <code class="language-plaintext highlighter-rouge">content.format</code>, <code class="language-plaintext highlighter-rouge">content.attachment.contentType</code>, <code class="language-plaintext highlighter-rouge">content.attachment.language</code>, <code class="language-plaintext highlighter-rouge">content.attachment.creation</code> und <code class="language-plaintext highlighter-rouge">content.attachment.url</code>.</li>
+  <li><strong>Von IHE MHD ausgeschlossene Elemente:</strong> <code class="language-plaintext highlighter-rouge">docStatus</code> (0..0), <code class="language-plaintext highlighter-rouge">content.attachment.data</code> (0..0), <code class="language-plaintext highlighter-rouge">modifierExtension</code> (0..0) sowie mehr als ein <code class="language-plaintext highlighter-rouge">content</code>-Eintrag (max. 1). Diese Angaben gehen bei einer Transformation MII → IHE MHD verloren bzw. machen die Instanz MHD-invalide.</li>
+  <li><strong>Dokumentenzugriff:</strong> Da IHE MHD <code class="language-plaintext highlighter-rouge">content.attachment.data</code> verbietet und <code class="language-plaintext highlighter-rouge">content.attachment.url</code> fordert, ist ein ausschließlich als Base64 eingebettetes Dokument nicht nach IHE MHD überführbar; es muss zuvor als abrufbare URL bereitgestellt werden.</li>
+  <li><strong>Status:</strong> IHE MHD lässt nur <code class="language-plaintext highlighter-rouge">current</code> und <code class="language-plaintext highlighter-rouge">superseded</code> zu; <code class="language-plaintext highlighter-rouge">status = entered-in-error</code> ist nicht abbildbar.</li>
   <li><strong>Master Identifier:</strong> Für IHE MHD muss ein eindeutiger Master Identifier vergeben werden.</li>
   <li><strong>Format Codes:</strong> IHE MHD verlangt Format Codes, die ggf. ergänzt werden müssen.</li>
   <li><strong>Kontext:</strong> Kontextinformationen müssen für IHE MHD bereitgestellt werden.</li>
   <li><strong>Sicherheitslabel:</strong> Mindestens ein Sicherheitslabel ist für IHE MHD erforderlich.</li>
-  <li><strong>Transformationshinweis:</strong> Für die Transformation von MII KDS Dokument nach IHE MHD sollten fehlende Pflichtfelder ergänzt werden. Die umgekehrte Transformation ist ohne Informationsverlust möglich.</li>
+  <li><strong>Transformationshinweis:</strong> Für die Transformation MII KDS Dokument → IHE MHD müssen fehlende Pflichtfelder ergänzt und die in MHD ausgeschlossenen Elemente (<code class="language-plaintext highlighter-rouge">docStatus</code>, <code class="language-plaintext highlighter-rouge">content.attachment.data</code>, <code class="language-plaintext highlighter-rouge">modifierExtension</code>, zusätzliche <code class="language-plaintext highlighter-rouge">content</code>-Einträge) entfernt werden. Die umgekehrte Transformation IHE MHD → MII KDS Dokument ist kardinalitätsseitig verlustfrei, <strong>terminologisch jedoch nicht automatisch gültig</strong>: <code class="language-plaintext highlighter-rouge">context.facilityType</code>, <code class="language-plaintext highlighter-rouge">context.practiceSetting</code> und <code class="language-plaintext highlighter-rouge">context.event</code> sind im MII-Profil required gebunden, so dass MHD-Codes außerhalb der MII-Wertemengen gemappt werden müssen; zudem entfällt <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> als zulässiges Ziel von <code class="language-plaintext highlighter-rouge">context.encounter</code>.</li>
 </ul>
 
 <h2 id="zusammenfassung">Zusammenfassung</h2>
 
-<p>Das MII KDS Dokument-Profil ist als flexibles Superset konzipiert und ermöglicht die Harmonisierung von Dokumentenmetadaten aus verschiedenen Quellen. Die Kompatibilität ist mit ISiK und KBV MIO Basis sehr hoch, mit IHE MHD bestehen Anpassungsbedarfe bei Pflichtfeldern und Metadaten. Damit ist eine sektorenübergreifende und internationale Interoperabilität sichergestellt.</p>
+<p>Das MII KDS Dokument-Profil ist als flexibles Superset konzipiert und ermöglicht die Harmonisierung von Dokumentenmetadaten aus verschiedenen Quellen. Die Kompatibilität ist mit ISiK sehr hoch und mit KBV MIO Basis hoch; mit IHE MHD bestehen Anpassungsbedarfe in beide Richtungen: MII → IHE MHD erfordert das Ergänzen zahlreicher Pflichtfelder und das Entfernen der in MHD ausgeschlossenen Elemente; IHE MHD → MII erfordert ein Terminologie-Mapping für die required gebundenen Kontextfelder. Damit ist eine sektorenübergreifende und internationale Interoperabilität sichergestellt.</p>
 
 <p><strong>Kompatibilitätsübersicht:</strong></p>
 
@@ -672,19 +878,19 @@ QUELLZITAT ENDE -->
   </thead>
   <tbody>
     <tr>
-      <td>ISiK Dokumentenaustausch</td>
+      <td>ISiK Dokumentenaustausch (6.0.0)</td>
       <td>Sehr hoch</td>
-      <td>Sicherheitslabel, Kontext, Kategorie</td>
+      <td>Sicherheitslabel, Kontext, Pflichtfelder (MII→ISiK)</td>
     </tr>
     <tr>
-      <td>KBV MIO Basis</td>
-      <td>Nahezu vollständig</td>
-      <td>Subject-Referenz, Must Support Unterschiede</td>
+      <td>KBV MIO Basis (1.7.0)</td>
+      <td>Hoch</td>
+      <td>Referenzziele (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code>), required-Bindungen im <code class="language-plaintext highlighter-rouge">context</code>, <code class="language-plaintext highlighter-rouge">coding</code> 1..* bei <code class="language-plaintext highlighter-rouge">type</code>/<code class="language-plaintext highlighter-rouge">category</code>, Must-Support-Unterschiede</td>
     </tr>
     <tr>
-      <td>IHE MHD</td>
-      <td>Hoch, mit Anpassungen</td>
-      <td>Pflichtfelder (z.B. masterIdentifier, Kontext)</td>
+      <td>IHE MHD (UnContained Comprehensive 4.2.3)</td>
+      <td>Mittel, mit Anpassungen in beide Richtungen</td>
+      <td>14 Pflichtfelder (u. a. masterIdentifier, subject, Kontext, attachment.url); in MHD verbotene Elemente (docStatus, attachment.data, mehrfaches content); status ohne <code class="language-plaintext highlighter-rouge">entered-in-error</code>; required MII-Bindungen bei facilityType/practiceSetting/event; masterIdentifier fordert auch ISiK ab 6.0.0</td>
     </tr>
   </tbody>
 </table>
@@ -727,7 +933,7 @@ die Liste der berücksichtigten externen Standards führt die Seite
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Sun, Aug 30, 2026 12:43+0000">2026-08-30</span>
+          Erstellt <span title="Sun, Aug 30, 2026 17:48+0000">2026-08-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

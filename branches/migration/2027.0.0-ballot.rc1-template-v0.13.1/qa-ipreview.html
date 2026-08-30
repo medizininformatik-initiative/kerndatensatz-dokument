@@ -488,7 +488,7 @@ Konformität<b class="caret"> </b>          </a>
 .  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
-          Erstellt           <span title="Sun, Aug 30, 2026 12:43+0000">2026-08-30</span>
+          Erstellt           <span title="Sun, Aug 30, 2026 17:48+0000">2026-08-30</span>
 
                     <br/>
 
@@ -1242,8 +1242,17 @@ Dieses Werk ist lizenziert unter der
           <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">medizininformatik-initiative.github.io</a>
         </td>
         <td>
-Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus Gematik ISiK Dokumentenaustausch, KBV MIO Basis und IHE MHD wurde anhand der           <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">Berichte des FHIR Validators</a>
- und der technischen Profileigenschaften geprüft. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
+Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil           <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>
+, Version 6.0.0), KBV MIO Basis (          <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>
+, Version 1.7.0) und IHE MHD (          <code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>
+, Package           <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>
+, Version 4.2.3) wurde anhand der           <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">Berichte des FHIR Validators</a>
+, der Profilvergleiche des HL7 FHIR Validators (          <code class="language-plaintext highlighter-rouge">compare</code>
+-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil           <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code>
+ in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei           <code class="language-plaintext highlighter-rouge">content.attachment.title</code>
+ und           <code class="language-plaintext highlighter-rouge">description</code>
+ ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen           <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>
+. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
         </td>
       </tr>
       <tr>
@@ -1560,7 +1569,7 @@ Conformance<b class="caret"> </b>          </a>
 .  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
-          Generated           <span title="Sun, Aug 30, 2026 12:43+0000">2026-08-30</span>
+          Generated           <span title="Sun, Aug 30, 2026 17:48+0000">2026-08-30</span>
 
                     <br/>
 
@@ -2218,8 +2227,17 @@ This work is licensed under the
           <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">medizininformatik-initiative.github.io</a>
         </td>
         <td>
-The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from Gematik ISiK document exchange, KBV MIO Basis and IHE MHD was assessed on the basis of the           <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">FHIR Validator reports</a>
- and the technical profile properties. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centres.
+The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile           <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>
+, version 6.0.0), KBV MIO Basis (          <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>
+, version 1.7.0) and IHE MHD (          <code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>
+, package           <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>
+, version 4.2.3) was assessed on the basis of the           <a href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/">FHIR Validator reports</a>
+, the profile comparisons of the HL7 FHIR Validator (          <code class="language-plaintext highlighter-rouge">compare</code>
+ mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile           <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code>
+ in version 2027.0.0-ballot.rc1. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for           <code class="language-plaintext highlighter-rouge">content.attachment.title</code>
+ and           <code class="language-plaintext highlighter-rouge">description</code>
+. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against           <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>
+. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centres.
         </td>
       </tr>
       <tr>

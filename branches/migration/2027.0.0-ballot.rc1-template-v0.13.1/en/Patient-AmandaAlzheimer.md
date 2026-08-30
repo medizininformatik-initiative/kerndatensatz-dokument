@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Person Patient](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)
+Profile: [MII PR Person Patient](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.1/StructureDefinition-mii-pr-person-patient.html)
 
 Alzheimer Amanda (official) Female, DoB Unknown ( Medical record number (use: usual, ))
 
