@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "AmandaAlzheimerEinrichtungskontakt",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Encounter AmandaAlzheimerEinrichtungskontakt</b></p><a name=\"en-AmandaAlzheimerEinrichtungskontakt\"> </a><a name=\"en-hcAmandaAlzheimerEinrichtungskontakt\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung\">MII PR Fall Kontakt mit einer Gesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/123456</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:\">Einrichtungskontakt</span></p><p><b>subject</b>: <a href=\"Patient-AmandaAlzheimer.html\">Alzheimer Amanda (official) Female, DoB Unknown ( Medical record number\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>period</b>: 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "VN"
+      }]
+    },
+    "system" : "http://uk-musterstadt.de/fid",
+    "value" : "123456"
+  }],
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "IMP",
+    "display" : "inpatient encounter"
+  },
+  "type" : [{
+    "coding" : [{
+      "code" : "einrichtungskontakt",
+      "display" : "Einrichtungskontakt"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/AmandaAlzheimer"
+  },
+  "period" : {
+    "start" : "2028-01-24T00:00:00+01:00",
+    "end" : "2028-02-06T00:00:00+01:00"
+  }
+}

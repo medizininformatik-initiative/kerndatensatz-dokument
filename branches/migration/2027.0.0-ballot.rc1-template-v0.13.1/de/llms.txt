@@ -1,0 +1,73 @@
+# de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1: MII IG Dokument(de)
+
+## Pages
+
+* [Startseite](index.md)
+* [Beispiele](examples.md)
+* [ValueSets](value-sets.md)
+* [CodeSystems](code-systems.md)
+* [Kompatibilität zu anderen Spezifikationen](kompatibilitaet.md)
+* [Versionierung](version-history.md)
+* [Extensions](extensions.md)
+* [Metadaten-Übersicht](metadata.md)
+* [Anleitung für Implementierende](implementer-guidance.md)
+* [Profile](profiles.md)
+* [Artefaktübersicht](artifacts.md)
+* [Übersetzungsinformationen](translationinfo.md)
+* [Änderungshistorie](changes.md)
+* [Logische Modelle](logical-models.md)
+* [Anleitung](guidance.md)
+* [Downloads](downloads.md)
+* [Sicherheit und Datenschutz](security-and-privacy.md)
+* [CapabilityStatements](capability-statements.md)
+* [UML-Diagramme](uml-diagrams.md)
+
+## Resources
+
+### CodeSystems
+
+* [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.md)
+
+### ValueSets
+
+* [MII VS Dokument Einrichtungart](ValueSet-mii-vs-dokument-einrichtungsart.md)
+* [MII VS Dokument Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.md)
+* [MII VS Dokument Format Code](ValueSet-mii-vs-dokument-format-code.md)
+* [MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.md)
+* [MII VS Dokument SCT Dokument Kategorie](ValueSet-mii-vs-dokument-sct-dokument-kategorie.md)
+* [MII VS Dokument SCT Dokument Typ](ValueSet-mii-vs-dokument-sct-dokument-typ.md)
+
+### Logicals
+
+* [MII LM Dokument](StructureDefinition-mii-lm-dokument.md)
+
+### Resource Profiles
+
+* [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.md)
+
+### Extensions
+
+* [MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)
+
+### CapabilityStatements
+
+* [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md)
+
+### ImplementationGuides
+
+* [MII IG Dokument](ImplementationGuide-mii-ig-dokument.md)
+
+### Parameters
+
+* [mii-param-dokument-manifest](Parameters-mii-param-dokument-manifest.md)
+
+### Examples
+
+* [AmandaAlzheimerAnnotiertesDokument (DocumentReference)](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md)
+* [AmandaAlzheimerDeIdentifiziertesDokument (DocumentReference)](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md)
+* [AmandaAlzheimerKlartextDokument (DocumentReference)](DocumentReference-AmandaAlzheimerKlartextDokument.md)
+* [AmandaAlzheimerOriginalDokument (DocumentReference)](DocumentReference-AmandaAlzheimerOriginalDokument.md)
+* [AmandaAlzheimerAbteilungskontakt (Encounter)](Encounter-AmandaAlzheimerAbteilungskontakt.md)
+* [AmandaAlzheimerEinrichtungskontakt (Encounter)](Encounter-AmandaAlzheimerEinrichtungskontakt.md)
+* [AmandaAlzheimerVersorgungsstellenKontakt (Encounter)](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
+* [AmandaAlzheimer (Patient)](Patient-AmandaAlzheimer.md)

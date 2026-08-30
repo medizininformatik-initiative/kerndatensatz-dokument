@@ -1,0 +1,365 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "3120644b-a93d-497e-868f-4842ee29e702",
+  "meta" : {
+    "lastUpdated" : "2026-08-30T06:43:36.781+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "language" : "de-DE",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de-DE\" lang=\"de-DE\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html\">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 9 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de-DE)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-unprocessed\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-unprocessed\">unprocessed</a></td><td>Original</td><td>Dokument im Original</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-preprocessed\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-preprocessed\">preprocessed</a></td><td>Vorverarbeitetes Dokument</td><td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Vorverarbeitetes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Vorverarbeitetes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-format-change\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-format-change\">format-change</a></td><td>Formatänderung</td><td>Vorverarbeitung mit Transformation des Formats</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Formatänderung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Formatänderung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-content-change\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-content-change\">content-change</a></td><td>Inhaltsänderung</td><td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Inhaltsänderung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Inhaltsänderung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-annotated\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-annotated\">annotated</a></td><td>Annotiertes Dokument</td><td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-preanno\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-preanno\">preanno</a></td><td>Vorannotiertes Dokument</td><td>Maschinelle Vorannotation</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Vorannotiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Vorannotiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-deid\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-deid\">deid</a></td><td>Deidentifiziertes Dokument</td><td>Annotationen zum Zwecke einer Deidentifizierung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;Deidentifiziertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;Deidentifiziertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-semantic\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-semantic\">semantic</a></td><td>Semantisch annotiertes Dokument</td><td>Semantische Annotationen</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantisch annotiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantisch annotiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-surrogated\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-surrogated\">surrogated</a></td><td>Surrogiertes Dokument</td><td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+      "version" : "2027.0.0-ballot.rc1",
+      "name" : "MII_VS_Dokument_NLP_Processing_Status",
+      "title" : "MII VS Dokument NLP Processing Status",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-08-30T06:43:36+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:a9e9c4d5-6474-43e0-96f7-88594e19a382",
+        "timestamp" : "2026-08-30T06:45:53+00:00",
+        "total" : 9,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode|2021-07-06T21:23:52"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode|2019-05-17T13:46:31"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode|1.4.0"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDSformatCodeDE|2018-12-14T17:07:12"
+        },
+        {
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "system-version",
+          "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+        }],
+        "contains" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "unprocessed",
+          "display" : "Original"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "preprocessed",
+          "display" : "Vorverarbeitetes Dokument",
+          "contains" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "format-change",
+            "display" : "Formatänderung"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "content-change",
+            "display" : "Inhaltsänderung"
+          }]
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "annotated",
+          "display" : "Annotiertes Dokument",
+          "contains" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "preanno",
+            "display" : "Vorannotiertes Dokument"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "deid",
+            "display" : "Deidentifiziertes Dokument"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "semantic",
+            "display" : "Semantisch annotiertes Dokument"
+          }]
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "surrogated",
+          "display" : "Surrogiertes Dokument"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "language" : "de-DE",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de-DE\" lang=\"de-DE\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html\">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 9 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de-DE)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-unprocessed\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-unprocessed\">unprocessed</a></td><td>Original</td><td>Dokument im Original</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-preprocessed\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-preprocessed\">preprocessed</a></td><td>Vorverarbeitetes Dokument</td><td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Vorverarbeitetes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Vorverarbeitetes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-format-change\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-format-change\">format-change</a></td><td>Formatänderung</td><td>Vorverarbeitung mit Transformation des Formats</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Formatänderung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Formatänderung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-content-change\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-content-change\">content-change</a></td><td>Inhaltsänderung</td><td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Inhaltsänderung&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Inhaltsänderung&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-annotated\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-annotated\">annotated</a></td><td>Annotiertes Dokument</td><td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-preanno\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-preanno\">preanno</a></td><td>Vorannotiertes Dokument</td><td>Maschinelle Vorannotation</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Vorannotiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Vorannotiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-deid\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-deid\">deid</a></td><td>Deidentifiziertes Dokument</td><td>Annotationen zum Zwecke einer Deidentifizierung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;Deidentifiziertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;Deidentifiziertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-semantic\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-semantic\">semantic</a></td><td>Semantisch annotiertes Dokument</td><td>Semantische Annotationen</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantisch annotiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantisch annotiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-surrogated\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-surrogated\">surrogated</a></td><td>Surrogiertes Dokument</td><td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogiertes Dokument&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogiertes Dokument&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+      "version" : "2027.0.0-ballot.rc1",
+      "name" : "MII_VS_Dokument_NLP_Processing_Status",
+      "title" : "MII VS Dokument NLP Processing Status",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-08-30T06:43:36+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:a9e9c4d5-6474-43e0-96f7-88594e19a382",
+        "timestamp" : "2026-08-30T06:45:53+00:00",
+        "total" : 9,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode|2021-07-06T21:23:52"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode|2019-05-17T13:46:31"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode|1.4.0"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDSformatCodeDE|2018-12-14T17:07:12"
+        },
+        {
+          "name" : "displayLanguage",
+          "valueCode" : "de"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "system-version",
+          "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+        }],
+        "contains" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "unprocessed",
+          "display" : "Original"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "preprocessed",
+          "display" : "Vorverarbeitetes Dokument",
+          "contains" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "format-change",
+            "display" : "Formatänderung"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "content-change",
+            "display" : "Inhaltsänderung"
+          }]
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "annotated",
+          "display" : "Annotiertes Dokument",
+          "contains" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "preanno",
+            "display" : "Vorannotiertes Dokument"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "deid",
+            "display" : "Deidentifiziertes Dokument"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "semantic",
+            "display" : "Semantisch annotiertes Dokument"
+          }]
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "surrogated",
+          "display" : "Surrogiertes Dokument"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "language" : "de-DE",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de-DE\" lang=\"de-DE\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html\">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc1 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 9 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>Level</b></td><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (de-DE)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-unprocessed\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-unprocessed\">unprocessed</a></td><td>Original document</td><td>Dokument im Original</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-preprocessed\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-preprocessed\">preprocessed</a></td><td>Preprocessed document</td><td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Preprocessed document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Preprocessed document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-format-change\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-format-change\">format-change</a></td><td>Format changed</td><td>Vorverarbeitung mit Transformation des Formats</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Format changed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Format changed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-content-change\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-content-change\">content-change</a></td><td>Content changed</td><td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Content changed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Content changed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-annotated\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-annotated\">annotated</a></td><td>Annotated document</td><td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotated document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotated document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-preanno\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-preanno\">preanno</a></td><td>Pre-annotated document</td><td>Maschinelle Vorannotation</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Pre-annotated document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Pre-annotated document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-deid\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-deid\">deid</a></td><td>De-identified document</td><td>Annotationen zum Zwecke einer Deidentifizierung</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;De-identified document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;De-identified document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-semantic\"> </a>2</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-semantic\">semantic</a></td><td>Semantically annotated document</td><td>Semantische Annotationen</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantically annotated document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantically annotated document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status-surrogated\"> </a>1</td><td><code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mii-cs-dokument-nlp-processing-status.html#mii-cs-dokument-nlp-processing-status-surrogated\">surrogated</a></td><td>Surrogated document</td><td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc1&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogated document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc1&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogated document&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+      "version" : "2027.0.0-ballot.rc1",
+      "name" : "MII_VS_Dokument_NLP_Processing_Status",
+      "title" : "MII VS Dokument NLP Processing Status",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-08-30T06:43:36+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DE",
+          "display" : "Germany"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:c5d854b7-b613-4aac-a96a-81c8e0daf284",
+        "timestamp" : "2026-08-30T06:45:53+00:00",
+        "total" : 9,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode|2021-07-06T21:23:52"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode|2019-05-17T13:46:31"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode|1.4.0"
+        },
+        {
+          "name" : "default-valueset-version",
+          "valueUri" : "http://ihe-d.de/ValueSets/IHEXDSformatCodeDE|2018-12-14T17:07:12"
+        },
+        {
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "system-version",
+          "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+        }],
+        "contains" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "unprocessed",
+          "display" : "Original document"
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "preprocessed",
+          "display" : "Preprocessed document",
+          "contains" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "format-change",
+            "display" : "Format changed"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "content-change",
+            "display" : "Content changed"
+          }]
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "annotated",
+          "display" : "Annotated document",
+          "contains" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "preanno",
+            "display" : "Pre-annotated document"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "deid",
+            "display" : "De-identified document"
+          },
+          {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+            "code" : "semantic",
+            "display" : "Semantically annotated document"
+          }]
+        },
+        {
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+          "code" : "surrogated",
+          "display" : "Surrogated document"
+        }]
+      }
+    }
+  }]
+}
