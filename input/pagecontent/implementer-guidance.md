@@ -47,8 +47,8 @@ Dieses MII KDS-Modul greift bei bestimmten Datenelementen auf existierende Vorar
 
 | MII KDS-Modul | Beschreibung des Bezugs | Verpflichtende Nutzung |
 |---|---|---|
-| [Person](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person) | Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet. | Ja |
-| [Fall](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall) | Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die am besten geeignete Kontaktebene des MII KDS-Moduls Fall verwiesen werden. Diese Ebene ist typisch vom Dokumenttyp abhängig. | Nein |
+| [Person (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet. | Ja |
+| [Fall (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die am besten geeignete Kontaktebene des MII KDS-Moduls Fall verwiesen werden. Diese Ebene ist typisch vom Dokumenttyp abhängig. | Nein |
 
 ## Nutzung durch andere MII KDS-Module
 
@@ -81,6 +81,17 @@ Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentRef
      wurde nur das Linkziel. -->
 
 [![Paketabhängigkeiten des MII KDS-Moduls Dokument](Paketabhaengigkeiten.png)](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg)
+
+<!-- DERIVED:bridge source=none gate=B -->
+> **Bei der Migration verfasst — vor dem Release prüfen.**
+> Die im Diagramm gezeigten Pakete
+> `de.medizininformatikinitiative.kerndatensatz.person` und
+> `de.medizininformatikinitiative.kerndatensatz.fall` werden seit dem
+> KDS-Release 2026 innerhalb des Basismoduls
+> (`de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert; die
+> Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
+> den von der NSG freigegebenen Stand.
+{: .ig-highlight .ig-highlight-blue}
 
 <!-- TODO:REVIEW Die Bilddatei Paketabhaengigkeiten.png liegt noch nicht unter
      input/images/. Sie muss aus dem Quell-Repository

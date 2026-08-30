@@ -6,7 +6,15 @@ Mit einem *Dokument* lassen sich die Metadaten zu einem klinischen Dokument, ein
 
 Ein *Dokument* kann in Abhängigkeit vom Szenario einen Patientenbezug (`subject`) ([MII KDS-Modul Person]) aufweisen. Der Patientenbezug kann anhand identifizierender Eigenschaften, pseudonym oder anonym erfolgen. Analog lässt sich über einen klinischen *Kontext* der Bezug zum konkreten Fall (`encounter`) ([MII KDS-Modul Fall]) herstellen.
 
+<!-- DERIVED:bridge source=none gate=B -->
+> **Bei der Migration verfasst — vor dem Release prüfen.**
+> Die Module Person und Fall sind seit dem KDS-Release 2026 im Basismodul
+> (Package `de.medizininformatikinitiative.kerndatensatz.base`) aufgegangen; die
+> Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
+> den von der NSG freigegebenen Stand.
+{: .ig-highlight .ig-highlight-blue}
+
 <a href="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Informationsmodell.svg" target="_blank">![UML-Diagramm des Informationsmodells zum Modul Dokument](Informationsmodell.png)</a>
 
-[MII KDS-Modul Person]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person
-[MII KDS-Modul Fall]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall
+[MII KDS-Modul Person]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
+[MII KDS-Modul Fall]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base

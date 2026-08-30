@@ -46,8 +46,8 @@ For certain data elements, this MII KDS module builds on existing work from othe
 
 | MII KDS module | Description of the relationship | Mandatory use |
 |---|---|---|
-| [Person](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional. | Yes |
-| [Fall](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type. | No |
+| [Person (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional. | Yes |
+| [Fall (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type. | No |
 
 ## Use by Other MII KDS Modules
 
@@ -80,6 +80,16 @@ This specification follows the FHIR core specification for the [DocumentReferenc
      target was converted. -->
 
 [![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.png)](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg)
+
+<!-- DERIVED:bridge source=none gate=B -->
+> **Written during migration — review before release.**
+> The packages `de.medizininformatikinitiative.kerndatensatz.person` and
+> `de.medizininformatikinitiative.kerndatensatz.fall` shown in the diagram have
+> been delivered inside the base module
+> (`de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release
+> 2026; the canonical URLs of the referenced profiles are unchanged. The diagram
+> shows the state approved by the NSG.
+{: .ig-highlight .ig-highlight-blue}
 
 <!-- TODO:REVIEW The image file Paketabhaengigkeiten.png is not yet present under
      input/images/. It has to be copied there from the source repository

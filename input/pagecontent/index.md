@@ -40,10 +40,10 @@ werden von dem Modul aufgegriffen und nach standardisiertem Schema
 koordiniert.
 
 Das MII KDS-Modul ermöglicht die Erstellung von Dokumentenreferenzen mit den
-Optionen Bezüge zu dem Modul Fall und Person herzustellen. Zudem enthält
-das Modul eine NLP-Extension, welche den Bearbeitungsstatus mit Hinsicht auf
-NLP-Verfahren wie zum Beispiel Annotationen abbildet (siehe hierfür
-[UML](uml-diagrams.html)).
+Optionen Bezüge zu den im Basismodul aufgegangenen Modulen Fall und Person
+herzustellen. Zudem enthält das Modul eine NLP-Extension, welche den
+Bearbeitungsstatus mit Hinsicht auf NLP-Verfahren wie zum Beispiel
+Annotationen abbildet (siehe hierfür [UML](uml-diagrams.html)).
 
 Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen,
 Anonymisierung und NLP-Annotationen, bekommt der Relation zu anderen
