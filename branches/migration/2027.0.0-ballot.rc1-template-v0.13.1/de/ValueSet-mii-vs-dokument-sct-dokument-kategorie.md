@@ -48,7 +48,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument SCT Dokument Kategorie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T12:16:15+00:00",
+  "date" : "2026-08-30T12:43:17+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

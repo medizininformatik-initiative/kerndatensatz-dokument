@@ -107,7 +107,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   "language" : "de",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-08-28"
+    "valueDate" : "2026-09-01"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -240,7 +240,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   "title" : "MII IG Dokument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-28",
+  "date" : "2026-09-01",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc1 |
-| Draft Stand: 2026-08-28 | *Maschinenlesbarer Name*:MII_IG_Dokument |
+| Draft Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_IG_Dokument |
 
 ### Einleitung
 
