@@ -52,10 +52,10 @@ step-actions), `identity-claims.tsv`, `page-map.tsv`, `derived-content.tsv`,
 | D-2 | **M6 prerelease version** | **CLOSED — upstream PR #25 merged 2026-08-30**; the module's vendored `convention-check.mjs` carries the identical change: the convention check now passes ALL M-checks incl. M6 | — |
 | D-3 | **Conformance page drop** | **CLOSED — CONFIRMED by owner 2026-08-30** with the condition that the meta-wiki conformance links stay: verified — 5 links per menu (Konformität cluster) + index/guidance/implementer-guidance pages, both languages | — |
 | D-4 | **CRMI machinery** | **CLOSED — KEEP, confirmed by owner 2026-08-30** after cross-check: `kerndatensatz-basis` carries the identical deps (`crmi@2.0.0`, `xver-r5.r4@0.1.0`), claims and versionPolicy coding | — |
-| D-5 | **approvalDate = 2026-08-28** (ballot-RC date, placeholder until TF-KDS approval) + **artifact-topic C19498 “Document”** (NCI EVS lookup) | marked ①-REVIEW in `sushi-config.yaml` | dates/topic ship as set |
+| D-5 | **Dates + topic** | **CLOSED — owner decision 2026-08-30**: meta wiki researched, no actual 2027 date stated → formal publication date **2026-09-01** (fallback per owner), `date:` + `approvalDate` aligned; topic C19498 stands | — |
 | D-6 | **Publisher** | **CLOSED — switched to `NUM-DIZ` at IG level by owner decision 2026-08-30** (template default); resource-level publisher stays `Medizininformatik Initiative` per the template's module-independent ruleset convention | — |
 | D-7 | **Retire-after-Gate-D set**: `implementation-guides/`, `project.yaml`, `package.bake.yaml`, `fhirpkg.lock.json` (stale dep set, legacy-only), `.github/workflows/{main,build-profiles,compare-profiles}.yml` duplication vs template CI | inventoried in run.log pre.3 | legacy files stay beside the new toolchain |
-| D-8 | **publication-request.json**: `first: true` (no IG-Publisher publication history at the canonical), date/desc filled for the RC | go-publish is Gate D — NOT part of this PR | nothing publishes anyway |
+| D-8 | **Publication preparation** | **CLOSED — prepared, not executed (owner 2026-08-30)**: `status: ballot`, `first: true` (verified: no `package-list.json` on gh-pages), all go-publish gates emulated locally and PASS, convention check passes in **release mode**; Gate D = run `go-publish` with `publication_date=2026-09-01` after merge | — |
 
 ## ② Review queue (Gates B/C — someone must check)
 
