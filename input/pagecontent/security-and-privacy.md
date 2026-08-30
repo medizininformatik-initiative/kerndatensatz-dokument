@@ -46,10 +46,56 @@ nicht dieser Leitfaden.
 Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
 Datenschutz-Eigenschaften, die aus der *Art der Daten dieses Moduls* folgen.
 
-> Über den oben verlinkten übergreifenden Rahmen hinaus — das übergreifende
-> Datenschutzkonzept, den ihm zugrunde liegenden Broad Consent und DIMP —
-> führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-> Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
-> oder Datenschutzanforderungen an Implementierende.
+<!-- DERIVED:bridge source=none gate=B -->
+> **Bei der Migration verfasst — vor dem Release prüfen.**
+> Die folgenden modulspezifischen Aspekte wurden aus dem Profil und den
+> Modulbeschreibungen abgeleitet (Slices `Binaerdaten`/`Verweis`,
+> NLP-Processing-Status, `relatesTo`-Verarbeitungsketten).
+{: .ig-highlight .ig-highlight-blue}
+
+Dieses Modul transportiert — anders als rein strukturierte KDS-Module — über
+`content.attachment` auch den **Dokumentkörper selbst**. Daraus folgen eigene
+Aspekte:
+
+**Freitext ist die sensibelste Datenkategorie dieses Moduls.** Der Textkörper
+eines Dokuments kann vielfältige identifizierende Daten und/oder Metadaten
+(z.B. Namen, Patienten-ID) enthalten, die eine strukturierte
+Pseudonymisierung nicht erfasst. Werkzeuge der DIMP-Kette arbeiten auf
+strukturierten Elementen; der Inhalt eines Anhangs bleibt davon unberührt.
+
+**Einbettung vs. Verweis.** Das Profil erlaubt beide Transportwege für den
+Dokumentkörper: eingebettet als Base64 (`content.attachment.data`, Slice
+`Binaerdaten`) oder als lokal aufzulösender Verweis (`content.attachment.url`,
+Slice `Verweis`). Soweit das Dokument **medizinische oder identifizierende
+Daten zu Patient:innen oder Behandlung** enthält, SOLLTE der Dokumentkörper
+bei einer Datenbereitstellung über das Forschungsdatenportal für Gesundheit
+(FDPG) bzw. in UAC-geprüften Projekten NICHT eingebettet werden: eingebettete
+Inhalte durchlaufen jede Verarbeitungs- und Weitergabestufe mit und entziehen
+sich der Zugriffskontrolle des Dokumentenspeichers. Der Verweis (`Verweis`)
+belässt die Auflösung dagegen unter der Kontrolle der datenhaltenden Stelle
+(DIZ) und kann dort DIMP-konform gefiltert und protokolliert werden. Für
+Dokumente ohne solche Inhalte — etwa vollständig surrogierte Fassungen —
+gilt diese Einschränkung nicht.
+
+**De-Identifikationsstatus explizit kennzeichnen.** Eine erfolgte
+De-Identifizierung wird über geeignete `securityLabel` und/oder die
+[NLP-Processing-Status-Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
+(Codes `unprocessed`, `preprocessed`, `annotated`, `surrogated`)
+ausgedrückt. Die datenhaltende Stelle ist verantwortlich, für
+Forschungszwecke ausschließlich auf anonymisierte bzw. pseudonymisierte
+Varianten zu verweisen (`subject`, `context.encounter` → pseudonymisierte
+Profile des Basismoduls).
+
+**Verarbeitungsketten können Re-Identifizierungspfade öffnen.** Die
+NLP-Pipeline verknüpft Original-, Klartext-, de-identifizierte und annotierte
+Fassungen über `relatesTo` (`transforms`/`appends`). Bei einer
+Datenbereitstellung dürfen de-identifizierte bzw. surrogierte Dokumente nicht
+zusammen mit auflösbaren Verweisen auf ihre Originalfassungen ausgeliefert
+werden — die Kette hebt die De-Identifizierung sonst auf.
+
+**Auch Metadaten können quasi-identifizierend sein.** Einrichtungsart,
+Fachgebiet, Zeitstempel und Kontaktbezüge erlauben in Kombination
+Rückschlüsse; welche Metadatenelemente eine konkrete Datenbereitstellung
+erreicht, entscheidet die projektspezifische DIMP-Konfiguration.
 
 

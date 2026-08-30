@@ -37,6 +37,8 @@ profiles	default	bridge	none	B	78	**Bei der Migration verfasst — vor dem Relea
 profiles	en	bridge	MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md	B	14	**Written during migration — review before release.** The module defines one profile: [MII PR Dokument Dokument](Structu
 profiles	en	bridge	MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md	B	32	**Written during migration — review before release.** The conventions below apply not only to the profiles, but to all c
 profiles	en	bridge	none	B	82	**Written during migration — review before release.** The canonical namespaces `modul-person` and `modul-fall` remain va
+security-and-privacy	default	bridge	none	B	49	**Bei der Migration verfasst — vor dem Release prüfen.** Die folgenden modulspezifischen Aspekte wurden aus dem Profil u
+security-and-privacy	en	bridge	none	B	49	**Written during migration — review before release.** The following module-specific aspects were derived from the profil
 translationinfo	default	bridge	none	B	16	**Bei der Migration verfasst — vor dem Release prüfen.** Die deutschen Seiten wurden bei der Migration von Simplifier un
 translationinfo	en	bridge	none	B	16	**Written during migration — review before release.** The German pages were carried over unchanged from the previous Sim
 uml-diagrams	default	bridge	none	B	9	**Bei der Migration verfasst — vor dem Release prüfen.** Die Module Person und Fall sind seit dem KDS-Release 2026 im Ba

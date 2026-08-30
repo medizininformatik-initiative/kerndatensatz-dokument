@@ -3,9 +3,9 @@
      Structured in the TF-KDS-agreed THREE stages: (1) the overarching data
      protection concept, (2) DIMP in the data portal, (3) the
      module-specific aspects. Stages 1 and 2 are static overarching content —
-     keep them; stage 3 is where your module writes. This module has no
-     module-specific aspects and adopts the agreed default text (decision
-     2026-08-30, migration step 5.4b).
+     keep them; stage 3 is where your module writes. Module-specific
+     aspects WRITTEN from the profile and module descriptions (owner request
+     2026-08-30, revising the earlier default-text decision; DERIVED-marked).
      German mirror: input/translations/de/pagecontent/security-and-privacy.md —
      both files must say the same thing. -->
 
@@ -46,9 +46,52 @@ by the DIMP configuration, not by this guide.
 This is the module's own contribution: the security and privacy properties
 that follow from the *kind of data this module carries*.
 
-> Beyond the overarching framework above — the overarching data protection
-> concept, the Broad Consent it rests on, and DIMP — this module carries no
-> data category that raises security or privacy aspects of its own, and it
-> places no module-specific security or privacy requirements on implementers.
+<!-- DERIVED:bridge source=none gate=B -->
+> **Written during migration — review before release.**
+> The following module-specific aspects were derived from the profile and the
+> module descriptions (slices `Binaerdaten`/`Verweis`, NLP processing status,
+> `relatesTo` processing chains).
+{: .ig-highlight .ig-highlight-blue}
+
+Unlike purely structured KDS modules, this module also carries the **document
+body itself** via `content.attachment`. This raises aspects of its own:
+
+**Free text is this module's most sensitive data category.** A document's
+body can contain a wide range of identifying data and/or metadata (e.g.
+names, patient IDs) that structured pseudonymization does not touch. DIMP
+tooling operates on structured elements; the content of an attachment is not
+covered by it.
+
+**Embedding vs. reference.** The profile permits both transport forms for the
+document body: embedded as Base64 (`content.attachment.data`, slice
+`Binaerdaten`) or as a locally resolvable reference (`content.attachment.url`,
+slice `Verweis`). Where the document contains **medical or identifying data
+about patients or treatment**, the document body SHOULD NOT be embedded when
+data is provided via the German Portal for Medical Research Data (FDPG) or in
+UAC-approved projects: embedded content travels through every processing and
+transfer stage and escapes the document store's access control. A reference
+(`Verweis`) keeps resolution under the control of the data-holding site (DIZ),
+where it can be filtered and logged in conformance with DIMP. Documents
+without such content — for example fully surrogated versions — are not
+affected by this restriction.
+
+**Mark the de-identification status explicitly.** Completed de-identification
+is expressed via suitable `securityLabel` values and/or the
+[NLP Processing Status extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
+(codes `unprocessed`, `preprocessed`, `annotated`, `surrogated`). The
+data-holding site is responsible for referencing only anonymized or
+pseudonymized variants for research purposes (`subject`, `context.encounter`
+→ the base module's pseudonymized profiles).
+
+**Processing chains can open re-identification paths.** The NLP pipeline
+links original, plain-text, de-identified and annotated versions via
+`relatesTo` (`transforms`/`appends`). A data provision must not deliver
+de-identified or surrogated documents together with resolvable references to
+their original versions — otherwise the chain undoes the de-identification.
+
+**Metadata can be quasi-identifying too.** Facility type, practice setting,
+timestamps and encounter references allow inferences in combination; which
+metadata elements reach a concrete data provision is decided by the
+project-specific DIMP configuration.
 
 
