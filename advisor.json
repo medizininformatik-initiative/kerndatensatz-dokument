@@ -17,6 +17,7 @@
     "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
     "IG_DEPENDENCY_DIRECT",
     "MSG_DRAFT",
-    "TERMINOLOGY_TX_WARNING@StructureDefinition.*"
+    "TERMINOLOGY_TX_WARNING@StructureDefinition.*",
+    "IG_DEPENDENCY_CLASH_CANONICAL@ImplementationGuide.dependsOn[9]"
   ]
 }

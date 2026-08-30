@@ -48,8 +48,8 @@ step-actions), `identity-claims.tsv`, `page-map.tsv`, `derived-content.tsv`,
 
 | id | Decision | Status / evidence | If nobody acts |
 |---|---|---|---|
-| D-1 | **Licence CC BY 4.0** — config, LICENSE file (official legal code), guide footer, package.json all now CC BY 4.0 | DECIDED by owner 2026-08-30 (“set everything to cc by 4.0”); ledger keeps both prior readings | decision stands; publication ships CC BY 4.0 |
-| D-2 | **M6 prerelease version** — module keeps `2027.0.0-ballot.rc1`; upstream widening proposed (#24/#25) | convention check stays red on M6 until upstream merges | merge upstream PR #25, or accept a red M6 until `2027.0.0` |
+| D-1 | **Licence CC BY 4.0** — config, LICENSE file (official legal code), guide footer, package.json all now CC BY 4.0 | **CLOSED — CONFIRMED by the owner 2026-08-30** (“Confirmed cc by 4.0”); ledger keeps both prior readings | — |
+| D-2 | **M6 prerelease version** | **CLOSED — upstream PR #25 merged 2026-08-30**; the module's vendored `convention-check.mjs` carries the identical change: the convention check now passes ALL M-checks incl. M6 | — |
 | D-3 | **Conformance page dropped whole** (25 runs) — KDS-wide conformance restatement; the template’s link-only menu cluster points at the meta-module wiki | per-run adjudication in the restore journal; source page preserved in `implementation-guides/` until Gate D | the KDS-wide text lives only behind the menu links (as the template intends) |
 | D-4 | **CRMI machinery adopted**: `hl7.fhir.uv.crmi@2.0.0` + `hl7.fhir.uv.xver-r5.r4@0.1.0` added (template meta.profile claims + rulesets); brings 1 benign qa error (subscriptions-backport is FHIR 4.0.0) | template machinery, not source identity | keep; or strip CRMI claims + deps in one commit |
 | D-5 | **approvalDate = 2026-08-28** (ballot-RC date, placeholder until TF-KDS approval) + **artifact-topic C19498 “Document”** (NCI EVS lookup) | marked ①-REVIEW in `sushi-config.yaml` | dates/topic ship as set |
