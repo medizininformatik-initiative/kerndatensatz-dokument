@@ -37,3 +37,6 @@ node_modules/
 # *.log noise rule above.
 !migration-log/*.log
 !migration-log/*.prev.log
+# The IG Publisher's translation working directory at the repo ROOT (not
+# input/translations!) — build scratch, never committed.
+/translations/
