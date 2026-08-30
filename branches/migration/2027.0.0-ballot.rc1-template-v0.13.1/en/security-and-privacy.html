@@ -338,9 +338,9 @@ This page includes translations from the original source language in which the g
      Structured in the TF-KDS-agreed THREE stages: (1) the overarching data
      protection concept, (2) DIMP in the data portal, (3) the
      module-specific aspects. Stages 1 and 2 are static overarching content —
-     keep them; stage 3 is where your module writes. This module has no
-     module-specific aspects and adopts the agreed default text (decision
-     2026-08-30, migration step 5.4b).
+     keep them; stage 3 is where your module writes. Module-specific
+     aspects WRITTEN from the profile and module descriptions (owner request
+     2026-08-30, revising the earlier default-text decision; DERIVED-marked).
      German mirror: input/translations/de/pagecontent/security-and-privacy.md —
      both files must say the same thing. -->
 
@@ -380,12 +380,54 @@ by the DIMP configuration, not by this guide.</p>
 <p>This is the module's own contribution: the security and privacy properties
 that follow from the <em>kind of data this module carries</em>.</p>
 
-<blockquote>
-  <p>Beyond the overarching framework above — the overarching data protection
-concept, the Broad Consent it rests on, and DIMP — this module carries no
-data category that raises security or privacy aspects of its own, and it
-places no module-specific security or privacy requirements on implementers.</p>
+<!-- DERIVED:bridge source=none gate=B -->
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Written during migration — review before release.</strong>
+The following module-specific aspects were derived from the profile and the
+module descriptions (slices <code class="language-plaintext highlighter-rouge">Binaerdaten</code>/<code class="language-plaintext highlighter-rouge">Verweis</code>, NLP processing status,
+<code class="language-plaintext highlighter-rouge">relatesTo</code> processing chains).</p>
 </blockquote>
+
+<p>Unlike purely structured KDS modules, this module also carries the <strong>document
+body itself</strong> via <code class="language-plaintext highlighter-rouge">content.attachment</code>. This raises aspects of its own:</p>
+
+<p><strong>Free text is this module's most sensitive data category.</strong> A document's
+body can contain a wide range of identifying data and/or metadata (e.g.
+names, patient IDs) that structured pseudonymization does not touch. DIMP
+tooling operates on structured elements; the content of an attachment is not
+covered by it.</p>
+
+<p><strong>Embedding vs. reference.</strong> The profile permits both transport forms for the
+document body: embedded as Base64 (<code class="language-plaintext highlighter-rouge">content.attachment.data</code>, slice
+<code class="language-plaintext highlighter-rouge">Binaerdaten</code>) or as a locally resolvable reference (<code class="language-plaintext highlighter-rouge">content.attachment.url</code>,
+slice <code class="language-plaintext highlighter-rouge">Verweis</code>). Where the document contains <strong>medical or identifying data
+about patients or treatment</strong>, the document body SHOULD NOT be embedded when
+data is provided via the German Portal for Medical Research Data (FDPG) or in
+UAC-approved projects: embedded content travels through every processing and
+transfer stage and escapes the document store's access control. A reference
+(<code class="language-plaintext highlighter-rouge">Verweis</code>) keeps resolution under the control of the data-holding site (DIZ),
+where it can be filtered and logged in conformance with DIMP. Documents
+without such content — for example fully surrogated versions — are not
+affected by this restriction.</p>
+
+<p><strong>Mark the de-identification status explicitly.</strong> Completed de-identification
+is expressed via suitable <code class="language-plaintext highlighter-rouge">securityLabel</code> values and/or the
+<a href="StructureDefinition-mii-ex-dokument-nlp-processing-status.html">NLP Processing Status extension</a>
+(codes <code class="language-plaintext highlighter-rouge">unprocessed</code>, <code class="language-plaintext highlighter-rouge">preprocessed</code>, <code class="language-plaintext highlighter-rouge">annotated</code>, <code class="language-plaintext highlighter-rouge">surrogated</code>). The
+data-holding site is responsible for referencing only anonymized or
+pseudonymized variants for research purposes (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code>
+→ the base module's pseudonymized profiles).</p>
+
+<p><strong>Processing chains can open re-identification paths.</strong> The NLP pipeline
+links original, plain-text, de-identified and annotated versions via
+<code class="language-plaintext highlighter-rouge">relatesTo</code> (<code class="language-plaintext highlighter-rouge">transforms</code>/<code class="language-plaintext highlighter-rouge">appends</code>). A data provision must not deliver
+de-identified or surrogated documents together with resolvable references to
+their original versions — otherwise the chain undoes the de-identification.</p>
+
+<p><strong>Metadata can be quasi-identifying too.</strong> Facility type, practice setting,
+timestamps and encounter references allow inferences in combination; which
+metadata elements reach a concrete data provision is decided by the
+project-specific DIMP configuration.</p>
 
 
 
@@ -412,7 +454,7 @@ places no module-specific security or privacy requirements on implementers.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sun, Aug 30, 2026 18:44+0000">2026-08-30</span>
+          Generated <span title="Sun, Aug 30, 2026 19:02+0000">2026-08-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

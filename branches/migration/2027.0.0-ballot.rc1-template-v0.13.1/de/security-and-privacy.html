@@ -346,13 +346,58 @@ nicht dieser Leitfaden.</p>
 <p>Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
 Datenschutz-Eigenschaften, die aus der <em>Art der Daten dieses Moduls</em> folgen.</p>
 
-<blockquote>
-  <p>Über den oben verlinkten übergreifenden Rahmen hinaus — das übergreifende
-Datenschutzkonzept, den ihm zugrunde liegenden Broad Consent und DIMP —
-führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
-oder Datenschutzanforderungen an Implementierende.</p>
+<!-- DERIVED:bridge source=none gate=B -->
+<blockquote class="ig-highlight ig-highlight-blue">
+  <p><strong>Bei der Migration verfasst — vor dem Release prüfen.</strong>
+Die folgenden modulspezifischen Aspekte wurden aus dem Profil und den
+Modulbeschreibungen abgeleitet (Slices <code class="language-plaintext highlighter-rouge">Binaerdaten</code>/<code class="language-plaintext highlighter-rouge">Verweis</code>,
+NLP-Processing-Status, <code class="language-plaintext highlighter-rouge">relatesTo</code>-Verarbeitungsketten).</p>
 </blockquote>
+
+<p>Dieses Modul transportiert — anders als rein strukturierte KDS-Module — über
+<code class="language-plaintext highlighter-rouge">content.attachment</code> auch den <strong>Dokumentkörper selbst</strong>. Daraus folgen eigene
+Aspekte:</p>
+
+<p><strong>Freitext ist die sensibelste Datenkategorie dieses Moduls.</strong> Der Textkörper
+eines Dokuments kann vielfältige identifizierende Daten und/oder Metadaten
+(z.B. Namen, Patienten-ID) enthalten, die eine strukturierte
+Pseudonymisierung nicht erfasst. Werkzeuge der DIMP-Kette arbeiten auf
+strukturierten Elementen; der Inhalt eines Anhangs bleibt davon unberührt.</p>
+
+<p><strong>Einbettung vs. Verweis.</strong> Das Profil erlaubt beide Transportwege für den
+Dokumentkörper: eingebettet als Base64 (<code class="language-plaintext highlighter-rouge">content.attachment.data</code>, Slice
+<code class="language-plaintext highlighter-rouge">Binaerdaten</code>) oder als lokal aufzulösender Verweis (<code class="language-plaintext highlighter-rouge">content.attachment.url</code>,
+Slice <code class="language-plaintext highlighter-rouge">Verweis</code>). Soweit das Dokument <strong>medizinische oder identifizierende
+Daten zu Patient:innen oder Behandlung</strong> enthält, SOLLTE der Dokumentkörper
+bei einer Datenbereitstellung über das Forschungsdatenportal für Gesundheit
+(FDPG) bzw. in UAC-geprüften Projekten NICHT eingebettet werden: eingebettete
+Inhalte durchlaufen jede Verarbeitungs- und Weitergabestufe mit und entziehen
+sich der Zugriffskontrolle des Dokumentenspeichers. Der Verweis (<code class="language-plaintext highlighter-rouge">Verweis</code>)
+belässt die Auflösung dagegen unter der Kontrolle der datenhaltenden Stelle
+(DIZ) und kann dort DIMP-konform gefiltert und protokolliert werden. Für
+Dokumente ohne solche Inhalte — etwa vollständig surrogierte Fassungen —
+gilt diese Einschränkung nicht.</p>
+
+<p><strong>De-Identifikationsstatus explizit kennzeichnen.</strong> Eine erfolgte
+De-Identifizierung wird über geeignete <code class="language-plaintext highlighter-rouge">securityLabel</code> und/oder die
+<a href="StructureDefinition-mii-ex-dokument-nlp-processing-status.html">NLP-Processing-Status-Extension</a>
+(Codes <code class="language-plaintext highlighter-rouge">unprocessed</code>, <code class="language-plaintext highlighter-rouge">preprocessed</code>, <code class="language-plaintext highlighter-rouge">annotated</code>, <code class="language-plaintext highlighter-rouge">surrogated</code>)
+ausgedrückt. Die datenhaltende Stelle ist verantwortlich, für
+Forschungszwecke ausschließlich auf anonymisierte bzw. pseudonymisierte
+Varianten zu verweisen (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code> → pseudonymisierte
+Profile des Basismoduls).</p>
+
+<p><strong>Verarbeitungsketten können Re-Identifizierungspfade öffnen.</strong> Die
+NLP-Pipeline verknüpft Original-, Klartext-, de-identifizierte und annotierte
+Fassungen über <code class="language-plaintext highlighter-rouge">relatesTo</code> (<code class="language-plaintext highlighter-rouge">transforms</code>/<code class="language-plaintext highlighter-rouge">appends</code>). Bei einer
+Datenbereitstellung dürfen de-identifizierte bzw. surrogierte Dokumente nicht
+zusammen mit auflösbaren Verweisen auf ihre Originalfassungen ausgeliefert
+werden — die Kette hebt die De-Identifizierung sonst auf.</p>
+
+<p><strong>Auch Metadaten können quasi-identifizierend sein.</strong> Einrichtungsart,
+Fachgebiet, Zeitstempel und Kontaktbezüge erlauben in Kombination
+Rückschlüsse; welche Metadatenelemente eine konkrete Datenbereitstellung
+erreicht, entscheidet die projektspezifische DIMP-Konfiguration.</p>
 
 
 
@@ -379,7 +424,7 @@ oder Datenschutzanforderungen an Implementierende.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Sun, Aug 30, 2026 18:44+0000">2026-08-30</span>
+          Erstellt <span title="Sun, Aug 30, 2026 19:02+0000">2026-08-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
