@@ -4,7 +4,11 @@
 
 The logical data models of the **Dokument** module describe the domain dataset independently of its concrete FHIR representation.
 
-The officially adopted version of the information model is available on [ART-DECOR](https://art-decor.org/ad/#/mide-/datasets/dataset/2.16.840.1.113883.3.1937.777.24.1.1/2018-06-05T12:44:12/concept/2.16.840.1.113883.3.1937.777.24.2.3740/2024-06-07T10:17:01). To unify the representation, the information model was additionally mapped as a FHIR Logical Model, [MII LM Dokument](StructureDefinition-mii-lm-dokument.html):
+#### Dataset description
+
+The officially adopted version of the information model is located on [ART DECOR](https://art-decor.org/ad/#/mide-/datasets/dataset/2.16.840.1.113883.3.1937.777.24.1.1/2018-06-05T12:44:12/concept/2.16.840.1.113883.3.1937.777.24.2.3740/2024-06-07T10:17:01). To unify the representation, the information model was additionally mapped as a FHIR Logical Model:
+
+[MII LM Dokument](StructureDefinition-mii-lm-dokument.html)
 
 #### Element dictionary
 

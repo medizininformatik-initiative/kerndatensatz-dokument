@@ -1,13 +1,22 @@
 <!-- TODO:REVIEW machine-translated from the German default page -->
-<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD041 MD007 -->
+<!-- MD007: the indented top-level list in the "References" section mirrors the
+     verbatim indentation carried over from the Simplifier source page. -->
 <!-- English translation of the German default page
      input/pagecontent/implementer-guidance.md — keep both files in step.
      Migrated from the Simplifier guide "MII IG Modul Dokument":
      MIIIGModulDokument/Kontext-Bezuege.page.md,
      MIIIGModulDokument/Referenzen.page.md and
      MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md
-     (the latter was only assessed: it carried nothing but the KDS-wide
-     conformance rules of the Meta module, which are link-only menu entries). -->
+     (the latter was only assessed, NO prose carried over: it held nothing but
+     the KDS-wide conformance rules of the Meta module — "Anforderungs-
+     dokumentation" (RFC-2119 keywords), "Must Support (MS)" and "Fehlende
+     Daten". All three sections are covered in the template by the link-only
+     menu entry "Konformität", which points straight at the Meta module wiki
+     (input/includes/menu.xml: #anforderungsdokumentation, #must-support-ms,
+     #fehlende-daten); the source page itself pointed there for the current
+     version. A copy inside the module guide would duplicate centrally
+     maintained rules and go stale. -->
 
 Technical guidance for DIC implementers on implementing the profiles of the **Dokument** module (ETL from primary systems, FHIR API, validation).
 
@@ -58,16 +67,17 @@ Should the specified document categories and types not adequately cover the requ
 
 The MII KDS module Dokument is designed so that instances can be compatible with the following FHIR-based standards at the same time:
 
-* [KBV base profiles with Medical Information Objects (MIO)](https://simplifier.net/base1x0) – profile for referencing external or attached documents
-* [Gematik Information Technology Systems in Hospitals (ISiK) document exchange](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) - profile for representing the metadata required for document exchange
-* [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - profile for exchanging health documents via mobile applications, mobile devices or other resource- and platform-constrained systems
+  * [KBV base profiles with Medical Information Objects (MIO)](https://simplifier.net/base1x0) – profile for referencing external or attached documents
+  * [Gematik Information Technology Systems in Hospitals (ISiK) document exchange](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5)  - profile for representing the metadata required for document exchange
+  * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - profile for exchanging health documents via mobile applications, mobile devices or other resource- and platform-constrained systems
 
-This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see [Compatibility](kompatibilitaet.html)). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
+This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see section [References](kompatibilitaet.html)). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
 
 <!-- TODO:REVIEW The source cross-reference "(see section References)" was
      self-referential on the Simplifier page. Here it points to the
      "Compatibility" page, which holds the freedom-from-contradiction analysis —
-     please confirm. -->
+     please confirm. The source wording is preserved verbatim; only the link
+     target was converted. -->
 
 [![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.png)](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg)
 

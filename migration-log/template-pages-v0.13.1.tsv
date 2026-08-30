@@ -1,0 +1,39 @@
+# Narrative pages the MII KDS module template OWNS — RE-MEASURED at v0.13.1.
+#
+# Scratchpad-local re-measurement for the KDS Dokument migration run; passed to
+# verify-migration.py via --template-pages so C5c is PRUEFBAR against the
+# vendored tag v0.13.1 (the skill's shipped manifest is measured at v0.11.1,
+# which would trip the manifest-currency tripwire).
+#
+# Measured, not assumed: `input/pagecontent/` of
+# medizininformatik-initiative/mii-kds-module-template at tag v0.13.1
+# (61b02b50), read from a fresh clone on 2026-08-30. Result: the page SET is
+# identical to the v0.11.1 measurement — 21 named pages plus the slug-bearing
+# IG-resource intro page ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md (matched
+# by prefix in code, not listed here). Roles re-verified against the v0.13.1
+# trees: the 7 `optional` rows are exactly the pages carrying the OPTIONAL-PAGE
+# marker; rendering-artifacts still opens with the DEMONSTRATION-PAGE banner
+# (`demo`); everything else `scaffold`.
+#
+# page	role	template_tag
+capability-statements	scaffold	v0.13.1
+changes	scaffold	v0.13.1
+code-systems	optional	v0.13.1
+downloads	scaffold	v0.13.1
+examples	scaffold	v0.13.1
+extensions	optional	v0.13.1
+guidance	scaffold	v0.13.1
+implementer-guidance	scaffold	v0.13.1
+index	scaffold	v0.13.1
+logical-models	scaffold	v0.13.1
+metadata	optional	v0.13.1
+operations	optional	v0.13.1
+profiles	scaffold	v0.13.1
+rendering-artifacts	demo	v0.13.1
+researcher-guidance	optional	v0.13.1
+search-parameters	optional	v0.13.1
+security-and-privacy	scaffold	v0.13.1
+translationinfo	scaffold	v0.13.1
+uml-diagrams	scaffold	v0.13.1
+value-sets	optional	v0.13.1
+version-history	scaffold	v0.13.1

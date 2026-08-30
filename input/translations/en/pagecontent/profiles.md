@@ -23,7 +23,11 @@ This page lists the FHIR profiles of the **Dokument** module (naming convention
 
 <!-- TODO:REVIEW At this point the source page carried the empty placeholder
      text "Einleitung FHIR Profile" ("Introduction FHIR profiles"); it was not
-     carried over. Should an introduction to the profile family be added here? -->
+     carried over. Should an introduction to the profile family be added here?
+     Prose conservation (C4): deliberately NOT carried over — an unfilled
+     authoring placeholder of the Simplifier page template (the heading
+     repeated as body text) that carries no content. The two paragraphs above
+     provide this page's actual introduction. -->
 
 <!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md gate=B -->
 > **Written during migration — review before release.**
@@ -120,9 +124,16 @@ Note: in the special case where a VS or a CM references several terminologies, l
 (a machine-processable designation of the resource)
 
 * Format: Upper_Snake_Case
-  Note: the FHIR standard is CamelCase, but the MII deviates from it for better human readability, especially of abbreviations.
+  Note: the FHIR standard is CamelCase2, but the MII deviates from it for better human readability, especially of abbreviations.
 * Structure: same as the title, but without spaces and special characters
 * Example: `MII_VS_Mikrobio_Mikrobiologische_Erreger_Bakterien_Pilze_SNOMEDCT`
+
+<!-- TODO:REVIEW The wording "CamelCase2" is carried over VERBATIM from the
+     source page (the migration had silently dropped the "2"). The "2" is
+     evidently a footnote marker pointing at the second entry of the
+     "References" section (HL7 International: Naming Rules & Guidelines).
+     Should the marker be marked up as a real footnote, or dropped? Not
+     guessed — please decide. -->
 
 ### Element **id**
 

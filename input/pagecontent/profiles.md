@@ -22,7 +22,11 @@ der Seite [Extensions](extensions.html).
 
 <!-- TODO:REVIEW Die Quellseite trug an dieser Stelle den inhaltsleeren
      Platzhalter "Einleitung FHIR Profile"; er wurde nicht übernommen. Soll hier
-     eine fachliche Einleitung zur Profilfamilie ergänzt werden? -->
+     eine fachliche Einleitung zur Profilfamilie ergänzt werden?
+     Prosa-Konservierung (C4): bewusst NICHT übernommen — ein unausgefüllter
+     Autoren-Platzhalter der Simplifier-Seitenvorlage (die Wiederholung der
+     Überschrift als Fließtext), der keinen Inhalt trägt. Die fachliche
+     Einleitung dieser Seite leisten die beiden Absätze darüber. -->
 
 <!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md gate=B -->
 > **Bei der Migration verfasst — vor dem Release prüfen.**
@@ -116,9 +120,16 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
 (eine maschinell verarbeitbare Bezeichnung der Ressource)
 
 * Format: Upper_Snake_Case
-  Hinweis: Der FHIR-Standard ist CamelCase, aber wegen besserer Menschenlesbarkeit, insbesondere von Abkürzungen, wird im Rahmen der MII davon abgewichen.
+  Hinweis: Der FHIR-Standard ist CamelCase2, aber wegen besserer Menschenlesbarkeit, insbesondere von Abkürzungen, wird im Rahmen der MII davon abgewichen.
 * Struktur: entsprechend des title, aber ohne Leer- und Sonderzeichen
 * Beispiel: `MII_VS_Mikrobio_Mikrobiologische_Erreger_Bakterien_Pilze_SNOMEDCT`
+
+<!-- TODO:REVIEW Der Wortlaut "CamelCase2" ist aus der Quellseite VERBATIM
+     übernommen (die Migration hatte die "2" stillschweigend entfernt). Die "2"
+     ist offenkundig eine Fußnotenmarke auf den zweiten Eintrag des Abschnitts
+     "Referenzen" (HL7 International: Naming Rules & Guidelines). Soll die Marke
+     als echte Fußnote ausgezeichnet oder ersatzlos gestrichen werden? Nicht
+     geraten — bitte fachlich entscheiden. -->
 
 ### Element **id**
 

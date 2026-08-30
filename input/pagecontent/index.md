@@ -2,14 +2,17 @@
 
 ### Einleitung
 
-Diese Spezifikation beschreibt die FHIR-Repräsentation des
-Kerndatensatz-(KDS-)Moduls **Dokument** der Medizininformatik-Initiative
-(MII). Sie beschreibt die Anwendungsfälle des Moduls sowie die zugehörigen
-FHIR-Profile, Extensions und Terminologie-Ressourcen in ihrer verbindlichen
-Form. Der MII-Kerndatensatz dient der standardisierten Nutzung klinischer
-Routinedaten für die medizinische Forschung.
+Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des
+Kerndatensatz Moduls Dokument der Medizininformatik Initiative.
+Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen
+FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form
+beschrieben.
 
-> Mit dem MII-KDS-Modul Dokument können Metadaten zu Dokumenten jeglicher
+Der Kerndatensatz der Medizininformatik-Initiative (MII) dient der
+standardisierten Nutzung klinischer Routinedaten für die medizinische
+Forschung.
+
+> Mit dem MII KDS-Modul Dokument können Metadaten zu Dokumenten jeglicher
 > Art mit klinischer Relevanz für beliebige Zwecke strukturiert erfasst
 > werden. Dokumente sind in diesem Kontext beliebige Binärobjekte, also
 > beispielsweise auch Bilder oder Videos.
@@ -31,19 +34,20 @@ Routinedaten für die medizinische Forschung.
 
 Durch die Nutzung des Profils soll die interne und externe Nutzung von
 Dokumenten erleichtert werden. Die zentralen Punkte der Charakterisierung
-durch Metadaten — Dokumentenbeziehungen, Dokumentenstatus,
-Dokumentenauffindbarkeit, Korpus-Navigation und Dokumentenarchivierung —
+durch Metadaten: Dokumentenbeziehungen, Dokumentenstatus,
+Dokumentenauffindbarkeit, Korpus-Navigation und Dokumentenarchivierung
 werden von dem Modul aufgegriffen und nach standardisiertem Schema
 koordiniert.
 
-Das MII-KDS-Modul ermöglicht die Erstellung von Dokumentenreferenzen mit den
-Optionen, Bezüge zu dem Modul Fall und Person herzustellen. Zudem enthält
+Das MII KDS-Modul ermöglicht die Erstellung von Dokumentenreferenzen mit den
+Optionen Bezüge zu dem Modul Fall und Person herzustellen. Zudem enthält
 das Modul eine NLP-Extension, welche den Bearbeitungsstatus mit Hinsicht auf
-NLP-Verfahren wie zum Beispiel Annotationen abbildet (siehe hierfür die Seite [UML-Diagramme](uml-diagrams.html)).
+NLP-Verfahren wie zum Beispiel Annotationen abbildet (siehe hierfür
+[UML](uml-diagrams.html)).
 
-Im Hinblick auf Dokumentenverarbeitungsprozesse, z. B. Format-Wandlungen,
-Anonymisierung und NLP-Annotationen, kommt der Relation zu anderen
-Dokumenten (MII-KDS-Modul Dokument) eine besondere Bedeutung zu, um
+Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen,
+Anonymisierung und NLP-Annotationen, bekommt der Relation zu anderen
+Dokumenten (MII KDS-Modul Dokument) eine besondere Bedeutung zu, um
 Verarbeitungsketten abzubilden (`relatesTo`).
 
 Das Informationsmodell trennt Angaben zur Referenz selbst und den Metadaten
@@ -55,10 +59,10 @@ eingebettet werden. Das Modul gibt keine Vorgaben zur Semantik dieser
 Auflösung.
 
 Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten
-(z. B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte
+(z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte
 De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder
-Codes der Erweiterung NLP-Processing-Status-Extension
-<!-- TODO:REVIEW exact StructureDefinition id of the NLP-Processing-Status-Extension artifact is unknown; link as [NLP-Processing-Status-Extension](StructureDefinition-<id>.html) once the id is confirmed -->
+Codes der Erweiterung NLP-Processing Status
+([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html))
 ausdrücken.
 
 ### Zielgruppe
@@ -119,18 +123,21 @@ Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
 
 ### Impressum
 
-Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden
-und unterliegt per Governance-Prozess dem Abstimmungsverfahren des
+Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt wurden
+und unterliegt per Governance Prozess dem Abstimmungsverfahren des
 Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.
 
 ### Ansprechpartner
 
-Fragen zu dieser Publikation können im HL7-FHIR-Zulip
-[chat.fhir.org](https://chat.fhir.org) im Stream `german/mi-initiative` oder im
-MII-Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) im Stream
-`MII-Kerndatensatz` gestellt werden.
-Anmerkungen und Kritik werden als *Issues* auf
-[GitHub](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues) entgegengenommen.
+Fragen zu der vorliegenden Publikation können jederzeit unter
+[chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative'
+gestellt werden. Ergänzend steht das MII-Zulip
+[mii.zulipchat.com](https://mii.zulipchat.com/) im Stream
+`MII-Kerndatensatz` zur Verfügung.
+
+Anmerkungen und Kritik wird in Form von 'Issues' im
+[GitHub Projekt](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues)
+stets gern entgegengenommen.
 
 Fachliche Ansprechpartner:innen dieses Moduls:
 
@@ -149,22 +156,24 @@ Fachliche Ansprechpartner:innen dieses Moduls:
 
 ### Urheberrecht und Lizenz
 
-© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin.
 
 Dieses Werk ist lizenziert unter der
-[Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.de).
+[Creative Commons Namensnennung 4.0 International Lizenz](https://creativecommons.org/licenses/by/4.0/deed.de)
+(CC BY 4.0).
 
-Für die Nutzungsrechte der zugrunde liegenden FHIR-Technologie siehe die
-FHIR-Basisspezifikation.
+Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die
+FHIR-Basis-Spezifikation.
 
-Einige der verwendeten Codesysteme werden von anderen Organisationen
-veröffentlicht und gepflegt; es gilt das Urheberrecht der jeweiligen Herausgeber.
+Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben
+und gepflegt. Es gilt das Copyright der dort jeweils aufgeführten Herausgeber
+(Publisher).
 
 ### Haftungsausschluss
 
-Der Inhalt dieses Dokuments ist öffentlich. Bitte beachten Sie, dass Teile
-dieses Dokuments auf FHIR Version R4 basieren, dessen Urheberrecht bei
-HL7 International liegt.
+Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses
+Dokuments auf FHIR Version R4 beruhen, für die Copyright HL7 International
+gilt.
 
 Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die
 Autor:innen keine Haftung für direkte oder indirekte Schäden übernehmen, die

@@ -24,33 +24,23 @@ The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument wit
 
 <!-- Provenance note: the section "Zusammenfassung" quoted below was commented
      out in the Simplifier source page and therefore invisible. It is carried
-     over here unchanged so the content is not lost in migration. The active
-     summary is at the end of the page.
-     ...
-     With regard to the usable terminologies and the design of most metadata
-     fields, the MII KDS Dokument profile is deliberately kept flexible. For
-     central fields such as `type` and `category`, KDL and XDS codes are
-     recommended but not mandated. Instead, LOINC and SNOMED CT are explicitly
-     supported as code systems as well and can be used equivalently. The
-     binding strength is not required and carries a constraint expressing the
-     recommendation. The cardinalities of these fields are 0..1 (`type`) and
-     0..* (`category`) respectively, and MS is set. The MII KDS Dokument
-     profile is therefore fundamentally open to local, national or
-     international document classifications and harmonises well with source
-     profiles of differing structure.
-     ...
-     By contrast, the ISiK document exchange profile is considerably more
-     restrictive. There, KDL and XDS codes are mandatory for the field `type`.
-     The binding is required, alternative code systems are not foreseen. The
-     field `securityLabel` is mandatory in the ISiK document exchange profile
-     as well and must contain one of the prescribed confidentiality levels.
-     ...
-     The KBV MIO Basis and the IHE MHD profile are flexible in a way similar
-     to the MII KDS Dokument profile. Both profiles allow different code
-     systems for `type` and `category`, among them LOINC and SNOMED CT, and
-     impose no strict requirements. The fields are optional and the bindings
-     extensible or preferred. These profiles are therefore suited to a broad
-     range of use cases and to international interoperability. -->
+     over here verbatim (unchanged, unabridged and not re-wrapped) so the
+     content is not lost in migration. The active summary is at the end of the
+     page. The German default page carries the German source wording; the
+     English rendering below is the translation of that quote. -->
+
+<!-- SOURCE QUOTATION BEGIN (Simplifier source page, commented-out section
+     "Zusammenfassung"):
+
+### Summary
+
+With regard to the usable terminologies and the design of most metadata fields, the MII KDS Dokument profile is deliberately kept flexible. For central fields such as `type` and `category`, KDL and XDS codes are recommended but not mandated. Instead, LOINC and SNOMED CT are explicitly supported as code systems as well and can be used equivalently. The binding strength is not required and carries a constraint expressing the recommendation. The cardinalities of these fields are 0..1 (`type`) and 0..* (`category`) respectively, and MS is set. The MII KDS Dokument profile is therefore fundamentally open to local, national or international document classifications and harmonises well with source profiles of differing structure.
+
+By contrast, the ISiK document exchange profile is considerably more restrictive. There, KDL and XDS codes are mandatory for the field `type`. The binding is required, alternative code systems are not foreseen. The field `securityLabel` is mandatory in the ISiK document exchange profile as well and must contain one of the prescribed confidentiality levels.
+
+The KBV MIO Basis and the IHE MHD profile are flexible in a way similar to the MII KDS Dokument profile. Both profiles allow different code systems for `type` and `category`, among them LOINC and SNOMED CT, and impose no strict requirements. The fields are optional and the bindings extensible or preferred. These profiles are therefore suited to a broad range of use cases and to international interoperability.
+
+SOURCE QUOTATION END -->
 
 <!-- TODO:REVIEW Should the summary text quoted above, deactivated in the
      source, be reactivated as a visible section, or does it remain

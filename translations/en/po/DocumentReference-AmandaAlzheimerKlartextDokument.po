@@ -1,0 +1,36 @@
+
+# Coding.display
+#: Coding.display
+msgid "Ärztlicher Verlaufsbericht"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Arztberichte"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Durchgangsarztbericht"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Brief"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Brief"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "normal"
+msgstr ""
+
+# Attachment.title
+#: Attachment.title
+msgid "Amanda_Alzheimer.txt"
+msgstr ""
+

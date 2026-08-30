@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "inpatient encounter"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Abteilungskontakt"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Rheumatologie"
+msgstr ""
+

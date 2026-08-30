@@ -1,0 +1,19 @@
+{
+  "id" : "Encounter-AmandaAlzheimerEinrichtungskontakt",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "inpatient encounter",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Einrichtungskontakt",
+      "target" : null
+    }]
+  }]
+}

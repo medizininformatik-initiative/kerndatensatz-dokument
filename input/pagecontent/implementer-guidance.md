@@ -1,4 +1,6 @@
-<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD041 MD007 -->
+<!-- MD007: die eingerueckte Standard-Liste im Abschnitt "Referenzen" ist die
+     verbatim uebernommene Einrueckung der Simplifier-Quellseite. -->
 <!-- Deutsche Standardseite (Default-Sprache des Leitfadens).
      Englische Übersetzung: input/translations/en/pagecontent/implementer-guidance.md
      — beide Dateien synchron halten.
@@ -6,9 +8,15 @@
      MIIIGModulDokument/Kontext-Bezuege.page.md,
      MIIIGModulDokument/Referenzen.page.md und
      MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md
-     (letztere nur ausgewertet: sie enthielt ausschliesslich die KDS-weiten
-     Konformitaetsregeln des Meta-Moduls, die als Nur-Link-Eintraege im Menue
-     stehen). -->
+     (letztere nur ausgewertet, KEINE Prosa uebernommen: sie enthielt
+     ausschliesslich die KDS-weiten Konformitaetsregeln des Meta-Moduls —
+     "Anforderungsdokumentation" (RFC-2119-Schluesselworte), "Must Support (MS)"
+     und "Fehlende Daten". Alle drei Abschnitte deckt im Template der
+     Nur-Link-Menueeintrag "Konformitaet" ab, der direkt auf das
+     Meta-Modul-Wiki verweist (input/includes/menu.xml: #anforderungsdokumentation,
+     #must-support-ms, #fehlende-daten); die Quellseite selbst verwies fuer die
+     jeweils aktuelle Fassung ebenfalls dorthin. Eine Kopie im Modulleitfaden
+     wuerde zentral gepflegte Regeln duplizieren und veralten. -->
 
 Technische Hinweise für DIZ-Implementierende zur Umsetzung der Profile des Moduls **Dokument** (ETL aus Primärsystemen, FHIR-API, Validierung).
 
@@ -60,16 +68,17 @@ Für den Fall, dass die spezifizierten Dokumentkategorien und -typen die Anforde
 
 Das MII KDS-Modul Dokument ist darauf ausgelegt, dass Instanzen folgender FHIR-basierten Standards gleichzeitig kompatibel sein können:
 
-* [KBV Basis-Profile mit Medizinischen Informationsobjekten (MIO)](https://simplifier.net/base1x0) – Profil zum Verweis auf externe oder angehängte Dokumente
-* [Gematik Informationstechnischen Systeme im Krankenhaus (ISiK) Dokumentenaustausch](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) - Profil zur Abbildung erforderlicher Metadaten für den Dokumentenaustausch
-* [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - Profil zum Austausch von Gesundheitsdokumenten über mobile Anwendungen, mobile Geräte oder anderen Systemen, die ressourcen- und plattformbeschränkt sind
+  * [KBV Basis-Profile mit Medizinischen Informationsobjekten (MIO)](https://simplifier.net/base1x0) – Profil zum Verweis auf externe oder angehängte Dokumente
+  * [Gematik Informationstechnischen Systeme im Krankenhaus (ISiK) Dokumentenaustausch](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5)  - Profil zur Abbildung erforderlicher Metadaten für den Dokumentenaustausch
+  * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - Profil zum Austausch von Gesundheitsdokumenten über mobile Anwendungen, mobile Geräte oder anderen Systemen, die ressourcen- und plattformbeschränkt sind
 
-Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Die bestehenden der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe [Kompatibilität](kompatibilitaet.html)) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
+Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Die bestehenden der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Abschnitt [Referenzen](kompatibilitaet.html)) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
 
 <!-- TODO:REVIEW Der Quell-Verweis "(siehe Abschnitt Referenzen)" war auf der
      Simplifier-Seite selbstbezueglich. Er zeigt hier auf die Seite
      "Kompatibilitaet", auf der die Widerspruchsfreiheits-Analyse liegt —
-     bitte bestaetigen. -->
+     bitte bestaetigen. Die Quellformulierung ist verbatim erhalten; umgesetzt
+     wurde nur das Linkziel. -->
 
 [![Paketabhängigkeiten des MII KDS-Moduls Dokument](Paketabhaengigkeiten.png)](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg)
 

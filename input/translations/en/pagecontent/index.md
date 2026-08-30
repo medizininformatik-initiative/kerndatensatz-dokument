@@ -3,14 +3,16 @@
 
 ### Introduction
 
-This specification describes the FHIR representation of the Core Dataset
-(CDS) module **Dokument** of the Medical Informatics Initiative (MII). It
-covers the module's use cases and the associated FHIR profiles, extensions
-and terminology resources in their normative form. The MII Core Dataset
-enables the standardized secondary use of routine clinical data for medical
-research.
+The present specification describes the FHIR representation of the Core
+Dataset (KDS) module Dokument of the Medical Informatics Initiative.
+In the following, the use cases of the module as well as the associated
+FHIR profiles and terminology resources are described in their normative
+form.
 
-> With the MII CDS module Dokument, metadata about clinically relevant
+The Core Dataset of the Medical Informatics Initiative (MII) enables the
+standardized use of routine clinical data for medical research.
+
+> With the MII KDS module Dokument, metadata about clinically relevant
 > documents of any kind can be captured in a structured way for any purpose.
 > In this context, documents are arbitrary binary objects — for example
 > images or videos as well.
@@ -31,20 +33,19 @@ research.
 ### Module description
 
 Using the profile is intended to make internal and external use of
-documents easier. The module addresses the central aspects of
-characterization by metadata — document relationships, document status,
-document discoverability, corpus navigation and document archiving — and
-coordinates them according to a standardized scheme.
+documents easier. The central aspects of characterization by metadata:
+document relationships, document status, document discoverability, corpus
+navigation and document archiving are addressed by the module and
+coordinated according to a standardized scheme.
 
-The MII CDS module enables the creation of document references with the
+The MII KDS module enables the creation of document references with the
 option of establishing relationships to the Case and Person modules. The
 module also contains an NLP extension that represents the processing status
-with respect to NLP procedures such as annotations (see the UML diagram for
-this
-).
+with respect to NLP procedures such as annotations (see
+[UML](uml-diagrams.html) for this).
 
-With regard to document processing workflows — e.g. format conversions,
-anonymization and NLP annotations — the relation to other documents (MII CDS
+With regard to document processing workflows, e.g. format conversions,
+anonymization and NLP annotations, the relation to other documents (MII KDS
 module Dokument) becomes particularly significant for representing
 processing chains (`relatesTo`).
 
@@ -58,8 +59,8 @@ prescribe the semantics of this resolution.
 The document body can contain a wide range of identifying data and/or
 metadata (e.g. names, patient ID). The data holder can express that such
 data has been de-identified via an appropriate `securityLevel` and/or codes
-of the NLP-Processing-Status-Extension
-<!-- TODO:REVIEW exact StructureDefinition id of the NLP-Processing-Status-Extension artifact is unknown; link as [NLP-Processing-Status-Extension](StructureDefinition-<id>.html) once the id is confirmed -->.
+of the NLP Processing Status extension
+([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
 
 ### Target audience
 
@@ -123,12 +124,13 @@ Interoperability Forum and the technical committees of HL7 Germany.
 
 ### Contact
 
-Questions about this publication can be asked on the HL7 FHIR Zulip
-[chat.fhir.org](https://chat.fhir.org) in the `german/mi-initiative` stream,
-or on the MII Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) in the
-`MII-Kerndatensatz` stream.
-Comments and issues are welcome as *Issues* on
-[GitHub](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues).
+Questions about the present publication can be asked at any time on
+[chat.fhir.org](https://chat.fhir.org) in the 'german/mi-initiative' stream.
+In addition, the MII Zulip [mii.zulipchat.com](https://mii.zulipchat.com/)
+is available in the `MII-Kerndatensatz` stream.
+
+Comments and criticism are always gladly received in the form of 'Issues' in
+the [GitHub project](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues).
 
 Domain contacts for this module:
 
@@ -147,22 +149,23 @@ Domain contacts for this module:
 
 ### Copyright and License
 
-© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin.
 
 This work is licensed under the
-[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+(CC BY 4.0).
 
 For the usage rights of the underlying FHIR technology, see the FHIR base
 specification.
 
 Some of the code systems used are published and maintained by other
-organizations; the copyright of the respective publishers applies.
+organizations. The copyright of the publishers listed there applies.
 
 ### Disclaimer
 
 The content of this document is public. Please note that parts of this
-document are based on FHIR version R4, which is copyrighted by
-HL7 International.
+document are based on FHIR version R4, for which the copyright of
+HL7 International applies.
 
 Although this publication was prepared with the greatest care, the authors
 cannot accept any liability for direct or indirect damage that may arise

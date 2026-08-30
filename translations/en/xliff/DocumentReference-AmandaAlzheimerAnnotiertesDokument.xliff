@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" original="Resource DocumentReference-AmandaAlzheimerAnnotiertesDokument" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Ärztlicher Verlaufsbericht</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Arztberichte</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Durchgangsarztbericht</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Brief</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Brief</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>low</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DocumentReference-AmandaAlzheimerAnnotiertesDokument" resname="Attachment.title">
+             <notes>
+               <note id="n1">Attachment.title</note>
+             </notes>
+        <source>Annotat.zip</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

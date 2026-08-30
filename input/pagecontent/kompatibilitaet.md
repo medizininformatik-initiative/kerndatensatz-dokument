@@ -24,36 +24,22 @@ Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit 
 
 <!-- Herkunftshinweis: der nachfolgend zitierte Abschnitt "Zusammenfassung" war
      in der Simplifier-Quellseite auskommentiert und damit nicht sichtbar. Er
-     wird hier unveraendert mitgefuehrt, damit der Inhalt bei der Migration
-     nicht verlorengeht. Die aktive Zusammenfassung steht am Seitenende.
-     ...
-     Das MII KDS Dokument-Profil ist im Hinblick auf die verwendbaren
-     Terminologien und die Ausgestaltung der meisten Metadatenfelder bewusst
-     flexibel gehalten. Fuer zentrale Felder wie `type` und `category` werden
-     KDL- und XDS-Codes empfohlen, aber nicht verpflichtend gefordert.
-     Stattdessen sind auch LOINC und SNOMED CT als Codesysteme explizit
-     unterstuetzt und koennen gleichwertig verwendet werden. Die
-     Bindungsstaerke ist nicht required und mit einem Constraint hinsichtlich
-     der Empfehlung versehen. Die Kardinalitaeten fuer diese Felder sind 0..1
-     (`type`) bzw. 0..* (`category`), und MS ist gesetzt. Damit ist das
-     MII KDS Dokument Profil grundsaetzlich offen fuer lokale, nationale oder
-     internationale Dokumentenklassifikationen und laesst sich mit
-     unterschiedlich strukturierten Quellprofilen gut harmonisieren.
-     ...
-     Im Gegensatz dazu ist das ISiK Dokumentenaustausch-Profil deutlich
-     restriktiver. Hier sind KDL- und XDS-Codes fuer das Feld `type`
-     verpflichtend. Die Bindung ist erforderlich, alternative Codesysteme sind
-     nicht vorgesehen. Auch das Feld `securityLabel` ist im ISiK
-     Dokumentenaustausch-Profil verpflichtend und muss eine der vorgegebenen
-     Vertraulichkeitsstufen enthalten.
-     ...
-     Das KBV MIO Basis- und das IHE MHD-Profil sind aehnlich wie das
-     MII KDS Dokument-Profil flexibel. Beide Profile erlauben fuer `type` und
-     `category` verschiedene Codesysteme, darunter LOINC und SNOMED CT, und
-     setzen keine strikten Vorgaben. Die Felder sind optional, und die
-     Bindungen extensible oder preferred. Damit sind diese Profile fuer eine
-     breite Palette von Anwendungsfaellen und internationale Interoperabilitaet
-     geeignet. -->
+     wird hier verbatim mitgefuehrt - unveraendert, ungekuerzt und ohne
+     Neuumbruch -, damit der Inhalt bei der Migration nicht verlorengeht. Die
+     aktive Zusammenfassung steht am Seitenende. -->
+
+<!-- QUELLZITAT BEGINN (Simplifier-Quellseite, auskommentierter Abschnitt
+     "Zusammenfassung"; Wortlaut unveraendert uebernommen):
+
+### Zusammenfassung
+
+Das MII KDS Dokument-Profil ist im Hinblick auf die verwendbaren Terminologien und die Ausgestaltung der meisten Metadatenfelder bewusst flexibel gehalten. Für zentrale Felder wie `type` und `category` werden KDL- und XDS-Codes empfohlen, aber nicht verpflichtend gefordert. Stattdessen sind auch LOINC und SNOMED CT als Codesysteme explizit unterstützt und können gleichwertig verwendet werden. Die Bindungsstärke ist nicht required und mit einem Constraint hinsichtlich der Empfehlung versehen. Die Kardinalitäten für diese Felder sind 0..1 (`type`) bzw. 0..* (`category`), und MS ist gesetzt. Damit ist das MII KDS Dokument Profil grundsätzlich offen für lokale, nationale oder internationale Dokumentenklassifikationen und lässt sich mit unterschiedlich strukturierten Quellprofilen gut harmonisieren.
+
+Im Gegensatz dazu ist das ISiK Dokumentenaustausch-Profil deutlich restriktiver. Hier sind KDL- und XDS-Codes für das Feld `type` verpflichtend. Die Bindung ist erforderlich, alternative Codesysteme sind nicht vorgesehen. Auch das Feld `securityLabel` ist im ISiK Dokumentenaustausch-Profil verpflichtend und muss eine der vorgegebenen Vertraulichkeitsstufen enthalten.
+
+Das KBV MIO Basis- und das IHE MHD-Profil sind ähnlich wie das MII KDS Dokument-Profil flexibel. Beide Profile erlauben für `type` und `category` verschiedene Codesysteme, darunter LOINC und SNOMED CT, und setzen keine strikten Vorgaben. Die Felder sind optional, und die Bindungen extensible oder preferred. Damit sind diese Profile für eine breite Palette von Anwendungsfällen und internationale Interoperabilität geeignet.
+
+QUELLZITAT ENDE -->
 
 <!-- TODO:REVIEW Soll der oben zitierte, in der Quelle deaktivierte
      Zusammenfassungstext als sichtbarer Abschnitt reaktiviert werden, oder

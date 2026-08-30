@@ -1,0 +1,49 @@
+{
+  "id" : "DocumentReference-AmandaAlzheimerAnnotiertesDokument",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Ärztlicher Verlaufsbericht",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Arztberichte",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Durchgangsarztbericht",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Brief",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Brief",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "low",
+      "target" : null
+    },
+    {
+      "id" : "Attachment.title",
+      "context" : "Attachment.title",
+      "source" : "Annotat.zip",
+      "target" : null
+    }]
+  }]
+}

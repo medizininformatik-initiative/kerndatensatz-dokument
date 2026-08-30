@@ -14,8 +14,10 @@
 
 ### Changelog
 
-This page records the changes between the released versions of the
-**Dokument** module, newest version first. It follows
+This page contains a changelog describing the changes between versions.
+
+It records the changes between the released versions of the
+**Dokument** module, newest version first, and follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the KDS calendar
 versioning scheme described on the [Versioning](version-history.html) page.
 
@@ -76,75 +78,72 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 #### Version 2027.0.0-ballot.rc1
 
-**Date:** 2026-08-28
+**Date** 2026-08-28
 
 ##### Added
 
-* New NLP pipeline example `AmandaAlzheimerKlartextDokument` as a
-  plain-text extraction step.
-* New dependency ISiK Level 6 (`de.gematik.isik 6.0.0`).
-* `advisor.json` added for the validator pipeline.
+* **New dependency ISiK Level 6** (`de.gematik.isik 6.0.0`); updated
+  dependencies `de.basisprofil.r4 1.6.0`, `hl7.terminology.r4 7.1.0`;
+  `hl7.fhir.uv.extensions.r4 5.2.0` now declared explicitly
+* Tooling/quality assurance: `advisor.json` added for the validator pipeline,
+  quality-control rules updated
 
 ##### Changed
 
-* NLP pipeline examples revised (the `MII_EX_Dokument_NLP_Processing_Status`
-  extension itself has already been included, unchanged, since version
-  2026.0.1): the original document is now provided as DOCX
-  (`application/vnd...wordprocessingml.document`) instead of `text/plain`;
-  the `transforms` chaining of the pipeline steps was updated.
-* Updated dependencies `de.basisprofil.r4 1.6.0`,
-  `hl7.terminology.r4 7.1.0`; `hl7.fhir.uv.extensions.r4 5.2.0` is now
-  declared explicitly.
-* SNOMED CT version pinning per the MII Terminology Version Policy: all
+* **NLP pipeline examples revised** (the extension
+  `MII_EX_Dokument_NLP_Processing_Status` itself has already been included,
+  unchanged in content, since 2026.0.1): new example
+  `AmandaAlzheimerKlartextDokument` as a plain-text extraction step; the
+  original document now provided as DOCX
+  (`application/vnd.…wordprocessingml.document`) instead of `text/plain`;
+  processing-status codes along the pipeline corrected
+  (`annotated`/`preprocessed`/`surrogated` per the illustration, instead of
+  uniformly `deid`); the `transforms` chaining of the pipeline steps updated
+* **SNOMED CT version pinning** per the MII Terminology Version Policy: all
   SNOMED CT includes (value sets Type, Category, Facility Type, Discipline)
-  now reference the International Edition
-  `http://snomed.info/sct/900000000000207008/version/20260701`.
-* Quality-control rules for the validator pipeline updated.
+  reference the International Edition
+  `http://snomed.info/sct/900000000000207008/version/20260701`
 
 ##### Fixed
 
-* Processing-status codes along the NLP pipeline corrected
-  (`annotated`/`preprocessed`/`surrogated` per the illustration, instead of
-  uniformly `deid`).
-* CodeSystem NLP Processing Status: definition of the `surrogated` concept
-  clarified; the CodeSystem's title corrected ("MII CS Dokument …" instead
-  of the erroneous "MII VS Dokument …").
-* Logical model `MII_LM_Dokument` is now shipped with the package (status
+* **CodeSystem NLP Processing Status**: definition of the `surrogated` concept
+  clarified; the CodeSystem's title corrected ("MII CS Dokument …" instead of
+  the erroneous "MII VS Dokument …")
+* **Logical model `MII_LM_Dokument`** is now shipped with the package (status
   `draft` → `active`; it had previously been excluded by the package build
-  filter).
+  filter)
 
-The `MII_PR_Dokument_Dokument` profile, the
-`MII_EX_Dokument_NLP_Processing_Status` extension, and the CapabilityStatement
-are unchanged in content compared to version 2026.0.1.
+The `MII_PR_Dokument_Dokument` profile, the extension and the
+CapabilityStatement are unchanged in content compared to 2026.0.1.
 
-> **Known issue:** 2 validation errors on examples with `context.event`
-> (eventCodeList expansion, an upstream bug in `de.ihe-d.terminology 3.0.1`)
-> — see
-> [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33).
+> **Known Issue**: 2 validation errors on examples with `context.event`
+> (eventCodeList expansion, an upstream bug in `de.ihe-d.terminology 3.0.1`) —
+> see
+> [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
 {: .ig-highlight .ig-highlight-grey}
 
 ---
 
 #### Version 2026.0.1
 
-**Date:** 2026-03-11
+**Date** 2026-03-11
 
 ##### Changed
 
-* Dependencies changed from MII KDS Fall/Person to MII KDS Basis.
-* Dependencies and descriptions updated to MII KDS module version 2026.
+* Changes dependencies from MII KDS Fall/Person to MII KDS Basis
+* Updates dependencies and descriptions to MII KDS module version 2026
 
 ##### Fixed
 
-* Incorrect display name on examples for Einrichtungskontakt (facility
-  contact) corrected.
+* Corrects incorrect display name on examples for Einrichtungskontakt
+  (facility contact)
 
 ---
 
 #### Version 2026.0.0
 
-**Date:** 2025-12-10
+**Date** 2025-12-10
 
 ##### Added
 
-* Initial release of the **Dokument** module.
+* Initial release of the MII KDS module Dokument

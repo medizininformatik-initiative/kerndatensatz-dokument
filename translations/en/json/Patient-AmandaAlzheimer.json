@@ -1,0 +1,19 @@
+{
+  "id" : "Patient-AmandaAlzheimer",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Amanda",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Alzheimer",
+      "target" : null
+    }]
+  }]
+}

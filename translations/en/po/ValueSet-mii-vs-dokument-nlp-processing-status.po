@@ -1,0 +1,31 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "MII_VS_Dokument_NLP_Processing_Status"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "MII VS Dokument NLP Processing Status"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+

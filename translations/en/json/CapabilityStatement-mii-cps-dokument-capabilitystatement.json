@@ -1,0 +1,43 @@
+{
+  "id" : "CapabilityStatement-mii-cps-dokument-capabilitystatement",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "CapabilityStatement.name",
+      "context" : "CapabilityStatement.name",
+      "source" : "MII_CPS_Dokument_CapabilityStatement",
+      "target" : null
+    },
+    {
+      "id" : "CapabilityStatement.title",
+      "context" : "CapabilityStatement.title",
+      "source" : "MII CPS Dokument CapabilityStatement",
+      "target" : null
+    },
+    {
+      "id" : "CapabilityStatement.publisher",
+      "context" : "CapabilityStatement.publisher",
+      "source" : "Medizininformatik-Initiative",
+      "target" : null
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Medizininformatik-Initiative",
+      "target" : null
+    },
+    {
+      "id" : "CapabilityStatement.description",
+      "context" : "CapabilityStatement.description",
+      "source" : "\n    Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss,\n    um das Modul Dokument der Medizininformatik Initiative zu implementieren.",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Germany",
+      "target" : null
+    }]
+  }]
+}
