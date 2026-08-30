@@ -16,9 +16,9 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 
 **MII EX Dokument NLP Processing Status**: Original
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.2.0/NamingSystem-uri.html)/urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341
+**masterIdentifier**: [URI](http://terminology.hl7.org/5.0.0/NamingSystem-uri.html)/urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341
 
-**identifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.2.0/NamingSystem-uri.html)/urn:uuid:4f8a2e7c-5b3d-4a12-9f87-3c2e9a1d5f04 (use: official, )
+**identifier**: [URI](http://terminology.hl7.org/5.0.0/NamingSystem-uri.html)/urn:uuid:4f8a2e7c-5b3d-4a12-9f87-3c2e9a1d5f04 (use: official, )
 
 **status**: Current
 
@@ -39,7 +39,7 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
-| * | application/vnd.openxmlformats-officedocument.wordprocessingml.document | Deutsch (Österreich) | `UEsDBAoAAAAAAGtjrFwAAAAAAAAAAAAA...`(base64 data - 17,156 base64 chars) | 12865 | `lVW+O8g3uswHHW0s8kirGXp3hJU=` | Amanda_Alzheimer.docx | 2028-02-06 |
+| * | application/vnd.openxmlformats-officedocument.wordprocessingml.document | German (Austria) | `UEsDBAoAAAAAAGtjrFwAAAAAAAAAAAAA...`(base64 data - 17,156 base64 chars) | 12865 | `lVW+O8g3uswHHW0s8kirGXp3hJU=` | Amanda_Alzheimer.docx | 2028-02-06 |
 
 **format**: [IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds:2017:mimeTypeSufficient](https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds.582017.58mimeTypeSufficient) (mimeType Sufficient)
 

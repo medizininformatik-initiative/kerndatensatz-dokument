@@ -16,9 +16,9 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 
 **MII EX Dokument NLP Processing Status**: Vorverarbeitetes Dokument
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.2.0/NamingSystem-uri.html)/urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340
+**masterIdentifier**: [URI](http://terminology.hl7.org/5.0.0/NamingSystem-uri.html)/urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340
 
-**identifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.2.0/NamingSystem-uri.html)/urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21 (use: official, )
+**identifier**: [URI](http://terminology.hl7.org/5.0.0/NamingSystem-uri.html)/urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21 (use: official, )
 
 **status**: Current
 
@@ -46,7 +46,7 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
-| * | text/plain | Deutsch (Österreich) | `U2VociBnZWVocnRlciBIZXJyIEtvbGxl...`(base64 data - 8,600 base64 chars) | 6450 | `Mb3QlW09GC5pwIIu01BjCBw2qMM=` | Amanda_Alzheimer.txt | 2028-02-06 |
+| * | text/plain | German (Austria) | `U2VociBnZWVocnRlciBIZXJyIEtvbGxl...`(base64 data - 8,600 base64 chars) | 6450 | `Mb3QlW09GC5pwIIu01BjCBw2qMM=` | Amanda_Alzheimer.txt | 2028-02-06 |
 
 **format**: [IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds:2017:mimeTypeSufficient](https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds.582017.58mimeTypeSufficient) (mimeType Sufficient)
 

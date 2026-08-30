@@ -40,7 +40,7 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** |
-| * | text/plain | Deutsch (Österreich) | `U2VociBnZWVocnRlciBIZXJyIEtvbGxl...`(base64 data - 8,984 base64 chars) | 6736 | `PO6tZryRCRFyjrsMcKnCFuqxX1s=` | De-ID.txt |
+| * | text/plain | German (Austria) | `U2VociBnZWVocnRlciBIZXJyIEtvbGxl...`(base64 data - 8,984 base64 chars) | 6736 | `PO6tZryRCRFyjrsMcKnCFuqxX1s=` | De-ID.txt |
 
 **format**: [IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds:2017:mimeTypeSufficient](https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds.582017.58mimeTypeSufficient) (mimeType Sufficient)
 

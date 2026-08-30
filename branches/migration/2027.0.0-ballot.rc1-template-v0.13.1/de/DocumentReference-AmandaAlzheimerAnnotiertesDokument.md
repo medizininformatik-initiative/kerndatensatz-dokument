@@ -40,7 +40,7 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** |
-| * | application/zip | Deutsch (Österreich) | `UEsDBBQAAAAIAJ19kVq3bUy0mXQAACSH...`(base64 data - 46,064 base64 chars) | 34548 | `1ndGSSne1BKhYNkOdut2r5gQSuY=` | Annotat.zip |
+| * | application/zip | German (Austria) | `UEsDBBQAAAAIAJ19kVq3bUy0mXQAACSH...`(base64 data - 46,064 base64 chars) | 34548 | `1ndGSSne1BKhYNkOdut2r5gQSuY=` | Annotat.zip |
 
 **format**: [IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds:2017:mimeTypeSufficient](https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds.582017.58mimeTypeSufficient) (mimeType Sufficient)
 

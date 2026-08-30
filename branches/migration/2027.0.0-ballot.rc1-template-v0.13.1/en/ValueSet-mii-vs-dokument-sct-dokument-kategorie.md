@@ -24,8 +24,6 @@ SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments
 
 ### Expansion
 
-No Expansion for this valueset (Unsupported Code System Version)
-
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -48,7 +46,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument SCT Dokument Kategorie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T19:02:27+00:00",
+  "date" : "2026-08-30T20:47:31+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
