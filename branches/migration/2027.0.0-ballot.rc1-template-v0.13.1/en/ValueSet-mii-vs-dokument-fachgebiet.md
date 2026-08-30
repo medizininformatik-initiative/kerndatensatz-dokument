@@ -48,7 +48,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument Fachgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T18:38:46+00:00",
+  "date" : "2026-08-30T18:44:43+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
