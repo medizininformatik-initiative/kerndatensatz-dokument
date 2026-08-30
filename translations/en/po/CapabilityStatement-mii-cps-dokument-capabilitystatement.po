@@ -11,12 +11,12 @@ msgstr ""
 
 # CapabilityStatement.publisher
 #: CapabilityStatement.publisher
-msgid "Medizininformatik-Initiative"
+msgid "NUM-DIZ"
 msgstr ""
 
 # ContactDetail.name
 #: ContactDetail.name
-msgid "Medizininformatik-Initiative"
+msgid "NUM-DIZ"
 msgstr ""
 
 # CapabilityStatement.description

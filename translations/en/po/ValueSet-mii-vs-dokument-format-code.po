@@ -11,12 +11,12 @@ msgstr ""
 
 # ValueSet.publisher
 #: ValueSet.publisher
-msgid "Medizininformatik-Initiative"
+msgid "NUM-DIZ"
 msgstr ""
 
 # ContactDetail.name
 #: ContactDetail.name
-msgid "Medizininformatik-Initiative"
+msgid "NUM-DIZ"
 msgstr ""
 
 # ValueSet.description

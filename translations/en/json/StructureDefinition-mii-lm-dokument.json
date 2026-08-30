@@ -18,14 +18,14 @@
     {
       "id" : "StructureDefinition.publisher",
       "context" : "The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.",
-      "source" : "Medizininformatik-Initiative",
-      "target" : "Medizininformatik-Initiative"
+      "source" : "NUM-DIZ",
+      "target" : "NUM-DIZ"
     },
     {
       "id" : "StructureDefinition.contact.name",
       "context" : "The name of an individual to contact.",
-      "source" : "Medizininformatik-Initiative",
-      "target" : "Medizininformatik-Initiative"
+      "source" : "NUM-DIZ",
+      "target" : "NUM-DIZ"
     },
     {
       "id" : "StructureDefinition.mapping.mii-map-dokument/name",

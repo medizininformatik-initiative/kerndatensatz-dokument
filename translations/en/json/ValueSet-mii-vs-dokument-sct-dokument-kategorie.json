@@ -18,13 +18,13 @@
     {
       "id" : "ValueSet.publisher",
       "context" : "ValueSet.publisher",
-      "source" : "Medizininformatik-Initiative",
+      "source" : "NUM-DIZ",
       "target" : null
     },
     {
       "id" : "ContactDetail.name",
       "context" : "ContactDetail.name",
-      "source" : "Medizininformatik-Initiative",
+      "source" : "NUM-DIZ",
       "target" : null
     },
     {

@@ -21,14 +21,14 @@
              <notes>
                <note id="n1">ValueSet.publisher</note>
              </notes>
-        <source>Medizininformatik-Initiative</source>
+        <source>NUM-DIZ</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-mii-vs-dokument-format-code" resname="ContactDetail.name">
              <notes>
                <note id="n1">ContactDetail.name</note>
              </notes>
-        <source>Medizininformatik-Initiative</source>
+        <source>NUM-DIZ</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ValueSet-mii-vs-dokument-format-code" resname="ValueSet.description">

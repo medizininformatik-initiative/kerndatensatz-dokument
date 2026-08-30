@@ -21,14 +21,14 @@
              <notes>
                <note id="n1">CapabilityStatement.publisher</note>
              </notes>
-        <source>Medizininformatik-Initiative</source>
+        <source>NUM-DIZ</source>
         <target></target>
       </trans-unit>
       <trans-unit id="CapabilityStatement-mii-cps-dokument-capabilitystatement" resname="ContactDetail.name">
              <notes>
                <note id="n1">ContactDetail.name</note>
              </notes>
-        <source>Medizininformatik-Initiative</source>
+        <source>NUM-DIZ</source>
         <target></target>
       </trans-unit>
       <trans-unit id="CapabilityStatement-mii-cps-dokument-capabilitystatement" resname="CapabilityStatement.description">
