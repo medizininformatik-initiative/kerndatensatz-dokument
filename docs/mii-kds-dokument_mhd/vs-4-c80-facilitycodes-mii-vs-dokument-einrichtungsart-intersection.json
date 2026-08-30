@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "4d916fd6-516b-40d7-a7c8-5cd6d5b164a0-12",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/4d916fd6-516b-40d7-a7c8-5cd6d5b164a0-12",
-  "name" : "IntersectionFacilityTypeCodeValueSetAndMII_VS_Dokument_Einrichtungsart",
-  "title" : "Intersection of Facility Type Code Value Set And MII VS Dokument Einrichtungart",
-  "status" : "active",
-  "date" : "2026-08-28T17:13:35+00:00"
-}

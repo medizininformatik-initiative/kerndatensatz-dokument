@@ -28,12 +28,12 @@ releaseLabel: ballot
 license: CC-BY-4.0 # owner decision 2026-08-30 (was CC0-1.0; guide already claimed CC BY 4.0)
 date: "2026-08-28" # release date of v2027.0.0-ballot.rc1 (tag + package publication)
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-# Source publisher carried unchanged (template default would be NUM-DIZ; the
-# 2027 ballot is published by the MII — divergence recorded for Gate A).
+# IG-level publisher = NUM-DIZ (owner decision 2026-08-30, template default;
+# resource-level publisher stays "Medizininformatik Initiative" per the
+# template's module-independent ruleset convention — see input/fsh/common/Publisher.fsh).
 publisher:
-  name: Medizininformatik-Initiative
-  url: https://www.medizininformatik-initiative.de
-  email: office@medizininformatik-initiative.de
+  name: NUM-DIZ
+  url: https://www.netzwerk-universitaetsmedizin.de
 meta:
   profile:
     - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide
