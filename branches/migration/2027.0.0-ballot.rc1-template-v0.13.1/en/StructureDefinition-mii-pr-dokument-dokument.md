@@ -111,7 +111,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-d
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-08-30T06:43:36+00:00",
+  "date" : "2026-08-30T06:48:22+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",

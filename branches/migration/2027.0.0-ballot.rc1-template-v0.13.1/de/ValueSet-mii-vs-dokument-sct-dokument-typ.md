@@ -48,7 +48,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument SCT Dokument Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T06:43:36+00:00",
+  "date" : "2026-08-30T06:48:22+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",
