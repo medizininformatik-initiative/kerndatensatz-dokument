@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://dicom.nema.org/resources/ontology/DCMUID",
+      "concept" : [{
+        "code" : "1.2.840.10008.5.1.4.1.1.88.59",
+        "display" : "Key Object Selection Document"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.\r\nInformation: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978"
+}
+-------------------------------------------------------------------------------------

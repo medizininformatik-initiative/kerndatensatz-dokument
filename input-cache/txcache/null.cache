@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "de", "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code", "version": "2027.0.0-ballot.rc1"}####
+e: {
+  "class" : "UNKNOWN",
+  "error" : "Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.\r\nInformation: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from https://tx.ontoserver.csiro.au/fhir: Error: [46c2676e-4f12-4d4f-b468-180f90248226]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.\r\nInformation: X-Request-Id: be2dd4fa-33e2-4c67-943f-9ec4377a9095)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "en", "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code", "version": "2027.0.0-ballot.rc1"}####
+e: {
+  "class" : "UNKNOWN",
+  "error" : "Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.\r\nInformation: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from https://tx.ontoserver.csiro.au/fhir: Error: [25d24e12-1039-44c4-8c70-4234a8fe8e8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.\r\nInformation: X-Request-Id: be6ac152-c0fc-4a91-b6c3-a5ac0acfc22a)"
+}
+-------------------------------------------------------------------------------------

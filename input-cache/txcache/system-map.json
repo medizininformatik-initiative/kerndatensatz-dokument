@@ -1,0 +1,170 @@
+{
+  "systems" : [{
+    "system" : "http://dicom.nema.org/resources/ontology/DCMUID",
+    "url" : "http://dicom.nema.org/resources/ontology/DCMUID",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate",
+    "url" : "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung in de",
+    "url" : "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung in de",
+    "url" : "http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl in de",
+    "url" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://snomed.info/sct",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://snomed.info/sct in de",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in de",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en, en-US",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm in de",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm in de-DE",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm in en-US",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:dicom:uid",
+    "url" : "urn:dicom:uid",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:ietf:bcp:13 in de",
+    "url" : "urn:ietf:bcp:13",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:ietf:bcp:47 in de",
+    "url" : "urn:ietf:bcp:47",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:ietf:bcp:47 in de-DE",
+    "url" : "urn:ietf:bcp:47",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:ietf:bcp:47 in en",
+    "url" : "urn:ietf:bcp:47",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:ietf:rfc:3986",
+    "url" : "urn:ietf:rfc:3986",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166 in de",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166 in de-DE",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166 in en-US",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2 in de",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2 in de-DE",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2 in en-US",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "authoritative" : [],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+  }]
+}
