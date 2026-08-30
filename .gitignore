@@ -31,3 +31,9 @@ node_modules/
 
 # --- OS / editor noise ---
 *.log
+
+# The migration run log and its per-step raw logs are EVIDENCE, committed
+# with the branch (skill mii-ig-migration, run-log contract) — exempt from the
+# *.log noise rule above.
+!migration-log/*.log
+!migration-log/*.prev.log

@@ -1,0 +1,16 @@
+removed=['input/pagecontent/researcher-guidance.md', 'input/translations/en/pagecontent/researcher-guidance.md', 'input/pagecontent/search-parameters.md', 'input/translations/en/pagecontent/search-parameters.md', 'input/pagecontent/operations.md', 'input/translations/en/pagecontent/operations.md', 'input/pagecontent/rendering-artifacts.md', 'input/translations/en/pagecontent/rendering-artifacts.md', 'demo/']
+edited=14
+  input/pagecontent/extensions.md (banner)
+  input/translations/en/pagecontent/extensions.md (banner)
+  input/pagecontent/value-sets.md (banner)
+  input/translations/en/pagecontent/value-sets.md (banner)
+  input/pagecontent/code-systems.md (banner)
+  input/translations/en/pagecontent/code-systems.md (banner)
+  input/pagecontent/metadata.md (banner)
+  input/translations/en/pagecontent/metadata.md (banner)
+  input/pagecontent/extensions.md (todo->derived)
+  input/pagecontent/value-sets.md (todo->derived)
+  input/translations/en/pagecontent/extensions.md (todo->derived)
+  input/translations/en/pagecontent/value-sets.md (todo->derived)
+  input/pagecontent/security-and-privacy.md (M11 stage3)
+  input/translations/en/pagecontent/security-and-privacy.md (M11 stage3)
