@@ -40,17 +40,13 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Dokument NLP Processing Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T09:45:44+00:00",
-  "publisher" : "Medizininformatik-Initiative",
+  "date" : "2026-08-30T12:16:15+00:00",
+  "publisher" : "NUM-DIZ",
   "contact" : [{
-    "name" : "Medizininformatik-Initiative",
+    "name" : "NUM-DIZ",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.medizininformatik-initiative.de"
-    },
-    {
-      "system" : "email",
-      "value" : "office@medizininformatik-initiative.de"
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
     }]
   }],
   "description" : "Status der NLP-Verarbeitung des referenzierten Dokuments",

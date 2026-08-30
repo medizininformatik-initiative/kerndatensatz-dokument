@@ -38,16 +38,12 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
   "status" : "active",
   "experimental" : false,
   "date" : "2025-06-23",
-  "publisher" : "Medizininformatik-Initiative",
+  "publisher" : "NUM-DIZ",
   "contact" : [{
-    "name" : "Medizininformatik-Initiative",
+    "name" : "NUM-DIZ",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.medizininformatik-initiative.de"
-    },
-    {
-      "system" : "email",
-      "value" : "office@medizininformatik-initiative.de"
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
     }]
   }],
   "description" : "\n    Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss,\n    um das Modul Dokument der Medizininformatik Initiative zu implementieren.",

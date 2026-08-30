@@ -48,17 +48,13 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument SCT Dokument Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T09:45:44+00:00",
-  "publisher" : "Medizininformatik-Initiative",
+  "date" : "2026-08-30T12:16:15+00:00",
+  "publisher" : "NUM-DIZ",
   "contact" : [{
-    "name" : "Medizininformatik-Initiative",
+    "name" : "NUM-DIZ",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.medizininformatik-initiative.de"
-    },
-    {
-      "system" : "email",
-      "value" : "office@medizininformatik-initiative.de"
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
     }]
   }],
   "description" : "SNOMED CT ValueSet zum Typ eines Dokuments",

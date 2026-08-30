@@ -241,16 +241,12 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   "status" : "draft",
   "experimental" : false,
   "date" : "2026-08-28",
-  "publisher" : "Medizininformatik-Initiative",
+  "publisher" : "NUM-DIZ",
   "contact" : [{
-    "name" : "Medizininformatik-Initiative",
+    "name" : "NUM-DIZ",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.medizininformatik-initiative.de"
-    },
-    {
-      "system" : "email",
-      "value" : "office@medizininformatik-initiative.de"
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
     }]
   }],
   "description" : "Medizininformatik Initiative - KDS-Modul Dokument",
