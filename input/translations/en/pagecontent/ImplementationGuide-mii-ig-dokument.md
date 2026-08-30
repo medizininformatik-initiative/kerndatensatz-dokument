@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD041 -->
+<!-- English translation of the German default page input/pagecontent/ImplementationGuide-mii-ig-dokument.md (DE-first). -->
 <!-- Default-language (English) intro for the ImplementationGuide RESOURCE page —
      the artifact page the IG Publisher generates for the IG resource itself
      (ImplementationGuide-<id>.html). Without this file the page renders bare:

@@ -58,17 +58,10 @@ profilübergreifend in einer Tabelle sichten wollen:
 
 Die `ImplementationGuide`-Ressource trägt die technischen Details dieser
 Veröffentlichung einschließlich ihrer Abhängigkeiten und
-Veröffentlichungsparameter.
+Veröffentlichungsparameter. Sie ist auf der Seite
+[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html)
+dokumentiert.
 
-> [TODO: Diese Vorlage liefert keine Seite für diese Ressource aus, hier ist
-> also noch nichts zu verlinken. `kerndatensatz-basis` veröffentlicht eine
-> solche Seite als `input/pagecontent/ImplementationGuide-mii-ig-base.md`,
-> eingetragen unter `pages:` in `sushi-config.yaml`. Legen Sie das Gegenstück
-> für Ihr Modul in beiden Sprachen an und verlinken Sie es hier. Der Dateiname
-> muss Ihren Slug wörtlich enthalten: ein `pages:`-Dateiname kann keinen
-> Platzhalter tragen, weil die Platzhalter-Ersetzung Dateiinhalte ersetzt, nicht
-> Dateinamen.]
-{: .ig-highlight .ig-highlight-grey}
 
 #### Versionshistorie
 
@@ -76,7 +69,11 @@ Frühere Versionen und die ausführliche Änderungshistorie stehen auf den Seite
 [Versionierung](version-history.html) und
 [Änderungshistorie](changes.html).
 
-> [TODO: Ergänzen Sie weitere Downloads Ihres Moduls — etwa ein Beispiel-Bundle,
-> ein Datenwörterbuch oder eine Mapping-Tabelle — und entfernen Sie die oben
-> aufgeführten Einträge, die Ihr Build nicht erzeugt.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- DERIVED:bridge source=none gate=B -->
+> **Bei der Migration verfasst — vor dem Release prüfen.**
+> #### Paket-Registry
+>
+> Das FHIR-Package ist zusätzlich in der Simplifier-Package-Registry
+> veröffentlicht:
+> [`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).
+{: .ig-highlight .ig-highlight-blue}

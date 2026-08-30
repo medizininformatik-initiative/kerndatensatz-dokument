@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD041 -->
+<!-- English translation of the German default page input/pagecontent/downloads.md (DE-first). -->
 <!-- Default-language (English) page. Ported from kerndatensatz-basis
      input/pagecontent/downloads.md (branch main).
      German mirror: input/translations/de/pagecontent/downloads.md — both files
@@ -56,23 +57,19 @@ profiles in one table:
 #### ImplementationGuide resource
 
 The `ImplementationGuide` resource carries the technical details of this
-publication, including its dependencies and publication parameters.
+publication, including its dependencies and publication parameters. It is documented on the
+[MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
 
-> [TODO: This template ships no page for that resource, so there is nothing to
-> link here yet. `kerndatensatz-basis` publishes one as
-> `input/pagecontent/ImplementationGuide-mii-ig-base.md`, registered under
-> `pages:` in `sushi-config.yaml`. Add the equivalent for your module in both
-> languages and link it from here. The file name must carry your slug
-> literally: a `pages:` file name cannot hold a placeholder, because the
-> placeholder substitution rewrites file contents, not file names.]
-{: .ig-highlight .ig-highlight-grey}
 
 #### Version history
 
 Earlier versions and the detailed change history are on the
 [Versioning](version-history.html) and [Changelog](changes.html) pages.
 
-> [TODO: Add any further downloads your module offers — for example an example
-> bundle, a data dictionary or a mapping table — and remove the entries above
-> that your build does not produce.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- DERIVED:bridge source=none gate=B -->
+> **Written during migration — review before release.**
+> #### Package registry
+>
+> The FHIR package is additionally published in the Simplifier package registry:
+> [`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).
+{: .ig-highlight .ig-highlight-blue}

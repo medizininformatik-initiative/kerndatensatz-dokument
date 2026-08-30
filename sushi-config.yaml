@@ -144,10 +144,10 @@ pages:
     title: Startseite
   guidance.md:
     title: Anleitung
-    researcher-guidance.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-      title: Anleitung für Forschende
     implementer-guidance.md:
       title: Anleitung für Implementierende
+      kompatibilitaet.md:
+        title: Kompatibilität zu anderen Spezifikationen
     uml-diagrams.md:
       title: UML-Diagramme
   security-and-privacy.md:
@@ -158,10 +158,6 @@ pages:
     title: Extensions
   capability-statements.md:
     title: CapabilityStatements
-  search-parameters.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: Suchparameter
-  operations.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: Operationen
   logical-models.md:
     title: Logische Modelle
   value-sets.md: # OPTIONAL (0..1) — see docs/optional-pages.md
@@ -182,8 +178,6 @@ pages:
     title: MII-ImplementationGuide-Ressource
   translationinfo.md:
     title: Übersetzungsinformationen
-  rendering-artifacts.md:
-    title: Artefakt-Rendering (Demo)
 parameters:
   path-resource:
     - input/predefined-resources

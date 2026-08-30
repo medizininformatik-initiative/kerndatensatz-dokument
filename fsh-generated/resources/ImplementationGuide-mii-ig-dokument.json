@@ -432,14 +432,16 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "researcher-guidance.html",
-              "title": "Anleitung für Forschende",
-              "generation": "markdown"
-            },
-            {
               "nameUrl": "implementer-guidance.html",
               "title": "Anleitung für Implementierende",
-              "generation": "markdown"
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "kompatibilitaet.html",
+                  "title": "Kompatibilität zu anderen Spezifikationen",
+                  "generation": "markdown"
+                }
+              ]
             },
             {
               "nameUrl": "uml-diagrams.html",
@@ -466,16 +468,6 @@
         {
           "nameUrl": "capability-statements.html",
           "title": "CapabilityStatements",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "search-parameters.html",
-          "title": "Suchparameter",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "operations.html",
-          "title": "Operationen",
           "generation": "markdown"
         },
         {
@@ -526,11 +518,6 @@
         {
           "nameUrl": "translationinfo.html",
           "title": "Übersetzungsinformationen",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "rendering-artifacts.html",
-          "title": "Artefakt-Rendering (Demo)",
           "generation": "markdown"
         }
       ]

@@ -1,7 +1,16 @@
+
 <!-- markdownlint-disable MD041 -->
-### CapabilityStatements
+<!-- Migriert aus dem Simplifier-Leitfaden "MII IG Modul Dokument":
+     MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md.
+     Englische Übersetzung: input/translations/en/pagecontent/capability-statements.md
+     — beide Dateien inhaltlich synchron halten. -->
 
-Die CapabilityStatements des Moduls **Dokument** beschreiben die erwarteten Server-/Client-Fähigkeiten (unterstützte Ressourcen und Interaktionen).
+Um eine dezentrale Datenauswertung mittels des Deutschen Forschungsdatenportals für Gesundheit der Medizininformatik-Initiative zu ermöglichen, MUSS die [Capabilities-Interaktion](https://www.hl7.org/fhir/R4/http.html#capabilities) unterstützt werden, sodass durch den FHIR-Server unter `[BASE_URL]/metadata` ein CapabilityStatement exponiert wird. Innerhalb dieses CapabilityStatement MUSS angegeben werden, welche Profile inkl. Version sowie welche Suchparameter unterstützt werden.
 
-> [TODO: Verweisen Sie auf das/die CapabilityStatement(s) Ihres Moduls, oder entfernen Sie diese Seite.]
-{: .ig-highlight .ig-highlight-grey}
+Nachfolgend wird aufgelistet, welche Inhalte verpflichtend im CapabilityStatement angegeben werden MÜSSEN. Darüber hinaus MUSS eine Konformität zu dem nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement-Instanz unter [`CapabilityStatement.instantiates`](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates) angegeben werden.
+
+Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement`
+
+Artefakt-Seite: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html)
+
+{% lang-fragment CapabilityStatement-mii-cps-dokument-capabilitystatement-html.xhtml %}
