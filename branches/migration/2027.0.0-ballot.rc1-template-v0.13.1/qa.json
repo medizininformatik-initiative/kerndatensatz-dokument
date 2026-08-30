@@ -7,8 +7,8 @@
   "status" : "draft",
   "package-id" : "de.medizininformatikinitiative.kerndatensatz.dokument",
   "ig-ver" : "2027.0.0-ballot.rc1",
-  "date" : "Sun, 30 Aug, 2026 07:19:06 +0000",
-  "dateISO8601" : "2026-08-30T07:19:06+00:00",
+  "date" : "Sun, 30 Aug, 2026 09:13:23 +0000",
+  "dateISO8601" : "2026-08-30T09:13:23+00:00",
   "errs" : 8,
   "warnings" : 127,
   "hints" : 417,
@@ -16,5 +16,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 2782018808
+  "maxMemory" : 2994777240
 }
