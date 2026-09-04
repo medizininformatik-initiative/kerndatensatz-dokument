@@ -128,10 +128,10 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-mii-vs-dokument-sct-dokument-typ.html" : "MII VS Dokument SCT Dokument Typ",
     "ValueSet-mii-vs-dokument-sct-dokument-kategorie.html" : "MII VS Dokument SCT Dokument Kategorie",
-    "ValueSet-mii-vs-dokument-fachgebiet.html" : "MII VS Dokument Fachgebiet",
-    "ValueSet-mii-vs-dokument-einrichtungsart.html" : "MII VS Dokument Einrichtungart"
+    "ValueSet-mii-vs-dokument-sct-dokument-typ.html" : "MII VS Dokument SCT Dokument Typ",
+    "ValueSet-mii-vs-dokument-einrichtungsart.html" : "MII VS Dokument Einrichtungart",
+    "ValueSet-mii-vs-dokument-fachgebiet.html" : "MII VS Dokument Fachgebiet"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/common-tags",

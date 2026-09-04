@@ -102,7 +102,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-dokument-n
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
   "title" : "MII EX Dokument NLP Processing Status",
   "status" : "active",
-  "date" : "2026-09-04T15:28:08+00:00",
+  "date" : "2026-09-04T15:37:57+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
