@@ -97,8 +97,8 @@ dependencies are described at
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
 Formal dependencies of this module (see `dependencies` in
-`sushi-config.yaml`): KDS base module (`kerndatensatz.base` 2026.0.1),
-KDS Meta (`kerndatensatz.meta` 2026.0.0), German base profiles
+`sushi-config.yaml`): KDS base module (`kerndatensatz.base` 2027.0.0-ballot.rc1),
+KDS Meta (`kerndatensatz.meta` 2027.0.0-ballot.rc3), German base profiles
 (`de.basisprofil.r4` 1.6.0), ISiK level 6 (`de.gematik.isik` 6.0.0),
 IHE-D terminology (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4`
 2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) plus the HL7
