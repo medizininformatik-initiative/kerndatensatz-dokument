@@ -4,9 +4,6 @@
      menu structure (one page per artifact type).
      German mirror: input/translations/de/pagecontent/extensions.md. -->
 
-
-### Extensions
-
 This page lists the FHIR extensions defined by the **Dokument** module
 (naming convention `MII_EX_<Module>_<Name>`). Extensions carry information the
 base resources and profiles cannot express; the profiles that use them are on

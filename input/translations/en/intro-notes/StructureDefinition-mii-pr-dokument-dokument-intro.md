@@ -12,7 +12,7 @@ This profile describes the metadata of a clinical document. A detailed descripti
 recommendations for using the profile can be found in the
 [module description](index.html).
 
-## Mapping of the dataset to FHIR
+### Mapping of the dataset to FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md gate=B -->
 > **Written during migration — review before release.**
@@ -60,7 +60,7 @@ recommendations for using the profile can be found in the
 | Period of performance of the activity | Period during which the action or procedure described in the document was performed | `DocumentReference.context.period` |
 | Type of facility of the activity | Type of facility in which the action or procedure on the patient took place | `DocumentReference.context.facilityType` |
 
-## Search parameters
+### Search parameters
 
 The following search parameters are relevant for this module, including in combination:
 
@@ -268,7 +268,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "nlp-processing-status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-## Examples
+### Examples
 
 Extensive examples that illustrate the profile and the extension together can be found on the
 extension's page

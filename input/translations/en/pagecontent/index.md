@@ -67,13 +67,13 @@ of the NLP Processing Status extension
 This implementation guide is aimed at:
 
 <div class="ig-highlight ig-highlight-blue">
-<h5>Implementers</h5>
+<p><b>Implementers</b></p>
 <p>Data Integration Centers (DIC), software developers and system architects building FHIR-based solutions.<br/>
 → see <a href="profiles.html">Profiles</a> and <a href="logical-models.html">Logical Models</a>.</p>
 </div>
 
 <div class="ig-highlight ig-highlight-green">
-<h5>Researchers</h5>
+<p><b>Researchers</b></p>
 <p>Scientists using KDS data for medical research.<br/>
 → see <a href="guidance.html">Guidance for Researchers</a>.</p>
 </div>

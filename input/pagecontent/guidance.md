@@ -49,22 +49,19 @@ Ein zentraler Bestandteil für Forschenden ist der Zugang zu Daten und Metadaten
 
 Für den Datentransport wird empfohlen den Dokumentkörper in die Ressource einzubetten. Die Dateien können hier auch zuvor komprimiert werden. Zusätzliche Dateien, die für die Interpretation und Nachnutzung des Dokuments notwendig sind (z.B. TypeSystem Dateien bei semantisch annotierten Dokumenten) können so auch direkt beigefügt werden.
 
-### Allgemeine Umsetzungshinweise
+### Weiterführende Seiten
 
+<!-- Hinweis (repo-intern): "Datensätze und Beschreibungen" teilt sein Ziel mit
+     *Artefakte → Logische Modelle*; keiner der Anker der Artefakt-Übersicht ist
+     als Linkziel nutzbar — siehe docs/page-structure.md in diesem Repository:
+     https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/page-structure.md -->
 * **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente
-  des Moduls, beschrieben als logische Modelle. (Dieser Eintrag teilt sein Ziel
-  mit *Artefakte → Logische Modelle*; keiner der Anker der Artefakt-Übersicht
-  ist als Linkziel nutzbar — siehe
-  [`docs/page-structure.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/page-structure.md) in diesem Repository.)
+  des Moduls, beschrieben als logische Modelle.
 * **[UML-Diagramme](uml-diagrams.html)** — visuelle Darstellung der Datenmodelle
   und ihrer Beziehungen.
-
-### Zielgruppenspezifische Hinweise
-
 * **[Anleitung für Implementierende](implementer-guidance.html)** — technische
   Hinweise für DIZ-Implementierende.
 
----
 Für die KDS-weiten Konformitätsanforderungen siehe die
 [Konformitätsregeln des Meta-Moduls](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
 für die technischen Artefakte siehe [Profile](profiles.html).

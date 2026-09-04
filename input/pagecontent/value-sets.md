@@ -5,9 +5,6 @@
      Der IG-Publisher listet die ValueSets auf den Artefakt-Seiten automatisch;
      hier stehen die MII-Hinweise dazu. -->
 
-
-### ValueSets
-
 Diese Seite beschreibt die ValueSets des Moduls **Dokument**
 (Namenskonvention `MII_VS_<Modul>_<Name>`). Allgemeine Hinweise zur Verwendung
 von Codes: siehe

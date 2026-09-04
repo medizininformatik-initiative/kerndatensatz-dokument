@@ -3,9 +3,6 @@
      input/translations/en/pagecontent/extensions.md (aufgeteilt aus
      der früheren Kombi-Seite profiles-and-extensions.md). -->
 
-
-### Extensions
-
 Diese Seite listet die FHIR-Extensions, die das Modul **Dokument**
 definiert (Namenskonvention `MII_EX_<Modul>_<Name>`). Extensions transportieren
 Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die

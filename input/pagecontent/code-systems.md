@@ -9,9 +9,6 @@
      die render-Direktiven der Simplifier-Seite sind durch Verweise auf die vom
      IG-Publisher erzeugten Artefaktseiten ersetzt. -->
 
-
-### CodeSystems
-
 Diese Seite beschreibt die CodeSystems des Moduls **Dokument**
 (Namenskonvention `MII_CS_<Modul>_<Name>`). Die darauf aufbauenden ValueSets
 beschreibt die Seite [ValueSets](value-sets.html).
@@ -26,9 +23,7 @@ Beschreibung von eigenen ValueSets, Verwendung internationaler Terminologien, Li
 
 ---
 
-#### Definierte CodeSystems
-
-##### Klassifikation von NLP-Verarbeitungsergebnissen
+### Klassifikation von NLP-Verarbeitungsergebnissen
 
 Die Konzepte des CodeSystems zeigt die Artefaktseite
 [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html);
@@ -39,13 +34,13 @@ das zugehörige ValueSet ist
 
 ---
 
-#### Definierte ValueSets
+### Definierte ValueSets
 
 Die nachfolgenden ValueSets werden in diesem Modul selbst definiert; die
 allgemeinen Hinweise zu ValueSets und Expansionen stehen auf der Seite
 [ValueSets](value-sets.html).
 
-##### Dokumententypen
+#### Dokumententypen
 
 Zur Eingrenzung möglicher Codes wurde hinsichtlich der Auswahl folgende Einschränkung vorgenommen:
 
@@ -55,7 +50,7 @@ Das für dieses MII KDS-Modul erstellte ValueSet beinhaltet ausschließlich dies
 
 Siehe [MII VS Dokument SCT Dokument Typ](ValueSet-mii-vs-dokument-sct-dokument-typ.html).
 
-##### Dokumentenklassen
+#### Dokumentenklassen
 
 Zur Eingrenzung möglicher Codes wurde hinsichtlich der Auswahl folgende Einschränkung vorgenommen:
 
@@ -65,7 +60,7 @@ Das für dieses MII KDS-Modul erstellte ValueSet beinhaltet ausschließlich dies
 
 Siehe [MII VS Dokument SCT Dokument Kategorie](ValueSet-mii-vs-dokument-sct-dokument-kategorie.html).
 
-##### Format Codes
+#### Format Codes
 
 Zur Eingrenzung möglicher Codes wurde hinsichtlich der Auswahl folgende Einschränkung vorgenommen:
 
@@ -74,7 +69,7 @@ Zur Eingrenzung möglicher Codes wurde hinsichtlich der Auswahl folgende Einschr
 
 Siehe [MII VS Dokument Format Code](ValueSet-mii-vs-dokument-format-code.html).
 
-##### Einrichtungsarten
+#### Einrichtungsarten
 
 Zur Eingrenzung möglicher Codes wurde hinsichtlich der Auswahl folgende Einschränkung vorgenommen:
 
@@ -87,7 +82,7 @@ Das für dieses MII KDS-Modul erstellte ValueSet beinhaltet ausschließlich dies
 
 Siehe [MII VS Dokument Einrichtungsart](ValueSet-mii-vs-dokument-einrichtungsart.html).
 
-##### Klinische Fachgebiete
+#### Klinische Fachgebiete
 
 Zur Eingrenzung möglicher Codes wurde hinsichtlich der Auswahl folgende Einschränkung vorgenommen:
 
@@ -100,9 +95,9 @@ Siehe [MII VS Dokument Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.html).
 
 ---
 
-#### Verwendete ValueSets
+### Verwendete ValueSets
 
-##### Allgemeine Angaben
+#### Allgemeine Angaben
 
 Die nachfolgenden Terminologien bilden den Kern der fachlichen Dokumentenzuordnung im Modul DOKUMENT:
 
@@ -110,7 +105,7 @@ Die nachfolgenden Terminologien bilden den Kern der fachlichen Dokumentenzuordnu
   * IHE XDS ValueSets (z.B. [TypeCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.typeCode), [ClassCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.classCode), [HealthcareFacilityTypeCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.healthcareFacilityTypeCode), [PracticeSettingCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.PracticeSettingCode))
   * Optional: SNOMED CT zur spezifischeren Zuordnung der klinischen Dokumente oder zugehörigen medizinischen Domäne
 
-##### HL7 Basisprofil R4
+#### HL7 Basisprofil R4
 
 Für die im Basisprofil FHIR R4 deklarierten ValueSets gelten im weiteren folgende Empfehlungen:
 

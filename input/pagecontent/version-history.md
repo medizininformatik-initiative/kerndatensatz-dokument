@@ -7,7 +7,7 @@
      (https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow). -->
 
 
-#### Versionsschema
+### Versionsschema
 
 Das Modul **Dokument** folgt dem KDS-Schema der Kalender-Versionierung
 (CalVer) in einer SemVer-kompatiblen numerischen Form:
@@ -21,14 +21,14 @@ Das Modul **Dokument** folgt dem KDS-Schema der Kalender-Versionierung
 * **`label`** — optionales Vorab- oder Build-Label, z. B. `draft`, `ballot` oder
   `cibuild`.
 
-#### Versionen vergleichen
+### Versionen vergleichen
 
 Stabile Releases lassen sich vergleichen, indem die numerischen Bestandteile als
 SemVer-artiges `<major>.<minor>.<patch>` gelesen werden, mit dem Kalenderjahr
 als Major-Komponente: `2026.1.0` ist neuer als `2026.0.3`. Labels kennzeichnen
 den Vorab- oder Build-Status; zwischen Labels wird keine Reihenfolge abgeleitet.
 
-#### Artefakt-Versionen
+### Artefakt-Versionen
 
 Alle veröffentlichten FHIR-Artefakte im Paket tragen dieselbe Version wie der
 Leitfaden und sein Paket. Ein Artefakt kann daher beim Release eine neue Version
@@ -37,20 +37,16 @@ Metadaten, die Versionsalgorithmus, Versionierungs-Politik, Paketquelle und
 Manifest-Parameter deklarieren, beschreibt die Seite
 [Metadaten-Übersicht](metadata.html).
 
-#### Release-Prozess
+### Release-Prozess
 
 Releases folgen dem
 [Module Release Workflow](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow):
 Die Version wird im Release-Branch angehoben, der Changelog-Eintrag geschrieben,
 die Validierungs-Workflows laufen auf dem Release-Pull-Request, und nach dem
-Merge wird das Release getaggt.
+Merge wird das Release getaggt. Die Änderungen jeder veröffentlichten Version
+verzeichnet die [Änderungshistorie](changes.html).
 
-#### Versionshistorie und Änderungen
-
-* **[Änderungshistorie](changes.html)** — die Änderungen jeder veröffentlichten
-  Version.
-
-#### Versionsvergleich
+### Versionsvergleich
 
 Ab der zweiten **formalen Publikation** veröffentlicht dieser Leitfaden
 zusätzlich einen **maschinell erzeugten Versionsvergleich**. Er ergänzt die

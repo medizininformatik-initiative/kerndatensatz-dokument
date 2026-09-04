@@ -8,11 +8,9 @@
      German mirror: input/translations/de/pagecontent/changes.md — both files
      must say the same thing.
 
-     Maintenance rule: add a new `#### Version <x>` section on top for every
+     Maintenance rule: add a new `### Version <x>` section on top for every
      release, in BOTH languages, as part of the release pull request. Never edit
      a released section afterwards. -->
-
-### Changelog
 
 This page contains a changelog describing the changes between versions.
 
@@ -35,7 +33,7 @@ Leave out the categories with nothing to report. Where a change is driven by an
 issue or a pull request, link it.
 
 <div class="ig-highlight ig-highlight-red">
-<h5>Breaking changes MUST be reported and explained</h5>
+<p><b>Breaking changes MUST be reported and explained</b></p>
 <p>A version section that contains a breaking change is not complete until it
 answers, explicitly and in this changelog:</p>
 <ul>
@@ -76,11 +74,11 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
-#### Version 2027.0.0-ballot.rc1
+### Version 2027.0.0-ballot.rc1
 
 **Date** 2026-08-28
 
-##### Added
+#### Added
 
 * **New dependency ISiK Level 6** (`de.gematik.isik 6.0.0`); updated
   dependencies `de.basisprofil.r4 1.6.0`, `hl7.terminology.r4 7.1.0`;
@@ -88,7 +86,7 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 * Tooling/quality assurance: `advisor.json` added for the validator pipeline,
   quality-control rules updated
 
-##### Changed
+#### Changed
 
 * **NLP pipeline examples revised** (the extension
   `MII_EX_Dokument_NLP_Processing_Status` itself has already been included,
@@ -104,7 +102,7 @@ section, so the prose explanation and the technical diff sit side by side.</p>
   reference the International Edition
   `http://snomed.info/sct/900000000000207008/version/20260701`
 
-##### Fixed
+#### Fixed
 
 * **CodeSystem NLP Processing Status**: definition of the `surrogated` concept
   clarified; the CodeSystem's title corrected ("MII CS Dokument …" instead of
@@ -124,26 +122,26 @@ CapabilityStatement are unchanged in content compared to 2026.0.1.
 
 ---
 
-#### Version 2026.0.1
+### Version 2026.0.1
 
 **Date** 2026-03-11
 
-##### Changed
+#### Changed
 
 * Changes dependencies from MII KDS Fall/Person to MII KDS Basis
 * Updates dependencies and descriptions to MII KDS module version 2026
 
-##### Fixed
+#### Fixed
 
 * Corrects incorrect display name on examples for Einrichtungskontakt
   (facility contact)
 
 ---
 
-#### Version 2026.0.0
+### Version 2026.0.0
 
 **Date** 2025-12-10
 
-##### Added
+#### Added
 
 * Initial release of the MII KDS module Dokument

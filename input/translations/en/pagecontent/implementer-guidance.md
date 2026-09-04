@@ -32,7 +32,7 @@ Technical guidance for DIC implementers on implementing the profiles of the **Do
      the lead sentence, therefore remains uncovered — should it be added
      module-specifically, or should the lead sentence be shortened? -->
 
-## Context
+### Context
 
 Medical documents are essential for comprehensive patient care, for the traceability of diagnoses and treatments, and for compliance with legal and scientific standards. They also play an important role in billing medical services and support efficient resource planning in the health system.
 
@@ -40,7 +40,7 @@ Both the technical and the content-related requirements of documentation in heal
 
 In the context of the MII core datasets, the MII KDS module Dokument introduces a harmonised, national concept that builds on established code systems and value sets and orchestrates an interoperable handling of medical documents.
 
-## Relationship to Other MII KDS Modules
+### Relationship to Other MII KDS Modules
 
 For certain data elements, this MII KDS module builds on existing work from other MII KDS modules in order to achieve harmonisation and increase compatibility. The dependencies on that prior work are described below.
 
@@ -49,7 +49,7 @@ For certain data elements, this MII KDS module builds on existing work from othe
 | [Person (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional. | Yes |
 | [Fall (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type. | No |
 
-## Use by Other MII KDS Modules
+### Use by Other MII KDS Modules
 
 The MII KDS module is based on the [FHIR DocumentReference](https://www.hl7.org/fhir/documentreference.html). FHIR DocumentReferences are already used in other MII KDS modules. We recommend migrating to the MII KDS module specified here.
 
@@ -63,7 +63,7 @@ Should the specified document categories and types not adequately cover the requ
 | [Molgen Befund](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.molgen) | The MII KDS module references a number of document types which are, however, bound to existing standards. | No |
 | [Meta](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta) | The MII KDS module extends numerous profiles with search parameter definitions — including those for the MII KDS module Dokument. | No |
 
-## References
+### Referenced Standards
 
 The MII KDS module Dokument is designed so that instances can be compatible with the following FHIR-based standards at the same time:
 

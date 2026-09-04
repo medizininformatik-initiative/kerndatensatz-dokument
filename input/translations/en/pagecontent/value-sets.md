@@ -6,9 +6,6 @@
      artifact pages automatically; this page carries the MII notes on them.
      German mirror: input/translations/de/pagecontent/value-sets.md. -->
 
-
-### Value Sets
-
 This page describes the ValueSets of the **Dokument** module (naming
 convention `MII_VS_<Module>_<Name>`). For general guidance on using codes, see
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems

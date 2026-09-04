@@ -35,16 +35,16 @@ der Seite [Extensions](extensions.html).
 > logische Modelle).
 {: .ig-highlight .ig-highlight-blue}
 
-## Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative
+### Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative
 
 Bitte die [Seite der Namenskonventionen](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII) im Kerndatensatz Wiki auf aktuellere Versionen prüfen.
 
-### Allgemeines
+#### Allgemeines
 
 * Möglichst eindeutige und prägnante Beschreibung des Inhalts
 * Für CodeSystems und ValueSets: Konformität mit <http://hl7.org/fhir/shareablecodesystem> bzw. <http://hl7.org/fhir/shareablevalueset> wird empfohlen
 
-### Festlegungen zu Modul-Bezeichnungen und Abkürzungen
+#### Festlegungen zu Modul-Bezeichnungen und Abkürzungen
 
 Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 
@@ -84,7 +84,7 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 
 Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt.
 
-### Präfixe Ressourcentypen
+#### Präfixe Ressourcentypen
 
 * PR: StructureDefinition (Profile)
 * EX: StructureDefinition (Extension)
@@ -103,11 +103,11 @@ Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im
 * MSR: Measure
 * EXA: Example
 
-### Sprache
+#### Sprache
 
 Die bevorzugte Sprache für die Beschreibung, den Titel, sowie den Namen einer Conformance-Ressource ist Deutsch. Als Alternative kann Englisch verwendet werden, falls dies von dem jeweiligen Kümmererteam bevorzugt wird. Falls Deutsch als Sprache zur Dokumentation einer Ressource verwendet wird, muss auf den Elementen “description”, “name” und “title” eine Translation-Extension (siehe <http://hl7.org/fhir/extensions/StructureDefinition-translation.html>) vorhanden sein. Der Inhalt der Extension ist im englischsprachigen Implementierungsleitfaden anzuzeigen.
 
-### Element **title**
+#### Element **title**
 
 (eine menschenlesbare Bezeichnung der Ressource)
 
@@ -122,7 +122,7 @@ Die bevorzugte Sprache für die Beschreibung, den Titel, sowie den Namen einer C
 
 Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien referenziert, sind diese mit Komma unterteilt aufzuführen.
 
-### Element **name**
+#### Element **name**
 
 (eine maschinell verarbeitbare Bezeichnung der Ressource)
 
@@ -138,7 +138,7 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
      als echte Fußnote ausgezeichnet oder ersatzlos gestrichen werden? Nicht
      geraten — bitte fachlich entscheiden. -->
 
-### Element **id**
+#### Element **id**
 
 (logischer Identifier der Ressource)
 
@@ -146,7 +146,7 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
 * Begrenzung auf 64 Zeichen: Bei Bedarf abkürzen
 * Beispiel: `mii-vs-mikrobio-mikrobiologische-erreger-snomedct`
 
-### Element **url**
+#### Element **url**
 
 (kanonische URL der Ressource)
 
@@ -163,7 +163,7 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
      etablierte URL bewusst beibehalten? Nicht geraten — bitte fachlich
      entscheiden. -->
 
-### Referenzen
+#### Referenzen
 
 * HL7 International: Guide to Designing (FHIR) Resources: <https://confluence.hl7.org/pages/viewpage.action?pageId=35718826>
 * HL7 International: Naming Rules & Guidelines: [https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826%22%20l%20%22GuidetoDesigningResources-NamingRules&Guidelines)

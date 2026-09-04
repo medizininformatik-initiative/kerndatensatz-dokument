@@ -70,13 +70,13 @@ ausdrücken.
 Dieser Implementierungsleitfaden richtet sich an:
 
 <div class="ig-highlight ig-highlight-blue">
-<h5>Implementierende</h5>
+<p><b>Implementierende</b></p>
 <p>Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.<br/>
 → siehe <a href="profiles.html">Profile</a> und <a href="logical-models.html">Logische Modelle</a>.</p>
 </div>
 
 <div class="ig-highlight ig-highlight-green">
-<h5>Forschende</h5>
+<p><b>Forschende</b></p>
 <p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br/>
 → siehe <a href="guidance.html">Anleitung für Forschende</a>.</p>
 </div>

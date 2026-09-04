@@ -7,11 +7,9 @@
      MII-IG-Modul--Modul/Release-notes.page.md), die "Keep a Changelog" vorgibt.
 
      Pflegeregel: Für jedes Release oben einen neuen Abschnitt
-     `#### Version <x>` ergänzen, in BEIDEN Sprachen, als Teil des
+     `### Version <x>` ergänzen, in BEIDEN Sprachen, als Teil des
      Release-Pull-Requests. Einen veröffentlichten Abschnitt danach nicht mehr
      ändern. -->
-
-### Änderungshistorie
 
 Diese Seite enthält einen Changelog mit Beschreibung der Änderungen zwischen
 Versionen.
@@ -38,7 +36,7 @@ Kategorien ohne Inhalt werden weggelassen. Geht eine Änderung auf ein Issue ode
 einen Pull-Request zurück, wird darauf verlinkt.
 
 <div class="ig-highlight ig-highlight-red">
-<h5>Breaking Changes MÜSSEN berichtet und erläutert werden</h5>
+<p><b>Breaking Changes MÜSSEN berichtet und erläutert werden</b></p>
 <p>Ein Versionsabschnitt mit einer Breaking Change ist erst vollständig, wenn
 er ausdrücklich und in diesem Changelog beantwortet:</p>
 <ul>
@@ -84,11 +82,11 @@ werden können.</p>
 
 ---
 
-#### Version 2027.0.0-ballot.rc1
+### Version 2027.0.0-ballot.rc1
 
 **Datum** 28.08.2026
 
-##### Hinzugefügt
+#### Hinzugefügt
 
 * **Neue Abhängigkeit ISiK Stufe 6** (`de.gematik.isik 6.0.0`); aktualisierte
   Abhängigkeiten `de.basisprofil.r4 1.6.0`, `hl7.terminology.r4 7.1.0`;
@@ -96,7 +94,7 @@ werden können.</p>
 * Werkzeug-/Qualitätssicherung: `advisor.json` für die Validator-Pipeline
   ergänzt, Quality-Control-Regeln aktualisiert
 
-##### Geändert
+#### Geändert
 
 * **NLP-Pipeline-Beispiele überarbeitet** (die Extension
   `MII_EX_Dokument_NLP_Processing_Status` selbst ist bereits seit 2026.0.1
@@ -112,7 +110,7 @@ werden können.</p>
   referenzieren die International Edition
   `http://snomed.info/sct/900000000000207008/version/20260701`
 
-##### Behoben
+#### Behoben
 
 * **CodeSystem NLP Processing Status**: Definition des Konzepts `surrogated`
   präzisiert; Titel des CodeSystems korrigiert („MII CS Dokument …" statt
@@ -132,25 +130,25 @@ gegenüber 2026.0.1 inhaltlich unverändert.
 
 ---
 
-#### Version 2026.0.1
+### Version 2026.0.1
 
 **Datum** 11.03.2026
 
-##### Geändert
+#### Geändert
 
 * Ändert Abhängigkeiten von MII KDS Fall/Person zu MII KDS Basis
 * Update Abhängigkeiten und Beschreibungen auf MII KDS Modulversion 2026
 
-##### Behoben
+#### Behoben
 
 * Korrigiert falschen Display-Name bei Beispielen für Einrichtungskontakt
 
 ---
 
-#### Version 2026.0.0
+### Version 2026.0.0
 
 **Datum** 10.12.2025
 
-##### Hinzugefügt
+#### Hinzugefügt
 
 * Initiales Release des MII KDS-Moduls Dokument

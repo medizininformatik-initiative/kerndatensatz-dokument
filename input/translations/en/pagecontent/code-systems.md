@@ -9,9 +9,6 @@
      the IG Publisher generates.
      German mirror: input/translations/de/pagecontent/code-systems.md. -->
 
-
-### Code Systems
-
 This page describes the CodeSystems of the **Dokument** module (naming
 convention `MII_CS_<Module>_<Name>`). The ValueSets built on them are described
 on the [Value Sets](value-sets.html) page.
@@ -27,9 +24,7 @@ Description of the module's own ValueSets, use of international terminologies, l
 
 ---
 
-#### Defined CodeSystems
-
-##### Classification of NLP processing results
+### Classification of NLP processing results
 
 The concepts of the CodeSystem are shown on the artifact page
 [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html);
@@ -40,12 +35,12 @@ the corresponding ValueSet is
 
 ---
 
-#### Defined ValueSets
+### Defined ValueSets
 
 The following ValueSets are defined in this module itself; the general notes on
 ValueSets and expansions are on the [Value Sets](value-sets.html) page.
 
-##### Document types
+#### Document types
 
 To narrow down the possible codes, the following restriction was made with regard to the selection:
 
@@ -55,7 +50,7 @@ The ValueSet created for this MII KDS module contains exclusively these codes.
 
 See [MII VS Dokument SCT Dokument Typ](ValueSet-mii-vs-dokument-sct-dokument-typ.html).
 
-##### Document classes
+#### Document classes
 
 To narrow down the possible codes, the following restriction was made with regard to the selection:
 
@@ -65,7 +60,7 @@ The ValueSet created for this MII KDS module contains exclusively these codes.
 
 See [MII VS Dokument SCT Dokument Kategorie](ValueSet-mii-vs-dokument-sct-dokument-kategorie.html).
 
-##### Format codes
+#### Format codes
 
 To narrow down the possible codes, the following restriction was made with regard to the selection:
 
@@ -74,7 +69,7 @@ To narrow down the possible codes, the following restriction was made with regar
 
 See [MII VS Dokument Format Code](ValueSet-mii-vs-dokument-format-code.html).
 
-##### Facility types
+#### Facility types
 
 To narrow down the possible codes, the following restriction was made with regard to the selection:
 
@@ -87,7 +82,7 @@ The ValueSet created for this MII KDS module contains exclusively these codes.
 
 See [MII VS Dokument Einrichtungsart](ValueSet-mii-vs-dokument-einrichtungsart.html).
 
-##### Clinical specialties
+#### Clinical specialties
 
 To narrow down the possible codes, the following restriction was made with regard to the selection:
 
@@ -100,9 +95,9 @@ See [MII VS Dokument Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.html).
 
 ---
 
-#### Used ValueSets
+### Used ValueSets
 
-##### General information
+#### General information
 
 The following terminologies form the core of the clinical document classification in the DOKUMENT module:
 
@@ -110,7 +105,7 @@ The following terminologies form the core of the clinical document classificatio
   * IHE XDS ValueSets (e.g. [TypeCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.typeCode), [ClassCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.classCode), [HealthcareFacilityTypeCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.healthcareFacilityTypeCode), [PracticeSettingCode](https://wiki.hl7.de/index.php?title=Ihevs:DocumentEntry.PracticeSettingCode))
   * Optional: SNOMED CT for a more specific classification of the clinical documents or of the associated medical domain
 
-##### HL7 base profile R4
+#### HL7 base profile R4
 
 For the ValueSets declared in the FHIR R4 base profile, the following recommendations apply in addition:
 

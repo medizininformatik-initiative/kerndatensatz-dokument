@@ -33,7 +33,7 @@ Technische Hinweise für DIZ-Implementierende zur Umsetzung der Profile des Modu
      modulspezifisch ergaenzt werden, oder soll der Einleitungssatz gekuerzt
      werden? -->
 
-## Kontext
+### Kontext
 
 Medizinische Dokumente sind entscheidend für eine umfassende Patientenversorgung, die Nachvollziehbarkeit von Diagnosen und Behandlungen sowie die Einhaltung rechtlicher und wissenschaftlicher Standards. Sie spielen auch eine wichtige Rolle bei der Abrechnung medizinischer Leistungen und unterstützen eine effiziente Ressourcenplanung im Gesundheitssystem.
 
@@ -41,7 +41,7 @@ Sowohl die technischen als auch inhaltlichen Anforderungen der Dokumentation im 
 
 Im Kontext der MII-Kerndatensätze wird mit dem MII KDS-Modul Dokument ein abgestimmtes, nationales Konzept eingeführt, welches sich an gängigen CodeSystemen und ValueSets orientiert und einen interoperablen Umgang mit medizinischen Dokumenten orchestriert.
 
-## Beziehung zu anderen MII KDS-Modulen
+### Beziehung zu anderen MII KDS-Modulen
 
 Dieses MII KDS-Modul greift bei bestimmten Datenelementen auf existierende Vorarbeiten aus anderen MII KDS-Modulen zurück, um eine Harmonisierung zu erzielen und die Kompatibilität zu erhöhen. Im Nachfolgenden werden die Abhängigkeiten zu diesen Vorarbeiten beschrieben.
 
@@ -50,7 +50,7 @@ Dieses MII KDS-Modul greift bei bestimmten Datenelementen auf existierende Vorar
 | [Person (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet. | Ja |
 | [Fall (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die am besten geeignete Kontaktebene des MII KDS-Moduls Fall verwiesen werden. Diese Ebene ist typisch vom Dokumenttyp abhängig. | Nein |
 
-## Nutzung durch andere MII KDS-Module
+### Nutzung durch andere MII KDS-Module
 
 Die Grundlage des MII KDS-Moduls bildet die [FHIR DocumentReference](https://www.hl7.org/fhir/documentreference.html). FHIR DocumentReferences werden bereits in anderen MII KDS-Modulen verwendet. Wir empfehlen die Umstellung auf das hier spezifizierte MII KDS-Modul.
 
@@ -64,7 +64,7 @@ Für den Fall, dass die spezifizierten Dokumentkategorien und -typen die Anforde
 | [Molgen Befund](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.molgen) | Das MII KDS-Modul referenziert eine Reihe von Dokumenttypen, die jedoch an existierende Standards gebunden sind. | Nein |
 | [Meta](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta) | Das MII KDS-Modul erweitert zahlreiche Profile um Definitionen von Suchparametern - so auch zum MII KDS-Modul Dokument. | Nein |
 
-## Referenzen
+### Referenzierte Standards
 
 Das MII KDS-Modul Dokument ist darauf ausgelegt, dass Instanzen folgender FHIR-basierten Standards gleichzeitig kompatibel sein können:
 

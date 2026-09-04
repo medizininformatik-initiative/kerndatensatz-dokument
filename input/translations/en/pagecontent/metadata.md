@@ -11,9 +11,6 @@
      sushi-config.yaml gains or loses a CRMI profile, an artifact-* extension or
      a manifest parameter, update the tables below in BOTH languages. -->
 
-
-### Metadata Overview
-
 This page documents the computable metadata of the **Dokument** module.
 The metadata exists so that the artifacts of this guide can be discovered,
 evaluated, validated, cited, governed and reused — by people and by software
@@ -31,7 +28,7 @@ The approach is preliminary: it records the CRMI-based metadata currently used
 and may be refined as CRMI matures, as the KDS publication process evolves, and
 as FAIR assessment of FHIR implementation guides becomes more concrete.
 
-#### Scope
+### Scope
 
 CRMI metadata describes the FHIR specification artifacts themselves. Most of it
 is descriptive and does **not** change the clinical or technical conformance
@@ -45,7 +42,7 @@ The metadata can be inspected in the generated FHIR resources, in particular in
 the JSON and XML representations linked from each artifact page and in the
 [downloadable package](downloads.html).
 
-#### CRMI artifact-management coverage
+### CRMI artifact-management coverage
 
 CRMI organises artifact management into lifecycle phases and supporting
 concerns. This guide does not implement every CRMI capability; it applies the
@@ -66,7 +63,7 @@ operations such as `$package` or `$data-requirements`, no publication through a
 Knowledge Artifact Repository, no syndication feeds and no artifact signing.
 These may be considered in future release-workflow work.
 
-#### CRMI metadata declared by this guide
+### CRMI metadata declared by this guide
 
 The following CRMI-related metadata is set in
 [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml)
@@ -103,7 +100,7 @@ Not enabled in this scaffold, but prepared as commented blocks in
 > [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
 {: .ig-highlight .ig-highlight-grey}
 
-##### CodeSystem supplements
+#### CodeSystem supplements
 
 Where a module publishes CodeSystem supplements, note that the CRMI
 *ShareableCodeSystem* profile requires `CodeSystem.caseSensitive`, while FHIR
@@ -113,7 +110,7 @@ that could contradict the supplemented code system.
 therefore claims only the *publishable* CRMI profile on supplements and omits
 the shareable one.
 
-#### Versioning and package provenance
+### Versioning and package provenance
 
 The human-readable version scheme is described on the
 [Versioning](version-history.html) page. This section describes how that policy
@@ -140,7 +137,7 @@ source and effective period let readers and tooling decide whether an artifact
 belongs to the expected release and whether its metadata is consistent with the
 version being implemented.
 
-#### Manifest and reproducibility
+### Manifest and reproducibility
 
 Canonical references are pinned in the built package (`pin-canonicals: pin-all`
 in `sushi-config.yaml`), which is a CRMI expectation and makes the output
@@ -159,7 +156,7 @@ package pinning.
 > or state explicitly that this module does not pin expansion parameters.]
 {: .ig-highlight .ig-highlight-grey}
 
-#### Relationship to FAIR
+### Relationship to FAIR
 
 The [FAIR principles](https://www.go-fair.org/fair-principles/) describe goals
 for making digital objects Findable, Accessible, Interoperable and Reusable.
@@ -212,7 +209,7 @@ asserted to be a persistently identified FAIR dataset.
 > *Useful* indicators — `kerndatensatz-basis` carries the full table.]
 {: .ig-highlight .ig-highlight-grey}
 
-#### Practical use
+### Practical use
 
 Implementers can use this metadata to:
 

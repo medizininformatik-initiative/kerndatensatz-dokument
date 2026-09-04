@@ -1,16 +1,13 @@
 <!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
-### Logical Models
 
 The logical data models of the **Dokument** module describe the domain dataset independently of its concrete FHIR representation.
-
-#### Dataset description
 
 The officially adopted version of the information model is located on [ART DECOR](https://art-decor.org/ad/#/mide-/datasets/dataset/2.16.840.1.113883.3.1937.777.24.1.1/2018-06-05T12:44:12/concept/2.16.840.1.113883.3.1937.777.24.2.3740/2024-06-07T10:17:01). To unify the representation, the information model was additionally mapped as a FHIR Logical Model:
 
 [MII LM Dokument](StructureDefinition-mii-lm-dokument.html)
 
-#### Element dictionary
+### Element dictionary
 
 <!-- DERIVED:bridge source=MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md gate=B -->
 > **Written during migration — review before release.**
@@ -21,7 +18,7 @@ The officially adopted version of the information model is located on [ART DECOR
 
 *Note that the Logical Model targets solely the representation of the data elements and their descriptions. The data types and cardinalities used are not to be regarded as mandatory. These are ultimately defined by the FHIR profiles. For every element within the Logical Model there is a 1:1 mapping onto an element of a concrete FHIR resource.*
 
-#### Mapping to the FHIR resource
+### Mapping to the FHIR resource
 
 <!-- DERIVED:bridge source=MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md gate=B -->
 > **Written during migration — review before release.**

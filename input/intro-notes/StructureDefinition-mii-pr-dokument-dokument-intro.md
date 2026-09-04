@@ -12,7 +12,7 @@ Dieses Profil beschreibt die Metadaten zu einem klinischen Dokument. Eine ausfü
 Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der
 [Beschreibung des Moduls](index.html).
 
-## Mapping Datensatz zu FHIR
+### Mapping Datensatz zu FHIR
 
 <!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md gate=B -->
 > **Bei der Migration verfasst — vor dem Release prüfen.**
@@ -57,7 +57,7 @@ Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der
 | Durchführungszeitraum zum Vorgang | Zeitraum, in dem die in dem Dokument beschriebene Handlung oder Prozedur durchgeführt wurde | `DocumentReference.context.period` |
 | Art der Einrichtung zum Vorgang | Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte | `DocumentReference.context.facilityType` |
 
-## Suchparameter
+### Suchparameter
 
 Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
@@ -265,7 +265,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "nlp-processing-status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-## Beispiele
+### Beispiele
 
 Umfangreiche Beispiele, die das Profil und die Erweiterung gemeinsam veranschaulichen, sind auf
 der Seite der Erweiterung zu finden

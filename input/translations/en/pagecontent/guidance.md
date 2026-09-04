@@ -53,22 +53,19 @@ A central component for researchers is access to data and metadata of clinical d
 
 For data transport, it is recommended to embed the document body in the resource. Files can also be compressed beforehand. Additional files needed for interpreting and reusing the document (e.g. TypeSystem files for semantically annotated documents) can thus also be attached directly.
 
-### General Implementation Guidance
+### Further Reading
 
+<!-- Note (repo-internal): "Datasets and Descriptions" shares its target with
+     *Artifacts → Logical Models*; neither Artifacts-Summary anchor is usable as
+     a link target — see docs/page-structure.md in this repository:
+     https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/page-structure.md -->
 * **[Datasets and Descriptions](logical-models.html)** — the module's data
-  elements, described as logical models. (This entry shares its target with
-  *Artifacts → Logical Models*; neither Artifacts-Summary anchor is usable as
-  a link target — see
-  [`docs/page-structure.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/page-structure.md) in this repository.)
+  elements, described as logical models.
 * **[UML Diagrams](uml-diagrams.html)** — visual representation of the data
   models and their relationships.
-
-### Audience-Specific Guidance
-
 * **[Guidance for Implementers](implementer-guidance.html)** — technical
   guidance for DIC implementers.
 
----
 For the KDS-wide conformance requirements see the
 [Conformance rules of the Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
 for the technical artifacts see [Profiles](profiles.html).
