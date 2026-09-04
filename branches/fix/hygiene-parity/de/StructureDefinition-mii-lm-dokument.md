@@ -77,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-dokum
   "name" : "MII_LM_Dokument",
   "title" : "MII LM Dokument",
   "status" : "active",
-  "date" : "2026-09-04T14:56:18+00:00",
+  "date" : "2026-09-04T15:01:51+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
