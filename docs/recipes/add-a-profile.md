@@ -7,8 +7,8 @@
 
 ## Steps
 
-1. Look at the shipped example `input/fsh/profiles/example-patient.fsh` and its
-   instance `input/fsh/instances/example-patient-instance.fsh` — copy their shape.
+1. Look at the shipped example `input/fsh/profiles/mii-pr-dokument-dokument.fsh` and its
+   instance `input/fsh/examples/alzheimer/example-patient-instance.fsh` — copy their shape.
 2. Create your profile file under `input/fsh/profiles/`. Name the **artifact**
    per the MII naming conventions (meta wiki, *Namenskonventionen für
    FHIR-Ressourcen in der MII*). For the **file** name this scaffold follows
@@ -25,7 +25,7 @@
    Description: "…"
    // Copy the shared MII metadata block (insert Translation, PR_CS_VS_Version,
    // Publisher, the licence and the CRMI rules) verbatim from
-   // input/fsh/profiles/example-patient.fsh — every MII conformance resource
+   // input/fsh/profiles/mii-pr-dokument-dokument.fsh — every MII conformance resource
    // carries it. See input/fsh/rulesets/README.md.
    * name 1..* MS
    * birthDate 1..1 MS

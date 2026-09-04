@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung der Standardsprachseite input/pagecontent/downloads.md
-     — beide Dateien müssen dasselbe aussagen. Quelle: kerndatensatz-basis
+<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
+     input/translations/en/pagecontent/downloads.md — beide Dateien müssen dasselbe aussagen. Quelle: kerndatensatz-basis
      input/pagecontent/downloads.md (Branch main).
 
      Die `../<datei>`-Links unten zeigen auf die Artefakte, die der IG-Publisher

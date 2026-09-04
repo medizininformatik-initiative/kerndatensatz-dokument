@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
-import { evaluate, readTopLevel, readDependencies, readIgIniTemplate, scanOptionalPages } from "./convention-check.mjs";
+import { evaluate, readTopLevel, readDependencies, readIgIniTemplate, readTranslationLangs, scanOptionalPages } from "./convention-check.mjs";
 
 // A parameterized scaffold sushi-config, as this repo ships it.
 const SCAFFOLD = `id: mii-ig-{{MODULE_SLUG}}
@@ -208,7 +208,7 @@ test("M8 — the demonstration page blocks a release, but not development", () =
   const msg = rel.findings.find((f) => f.id === "M8").message;
   for (const f of [
     "input/pagecontent/rendering-artifacts.md",
-    "input/translations/de/pagecontent/rendering-artifacts.md",
+    "input/translations/<lang>/pagecontent/rendering-artifacts.md",
     "sushi-config.yaml",
     "input/includes/menu.xml",
     "input/translations/de/includes/menu.xml",
@@ -349,4 +349,24 @@ test("scanOptionalPages pairs the languages of this repository's scaffold", () =
       assert.ok(names.includes(p), `${p} should be scanned as optional`);
     }
   }
+});
+
+test("M12: a root package.json drifting from sushi-config.yaml fails", () => {
+  const drift = { version: "2026.0.1", dependencies: { "de.basisprofil.r4": "1.5.3" } };
+  const { ok, findings } = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, modulePackageJson: drift, release: false });
+  assert.equal(ok, false);
+  assert.ok(ids(findings, "fail").includes("M12 package.json parity"));
+});
+
+test("M12: a root package.json in parity passes", () => {
+  const deps = Object.fromEntries(readDependencies(CONCRETE).map((d) => [d.name, d.version]));
+  const same = { version: readTopLevel(CONCRETE, "version"), dependencies: deps };
+  const { findings } = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, modulePackageJson: same, release: false });
+  assert.ok(!ids(findings, "fail").includes("M12 package.json parity"));
+});
+
+test("readTranslationLangs reads i18n-lang (DE-first modules translate into en)", () => {
+  const de = "parameters:\n  i18n-default-lang: de\n  i18n-lang:\n    - en\n  translation-sources:\n    - input/translations/en\n";
+  assert.deepEqual(readTranslationLangs(de), ["en"]);
+  assert.deepEqual(readTranslationLangs("parameters:\n  excludexml: false\n"), []);
 });

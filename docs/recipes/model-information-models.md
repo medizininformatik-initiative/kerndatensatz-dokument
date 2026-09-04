@@ -20,7 +20,7 @@ and sign off, the profiles are what implementers build against.
 
 ## Steps
 
-1. Put logical models in `input/fsh/logicals/`, named per the MII convention
+1. Put logical models in `input/fsh/logical-model/`, named per the MII convention
    (`MII_LM_<Module>`):
 
    ```fsh
@@ -57,6 +57,6 @@ menu link into the Artifacts Summary), and profiles are traceable to the model.
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |
-| The logical model does not appear | Wrong folder, or missing `Logical:` keyword | Put it in `input/fsh/logicals/` and check the FSH keyword |
+| The logical model does not appear | Wrong folder, or missing `Logical:` keyword | Put it in `input/fsh/logical-model/` and check the FSH keyword |
 | Model and profiles drift apart | They are maintained separately with no cross-links | State the mapping on the logical-models page and review both together at release |
 | Reviewers cannot follow the model | Only the generated table exists | Write the domain description into the model's narrative (`Description` / intro page) |

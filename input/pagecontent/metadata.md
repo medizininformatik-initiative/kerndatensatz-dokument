@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung der Standardsprachseite input/pagecontent/metadata.md
-     — beide Dateien müssen dasselbe aussagen. Quelle: kerndatensatz-basis
+<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
+     input/translations/en/pagecontent/metadata.md — beide Dateien müssen dasselbe aussagen. Quelle: kerndatensatz-basis
      input/pagecontent/metadata.md (Branch main), reduziert auf das, was dieses
      Gerüst in sushi-config.yaml tatsächlich deklariert.
 

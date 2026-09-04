@@ -22,19 +22,6 @@ updates:
       actions:
         patterns: ["*"]
 
-  # npm — the publication scripts (scripts/*.mjs) are dependency-free today,
-  # but a root package.json may land with them. Until a manifest exists,
-  # Dependabot logs a non-fatal "no manifest found" error for this entry and
-  # continues with the other entries — safe to ship ahead of the file.
-  # Do NOT point this at a FHIR package manifest (e.g. a vendored
-  # ig-template/package/package.json): its dependencies are FHIR packages
-  # that do not exist on npmjs — Dependabot would misread them.
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: weekly
-      day: monday
-    target-branch: dev
 
   # Dev container (.devcontainer/devcontainer.json). It is image-only — no
   # Dockerfile — so the `docker` ecosystem (which reads Dockerfiles) would

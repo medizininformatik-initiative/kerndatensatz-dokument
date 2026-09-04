@@ -73,6 +73,15 @@ export function readDependencies(yaml) {
   return out;
 }
 
+
+/** Read the `i18n-lang:` list (the TRANSLATION languages) from sushi-config.yaml; [] when absent. */
+export function readTranslationLangs(yaml) {
+  if (!yaml) return [];
+  const m = yaml.match(/^\s+i18n-lang:\s*\n((?:\s+-\s*[A-Za-z-]+\s*(?:#.*)?\n)+)/m);
+  if (!m) return [];
+  return [...m[1].matchAll(/-\s*([A-Za-z-]+)/g)].map((x) => x[1]);
+}
+
 /** Read `template = ...` from ig.ini. */
 export function readIgIniTemplate(igIni) {
   if (!igIni) return null;
@@ -120,7 +129,7 @@ function checkPrefixed(value, prefix, charClass) {
  *        (null = the scan did not run, e.g. in unit tests without a tree)
  * @returns {{ findings: Array, ok: boolean }}
  */
-export function evaluate({ sushiConfig = null, igIni = null, packageJson = null, release = false, demoPagePresent = false, optionalPages = null, duplicateHeadings = null, illustrativeExamples = null } = {}) {
+export function evaluate({ sushiConfig = null, igIni = null, packageJson = null, modulePackageJson = null, release = false, demoPagePresent = false, optionalPages = null, duplicateHeadings = null, illustrativeExamples = null } = {}) {
   const findings = [];
   const add = (id, applies, status, observed, message) =>
     findings.push({ id, applies, status, observed, message });
@@ -232,10 +241,10 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
       release
         ? "the demonstration page is still present on a release branch — remove all of: " +
           "input/pagecontent/rendering-artifacts.md, " +
-          "input/translations/de/pagecontent/rendering-artifacts.md, " +
+          "input/translations/<lang>/pagecontent/rendering-artifacts.md, " +
           "the rendering-artifacts.md entry in sushi-config.yaml pages:, " +
           "the menu entry in input/includes/menu.xml and " +
-          "input/translations/de/includes/menu.xml, " +
+          "input/translations/<lang>/includes/menu.xml, " +
           "the demo/ directory (its Liquid template), and the generator " +
           "scripts/gen-rendering-demo.py with its demo-en.md, demo-de.md and " +
           "rendering-demo-codes.json inputs"
@@ -268,7 +277,7 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
         release
           ? "optional pages still carry their OPTIONAL-PAGE marker on a release branch — decide each one: " +
             "KEEP it (delete the banner + marker comment in input/pagecontent/<page> AND " +
-            "input/translations/de/pagecontent/<page>) or REMOVE it (follow the per-entry procedure in " +
+            "input/translations/<lang>/pagecontent/<page>) or REMOVE it (follow the per-entry procedure in " +
             "docs/optional-pages.md: delete both page files, the menu entry in both menu.xml files, " +
             "the sushi-config.yaml pages: entry and the page's unit in the IG-level .po catalogue)"
           : "optional pages awaiting a keep/remove decision — fine in development; decide each before a release (docs/optional-pages.md)");
@@ -306,7 +315,7 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
         release
           ? "pages still carry a scaffold ILLUSTRATIVE-EXAMPLE block on a release branch — delete the " +
             "example box and its marker comment in input/pagecontent/<page> AND " +
-            "input/translations/de/pagecontent/<page> (write the module's own content or adopt the " +
+            "input/translations/<lang>/pagecontent/<page> (write the module's own content or adopt the " +
             "documented default text)"
           : "scaffold illustrative examples still present — fine in development; remove each before a release");
     } else if (asymmetric.length === 0) {
@@ -315,6 +324,27 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
   }
 
   // ── Section 1b — template PACKAGE manifest (only when present) ──
+
+  // M12 — a root package.json (the FHIR package manifest the MII reusable
+  // Java validation reads) must not drift from sushi-config.yaml: same
+  // version, same dependency map. Measured drift once shipped within days of
+  // a migration (base 2026.0.0 vs 2026.0.1, two dependencies missing).
+  if (sushiConfig !== null && modulePackageJson !== null) {
+    const diffs = [];
+    const sv = readTopLevel(sushiConfig, "version");
+    if (sv && modulePackageJson.version !== sv) diffs.push(`version ${modulePackageJson.version} != ${sv}`);
+    const pd = modulePackageJson.dependencies || {};
+    const sd = Object.fromEntries(readDependencies(sushiConfig).map((d) => [d.name, d.version]));
+    for (const [n, v] of Object.entries(sd)) {
+      if (!(n in pd)) diffs.push(`${n} missing in package.json`);
+      else if (pd[n] !== v) diffs.push(`${n} ${pd[n]} != ${v}`);
+    }
+    for (const n of Object.keys(pd)) if (!(n in sd)) diffs.push(`${n} only in package.json`);
+    add("M12 package.json parity", "module", diffs.length ? "fail" : "pass",
+      diffs.length ? diffs.join("; ") : "version + dependencies match sushi-config.yaml",
+      "package.json (root FHIR manifest) must carry the same version and dependency map as sushi-config.yaml");
+  }
+
   if (packageJson !== null) {
     const t1 = packageJson.name === "de.medizininformatikinitiative.template";
     add("T1 package name", "template", t1 ? "pass" : "fail", packageJson.name || null,
@@ -356,9 +386,14 @@ function readIfExists(path) {
 /** Scan the two pagecontent trees for OPTIONAL-PAGE markers and pair the
  * languages per page name. Exported for the unit test. */
 export function scanOptionalPages(root) {
+  // Keys keep their historical names (en = default-language tree, de = the
+  // translation tree) so the asymmetry logic in evaluate() is unchanged; the
+  // translation DIRECTORY comes from sushi-config `i18n-lang:` (a DE-first
+  // module translates into en, the template default into de).
+  const tlang = readTranslationLangs(readIfExists(join(root, "sushi-config.yaml")) || "")[0] || "de";
   const dirs = {
     en: join(root, "input", "pagecontent"),
-    de: join(root, "input", "translations", "de", "pagecontent"),
+    de: join(root, "input", "translations", tlang, "pagecontent"),
   };
   const state = {}; // page name → { en, de }
   for (const [lang, dir] of Object.entries(dirs)) {
@@ -380,9 +415,14 @@ export function scanOptionalPages(root) {
 
 // Same shape as scanOptionalPages, for the ILLUSTRATIVE-EXAMPLE marker (M11).
 export function scanIllustrativeExamples(root) {
+  // Keys keep their historical names (en = default-language tree, de = the
+  // translation tree) so the asymmetry logic in evaluate() is unchanged; the
+  // translation DIRECTORY comes from sushi-config `i18n-lang:` (a DE-first
+  // module translates into en, the template default into de).
+  const tlang = readTranslationLangs(readIfExists(join(root, "sushi-config.yaml")) || "")[0] || "de";
   const dirs = {
     en: join(root, "input", "pagecontent"),
-    de: join(root, "input", "translations", "de", "pagecontent"),
+    de: join(root, "input", "translations", tlang, "pagecontent"),
   };
   const state = {};
   for (const [lang, dir] of Object.entries(dirs)) {
@@ -419,23 +459,23 @@ function scanDuplicateHeadings(root) {
     m = /^\s+title:\s*(.+)$/.exec(line);
     if (inPages && m && cur) titlesEn[cur] = m[1].trim().replace(/^["']|["']$/g, "");
   }
-  const titlesDe = {};
-  try {
-    const po = readdirSync(join(root, "input", "translations", "de"))
-      .find((f) => /^ImplementationGuide-.*\.po$/.test(f));
-    if (po) {
-      const raw = readFileSync(join(root, "input", "translations", "de", po), "utf8");
-      for (const m of raw.matchAll(/msgid "([^"]+)"\nmsgstr "([^"]+)"/g)) {
-        for (const [page, en] of Object.entries(titlesEn)) if (en === m[1]) titlesDe[page] = m[2];
+  // Translation languages come from sushi-config `i18n-lang:` (DE-first modules
+  // translate INTO en; template-default modules into de) — never hardcoded.
+  const dirs = [["input/pagecontent", titlesEn], ["input/intro-notes", null]];
+  for (const lang of readTranslationLangs(sushi)) {
+    const titlesLang = {};
+    try {
+      const po = readdirSync(join(root, "input", "translations", lang))
+        .find((f) => /^ImplementationGuide-.*\.po$/.test(f));
+      if (po) {
+        const raw = readFileSync(join(root, "input", "translations", lang, po), "utf8");
+        for (const m of raw.matchAll(/msgid "([^"]+)"\nmsgstr "([^"]+)"/g)) {
+          for (const [page, en] of Object.entries(titlesEn)) if (en === m[1]) titlesLang[page] = m[2];
+        }
       }
-    }
-  } catch { /* no de catalogue: de pages checked for parent-duplicates only */ }
-  const dirs = [
-    ["input/pagecontent", titlesEn],
-    ["input/translations/de/pagecontent", titlesDe],
-    ["input/intro-notes", null],
-    ["input/translations/de/intro-notes", null],
-  ];
+    } catch { /* no catalogue for this language: pages checked for parent-duplicates only */ }
+    dirs.push([`input/translations/${lang}/pagecontent`, titlesLang], [`input/translations/${lang}/intro-notes`, null]);
+  }
   const problems = [];
   for (const [dir, titles] of dirs) {
     let files = [];
@@ -469,6 +509,8 @@ function main() {
   const igIni = readIfExists(join(args.root, "ig.ini"));
   const packageJsonRaw = readIfExists(join(args.root, "package", "package.json"));
   const packageJson = packageJsonRaw ? JSON.parse(packageJsonRaw) : null;
+  const modulePackageJsonRaw = readIfExists(join(args.root, "package.json"));
+  const modulePackageJson = modulePackageJsonRaw ? JSON.parse(modulePackageJsonRaw) : null;
   const demoPagePresent = existsSync(
     join(args.root, "input", "pagecontent", "rendering-artifacts.md"),
   );
@@ -477,7 +519,7 @@ function main() {
   const illustrativeExamples = scanIllustrativeExamples(args.root);
 
   const { findings, ok } = evaluate({
-    sushiConfig, igIni, packageJson, release: args.release, demoPagePresent, optionalPages, duplicateHeadings, illustrativeExamples,
+    sushiConfig, igIni, packageJson, modulePackageJson, release: args.release, demoPagePresent, optionalPages, duplicateHeadings, illustrativeExamples,
   });
 
   const mode = args.release ? "release (strict)" : "development (placeholder-tolerant)";

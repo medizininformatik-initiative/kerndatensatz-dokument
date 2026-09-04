@@ -10,7 +10,7 @@ because the empty target repositories already existed and a name-colliding
 transfer was therefore not possible. The previous home,
 `forschungsgruppe-digital-health/mii-kds-module-template`, is **archived as a
 read-only snapshot**: its issue and pull-request numbers cited in the
-[CHANGELOG](../CHANGELOG.md) and in migrated issues keep resolving there, and
+[CHANGELOG](../input/pagecontent/changes.md) and in migrated issues keep resolving there, and
 its GitHub Pages keep serving previews published before the move.
 
 This note replaces the pre-move `docs/project-status.md` and

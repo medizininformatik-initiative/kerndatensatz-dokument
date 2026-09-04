@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung der Standardsprachseite
-     input/pagecontent/version-history.md — beide Dateien müssen dasselbe
+<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
+     input/translations/en/pagecontent/version-history.md — beide Dateien müssen dasselbe
      aussagen. Quelle: kerndatensatz-basis input/pagecontent/version-history.md
      (Branch main); der Release-Prozess ist die Seite "Module Release Workflow"
      des MII-Meta-Wikis

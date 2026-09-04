@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung der Standardsprachseite input/pagecontent/changes.md
-     — beide Dateien müssen dasselbe aussagen. Struktur aus kerndatensatz-basis
+<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
+     input/translations/en/pagecontent/changes.md — beide Dateien müssen dasselbe aussagen. Struktur aus kerndatensatz-basis
      input/pagecontent/changes.md (Branch main) — ein Abschnitt je Version,
      neueste zuerst — und aus der MII-Release-Notes-Vorlage
      (kerndatensatz-meta/implementation-guides/MedizininformatikInitiative-ImplementationGuide-Template/

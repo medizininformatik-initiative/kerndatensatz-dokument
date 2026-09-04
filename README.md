@@ -1,10 +1,5 @@
 # MII KDS Modul Dokument
 
-<!-- TODO:REVIEW — README rewritten during the 2026-08-30 template migration
-     (migration-written text, ①-review queue). The previous Simplifier-era
-     README is preserved as README.simplifier-legacy.md; merge anything still
-     wanted from it, then delete that file. -->
-
 FHIR® R4 Implementation Guide des Moduls **Dokument** des Kerndatensatzes der
 [Medizininformatik-Initiative (MII)](https://www.medizininformatik-initiative.de).
 Das Modul beschreibt die Repräsentation klinischer Dokumente und ihrer
@@ -48,3 +43,23 @@ Issues und Pull Requests bitte gegen dieses Repository. Nicht-triviale
 Bekannte Terminologie-Themen: `de.ihe-d.terminology`-Nachfolger wird in
 [#33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
 beobachtet.
+
+## Links
+
+### Specifications
+
+* [FHIR Profiling Specification (Latest)](https://www.hl7.org/fhir/profiling.html)
+* [FHIR Implementation Guide Guidance (CI Build)](https://build.fhir.org/ig/FHIR/ig-guidance/)
+* [FHIR Shorthand Specification (CI Build)](https://build.fhir.org/ig/HL7/fhir-shorthand/)
+* [FHIR Shorthand Quick Reference (*very useful*)](https://build.fhir.org/ig/HL7/fhir-shorthand/FSHQuickReference.pdf)
+* [FHIRPath Specification (Normativ Release)](https://www.hl7.org/fhirpath/)
+
+### Tools and Documentation
+
+* [FHIR IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
+* [Simplifier (FHIR Authoring, Publishing, Registry)](https://simplifier.net)
+* [Firely Terminal (FHIR CLI Tool)](https://docs.fire.ly/projects/Firely-Terminal/index.html)
+
+### Additional Learning Materials
+
+* [FSH School Courses](https://fshschool.org/courses/)

@@ -1,7 +1,7 @@
-# Multi-language support (English default, German translation)
+# Multi-language support (German default, English translation)
 
-This template produces a bilingual IG with **English as the default language
-and German as the translation**, the same model as
+This module produces a bilingual IG with **German as the default language
+and English as the translation** (DE-first per the MII meta wiki, Release 2027) — the inverse of
 [kerndatensatz-basis](https://github.com/medizininformatik-initiative/kerndatensatz-basis).
 
 The corresponding `sushi-config.yaml` parameters (already set):
