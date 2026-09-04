@@ -211,7 +211,7 @@ test("M8 — the demonstration page blocks a release, but not development", () =
     "input/translations/<lang>/pagecontent/rendering-artifacts.md",
     "sushi-config.yaml",
     "input/includes/menu.xml",
-    "input/translations/de/includes/menu.xml",
+    "input/translations/<lang>/includes/menu.xml",
   ]) {
     assert.ok(msg.includes(f), `the failure message should name ${f}`);
   }
@@ -236,7 +236,7 @@ test("M9 — undecided optional pages block a release, but not development", () 
   // The failure message must teach both exits: keep (delete banner in both
   // languages) and remove (the documented per-entry procedure).
   const msg = rel.findings.find((f) => f.id === "M9 optional pages").message;
-  for (const s of ["docs/optional-pages.md", "input/translations/de/pagecontent", "menu.xml", ".po"]) {
+  for (const s of ["docs/optional-pages.md", "input/translations/<lang>/pagecontent", "menu.xml", ".po"]) {
     assert.ok(msg.includes(s), `the failure message should mention ${s}`);
   }
 });
@@ -286,7 +286,7 @@ test("M11 — scaffold illustrative examples block a release, but not developmen
   // The failure message must teach the exit: delete the box + marker in both
   // languages, then write own content or adopt the default text.
   const msg = rel.findings.find((f) => f.id === "M11 illustrative examples").message;
-  for (const s of ["input/pagecontent", "input/translations/de/pagecontent", "default text"]) {
+  for (const s of ["input/pagecontent", "input/translations/<lang>/pagecontent", "default text"]) {
     assert.ok(msg.includes(s), `the failure message should mention ${s}`);
   }
 });
