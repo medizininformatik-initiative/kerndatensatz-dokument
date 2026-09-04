@@ -28,19 +28,16 @@ Die NLP Extension lässt bewusst Freiheitsgrade bei der Dokumentation solcher Pr
 
 ### Inhalt
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die technische Struktur dieser Extension — Differential, Key Elements, Snapshot
-> sowie die XML- und JSON-Serialisierung — rendert der IG-Publisher unmittelbar
-> unterhalb dieses Abschnitts auf dieser Artefakt-Seite. Dort stehen auch die
-> Must-Support-Elemente mit ihren Kurzbeschreibungen und Hinweisen; Kanonische
-> URL, Status, Version und Basisdefinition führt der Kopfbereich der Seite.
->
-> Die Codes des NLP-Verarbeitungsstatus definiert das CodeSystem
-> [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html)
-> mit seiner zweistufigen Hierarchie; gebunden wird die Extension über das ValueSet
-> [MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.html).
-{: .ig-highlight .ig-highlight-blue}
+Die technische Struktur dieser Extension — Differential, Key Elements, Snapshot
+sowie die XML- und JSON-Serialisierung — rendert der IG-Publisher unmittelbar
+unterhalb dieses Abschnitts auf dieser Artefakt-Seite. Dort stehen auch die
+Must-Support-Elemente mit ihren Kurzbeschreibungen und Hinweisen; Kanonische
+URL, Status, Version und Basisdefinition führt der Kopfbereich der Seite.
+
+Die Codes des NLP-Verarbeitungsstatus definiert das CodeSystem
+[MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html)
+mit seiner zweistufigen Hierarchie; gebunden wird die Extension über das ValueSet
+[MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.html).
 
 ### Beispiele
 
@@ -48,8 +45,7 @@ Das folgende Beispiel illustriert die Verarbeitung eines *ärztlichen Entlassbri
 
 [![Ablaufdiagramm der NLP-Pipeline: Ingestion, Preprocessing, De-Identification und Annotation mit den jeweils entstehenden Dokumentreferenzen](NLP-Pipeline.svg)](NLP-Pipeline.svg)
 
-<!-- TODO:REVIEW Die Quelle schreibt das FHIR-Element als `relates to`; im FHIR-Datenmodell heißt es `relatesTo` (so auch auf der Seite UML-Diagramme). Schreibweise vor der Veröffentlichung fachlich bestätigen. -->
-_Bitte beachten_: Mit dem Element `relates to` können Beziehungen zwischen den unterschiedlichen Referenzen eines Dokumentes hergestellt werden. Die Codebezeichnungen `transforms` und `appends` bezeichnen hierbei die Art der Beziehung:
+_Bitte beachten_: Mit dem Element `relatesTo` können Beziehungen zwischen den unterschiedlichen Referenzen eines Dokumentes hergestellt werden. Die Codebezeichnungen `transforms` und `appends` bezeichnen hierbei die Art der Beziehung:
 
 - `transforms`: Dieses Dokument hat seinen Ursprung im relationierten Original aber wurde inhaltlich oder strukturell verändert. Zum Beispiel wenn ein Original Dokument im CDA-Format in ein Textformat übertragen wurde.
 - `appends`: Dieses Dokument basiert auf dem relationierten Dokument, enthält aber zusätzliche Informationen wie z.B. Annotation in Form von Metadaten erhalten.
@@ -72,10 +68,7 @@ Die folgenden FHIR-Ressourcen stellen die zum Beispiel zugehörigen FHIR Patient
 | Abteilungskontakt | [Encounter Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html) |
 | Versorgungsstellenkontakt | [Encounter Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) |
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Alle Beispiele sind vollständig synthetisch; die Gesamtübersicht der
-> Beispielinstanzen des Moduls steht auf der Seite [Beispiele](examples.html).
-{: .ig-highlight .ig-highlight-blue}
+Alle Beispiele sind vollständig synthetisch; die Gesamtübersicht der
+Beispielinstanzen des Moduls steht auf der Seite [Beispiele](examples.html).
 
 Quelle: [GraSCCo Datensatz, DOI (Zenodo): 10.5281/zenodo.6539130](https://doi.org/10.5281/zenodo.6539130)

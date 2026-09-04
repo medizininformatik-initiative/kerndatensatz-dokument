@@ -73,7 +73,7 @@ Alias: $lnc-doc-class-code-vs = http://hl7.org/fhir/ValueSet/document-classcodes
 // SNOMED CT
 Alias: $SCT = http://snomed.info/sct
 // --- appended from mii-kds-module-template v0.13.1 aliases.fsh (per-definition merge; module definitions win) ---
-Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701
+Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701
 Alias: $sct-no-ver = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
 Alias: $icd-10 = http://hl7.org/fhir/sid/icd-10

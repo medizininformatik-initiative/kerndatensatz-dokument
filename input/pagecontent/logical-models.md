@@ -8,10 +8,7 @@ Die offiziell beschlossene Version des Informationsmodells befinden sich auf [AR
 
 ### Elementverzeichnis
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Das folgende Verzeichnis listet jedes Element des logischen Modells mit Pfad und Beschreibung.
-{: .ig-highlight .ig-highlight-blue}
+Das folgende Verzeichnis listet jedes Element des logischen Modells mit Pfad und Beschreibung.
 
 {% include StructureDefinition-mii-lm-dokument-dict.xhtml %}
 
@@ -19,18 +16,7 @@ Die offiziell beschlossene Version des Informationsmodells befinden sich auf [AR
 
 ### Mapping auf die FHIR-Ressource
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Der IG-Publisher rendert dieses Element-zu-Ressource-Mapping auf der Artefaktseite des Logical Models nicht (der Reiter „Mappings“ bleibt dort leer). Die folgende Tabelle listet es deshalb hier auf.
-{: .ig-highlight .ig-highlight-blue}
-
-<!-- TODO:REVIEW: In der Simplifier-Quelle war diese Mapping-Tabelle als
-     Kommentar deaktiviert (zwei alternative FQL-Varianten). Der
-     FQL-Crosswalk nennt genau diesen Fall — Dataset-zu-FHIR-Mapping eines
-     Logical Models — als den kanonischen Anlass für eine generierte
-     statische Tabelle. Diese Seite reaktiviert den Inhalt entsprechend als
-     generierte Tabelle; bitte bestätigen, dass die Aufnahme so gewünscht
-     ist. -->
+Der IG-Publisher rendert dieses Element-zu-Ressource-Mapping auf der Artefaktseite des Logical Models nicht (der Reiter „Mappings“ bleibt dort leer). Die folgende Tabelle listet es deshalb hier auf.
 
 <!-- GENERATED TABLE: mechanisch extrahiert zum Migrationszeitpunkt aus dem
      gebauten fsh-generated/resources/StructureDefinition-mii-lm-dokument.json

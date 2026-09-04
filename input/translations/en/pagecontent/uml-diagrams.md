@@ -8,13 +8,10 @@ A *Dokument* (document) is used to describe the metadata of a clinical document,
 
 Depending on the scenario, a *Dokument* can have a reference to a patient (`subject`) ([MII KDS module Person]). The patient reference can be established using identifying attributes, or on a pseudonymous or anonymous basis. Similarly, a clinical *Kontext* (context) can be used to establish the reference to the specific case/encounter (`encounter`) ([MII KDS module Fall]).
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> Since the KDS release 2026, the modules Person and Fall have been folded into
-> the base module (package `de.medizininformatikinitiative.kerndatensatz.base`);
-> the canonical URLs of the referenced profiles are unchanged. The diagram shows
-> the state approved by the NSG.
-{: .ig-highlight .ig-highlight-blue}
+Since the KDS release 2026, the modules Person and Fall have been folded into
+the base module (package `de.medizininformatikinitiative.kerndatensatz.base`);
+the canonical URLs of the referenced profiles are unchanged. The diagram shows
+the state approved by the NSG.
 
 [![UML diagram of the information model for the Dokument module](Informationsmodell.svg)](Informationsmodell.svg)
 

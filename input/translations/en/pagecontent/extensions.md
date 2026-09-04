@@ -9,11 +9,8 @@ This page lists the FHIR extensions defined by the **Dokument** module
 base resources and profiles cannot express; the profiles that use them are on
 the [Profiles](profiles.html) page.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> The module defines one extension: the
-> [NLP Processing Status Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
-> (`MII_EX_Dokument_NLP_Processing_Status`) carrying the processing status of a
-> document in an NLP pipeline. The description lives on the artifact page; the
-> pipeline examples on the [Examples](examples.html) page.
-{: .ig-highlight .ig-highlight-blue}
+The module defines one extension: the
+[NLP Processing Status Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
+(`MII_EX_Dokument_NLP_Processing_Status`) carrying the processing status of a
+document in an NLP pipeline. The description lives on the artifact page; the
+pipeline examples on the [Examples](examples.html) page.

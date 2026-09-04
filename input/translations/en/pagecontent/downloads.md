@@ -63,10 +63,7 @@ publication, including its dependencies and publication parameters. It is docume
 * [XML](../ImplementationGuide-mii-ig-dokument.xml)
 * [JSON](../ImplementationGuide-mii-ig-dokument.json)
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> ### Package registry
->
-> The FHIR package is additionally published in the Simplifier package registry:
-> [`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).
-{: .ig-highlight .ig-highlight-blue}
+### Package registry
+
+The FHIR package is additionally published in the Simplifier package registry:
+[`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).

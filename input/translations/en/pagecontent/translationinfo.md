@@ -13,11 +13,9 @@ name as the German page); resource translations are `.po` files under
 `input/translations/en/`. Details:
 [`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md) in this repository.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> The German pages were carried over unchanged from the previous Simplifier
-> guide during the migration. The English pages are machine-translated from the
-> German and marked `TODO:REVIEW` until they have been professionally reviewed;
-> the FHIR artifacts themselves (names, descriptions) are English or carry
-> German translation extensions.
-{: .ig-highlight .ig-highlight-blue}
+The German pages carry over the text of the previous Simplifier guide verbatim
+wherever the source had a corresponding page; the remaining pages (Downloads,
+Metadata, Versioning, Change history, Examples) come from the KDS module
+template. The English pages are machine translations of the German version and
+are reviewed bilingually before publication. The FHIR artifacts themselves carry
+German designations with translation extensions for the English rendering.

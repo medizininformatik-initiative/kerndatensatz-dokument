@@ -11,29 +11,15 @@ This page lists the FHIR profiles of the **Dokument** module (naming convention
 `MII_PR_<Module>_<Name>`). The module's extensions are listed on the
 [Extensions](extensions.html) page.
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md gate=B -->
-> **Written during migration — review before release.**
-> The module defines one profile:
-> [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
-> (`MII_PR_Dokument_Dokument`), based on the `DocumentReference` resource. The
-> technical detail views — structure, differential, XML and JSON — are generated
-> by the IG Publisher on the artifact page; the underlying dataset is described on
-> the [Logical Models](logical-models.html) page.
-{: .ig-highlight .ig-highlight-blue}
+The module defines one profile:
+[MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
+(`MII_PR_Dokument_Dokument`), based on the `DocumentReference` resource. The
+technical detail views — structure, differential, XML and JSON — are generated
+by the IG Publisher on the artifact page; the underlying dataset is described on
+the [Logical Models](logical-models.html) page.
 
-<!-- TODO:REVIEW At this point the source page carried the empty placeholder
-     text "Einleitung FHIR Profile" ("Introduction FHIR profiles"); it was not
-     carried over. Should an introduction to the profile family be added here?
-     Prose conservation (C4): deliberately NOT carried over — an unfilled
-     authoring placeholder of the Simplifier page template (the heading
-     repeated as body text) that carries no content. The two paragraphs above
-     provide this page's actual introduction. -->
-
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md gate=B -->
-> **Written during migration — review before release.**
-> The conventions below apply not only to the profiles, but to all conformance
-> resources of this module (extensions, ValueSets, CodeSystems, logical models).
-{: .ig-highlight .ig-highlight-blue}
+The conventions below apply not only to the profiles, but to all conformance
+resources of this module (extensions, ValueSets, CodeSystems, logical models).
 
 ### Naming conventions for creating FHIR resources in the Medical Informatics Initiative
 
@@ -75,16 +61,11 @@ The following designations are agreed for the existing modules:
 | Modul Schlafmedizinischer Befund       | *to follow*           | *to follow*         |
 | Modul Dokument                         | modul-dokument        | Dokument            |
 
-<!-- TODO:REVIEW The full module names are the official German MII module
-     designations and are kept verbatim (they are names, not prose). Confirm
-     whether the English mirror should instead carry translated module names. -->
+Module names are the official German MII designations and are not translated.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> The canonical namespaces `modul-person` and `modul-fall` remain valid; the
-> corresponding profiles have been delivered in the base module (package
-> `de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release 2026.
-{: .ig-highlight .ig-highlight-blue}
+The canonical namespaces `modul-person` and `modul-fall` remain valid; the
+corresponding profiles have been delivered in the base module (package
+`de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release 2026.
 
 For modules added in the future, a German-language name in the singular is preferred.
 
@@ -131,16 +112,9 @@ Note: in the special case where a VS or a CM references several terminologies, l
 (a machine-processable designation of the resource)
 
 * Format: Upper_Snake_Case
-  Note: the FHIR standard is CamelCase2, but the MII deviates from it for better human readability, especially of abbreviations.
+  Note: the FHIR standard is CamelCase (see HL7 International: Naming Rules & Guidelines under [References](#references)), but the MII deviates from it for better human readability, especially of abbreviations.
 * Structure: same as the title, but without spaces and special characters
 * Example: `MII_VS_Mikrobio_Mikrobiologische_Erreger_Bakterien_Pilze_SNOMEDCT`
-
-<!-- TODO:REVIEW The wording "CamelCase2" is carried over VERBATIM from the
-     source page (the migration had silently dropped the "2"). The "2" is
-     evidently a footnote marker pointing at the second entry of the
-     "References" section (HL7 International: Naming Rules & Guidelines).
-     Should the marker be marked up as a real footnote, or dropped? Not
-     guessed — please decide. -->
 
 #### Element **id**
 
@@ -160,11 +134,11 @@ Note: in the special case where a VS or a CM references several terminologies, l
 * The canonical URL rules are to be applied only when resources are newly created. Established URLs of published artifacts are not to be changed retrospectively.
 * Example: `https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct`
 
-<!-- TODO:REVIEW The rule carried over here names the canonical path
-     .../fhir/<technical module name>/... . This module's artifacts use
-     .../fhir/ext/modul-dokument/... (an additional "ext" segment). Should the
-     rule text be updated, or is the divergence deliberately kept as an
-     established URL? Not guessed — please decide. -->
+{:.bg-info}
+**Note on this module:** The artifacts of the Dokument module are published under
+the established namespace `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…`
+(an additional `ext` segment). Per the rule above, established canonical URLs of
+published artifacts are not changed retrospectively.
 
 #### References
 

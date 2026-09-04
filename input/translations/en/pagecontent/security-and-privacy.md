@@ -5,7 +5,7 @@
      module-specific aspects. Stages 1 and 2 are static overarching content —
      keep them; stage 3 is where your module writes. Module-specific
      aspects WRITTEN from the profile and module descriptions (owner request
-     2026-08-30, revising the earlier default-text decision; DERIVED-marked).
+     2026-08-30, revising the earlier default-text decision; review box dissolved 2026-09-04).
      German mirror: input/translations/de/pagecontent/security-and-privacy.md —
      both files must say the same thing. -->
 
@@ -46,12 +46,9 @@ by the DIMP configuration, not by this guide.
 This is the module's own contribution: the security and privacy properties
 that follow from the *kind of data this module carries*.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> The following module-specific aspects were derived from the profile and the
-> module descriptions (slices `Binaerdaten`/`Verweis`, NLP processing status,
-> `relatesTo` processing chains).
-{: .ig-highlight .ig-highlight-blue}
+The following module-specific aspects were derived from the profile and the
+module descriptions (slices `Binaerdaten`/`Verweis`, NLP processing status,
+`relatesTo` processing chains).
 
 Unlike purely structured KDS modules, this module also carries the **document
 body itself** via `content.attachment`. This raises aspects of its own:

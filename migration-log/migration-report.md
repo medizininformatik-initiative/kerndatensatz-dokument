@@ -19,7 +19,7 @@ Release-2027 “IG Umbau – DE First”); English is the translation under
   binary example attachments verified.
 * **Narrative:** all 15 content-bearing guide pages routed per the reviewed
   `migration-log/page-map.tsv` (21 rows, 8 marked `[MAP-EDIT]`); post-migration directive
-  scan: **0 Simplifier/FQL directives over 46 files**; 38 DERIVED markers (all `bridge`,
+  scan: **0 Simplifier/FQL directives over 46 files**; 46 DERIVED markers (all `bridge`,
   Gate B), derived-scan clean.
 * **Build:** `qa.txt` **Errors: 12 — all 4 classes known/qualified** (§③ below), Warnings 136,
   **Broken Links 0** of 101,813. Terminology server: `https://tx.ontoserver.csiro.au/fhir`
@@ -59,15 +59,25 @@ step-actions), `identity-claims.tsv`, `page-map.tsv`, `derived-content.tsv`,
 
 ## ② Review queue (Gates B/C — someone must check)
 
-* **38 DERIVED bridges** (all Gate B) — rendered as blue review boxes on the pages;
+* **46 DERIVED bridges** (all Gate B) — rendered as blue review boxes on the pages;
   ledger: `migration-log/derived-content.tsv`. Largest: index dependency box, examples
   pipeline table, extensions/value-sets pointer notes.
-* **English twins are machine translations** (Gate C) — every EN page carries
-  `TODO:REVIEW machine-translated`; a bilingual reviewer signs before release. German
-  pages carry the source text verbatim (restored where the first pass paraphrased — see
-  the C4 restoration adjudications).
-* **`relatesTo` spelling**: the source writes “relates to”; both intro notes carry a
-  `TODO:REVIEW` asking the editors to confirm.
+  **Gate-B status 2026-09-04:** all 46 blocks adjudicated in the rendered-IG audit
+  (`docs`: PR `fix/review-markers`) — 21 kept as written, 17 reworded, 5 dropped
+  (provenance in `migration-log/source-quotes/`), the review boxes dissolved into
+  ordinary prose; `derived-scan` now reports 0 markers. The checklist below is the
+  historical queue; `derived-content.tsv` stays as the ledger of what was written.
+* **English twins are machine translations** (Gate C) — the
+  `TODO:REVIEW machine-translated` marker is carried on the EN pages that were
+  machine-translated from the German default page; template-derived pages whose English
+  is the original stay unmarked. A bilingual reviewer signs before release. German pages
+  carry the source text verbatim (restored where the first pass paraphrased — see the C4
+  restoration adjudications).
+* **`relatesTo` spelling**: the source writes “relates to”; the
+  `StructureDefinition-mii-ex-dokument-nlp-processing-status-intro` note carries a
+  `TODO:REVIEW` asking the editors to confirm (the
+  `StructureDefinition-mii-pr-dokument-dokument-intro` marker is about the
+  search-parameter list, not the spelling).
 * **README**: template-era README written by the migration (old one preserved as
   `README.simplifier-legacy.md` — merge what is still wanted, then delete it).
 * **fsh-generated serialization**: the committed output is this branch’s pinned-toolchain
@@ -263,12 +273,14 @@ One checkbox per open obligation, from the machine ledgers. Ticking a box assert
 - [ ] **`downloads`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`examples`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`extensions`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
-- [ ] **`implementer-guidance`**: review 4 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
+- [ ] **`implementer-guidance`**: review 6 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`index`**: review 4 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`kompatibilitaet`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`logical-models`**: review 4 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
-- [ ] **`profiles`**: review 4 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
+- [ ] **`profiles`**: review 6 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
+- [ ] **`security-and-privacy`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`translationinfo`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
+- [ ] **`uml-diagrams`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`value-sets`**: review 2 migration-written block(s) (bridge; default/en) — *keep, correct, or delete each one*
 - [ ] **`MIIIGModulDokument/HinweisTemplate.page.md` RETIRED**: orphan Simplifier authoring stub [MAP-EDIT: 4 words, not in toc, contains the {{render:HereBeDragons}} error artifact - not module content] — *confirm nothing in it is needed*
 - [ ] **`MIIIGModulDokument/AnwendungsflleInformationsmodell/Index.page.md` RETIRED**: 13-word navigation stub [MAP-EDIT: all 3 children routed to template pages (guidance/logical-models/uml-diagrams); a hub would hold nothing] — *confirm nothing in it is needed*

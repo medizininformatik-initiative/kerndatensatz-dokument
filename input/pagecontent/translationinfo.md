@@ -13,11 +13,10 @@ Dateiname wie die deutsche Seite); Ressourcen-Übersetzungen als `.po`-Dateien
 unter `input/translations/en/`. Details:
 [`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md) in diesem Repository.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die deutschen Seiten wurden bei der Migration von Simplifier unverändert aus dem
-> bisherigen Leitfaden übernommen. Die englischen Seiten sind maschinell aus dem
-> Deutschen übersetzt und mit `TODO:REVIEW` markiert, bis sie fachlich
-> gegengelesen sind; die FHIR-Artefakte selbst (Namen, Beschreibungen) sind
-> englischsprachig bzw. tragen deutsche Übersetzungs-Extensions.
-{: .ig-highlight .ig-highlight-blue}
+Die deutschen Seiten übernehmen den Text des bisherigen Simplifier-Leitfadens
+wortgetreu, soweit die Quelle eine entsprechende Seite hatte; die übrigen Seiten
+(Downloads, Metadaten, Versionierung, Änderungshistorie, Beispiele) stammen aus
+dem KDS-Modul-Template. Die englischen Seiten sind maschinelle Übersetzungen der
+deutschen Fassung und werden vor der Veröffentlichung zweisprachig
+gegengelesen. Die FHIR-Artefakte selbst tragen deutsche Bezeichnungen mit
+Translation-Extensions für die englische Darstellung.

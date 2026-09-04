@@ -370,3 +370,12 @@ test("readTranslationLangs reads i18n-lang (DE-first modules translate into en)"
   assert.deepEqual(readTranslationLangs(de), ["en"]);
   assert.deepEqual(readTranslationLangs("parameters:\n  excludexml: false\n"), []);
 });
+
+test("M13: review markers block a release, but not development", () => {
+  const dev = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, reviewMarkers: ["input/pagecontent/index.md:3"], release: false });
+  assert.ok(!ids(dev.findings, "fail").includes("M13 review markers"));
+  const rel = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, reviewMarkers: ["input/pagecontent/index.md:3"], release: true });
+  assert.ok(ids(rel.findings, "fail").includes("M13 review markers"));
+  const clean = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, reviewMarkers: [], release: true });
+  assert.ok(!ids(clean.findings, "fail").includes("M13 review markers"));
+});

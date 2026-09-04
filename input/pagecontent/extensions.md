@@ -8,12 +8,9 @@ definiert (Namenskonvention `MII_EX_<Modul>_<Name>`). Extensions transportieren
 Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die
 Profile, die sie verwenden, stehen auf der Seite [Profile](profiles.html).
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Das Modul definiert eine Extension: die
-> [NLP Processing Status Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
-> (`MII_EX_Dokument_NLP_Processing_Status`) zum Verarbeitungsstatus eines
-> Dokuments in einer NLP-Pipeline. Die fachliche Beschreibung steht direkt auf
-> der Artefakt-Seite; die Beispiele der Pipeline auf der Seite
-> [Beispiele](examples.html).
-{: .ig-highlight .ig-highlight-blue}
+Das Modul definiert eine Extension: die
+[NLP Processing Status Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
+(`MII_EX_Dokument_NLP_Processing_Status`) zum Verarbeitungsstatus eines
+Dokuments in einer NLP-Pipeline. Die fachliche Beschreibung steht direkt auf
+der Artefakt-Seite; die Beispiele der Pipeline auf der Seite
+[Beispiele](examples.html).

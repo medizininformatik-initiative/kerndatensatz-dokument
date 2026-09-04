@@ -18,19 +18,7 @@
      version. A copy inside the module guide would duplicate centrally
      maintained rules and go stale. -->
 
-Technical guidance for DIC implementers on implementing the profiles of the **Dokument** module (ETL from primary systems, FHIR API, validation).
-
-<!-- DERIVED:bridge source=MIIIGModulDokument/Kontext-Bezuege.page.md gate=B -->
-> **Written during migration — review before release.**
-> This page collects the domain context of the module, its relationships to the
-> other MII KDS modules, and the external standards the module is kept compatible
-> with.
-{: .ig-highlight .ig-highlight-blue}
-
-<!-- TODO:REVIEW The Simplifier source guide contains no narrative of its own on
-     ETL pipelines, FHIR API operation or validation. That aspect, announced in
-     the lead sentence, therefore remains uncovered — should it be added
-     module-specifically, or should the lead sentence be shortened? -->
+Domain context of the **Dokument** module for DIC implementers: its relationships to the other MII KDS modules and the external standards it is kept compatible with.
 
 ### Context
 
@@ -71,25 +59,16 @@ The MII KDS module Dokument is designed so that instances can be compatible with
   * [Gematik Information Technology Systems in Hospitals (ISiK) document exchange](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5)  - profile for representing the metadata required for document exchange
   * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - profile for exchanging health documents via mobile applications, mobile devices or other resource- and platform-constrained systems
 
-This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see section [References](kompatibilitaet.html)). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
-
-<!-- TODO:REVIEW The source cross-reference "(see section References)" was
-     self-referential on the Simplifier page. Here it points to the
-     "Compatibility" page, which holds the freedom-from-contradiction analysis —
-     please confirm. The source wording is preserved verbatim; only the link
-     target was converted. -->
+This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see the [Compatibility](kompatibilitaet.html) page). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
 
 [![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.svg)](Paketabhaengigkeiten.svg)
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> The packages `de.medizininformatikinitiative.kerndatensatz.person` and
-> `de.medizininformatikinitiative.kerndatensatz.fall` shown in the diagram have
-> been delivered inside the base module
-> (`de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release
-> 2026; the canonical URLs of the referenced profiles are unchanged. The diagram
-> shows the state approved by the NSG.
-{: .ig-highlight .ig-highlight-blue}
+The packages `de.medizininformatikinitiative.kerndatensatz.person` and
+`de.medizininformatikinitiative.kerndatensatz.fall` shown in the diagram have
+been delivered inside the base module
+(`de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release
+2026; the canonical URLs of the referenced profiles are unchanged. The diagram
+shows the state approved by the NSG.
 
 
 This makes it possible to attribute resources such that they are valid against MII KDS as well as against ISiK or IHE at the same time. ISiK and IHE modules are also compatible in principle; in use, however, we recommend stating both the `type` (from KDL / ISiK) and the `category` (from IHE), which neither of the two profiles ISiK, IHE offers at the same time.
@@ -102,13 +81,10 @@ We recommend the [DVMD KDL standard](https://simplifier.net/KDL/), which is also
 
 ---
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/Kontext-Bezuege.page.md gate=B -->
-> **Written during migration — review before release.**
-> The field-by-field comparison with ISiK document exchange, KBV MIO Basis and
-> IHE MHD is on the [Compatibility](kompatibilitaet.html) page; the module's
-> technical artifacts are under [Profiles](profiles.html). The KDS-wide
-> conformance requirements (requirement language, Must Support, handling of
-> missing data) are maintained centrally by the
-> [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
-> they apply to this module unchanged.
-{: .ig-highlight .ig-highlight-blue}
+The field-by-field comparison with ISiK document exchange, KBV MIO Basis and
+IHE MHD is on the [Compatibility](kompatibilitaet.html) page; the module's
+technical artifacts are under [Profiles](profiles.html). The KDS-wide
+conformance requirements (requirement language, Must Support, handling of
+missing data) are maintained centrally by the
+[Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
+they apply to this module unchanged.

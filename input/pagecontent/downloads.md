@@ -65,11 +65,8 @@ dokumentiert.
 * [XML](../ImplementationGuide-mii-ig-dokument.xml)
 * [JSON](../ImplementationGuide-mii-ig-dokument.json)
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> ### Paket-Registry
->
-> Das FHIR-Package ist zusätzlich in der Simplifier-Package-Registry
-> veröffentlicht:
-> [`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).
-{: .ig-highlight .ig-highlight-blue}
+### Paket-Registry
+
+Das FHIR-Package ist zusätzlich in der Simplifier-Package-Registry
+veröffentlicht:
+[`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).

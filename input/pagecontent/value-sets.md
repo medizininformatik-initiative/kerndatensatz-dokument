@@ -19,13 +19,10 @@ Client-Zertifikat konfiguriert ist, sonst über den öffentlichen HL7-Server
 `tx.fhir.org` (dann expandieren einige KDS-spezifische ValueSets ggf. nicht
 vollständig).
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> SNOMED-CT-Inhalte dieses Moduls verwenden die **International Edition,
-> Version 20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`)
-> gemäß der MII Terminology Version Policy; die Festlegung ist im
-> Expansion-Manifest (`Parameters/mii-param-dokument-manifest`) sowie in den
-> ValueSet-Definitionen selbst verankert. Die modul-eigenen ValueSets listet die
-> Artefakt-Übersicht; Hintergründe zu den Terminologien beschreibt die Seite
-> [CodeSystems](code-systems.html).
-{: .ig-highlight .ig-highlight-blue}
+SNOMED-CT-Inhalte dieses Moduls verwenden die **International Edition,
+Version 20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`)
+gemäß der MII Terminology Version Policy; die Festlegung ist im
+Expansion-Manifest (`Parameters/mii-param-dokument-manifest`) sowie in den
+ValueSet-Definitionen selbst verankert. Die modul-eigenen ValueSets listet die
+Artefakt-Übersicht; Hintergründe zu den Terminologien beschreibt die Seite
+[CodeSystems](code-systems.html).

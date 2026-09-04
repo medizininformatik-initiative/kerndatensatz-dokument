@@ -25,10 +25,7 @@ standardized use of routine clinical data for medical research.
 | Status      | Ballot        |
 | Realm       | DE            |
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/Index.page.md gate=B -->
-> **Written during migration — review before release.**
-> The guide's full version history is documented on the [Changes](changes.html) page.
-{: .ig-highlight .ig-highlight-blue}
+The guide's full version history is documented on the [Changes](changes.html) page.
 
 ### Module description
 
@@ -99,18 +96,15 @@ This module is part of the MII Core Dataset; the other KDS modules and their
 dependencies are described at
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> Formal dependencies of this module (see `dependencies` in
-> `sushi-config.yaml`): KDS base module (`kerndatensatz.base` 2026.0.0),
-> KDS Meta (`kerndatensatz.meta` 2026.0.0), German base profiles
-> (`de.basisprofil.r4` 1.6.0), ISiK level 6 (`de.gematik.isik` 6.0.0),
-> IHE-D terminology (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4`
-> 2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) plus the HL7
-> terminology and extensions packages. The complete versioned table is
-> rendered on the
-> [MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
-{: .ig-highlight .ig-highlight-blue}
+Formal dependencies of this module (see `dependencies` in
+`sushi-config.yaml`): KDS base module (`kerndatensatz.base` 2026.0.1),
+KDS Meta (`kerndatensatz.meta` 2026.0.0), German base profiles
+(`de.basisprofil.r4` 1.6.0), ISiK level 6 (`de.gematik.isik` 6.0.0),
+IHE-D terminology (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4`
+2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) plus the HL7
+terminology and extensions packages. The complete versioned table is
+rendered on the
+[MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
 
 More FHIR implementation guides can be found in the official
 **[FHIR IG Registry](https://fhir.org/guides/registry/)** (source:

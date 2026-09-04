@@ -17,13 +17,10 @@ terminology server — SU-TermServ if the client certificate is configured,
 otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific
 ValueSets may not expand completely).
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration — review before release.**
-> SNOMED CT content of this module uses the **International Edition, version
-> 20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`) per
-> the MII Terminology Version Policy; the pin is anchored in the expansion
-> manifest (`Parameters/mii-param-dokument-manifest`) and in the ValueSet
-> definitions themselves. The module's ValueSets are listed in the artifact
-> overview; background on the terminologies is on the
-> [CodeSystems](code-systems.html) page.
-{: .ig-highlight .ig-highlight-blue}
+SNOMED CT content of this module uses the **International Edition, version
+20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`) per
+the MII Terminology Version Policy; the pin is anchored in the expansion
+manifest (`Parameters/mii-param-dokument-manifest`) and in the ValueSet
+definitions themselves. The module's ValueSets are listed in the artifact
+overview; background on the terminologies is on the
+[CodeSystems](code-systems.html) page.

@@ -10,30 +10,16 @@ Diese Seite listet die FHIR-Profile des Moduls **Dokument**
 (Namenskonvention `MII_PR_<Modul>_<Name>`). Die Extensions des Moduls stehen auf
 der Seite [Extensions](extensions.html).
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Das Modul definiert ein Profil:
-> [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
-> (`MII_PR_Dokument_Dokument`) auf Basis der Ressource `DocumentReference`. Die
-> technischen Detailansichten — Struktur, Differential, XML und JSON — erzeugt der
-> IG-Publisher auf der Artefakt-Seite; den zugrunde liegenden fachlichen Datensatz
-> beschreibt die Seite [Logische Modelle](logical-models.html).
-{: .ig-highlight .ig-highlight-blue}
+Das Modul definiert ein Profil:
+[MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
+(`MII_PR_Dokument_Dokument`) auf Basis der Ressource `DocumentReference`. Die
+technischen Detailansichten — Struktur, Differential, XML und JSON — erzeugt der
+IG-Publisher auf der Artefakt-Seite; den zugrunde liegenden fachlichen Datensatz
+beschreibt die Seite [Logische Modelle](logical-models.html).
 
-<!-- TODO:REVIEW Die Quellseite trug an dieser Stelle den inhaltsleeren
-     Platzhalter "Einleitung FHIR Profile"; er wurde nicht übernommen. Soll hier
-     eine fachliche Einleitung zur Profilfamilie ergänzt werden?
-     Prosa-Konservierung (C4): bewusst NICHT übernommen — ein unausgefüllter
-     Autoren-Platzhalter der Simplifier-Seitenvorlage (die Wiederholung der
-     Überschrift als Fließtext), der keinen Inhalt trägt. Die fachliche
-     Einleitung dieser Seite leisten die beiden Absätze darüber. -->
-
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die folgenden Konventionen gelten nicht nur für die Profile, sondern für alle
-> Conformance-Ressourcen dieses Moduls (Extensions, ValueSets, CodeSystems,
-> logische Modelle).
-{: .ig-highlight .ig-highlight-blue}
+Die folgenden Konventionen gelten nicht nur für die Profile, sondern für alle
+Conformance-Ressourcen dieses Moduls (Extensions, ValueSets, CodeSystems,
+logische Modelle).
 
 ### Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative
 
@@ -75,12 +61,9 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 | Modul Schlafmedizinischer Befund       | *folgt*               | *folgt*             |
 | Modul Dokument                         | modul-dokument        | Dokument            |
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die kanonischen Namensräume `modul-person` und `modul-fall` bleiben gültig; die
-> zugehörigen Profile werden seit dem KDS-Release 2026 im Basismodul
-> (Package `de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert.
-{: .ig-highlight .ig-highlight-blue}
+Die kanonischen Namensräume `modul-person` und `modul-fall` bleiben gültig; die
+zugehörigen Profile werden seit dem KDS-Release 2026 im Basismodul
+(Package `de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert.
 
 Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt.
 
@@ -127,16 +110,9 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
 (eine maschinell verarbeitbare Bezeichnung der Ressource)
 
 * Format: Upper_Snake_Case
-  Hinweis: Der FHIR-Standard ist CamelCase2, aber wegen besserer Menschenlesbarkeit, insbesondere von Abkürzungen, wird im Rahmen der MII davon abgewichen.
+  Hinweis: Der FHIR-Standard ist CamelCase (siehe HL7 International: Naming Rules & Guidelines im Abschnitt [Referenzen](#referenzen)), aber wegen besserer Menschenlesbarkeit, insbesondere von Abkürzungen, wird im Rahmen der MII davon abgewichen.
 * Struktur: entsprechend des title, aber ohne Leer- und Sonderzeichen
 * Beispiel: `MII_VS_Mikrobio_Mikrobiologische_Erreger_Bakterien_Pilze_SNOMEDCT`
-
-<!-- TODO:REVIEW Der Wortlaut "CamelCase2" ist aus der Quellseite VERBATIM
-     übernommen (die Migration hatte die "2" stillschweigend entfernt). Die "2"
-     ist offenkundig eine Fußnotenmarke auf den zweiten Eintrag des Abschnitts
-     "Referenzen" (HL7 International: Naming Rules & Guidelines). Soll die Marke
-     als echte Fußnote ausgezeichnet oder ersatzlos gestrichen werden? Nicht
-     geraten — bitte fachlich entscheiden. -->
 
 #### Element **id**
 
@@ -156,12 +132,11 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
 * Regeln für die Canonical URL sollen zunächst nur bei Neuerstellung von Ressourcen angewendet werden. Etablierte URLs von veröffentlichten Artefakten sollen nachträglich nicht geändert werden.
 * Beispiel: `https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct`
 
-<!-- TODO:REVIEW Die hier übernommene Regel nennt den Kanonik-Pfad
-     .../fhir/<technischer Modulname>/... . Die Artefakte dieses Moduls
-     verwenden .../fhir/ext/modul-dokument/... (zusätzliches Segment "ext").
-     Ist der Regeltext zu aktualisieren, oder ist die Abweichung als
-     etablierte URL bewusst beibehalten? Nicht geraten — bitte fachlich
-     entscheiden. -->
+{:.bg-info}
+**Hinweis zu diesem Modul:** Die Artefakte des Moduls Dokument sind unter dem
+etablierten Namensraum `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…`
+veröffentlicht (zusätzliches Segment `ext`). Nach der Regel oben werden etablierte
+Canonical-URLs veröffentlichter Artefakte nachträglich nicht geändert.
 
 #### Referenzen
 

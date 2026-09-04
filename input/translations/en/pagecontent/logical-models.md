@@ -9,10 +9,7 @@ The officially adopted version of the information model is located on [ART DECOR
 
 ### Element dictionary
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md gate=B -->
-> **Written during migration — review before release.**
-> The following dictionary lists every element of the logical model with its path and description.
-{: .ig-highlight .ig-highlight-blue}
+The following dictionary lists every element of the logical model with its path and description.
 
 {% include StructureDefinition-mii-lm-dokument-dict.xhtml %}
 
@@ -20,17 +17,7 @@ The officially adopted version of the information model is located on [ART DECOR
 
 ### Mapping to the FHIR resource
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md gate=B -->
-> **Written during migration — review before release.**
-> The IG Publisher does not render this element-to-resource mapping on the Logical Model's artefact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
-{: .ig-highlight .ig-highlight-blue}
-
-<!-- TODO:REVIEW: In the Simplifier source, this mapping table was disabled
-     as a comment (two alternative FQL variants). The FQL crosswalk names
-     exactly this case — a logical model's dataset-to-FHIR mapping — as the
-     canonical reason for a generated static table. This page reactivates
-     the content accordingly as a generated table; please confirm that
-     including it is intended. -->
+The IG Publisher does not render this element-to-resource mapping on the Logical Model's artefact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
 
 <!-- GENERATED TABLE: mechanically extracted at migration time from the built
      fsh-generated/resources/StructureDefinition-mii-lm-dokument.json

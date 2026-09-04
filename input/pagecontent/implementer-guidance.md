@@ -18,20 +18,7 @@
      jeweils aktuelle Fassung ebenfalls dorthin. Eine Kopie im Modulleitfaden
      wuerde zentral gepflegte Regeln duplizieren und veralten. -->
 
-Technische Hinweise für DIZ-Implementierende zur Umsetzung der Profile des Moduls **Dokument** (ETL aus Primärsystemen, FHIR-API, Validierung).
-
-<!-- DERIVED:bridge source=MIIIGModulDokument/Kontext-Bezuege.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Diese Seite bündelt den fachlichen Kontext des Moduls, seine Bezüge zu den
-> übrigen MII KDS-Modulen und die externen Standards, zu denen das Modul
-> kompatibel gehalten wird.
-{: .ig-highlight .ig-highlight-blue}
-
-<!-- TODO:REVIEW Der Simplifier-Quellguide enthaelt keine eigenstaendige
-     Erzaehlung zu ETL-Strecken, FHIR-API-Betrieb oder Validierung. Dieser im
-     Einleitungssatz angekuendigte Aspekt bleibt daher ungedeckt — soll er
-     modulspezifisch ergaenzt werden, oder soll der Einleitungssatz gekuerzt
-     werden? -->
+Fachlicher Kontext des Moduls **Dokument** für DIZ-Implementierende: die Bezüge zu den übrigen MII KDS-Modulen und die externen Standards, zu denen das Modul kompatibel gehalten wird.
 
 ### Kontext
 
@@ -72,26 +59,17 @@ Das MII KDS-Modul Dokument ist darauf ausgelegt, dass Instanzen folgender FHIR-b
   * [Gematik Informationstechnischen Systeme im Krankenhaus (ISiK) Dokumentenaustausch](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5)  - Profil zur Abbildung erforderlicher Metadaten für den Dokumentenaustausch
   * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - Profil zum Austausch von Gesundheitsdokumenten über mobile Anwendungen, mobile Geräte oder anderen Systemen, die ressourcen- und plattformbeschränkt sind
 
-Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Die bestehenden der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Abschnitt [Referenzen](kompatibilitaet.html)) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
-
-<!-- TODO:REVIEW Der Quell-Verweis "(siehe Abschnitt Referenzen)" war auf der
-     Simplifier-Seite selbstbezueglich. Er zeigt hier auf die Seite
-     "Kompatibilitaet", auf der die Widerspruchsfreiheits-Analyse liegt —
-     bitte bestaetigen. Die Quellformulierung ist verbatim erhalten; umgesetzt
-     wurde nur das Linkziel. -->
+Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Die bestehenden der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Seite [Kompatibilität](kompatibilitaet.html)) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
 
 [![Paketabhängigkeiten des MII KDS-Moduls Dokument](Paketabhaengigkeiten.svg)](Paketabhaengigkeiten.svg)
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die im Diagramm gezeigten Pakete
-> `de.medizininformatikinitiative.kerndatensatz.person` und
-> `de.medizininformatikinitiative.kerndatensatz.fall` werden seit dem
-> KDS-Release 2026 innerhalb des Basismoduls
-> (`de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert; die
-> Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
-> den von der NSG freigegebenen Stand.
-{: .ig-highlight .ig-highlight-blue}
+Die im Diagramm gezeigten Pakete
+`de.medizininformatikinitiative.kerndatensatz.person` und
+`de.medizininformatikinitiative.kerndatensatz.fall` werden seit dem
+KDS-Release 2026 innerhalb des Basismoduls
+(`de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert; die
+Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
+den von der NSG freigegebenen Stand.
 
 
 Dadurch ist es möglich Ressourcen so zu attributieren, dass sie gleichzeitig MII KDS als auch ISIK bzw. IHE valide sind. Auch sind ISIK und IHE Module prinzipiell kompatibel, jedoch empfehlen wir in der Nutzung sowohl die Angabe des `type` (aus KDL /ISIK) und `category` (aus IHE), die keines der beides Profile ISIK, IHE gleichzeitig anbietet.
@@ -104,13 +82,10 @@ Wir empfehlen den auch in ISIK verwendeten [DVMD KDL-Standard](https://simplifie
 
 ---
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/Kontext-Bezuege.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die feldweise Gegenüberstellung zu ISiK Dokumentenaustausch, KBV MIO Basis und
-> IHE MHD steht auf der Seite [Kompatibilität](kompatibilitaet.html); die
-> technischen Artefakte des Moduls finden sich unter [Profile](profiles.html).
-> Die KDS-weiten Konformitätsanforderungen (Anforderungssprache, Must-Support,
-> Umgang mit fehlenden Daten) pflegt zentral das
-> [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
-> sie gelten für dieses Modul unverändert.
-{: .ig-highlight .ig-highlight-blue}
+Die feldweise Gegenüberstellung zu ISiK Dokumentenaustausch, KBV MIO Basis und
+IHE MHD steht auf der Seite [Kompatibilität](kompatibilitaet.html); die
+technischen Artefakte des Moduls finden sich unter [Profile](profiles.html).
+Die KDS-weiten Konformitätsanforderungen (Anforderungssprache, Must-Support,
+Umgang mit fehlenden Daten) pflegt zentral das
+[Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
+sie gelten für dieses Modul unverändert.

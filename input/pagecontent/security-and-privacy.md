@@ -46,12 +46,9 @@ nicht dieser Leitfaden.
 Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
 Datenschutz-Eigenschaften, die aus der *Art der Daten dieses Moduls* folgen.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die folgenden modulspezifischen Aspekte wurden aus dem Profil und den
-> Modulbeschreibungen abgeleitet (Slices `Binaerdaten`/`Verweis`,
-> NLP-Processing-Status, `relatesTo`-Verarbeitungsketten).
-{: .ig-highlight .ig-highlight-blue}
+Die folgenden modulspezifischen Aspekte wurden aus dem Profil und den
+Modulbeschreibungen abgeleitet (Slices `Binaerdaten`/`Verweis`,
+NLP-Processing-Status, `relatesTo`-Verarbeitungsketten).
 
 Dieses Modul transportiert — anders als rein strukturierte KDS-Module — über
 `content.attachment` auch den **Dokumentkörper selbst**. Daraus folgen eigene

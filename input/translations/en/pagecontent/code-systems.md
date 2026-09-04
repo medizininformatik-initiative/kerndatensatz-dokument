@@ -20,7 +20,7 @@ central KDS terminology service (SU-TermServ):
 [https://mii-termserv.de/](https://mii-termserv.de/).
 
 <!-- TODO:REVIEW machine-translated -->
-Description of the module's own ValueSets, use of international terminologies, licences:
+The following sections describe the module's own CodeSystems and ValueSets as well as the international terminologies used; licence information on external terminologies is held by the respective publishers (see [Legal notice](index.html#copyright-and-license)).
 
 ---
 

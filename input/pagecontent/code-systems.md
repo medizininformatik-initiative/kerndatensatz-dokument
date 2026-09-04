@@ -19,7 +19,7 @@ SNOMED CT) werden in diesem Modul **nicht** publiziert, sondern über den
 zentralen KDS-Terminologieserver (SU-TermServ) bezogen:
 [https://mii-termserv.de/](https://mii-termserv.de/).
 
-Beschreibung von eigenen ValueSets, Verwendung internationaler Terminologien, Lizenzen:
+Die folgenden Abschnitte beschreiben die modul-eigenen CodeSystems und ValueSets sowie die verwendeten internationalen Terminologien; Lizenzhinweise zu externen Terminologien stehen bei den jeweiligen Herausgebern (siehe [Impressum](index.html#urheberrecht-und-lizenz)).
 
 ---
 

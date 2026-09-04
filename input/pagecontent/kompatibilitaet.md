@@ -7,64 +7,7 @@
      Diese Seite ist im Seitenbaum unter "implementer-guidance" eingehängt und
      hat bewusst keinen eigenen Menüeintrag. -->
 
-Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil `ISiKDokumentenMetadaten`, Version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, Version 1.7.0) und IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, Package `ihe.iti.mhd`, Version 4.2.3) wurde anhand der [Berichte des FHIR Validators](https://medizininformatik-initiative.github.io/kerndatensatz-dokument/), der Profilvergleiche des HL7 FHIR Validators (`compare`-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil `mii-pr-dokument-dokument` in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei `content.attachment.title` und `description` ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen `KBV_PR_Base_DocumentReference|1.7.0`. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
-
-<!-- TODO:REVIEW Der Quell-Link "Berichte des FHIR Validators" zeigt auf die
-     veroeffentlichte GitHub-Pages-Seite dieses Moduls, also auf den Leitfaden
-     selbst. Soll er stattdessen auf den vom IG Publisher erzeugten
-     QA-Bericht (qa.html) bzw. auf die zugrunde liegenden
-     Profilvergleichsberichte zeigen, damit die Tabellenwerte nachvollziehbar
-     sind? -->
-
-<!-- TODO:REVIEW Die Simplifier-Quellseite hatte an dieser Stelle einen
-     handgebauten Abschnitt "Uebersicht" als Mini-Inhaltsverzeichnis. Dessen
-     Eintraege waren bereits in der Quelle keine aufloesbaren Links, sondern
-     Klammerausdruecke ohne Ziel. Der Abschnitt wurde nicht uebernommen: der
-     IG Publisher erzeugt die Seitennavigation selbst, und handgebaute
-     Anker-Listen fuehren in der QA zu gebrochenen Links. Falls ein
-     seiteninternes Inhaltsverzeichnis gewuenscht ist, bitte zurueckmelden. -->
-
-<!-- Herkunftshinweis: der nachfolgend zitierte Abschnitt "Zusammenfassung" war
-     in der Simplifier-Quellseite auskommentiert und damit nicht sichtbar. Er
-     wird hier verbatim mitgefuehrt - unveraendert, ungekuerzt und ohne
-     Neuumbruch -, damit der Inhalt bei der Migration nicht verlorengeht. Die
-     aktive Zusammenfassung steht am Seitenende.
-     Hinweis: die Aussage im Zitat, IHE MHD sei "aehnlich flexibel" und seine
-     Felder "optional", ist durch den Profilvergleich gegen
-     IHE.MHD.UnContained.Comprehensive.DocumentReference 4.2.3 widerlegt. Der
-     Block darf nicht unveraendert reaktiviert werden. -->
-
-<!-- QUELLZITAT BEGINN (Simplifier-Quellseite, auskommentierter Abschnitt
-     "Zusammenfassung"; Wortlaut unveraendert uebernommen):
-
-### Zusammenfassung
-
-Das MII KDS Dokument-Profil ist im Hinblick auf die verwendbaren Terminologien und die Ausgestaltung der meisten Metadatenfelder bewusst flexibel gehalten. Für zentrale Felder wie `type` und `category` werden KDL- und XDS-Codes empfohlen, aber nicht verpflichtend gefordert. Stattdessen sind auch LOINC und SNOMED CT als Codesysteme explizit unterstützt und können gleichwertig verwendet werden. Die Bindungsstärke ist nicht required und mit einem Constraint hinsichtlich der Empfehlung versehen. Die Kardinalitäten für diese Felder sind 0..1 (`type`) bzw. 0..* (`category`), und MS ist gesetzt. Damit ist das MII KDS Dokument Profil grundsätzlich offen für lokale, nationale oder internationale Dokumentenklassifikationen und lässt sich mit unterschiedlich strukturierten Quellprofilen gut harmonisieren.
-
-Im Gegensatz dazu ist das ISiK Dokumentenaustausch-Profil deutlich restriktiver. Hier sind KDL- und XDS-Codes für das Feld `type` verpflichtend. Die Bindung ist erforderlich, alternative Codesysteme sind nicht vorgesehen. Auch das Feld `securityLabel` ist im ISiK Dokumentenaustausch-Profil verpflichtend und muss eine der vorgegebenen Vertraulichkeitsstufen enthalten.
-
-Das KBV MIO Basis- und das IHE MHD-Profil sind ähnlich wie das MII KDS Dokument-Profil flexibel. Beide Profile erlauben für `type` und `category` verschiedene Codesysteme, darunter LOINC und SNOMED CT, und setzen keine strikten Vorgaben. Die Felder sind optional, und die Bindungen extensible oder preferred. Damit sind diese Profile für eine breite Palette von Anwendungsfällen und internationale Interoperabilität geeignet.
-
-QUELLZITAT ENDE -->
-
-<!-- PRUEFHINWEIS (Validator-Vergleich ISiK 6.0.0): Die Aussage im obigen
-     Quellzitat, die Bindungsstaerke im MII KDS Dokument-Profil sei "nicht
-     required", trifft nur auf `type`, `category` und `securityLabel` zu.
-     `content.format`, `context.facilityType`, `context.practiceSetting` und
-     `context.event` sind required gebunden. Falls der Abschnitt reaktiviert
-     wird, ist er entsprechend zu korrigieren. -->
-
-<!-- HINWEIS zum Quellzitat (Validator-Vergleich KBV MIO Basis 1.7.0): Die
-     Aussage "Die Bindungen extensible oder preferred" trifft fuer KBV MIO
-     Basis 1.7.0 nicht durchgaengig zu; gemessen sind `type` preferred,
-     `category` example, `securityLabel` extensible, `status`/`docStatus`
-     required und die `context`-Felder example. Das Zitat bleibt
-     unveraendert. -->
-
-<!-- TODO:REVIEW Soll der oben zitierte, in der Quelle deaktivierte
-     Zusammenfassungstext als sichtbarer Abschnitt reaktiviert werden, oder
-     bleibt er (wie bisher) unveroeffentlicht? Eine Reaktivierung ist nur nach
-     Korrektur der oben vermerkten Pruefhinweise moeglich. -->
+Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil `ISiKDokumentenMetadaten`, Version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, Version 1.7.0) und IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, Package `ihe.iti.mhd`, Version 4.2.3) wurde anhand der [Qualitätssicherungsberichte dieses Leitfadens](qa.html), der Profilvergleiche des HL7 FHIR Validators (`compare`-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil `mii-pr-dokument-dokument` in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei `content.attachment.title` und `description` ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen `KBV_PR_Base_DocumentReference|1.7.0`. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
 
 ---
 
@@ -250,12 +193,9 @@ Das MII KDS Dokument-Profil ist als flexibles Superset konzipiert und ermöglich
 
 ---
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die hier verglichenen Elementdefinitionen sind im
-> [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) normativ
-> festgelegt; eine Übersicht aller Profile des Moduls steht unter
-> [Profile](profiles.html). Den fachlichen Kontext dieser Gegenüberstellung sowie
-> die Liste der berücksichtigten externen Standards führt die Seite
-> [Hinweise für Implementierende](implementer-guidance.html).
-{: .ig-highlight .ig-highlight-blue}
+Die hier verglichenen Elementdefinitionen sind im
+[Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) normativ
+festgelegt; eine Übersicht aller Profile des Moduls steht unter
+[Profile](profiles.html). Den fachlichen Kontext dieser Gegenüberstellung sowie
+die Liste der berücksichtigten externen Standards führt die Seite
+[Hinweise für Implementierende](implementer-guidance.html).

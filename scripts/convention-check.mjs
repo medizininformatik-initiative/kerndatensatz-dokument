@@ -129,7 +129,7 @@ function checkPrefixed(value, prefix, charClass) {
  *        (null = the scan did not run, e.g. in unit tests without a tree)
  * @returns {{ findings: Array, ok: boolean }}
  */
-export function evaluate({ sushiConfig = null, igIni = null, packageJson = null, modulePackageJson = null, release = false, demoPagePresent = false, optionalPages = null, duplicateHeadings = null, illustrativeExamples = null } = {}) {
+export function evaluate({ sushiConfig = null, igIni = null, packageJson = null, modulePackageJson = null, release = false, demoPagePresent = false, optionalPages = null, duplicateHeadings = null, illustrativeExamples = null, reviewMarkers = null } = {}) {
   const findings = [];
   const add = (id, applies, status, observed, message) =>
     findings.push({ id, applies, status, observed, message });
@@ -345,6 +345,18 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
       "package.json (root FHIR manifest) must carry the same version and dependency map as sushi-config.yaml");
   }
 
+
+  // M13 — review markers. TODO:REVIEW comments and DERIVED review boxes are
+  // legitimate while a page is being migrated or translated, and they render
+  // verbatim; a release must not carry them (Gate B/C sign-off = their removal).
+  if (reviewMarkers !== null) {
+    if (reviewMarkers.length === 0) add("M13 review markers", "module", "pass", "none present", "no TODO:REVIEW / DERIVED marker in narrative sources");
+    else add("M13 review markers", "module", release ? "fail" : "pass",
+      `${reviewMarkers.length} marker line(s), first: ${reviewMarkers.slice(0, 3).join(", ")}`,
+      release ? "review markers still present on a release branch — resolve every TODO:REVIEW and DERIVED box (Gates B/C) before releasing"
+              : "review markers present — fine in development; a release branch must not carry them");
+  }
+
   if (packageJson !== null) {
     const t1 = packageJson.name === "de.medizininformatikinitiative.template";
     add("T1 package name", "template", t1 ? "pass" : "fail", packageJson.name || null,
@@ -445,6 +457,30 @@ export function scanIllustrativeExamples(root) {
 // its section heading, so a first in-page heading REPEATING the title numbers as
 // "N." and "N.1" with identical text; likewise a heading repeating its parent.
 // Both shapes shipped once (security-and-privacy et al., fixed 2026-08-14).
+
+/**
+ * Review markers that must not reach a published guide: `TODO:REVIEW` comments
+ * and `DERIVED:` review boxes in narrative sources. Both ship verbatim into the
+ * rendered HTML (the publisher strips nothing), so on a release branch they
+ * are a hard failure; in development they are the normal state of a migrated
+ * or half-reviewed page.
+ */
+export function scanReviewMarkers(root) {
+  const hits = [];
+  const roots = ["input/pagecontent", "input/intro-notes"];
+  for (const lang of readTranslationLangs(readIfExists(join(root, "sushi-config.yaml")) || ""))
+    roots.push(`input/translations/${lang}/pagecontent`, `input/translations/${lang}/intro-notes`);
+  for (const dir of roots) {
+    let files = [];
+    try { files = readdirSync(join(root, dir)).filter((f) => f.endsWith(".md")); } catch { continue; }
+    for (const f of files) {
+      const lines = readFileSync(join(root, dir, f), "utf8").split("\n");
+      lines.forEach((l, i) => { if (/TODO:REVIEW|<!--\s*DERIVED:/.test(l)) hits.push(`${dir}/${f}:${i + 1}`); });
+    }
+  }
+  return hits;
+}
+
 function scanDuplicateHeadings(root) {
   const norm = (s) => s.replace(/^[0-9.]+\s*/, "").trim().toLowerCase();
   // page titles: en from sushi-config pages:, de from the IG-level .po
@@ -517,9 +553,10 @@ function main() {
   const optionalPages = scanOptionalPages(args.root);
   const duplicateHeadings = scanDuplicateHeadings(args.root);
   const illustrativeExamples = scanIllustrativeExamples(args.root);
+  const reviewMarkers = scanReviewMarkers(args.root);
 
   const { findings, ok } = evaluate({
-    sushiConfig, igIni, packageJson, modulePackageJson, release: args.release, demoPagePresent, optionalPages, duplicateHeadings, illustrativeExamples,
+    sushiConfig, igIni, packageJson, modulePackageJson, release: args.release, demoPagePresent, optionalPages, duplicateHeadings, illustrativeExamples, reviewMarkers,
   });
 
   const mode = args.release ? "release (strict)" : "development (placeholder-tolerant)";

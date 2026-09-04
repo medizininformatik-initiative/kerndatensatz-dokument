@@ -25,10 +25,7 @@ Forschung.
 | Status           | Ballot        |
 | Realm            | DE            |
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/Index.page.md gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Die vollständige Versionshistorie des Leitfadens ist auf der Seite [Änderungen](changes.html) dokumentiert.
-{: .ig-highlight .ig-highlight-blue}
+Die vollständige Versionshistorie des Leitfadens ist auf der Seite [Änderungen](changes.html) dokumentiert.
 
 ### Modulbeschreibung
 
@@ -104,18 +101,15 @@ Abhängigkeiten sind unter
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/)
 beschrieben.
 
-<!-- DERIVED:bridge source=none gate=B -->
-> **Bei der Migration verfasst — vor dem Release prüfen.**
-> Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in
-> `sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base` 2026.0.0),
-> KDS Meta (`kerndatensatz.meta` 2026.0.0), Deutsche Basisprofile
-> (`de.basisprofil.r4` 1.6.0), ISiK Stufe 6 (`de.gematik.isik` 6.0.0),
-> IHE-D-Terminologien (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4`
-> 2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) sowie
-> HL7-Terminologie- und Extension-Pakete. Die vollständige, versionierte
-> Tabelle rendert die Seite
-> [MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html).
-{: .ig-highlight .ig-highlight-blue}
+Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in
+`sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base` 2026.0.1),
+KDS Meta (`kerndatensatz.meta` 2026.0.0), Deutsche Basisprofile
+(`de.basisprofil.r4` 1.6.0), ISiK Stufe 6 (`de.gematik.isik` 6.0.0),
+IHE-D-Terminologien (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4`
+2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) sowie
+HL7-Terminologie- und Extension-Pakete. Die vollständige, versionierte
+Tabelle rendert die Seite
+[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html).
 
 Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
 **[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle:

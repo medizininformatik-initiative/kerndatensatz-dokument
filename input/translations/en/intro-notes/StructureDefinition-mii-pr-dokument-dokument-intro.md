@@ -14,12 +14,9 @@ recommendations for using the profile can be found in the
 
 ### Mapping of the dataset to FHIR
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md gate=B -->
-> **Written during migration — review before release.**
-> The following table maps the data elements of the logical model
-> [MII LM Dokument](StructureDefinition-mii-lm-dokument.html) onto the elements of this
-> DocumentReference profile.
-{: .ig-highlight .ig-highlight-blue}
+The following table maps the data elements of the logical model
+[MII LM Dokument](StructureDefinition-mii-lm-dokument.html) onto the elements of this
+DocumentReference profile.
 
 <!-- GENERATED TABLE - mechanically produced from
      fsh-generated/resources/StructureDefinition-mii-lm-dokument.json,
@@ -62,19 +59,13 @@ recommendations for using the profile can be found in the
 
 ### Search parameters
 
+The machine-readable declaration of the same 24 search parameters is in the
+[module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html)
+(`input/fsh/definitions/mii-cps-dokument-capabilitystatement.fsh`) — that is where it is normative.
+The list below adds example invocations and pointers into the FHIR base specification
+and must be kept in sync with every change to the CapabilityStatement.
+
 The following search parameters are relevant for this module, including in combination:
-
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md gate=B -->
-> **Written during migration — review before release.**
-> The machine-readable declaration of the same search parameters is in the
-> [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html);
-> the list below adds example invocations and pointers into the FHIR base specification.
-{: .ig-highlight .ig-highlight-blue}
-
-<!-- TODO:REVIEW This list and the CapabilityStatement mii-cps-dokument-capabilitystatement
-     declare the same 24 search parameters. Should the explanatory list (examples +
-     specification pointers) stay here on the profile intro note, or does it belong on
-     capability-statements.html so there is only one place to maintain? -->
 
 1. The search parameter "_id" MUST be supported:
 
@@ -273,8 +264,6 @@ The following search parameters are relevant for this module, including in combi
 Extensive examples that illustrate the profile and the extension together can be found on the
 extension's page
 ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md gate=B -->
-> **Written during migration — review before release.**
-> An overview of all example instances of the module is on the
-> [Examples](examples.html) page.
-{: .ig-highlight .ig-highlight-blue}
+
+An overview of all example instances of the module is on the
+[Examples](examples.html) page.

@@ -29,19 +29,16 @@ The NLP extension deliberately leaves degrees of freedom in documenting such pro
 
 ### Content
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md gate=B -->
-> **Written during migration — review before release.**
-> The technical structure of this extension — differential, key elements, snapshot
-> and the XML and JSON serialisations — is rendered by the IG Publisher directly
-> below this section on this artifact page. The Must Support elements with their
-> short descriptions and comments are shown there as well; canonical URL, status,
-> version and base definition are carried by the page header.
->
-> The codes of the NLP processing status are defined by the code system
-> [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html)
-> with its two-level hierarchy; the extension is bound via the value set
-> [MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.html).
-{: .ig-highlight .ig-highlight-blue}
+The technical structure of this extension — differential, key elements, snapshot
+and the XML and JSON serialisations — is rendered by the IG Publisher directly
+below this section on this artifact page. The Must Support elements with their
+short descriptions and comments are shown there as well; canonical URL, status,
+version and base definition are carried by the page header.
+
+The codes of the NLP processing status are defined by the code system
+[MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html)
+with its two-level hierarchy; the extension is bound via the value set
+[MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.html).
 
 ### Examples
 
@@ -49,8 +46,7 @@ The following example illustrates the processing of a *physician's discharge let
 
 [![Flow diagram of the NLP pipeline: ingestion, preprocessing, de-identification and annotation with the document references created at each step](NLP-Pipeline.svg)](NLP-Pipeline.svg)
 
-<!-- TODO:REVIEW The source writes the FHIR element as `relates to`; in the FHIR data model it is called `relatesTo` (as used on the UML diagrams page). Confirm the spelling with the module editors before publication. -->
-_Please note_: with the element `relates to`, relationships between the different references of a document can be established. The code designations `transforms` and `appends` denote the kind of relationship:
+_Please note_: with the element `relatesTo`, relationships between the different references of a document can be established. The code designations `transforms` and `appends` denote the kind of relationship:
 
 - `transforms`: this document originates from the related original but has been changed in content or structure. For example, when an original document in CDA format has been converted into a text format.
 - `appends`: this document is based on the related document but contains additional information, for example annotations in the form of metadata.
@@ -73,10 +69,7 @@ The following FHIR resources represent the patient and encounter resources belon
 | Department encounter | [Encounter Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html) |
 | Point-of-care encounter | [Encounter Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) |
 
-<!-- DERIVED:bridge source=MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md gate=B -->
-> **Written during migration — review before release.**
-> All examples are entirely synthetic; the full overview of the module's example
-> instances is on the [Examples](examples.html) page.
-{: .ig-highlight .ig-highlight-blue}
+All examples are entirely synthetic; the full overview of the module's example
+instances is on the [Examples](examples.html) page.
 
 Source: [GraSCCo dataset, DOI (Zenodo): 10.5281/zenodo.6539130](https://doi.org/10.5281/zenodo.6539130)
