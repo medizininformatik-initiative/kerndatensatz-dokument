@@ -400,7 +400,7 @@ function readIfExists(path) {
 export function scanOptionalPages(root) {
   // Keys keep their historical names (en = default-language tree, de = the
   // translation tree) so the asymmetry logic in evaluate() is unchanged; the
-  // translation DIRECTORY comes from sushi-config `i18n-lang:` (a DE-first
+  // translation DIRECTORY comes from sushi-config `i18n-lang:` (a German-first
   // module translates into en, the template default into de).
   const tlang = readTranslationLangs(readIfExists(join(root, "sushi-config.yaml")) || "")[0] || "de";
   const dirs = {
@@ -429,7 +429,7 @@ export function scanOptionalPages(root) {
 export function scanIllustrativeExamples(root) {
   // Keys keep their historical names (en = default-language tree, de = the
   // translation tree) so the asymmetry logic in evaluate() is unchanged; the
-  // translation DIRECTORY comes from sushi-config `i18n-lang:` (a DE-first
+  // translation DIRECTORY comes from sushi-config `i18n-lang:` (a German-first
   // module translates into en, the template default into de).
   const tlang = readTranslationLangs(readIfExists(join(root, "sushi-config.yaml")) || "")[0] || "de";
   const dirs = {
@@ -495,7 +495,7 @@ function scanDuplicateHeadings(root) {
     m = /^\s+title:\s*(.+)$/.exec(line);
     if (inPages && m && cur) titlesEn[cur] = m[1].trim().replace(/^["']|["']$/g, "");
   }
-  // Translation languages come from sushi-config `i18n-lang:` (DE-first modules
+  // Translation languages come from sushi-config `i18n-lang:` (German-first modules
   // translate INTO en; template-default modules into de) — never hardcoded.
   const dirs = [["input/pagecontent", titlesEn], ["input/intro-notes", null]];
   for (const lang of readTranslationLangs(sushi)) {

@@ -33,10 +33,8 @@ list — not a glob, because this directory now holds unrelated helpers too.
 | --- | --- | --- |
 | `first-run-bootstrap.sh` | One-time setup of a created module: branches, protection, removal of template-only files | a module author, once |
 | `convention-check.mjs` | Asserts the MII metadata contract (id/canonical/name/packageId, pinned versions) and that OPTIONAL (0..1) menu pages are decided before a release (M9, `docs/optional-pages.md`) | `convention-check.yml` |
-| `language-model-check.sh` | Fails the build when prose contradicts the English-default / German-translation language model | `convention-check.yml` |
+| `language-model-check.sh` | Fails the build when prose contradicts the German-default / English-translation language model | `convention-check.yml` |
 | `check-updates.mjs` | Reports drift between the pinned toolchain and what upstream released | `dependency-check.yml` |
-| `sync-ig-template.sh` | Re-vendors `ig-template/`, or fails on drift (`--check`) | `sync-ig-template.yml` |
-| `resolve-ig-template-source.sh` | Resolves which template repository the sync reads from, and whether it is reachable | `sync-ig-template.yml` (both jobs, before the sync step) |
 | `gen-rendering-demo.py` | Regenerates the demonstration page in both languages from `demo-en.md` / `demo-de.md` + `rendering-demo-codes.json` — run `python3 scripts/gen-rendering-demo.py .` after editing either source; never hand-edit the generated pages | a maintainer, after editing the demo sources |
 | `set-su-termserv-secrets.sh` | Validates an SU-TermServ client certificate and uploads it as repository secrets | a maintainer, once |
 | `seed-comparison-cache.sh` | Places the previous release's `package.tgz` (a GitHub Release asset) into `~/.fhir/packages` so the publisher's `version-comparison` can load it; no-op while the parameter is commented out | `ig-publisher.yml`, `module-release.yml`, `go-publish.yml`, `release-demo.yml` (before the publisher) |

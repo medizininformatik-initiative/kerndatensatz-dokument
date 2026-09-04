@@ -1,0 +1,111 @@
+# =============================================================================
+# validation.yml — the MII reusable FHIR validation (the org-wide error gate)
+#
+# Purpose:   Runs the two validation workflows the MII Kerndatensatz
+#            organisation maintains centrally in `kerndatensatz-meta`, against
+#            the conformance resources and examples in `fsh-generated/resources`
+#            (which this module commits, per the org CI convention):
+#              - ci_dotnet_validation.yml — SUSHI + Firely Terminal, including
+#                the Simplifier quality-control rules in `qc/custom.rules.yaml`.
+#                Configured upstream to always pass: a naming violation shows up
+#                in its log, never as a red check.
+#              - ci_java_validation.yml — the official HL7 Java validator, with
+#                the known-error suppressions in `advisor.json`. THIS is the
+#                error gate that can go red.
+#            This workflow does NOT build the IG (that is `ig-publisher.yml`)
+#            and does NOT release anything — the whole release path (CalVer tag
+#            -> draft GitHub Release -> Zulip announcement) belongs to
+#            `module-release.yml`. Keep it that way: a second release job on the
+#            same tag glob produces two draft releases and two Zulip messages.
+#
+# Triggers:  push to dev / main; any pull request; workflow_dispatch.
+#            `dev` is where this module's work lands, `main` is the release
+#            branch — the validation must see both.
+#
+# Toggle:    vars.ENABLE_VALIDATION — ON by default; set the repository variable
+#            to 'false' to make both jobs skip without editing YAML.
+#
+# Secrets:   - The .NET job inherits SIMPLIFIER_USERNAME / SIMPLIFIER_PASSWORD
+#              (no local equivalent, so `secrets: inherit`). Missing sign-in
+#              credentials leave the job green and complain only in its log.
+#            - The Java job needs an SU-TermServ client certificate. This repo
+#              stores it ONCE under SU_TERMSERV_CLIENT_{CERT,KEY,PASSWORD}; the
+#              reusable workflow declares it under CDS_DEV_CLIENT_{CERT,KEY,
+#              CERT_PASSWORD}, so the names are mapped here at the call site
+#              (docs/secrets.md). The upstream workflow has NO tx.fhir.org
+#              fallback: without the certificate this job fails rather than
+#              degrades — remove the mapping's job, or the secrets, knowingly.
+#
+# Pins:      Both reusable workflows are pinned to a commit SHA. They live only
+#            on `kerndatensatz-meta`'s default branch — the repo's release tags
+#            do not carry `.github/workflows/ci_*_validation.yml` (checked:
+#            v2027.0.0-ballot.rc3 has no such file, v2026.0.0's copy predates
+#            the VALIDATION_REPORT_* inputs used below) — so the pin is a
+#            master commit, re-resolved by hand. The trailing comment records
+#            which branch and date it was resolved from (docs/maintenance.md).
+#            The three `vars.*` inputs are OVERRIDES with a literal fallback:
+#            unset variable -> the pinned default here, never an empty string
+#            (an empty JAVA_VALIDATION_OPTIONS would silently drop
+#            `-advisor-file advisor.json` and fail the build on known errors).
+#            SUSHI_VERSION's fallback must equal the `env:` pin in the build
+#            workflows — scripts/toolchain-pins.test.mjs asserts exactly that.
+#
+# Human-gated steps: none. This workflow only validates; it publishes nothing.
+# =============================================================================
+name: validation
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # dotnet-validation — SUSHI + Firely Terminal + Simplifier quality control.
+  # Needs `contents: write`: on a pull request the upstream workflow commits the
+  # regenerated `fsh-generated/resources/` back onto the PR branch.
+  # ---------------------------------------------------------------------------
+  dotnet-validation:
+    if: ${{ vars.ENABLE_VALIDATION != 'false' }} # toggle: ON by default
+    permissions:
+      contents: write
+    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # master @ 2026-07-15
+    with:
+      ref: ${{ github.event.pull_request.head.ref || github.ref }}
+      SUSHI_VERSION: ${{ vars.SUSHI_VERSION || '3.20.1' }}
+    secrets: inherit
+
+  # ---------------------------------------------------------------------------
+  # java-validation — the official HL7 Java validator. The error gate.
+  # VALIDATION_REPORT_FILTERS suppresses the two IHE-D eventCodeList findings on
+  # the DocumentReference examples that are a known upstream issue, not a defect
+  # of this module (see the module's known-issues note). NOTE: at the pinned
+  # SHA the reusable workflow renders that report from `validation.json` but
+  # never writes it (it only captures the validator's stdout), so the two
+  # VALIDATION_REPORT_* inputs stay inert until either upstream writes the file
+  # or `-output validation.json` is added to JAVA_VALIDATION_OPTIONS. Left as
+  # upstream has it — changing the validator's invocation is a separate,
+  # verifiable change, not part of the main.yml -> validation.yml rework.
+  # ---------------------------------------------------------------------------
+  java-validation:
+    if: ${{ vars.ENABLE_VALIDATION != 'false' }} # toggle: ON by default
+    permissions:
+      contents: read
+    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # master @ 2026-07-15
+    with:
+      ref: ${{ github.event.pull_request.head.ref || github.ref }}
+      PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
+      PATH_TO_EXAMPLES: fsh-generated/resources
+      JAVA_VALIDATION_ENABLED: true
+      JAVA_VALIDATION_OPTIONS: ${{ vars.JAVA_VALIDATION_OPTIONS || '-advisor-file advisor.json -resolution-context file:fsh-generated/resources/ -show-message-ids -output-style compact' }}
+      JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}
+      VALIDATION_REPORT_INCLUDE: errors # errors|warnings|all
+      VALIDATION_REPORT_FILTERS: |
+        DocumentReference-AmandaAlzheimerOriginalDokument.json|*IHEXDSeventCodeList*
+        DocumentReference-AmandaAlzheimerKlartextDokument.json|*IHEXDSeventCodeList*
+    secrets:
+      # This repo's names -> the reusable workflow's names (docs/secrets.md).
+      CDS_DEV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
+      CDS_DEV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
+      CDS_DEV_CLIENT_CERT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
