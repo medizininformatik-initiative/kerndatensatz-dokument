@@ -14,7 +14,7 @@ Ein *Dokument* kann in Abhängigkeit vom Szenario einen Patientenbezug (`subject
 > den von der NSG freigegebenen Stand.
 {: .ig-highlight .ig-highlight-blue}
 
-<a href="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Informationsmodell.svg" target="_blank">![UML-Diagramm des Informationsmodells zum Modul Dokument](Informationsmodell.png)</a>
+[![UML-Diagramm des Informationsmodells zum Modul Dokument](Informationsmodell.svg)](Informationsmodell.svg)
 
 [MII KDS-Modul Person]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
 [MII KDS-Modul Fall]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base

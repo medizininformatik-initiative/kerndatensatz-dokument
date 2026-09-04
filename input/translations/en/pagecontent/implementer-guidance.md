@@ -79,7 +79,7 @@ This specification follows the FHIR core specification for the [DocumentReferenc
      please confirm. The source wording is preserved verbatim; only the link
      target was converted. -->
 
-[![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.png)](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg)
+[![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.svg)](Paketabhaengigkeiten.svg)
 
 <!-- DERIVED:bridge source=none gate=B -->
 > **Written during migration — review before release.**
@@ -91,10 +91,6 @@ This specification follows the FHIR core specification for the [DocumentReferenc
 > shows the state approved by the NSG.
 {: .ig-highlight .ig-highlight-blue}
 
-<!-- TODO:REVIEW The image file Paketabhaengigkeiten.png is not yet present under
-     input/images/. It has to be copied there from the source repository
-     (input/plantuml/Paketabhaengigkeiten.png), otherwise QA reports a broken
-     image reference. -->
 
 This makes it possible to attribute resources such that they are valid against MII KDS as well as against ISiK or IHE at the same time. ISiK and IHE modules are also compatible in principle; in use, however, we recommend stating both the `type` (from KDL / ISiK) and the `category` (from IHE), which neither of the two profiles ISiK, IHE offers at the same time.
 

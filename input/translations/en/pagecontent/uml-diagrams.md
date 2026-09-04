@@ -16,7 +16,7 @@ Depending on the scenario, a *Dokument* can have a reference to a patient (`subj
 > the state approved by the NSG.
 {: .ig-highlight .ig-highlight-blue}
 
-<a href="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Informationsmodell.svg" target="_blank">![UML diagram of the information model for the Dokument module](Informationsmodell.png)</a>
+[![UML diagram of the information model for the Dokument module](Informationsmodell.svg)](Informationsmodell.svg)
 
 [MII KDS module Person]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
 [MII KDS module Fall]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
