@@ -1,0 +1,112 @@
+# Startseite - MII IG Dokument v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* **Startseite**
+
+## Startseite
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc1 |
+| Draft Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_IG_Dokument |
+
+### Einleitung
+
+Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des Kerndatensatz Moduls Dokument der Medizininformatik Initiative. Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form beschrieben.
+
+Der Kerndatensatz der Medizininformatik-Initiative (MII) dient der standardisierten Nutzung klinischer Routinedaten für die medizinische Forschung.
+
+> Mit dem MII KDS-Modul Dokument können Metadaten zu Dokumenten jeglicher Art mit klinischer Relevanz für beliebige Zwecke strukturiert erfasst werden. Dokumente sind in diesem Kontext beliebige Binärobjekte, also beispielsweise auch Bilder oder Videos.
+
+| | |
+| :--- | :--- |
+| Datum | 2026-08-28 |
+| Version | 2027.0.0-ballot.rc1 (CalVer`JJJJ.n.n`) |
+| Status | Ballot |
+| Realm | DE |
+
+> **Bei der Migration verfasst — vor dem Release prüfen.** Die vollständige Versionshistorie des Leitfadens ist auf der Seite [Änderungen](changes.md) dokumentiert.
+
+### Modulbeschreibung
+
+Durch die Nutzung des Profils soll die interne und externe Nutzung von Dokumenten erleichtert werden. Die zentralen Punkte der Charakterisierung durch Metadaten: Dokumentenbeziehungen, Dokumentenstatus, Dokumentenauffindbarkeit, Korpus-Navigation und Dokumentenarchivierung werden von dem Modul aufgegriffen und nach standardisiertem Schema koordiniert.
+
+Das MII KDS-Modul ermöglicht die Erstellung von Dokumentenreferenzen mit den Optionen Bezüge zu den im Basismodul aufgegangenen Modulen Fall und Person herzustellen. Zudem enthält das Modul eine NLP-Extension, welche den Bearbeitungsstatus mit Hinsicht auf NLP-Verfahren wie zum Beispiel Annotationen abbildet (siehe hierfür [UML](uml-diagrams.md)).
+
+Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen, Anonymisierung und NLP-Annotationen, bekommt der Relation zu anderen Dokumenten (MII KDS-Modul Dokument) eine besondere Bedeutung zu, um Verarbeitungsketten abzubilden (`relatesTo`).
+
+Das Informationsmodell trennt Angaben zur Referenz selbst und den Metadaten der referenzierten Dokumente (`content`). Auf den Körper des Dokuments wird über eine lokal zu interpretierende URL (`content.attachment.url`) verwiesen. Grundsätzlich kann der Dokumentkörper des referenzierten Dokuments auch innerhalb der Referenz (`content.attachment.data`) eingebettet werden. Das Modul gibt keine Vorgaben zur Semantik dieser Auflösung.
+
+Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder Codes der Erweiterung NLP-Processing Status ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)) ausdrücken.
+
+### Zielgruppe
+
+Dieser Implementierungsleitfaden richtet sich an:
+
+**Implementierende**
+
+Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.
+ → siehe [Profile](profiles.md) und [Logische Modelle](logical-models.md).
+
+**Forschende**
+
+Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.
+ → siehe [Anleitung für Forschende](guidance.md).
+
+### Inhalt dieses Leitfadens
+
+* **[Anleitung](guidance.md)** — Einstieg und fachliche Hinweise.
+* **Konformität** — die KDS-weiten Konformitätsregeln (Anforderungssprache, Must-Support, Umgang mit fehlenden Daten) pflegt zentral das [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance); die modul-spezifischen Aspekte zu [Sicherheit und Datenschutz](security-and-privacy.md) sind Teil dieses Leitfadens.
+* **[Profile](profiles.md)** und die weiteren **[Artefakt-Seiten](artifacts.md)** — die technischen Artefakte.
+* **[Beispiele](examples.md)** — Beispielinstanzen.
+* **[Abhängigkeiten](ImplementationGuide-mii-ig-dokument.md)** — die ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender Analyse und Urheberrechtshinweisen.
+
+### Verwandte Leitfäden
+
+Dieses Modul ist Teil des MII-Kerndatensatzes; die weiteren KDS-Module und ihre Abhängigkeiten sind unter [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/) beschrieben.
+
+> **Bei der Migration verfasst — vor dem Release prüfen.** Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base` 2026.0.0), KDS Meta (`kerndatensatz.meta` 2026.0.0), Deutsche Basisprofile (`de.basisprofil.r4` 1.6.0), ISiK Stufe 6 (`de.gematik.isik` 6.0.0), IHE-D-Terminologien (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4` 2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) sowie HL7-Terminologie- und Extension-Pakete. Die vollständige, versionierte Tabelle rendert die Seite [MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.md).
+
+Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen **[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle: [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
+
+### Impressum
+
+Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt wurden und unterliegt per Governance Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.
+
+### Ansprechpartner
+
+Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden. Ergänzend steht das MII-Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) im Stream `MII-Kerndatensatz` zur Verfügung.
+
+Anmerkungen und Kritik wird in Form von 'Issues' im [GitHub Projekt](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues) stets gern entgegengenommen.
+
+Fachliche Ansprechpartner:innen dieses Moduls:
+
+* Frank Meineke, SMITH
+* Jakob Faller, MIRACUM
+
+### Autor:innen (in alphabetischer Reihenfolge)
+
+* Frank Meineke, SMITH, Informationsmodellierung/Fachvertretung
+* Jakob Faller, MIRACUM, Informationsmodellierung/Fachvertretung
+* Katja Hoffmann, MIRACUM/DigiHub MiHUBx, Technische Umsetzung
+* Marcel Susky, MIRACUM/DigiHub MiHUBx, Informationsmodellierung/Fachvertretung/Technische Umsetzung
+* Martin Boeker, MIRACUM, Fachvertretung
+* Noemi Deppenwiese, MIRACUM, Technische Umsetzung
+* Thomas Ganslandt, MIRACUM, Fachvertretung
+
+### Urheberrecht und Lizenz
+
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin.
+
+Dieses Werk ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Lizenz](https://creativecommons.org/licenses/by/4.0/deed.de) (CC BY 4.0).
+
+Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die FHIR-Basis-Spezifikation.
+
+Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben und gepflegt. Es gilt das Copyright der dort jeweils aufgeführten Herausgeber (Publisher).
+
+### Haftungsausschluss
+
+Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses Dokuments auf FHIR Version R4 beruhen, für die Copyright HL7 International gilt.
+
+Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Autor:innen keine Haftung für direkte oder indirekte Schäden übernehmen, die aus dem Inhalt dieser Spezifikation entstehen könnten.
+
