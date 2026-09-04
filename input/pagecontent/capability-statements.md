@@ -13,4 +13,4 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/
 
 Artefakt-Seite: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html)
 
-{% lang-fragment CapabilityStatement-mii-cps-dokument-capabilitystatement-html.xhtml %}
+{% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-de.xhtml %}

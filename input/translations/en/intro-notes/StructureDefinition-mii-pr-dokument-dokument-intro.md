@@ -14,48 +14,10 @@ recommendations for using the profile can be found in the
 
 ### Mapping of the dataset to FHIR
 
-The following table maps the data elements of the logical model
+The complete mapping of the data elements of the logical model
 [MII LM Dokument](StructureDefinition-mii-lm-dokument.html) onto the elements of this
-DocumentReference profile.
-
-<!-- GENERATED TABLE - mechanically produced from
-     fsh-generated/resources/StructureDefinition-mii-lm-dokument.json,
-     fields differential.element.short (column "Dataset"), differential.element.definition
-     (column "Explanation") and differential.element.mapping[0].map (column "FHIR"),
-     filtered on mapping.identity = 'mii-map-dokument' and mapping.map starting with
-     'DocumentReference.'. Replaces the FQL query of the Simplifier source page; the
-     IG Publisher renders a logical model's element mappings nowhere.
-     REGENERATE after every change to the logical model or to the mappings.
-     NOTE: the logical model carries only German short/definition texts (no translation
-     extensions), so the first two columns here are machine-translated - see the
-     TODO:REVIEW at the top of this file. -->
-
-| Dataset | Explanation | FHIR |
-| --- | --- | --- |
-| Version-specific identifier | Version-specific unique identifier assigned to the document by the document source | `DocumentReference.masterIdentifier` |
-| Version-independent identifier | Other version-independent identifier assigned to the document (e.g. by further document-processing systems) | `DocumentReference.identifier` |
-| Status of the document reference | Status of this document reference (current, superseded or entered in error) | `DocumentReference.status` |
-| Status of the document | Status of the underlying document (preliminary, final, amended or entered in error) | `DocumentReference.docStatus` |
-| Kind of document | Kind of the referenced document (e.g. history and physical, discharge summary, progress note) | `DocumentReference.type` |
-| Categories of the document | Higher-level category of the referenced document (e.g. physician reports or physician documentation) | `DocumentReference.category` |
-| Reference to patient | Patient the referenced document relates to | `DocumentReference.subject` |
-| Description of the document | Human-readable description of the referenced document | `DocumentReference.description` |
-| Confidentiality of the document | Degree of confidentiality/security of the referenced document (e.g. unrestricted, low, moderate, normal or restricted) | `DocumentReference.securityLabel` |
-| Relationship of the document | Relationships of the referenced document to other documents | `DocumentReference.relatesTo` |
-| Type of the relationship | Relationship to other documents | `DocumentReference.relatesTo.code` |
-| Reference to document | Target of the document relationship | `DocumentReference.relatesTo.target` |
-| Content of the document | Document (Base64-encoded data) or reference (URL) with relevant metadata about the attachment | `DocumentReference.content` |
-| Language the content was written in | Language used in the document | `DocumentReference.attachment.language` |
-| Creation date of the content | Date on which the document was created | `DocumentReference.attachment.creation` |
-| Binary data of the content | Document as binary data | `DocumentReference.attachment.data` |
-| URL of the content | Reference to the (local) storage location of the document | `DocumentReference.attachment.url` |
-| MIME type of the content | MIME type of the document content | `DocumentReference.attachment.contentType` |
-| Creation context of the document | Clinical context in which the document was created | `DocumentReference.context` |
-| Reference to the encounter | Contact with the healthcare facility, or the type of care, associated with the document content | `DocumentReference.context.encounter` |
-| Documented activity | Actions or procedures documented in the context | `DocumentReference.context.event` |
-| Clinical specialty of the activity | Clinical specialty in which the document content was created | `DocumentReference.context.practiceSetting` |
-| Period of performance of the activity | Period during which the action or procedure described in the document was performed | `DocumentReference.context.period` |
-| Type of facility of the activity | Type of facility in which the action or procedure on the patient took place | `DocumentReference.context.facilityType` |
+DocumentReference profile is maintained in a single place and is shown on the
+[Logical Models](logical-models.html#mapping-to-the-fhir-resource) page.
 
 ### Search parameters
 

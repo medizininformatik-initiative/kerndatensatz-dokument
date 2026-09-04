@@ -21,13 +21,13 @@ publication, including dependencies and publishing parameters.
 
 ### Cross Version Analysis
 
-{% lang-fragment cross-version-analysis.xhtml %}
+{% include cross-version-analysis-en.xhtml %}
 
 ### IG Dependencies
 
 This IG contains the following dependencies on other IGs.
 
-{% lang-fragment dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 > **Where the versions come from.** Every package in the table is pinned
 > directly in
@@ -51,11 +51,11 @@ This IG declares the following global profiles — profiles that apply to every
 instance of their resource type exchanged under this guide. An empty table
 means this module declares none.
 
-{% lang-fragment globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
 
 ### Copyrights
 
-{% lang-fragment ip-statements.xhtml %}
+{% include ip-statements-en.xhtml %}
 
 ### IG Parameter Settings and Expansion Parameters
 

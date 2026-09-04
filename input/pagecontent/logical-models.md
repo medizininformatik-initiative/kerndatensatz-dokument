@@ -10,7 +10,7 @@ Die offiziell beschlossene Version des Informationsmodells befinden sich auf [AR
 
 Das folgende Verzeichnis listet jedes Element des logischen Modells mit Pfad und Beschreibung.
 
-{% include StructureDefinition-mii-lm-dokument-dict.xhtml %}
+{% include StructureDefinition-mii-lm-dokument-dict-de.xhtml %}
 
 *Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Datenelemente und deren Beschreibung abzielt. Verwendete Datentypen und Kardinalitäten sind nicht als verpflichtend anzusehen. Dies wird abschließend durch die FHIR-Profile festgelegt. Für jedes Element innerhalb des Logical Models existiert ein 1:1 Mapping auf ein Element einer konkreten FHIR Ressource.*
 

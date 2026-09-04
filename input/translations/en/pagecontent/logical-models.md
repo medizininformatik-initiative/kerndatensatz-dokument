@@ -11,7 +11,7 @@ The officially adopted version of the information model is located on [ART DECOR
 
 The following dictionary lists every element of the logical model with its path and description.
 
-{% include StructureDefinition-mii-lm-dokument-dict.xhtml %}
+{% include StructureDefinition-mii-lm-dokument-dict-en.xhtml %}
 
 *Note that the Logical Model targets solely the representation of the data elements and their descriptions. The data types and cardinalities used are not to be regarded as mandatory. These are ultimately defined by the FHIR profiles. For every element within the Logical Model there is a 1:1 mapping onto an element of a concrete FHIR resource.*
 

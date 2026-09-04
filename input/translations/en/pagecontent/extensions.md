@@ -14,3 +14,7 @@ The module defines one extension: the
 (`MII_EX_Dokument_NLP_Processing_Status`) carrying the processing status of a
 document in an NLP pipeline. The description lives on the artifact page; the
 pipeline examples on the [Examples](examples.html) page.
+
+### Extension structure
+
+{% include structure-tabs.html artifact="StructureDefinition-mii-ex-dokument-nlp-processing-status" %}

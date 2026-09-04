@@ -14,3 +14,7 @@ Das Modul definiert eine Extension: die
 Dokuments in einer NLP-Pipeline. Die fachliche Beschreibung steht direkt auf
 der Artefakt-Seite; die Beispiele der Pipeline auf der Seite
 [Beispiele](examples.html).
+
+### Struktur der Extension
+
+{% include structure-tabs.html artifact="StructureDefinition-mii-ex-dokument-nlp-processing-status" lang="de" %}

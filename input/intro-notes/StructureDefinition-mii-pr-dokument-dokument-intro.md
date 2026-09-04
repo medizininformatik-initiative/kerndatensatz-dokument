@@ -14,45 +14,10 @@ Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der
 
 ### Mapping Datensatz zu FHIR
 
-Die folgende Tabelle stellt die Datenelemente des logischen Modells
-[MII LM Dokument](StructureDefinition-mii-lm-dokument.html) den Elementen dieses
-DocumentReference-Profils gegenüber.
-
-<!-- GENERATED TABLE - mechanisch erzeugt aus
-     fsh-generated/resources/StructureDefinition-mii-lm-dokument.json,
-     Felder differential.element.short (Spalte "Datensatz"), differential.element.definition
-     (Spalte "Erklaerung") und differential.element.mapping[0].map (Spalte "FHIR"),
-     gefiltert auf mapping.identity = 'mii-map-dokument' und mapping.map beginnend mit
-     'DocumentReference.'. Ersetzt die FQL-Abfrage der Simplifier-Quellseite; der
-     IG-Publisher rendert die Element-Mappings eines Logical Model an keiner Stelle.
-     Nach jeder Aenderung am logischen Modell oder an den Mappings NEU ERZEUGEN. -->
-
-| Datensatz | Erklärung | FHIR |
-| --- | --- | --- |
-| Versionsspezifische Kennung | Versionsspezifische eindeutige Kennung, die dem Dokument durch die Dokumentenquelle zugewiesen wurde | `DocumentReference.masterIdentifier` |
-| Versionsunabhängige Kennung | Andere versionsunabhängige Kennung, die dem Dokument (z.B. durch weitere dokumentenverarbeitende Systeme) zugewiesen wurde | `DocumentReference.identifier` |
-| Status der Dokumentenreferenz | Status dieser Dokumentenreferenz (aktuell, überholt oder irrtümlich eingegeben) | `DocumentReference.status` |
-| Status des Dokuments | Status des zugrunde liegenden Dokuments (vorläufig, final, geändert oder irrtümlich eingegeben) | `DocumentReference.docStatus` |
-| Art des Dokuments | Art des Dokuments auf das verwiesen wird (z.B. Anamnese und Untersuchung, Entlassungsbericht, Verlaufsbericht) | `DocumentReference.type` |
-| Kategorien des Dokuments | Übergeordnete Kategorie des Dokuments auf das verwiesen wird (z.B. Arztberichte oder Arztdokumentation) | `DocumentReference.category` |
-| Verweis auf Patient | Patient auf den sich das verwiesene Dokument bezieht | `DocumentReference.subject` |
-| Beschreibung des Dokuments | Menschenlesbare Beschreibung zum verwiesenen Dokuments | `DocumentReference.description` |
-| Vertraulichkeit des Dokuments | Grad der Vertraulichkeit/Sicherheit des verwiesenen Dokuments (z. B. uneingeschränkt, gering, mittel, normal oder eingeschränkt) | `DocumentReference.securityLabel` |
-| Beziehung des Dokuments | Beziehungen des verwiesenen Dokuments zu anderen Dokumenten | `DocumentReference.relatesTo` |
-| Art der Beziehung | Beziehung zu anderen Dokumenten | `DocumentReference.relatesTo.code` |
-| Verweis auf Dokument | Ziel der Dokumentenbeziehung | `DocumentReference.relatesTo.target` |
-| Inhalt des Dokuments | Dokument (Base64-kodierte Daten) oder Verweis (URL) mit relevanten Metadaten zum Anhang | `DocumentReference.content` |
-| Verfassungssprache des Inhalts | Verwendete Sprache in dem Dokument | `DocumentReference.attachment.language` |
-| Erstellungsdatum des Inhalts | Datum der Erstellung des Dokumentes | `DocumentReference.attachment.creation` |
-| Binärdaten zum Inhalt | Dokument als Binärdaten | `DocumentReference.attachment.data` |
-| URL zum Inhalt | Verweis auf den (lokalen) Ablageort des Dokuments | `DocumentReference.attachment.url` |
-| MIME-Typ zum Inhalt | MIME-Typ des Dokumenteninhalts | `DocumentReference.attachment.contentType` |
-| Erzeugungskontext des Dokuments | Klinischer Kontext, in welchem das Dokument erzeugt wurde | `DocumentReference.context` |
-| Verweis auf Einrichtungskontakt | Kontakt zur Gesundheitseinrichtung oder die Art der Versorgung, die mit dem Dokumenteninhalt assoziiert ist | `DocumentReference.context.encounter` |
-| Dokumentierter Vorgang | Handlungen oder Prozeduren, die im Kontext dokumentiert wurden | `DocumentReference.context.event` |
-| Klinisches Fachgebiet zum Vorgang | Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde | `DocumentReference.context.practiceSetting` |
-| Durchführungszeitraum zum Vorgang | Zeitraum, in dem die in dem Dokument beschriebene Handlung oder Prozedur durchgeführt wurde | `DocumentReference.context.period` |
-| Art der Einrichtung zum Vorgang | Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte | `DocumentReference.context.facilityType` |
+Die vollständige Gegenüberstellung der Datenelemente des logischen Modells
+[MII LM Dokument](StructureDefinition-mii-lm-dokument.html) mit den Elementen dieses
+DocumentReference-Profils wird an einer einzigen Stelle gepflegt und steht auf der Seite
+[Logische Modelle](logical-models.html#mapping-auf-die-fhir-ressource).
 
 ### Suchparameter
 

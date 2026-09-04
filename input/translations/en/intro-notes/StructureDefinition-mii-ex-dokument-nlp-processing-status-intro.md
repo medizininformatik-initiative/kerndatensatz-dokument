@@ -60,14 +60,8 @@ The following FHIR DocumentReference resources used the document profile ([MII P
 | `De-ID.txt` | [De-identified document](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) |
 | `Annotat.zip` | [Annotated document](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) |
 
-The following FHIR resources represent the patient and encounter resources belonging to the example. These FHIR resources are used exclusively by the original document `Amanda_Alzheimer.docx` and its associated document reference.
-
-| Context | Example resource |
-| --- | --- |
-| Amanda Alzheimer | [Patient](Patient-AmandaAlzheimer.html) |
-| Institution encounter | [Encounter Einrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.html) |
-| Department encounter | [Encounter Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html) |
-| Point-of-care encounter | [Encounter Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) |
+The patient and encounter resources belonging to the example are used exclusively by the
+original document `Amanda_Alzheimer.docx` and its associated document reference.
 
 All examples are entirely synthetic; the full overview of the module's example
 instances is on the [Examples](examples.html) page.

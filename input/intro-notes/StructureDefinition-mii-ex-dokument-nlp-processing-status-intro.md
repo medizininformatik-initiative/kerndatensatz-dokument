@@ -59,14 +59,8 @@ Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil 
 | `De-ID.txt` | [De-identifiziertes Dokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) |
 | `Annotat.zip` | [Annotiertes Dokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) |
 
-Die folgenden FHIR-Ressourcen stellen die zum Beispiel zugehörigen FHIR Patienten- und Fall-Ressourcen dar. Diese FHIR-Ressourcen werden ausschließlich vom Originaldokument `Amanda_Alzheimer.docx` und der zugehörigen Dokumentreferenz verwendet.
-
-| Kontext | Beispiel-Ressource |
-| --- | --- |
-| Amanda Alzheimer | [Patientin](Patient-AmandaAlzheimer.html) |
-| Einrichtungskontakt | [Encounter Einrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.html) |
-| Abteilungskontakt | [Encounter Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html) |
-| Versorgungsstellenkontakt | [Encounter Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) |
+Die zum Beispiel gehörenden FHIR Patienten- und Fall-Ressourcen werden ausschließlich vom
+Originaldokument `Amanda_Alzheimer.docx` und der zugehörigen Dokumentreferenz verwendet.
 
 Alle Beispiele sind vollständig synthetisch; die Gesamtübersicht der
 Beispielinstanzen des Moduls steht auf der Seite [Beispiele](examples.html).

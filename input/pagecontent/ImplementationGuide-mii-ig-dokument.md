@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD041 -->
 <!-- German mirror of input/pagecontent/ImplementationGuide-mii-ig-dokument.md —
      both files must say the same thing. ALL generated fragments (cross-version
-     analysis included) are language-selected via lang-fragment: the pinned
+     analysis included) are included with an explicit language suffix (the Publisher's lang-fragment keyword resolves to -en on every page, measured 2026-09-04): the pinned
      publisher writes _includes/<name>-<lang>.xhtml plus a bare default-language
      alias, and no .html variant — kerndatensatz-basis' .html include names
      belong to a different publisher version, do not copy them here.
@@ -15,13 +15,13 @@ Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.
 
 ### Versionsübergreifende Analyse
 
-{% lang-fragment cross-version-analysis.xhtml %}
+{% include cross-version-analysis-de.xhtml %}
 
 ### IG-Abhängigkeiten
 
 Dieser IG enthält die folgenden Abhängigkeiten von anderen IGs.
 
-{% lang-fragment dependency-table.xhtml %}
+{% include dependency-table-de.xhtml %}
 
 > **Woher die Versionen kommen.** Jedes Paket der Tabelle ist direkt in
 > [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml)
@@ -43,11 +43,11 @@ Dieser IG deklariert die folgenden globalen Profile — Profile, die für jede
 unter diesem Leitfaden ausgetauschte Instanz ihres Ressourcentyps gelten. Eine
 leere Tabelle bedeutet: Dieses Modul deklariert keine.
 
-{% lang-fragment globals-table.xhtml %}
+{% include globals-table-de.xhtml %}
 
 ### Urheberrechte
 
-{% lang-fragment ip-statements.xhtml %}
+{% include ip-statements-de.xhtml %}
 
 ### IG-Parametereinstellungen und Expansionsparameter
 
