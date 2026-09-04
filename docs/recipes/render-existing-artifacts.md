@@ -4,16 +4,21 @@
 narrative page, instead of linking the reader away to the generated artifact
 page.
 
-**Prerequisites.** A module that builds ([create a new module](create-a-new-module.md))
-and at least one artifact to render.
+**Prerequisites.** A build that runs
+([first build in the dev container](first-build-in-devcontainer.md)) and at
+least one artifact to render.
 
 **Not this recipe:** improving the page the Publisher *generates* for a profile —
 that is [how profiles render](render-profiles.md), which covers the tabs and the
 `-intro.md` / `-notes.md` files. The fragment names here are those same views:
 `-diff` is the *Differential* tab, `-snapshot` the *Snapshot* tab, `-dict` the
-element table. The demonstration page
-`input/pagecontent/rendering-artifacts.md` ships with this scaffold and renders
-live — read it next to its own source.
+element table.
+
+> The module template shipped a live demonstration page
+> (`input/pagecontent/rendering-artifacts.md`) for these directives. It was
+> removed during the migration onto the template, together with its menu entry,
+> its `pages:` entry and its generator — so the syntax below is the reference,
+> not that page. It is still readable in the template repository.
 
 ## If you are coming from Simplifier
 
@@ -38,8 +43,8 @@ What replaces it:
    - One artifact, a view the Publisher already renders → an `include`.
    - Part of one example instance → `{% fragment %}`.
    - Something across several artifacts → `{% sql %}`.
-2. **Write the directive** into any page under `input/pagecontent/`. Use the
-   demonstration page as the reference for exact syntax.
+2. **Write the directive** into any page under `input/pagecontent/`, and mirror
+   it into the English twin under `input/translations/en/pagecontent/`.
 
    To *show* a directive rather than run it, see
    [Escaping a directive](#escaping-a-directive) below — which escape is correct
@@ -47,19 +52,6 @@ What replaces it:
 3. **Build and look at it.** A directive that names an artifact or fragment that
    does not exist renders as nothing, or fails the build — both are loud, which
    is the point of checking here rather than after publication.
-4. **Delete the demonstration page** when you no longer need it — at the
-   latest before a release: the convention check hard-fails a `release/**`
-   branch while it is present (M8). Remove all of:
-   - `input/pagecontent/rendering-artifacts.md` and the German mirror
-     `input/translations/de/pagecontent/rendering-artifacts.md`
-   - the `rendering-artifacts.md` entry in `sushi-config.yaml` `pages:`
-   - the menu entry in `input/includes/menu.xml` and
-     `input/translations/de/includes/menu.xml`
-   - the `demo/` directory (the Liquid template the page renders)
-   - the generator and its inputs: `scripts/gen-rendering-demo.py`,
-     `scripts/demo-en.md`, `scripts/demo-de.md`,
-     `scripts/rendering-demo-codes.json`
-
 ## Expected result
 
 The rendering appears inline in your page, styled like the rest of the guide,
@@ -122,7 +114,7 @@ artifact name, is handled separately a few lines below, at
 [line 6145](https://github.com/HL7/fhir-ig-publisher/blob/1521577ee46cd28950e6416987f9a2b2eaa55fc3/org.hl7.fhir.publisher.core/src/main/java/org/hl7/fhir/igtools/publisher/PublisherGenerator.java#L6145).
 Four of the eight have a guidance page: `sql`, `fragment`, `json` and
 `multi-map`. Three appear in no guidance page at all — `class-diagram`,
-`lang-fragment` and `dataset` are implemented but undocumented. The eighth is
+`lang-fragment` and `dataset` are implemented but undocumented. Measured with publisher 2.3.2 on this module (2026-09-04): `{% lang-fragment X.xhtml %}` is rewritten to `{% include X-en.xhtml %}` on **every** page, German ones included — so this module includes generated fragments with an explicit language suffix instead (`X-de.xhtml` on the German page, `X-en.xhtml` on its English twin; the publisher writes both plus a suffix-less third variant). Note also that the publisher's `-de` fragments carry English rendering phrases ("Search Parameters", "Supported") — the `-de`/`-en` variants differ only in their `Language:` line; that localization gap is the publisher's, not the guide's. The eighth is
 the odd one out, below.
 
 **A second silent gap, inside a keyword that does work.** `{% fragment %}`
@@ -153,7 +145,7 @@ This is worth re-checking after a Publisher bump; it may be a bug.
 **The fragment-code list is openly incomplete.** The Confluence page says so
 itself, above the list: *"Note: as of July 2023, this list is not
 comprehensive."* Measured against IG Publisher 2.3.0 by listing the `.xhtml`
-files a real build writes: **96 codes** are emitted for a scaffold holding one
+files a real build writes: **96 codes** are emitted for a guide holding one
 profile and one instance, where the page documents 37. Undocumented but
 generated: `tree`, `grid`, `status`, `uses`, `crumbs`, `obligations`,
 `search-params`, `dict-diff`, `dict-key`, `dict-ms`, `inv-diff`, `sd-xref`,
@@ -166,8 +158,7 @@ generated: `tree`, `grid`, `status`, `uses`, `crumbs`, `obligations`,
 resolve in the artifact-page context: the base-spec pages (`patient.html`),
 `formats.html`, the `help16.png` icon, or element anchors the artifact page
 defines for itself. Include one in a narrative page and the build's broken-link
-count rises while `Errors:` stays at 0. The demonstration page lists these four
-with their include line and without their rendering, and says why.
+count rises while `Errors:` stays at 0.
 
 The reliable way to know what your build offers, and what is safe to embed, is
 to look rather than to trust a list — including this one. The fragments are

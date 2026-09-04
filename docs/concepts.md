@@ -1,48 +1,45 @@
-# Concepts — how this module template works and why
+# Concepts — how this module IG works and why
 
 Read this after the [Glossary](glossary.md). It explains the ideas behind this
 repository.
 
 ## 1. What this repository is
 
-This is a **GitHub template repository**: click **"Use this template"** and you get
-a fresh copy that is a ready-to-run MII KDS **module IG** project. You then replace
-the `{{…}}` placeholders with your module's details, and you have a buildable,
-MII-branded FHIR Implementation Guide.
+The **MII KDS module IG "Dokument"**: the FSH sources, narrative pages,
+terminology and examples of one Kerndatensatz module, built into a website and
+an installable FHIR package by the HL7 **IG Publisher**. The repository layout,
+CI and docs come from
+[`mii-kds-module-template`](https://github.com/medizininformatik-initiative/mii-kds-module-template)
+(v0.13.1), onto which the module was migrated from Simplifier — see
+[`migration-log/migration-report.md`](../migration-log/migration-report.md).
 
-> **Why a template repository, not a library:** an IG project is *your* code — you
-> edit its profiles and pages. A template gives you a correct, complete starting
-> point (CI, release automation, docs, an example profile) that you then own,
-> instead of assembling it from scratch.
+> **Why a template and not a shared library:** an IG project is *your* code —
+> you edit its profiles and pages. The template gave this repository a correct,
+> complete starting point (CI, release automation, docs) that the module now
+> owns.
 
-## 2. How it references the MII template — URL now, published package later
+## 2. How it references the MII IG template — URL now, published package later
 
 The **look** of the IG comes from a separate template package,
 [`de.medizininformatikinitiative.template`](https://github.com/medizininformatik-initiative/ig-template-mii-kds)
-This scaffold references it in `ig.ini`, in one of three forms (decision
-2026-08-28):
+(release v1.3.4). `ig.ini` references it in one of three forms; this repository
+uses the first:
 
-- **Interim URL (the default today):**
+- **Interim URL (used here):**
   `template = https://github.com/medizininformatik-initiative/ig-template-mii-kds`.
   The IG Publisher fetches the repository zip at build time — the default
   branch, i.e. the released state on `main`. Nothing vendored can go stale;
   the trade is that a build needs network access and follows `main` rather
   than a pinned version.
-- **Vendored (offline / reproducibility fallback):** a copy lives in
-  `ig-template/`, referenced as `template = #ig-template`, kept in sync from
-  the companion repository's `dev` branch by the `sync-ig-template` workflow.
-  Use it when a build must run offline or byte-stable against a committed copy.
 - **Published (the endgame):** `template = de.medizininformatikinitiative.template#<version>`
   — a pinned `id#version` resolves through the FHIR package server only, so
-  this waits on the publication decision ([#1](../../../issues/1),
-  [#2](../../../issues/2)). Switch with
-  [recipes/switch-template-to-published.md](recipes/switch-template-to-published.md);
-  the vendored folder and the sync machinery dissolve then.
+  this waits on the template's publication. Switch with
+  [recipes/switch-template-to-published.md](recipes/switch-template-to-published.md).
 
-> **Why the URL now:** the package has no registry entry yet, and a vendored
-> copy that builds never exercise goes stale invisibly. The URL keeps every
-> build on the template's released state; the published pin later restores
-> byte-stable rebuilds.
+> **Why the URL now:** the package has no registry entry yet. The URL keeps
+> every build on the template's released state; the published pin later
+> restores byte-stable rebuilds. A locally vendored copy is deliberately *not*
+> kept — a copy that no build exercises goes stale invisibly.
 
 ## 3. The metadata contract (CRMI)
 
@@ -50,44 +47,41 @@ This scaffold references it in `ig.ini`, in one of three forms (decision
 ImplementationGuide profiles and carries the same `artifact-*` extensions as the
 reference module kerndatensatz-basis, so the module is a properly described,
 versioned, shareable publication unit. The `convention-check` job enforces the
-naming patterns (packageId, id, name, title, canonical, CalVer version). Fill
-every `{{PLACEHOLDER}}`; the comments in the file tell you what each one means.
+naming patterns (packageId, id, name, title, canonical, CalVer version). The
+comments in the file tell you what each field means; the checker fails on a
+value that leaves the agreed pattern.
 
-## 4. Two layers you must not confuse
+## 4. One repository, one release mechanism
 
-The single most important idea for a maintainer: **this template repository
-releases itself with SemVer; a module you create releases itself with CalVer and
-carries no Release Please at all.** [workflows.md](workflows.md) sets the two
-layers side by side; the [first-run bootstrap](recipes/first-run-setup.md) is
-what enforces the separation.
+The single most important rule for a maintainer: **this module releases with
+CalVer `YYYY.n.n` and carries no SemVer automation at all.**
+[workflows.md](workflows.md) and [release.md](release.md) describe the path from
+a tag to a published package.
 
 > **Why one mechanism per repo:** SemVer tags fighting CalVer tags corrupt the
 > version history.
 
-## 5. What propagates to a module, and what does not
+## 5. What the template supplies, and what the module owns
 
-The bootstrap **keeps** everything a module needs to live and **removes** only
-the files that maintain *this template repo itself*. The authoritative list is
-the `REMOVE=` line in `scripts/first-run-bootstrap.sh`, which the dry run
-prints; the first-run tooling itself stays, so the recipe a module links to
-still resolves — see [first-run-setup.md](recipes/first-run-setup.md).
+The template supplies **presentation and machinery**: the IG template package
+(layout, branding), the CI workflows, the release automation, the convention
+checks and these docs. The module owns **content**: `input/fsh/**`,
+`input/pagecontent/**` and their English mirrors under
+`input/translations/en/**`, the terminology, the examples and the metadata in
+`sushi-config.yaml`.
 
-> **Why previews propagate but Release Please does not:** a branch preview is a
-> per-repo development aid every module wants; Release Please is a versioning
-> authority that would conflict with the module's CalVer process. Different purpose,
-> different fate.
-
-The **page set and the menu** propagate too, and they stay the module's to edit —
-the IG template supplies presentation only. The mandatory (1..1) entries follow
-the MII-agreed menu structure; the optional (0..1) entries are decided per
-module ([optional-pages.md](optional-pages.md)). See
+The **page set and the menu** came with the template and are the module's to
+edit — the IG template supplies presentation only. The mandatory (1..1) entries
+follow the MII-agreed menu structure; the optional (0..1) entries were decided
+for this module ([optional-pages.md](optional-pages.md)). See
 [page-structure.md](page-structure.md) for that boundary and why it was drawn
 there.
 
 ## 6. Registries, publication and governance
 
-A finished module is published as a FHIR package and a website (GitHub Pages under
-the creating org; the canonical stays the MII URL). Production publication runs
+The module is published as a FHIR package and a website (GitHub Pages under the
+`medizininformatik-initiative` organisation; the canonical stays the MII URL).
+Production publication runs
 through the **gated** `-go-publish` — never automatically. The naming, terminology
 policy and release process are defined in the
 [MII meta wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki);

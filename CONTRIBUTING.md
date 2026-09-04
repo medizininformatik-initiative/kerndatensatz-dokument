@@ -1,18 +1,12 @@
 # Contributing
 
 Thank you for contributing! This page explains the branching model, the commit
-convention, and — important for this repository — the difference between
-contributing **to this template** and working **in a module created from it**.
+convention, and how a change reaches a release of this module.
 
-## Two layers: this template vs. your module
-
-This template repository itself is maintained on a `main`/`dev` model and
-released with **SemVer via Release Please on `main`**; a module **created from**
-it is released only via the MII Module Release Workflow (**CalVer
-`YYYY.n.n`**), and the first-run bootstrap removes the Release Please files
-from the new module so the two release systems never mix. The rest of this page
-describes contributing to **this template repository**; the full operational
-model for both layers is in [`docs/workflows.md`](docs/workflows.md).
+This repository is the **MII KDS module IG "Dokument"**. It is released with
+**CalVer `YYYY.n.n`** via the MII Module Release Workflow
+([`docs/release.md`](docs/release.md)) — there is no SemVer automation here. The
+full operational model is in [`docs/workflows.md`](docs/workflows.md).
 
 ## Branching model
 
@@ -21,21 +15,18 @@ Two long-lived branches, short-lived working branches:
 - **`main` — stable release branch.** Always in a released, buildable state;
   every commit on `main` corresponds to a released (or release-ready) version.
   Protected: no direct pushes, pull requests require one approval. `main` is
-  the **default branch**, so it is what visitors and "Use this template" users
-  see first.
-  > **Why main is default:** novices should land on, and start from, the
-  > stable state — not work-in-progress.
+  the **default branch**, so it is what visitors see first.
+  > **Why main is default:** a visitor should land on, and start from, the
+  > released state — not work-in-progress.
 - **`dev` — integration branch, unstable.** Where reviewed changes accumulate
   between releases; may be temporarily broken. Protected: changes arrive only
   via pull request. CI preview builds run here.
-  > **Branch state:** `main` and `dev` diverged in both directions once, because
-  > some changes were merged straight into `main`. They were reconciled on
-  > 2026-08-06 and now point at the same commit. See
-  > [docs/org-move.md](docs/org-move.md#branch-state--main-and-dev-are-reconciled)
-  > for the back-merge rule that keeps it that way.
+  > **Back-merge rule:** if anything ever lands on `main` without going through
+  > `dev` (a hotfix, a release commit), `main` must be merged back into `dev`
+  > before the next `dev → main` merge — otherwise the two drift apart.
 - **`release/vYYYY.n.n` — release-preparation branches.** The `release/**`
-  name arms the convention check's strict release mode (unresolved
-  placeholders and the demonstration page fail there); see
+  name arms the convention check's strict release mode (an unresolved
+  placeholder or an undecided optional page fails there); see
   [docs/release.md](docs/release.md).
 - **`feature/*`, `change/*`, `fix/*` — short-lived working branches.** Branched
   **off `dev`**, one focused change each, merged back into `dev` via PR, then
@@ -60,7 +51,8 @@ gitGraph
 ```
 
 > Reads as: work happens on short-lived `feature/*` off `dev`; `dev`
-> integrates; `dev → main` is the release, tagged by Release Please on `main`.
+> integrates; `dev → main` is the release gate, and a human pushes the CalVer
+> tag `vYYYY.n.n` on `main`.
 
 ### Flow — making one change
 
@@ -71,11 +63,12 @@ gitGraph
    Commit per change), delete the branch.
 4. To release: open a **`dev` → `main` PR** (the release-candidate gate, a
    human-in-the-loop point). Merge it as a **merge commit, not a squash**, so
-   the individual Conventional Commits reach `main`. Release automation then
-   runs on `main`.
-   > **Why a merge commit for dev → main:** Release Please builds the
-   > changelog from the individual Conventional Commits on `main`. Squashing
-   > `dev → main` would collapse the changelog to one line.
+   the individual Conventional Commits reach `main`. The CalVer tag is then
+   pushed on `main` and `module-release.yml` takes over
+   ([`docs/recipes/cut-a-release.md`](docs/recipes/cut-a-release.md)).
+   > **Why a merge commit for dev → main:** the release notes are written from
+   > the individual Conventional Commits on `main`. Squashing `dev → main`
+   > would collapse them to one line.
 
 ## Conventional Commits — cheat-sheet
 
@@ -83,52 +76,43 @@ Every commit message (and PR title, since PRs are squash-merged) follows
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
 `<type>: <short description>` — for example `feat: add terminology page`.
 
-| Type | Use for | Release effect (SemVer) |
-| --- | --- | --- |
-| `feat` | A new capability | Minor bump |
-| `fix` | A bug fix | Patch bump |
-| `docs` | Documentation only | None |
-| `chore` | Maintenance (configs, housekeeping) | None |
-| `ci` | CI workflow changes | None |
-| `refactor` | Code restructuring, no behavior change | None |
-| `test` | Adding or fixing tests | None |
+| Type | Use for |
+| --- | --- |
+| `feat` | A new capability (a profile, an extension, a page) |
+| `fix` | A bug fix |
+| `docs` | Documentation only |
+| `chore` | Maintenance (configs, housekeeping) |
+| `ci` | CI workflow changes |
+| `refactor` | Restructuring, no behaviour change |
+| `test` | Adding or fixing tests |
 
 Breaking change: add `!` after the type (`feat!: …`) and explain the break in
-the commit body — this triggers a major bump.
+the commit body.
 
-> **Why Conventional Commits:** the release automation reads them to compute
-> the next version and to write the changelog. A wrong type means a wrong
-> version bump.
+> **Why Conventional Commits:** the module version is set by hand (CalVer, see
+> [`docs/release.md`](docs/release.md)), but the release notes are generated
+> from these commits — a wrong type puts a change in the wrong section, or
+> hides it.
 
 ## Pull request expectations
 
 - One focused change per PR; keep diffs reviewable.
 - PRs target `dev`. `main` normally receives work only as the `dev → main`
-  release merge (plus the Release Please release commits).
+  release merge.
 - **If something does have to go straight into `main`** — a fix that cannot wait
   for the next release — the change is not finished until `main` has been merged
-  back into `dev`. Skipping the back-merge is what made the two branches diverge;
-  see [docs/org-move.md](docs/org-move.md#branch-state--main-and-dev-are-reconciled).
+  back into `dev`. Skipping the back-merge is what makes the two branches
+  diverge.
 - CI must be green before merge.
 - Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
-
-## Working in a module created from this template
-
-If you created a repository via "Use this template", you are working in a
-**module**, not in this template. The same branching model applies there
-(after the first-run bootstrap creates `dev` — see the README's Quickstart
-warning), but the release process is the **MII CalVer Module Release
-Workflow**, not Release Please. The module recipes are in
-[`docs/recipes/`](docs/recipes/README.md); improvements to the scaffold itself
-belong here, as PRs to this repository.
 
 ## How this relates to the MII process
 
 Everything above is **this repository's** workflow. It is not an MII rule, and
 this repository does not speak for the MII.
 
-The MII does publish rules for commenting on a Kerndatensatz module, and a
-module built from this scaffold will eventually sit inside them. They are in
+The MII does publish rules for commenting on a Kerndatensatz module, and this
+module sits inside them. They are in
 the [**KDS governance, version 4.0 (7 May 2026)**](https://www.medizininformatik-initiative.de/sites/default/files/2026-07/KDS-Governance-v4.pdf),
 adopted by the National Steering Committee and linked from the
 [MII core-data-set page](https://www.medizininformatik-initiative.de/en/medical-informatics-initiatives-core-data-set):

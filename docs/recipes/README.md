@@ -1,20 +1,28 @@
 # Recipes
 
-Short, task-shaped guides for authoring an MII KDS module IG. Each one takes a
+Short, task-shaped guides for working on this module IG. Each one takes a
 single job from start to a checkable result.
 
-**New here?** Do them in this order: [first-run setup](first-run-setup.md) →
+**New here?** Do them in this order:
 [first build in the dev container](first-build-in-devcontainer.md) →
-[create a new module](create-a-new-module.md) → [add a profile](add-a-profile.md).
+[add a profile](add-a-profile.md).
 
 ## Getting started
 
 | Recipe | Use it when |
 | --- | --- |
-| [first-run setup of a new module](first-run-setup.md) | You just created your repository from the template |
 | [first build in the dev container](first-build-in-devcontainer.md) | You need a working toolchain without installing anything |
-| [create a new module](create-a-new-module.md) | You are filling in your module's metadata and first content |
-| [decide an optional page](remove-an-optional-page.md) | You are keeping or removing one of the seven optional (0..1) menu entries |
+| [decide an optional page](remove-an-optional-page.md) | You are keeping or removing one of the optional (0..1) menu entries |
+
+## Inherited from the module template
+
+These two describe the one-time setup that produced this repository. They have
+already run here; they are kept as the record of what was done.
+
+| Recipe | What it records |
+| --- | --- |
+| [first-run setup of a new module](first-run-setup.md) | Creating `dev`, branch protection, and removing the template's own release automation |
+| [create a new module](create-a-new-module.md) | Filling in the module metadata and the first content |
 
 ## Authoring content
 
@@ -35,14 +43,14 @@ single job from start to a checkable result.
 | --- | --- |
 | [regenerate the `special-url` list](regenerate-special-url.md) | The build warns about canonicals outside your module |
 | [switch to the published template](switch-template-to-published.md) | The MII IG template has a release you can pin |
-| [cut a release (CalVer)](cut-a-release.md) | Your module is ready to publish |
+| [cut a release (CalVer)](cut-a-release.md) | The module is ready to publish |
 | [review a dependency update](review-a-dependency-update.md) | A bump was proposed and someone has to decide |
 | [triage a vulnerability alert](triage-a-vulnerability-alert.md) | A security finding needs a decision |
 
 ## The pattern every recipe follows
 
 Recipes are written to the same shape so you always know where to look. If you
-add one — for your own module or back into this template — follow it:
+add one, follow it:
 
 ```markdown
 # Recipe: <imperative task>

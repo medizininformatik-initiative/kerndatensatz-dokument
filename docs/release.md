@@ -1,16 +1,16 @@
-# Releasing a module (MII CalVer — the reference)
+# Releasing this module (MII CalVer — the reference)
 
-This page is the **reference** for how a module built from this template is
-released. It maps the automation in
+This page is the **reference** for how this module is released. It maps the
+automation in
 [`.github/workflows/module-release.yml`](../.github/workflows/module-release.yml)
 one-to-one onto the MII
 **[Module Release Workflow](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow)**
 (the authoritative wiki page), and says plainly which steps are **automated** and
 which are **human-gated**.
 
-> **Who is this for:** a maintainer who has already created a module from this
-> template and wants to cut a version. New to the module itself? Start with the
-> README and `docs/recipes/create-a-new-module.md` first.
+> **Who is this for:** a maintainer who wants to cut a version. New to the
+> repository? Start with the [README](../README.md) and
+> [concepts.md](concepts.md) first.
 
 > The click-by-click walkthrough lives in the companion recipe
 > `docs/recipes/cut-a-release.md`. Read this page once to understand the model;
@@ -18,24 +18,20 @@ which are **human-gated**.
 
 ---
 
-## The one hard rule: CalVer here, SemVer there — never mix
+## The one hard rule: CalVer here — and no second release mechanism
 
-- **Modules** (this repo, and every repo created from this template) are
-  released **only** with **CalVer `YYYY.n.n`** via the **MII Module Release
-  Workflow** — the tag-driven, human-gated automation described below. **Never
-  Release Please.**
-- **The two template repos** (`ig-template-mii-kds` and `mii-kds-module-template`
-  itself) release **themselves** with **SemVer** via **Release Please**. That is
-  *tooling* versioning, and it lives only on those template repos.
+- **This module** is released **only** with **CalVer `YYYY.n.n`** via the **MII
+  Module Release Workflow** — the tag-driven, human-gated automation described
+  below.
+- **The template repos** (`ig-template-mii-kds` and `mii-kds-module-template`)
+  release *themselves* with SemVer. That is *tooling* versioning; it lives on
+  those repos and must never be wired into this one.
 
 > **Why the hard boundary:** two release systems on one repo corrupt the version
-> history — a module carrying Release Please would auto-cut SemVer tags that
-> fight the MII CalVer process. One repo, one release mechanism. That is why the
-> **first-run bootstrap removes** all five template-only files from a new
-> module — Release Please (`release-please.yml`, `release-please-config.json`,
-> `.release-please-manifest.json`), `notify-zulip.yml` and the template
-> `CHANGELOG.md` — but **keeps** `module-release.yml`, `go-publish.yml`, and the
-> preview workflow. See `docs/recipes/first-run-setup.md`.
+> history — SemVer automation here would auto-cut tags that fight the MII CalVer
+> process. One repo, one release mechanism. This repository therefore carries
+> only `module-release.yml`, `go-publish.yml` and the preview workflow; the
+> template's own release automation was removed by the first-run bootstrap.
 
 ### CalVer format
 
@@ -72,10 +68,10 @@ prerelease, and the preview build labels itself `2027.0.0-draft.1` this way).
 > **Why the build gate:** a tag that does not build never becomes a release, and
 > the build captures `package.tgz` as a workflow artifact. QA *counts* are
 > reported but not required to be zero — the intended error gate is the
-> reusable validation workflow, which runs on every PR. **Known gap:** its
-> Java job reads a repo-root `package.json` this scaffold does not ship, so on
-> a created module that job currently fails until the `package.json` decision
-> in [issue #141](../../../issues/141) is made; the .NET QC job is unaffected.
+> reusable validation workflow, which runs on every PR. Its Java job reads the
+> repo-root `package.json` (the FHIR package manifest); this module ships one,
+> and the convention check (M12) holds its version and dependency map equal to
+> `sushi-config.yaml`.
 
 ---
 
@@ -112,25 +108,21 @@ git checkout -b release/v2026.0.1   # release/** arms the strict convention chec
 > `comparison-v<previous>/index.html` and annotates changed elements on the
 > artifact pages — link that report from the version's changelog section,
 > next to the prose explanation of any breaking change. Until the first
-> formal publication the comparator has no version history to read; this
-> template repo demonstrates the report anyway with the validator's compare
-> command on its preview (`comparison-demo/` — see `docs/workflows.md`).
+> formal publication the comparator has no version history to read.
 
-> **First release of a module: delete the scaffold's demonstration page
-> first.** The convention check hard-fails a `release/**` branch while it is
-> present (M8) and its message lists every file to remove; the same list is in
-> [render existing artifacts](recipes/render-existing-artifacts.md) step 4.
-> The same gate covers the **optional (0..1) pages**: any page still carrying
-> its `OPTIONAL-PAGE` banner fails the release check (M9) until you keep or
-> remove it per [optional-pages.md](optional-pages.md) — and the **scaffold's
-> illustrative examples** (M11): the highlighted *Person* example in the
-> module-specific section of `security-and-privacy.md` must be deleted (both
-> languages) before the first release; write your module's own aspects there
-> or adopt the section's documented default text.
+> **What the convention check hard-fails on a `release/**` branch.** The
+> template's demonstration page (`rendering-artifacts.md`) must be absent — it
+> was removed during the migration, so **M8** passes here. Any page still
+> carrying its `OPTIONAL-PAGE` banner fails **M9** until it is kept or removed
+> per [optional-pages.md](optional-pages.md); any leftover illustrative-example
+> block fails **M11**; and any `TODO:REVIEW` marker or `DERIVED` review box left
+> in a narrative source fails **M13**. All four report (green) on development
+> branches and fail only on a release branch, so nothing undecided ships
+> silently.
 
-Bump the CalVer version everywhere it appears **in this template**. The wiki's
-file list names Simplifier's `package.json` and `guide.yaml`, which are not
-present here; the surface in this scaffold is:
+Bump the CalVer version everywhere it appears. The wiki's file list names
+Simplifier's `guide.yaml`, which is not present here; the surface in this
+repository is:
 
 - **`sushi-config.yaml`**
   - `version:` — the module version (e.g. `version: "2026.0.1"`).
@@ -153,20 +145,22 @@ present here; the surface in this scaffold is:
   - `desc` — a one-line human description of *this* release.
   - `first` — set to `true` only for a module's very first release; set it to
     `false` for every release after that.
-- **`input/fsh/rulesets/`** — the three files that stamp the version onto every
-  conformance resource, so an unbumped ruleset ships artifacts pointing at the
-  previous release:
-  - `version.fsh` — `version` / `^version` and the package-source version.
-  - `meta-profile.fsh` — `meta.profile[+] = "<canonical>|<version>"`.
-  - `cps-rules.fsh` — `supportedProfile[+] = "<profile>|<version>"`.
+- **`package.json`** (the root FHIR package manifest the MII reusable Java
+  validation reads) — `version` and the `dependencies` map must match
+  `sushi-config.yaml`; the convention check asserts it (M12).
+- **The version literals in FSH**, so an unbumped literal does not ship
+  artifacts pointing at the previous release:
+  - `input/fsh/common/Version.fsh` — the `Version` / `PR_CS_VS_Version`
+    rule sets (`version` / `^version`).
+  - `input/fsh/rulesets/meta-profile.fsh` — `meta.profile[+] = "{canonical}|<version>"`.
   See [`input/fsh/rulesets/README.md`](../input/fsh/rulesets/README.md) for the
-  placeholder-to-file table.
+  rule-set overview.
 - **Approval-date call sites** — every `insert CRMIApprovalDate(<date>)` in
-  `input/fsh/` (e.g. `input/fsh/profiles/example-patient.fsh`). `crmi.fsh`
-  takes the date at the call site, so bumping the ruleset is not enough.
+  `input/fsh/`. `crmi.fsh` takes the date at the call site, so bumping the rule
+  set is not enough.
 - **The narrative pages** — `index.md`, `changes.md`, `metadata.md` and
-  `version-history.md`, and their German mirrors under
-  `input/translations/de/pagecontent/`, print the version in prose.
+  `version-history.md`, and their English mirrors under
+  `input/translations/en/pagecontent/`, print the version in prose.
 
 > **Why keep the three `sushi-config.yaml` spots in sync:** the metadata
 > contract asserts only that `version:` itself is CalVer (M6 in
@@ -216,10 +210,9 @@ Pushing the tag triggers **`module-release.yml`** (automated):
 - the **`release`** job then creates a **draft** GitHub Release named for the tag,
   with GitHub's auto-generated notes plus a body template to fill in.
 
-> **On the un-instantiated template repo this workflow does nothing:** a `guard`
-> job detects unreplaced `{{…}}` placeholders and every downstream job skips with
-> a `::notice`. Only a real, bootstrapped module runs it for real. This also
-> keeps a template-repo SemVer tag from ever driving the module path.
+> **The `guard` job:** it detects unreplaced `{{…}}` placeholders and skips every
+> downstream job with a `::notice`. In this module the placeholders are filled,
+> so the guard passes and the release path runs for real.
 
 ### 6. Package publishing — *does not apply*
 
@@ -239,9 +232,9 @@ Publishing fires the **`notify_zulip`** job (automated): it posts to the MII
 Zulip organisation, stream `MII-Kerndatensatz`, **topic `Releases`**.
 
 > **Why topic `Releases` (not `Template Releases`):** `Releases` is the **module**
-> topic; the *template repos* announce their SemVer tooling releases under
-> `Template Releases`. Keeping the two topics apart keeps the CalVer/SemVer split
-> legible in chat too.
+> topic; the *template repos* announce their tooling releases under
+> `Template Releases`. Keeping the two topics apart keeps the module and tooling
+> streams legible in chat too.
 
 > **The announcement key:** `notify_zulip` maps `secrets.ZULIP_API_KEY`
 > to an env var; when the key is absent the job **skips with a `::notice`, it

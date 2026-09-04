@@ -1,6 +1,12 @@
 # Recipe: first-run setup of a new module
 
-**Goal.** Turn a fresh copy of this template (made with **"Use this template"**)
+> **Inherited from the module template — already done here.** This recipe
+> describes the one-time bootstrap that turned a copy of
+> `mii-kds-module-template` into a module repository. It has already run in
+> this repository; it is kept as the record of what it did and as the reference
+> for the next module. Nothing on this page is work to do here.
+
+**Goal.** Turn a fresh copy of the template (made with **"Use this template"**)
 into a working module repository: get the `dev` branch and branch protection in
 place, and remove the template's own release automation, which must not live in a module.
 
@@ -145,10 +151,9 @@ The bootstrap printed it; the essentials:
 
 1. **Replace every `{{PLACEHOLDER}}`.** Start in `sushi-config.yaml` (its header
    lists every placeholder and what it means), then `ig.ini` (the module slug in
-   the `ig =` path only — **leave the `template =` line as it is**: the default
-   is the template repository URL, fetched at build time, and
-   `template = #ig-template` is the vendored offline fallback; both stay until
-   the MII template package is published, see
+   the `ig =` path only — **leave the `template =` line as it is**: it is the
+   template repository URL, fetched at build time, and stays that way until the
+   MII template package is published, see
    [switch-template-to-published.md](switch-template-to-published.md)), then
    `publication-request.json` and `.github/workflows/go-publish.yml`. Run
    `node scripts/convention-check.mjs` — it must stay green.
@@ -168,29 +173,9 @@ The bootstrap printed it; the essentials:
    server and does not fail.
 4. **Release announcements (optional):** add `ZULIP_API_KEY` to announce your
    module's CalVer releases to the MII Zulip.
-5. **Vendored IG template (while the template repos have not moved):** set the
-   repository variable `IG_TEMPLATE_REPO_URL` to the clone URL of
-   `ig-template-mii-kds`, so `sync-ig-template.yml` keeps your `ig-template/`
-   mirror — the offline/reproducibility fallback behind the URL default in
-   `ig.ini` — current:
 
-   ```sh
-   gh variable set IG_TEMPLATE_REPO_URL --repo <your-org>/<your-module-repo> \
-     --body "https://github.com/<template-host-org>/ig-template-mii-kds.git"
-   ```
-
-   `<your-org>` is where **your module** lives; `<template-host-org>` is where
-   `ig-template-mii-kds` lives (currently `medizininformatik-initiative`) —
-   they are usually **not** the same.
-
-   Without it the workflow probes the built-in target-organisation URL and, if
-   that is not reachable, **skips with a notice instead of failing** — your
-   first PR stays green either way. Delete the variable once the repositories
-   live in the target organisation, or delete the whole workflow once `ig.ini`
-   uses the published template package
-   ([switch-template-to-published.md](switch-template-to-published.md)).
-6. **Decide the optional (0..1) menu pages** (can wait, but not past the first
-   release): the scaffold ships seven pages the MII menu structure marks
+5. **Decide the optional (0..1) menu pages** (can wait, but not past the first
+   release): the template ships seven pages the MII menu structure marks
    optional, each carrying a visible banner. Keep or remove each one per
    [optional-pages.md](../optional-pages.md); the convention check lists the
    undecided ones on every run and fails a `release/**` branch while any
@@ -200,12 +185,12 @@ The bootstrap printed it; the essentials:
 
 ## What needs no setup: the agent skills
 
-Your module already carries the repository-local skills in [`skills/`](../../skills/README.md)
-(`wiki-consistency-check`, `docs-steward`) — "Use this template" brought them with it and an agent
+The module already carries the repository-local skills in [`skills/`](../../skills/README.md)
+(`wiki-consistency-check`, `docs-steward`) — the template brought them with it and an agent
 can invoke them immediately. Nothing to install, no variable to set.
 
 The IG-measuring and IG-translation skills live in the org catalog `agent-skills` and are **not**
-copied into the template (see [`skills/RETIRED.md`](../../skills/RETIRED.md)). When you need one,
+copied here (see [`skills/RETIRED.md`](../../skills/RETIRED.md)). When you need one,
 install it from the catalog at a pinned release:
 
 ```bash
@@ -218,11 +203,11 @@ npx skills add forschungsgruppe-digital-health/agent-skills/tree/<release> --ski
 
 - `main` and `dev` both exist and are protected (Settings → Branches shows the
   rules).
-- The Release Please files (`release-please.yml`, `release-please-config.json`,
-  `.release-please-manifest.json`), `notify-zulip.yml`, `release-demo.yml` and
-  the template `CHANGELOG.md` are gone; this recipe, `scripts/first-run-bootstrap.sh` and
-  the preview, validation, monitoring, convention-check and module-release
-  workflows are still there.
+- The template's own release automation (its Release Please files, the template
+  release announcement, the Pages demo workflow and the template `CHANGELOG.md`)
+  is gone; this recipe, `scripts/first-run-bootstrap.sh` and the preview,
+  validation, monitoring, convention-check and module-release workflows are
+  still there.
 - `node scripts/convention-check.mjs` runs green (placeholders count as
   "parameterized" until you resolve them).
 

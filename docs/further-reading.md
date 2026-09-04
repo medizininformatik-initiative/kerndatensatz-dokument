@@ -1,9 +1,9 @@
 # Further reading
 
-A curated reading list of the specifications, wiki pages and tools this template
-and its modules build on. If a link moves, search its title.
+A curated reading list of the specifications, wiki pages and tools this module
+builds on. If a link moves, search its title.
 
-## MII — the rules this template and its modules follow
+## MII — the rules this module follows
 
 The [MII meta wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki)
 is authoritative; when it and this repo disagree, the wiki wins.
@@ -16,9 +16,9 @@ is authoritative; when it and this repo disagree, the wiki wins.
 - [Terminology Version Policy](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Terminology-Version-Policy)
   — how code system versions are pinned; relevant to terminology-server choice.
 - [Module Release Workflow](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow)
-  — the **CalVer** release process for modules (contrast with this template's SemVer).
+  — the **CalVer** release process this module follows.
 - [GitHub Reusable Validation Workflows](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/GitHub-Reusable-Validation-Workflows)
-  — the shared CI validation the module scaffold consumes.
+  — the shared CI validation `validation.yml` consumes.
 - [Dev Container ‐ IG Publisher](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Dev-Container-‐-IG-Publisher)
   — the dev-container approach this repo aligns with.
 - [Release 2027](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Release-2027)
@@ -38,21 +38,19 @@ is authoritative; when it and this repo disagree, the wiki wins.
   `package-list.json` to understand what we override vs inherit.
 - [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry) — the public IG/template
   registry; `templates.json` is where the MII IG template would get listed. That
-  listing belongs to the IG template repository, not to a module — it is still
-  an open decision ([issue #135](../../../issues/135)).
+  listing belongs to the IG template repository, not to this module — see
+  [org-move.md](org-move.md).
 - [FHIR sample IG](https://build.fhir.org/ig/FHIR/sample-ig/) — a minimal reference
   IG, useful when you want to see a complete small example.
 
 ## Tooling conventions
 
 - [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) — the
-  commit-message format that drives releases here (see [CONTRIBUTING.md](../CONTRIBUTING.md)).
-- [Semantic Versioning 2.0.0](https://semver.org/) — the version scheme for the
-  **template repos** (modules use CalVer).
-- [Release Please](https://github.com/googleapis/release-please) — the release
-  automation on the **template repos only**. A module never carries it; the
-  first-run bootstrap removes it. See [release.md](release.md).
-- [Development Containers](https://containers.dev/) — the dev-container standard our
+  commit-message format used here (see [CONTRIBUTING.md](../CONTRIBUTING.md)).
+- [Semantic Versioning 2.0.0](https://semver.org/) — the version scheme of the
+  **template tooling** this module consumes; the module itself uses CalVer, see
+  [release.md](release.md).
+- [Development Containers](https://containers.dev/) — the dev-container standard
   `.devcontainer/` follows.
 
 ## Getting help
@@ -60,4 +58,4 @@ is authoritative; when it and this repo disagree, the wiki wins.
 - HL7 FHIR community Zulip — <https://chat.fhir.org>, stream `german/mi-initiative`.
 - MII Zulip — <https://mii.zulipchat.com/>, stream `MII-Kerndatensatz`.
 
-See also [Getting help in the README](../README.md#getting-help).
+See also the [README](../README.md).

@@ -1,12 +1,12 @@
-# FHIR IG best practices — this scaffold's self-check (module author)
+# FHIR IG best practices — this module's self-check
 
-A recommendation set, not a compliance gate. It is this scaffold's reading of
+A recommendation set, not a compliance gate. It is this repository's reading of
 HL7's IG best-practice guidance and of the MII meta wiki, with the current state
-of the scaffold proven item by item. HL7's guidance recommends; it does not
+of the module proven item by item. HL7's guidance recommends; it does not
 oblige. No MII governance document makes any of it a release gate for a KDS
-module, and this repository decides nothing about MII modules — where the meta
-wiki and this page disagree, the wiki wins. Use it when you build your module and
-again before a release, and drop the items your module has no use for.
+module — where the meta wiki and this page disagree, the wiki wins. Use it while
+authoring and again before a release, and drop the items this module has no use
+for.
 
 ## Sources (retrieved 2026-07-26)
 
@@ -21,8 +21,8 @@ again before a release, and drop the items your module has no use for.
 | S7 | [FHIR core **Security & Privacy module**](https://build.fhir.org/secpriv-module.html) + [security checklist](https://build.fhir.org/security.html) | security/privacy baseline |
 | S8 | [MII meta wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki) — naming conventions, conformance, terminology version policy, module release workflow | MII-specific rules |
 
-**Legend** — ✅ done by the scaffold · 📝 **your job** as module author (the
-scaffold gives you the place and a prompt) · ➖ not applicable.
+**Legend** — ✅ in place · 📝 **an authoring job** (the repository gives you the
+place and a prompt) · ➖ not applicable.
 
 ---
 
@@ -54,7 +54,7 @@ scaffold gives you the place and a prompt) · ➖ not applicable.
 | Uses the defined narrative styles where appropriate (`stu-note`, `dragon`, …) | 📝 | Available from the template; use `{:.stu-note}` / `{:.dragon}` for open issues and warnings |
 | Intros/notes on artifacts | 📝 | Put `StructureDefinition-<id>-intro.md` / `-notes.md` in `input/intro-notes/` (wired via `path-pages`) |
 | Rationale for controversial design decisions is captured | 📝 | Record it in the artifact's notes or in `guidance.md` |
-| Normative sentences are machine-readably marked | 📝 | The `§<page>-<n>:…§` marker + `§§§` table mechanism (an IG-Publisher feature) is available for the module's OWN normative sentences; the scaffold ships none since the MII-wide rules moved to the Meta module. How to use it: [page-structure.md](page-structure.md) § "Where module-specific conformance statements go now". Markers are English-only — [why](maintenance.md#verified-by-observation-not-by-specification) |
+| Normative sentences are machine-readably marked | 📝 | The `§<page>-<n>:…§` marker + `§§§` table mechanism (an IG-Publisher feature) is available for the module's OWN normative sentences; none are marked here since the MII-wide rules moved to the Meta module. How to use it: [page-structure.md](page-structure.md) § "Where module-specific conformance statements go now". Markers are English-only — [why](maintenance.md#verified-by-observation-not-by-specification) |
 
 ## 3. Images and diagrams (S1)
 
@@ -69,9 +69,9 @@ scaffold gives you the place and a prompt) · ➖ not applicable.
 | Check | State | Evidence / what to do |
 |---|---|---|
 | Artifact volume is reviewable and maintainable | 📝 | Ship the profiles your use cases need — every artifact must be maintained for years |
-| Uses `mustSupport` to express support expectations, **not** cardinality | ✅ / 📝 | The example profile (`input/fsh/profiles/example-patient.fsh`) uses `MS` with `0..1`/`1..1` deliberately; the MII-wide Must-Support semantics are linked from the menu ([meta wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms)) |
+| Uses `mustSupport` to express support expectations, **not** cardinality | ✅ / 📝 | The module's profile (`input/fsh/profiles/mii-pr-dokument-dokument.fsh`) uses `MS` with explicit cardinalities; the MII-wide Must-Support semantics are linked from the menu ([meta wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms)) |
 | Avoids constraining `max` / does not block legacy data | 📝 | The example constrains no `max`; follow that when profiling |
-| Does not force `meta.profile`, never forbids extra values | ✅ | Not constrained anywhere in the scaffold |
+| Does not force `meta.profile`, never forbids extra values | ✅ | Not constrained anywhere in the module |
 | Uses appropriate artifact types beyond profiles | ✅ | Page slots + `input/fsh/` subfolders exist for CapabilityStatements, ValueSets, CodeSystems, Logical Models, Parameters |
 | Follows the MII naming conventions | ✅ / 📝 | Enforced by `convention-check.yml` (packageId/id/name/title/canonical/CalVer); artifact names follow `MII_PR_<Module>_<Name>` per `input/fsh/README.md` |
 
@@ -98,7 +98,7 @@ scaffold gives you the place and a prompt) · ➖ not applicable.
 
 | Check | State | Evidence / what to do |
 |---|---|---|
-| Examples showcase the key parts of the IG | ✅ / 📝 | One worked example ships (`input/fsh/instances/example-patient-instance.fsh`); add examples covering your artifacts |
+| Examples showcase the key parts of the IG | ✅ / 📝 | Worked examples ship under `input/fsh/examples/alzheimer/`; extend them to cover every artifact |
 | At least one example highlights every must-support element and extension | 📝 | Extend as you add profiles |
 | Examples avoid declaring `meta.profile` unless required | ✅ | The shipped example does not declare it |
 | Only synthetic data | ✅ | `Max Mustermann-Testpatient`; never use real or realistic patient data |
@@ -111,12 +111,12 @@ scaffold gives you the place and a prompt) · ➖ not applicable.
 | Dependencies are pinned to fixed versions (never `current`/`dev`) | ✅ | `dependencies:` in `sushi-config.yaml`; enforced by `convention-check.yml`, monitored by `dependency-check.yml` |
 | Version scheme follows the MII module release workflow (CalVer) | ✅ | `version: {{CALVER_VERSION}}`, released via `module-release.yml` — see [`docs/release.md`](release.md) |
 | Publication runs through the IG Publisher's `-go-publish` | ✅ | `go-publish.yml`, manual and dry-run by default — see [`docs/release.md`](release.md) |
-| Multi-language is set up the supported way | ✅ | `i18n-default-lang: en`, `i18n-lang: [de]`, `translation-sources`; menu/content/resource translation per [`docs/recipes/add-translation.md`](recipes/add-translation.md) (S3) |
+| Multi-language is set up the supported way | ✅ | `i18n-default-lang: de`, `i18n-lang: [en]`, `translation-sources`; menu/content/resource translation per [`docs/recipes/add-translation.md`](recipes/add-translation.md) (S3) |
 | Required IG metadata is complete (publisher, contact, jurisdiction, licence, copyright) | ✅ | `sushi-config.yaml` — `publisher`, `jurisdiction: DE`, `license: CC-BY-4.0`, `copyrightYear` |
 
 ---
 
-## Before every release — this scaffold's own check
+## Before every release — this repository's own check
 
 None of this is an MII release gate. What the MII publishes for a KDS module is
 the [KDS governance, v4.0 (7 May 2026)](https://www.medizininformatik-initiative.de/sites/default/files/2026-07/KDS-Governance-v4.pdf)
@@ -124,18 +124,18 @@ and the [Module Release Workflow](https://github.com/medizininformatik-initiativ
 in the meta wiki; neither makes an item below a condition of releasing. The gates
 that really stop a release here are the MII reusable validation workflow and, on
 a release branch, `convention-check` (see [release.md](release.md)). The rest is
-what this scaffold recommends:
+what this page recommends:
 
 1. Every `[TODO]` prompt is resolved in **both** page trees —
    `grep -rn '\[TODO' input/pagecontent input/translations` must come back
-   empty. German is a rendered language here, so an unresolved prompt in the
-   translation ships to `/de/` just as visibly. (The scaffold's HTML authoring
-   comments mention `[TODO ...]` too; those comments are meant to be deleted —
-   see `input/pagecontent/index.md`.)
+   empty. The translation is a rendered language too, so an unresolved prompt
+   in it ships just as visibly. (The HTML authoring comments mention
+   `[TODO ...]` as well; those comments are meant to be deleted — see
+   `input/pagecontent/index.md`.)
 2. `security-and-privacy.md` is filled in. HL7's guidance recommends a
-   security-and-privacy section and this scaffold ships the page pre-structured;
-   whether an unfilled section blocks your release is your project's decision.
-3. Read `output/qa.html` and `input/ignoreWarnings.txt`. This scaffold aims for 0
+   security-and-privacy section and the page is pre-structured for it; whether
+   an unfilled section blocks a release is this project's decision.
+3. Read `output/qa.html` and `input/ignoreWarnings.txt`. This module aims for 0
    QA errors and no unreviewed ignore entries; the authoritative error gate
    remains the reusable validation workflow.
 4. `convention-check` passes on the release branch.

@@ -1,21 +1,19 @@
 # Recipe: switch to the published template package
 
-**Goal.** Move your module's `ig.ini` from the **interim** template reference
-(the repository URL, or the vendored `ig-template/` fallback referenced as
-`template = #ig-template`) to the **pinned published** MII template package
-(`template = de.medizininformatikinitiative.template#x.y.z`), and delete the
-`ig-template/` folder — proving with a rebuild that the switch changed nothing
-visible.
+**Goal.** Move this module's `ig.ini` from the **interim** template reference
+(the repository URL) to the **pinned published** MII template package
+(`template = de.medizininformatikinitiative.template#x.y.z`) — proving with a
+rebuild that the switch changed nothing visible.
 
 > **Why the module starts on the interim form:** the IG Publisher needs a template to
 > build, and while the template package has no registry entry a module cannot
-> reference one — see [concepts.md § 2](../concepts.md#2-how-it-references-the-mii-template--url-now-published-package-later)
+> reference one — see [concepts.md § 2](../concepts.md#2-how-it-references-the-mii-ig-template--url-now-published-package-later)
 > and [org-move.md](../org-move.md) for whether it is published yet.
-> After this cleanup your module tracks a versioned dependency like every other
+> After this switch the module tracks a versioned dependency like every other
 > package, and the scheduled dependency checker proposes upgrades for you.
 
 **Prerequisites.** The template repository has cut a release **and** that release
-resolves for the IG Publisher (see below). Your module must build green before
+resolves for the IG Publisher (see below). The module must build green before
 you start, so you can tell the switch apart from an unrelated breakage.
 
 ## When you do this
@@ -28,9 +26,8 @@ published reference that cannot be resolved makes the build fail.
 
 ## Where the published version number comes from
 
-The template repo releases with **SemVer** (`vMAJOR.MINOR.PATCH`) via Release
-Please — *not* CalVer (only modules use CalVer). Find the exact number to pin,
-in order of preference:
+The template repo releases with **SemVer** (`vMAJOR.MINOR.PATCH`) — *not* CalVer
+(only modules use CalVer). Find the exact number to pin, in order of preference:
 
 1. **The template repo's Releases page** —
    <https://github.com/medizininformatik-initiative/ig-template-mii-kds/releases>.
@@ -61,11 +58,11 @@ in order of preference:
   package server, GitHub URL → zip; nothing reads `templates.json`). Quick
   check: the registry URL above returns the version you intend to pin
   (HTTP 200, not 404). Until the package is on the package server, the
-  supported alternatives are the vendored folder you already have, or a GitHub
-  URL reference.
-- Your module already builds green today against the current template reference (so you
+  supported alternatives are a GitHub URL reference (what this module uses) or a
+  local template folder.
+- The module already builds green today against the current template reference (so you
   have a clean baseline to compare against).
-- `sushi` (`3.20.0`), the IG Publisher jar (`2.3.0`), and `jq` are available —
+- `sushi` (`3.20.1`), the IG Publisher jar, and `jq` are available —
   the dev container has all three. Or push the branch and let the
   `IG build and preview` workflow build it for you.
 
@@ -88,9 +85,6 @@ in order of preference:
    template = https://github.com/medizininformatik-initiative/ig-template-mii-kds
    ```
 
-   (or `template = #ig-template`, if your module still uses the vendored
-   fallback)
-
    to (use the real version from the section above):
 
    ```ini
@@ -100,20 +94,11 @@ in order of preference:
    Remove the now-stale bring-up comment block above the `template =` line while
    you are there.
 
-   > **Why drop the `#`:** the leading `#` is what told the IG Publisher
-   > "this is a local folder." Without it, the value is a package reference
-   > (`id#version`) the Publisher resolves from the registry.
+   > **On the `#`:** in a package reference `id#version` the `#` separates the
+   > version. A *leading* `#` would instead mean "a local template folder" —
+   > this repository has none, and must not grow one.
 
-3. **Delete the vendored template folder, if your module carries one** — it is no longer referenced:
-
-   ```bash
-   git rm -r ig-template
-   ```
-
-   This also removes `ig-template/README.md`. Nothing else references the folder
-   (the only pointer was `ig.ini`, which you just changed).
-
-4. **Rebuild** against the published template:
+3. **Rebuild** against the published template:
 
    ```bash
    sushi .
@@ -122,9 +107,9 @@ in order of preference:
 
    The Publisher now downloads `de.medizininformatikinitiative.template#0.1.0`
    (and its pinned base `fhir2.base.template`) from the registry instead of
-   reading `ig-template/`.
+   fetching the template repository.
 
-5. **QA compare** — confirm the switch is behaviour-neutral. The error/warning
+4. **QA compare** — confirm the switch is behaviour-neutral. The error/warning
    counts must not increase, and the branding (header logo, footer imprint
    links, colours) must look identical:
 
@@ -137,15 +122,14 @@ in order of preference:
    Open `output/index.html` (or the branch preview the CI publishes) and eyeball
    the header/footer against the baseline build.
 
-6. **Open a PR to `dev`** with the `ig.ini` change and the `ig-template/`
-   deletion. The `IG build and preview` workflow rebuilds and posts the preview
+5. **Open a PR to `dev`** with the `ig.ini` change. The `IG build and preview`
+   workflow rebuilds and posts the preview
    URL; the convention check confirms `template = de.medizininformatikinitiative.template#0.1.0`
    is a valid pinned reference. Merge once green.
 
 ## Expected result
 
-- `ig.ini` references `de.medizininformatikinitiative.template#x.y.z`; the
-  `ig-template/` folder is gone.
+- `ig.ini` references `de.medizininformatikinitiative.template#x.y.z`.
 - The rebuilt IG looks identical to the baseline build (same branding, same
   pages), and the QA error/warning counts did not increase.
 - The convention check passes (`M7 no floating pins` shows the pinned template
@@ -155,8 +139,6 @@ in order of preference:
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| Publisher aborts: `Unable to resolve template de.medizininformatikinitiative.template#x.y.z` | The template is not yet published/registered, or the version does not exist | Confirm the registry URL returns that version (prerequisite); if it 404s, the template repo has not published it yet — revert to the vendored `#ig-template` and wait |
-| Build fails with `Unable to load template source from #ig-template` | You deleted `ig-template/` but `ig.ini` still says `template = #ig-template` (now a dangling local folder) | Make sure step 2 (edit) happened before/with step 3 (delete) — the Publisher fails loudly on a missing `#folder`, so this is caught at the next build |
+| Publisher aborts: `Unable to resolve template de.medizininformatikinitiative.template#x.y.z` | The template is not yet published/registered, or the version does not exist | Confirm the registry URL returns that version (prerequisite); if it 404s, the template repo has not published it yet — revert to the repository-URL form and wait |
 | Convention check fails on the template line | You pinned `#current` / `#latest` / left a `TODO` | Pin an exact SemVer `x.y.z` from the template repo's release |
-| QA error count jumped after the switch | The published release differs from the vendored commit (a newer template version, or the vendored copy had local edits) | Expected if you jumped versions — read the template repo's CHANGELOG for the delta; if you had edited `ig-template/` locally (you should not have), reconcile those edits upstream first |
-| `git rm -r ig-template` says "did not match any files" | Already deleted, or you are not at the repo root | Run from the module root; confirm with `ls ig-template` |
+| QA error count jumped after the switch | The published release differs from the state the URL form fetched (a newer template version) | Expected if you jumped versions — read the template repo's release notes for the delta |

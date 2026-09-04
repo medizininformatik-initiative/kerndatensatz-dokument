@@ -25,19 +25,21 @@ Guides, Englisch die Übersetzung unter `input/translations/en/`.
 | `input/pagecontent/` | Guide-Seiten (deutsch, Standardsprache) |
 | `input/translations/en/` | Englische Übersetzungen |
 | `fsh-generated/` | Von SUSHI generierte FHIR-Ressourcen |
-| `docs/` | Template-Dokumentation (Konzepte, Rezepte) |
+| `docs/` | Arbeitsdokumentation des Moduls (Konzepte, Rezepte, CI, Release) — aus dem Modul-Template übernommen |
 
 ## Build
 
 ```bash
-npx --yes fsh-sushi@3.20.0 .          # FSH → FHIR-Ressourcen
+npx --yes fsh-sushi@3.20.1 .          # FSH → FHIR-Ressourcen (Pin wie in der CI)
 # vollständiger Guide-Build: siehe .github/workflows/ig-publisher.yml
 # bzw. docs/recipes/first-build-in-devcontainer.md
 ```
 
 ## Mitwirken
 
-Issues und Pull Requests bitte gegen dieses Repository. Nicht-triviale
+Issues und Pull Requests bitte gegen dieses Repository; Branching, Commit-
+Konvention und Release-Weg stehen in [CONTRIBUTING.md](CONTRIBUTING.md), die
+CI-Pipelines in [docs/workflows.md](docs/workflows.md). Nicht-triviale
 Änderungen folgen dem MII Module Release Workflow
 ([kerndatensatz-meta Wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki)).
 Bekannte Terminologie-Themen: `de.ihe-d.terminology`-Nachfolger wird in

@@ -1,5 +1,11 @@
 # Recipe: create a new module
 
+> **Inherited from the module template — already done here.** This recipe
+> describes how a *new* module repository is created from
+> `mii-kds-module-template`. This repository went through it during the
+> migration; the page is kept as the record and as the reference for the next
+> module. Nothing on it is work to do here.
+
 **Goal.** Go from "Use this template" to a first green preview build of your module.
 
 **Prerequisites.**
@@ -63,17 +69,17 @@
 
    ```sh
    # if your sushi-config.yaml says  id: mii-ig-person
-   git mv 'input/translations/de/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po' \
-          'input/translations/de/ImplementationGuide-mii-ig-person.po'
+   git mv 'input/translations/en/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po' \
+          'input/translations/en/ImplementationGuide-mii-ig-person.po'
    git mv 'input/pagecontent/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md' \
           'input/pagecontent/ImplementationGuide-mii-ig-person.md'
-   git mv 'input/translations/de/pagecontent/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md' \
-          'input/translations/de/pagecontent/ImplementationGuide-mii-ig-person.md'
+   git mv 'input/translations/en/pagecontent/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md' \
+          'input/translations/en/pagecontent/ImplementationGuide-mii-ig-person.md'
    ```
 
    The publisher matches the `.po` catalogue to your ImplementationGuide
    resource **by file name** — left unrenamed it is ignored without any
-   warning, and the German rendering silently keeps English page titles,
+   warning, and the English rendering silently keeps German page titles,
    breadcrumbs and table of contents (details, and the `msgid` rules, in
    [add-translation.md](add-translation.md) §5). The two `.md` files are the
    intro of the ImplementationGuide resource page (dependency table,
@@ -95,23 +101,22 @@
    ```
 
    Both must come back empty. The filters on the first command are deliberate.
-   The scope is narrow because `{{ }}` is also Liquid syntax in `ig-template/`
-   and `${{ }}` is GitHub-Actions syntax in every other workflow — do not grep
-   the whole tree. The second `grep` drops comment lines, because inside this
+   The scope is narrow because `${{ }}` is GitHub-Actions syntax in every
+   workflow, and `{{ }}` is Liquid syntax wherever the IG template is
+   involved — do not grep the whole tree. The second `grep` drops comment lines, because inside this
    scope the `README.md` files and the comments that merely *name* a placeholder
    — the `sushi-config.yaml` header (your reference list, leave it intact),
    `ig.ini`'s `;` notes, `qc/custom.rules.yaml`, `go-publish.yml` and the FSH
    ruleset notes — are documentation, not values. They stay. The digit in
    `[A-Z0-9_]` matters: without it `{{SPECIAL_URL_1}}` is invisible to the sweep.
 6. **Template reference.** Leave `ig.ini`'s `template =` line at its default —
-   the template repository URL, which the publisher fetches at build time;
-   `template = #ig-template` (the vendored copy) is the offline/reproducibility
-   fallback — until the MII template package is published; then follow
+   the template repository URL, which the publisher fetches at build time —
+   until the MII template package is published; then follow
    [switch-template-to-published.md](switch-template-to-published.md).
 7. **Add content.** Replace the example profile in `input/fsh/` with your own
-   ([add-a-profile.md](add-a-profile.md)) and the English starter pages in
-   `input/pagecontent/` with your module's pages. Keep the German translations in
-   `input/translations/de/` in step with them. **Decide the optional (0..1)
+   ([add-a-profile.md](add-a-profile.md)) and the German starter pages in
+   `input/pagecontent/` with your module's pages. Keep the English translations in
+   `input/translations/en/` in step with them. **Decide the optional (0..1)
    pages** — keep or remove each one per
    [../optional-pages.md](../optional-pages.md); the convention check reports
    the undecided ones and fails a release while any remain. When you add,
@@ -152,8 +157,9 @@
 
 ## Expected result
 
-Your module IG builds green and renders a bilingual (English-default, German translation) preview with
-your profile, examples and pages. No Release Please anywhere.
+The module IG builds green and renders a bilingual preview with your profile,
+examples and pages, in the default language configured in `sushi-config.yaml`
+and its translation. No SemVer release automation anywhere.
 
 ## Common errors & fixes
 
@@ -162,7 +168,7 @@ your profile, examples and pages. No Release Please anywhere.
 | Only `main` exists, no `dev` | Did not tick "Include all branches" | Run the first-run bootstrap (step 2) |
 | The bootstrap PR's `build` check is red | Placeholders are still in `sushi-config.yaml`; SUSHI cannot compile them | Commit steps 2 and 3 on the same branch (step 2) |
 | Build fails on `{{…}}` | A placeholder was left unreplaced | Run both sweeps in step 5 and fill each hit |
-| German pages render with English titles, breadcrumbs and ToC | The IG-level translation catalogue was not renamed | Rename it to `ImplementationGuide-<your-ig-id>.po` (step 4) |
-| "template not found" | Published package not available yet | Keep the default repository-URL form (or the vendored `template = #ig-template` fallback for offline builds) |
+| English pages render with German titles, breadcrumbs and ToC | The IG-level translation catalogue was not renamed | Rename it to `ImplementationGuide-<your-ig-id>.po` (step 4) |
+| "template not found" | Published package not available yet | Keep the default repository-URL form |
 | Convention check fails | id/name/canonical/version pattern wrong | Match the MII naming convention (the check message names the field) |
 | The preview URL on the PR 404s | GitHub Pages is not enabled, or the Pages setting and `PAGES_ACTIONS_ENABLED` do not match | Enable Pages and pair it with the variable (step 8) |

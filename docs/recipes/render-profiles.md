@@ -49,7 +49,7 @@ differs from a neighbouring profile, and any scenario a reader needs to picture.
 **Use the notes for:** element-level explanations, deliberate omissions, and the
 rationale behind a constraint that will otherwise look arbitrary in five years.
 
-Translations go to `input/translations/de/intro-notes/` with the same file names.
+Translations go to `input/translations/en/intro-notes/` with the same file names.
 
 ## Steps
 
@@ -87,7 +87,7 @@ below each other:
 
     {% raw %}{% include structure-tabs.html artifact="StructureDefinition-<id>" %}{% endraw %}
 
-Pass `lang="de"` in the German mirror page so the tab labels localize. The
+Pass `lang="en"` in the English mirror page so the tab labels localize. The
 four publisher fragments (`-snapshot`, `-diff`, `-xml-html`, `-json-html`)
 must exist for the artifact — check `temp/pages/_includes/` after a build;
 one missing include fails the whole Jekyll run. When the narrative does not

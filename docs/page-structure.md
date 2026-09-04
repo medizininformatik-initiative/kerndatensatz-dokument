@@ -55,7 +55,7 @@ for the decision checklist and the per-entry removal procedure.
 | — General Requirements | 1..1 | **link-only** → Meta module (interim: `Conformance#anforderungsdokumentation`) |
 | — Must Support | 1..1 | **link-only** → Meta module (interim: `Conformance#must-support-ms`) |
 | — Handling Missing Data | 1..1 | **link-only** → Meta module (interim: `Conformance#fehlende-daten`) |
-| — Security and Privacy | 1..1 | `security-and-privacy.html` (three-stage static content: overarching data protection concept → DIMP → module-specific aspects; stage 3's CONTENT is optional — a module without own aspects adopts the section's default text, and the scaffold's highlighted *Person* example must be removed before the first release, gated by convention check M11) |
+| — Security and Privacy | 1..1 | `security-and-privacy.html` (three-stage static content: overarching data protection concept → DIMP → module-specific aspects; stage 3's CONTENT is optional — a module without own aspects adopts the section's default text; this module writes its own, and the template's illustrative example was removed with it, gated by convention check M11) |
 | **Artifacts** | 1..1 | dropdown (parent → `artifacts.html`) |
 | — Artifacts Summary | 1..1 | `artifacts.html` (generated) |
 | — Profiles | 1..1 | `profiles.html` |
@@ -67,7 +67,6 @@ for the decision checklist and the per-entry removal procedure.
 | — Value Sets | 0..1 | `value-sets.html` |
 | — Code Systems | 0..1 | `code-systems.html` |
 | — Examples | 1..1 | `examples.html` |
-| — Rendering Artifacts (demo) | scaffold-only | `rendering-artifacts.html` — not part of the agreed structure; removed before release (convention check M8) |
 | Downloads | 1..1 | `downloads.html` |
 | Changelog | 1..1 | `changes.html` |
 | **Metadata** | 1..1 | dropdown (parent → `version-history.html` — the mandatory child, so the optional overview can be removed without re-targeting) |
@@ -98,7 +97,7 @@ the current tooling; both anchor kinds were tried and rejected:
   is the Logical-Models section only for the full standard artifact set: the
   optional Operations/Search Parameters insert Behavior groupings before it,
   a missing CapabilityStatement pulls it forward, explicit `groups:` reorder
-  freely. The scaffold's own preview rendered `#2` = Example Instances.
+  freely. The module template's own preview rendered `#2` = Example Instances.
 - **The named anchor `#structures-logical-models` (DE:
   `#strukturen-logische-modelle`) exists only at runtime.** The base template
   ships AnchorJS (`anchor-hover.js` → `anchors.add()`), which slugifies the
@@ -140,7 +139,7 @@ sections:
 
 The agreed structure replaced the earlier combined pages. The old pages are
 **retired**, not redirected: GitHub Pages previews carry no server-side
-redirects, the scaffold's rendered output is a preview (not a published
+redirects, a branch build's rendered output is a preview (not a published
 canonical), and stub pages would re-enter the menu QA, the `pages:` tree and
 the `.po` catalogue that the split exists to clean up. Modules that already
 **formally published** the old URLs keep those URLs alive through their own
@@ -163,8 +162,8 @@ the new page set.
 carried the `§<id>:…§` conformance-statement markers and the `§§§` summary
 table (an IG-Publisher feature, see
 [HL7 ig-guidance](https://build.fhir.org/ig/FHIR/ig-guidance/conformance-statements.html)).
-The scaffold no longer ships marked statements — the MII-wide rules they marked
-live in the Meta module now. A module that states its *own* normative
+This module ships no marked statements — the MII-wide rules they marked live in
+the Meta module now. A module that states its *own* normative
 requirements (typically on `security-and-privacy.md` or an artifact page) may
 still mark them with `§<page>-<n>:…§` on the **English** page and render a
 table with a `§§§` paragraph; the Expectation column derives from the English
@@ -177,9 +176,9 @@ observation").
   edited by the module — but the **mandatory (1..1) entries are the agreed
   MII structure**: keep them; decide the (0..1) entries per
   [optional-pages.md](optional-pages.md).
-- The **menu** is maintained as `input/includes/menu.xml` (English, the default
-  language) plus a German translation at
-  `input/translations/de/includes/menu.xml` — not via the `menu:` property,
+- The **menu** is maintained as `input/includes/menu.xml` (German, the default
+  language) plus an English translation at
+  `input/translations/en/includes/menu.xml` — not via the `menu:` property,
   which cannot be translated. Update both files, the `pages:` tree and the
   IG-level `.po` catalogue together (same commit).
 - The IG template carries no `structure/` folder and no page set; there is no

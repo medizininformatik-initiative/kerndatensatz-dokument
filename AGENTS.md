@@ -1,4 +1,4 @@
-# AGENTS.md — mii-kds-module-template
+# AGENTS.md — kerndatensatz-dokument (MII KDS module IG)
 
 Vendor-neutral instructions for any coding agent working in this repository.
 These instructions describe *what to do*, independent of which agent, runtime,
@@ -6,31 +6,26 @@ or model executes them.
 
 ## What this repository is
 
-A **GitHub template repository** — the scaffold for a new **MII KDS module
-Implementation Guide (IG)**. A user clicks "Use this template" to start a
-module; the scaffold's `sushi-config.yaml`, `ig.ini`, and workflows carry
-`{{PLACEHOLDER}}` values the new module fills in. The scaffold **references**
-the MII IG template package
+The **MII KDS module Implementation Guide (IG) "Dokument"** — package
+`de.medizininformatikinitiative.kerndatensatz.dokument`, canonical
+`https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument`. It was
+migrated from Simplifier onto the
+[`mii-kds-module-template`](https://github.com/medizininformatik-initiative/mii-kds-module-template)
+scaffold (v0.13.1) and is built with the HL7 IG Publisher; the migration record
+is [`migration-log/migration-report.md`](migration-log/migration-report.md).
+
+It releases with **CalVer `YYYY.n.n`** (currently `2027.0.0-ballot.rc1`) via
+`.github/workflows/module-release.yml` — **never SemVer, never Release Please**.
+
+The **look** of the IG comes from the MII IG template
 [`ig-template-mii-kds`](https://github.com/medizininformatik-initiative/ig-template-mii-kds)
-(`de.medizininformatikinitiative.template`) in `ig.ini` — **today by repository
-URL** (`template = https://github.com/medizininformatik-initiative/ig-template-mii-kds`;
-the IG Publisher fetches the released `main` at build time), because that
-package has no registry release yet. The vendored local folder
-`template = #ig-template` remains the offline/reproducibility fallback, and the
-endgame is `template = de.medizininformatikinitiative.template#<version>` once
-the package is published (see
-[`docs/recipes/switch-template-to-published.md`](docs/recipes/switch-template-to-published.md)
-and issues [#1](../../issues/1)/[#2](../../issues/2)). See
-[`README.md`](README.md) for the full picture.
-
-**Two layers — do not confuse them:**
-
-- **This template repository itself** releases with **SemVer** (Release Please
-  on `main`) — it is tooling.
-- **A module created from it** releases with **CalVer `YYYY.n.n`** via the MII
-  Module Release Workflow. The first-run bootstrap
-  ([`scripts/first-run-bootstrap.sh`](scripts/first-run-bootstrap.sh)) removes this
-  repo's Release Please files from a new module so the two never mix.
+(`de.medizininformatikinitiative.template`, release v1.3.4), referenced in
+`ig.ini` **by repository URL** — the IG Publisher fetches the released `main` at
+build time, because the package has no registry release yet. There is **no
+vendored copy of the template in this repository**; when the package is
+published, `ig.ini` switches to a pinned `id#version`
+([`docs/recipes/switch-template-to-published.md`](docs/recipes/switch-template-to-published.md)).
+See [`README.md`](README.md) for the full picture.
 
 ## Branching and pull-request rules
 
@@ -44,11 +39,9 @@ agent must follow:
   review; the working branch is then deleted.
 - `dev` → `main` is the **release gate**: a human decision, merged as a merge
   commit (not a squash). Never open or merge it unprompted.
-- **Back-merge rule.** `main` and `dev` have diverged (see
-  [`docs/org-move.md`](docs/org-move.md)). If anything lands on
-  `main` without going through `dev`, `main` must be merged back into `dev`
-  before the next `dev → main` merge. Check `git log origin/dev..origin/main`
-  before branching.
+- **Back-merge rule.** If anything lands on `main` without going through `dev`,
+  `main` must be merged back into `dev` before the next `dev → main` merge.
+  Check `git log origin/dev..origin/main` before branching.
 - **Conventional Commits** for every commit message and PR title
   (`feat`, `fix`, `docs`, `chore`, `ci`, `refactor`, `test`).
 
@@ -60,9 +53,10 @@ Author identity is the configured human committer.
 
 ## Guardrails
 
-- **Never mix release systems.** This template repo = SemVer/Release Please; a
-  module = CalVer/MII Module Release Workflow. Do not wire Release Please into a
-  module, and do not let a module inherit this repo's Release Please files.
+- **One release mechanism: CalVer.** This module releases only with CalVer
+  `YYYY.n.n` via `module-release.yml` and the gated `go-publish.yml`. Never wire
+  SemVer tooling (Release Please or similar) into this repository — two release
+  systems on one repo corrupt the version history.
 - **Fixed versions only.** Never use `current`/`latest`/`dev`/`cibuild` as a
   version label in anything built (dependencies, the IG template pin, tool
   versions). The convention check (M7) and the publication gate in
@@ -70,22 +64,22 @@ Author identity is the configured human committer.
   The interim template URL in `ig.ini` is the one sanctioned exception — it
   follows the template's released `main` by design (see `ig.ini`'s header);
   the published package pin restores strict pinning.
-- **`ig-template/` is a machine-synced mirror**, maintained by
-  `scripts/sync-ig-template.sh` (`--check` fails on drift; `sync-ig-template.yml`
-  runs it). It is the offline/reproducibility fallback (`template = #ig-template`)
-  behind the default URL form in `ig.ini`. Never hand-edit it, and never rewrite
-  the `template =` line into a package pin — `scripts/first-run-bootstrap.sh`
-  tells module owners to leave that line alone until the package is published.
-  Fix the source in `ig-template-mii-kds` and re-sync.
+- **The IG template is never vendored here.** `ig.ini` references it by
+  repository URL; this repository holds no `ig-template/` copy and no sync
+  workflow. Never rewrite the `template =` line into a package pin before the
+  package is published, and never fix template markup locally — fix it in
+  [`ig-template-mii-kds`](https://github.com/medizininformatik-initiative/ig-template-mii-kds)
+  and rebuild.
 - **The single convention checker** is `wiki-consistency-check` +
   `scripts/convention-check.mjs` (placeholder-aware). Do not add a second
   metadata linter. `convention-check.yml` also runs `scripts/language-model-check.sh`
   — a separate concern (see below), not a second metadata linter.
-- **English is the IG's default language, German the translation**
-  (`i18n-default-lang: en`, sources under `input/translations/de/`) — the same
-  model as `kerndatensatz-basis`, so "deviates from basis" is never true. Prose
-  asserting the reverse fails `scripts/language-model-check.sh` in CI — fix the
-  prose, never the guard.
+- **This module is DE-first** (`sushi-config.yaml`: `i18n-default-lang: de`):
+  the source pages are `input/pagecontent/**` and `input/includes/menu.xml`, the
+  translation lives under `input/translations/en/**`. Every change to a source
+  page has to be carried into its English twin in the same commit.
+  `scripts/language-model-check.sh` guards exactly this model: it fails on
+  residue of the template's inverted model (for example its `translations/de/` folder path).
 - Do not change canonical URLs of published artifacts.
 - Checker/analysis skills are report-only: they propose, humans decide; no
   auto-merge; any change is a PR targeting `dev`.
@@ -127,7 +121,7 @@ stale copies). Install what you need from the catalog at a pinned release.
 | --- | --- | --- |
 | Measure / compare Implementation Guides (read-only statistics, hygiene, maturity) | `fhir-ig-analysis` | `skills/ig-analyze` + `scripts/ig-stats.py` |
 | Produce a guide's translation supplements (translate or harvest) | `fhir-ig-translation` | `skills/ig-translate` + `scripts/ig-translate.sh` |
-| Migrate a Simplifier/Forge-published KDS module onto this scaffold | `mii-ig-migration` | never local |
+| Migrate a Simplifier/Forge-published KDS module onto the module template | `mii-ig-migration` | never local |
 
 ```bash
 npx skills add forschungsgruppe-digital-health/agent-skills/tree/<release> --skill fhir-ig-analysis fhir-ig-translation --copy
@@ -170,15 +164,13 @@ runtime on such a checkout cannot follow the links, read the canonical
 `skills/` directory directly — or generate a mirror from `skills/` in CI. Never
 hand-copy the content into the runtime directories.
 
-## Creating a module from this template
+## Where the module-lifecycle recipes come from
 
-A new module needs the one-time first-run bootstrap
-([`docs/recipes/first-run-setup.md`](docs/recipes/first-run-setup.md)): it
-creates `dev` from `main`, applies branch protection, and removes the
-files that would conflict with a module (Release Please + the template's SemVer
-announcement + the template `CHANGELOG`). The preview, validation, monitoring,
-convention-check, and module-release workflows, the skills, and the bootstrap
-with its recipe **stay** — a module wants them. The authoritative removal list
-is the `REMOVE=` line in
-[`scripts/first-run-bootstrap.sh`](scripts/first-run-bootstrap.sh); the dry run
-prints it.
+`docs/` was inherited from `mii-kds-module-template` and kept as this module's
+own documentation. The one-time first-run bootstrap
+([`docs/recipes/first-run-setup.md`](docs/recipes/first-run-setup.md)) has
+already run here; the recipe and
+[`scripts/first-run-bootstrap.sh`](scripts/first-run-bootstrap.sh) stay as the
+record of what it did. Pages that describe creating a *new* module carry an
+"inherited from the template" note — read them as reference, not as work to do
+in this repository.

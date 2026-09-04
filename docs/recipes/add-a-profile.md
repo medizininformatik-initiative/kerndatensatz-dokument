@@ -2,21 +2,21 @@
 
 **Goal.** Write your first FHIR profile in FSH, build it, and read the QA report.
 
-**Prerequisites.** A module created from this template that already builds (see
-[create-a-new-module.md](create-a-new-module.md)).
+**Prerequisites.** A build that runs (see
+[first-build-in-devcontainer.md](first-build-in-devcontainer.md)).
 
 ## Steps
 
-1. Look at the shipped example `input/fsh/profiles/mii-pr-dokument-dokument.fsh` and its
-   instance `input/fsh/examples/alzheimer/example-patient-instance.fsh` — copy their shape.
+1. Look at the module's profile `input/fsh/profiles/mii-pr-dokument-dokument.fsh`
+   and one of its instances under `input/fsh/examples/alzheimer/` — copy their
+   shape.
 2. Create your profile file under `input/fsh/profiles/`. Name the **artifact**
    per the MII naming conventions (meta wiki, *Namenskonventionen für
-   FHIR-Ressourcen in der MII*). For the **file** name this scaffold follows
-   kerndatensatz-basis — `MII_PR_<Module>_<Name>.fsh`, e.g.
-   `MII_PR_Person_Patient.fsh`; SUSHI does not care, but matching basis keeps
-   MII modules navigable the same way (see `input/fsh/README.md`).
-   The quickest correct start is to copy `example-patient.fsh`, rename it, and
-   edit — it already carries the shared metadata block. The shape:
+   FHIR-Ressourcen in der MII*). For the **file** name this module follows
+   kerndatensatz-basis, lowercased as in `mii-pr-dokument-dokument.fsh`; SUSHI
+   does not care, but matching basis keeps MII modules navigable the same way.
+   The quickest correct start is to copy the existing profile file, rename it,
+   and edit — it already carries the shared metadata rule sets. The shape:
    ```fsh
    Profile: MII_PR_Person_Patient
    Parent: Patient
@@ -30,8 +30,8 @@
    * name 1..* MS
    * birthDate 1..1 MS
    ```
-   `Title` and `Description` are authored in **English**, the IG's default
-   language; German goes in additively via the `Translation` RuleSet, as the
+   `Title` and `Description` are authored in **German**, the IG's default
+   language; English goes in additively via the `Translation` RuleSet, as the
    starter shows.
    > **Why start terminology-light:** a profile that binds to external code systems
    > needs a terminology server to validate. Cardinality + Must-Support constraints

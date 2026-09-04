@@ -20,7 +20,7 @@ git and are ignored by the build tools.
 | `includes/` | Reusable HTML/Markdown fragments and `menu.xml` (basis idiom: the menu is maintained here, not via the `menu:` property in `sushi-config.yaml`, so the language switcher works). | IG Publisher |
 | `intro-notes/` | Per-artifact intro/notes Markdown files (`StructureDefinition-<id>-intro.md` / `...-notes.md`), wired via the `path-pages` parameter. | IG Publisher |
 | `resources/` | Hand-authored resource JSON that is not generated from FSH — this template keeps the expansion-parameters manifest (`Parameters-expansion-manifest.json`) here, referenced by `path-expansion-params` in `sushi-config.yaml`. | IG Publisher |
-| `translations/` | Translation supplements. This template is **English-default with German mirrors** under `translations/de/` — see `translations/README.md`. | IG Publisher (i18n) |
+| `translations/` | Translation supplements. This module is **German-default with an English translation** under `translations/en/` — see `translations/README.md`. | IG Publisher (i18n) |
 | `ignoreWarnings.txt` | Reviewed-and-accepted QA messages, each with a justifying comment. | IG Publisher QA |
 
 Notes:

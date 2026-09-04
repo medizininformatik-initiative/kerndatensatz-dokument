@@ -1,10 +1,10 @@
 # Secrets & variables — enabling the gated features
 
-A module built from this template builds and previews **without any secrets** (it
-uses the public HL7 terminology server; announcements skip cleanly). This page
-lists the optional secrets that turn on the human-gated features, with the exact
-commands. The workflows are already wired — adding the secret is the only step.
-Replace `<owner>/<module-repo>` with your module repository.
+This module builds and previews **without any secrets** (it falls back to the
+public HL7 terminology server; announcements skip cleanly). This page lists the
+optional secrets that turn on the human-gated features, with the exact commands.
+The workflows are already wired — adding the secret is the only step. Replace
+`<owner>/<module-repo>` with this repository.
 
 ```sh
 gh secret set NAME --repo <owner>/<module-repo> < value.txt
