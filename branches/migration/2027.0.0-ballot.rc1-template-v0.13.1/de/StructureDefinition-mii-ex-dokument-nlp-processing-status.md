@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-08-30 | *Maschinenlesbarer Name*:MII_EX_Dokument_NLP_Processing_Status |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_EX_Dokument_NLP_Processing_Status |
 
 Status der NLP-Verarbeitung des referenzierten Dokuments
 
@@ -139,7 +139,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-dokum
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
   "title" : "MII EX Dokument NLP Processing Status",
   "status" : "active",
-  "date" : "2026-08-30T20:47:31+00:00",
+  "date" : "2026-09-04T12:20:18+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

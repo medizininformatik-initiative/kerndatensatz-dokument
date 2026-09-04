@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-08-30 | *Maschinenlesbarer Name*:MII_VS_Dokument_SCT_Dokument_Kategorie |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_VS_Dokument_SCT_Dokument_Kategorie |
 
  
 SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments 
@@ -46,7 +46,7 @@ SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments
   "title" : "MII VS Dokument SCT Dokument Kategorie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T20:47:31+00:00",
+  "date" : "2026-09-04T12:20:18+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

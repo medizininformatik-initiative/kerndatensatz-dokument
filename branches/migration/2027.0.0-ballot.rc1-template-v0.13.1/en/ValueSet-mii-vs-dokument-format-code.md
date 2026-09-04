@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-08-30 | *Computable Name*:MII_VS_Dokument_Format_Code |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Dokument_Format_Code |
 
  
 ValueSet zum (komplexen) Format Code eines Dokuments 
@@ -48,7 +48,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "MII VS Dokument Format Code",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T20:47:31+00:00",
+  "date" : "2026-09-04T12:20:18+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

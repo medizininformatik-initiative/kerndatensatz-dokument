@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-08-30 | *Computable Name*:MII_VS_Dokument_Fachgebiet |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Dokument_Fachgebiet |
 
  
 ValueSet zum erzeugenden Fachgebiet eines Dokuments 
@@ -46,7 +46,7 @@ ValueSet zum erzeugenden Fachgebiet eines Dokuments
   "title" : "MII VS Dokument Fachgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-30T20:47:31+00:00",
+  "date" : "2026-09-04T12:20:18+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

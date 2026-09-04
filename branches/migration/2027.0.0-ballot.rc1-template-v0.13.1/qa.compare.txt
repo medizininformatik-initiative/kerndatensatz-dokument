@@ -1,12 +1,12 @@
 MII_IG_Dokument : Validation Results
 =========================================
 
-err = 4, warn = 138, info = 674
+err = 4, warn = 149, info = 663
 $--
 Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz.dokument#$-- (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
  Build Errors : 1 / 12 / 0
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 6 / 24
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 2 / 33
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 7 / 23
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 3 / 32
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument : 0 / 1 / 6
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument : 0 / 1 / 6
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerKlartextDokument : 1 / 3 / 6
@@ -16,15 +16,15 @@ Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerVersorgungsstellenKontakt : 0 / 3 / 5
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 1 / 13 / 70
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Patient-AmandaAlzheimer : 0 / 2 / 1
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 0 / 22
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 66 / 27
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 0 / 6 / 440
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 0 / 2 / 7
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 0 / 2 / 7
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 5 / 8
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 2 / 8
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 0 / 2 / 6
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 0 / 2 / 6
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 1 / 21
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 67 / 26
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 0 / 7 / 439
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 0 / 3 / 6
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 0 / 3 / 6
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 6 / 7
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 3 / 7
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 0 / 3 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 0 / 3 / 5
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/Parameters-expansion-manifest : 0 / 0 / 1
 </table>
 == n/a ==
@@ -63,7 +63,7 @@ INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[19].definition:
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[20].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-period to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[21].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-facility to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[22].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-setting to 4.0.1
-INFORMATION: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.format[0].code: Unknown Code 'xml' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.format[1].code: Unknown Code 'json' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.rest[0].resource[0].supportedProfile[0]: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement/metadata' kann nicht aufgelöst werden
@@ -76,7 +76,7 @@ INFORMATION: CodeSystem.meta.profile[0]: Pinned the version of http://hl7.org/fh
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].designation[0].language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
@@ -177,8 +177,8 @@ INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.language: 
 INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[3].value.ofType(CodeableConcept).coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package for language(s) 'de'. The display is 'Package' which is a valid display for the default language
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[4].extension[2].value.ofType(uri): URL-Wert 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument' löst nicht auf
-WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[16].value.ofType(CodeableConcept).coding[0].code: Unknown Code 'C19498' in the CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' version 'null' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[16].value.ofType(CodeableConcept): Reference to experimental CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl|25.6.0-e
+WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[0].uri: Canonical URL 'http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[1].uri: Canonical URL 'http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[5].uri: Canonical URL 'http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4' kann nicht aufgelöst werden
@@ -268,7 +268,7 @@ INFORMATION: StructureDefinition.snapshot.element[13].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[14].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[15].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.differential.element[4].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status to 2027.0.0-ballot.rc1
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: Resource: The resource StructureDefinition/mii-ex-dokument-nlp-processing-status could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-mii-lm-dokument.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
@@ -295,7 +295,7 @@ INFORMATION: StructureDefinition.snapshot.element[33].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[33].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[0]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[1]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[2]: Regel eld-20 fehlgeschlagen
@@ -626,7 +626,7 @@ INFORMATION: StructureDefinition.differential.element[62].type[0].targetProfile[
 INFORMATION: StructureDefinition.differential.element[63].binding.valueSet: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSeventCodeList to 2021-07-06T21:19:41
 INFORMATION: StructureDefinition.differential.element[68].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart to 2027.0.0-ballot.rc1
 INFORMATION: StructureDefinition.differential.element[72].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet to 2027.0.0-ballot.rc1
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[12].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[18].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[18].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
@@ -815,7 +815,7 @@ INFORMATION: ValueSet.compose.include[3].valueSet[0]: Pinned the version of http
 INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 WARNING: Resource: The resource ValueSet/mii-vs-dokument-einrichtungsart should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet.json ==
@@ -824,7 +824,7 @@ INFORMATION: ValueSet.compose.include[1].valueSet[0]: Pinned the version of http
 INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 WARNING: Resource: The resource ValueSet/mii-vs-dokument-fachgebiet should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-format-code.json ==
@@ -834,7 +834,7 @@ INFORMATION: ValueSet.compose.include[1].valueSet[0]: Pinned the version of http
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mii-vs-dokument-format-code: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-format-code: ValueSet: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 WARNING: Resource: The resource ValueSet/mii-vs-dokument-format-code should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 WARNING: ValueSet.where(id = 'mii-vs-dokument-format-code'): Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
@@ -849,7 +849,7 @@ INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir
 INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 WARNING: Resource: The resource ValueSet/mii-vs-dokument-nlp-processing-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie.json ==
@@ -857,7 +857,7 @@ INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 WARNING: Resource: The resource ValueSet/mii-vs-dokument-sct-dokument-kategorie should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ.json ==
@@ -865,7 +865,7 @@ INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 WARNING: Resource: The resource ValueSet/mii-vs-dokument-sct-dokument-typ should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == input/resources/Parameters-expansion-manifest.json ==
