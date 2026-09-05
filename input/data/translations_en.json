@@ -53,7 +53,8 @@
   "Metadaten-Übersicht": "Metadata Overview",
   "Versionierung": "Versioning",
   "MII-ImplementationGuide-Ressource": "MII ImplementationGuide Resource",
-  "Übersetzungsinformationen": "Translation Information"
+  "Übersetzungsinformationen": "Translation Information",
+  "Suchparameter": "Search Parameters"
  },
  "StructureDefinition-mii-ex-dokument-nlp-processing-status": {
   "MII_EX_Dokument_NLP_Processing_Status": "MII_EX_Dokument_NLP_Processing_Status",

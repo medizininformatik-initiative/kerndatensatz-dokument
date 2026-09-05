@@ -137,3 +137,7 @@ msgstr "MII ImplementationGuide Resource"
 #: ImplementationGuide.definition.page.title
 msgid "Übersetzungsinformationen"
 msgstr "Translation Information"
+
+#: ImplementationGuide.definition.page.title
+msgid "Suchparameter"
+msgstr "Search Parameters"

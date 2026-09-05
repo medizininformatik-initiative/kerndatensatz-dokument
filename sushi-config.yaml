@@ -167,6 +167,8 @@ pages:
     title: Extensions
   capability-statements.md:
     title: CapabilityStatements
+  search-parameters.md:
+    title: Suchparameter
   logical-models.md:
     title: Logische Modelle
   value-sets.md: # OPTIONAL (0..1) — see docs/optional-pages.md

@@ -15,14 +15,4 @@ Artefakt-Seite: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-c
 
 {% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-de.xhtml %}
 
-### Unterstützte Suchparameter
-
-Die folgende Tabelle liest Namen und Typen der Suchparameter beim Build aus dem CapabilityStatement, der normativen Quelle; Beispielaufrufe stehen in den [Hinweisen zum Profil](StructureDefinition-mii-pr-dokument-dokument.html#suchparameter).
-
-{% sql {
- "query" : "select json_extract(s.value,'$.name') as Param, json_extract(s.value,'$.type') as Type from Resources r, json_each(r.Json,'$.rest[0].resource[0].searchParam') s where r.Type='CapabilityStatement'",
- "columns" : [
-  { "title" : "Suchparameter", "type" : "text", "source" : "Param" },
-  { "title" : "Typ", "type" : "text", "source" : "Type" }
- ]
-} %}
+Die unterstützten Suchparameter listet die Seite [Suchparameter](search-parameters.html).
