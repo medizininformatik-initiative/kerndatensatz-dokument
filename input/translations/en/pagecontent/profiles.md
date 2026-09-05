@@ -134,11 +134,11 @@ Note: in the special case where a VS or a CM references several terminologies, l
 * The canonical URL rules are to be applied only when resources are newly created. Established URLs of published artifacts are not to be changed retrospectively.
 * Example: `https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct`
 
-{:.bg-info}
-**Note on this module:** The artifacts of the Dokument module are published under
-the established namespace `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…`
-(an additional `ext` segment). Per the rule above, established canonical URLs of
-published artifacts are not changed retrospectively.
+> **Note on this module:** The artifacts of the Dokument module are published under
+> the established namespace `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…`
+> (an additional `ext` segment). Per the rule above, established canonical URLs of
+> published artifacts are not changed retrospectively.
+{: .ig-highlight .ig-highlight-blue}
 
 #### References
 

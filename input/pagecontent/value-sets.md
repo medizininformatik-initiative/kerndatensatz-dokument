@@ -16,12 +16,12 @@ von Codes: siehe
 zugrunde liegenden CodeSystems beschreibt die Seite
 [CodeSystems](code-systems.html).
 
-{:.bg-info}
-**Expansionen:** ValueSet-Expansionen dieses Leitfadens werden über einen
-FHIR-Terminologieserver erzeugt — über SU-TermServ, sofern das
-Client-Zertifikat konfiguriert ist, sonst über den öffentlichen HL7-Server
-`tx.fhir.org` (dann expandieren einige KDS-spezifische ValueSets ggf. nicht
-vollständig).
+> **Expansionen:** ValueSet-Expansionen dieses Leitfadens werden über einen
+> FHIR-Terminologieserver erzeugt — über SU-TermServ, sofern das
+> Client-Zertifikat konfiguriert ist, sonst über den öffentlichen HL7-Server
+> `tx.fhir.org` (dann expandieren einige KDS-spezifische ValueSets ggf. nicht
+> vollständig).
+{: .ig-highlight .ig-highlight-blue}
 
 SNOMED-CT-Inhalte dieses Moduls verwenden die **International Edition,
 Version 20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`)

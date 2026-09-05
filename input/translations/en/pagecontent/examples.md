@@ -4,9 +4,9 @@
      German mirror: input/translations/de/pagecontent/examples.md. -->
 This page lists the example instances of the **Dokument** module.
 
-{:.bg-warning}
-**Synthetic data only** — never use real or realistic-looking patient data in
-examples.
+> **Synthetic data only** — never use real or realistic-looking patient data in
+> examples.
+{: .ig-highlight .ig-highlight-orange}
 
 ### Example scenario: "Amanda Alzheimer" NLP pipeline
 

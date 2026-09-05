@@ -132,11 +132,11 @@ Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien 
 * Regeln für die Canonical URL sollen zunächst nur bei Neuerstellung von Ressourcen angewendet werden. Etablierte URLs von veröffentlichten Artefakten sollen nachträglich nicht geändert werden.
 * Beispiel: `https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct`
 
-{:.bg-info}
-**Hinweis zu diesem Modul:** Die Artefakte des Moduls Dokument sind unter dem
-etablierten Namensraum `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…`
-veröffentlicht (zusätzliches Segment `ext`). Nach der Regel oben werden etablierte
-Canonical-URLs veröffentlichter Artefakte nachträglich nicht geändert.
+> **Hinweis zu diesem Modul:** Die Artefakte des Moduls Dokument sind unter dem
+> etablierten Namensraum `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…`
+> veröffentlicht (zusätzliches Segment `ext`). Nach der Regel oben werden etablierte
+> Canonical-URLs veröffentlichter Artefakte nachträglich nicht geändert.
+{: .ig-highlight .ig-highlight-blue}
 
 #### Referenzen
 

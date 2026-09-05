@@ -22,6 +22,7 @@ Dieser Abschnitt bietet eine strukturierte Übersicht zur Kompatibilität des MI
 Die Kompatibilität mit dem ISiK Dokumentenaustausch ist essenziell, um sektorenübergreifende Interoperabilität im deutschen Gesundheitswesen zu gewährleisten. ISiK definiert verbindliche Metadatenstandards für Dokumente in Krankenhäusern. Eine Harmonisierung ermöglicht die reibungslose Integration von ISiK-konformen Dokumenten in MII-Datenintegrationszentren und unterstützt die Umsetzung nationaler Interoperabilitätsziele.
 
 > **Versionsstand:** Die nachfolgende Gegenüberstellung wurde gegen das Profil `ISiKDokumentenMetadaten` in Version **6.0.0** gemessen. Ab ISiK-Stufe 5 ist die menschenlesbare Bezeichnung des Dokuments in `content.attachment.title` zu führen; `DocumentReference.description` entfällt für diesen Zweck zugunsten einer Angleichung an IHE MHD und die ePA-Spezifikation.
+{: .ig-highlight .ig-highlight-blue}
 
 ##### Kompatibilität
 
@@ -60,6 +61,7 @@ Anmerkungen:
 - **Kategorie:** ISiK begrenzt `category` auf höchstens eine Angabe (0..1), das MII KDS Dokument-Profil erlaubt mehrere (0..*). Bei einer Transformation nach ISiK ist auf eine Kategorie zu reduzieren; die ISiK-spezifische Ableitung der Kategorie aus dem KDL-Code ist dabei zu beachten.
 
 > **Hinweis zur Auswertung von Validator-Vergleichsberichten:** Die ValueSet-Vergleiche des FHIR Validators arbeiten auf der `compose`-Definition, nicht auf der Expansion. Für die vier verglichenen ValueSets (`securityLabel`, `content.format`, `context.facilityType`, `context.practiceSetting`) meldet der Bericht deshalb jeweils eine *leere* Schnittmenge, obwohl sich die Codemengen inhaltlich überlappen: ISiK zählt die Codes bzw. Teil-ValueSets direkt auf, während das MII KDS Dokument-Profil das jeweilige ihe-d-ValueSet per Referenz einbindet. Eine leere Schnittmenge in diesen Berichten ist daher kein Beleg für Terminologie-Inkompatibilität.
+{: .ig-highlight .ig-highlight-blue}
 
 #### KBV MIO Basis
 

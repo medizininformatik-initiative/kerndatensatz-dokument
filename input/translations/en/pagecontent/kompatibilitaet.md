@@ -22,6 +22,7 @@ This section provides a structured overview of the compatibility of the MII KDS 
 Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centres and supports the implementation of national interoperability goals.
 
 > **Version basis:** the comparison below was measured against the profile `ISiKDokumentenMetadaten` in version **6.0.0**. From ISiK stage 5 onwards the human-readable designation of the document is to be carried in `content.attachment.title`; `DocumentReference.description` is dropped for this purpose in favour of an alignment with IHE MHD and the ePA specification.
+{: .ig-highlight .ig-highlight-blue}
 
 ##### Compatibility
 
@@ -60,6 +61,7 @@ Notes:
 - **Category:** ISiK limits `category` to at most one entry (0..1), the MII KDS Dokument profile allows several (0..*). In a transformation to ISiK it has to be reduced to one category; the ISiK-specific derivation of the category from the KDL code has to be observed in doing so.
 
 > **Note on reading Validator comparison reports:** the FHIR Validator's value set comparisons operate on the `compose` definition, not on the expansion. For the four compared value sets (`securityLabel`, `content.format`, `context.facilityType`, `context.practiceSetting`) the report therefore states an *empty* intersection in each case, although the code sets do overlap in substance: ISiK enumerates the codes or sub-value-sets directly, whereas the MII KDS Dokument profile includes the respective ihe-d value set by reference. An empty intersection in these reports is therefore not evidence of terminology incompatibility.
+{: .ig-highlight .ig-highlight-blue}
 
 #### KBV MIO Basis
 

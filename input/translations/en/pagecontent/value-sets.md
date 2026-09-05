@@ -16,11 +16,11 @@ convention `MII_VS_<Module>_<Name>`). For general guidance on using codes, see
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems
 the sets draw from are described on the [Code Systems](code-systems.html) page.
 
-{:.bg-info}
-**Expansions:** ValueSet expansions in this guide are produced by a FHIR
-terminology server — SU-TermServ if the client certificate is configured,
-otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific
-ValueSets may not expand completely).
+> **Expansions:** ValueSet expansions in this guide are produced by a FHIR
+> terminology server — SU-TermServ if the client certificate is configured,
+> otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific
+> ValueSets may not expand completely).
+{: .ig-highlight .ig-highlight-blue}
 
 SNOMED CT content of this module uses the **International Edition, version
 20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`) per

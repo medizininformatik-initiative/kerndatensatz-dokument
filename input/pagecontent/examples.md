@@ -1,9 +1,9 @@
 <!-- markdownlint-disable MD041 -->
 Diese Seite führt die Beispielinstanzen des Moduls **Dokument** auf.
 
-{:.bg-warning}
-**Nur synthetische Daten** — niemals echte oder realistisch wirkende
-Patientendaten in Beispielen verwenden.
+> **Nur synthetische Daten** — niemals echte oder realistisch wirkende
+> Patientendaten in Beispielen verwenden.
+{: .ig-highlight .ig-highlight-orange}
 
 ### Beispielszenario: NLP-Pipeline „Amanda Alzheimer“
 
