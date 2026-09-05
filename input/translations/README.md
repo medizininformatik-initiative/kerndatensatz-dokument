@@ -67,3 +67,29 @@ Useful references:
 
 - PO format: https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html
 - FHIR multi-language guidance: https://build.fhir.org/ig/FHIR/ig-guidance/languages.html
+
+## Two rules for resource `.po` files (measured 2026-09-05)
+
+The publisher injects every `.po` translation into the resource as a
+`translation` extension before validating it, so the `.po` shapes the published
+package, and two shapes break it:
+
+- **Never leave a `msgstr` empty.** An empty translation still becomes an
+  extension, with no `content` — the validator reports `ext-1` and a missing
+  `content.value[x]` for each. Either translate the string or delete the entry.
+- **Do not translate a string the FSH already translates.** The profile carries
+  English `short`/`definition`/`comment` translations through the `Translation`
+  RuleSet (`input/fsh/common/rulesets.fsh`); a `.po` entry for the same string
+  is merged into that extension as an undefined `value` sub-extension. The
+  profile `.po` therefore only carries strings the FSH leaves untranslated
+  (name, title, mapping names, the extension slice, the constraints).
+
+## Translations in generated tables
+
+The publisher applies the `.po` files when it renders artifact pages and fragments, but not to `package.db`, which the `{% sql %}` / `{% sqlToData %}` directives query — a generated table would show the resources' German text on the English page. `scripts/po-to-data.mjs` therefore derives `input/data/translations_<lang>.json` (one map `msgid → msgstr` per resource) from the `.po` files; Jekyll exposes it as `site.data.translations_<lang>`, and a page looks a string up like this:
+
+```liquid
+{{ site.data.translations_en['StructureDefinition-mii-lm-dokument'][row.Definition] | default: row.Definition }}
+```
+
+Run `node scripts/po-to-data.mjs` after every change to a `.po` file and commit the data file; convention-check M14 fails when the two drift. The `.po` stays the single source.
