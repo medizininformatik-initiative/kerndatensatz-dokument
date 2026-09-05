@@ -1,0 +1,83 @@
+{
+  "codeSystems" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_Einrichtungsart",
+    "title" : "MII VS Dokument Einrichtungart",
+    "description" : "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
+    "systems" : ["http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung",
+    "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_Fachgebiet",
+    "title" : "MII VS Dokument Fachgebiet",
+    "description" : "ValueSet zum erzeugenden Fachgebiet eines Dokuments",
+    "systems" : ["http://snomed.info/sct",
+    "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+    "http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_Format_Code",
+    "title" : "MII VS Dokument Format Code",
+    "description" : "ValueSet zum (komplexen) Format Code eines Dokuments",
+    "systems" : ["urn:ietf:rfc:3986",
+    "http://dicom.nema.org/resources/ontology/DCMUID",
+    "urn:dicom:uid",
+    "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+    "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_NLP_Processing_Status",
+    "title" : "MII VS Dokument NLP Processing Status",
+    "description" : "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-ex-dokument-nlp-processing-status.html" : "MII EX Dokument NLP Processing Status"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_SCT_Dokument_Kategorie",
+    "title" : "MII VS Dokument SCT Dokument Kategorie",
+    "description" : "SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ",
+    "version" : "2027.0.0-ballot.rc1",
+    "status" : "active",
+    "name" : "MII_VS_Dokument_SCT_Dokument_Typ",
+    "title" : "MII VS Dokument SCT Dokument Typ",
+    "description" : "SNOMED CT ValueSet zum Typ eines Dokuments",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-dokument-dokument.html" : "MII PR Dokument Dokument"
+  }]
+}
