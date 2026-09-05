@@ -42,28 +42,4 @@ with its two-level hierarchy; the extension is bound via the value set
 
 ### Examples
 
-The following example illustrates the processing of a *physician's discharge letter* of the patient *Amanda Alzheimer* by an NLP pipeline (see figure). After the ingestion (`Ingestion`) of the original document `Amanda_Alzheimer.docx`, a document reference with the NLP processing status `unprocessed` is created. The document is then converted by a preprocessing step (`Preprocessing`) into the plain-text format `Amanda_Alzheimer.txt`. The corresponding document reference marks the NLP processing status `preprocessed, format-change` and points to the original document by means of `transforms`. Afterwards a de-identification (`De-Identification`) of the contents is carried out so that the resulting document `De-ID.txt` can be reused for research purposes in a data-protection-compliant way. A corresponding document reference marks the NLP processing status `preprocessed, format-change, surrogated` and points to the plain-text document by means of `transforms`. Finally the clinical contents are annotated, which may produce several result files that can be combined into the archive `Annotat.zip`. The corresponding document reference marks the NLP processing status through the accumulated codes of the preceding stages as `[annotated, semantic], surrogated, [preprocessed, format-change]` and, by means of `appends`, extends the document reference of the previous NLP processing step.
-
-[![Flow diagram of the NLP pipeline: ingestion, preprocessing, de-identification and annotation with the document references created at each step](NLP-Pipeline.svg)](NLP-Pipeline.svg)
-
-_Please note_: with the element `relatesTo`, relationships between the different references of a document can be established. The code designations `transforms` and `appends` denote the kind of relationship:
-
-- `transforms`: this document originates from the related original but has been changed in content or structure. For example, when an original document in CDA format has been converted into a text format.
-- `appends`: this document is based on the related document but contains additional information, for example annotations in the form of metadata.
-
-The following FHIR DocumentReference resources used the document profile ([MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)) to represent the result documents and the associated document references of each processing step of the NLP pipeline.
-
-| Result document | Example resource |
-| --- | --- |
-| `Amanda_Alzheimer.docx` | [Original document](DocumentReference-AmandaAlzheimerOriginalDokument.html) |
-| `Amanda_Alzheimer.txt` | [Plain-text document](DocumentReference-AmandaAlzheimerKlartextDokument.html) |
-| `De-ID.txt` | [De-identified document](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) |
-| `Annotat.zip` | [Annotated document](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) |
-
-The patient and encounter resources belonging to the example are used exclusively by the
-original document `Amanda_Alzheimer.docx` and its associated document reference.
-
-All examples are entirely synthetic; the full overview of the module's example
-instances is on the [Examples](examples.html) page.
-
-Source: [GraSCCo dataset, DOI (Zenodo): 10.5281/zenodo.6539130](https://doi.org/10.5281/zenodo.6539130)
+The NLP pipeline example scenario — flow diagram, the processing steps with their NLP processing status and the associated DocumentReference, Patient and Encounter resources — is on the [Examples](examples.html#example-scenario-amanda-alzheimer-nlp-pipeline) page.

@@ -10,18 +10,93 @@ This page lists the example instances of the **Dokument** module.
 
 ### Example scenario: "Amanda Alzheimer" NLP pipeline
 
-Together the examples model an NLP processing chain over a synthetic discharge
-letter (see [Guidance](guidance.html)):
+The following example illustrates the processing of a *physician's discharge letter* of the patient *Amanda Alzheimer* by an NLP pipeline (see figure). After the ingestion (`Ingestion`) of the original document `Amanda_Alzheimer.docx`, a document reference with the NLP processing status `unprocessed` is created. The document is then converted by a preprocessing step (`Preprocessing`) into the plain-text format `Amanda_Alzheimer.txt`. The corresponding document reference marks the NLP processing status `preprocessed, format-change` and points to the original document by means of `transforms`. Afterwards a de-identification (`De-Identification`) of the contents is carried out so that the resulting document `De-ID.txt` can be reused for research purposes in a data-protection-compliant way. A corresponding document reference marks the NLP processing status `preprocessed, format-change, surrogated` and points to the plain-text document by means of `transforms`. Finally the clinical contents are annotated, which may produce several result files that can be combined into the archive `Annotat.zip`. The corresponding document reference marks the NLP processing status through the accumulated codes of the preceding stages as `[annotated, semantic], surrogated, [preprocessed, format-change]` and, by means of `appends`, extends the document reference of the previous NLP processing step.
 
-| Example | Resource | Pipeline step |
-| --- | --- | --- |
-| [Original document](DocumentReference-AmandaAlzheimerOriginalDokument.html) | DocumentReference | Original (DOCX) |
-| [Plain-text document](DocumentReference-AmandaAlzheimerKlartextDokument.html) | DocumentReference | Plain-text extraction |
-| [De-identified document](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) | DocumentReference | De-identification |
-| [Annotated document](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) | DocumentReference | Annotation |
-| [Patient](Patient-AmandaAlzheimer.html) | Patient | Context |
-| [Facility encounter](Encounter-AmandaAlzheimerEinrichtungskontakt.html) | Encounter | Context |
-| [Department encounter](Encounter-AmandaAlzheimerAbteilungskontakt.html) | Encounter | Context |
-| [Care-unit encounter](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) | Encounter | Context |
+[![Flow diagram of the NLP pipeline: ingestion, preprocessing, de-identification and annotation with the document references created at each step](NLP-Pipeline.svg)](NLP-Pipeline.svg)
+
+_Please note_: with the element `relatesTo`, relationships between the different references of a document can be established. The code designations `transforms` and `appends` denote the kind of relationship:
+
+- `transforms`: this document originates from the related original but has been changed in content or structure. For example, when an original document in CDA format has been converted into a text format.
+- `appends`: this document is based on the related document but contains additional information, for example annotations in the form of metadata.
+
+#### Example instances
+
+The following FHIR DocumentReference resources used the document profile ([MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)) to represent the result documents and the associated document references of each processing step of the NLP pipeline.
+
+| Example | Resource | Pipeline step | Result document |
+| --- | --- | --- | --- |
+| [Original document](DocumentReference-AmandaAlzheimerOriginalDokument.html) | DocumentReference | Ingestion (original) | `Amanda_Alzheimer.docx` |
+| [Plain-text document](DocumentReference-AmandaAlzheimerKlartextDokument.html) | DocumentReference | Preprocessing (plain-text extraction) | `Amanda_Alzheimer.txt` |
+| [De-identified document](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) | DocumentReference | De-identification | `De-ID.txt` |
+| [Annotated document](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) | DocumentReference | Annotation | `Annotat.zip` |
+| [Patient](Patient-AmandaAlzheimer.html) | Patient | Context | – |
+| [Facility encounter](Encounter-AmandaAlzheimerEinrichtungskontakt.html) | Encounter | Context | – |
+| [Department encounter](Encounter-AmandaAlzheimerAbteilungskontakt.html) | Encounter | Context | – |
+| [Care-unit encounter](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) | Encounter | Context | – |
+
+#### DocumentReference resources of the pipeline
+
+Each tab shows the JSON representation of one processing step's document reference; the artifact page is linked in each.
+
+<div class="structure-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#ex-doc-0" data-toggle="tab" role="tab">Amanda_Alzheimer.docx</a></li>
+    <li role="presentation"><a href="#ex-doc-1" data-toggle="tab" role="tab">Amanda_Alzheimer.txt</a></li>
+    <li role="presentation"><a href="#ex-doc-2" data-toggle="tab" role="tab">De-ID.txt</a></li>
+    <li role="presentation"><a href="#ex-doc-3" data-toggle="tab" role="tab">Annotat.zip</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="ex-doc-0" role="tabpanel">
+      <p><a href="DocumentReference-AmandaAlzheimerOriginalDokument.html">AmandaAlzheimerOriginalDokument</a> (DocumentReference)</p>
+      {% include DocumentReference-AmandaAlzheimerOriginalDokument-json-html-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="ex-doc-1" role="tabpanel">
+      <p><a href="DocumentReference-AmandaAlzheimerKlartextDokument.html">AmandaAlzheimerKlartextDokument</a> (DocumentReference)</p>
+      {% include DocumentReference-AmandaAlzheimerKlartextDokument-json-html-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="ex-doc-2" role="tabpanel">
+      <p><a href="DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html">AmandaAlzheimerDeIdentifiziertesDokument</a> (DocumentReference)</p>
+      {% include DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument-json-html-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="ex-doc-3" role="tabpanel">
+      <p><a href="DocumentReference-AmandaAlzheimerAnnotiertesDokument.html">AmandaAlzheimerAnnotiertesDokument</a> (DocumentReference)</p>
+      {% include DocumentReference-AmandaAlzheimerAnnotiertesDokument-json-html-en.xhtml %}
+    </div>
+  </div>
+</div>
+
+#### Patient and Encounter resources
+
+The patient and encounter resources belonging to the example are used exclusively by the
+original document `Amanda_Alzheimer.docx` and its associated document reference.
+
+<div class="structure-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#ex-ctx-0" data-toggle="tab" role="tab">Amanda Alzheimer</a></li>
+    <li role="presentation"><a href="#ex-ctx-1" data-toggle="tab" role="tab">Facility encounter</a></li>
+    <li role="presentation"><a href="#ex-ctx-2" data-toggle="tab" role="tab">Department encounter</a></li>
+    <li role="presentation"><a href="#ex-ctx-3" data-toggle="tab" role="tab">Care-unit encounter</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="ex-ctx-0" role="tabpanel">
+      <p><a href="Patient-AmandaAlzheimer.html">AmandaAlzheimer</a> (Patient)</p>
+      {% include Patient-AmandaAlzheimer-json-html-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="ex-ctx-1" role="tabpanel">
+      <p><a href="Encounter-AmandaAlzheimerEinrichtungskontakt.html">AmandaAlzheimerEinrichtungskontakt</a> (Encounter)</p>
+      {% include Encounter-AmandaAlzheimerEinrichtungskontakt-json-html-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="ex-ctx-2" role="tabpanel">
+      <p><a href="Encounter-AmandaAlzheimerAbteilungskontakt.html">AmandaAlzheimerAbteilungskontakt</a> (Encounter)</p>
+      {% include Encounter-AmandaAlzheimerAbteilungskontakt-json-html-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="ex-ctx-3" role="tabpanel">
+      <p><a href="Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html">AmandaAlzheimerVersorgungsstellenKontakt</a> (Encounter)</p>
+      {% include Encounter-AmandaAlzheimerVersorgungsstellenKontakt-json-html-en.xhtml %}
+    </div>
+  </div>
+</div>
 
 All examples are fully synthetic.
+
+Source: [GraSCCo dataset, DOI (Zenodo): 10.5281/zenodo.6539130](https://doi.org/10.5281/zenodo.6539130)
