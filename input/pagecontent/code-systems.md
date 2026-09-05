@@ -25,6 +25,17 @@ Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu
 
 ---
 
+Modul-eigene CodeSystems, beim Build aus dem Paket gelesen:
+
+{% sql {
+ "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 order by c.Name",
+ "columns" : [
+  { "title" : "CodeSystem", "type" : "link", "source" : "Name", "target" : "Web" },
+  { "title" : "Status", "type" : "text", "source" : "Status" },
+  { "title" : "Beschreibung", "type" : "markdown", "source" : "Description" }
+ ]
+} %}
+
 ### Klassifikation von NLP-Verarbeitungsergebnissen
 
 Die Konzepte des CodeSystems

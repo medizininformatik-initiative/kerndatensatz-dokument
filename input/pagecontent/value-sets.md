@@ -33,6 +33,17 @@ ValueSet-Definitionen selbst verankert.
 
 ### Definierte ValueSets
 
+Übersicht der modul-eigenen ValueSets, beim Build aus dem Paket gelesen:
+
+{% sql {
+ "query" : "select distinct v.Name, r.Web, v.Status, v.Description from ValueSetList v join Resources r on r.Key = v.ResourceKey where v.ViewType = 1 order by v.Name",
+ "columns" : [
+  { "title" : "ValueSet", "type" : "link", "source" : "Name", "target" : "Web" },
+  { "title" : "Status", "type" : "text", "source" : "Status" },
+  { "title" : "Beschreibung", "type" : "markdown", "source" : "Description" }
+ ]
+} %}
+
 Die nachfolgenden ValueSets werden in diesem Modul selbst definiert.
 
 #### Dokumententypen

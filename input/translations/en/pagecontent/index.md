@@ -18,12 +18,18 @@ standardized use of routine clinical data for medical research.
 > images or videos as well.
 {: .ig-highlight .ig-highlight-grey}
 
-| Publication |               |
-|-------------|---------------|
-| Date        | 2026-08-28 |
-| Version     | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
-| Status      | Ballot        |
-| Realm       | DE            |
+<!-- Generated at build time from the ImplementationGuide resource in package.db
+     (publisher sql directive) — version, date and status can no longer drift from sushi-config.yaml. -->
+{% sql {
+ "query" : "select Version, Date, Status from Resources where Type='ImplementationGuide'",
+ "columns" : [
+  { "title" : "Version", "type" : "text", "source" : "Version" },
+  { "title" : "Date", "type" : "text", "source" : "Date" },
+  { "title" : "Status", "type" : "text", "source" : "Status" }
+ ]
+} %}
+
+Realm: DE (jurisdiction Germany). Versioning follows CalVer `YYYY.n.n`.
 
 The guide's full version history is documented on the [Changes](changes.html) page.
 
@@ -97,14 +103,22 @@ dependencies are described at
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
 Formal dependencies of this module (see `dependencies` in
-`sushi-config.yaml`): KDS base module (`kerndatensatz.base` 2027.0.0-ballot.rc1),
-KDS Meta (`kerndatensatz.meta` 2027.0.0-ballot.rc3), German base profiles
-(`de.basisprofil.r4` 1.6.0), ISiK level 6 (`de.gematik.isik` 6.0.0),
-IHE-D terminology (`de.ihe-d.terminology` 3.0.1), KDL (`dvmd.kdl.r4`
-2025.0.1), IHE FormatCode (`ihe.formatcode.fhir` 1.4.0) plus the HL7
-terminology and extensions packages. The complete versioned table is
-rendered on the
+`sushi-config.yaml`): KDS base module (`kerndatensatz.base`), KDS Meta
+(`kerndatensatz.meta`), German base profiles (`de.basisprofil.r4`), ISiK
+(`de.gematik.isik`), IHE-D terminology (`de.ihe-d.terminology`), KDL
+(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`) plus the HL7
+terminology and extensions packages. The following table reads the versions
+from the ImplementationGuide resource at build time; the complete table with
+links is rendered on the
 [MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
+
+{% sql {
+ "query" : "select json_extract(d.value,'$.packageId') as Package, json_extract(d.value,'$.version') as Version from Resources r, json_each(r.Json,'$.dependsOn') d where r.Type='ImplementationGuide'",
+ "columns" : [
+  { "title" : "Package", "type" : "text", "source" : "Package" },
+  { "title" : "Version", "type" : "text", "source" : "Version" }
+ ]
+} %}
 
 More FHIR implementation guides can be found in the official
 **[FHIR IG Registry](https://fhir.org/guides/registry/)** (source:

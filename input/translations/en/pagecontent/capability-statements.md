@@ -15,3 +15,15 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/
 Artifact page: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html)
 
 {% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-en.xhtml %}
+
+### Supported search parameters
+
+The following table reads the search parameters' names and types from the CapabilityStatement, the normative source, at build time; example calls are in the [profile notes](StructureDefinition-mii-pr-dokument-dokument.html#search-parameters).
+
+{% sql {
+ "query" : "select json_extract(s.value,'$.name') as Param, json_extract(s.value,'$.type') as Type from Resources r, json_each(r.Json,'$.rest[0].resource[0].searchParam') s where r.Type='CapabilityStatement'",
+ "columns" : [
+  { "title" : "Search parameter", "type" : "text", "source" : "Param" },
+  { "title" : "Type", "type" : "text", "source" : "Type" }
+ ]
+} %}

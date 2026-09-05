@@ -19,38 +19,15 @@ The following dictionary lists every element of the logical model with its path 
 
 The IG Publisher does not render this element-to-resource mapping on the Logical Model's artefact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
 
-<!-- GENERATED TABLE: mechanically extracted at migration time from the built
-     fsh-generated/resources/StructureDefinition-mii-lm-dokument.json
-     (differential.element[].path, .definition,
-     .mapping[identity=mii-map-dokument].map). Source of truth:
-     input/fsh/logical-model/mii-lm-dokument.fsh and
-     input/fsh/logical-model/mii-map-dokument.fsh — regenerate this table
-     whenever either file changes. -->
+<!-- Generated at build time: the rows come from the logical model in package.db
+     (publisher sqlToData directive); the English definitions are looked up in
+     input/data/translations_en.json, which scripts/po-to-data.mjs derives from
+     input/translations/en/StructureDefinition-mii-lm-dokument.po (convention-check M14
+     keeps both in step). Source of truth: input/fsh/logical-model/*.fsh + the .po. -->
+{% sqlToData lmmapping select replace(json_extract(e.value,'$.path'),'mii-lm-dokument.','') as Element, (select json_extract(m.value,'$.map') from json_each(e.value,'$.mapping') m where json_extract(m.value,'$.identity')='mii-map-dokument') as Mapping, json_extract(e.value,'$.definition') as Definition from Resources r, json_each(r.Json,'$.differential.element') e where r.Id='mii-lm-dokument' and json_extract(e.value,'$.path') <> 'mii-lm-dokument' %}
+{% assign lmtx = site.data.translations_en['StructureDefinition-mii-lm-dokument'] %}
 
 | Logical dataset element | FHIR mapping | Description |
 | --- | --- | --- |
-| Dokument | DocumentReference | Clinical document including metadata, content, creation context and relationships |
-| Dokument.<br>Masteridentifikator | DocumentReference.<br>masterIdentifier | Version-specific unique identifier assigned to the document by the document source |
-| Dokument.<br>Businessidentifikator | DocumentReference.<br>identifier | Other version-independent identifier assigned to the document (e.g. by further document-processing systems) |
-| Dokument.<br>Dokumentenreferenzstatus | DocumentReference.<br>status | Status of this document reference (current, superseded, or entered in error) |
-| Dokument.<br>Dokumentenstatus | DocumentReference.<br>docStatus | Status of the underlying document (preliminary, final, amended, or entered in error) |
-| Dokument.<br>Dokumententyp | DocumentReference.<br>type | Type of the referenced document (e.g. history and examination, discharge letter, progress report) |
-| Dokument.<br>Dokumentenkategorie | DocumentReference.<br>category | Higher-level category of the referenced document (e.g. physician letters or physician documentation) |
-| Dokument.<br>Patient | DocumentReference.<br>subject | Patient to whom the referenced document relates |
-| Dokument.<br>Beschreibung | DocumentReference.<br>description | Human-readable description of the referenced document |
-| Dokument.<br>Sicherheitsstufe | DocumentReference.<br>securityLabel | Degree of confidentiality/security of the referenced document (e.g. unrestricted, low, moderate, normal, or restricted) |
-| Dokument.<br>Dokumentenbeziehung | DocumentReference.<br>relatesTo | Relationships of the referenced document to other documents |
-| Dokument.<br>Dokumentenbeziehung.<br>Beziehungstyp | DocumentReference.<br>relatesTo.<br>code | Relationship to other documents |
-| Dokument.<br>Dokumentenbeziehung.<br>Beziehungsreferenz | DocumentReference.<br>relatesTo.<br>target | Target of the document relationship |
-| Dokument.<br>Anhang | DocumentReference.<br>content | Document (base64-encoded data) or reference (URL) with relevant metadata for the attachment |
-| Dokument.<br>Anhang.<br>Sprache | DocumentReference.<br>attachment.<br>language | Language used in the document |
-| Dokument.<br>Anhang.<br>Erstellungsdatum | DocumentReference.<br>attachment.<br>creation | Date the document was created |
-| Dokument.<br>Anhang.<br>Daten | DocumentReference.<br>attachment.<br>data | Document as binary data |
-| Dokument.<br>Anhang.<br>DokumentenUrl | DocumentReference.<br>attachment.<br>url | Reference to the (local) storage location of the document |
-| Dokument.<br>Anhang.<br>Dokumentenformat | DocumentReference.<br>attachment.<br>contentType | MIME type of the document content |
-| Dokument.<br>Kontext | DocumentReference.<br>context | Clinical context in which the document was created |
-| Dokument.<br>Kontext.<br>Gesundheitseinrichtungskontakt | DocumentReference.<br>context.<br>encounter | Contact with the healthcare facility, or the type of care associated with the document content |
-| Dokument.<br>Kontext.<br>Vorgang | DocumentReference.<br>context.<br>event | Actions or procedures documented in the context |
-| Dokument.<br>Kontext.<br>Fachgebiet | DocumentReference.<br>context.<br>practiceSetting | Clinical specialty in which the document content was created |
-| Dokument.<br>Kontext.<br>Dokumentationszeitraum | DocumentReference.<br>context.<br>period | Period during which the action or procedure described in the document was performed |
-| Dokument.<br>Kontext.<br>Einrichtungsart | DocumentReference.<br>context.<br>facilityType | Type of facility in which the action or procedure was performed on the patient |
+{% for row in lmmapping %}| {{ row.Element }} | {{ row.Mapping }} | {{ lmtx[row.Definition] | default: row.Definition }} |
+{% endfor %}

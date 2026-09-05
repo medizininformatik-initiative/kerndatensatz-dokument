@@ -25,6 +25,17 @@ The following section describes the module's own CodeSystem; licence information
 
 ---
 
+The module's own CodeSystems, read from the package at build time (description in the resource's source language):
+
+{% sql {
+ "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 order by c.Name",
+ "columns" : [
+  { "title" : "CodeSystem", "type" : "link", "source" : "Name", "target" : "Web" },
+  { "title" : "Status", "type" : "text", "source" : "Status" },
+  { "title" : "Description", "type" : "markdown", "source" : "Description" }
+ ]
+} %}
+
 ### Classification of NLP processing results
 
 The concepts of the CodeSystem

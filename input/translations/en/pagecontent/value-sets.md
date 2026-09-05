@@ -32,6 +32,17 @@ definitions themselves.
 
 ### Defined ValueSets
 
+Overview of the module's own ValueSets, read from the package at build time (descriptions in the resources' source language):
+
+{% sql {
+ "query" : "select distinct v.Name, r.Web, v.Status, v.Description from ValueSetList v join Resources r on r.Key = v.ResourceKey where v.ViewType = 1 order by v.Name",
+ "columns" : [
+  { "title" : "ValueSet", "type" : "link", "source" : "Name", "target" : "Web" },
+  { "title" : "Status", "type" : "text", "source" : "Status" },
+  { "title" : "Description", "type" : "markdown", "source" : "Description" }
+ ]
+} %}
+
 The following ValueSets are defined in this module itself.
 
 #### Document types

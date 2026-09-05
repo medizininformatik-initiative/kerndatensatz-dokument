@@ -21,6 +21,7 @@
 
 import { readFileSync, existsSync, appendFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { buildTranslationData, dataPath, serialize } from "./po-to-data.mjs";
 
 // The machine-readable marker an OPTIONAL (0..1) page carries until the module
 // decides to keep or remove it — see docs/optional-pages.md. Deleting the
@@ -129,7 +130,7 @@ function checkPrefixed(value, prefix, charClass) {
  *        (null = the scan did not run, e.g. in unit tests without a tree)
  * @returns {{ findings: Array, ok: boolean }}
  */
-export function evaluate({ sushiConfig = null, igIni = null, packageJson = null, modulePackageJson = null, release = false, demoPagePresent = false, optionalPages = null, duplicateHeadings = null, illustrativeExamples = null, reviewMarkers = null } = {}) {
+export function evaluate({ sushiConfig = null, igIni = null, packageJson = null, modulePackageJson = null, release = false, demoPagePresent = false, optionalPages = null, duplicateHeadings = null, illustrativeExamples = null, reviewMarkers = null, translationData = null } = {}) {
   const findings = [];
   const add = (id, applies, status, observed, message) =>
     findings.push({ id, applies, status, observed, message });
@@ -346,6 +347,19 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
   }
 
 
+
+  // M14 — translation data parity. Pages that build tables with the publisher's
+  // sql directives look translations up in input/data/translations_<lang>.json,
+  // which scripts/po-to-data.mjs derives from input/translations/<lang>/*.po.
+  // A stale or missing data file silently renders source-language text.
+  if (translationData !== null) {
+    const stale = translationData.filter((t) => t.actual !== t.expected).map((t) => t.lang);
+    if (translationData.length === 0) add("M14 translation data", "module", "pass", "no resource .po files", "nothing to derive");
+    else add("M14 translation data", "module", stale.length ? "fail" : "pass",
+      stale.length ? `input/data/translations_<lang>.json stale or missing for: ${stale.join(", ")}` : `${translationData.length} language(s) in step with input/translations/`,
+      stale.length ? "run `node scripts/po-to-data.mjs` and commit input/data/" : "derived data files match the .po sources");
+  }
+
   // M13 — review markers. TODO:REVIEW comments and DERIVED review boxes are
   // legitimate while a page is being migrated or translated, and they render
   // verbatim; a release must not carry them (Gate B/C sign-off = their removal).
@@ -554,9 +568,10 @@ function main() {
   const duplicateHeadings = scanDuplicateHeadings(args.root);
   const illustrativeExamples = scanIllustrativeExamples(args.root);
   const reviewMarkers = scanReviewMarkers(args.root);
+  const translationData = Object.entries(buildTranslationData(args.root)).map(([lang, perResource]) => ({ lang, expected: serialize(perResource), actual: readIfExists(dataPath(args.root, lang)) }));
 
   const { findings, ok } = evaluate({
-    sushiConfig, igIni, packageJson, modulePackageJson, release: args.release, demoPagePresent, optionalPages, duplicateHeadings, illustrativeExamples, reviewMarkers,
+    sushiConfig, igIni, packageJson, modulePackageJson, release: args.release, demoPagePresent, optionalPages, duplicateHeadings, illustrativeExamples, reviewMarkers, translationData,
   });
 
   const mode = args.release ? "release (strict)" : "development (placeholder-tolerant)";

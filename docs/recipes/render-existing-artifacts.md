@@ -37,6 +37,28 @@ What replaces it:
 | `<fql …>` across many artifacts | `{% sql … %}` over `package.db` |
 | `{{render:<canonical>}}` | usually nothing — the Publisher already generates that artifact's page |
 
+## Generated tables from `package.db` (sql directives)
+
+Measured on this module with publisher 2.3.2 (2026-09-05) — the rules that
+survived the probe build:
+
+- **JSON1 is available.** `json_each` / `json_extract` over `Resources.Json`
+  reach element lists, dependencies and search parameters even though the
+  schema has no element table. Example, the logical-model mapping:
+  `select json_extract(e.value,'$.path') … from Resources r, json_each(r.Json,'$.differential.element') e where r.Id='mii-lm-dokument'`.
+- **Always the JSON control form with explicit column types.** The plain
+  `{% sql select … %}` form auto-types columns and turns package ids and type
+  codes into links that the link checker then reports as broken. Column
+  headers come from `"title"`; `"name"` is ignored.
+- **Translations:** `package.db` holds the source language. For a translated
+  column use `{% sqlToData %}` plus a Liquid lookup into
+  `site.data.translations_<lang>` — see `input/translations/README.md` and
+  `scripts/po-to-data.mjs`.
+- **Duplicates:** the module's own ValueSets appear twice in `ValueSetList`
+  (`ViewType = 1`); use `select distinct`.
+- Generated tables carry `class="grid"` (publisher style); Liquid-built tables
+  are ordinary Markdown tables.
+
 ## Steps
 
 1. **Decide which of the three families you need.**

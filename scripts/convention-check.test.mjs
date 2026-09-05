@@ -379,3 +379,10 @@ test("M13: review markers block a release, but not development", () => {
   const clean = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, reviewMarkers: [], release: true });
   assert.ok(!ids(clean.findings, "fail").includes("M13 review markers"));
 });
+
+test("M14: derived translation data must match the .po sources", () => {
+  const ok = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, translationData: [{ lang: "en", expected: "{}\n", actual: "{}\n" }] });
+  assert.ok(!ids(ok.findings, "fail").includes("M14 translation data"));
+  const stale = evaluate({ sushiConfig: CONCRETE, igIni: CONCRETE_IGINI, translationData: [{ lang: "en", expected: "{\"a\":1}\n", actual: null }] });
+  assert.ok(ids(stale.findings, "fail").includes("M14 translation data"));
+});
