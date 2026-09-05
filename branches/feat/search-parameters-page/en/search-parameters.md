@@ -41,8 +41,6 @@ The following table reads names and types from the CapabilityStatement at build 
 
 ### Example calls
 
-The machine-readable declaration of the same 24 search parameters is in the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md) (`input/fsh/definitions/mii-cps-dokument-capabilitystatement.fsh`) — that is where it is normative. The list below adds example invocations and pointers into the FHIR base specification and must be kept in sync with every change to the CapabilityStatement.
-
 The following search parameters are relevant for this module, including in combination:
 
 1. The search parameter "_id" MUST be supported:Examples:`GET [base]/DocumentReference?_id=12345`Usage notes: further information on searching by "_id" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).

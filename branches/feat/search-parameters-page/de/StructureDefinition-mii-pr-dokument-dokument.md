@@ -185,7 +185,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-dokum
     }]
   },
   "status" : "active",
-  "date" : "2026-09-05T12:03:43+00:00",
+  "date" : "2026-09-05T12:10:57+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
