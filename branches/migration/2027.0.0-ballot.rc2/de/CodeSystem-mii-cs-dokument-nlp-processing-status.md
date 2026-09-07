@@ -66,7 +66,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

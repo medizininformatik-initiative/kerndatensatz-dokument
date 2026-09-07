@@ -4,6 +4,10 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII PR Dokument Dokument**
 
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-dokument-dokument.csv), [Excel](../StructureDefinition-mii-pr-dokument-dokument.xlsx), [Schematron](../StructureDefinition-mii-pr-dokument-dokument.sch) 
+
 ## Ressourcenprofil: MII PR Dokument Dokument 
 
 | | |
@@ -111,8 +115,6 @@ Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/doc
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) 
-
 ** Summary **
 
 Mandatory: 0 element(17 nested mandatory elements)
@@ -142,10 +144,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 * The element 1 is sliced based on the value of DocumentReference.category.coding
 * The element 1 is sliced based on the value of DocumentReference.content
 
- 
-
-Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-dokument-dokument.csv), [Excel](../StructureDefinition-mii-pr-dokument-dokument.xlsx), [Schematron](../StructureDefinition-mii-pr-dokument-dokument.sch) 
-
+Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) 
 
 
 ## Resource Content
@@ -185,7 +184,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-dokum
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

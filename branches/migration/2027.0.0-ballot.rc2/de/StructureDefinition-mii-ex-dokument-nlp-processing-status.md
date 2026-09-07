@@ -4,6 +4,10 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII EX Dokument NLP Processing Status**
 
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-dokument-nlp-processing-status.csv), [Excel](../StructureDefinition-mii-ex-dokument-nlp-processing-status.xlsx), [Schematron](../StructureDefinition-mii-ex-dokument-nlp-processing-status.sch) 
+
 ## Extension: MII EX Dokument NLP Processing Status 
 
 | | |
@@ -89,16 +93,11 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
-
 ** Summary **
 
 Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des referenzierten Dokuments
 
- 
-
-Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-dokument-nlp-processing-status.csv), [Excel](../StructureDefinition-mii-ex-dokument-nlp-processing-status.xlsx), [Schematron](../StructureDefinition-mii-ex-dokument-nlp-processing-status.sch) 
-
+Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
 
 
 ## Resource Content
@@ -138,7 +137,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-dokum
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -4,6 +4,10 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII PR Dokument Dokument**
 
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-dokument.csv), [Excel](../StructureDefinition-mii-pr-dokument-dokument.xlsx), [Schematron](../StructureDefinition-mii-pr-dokument-dokument.sch) 
+
 ## Resource Profile: MII PR Dokument Dokument 
 
 | | |
@@ -40,9 +44,99 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
  [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
- 
+*  [Key Elements Table](#tabs-key) 
+*  [Differential Table](#tabs-diff) 
+*  [Snapshot Table](#tabs-snap) 
+*  [Statistics/References](#tabs-summ) 
+*  [All](#tabs-all) 
 
-Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-dokument.csv), [Excel](../StructureDefinition-mii-pr-dokument-dokument.xlsx), [Schematron](../StructureDefinition-mii-pr-dokument-dokument.sch) 
+#### Terminology Bindings
+
+#### Constraints
+
+#### Terminology Bindings (Differential)
+
+#### Constraints
+
+#### Terminology Bindings
+
+#### Constraints
+
+** Summary **
+
+Mandatory: 0 element(17 nested mandatory elements)
+ Must-Support: 56 elements
+ Fixed: 7 elements
+ Prohibited: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Person Patient (https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient.html)
+* [MII PR Person Patient (Pseudonymisiert) (https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert)](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient-pseudonymisiert.html)
+* [MII PR Fall Kontakt mit einer Gesundheitseinrichtung (https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung)](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-fall-kontakt-gesundheitseinrichtung.html)
+
+**Extensions**
+
+This structure refers to these extensions:
+
+* [https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of DocumentReference.type.coding
+* The element 1 is sliced based on the value of DocumentReference.category.coding
+* The element 1 is sliced based on the value of DocumentReference.content
+
+ **Key Elements View** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+ **Differential View** 
+
+#### Terminology Bindings (Differential)
+
+#### Constraints
+
+ **Snapshot ViewView** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+** Summary **
+
+Mandatory: 0 element(17 nested mandatory elements)
+ Must-Support: 56 elements
+ Fixed: 7 elements
+ Prohibited: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Person Patient (https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient.html)
+* [MII PR Person Patient (Pseudonymisiert) (https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert)](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient-pseudonymisiert.html)
+* [MII PR Fall Kontakt mit einer Gesundheitseinrichtung (https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung)](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-fall-kontakt-gesundheitseinrichtung.html)
+
+**Extensions**
+
+This structure refers to these extensions:
+
+* [https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of DocumentReference.type.coding
+* The element 1 is sliced based on the value of DocumentReference.category.coding
+* The element 1 is sliced based on the value of DocumentReference.content
 
 
 
@@ -83,7 +177,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-d
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

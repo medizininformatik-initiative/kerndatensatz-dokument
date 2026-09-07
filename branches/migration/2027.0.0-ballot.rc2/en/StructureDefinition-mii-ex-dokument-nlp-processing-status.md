@@ -4,6 +4,10 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII EX Dokument NLP Processing Status**
 
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-ex-dokument-nlp-processing-status.csv), [Excel](../StructureDefinition-mii-ex-dokument-nlp-processing-status.xlsx), [Schematron](../StructureDefinition-mii-ex-dokument-nlp-processing-status.sch) 
+
 ## Extension: MII EX Dokument NLP Processing Status 
 
 | | |
@@ -58,9 +62,34 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
  [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
- 
+*  [Differential Table](#tabs-diff) 
+*  [Snapshot Table](#tabs-snap) 
+*  [Statistics/References](#tabs-summ) 
+*  [AllAll](#tabs-all) 
 
-Other representations of profile: [CSV](../StructureDefinition-mii-ex-dokument-nlp-processing-status.csv), [Excel](../StructureDefinition-mii-ex-dokument-nlp-processing-status.xlsx), [Schematron](../StructureDefinition-mii-ex-dokument-nlp-processing-status.sch) 
+#### Terminology Bindings (Differential)
+
+#### Terminology Bindings
+
+#### Constraints
+
+** Summary **
+
+Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des referenzierten Dokuments
+
+ **Differential ViewDifferential View** 
+
+#### Terminology Bindings (Differential)
+
+ **Snapshot View** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+** Summary **
+
+Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des referenzierten Dokuments
 
 
 
@@ -101,7 +130,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-dokument-n
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -4,6 +4,10 @@
 * [**Artifacts Summary**](artifacts.md)
 * **MII LM Dokument**
 
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-lm-dokument.csv), [Excel](../StructureDefinition-mii-lm-dokument.xlsx) 
+
 ## Logical Model: MII LM Dokument 
 
 | | |
@@ -24,9 +28,33 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
  [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
- 
+*  [Key Elements Table](#tabs-key) 
+*  [Differential Table](#tabs-diff) 
+*  [Snapshot Table](#tabs-snap) 
+*  [Statistics/References](#tabs-summ) 
+*  [All](#tabs-all) 
 
-Other representations of profile: [CSV](../StructureDefinition-mii-lm-dokument.csv), [Excel](../StructureDefinition-mii-lm-dokument.xlsx) 
+#### Constraints
+
+#### Constraints
+
+** Summary **
+
+Mandatory: 0 element(5 nested mandatory elements)
+
+ **Key Elements View** 
+
+#### Constraints
+
+ **Differential View** 
+
+ **Snapshot ViewView** 
+
+#### Constraints
+
+** Summary **
+
+Mandatory: 0 element(5 nested mandatory elements)
 
 
 
@@ -67,7 +95,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-dokument.c
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

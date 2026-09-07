@@ -4,6 +4,10 @@
 * [**Artefaktübersicht**](artifacts.md)
 * **MII LM Dokument**
 
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-dokument.csv), [Excel](../StructureDefinition-mii-lm-dokument.xlsx) 
+
 ## Logisches Modell: MII LM Dokument 
 
 | | |
@@ -54,16 +58,11 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.html#Element) 
-
 ** Summary **
 
 Mandatory: 0 element(5 nested mandatory elements)
 
- 
-
-Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-dokument.csv), [Excel](../StructureDefinition-mii-lm-dokument.xlsx) 
-
+Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.html#Element) 
 
 
 ## Resource Content
@@ -103,7 +102,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-dokum
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T14:37:20+00:00",
+  "date" : "2026-09-07T15:18:54+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

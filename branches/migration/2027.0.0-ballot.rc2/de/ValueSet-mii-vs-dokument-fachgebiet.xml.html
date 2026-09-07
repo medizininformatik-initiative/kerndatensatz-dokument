@@ -25,7 +25,22 @@
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
   	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Branding override for the fhir2.base.template CSS placeholder
+    <!-- MODULE OVERRIDE of the template's includes/fragment-css.html (ig-template-mii-kds 1.3.4).
+     The template occupies the base's CSS extension point, so a module that needs
+     one more rule has to carry the template's include verbatim and append to it.
+     Everything above the <style> block is the template's file, unchanged.
+     Module rules (2026-09-07, review on migration/2027.0.0-ballot.rc2):
+       1. narrative Markdown tables and this module's sql tables (class "grid sql-table",
+          set through the directive's "class" property — the publisher's own grid
+          tables stay untouched, template styleguide §5)
+          use the full width of the content column instead of shrink-to-fit;
+       2. the publisher adds Prism's class="language-json" to SOME of its own
+          JSON renderings (one of the four DocumentReference examples), which
+          re-colours that block green; inside pre.json the Prism tokens now
+          inherit the publisher's own colouring, so all JSON blocks look alike.
+     REMOVAL: delete this file the day the template ships both rules
+     (ig-template-mii-kds PR "fix(css): full-width narrative tables, uniform JSON blocks"). -->
+<!-- Branding override for the fhir2.base.template CSS placeholder
      (base ships includes/fragment-css.html as a single comment; it is included
      in <head> AFTER all base stylesheets, so the linked files win the
      cascade).
@@ -47,6 +62,18 @@
 
 <link href="assets/css/num-diz.css" rel="stylesheet"/>
 
+<style>
+  /* 1. tables use the content width (same selector chain as template-base.css, see its comment) */
+  table:not([class]):not([style]):not([border]):not([data-fhir]),
+  table.sql-table { width: 100%; }
+  /* 2. publisher JSON blocks: neutralise Prism's re-colouring where the publisher added its class */
+  /*    Prism.js also copies its language class onto the parent <pre> at load time, which
+        swaps fhir.css's pre.json look (green #EFFFEF, 11px, 5px padding) for Prism's grey theme;
+        the pre-level rule puts the publisher's values back. */
+  pre.json[class*="language-"] { background: #EFFFEF; padding: 5px; margin: 0 0 10px; font-size: 11px; text-shadow: none; }
+  pre.json code[class*="language-"] { color: inherit; text-shadow: none; }
+  pre.json code[class*="language-"] .token { color: inherit; background: transparent; text-shadow: none; font-weight: inherit; }
+</style>
 
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -366,7 +393,7 @@
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MII VS Dokument Fachgebiet&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-09-07T14:37:20+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-09-07T15:18:54+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NUM-DIZ&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NUM-DIZ&quot;/&gt;
@@ -428,7 +455,7 @@
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 14:37+0000">2026-09-07</span>
+          Erstellt <span title="Mon, Sep 7, 2026 15:18+0000">2026-09-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
