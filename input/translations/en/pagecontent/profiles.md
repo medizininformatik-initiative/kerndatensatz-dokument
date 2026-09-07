@@ -21,6 +21,25 @@ the [Logical Models](logical-models.html) page.
 The conventions below apply not only to the profiles, but to all conformance
 resources of this module (extensions, ValueSets, CodeSystems, logical models).
 
+### Profile MII PR Dokument Dokument
+
+The module defines one profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html) on `DocumentReference` — "clinical document with its metadata". The implementation notes, the mapping to the logical dataset and the examples are on the artifact page; the structure is rendered here directly (the profile's XML and JSON are embedded only on the artifact page because of their size).
+
+<div class="structure-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#pr-diff" data-toggle="tab" role="tab">Differential</a></li>
+    <li role="presentation"><a href="#pr-snap" data-toggle="tab" role="tab">Structure (snapshot)</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="pr-diff" role="tabpanel">
+      {% include StructureDefinition-mii-pr-dokument-dokument-diff-en.xhtml %}
+    </div>
+    <div class="tab-pane" id="pr-snap" role="tabpanel">
+      {% include StructureDefinition-mii-pr-dokument-dokument-snapshot-en.xhtml %}
+    </div>
+  </div>
+</div>
+
 ### Naming conventions for creating FHIR resources in the Medical Informatics Initiative
 
 Please check the [naming conventions page](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII) in the core dataset wiki for more recent versions.

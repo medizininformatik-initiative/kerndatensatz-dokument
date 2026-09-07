@@ -21,6 +21,25 @@ Die folgenden Konventionen gelten nicht nur für die Profile, sondern für alle
 Conformance-Ressourcen dieses Moduls (Extensions, ValueSets, CodeSystems,
 logische Modelle).
 
+### Profil MII PR Dokument Dokument
+
+Das Modul definiert ein Profil: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html) auf `DocumentReference` — „Klinisches Dokument mit zugehörigen Metadaten“. Die fachlichen Hinweise, das Mapping auf den logischen Datensatz und die Beispiele stehen auf der Artefaktseite; die Struktur wird hier direkt gerendert (XML und JSON des Profils sind wegen ihrer Größe nur auf der Artefaktseite eingebunden).
+
+<div class="structure-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#pr-diff" data-toggle="tab" role="tab">Differential</a></li>
+    <li role="presentation"><a href="#pr-snap" data-toggle="tab" role="tab">Struktur (Snapshot)</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="pr-diff" role="tabpanel">
+      {% include StructureDefinition-mii-pr-dokument-dokument-diff-de.xhtml %}
+    </div>
+    <div class="tab-pane" id="pr-snap" role="tabpanel">
+      {% include StructureDefinition-mii-pr-dokument-dokument-snapshot-de.xhtml %}
+    </div>
+  </div>
+</div>
+
 ### Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative
 
 Bitte die [Seite der Namenskonventionen](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII) im Kerndatensatz Wiki auf aktuellere Versionen prüfen.
