@@ -1,5 +1,7 @@
 Instance: AmandaAlzheimerDeIdentifiziertesDokument
 InstanceOf: MII_PR_Dokument_Dokument
+Title: "De-identifiziertes Dokument"
+Description: "Beispiel der NLP-Pipeline, Schritt De-Identification: `De-ID.txt`, Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument."
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * status = #current

@@ -1,5 +1,7 @@
 Instance: AmandaAlzheimerKlartextDokument
 InstanceOf: MII_PR_Dokument_Dokument
+Title: "Klartext-Dokument"
+Description: "Beispiel der NLP-Pipeline, Schritt Preprocessing: Klartextfassung `Amanda_Alzheimer.txt`, Status `preprocessed, format-change`, verweist mit `transforms` auf das Original."
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * masterIdentifier.system = "urn:ietf:rfc:3986"

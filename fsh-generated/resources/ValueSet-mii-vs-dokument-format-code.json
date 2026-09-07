@@ -19,7 +19,7 @@
     }
   ],
   "experimental": false,
-  "language": "de-DE",
+  "language": "de",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"

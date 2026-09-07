@@ -1,21 +1,28 @@
 == Suppressed Messages ==
-
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
-
-# de.ihe-d.terminology ships only terminology, no ImplementationGuide resource.
-ERROR: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[2]: The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
-
-# Imported from kerndatensatz-basis (main). Temporary: the terminology server
-# used for publication currently has an incomplete expansion for
-# http://hl7.org/fhir/ValueSet/all-languages, which affects every bilingual
-# (de/en) module built from this template.
-The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
-The System URI could not be determined for the code 'de-DE' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
-The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
-The System URI could not be determined for the code 'en-US' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
-The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
-The value provided ('de-DE') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de-DE' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de-DE' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
-The value provided ('en') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
-The value provided ('en-US') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en-US' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en-US' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
+#
+# The publisher cannot suppress ERRORs here; the four errors of a CI build are known and tracked:
+#   2x DocumentReference.context.event not in 'IHE XDS eventCodeList' — the IHE-D value set cannot be
+#      expanded (issue #33; watch the replacement package ihe-de.iti.xds-vs);
+#   1x hl7.fhir.uv.subscriptions-backport.r4#1.1.0 is for FHIR 4.0.0 — pulled in transitively by
+#      hl7.fhir.uv.crmi 2.0.0 (kept by decision D4);
+#   1x ImplementationGuide.dependsOn[2] URL shape — de.ihe-d.terminology ships no ImplementationGuide
+#      resource, so no canonical with '/ImplementationGuide/' exists for it.
+# A local build against Ontoserver shows eight more (MimeType inference for attachment.contentType);
+# they do not occur with SU-TermServ in CI.
+#
+# Messages are emitted in the guide's language (German for jurisdiction DE); patterns must match that text.
+#
+# The MII assigns no OIDs to its terminology resources; CDA/OID-based use is out of scope for this module.
+# (The publisher matches the full message text, so one line per resource.)
+The resource CodeSystem/mii-cs-dokument-nlp-processing-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/mii-vs-dokument-einrichtungsart should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/mii-vs-dokument-fachgebiet should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/mii-vs-dokument-format-code should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/mii-vs-dokument-nlp-processing-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/mii-vs-dokument-sct-dokument-kategorie should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/mii-vs-dokument-sct-dokument-typ should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+# Synthetic example identifier namespace of the fictitious 'Universitätsklinikum Musterstadt' (Encounter.identifier.system).
+URL-Wert 'http://uk-musterstadt.de/fid' löst nicht auf

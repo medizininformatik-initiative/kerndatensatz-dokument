@@ -1,5 +1,7 @@
 Instance: AmandaAlzheimerOriginalDokument
 InstanceOf: MII_PR_Dokument_Dokument
+Title: "Original-Dokument (DOCX)"
+Description: "Beispiel der NLP-Pipeline „Amanda Alzheimer“, Schritt Ingestion: Dokumentreferenz auf den synthetischen Entlassbrief `Amanda_Alzheimer.docx`, NLP-Verarbeitungsstatus `unprocessed`."
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * masterIdentifier.system = "urn:ietf:rfc:3986"

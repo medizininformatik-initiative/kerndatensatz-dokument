@@ -1,11 +1,8 @@
-[AmandaAlzheimer]: Patient-AmandaAlzheimer.html
 [AmandaAlzheimerAbteilungskontakt]: Encounter-AmandaAlzheimerAbteilungskontakt.html
 [AmandaAlzheimerAnnotiertesDokument]: DocumentReference-AmandaAlzheimerAnnotiertesDokument.html
 [AmandaAlzheimerDeIdentifiziertesDokument]: DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html
 [AmandaAlzheimerEinrichtungskontakt]: Encounter-AmandaAlzheimerEinrichtungskontakt.html
 [AmandaAlzheimerKlartextDokument]: DocumentReference-AmandaAlzheimerKlartextDokument.html
-[AmandaAlzheimerOriginalDokument]: DocumentReference-AmandaAlzheimerOriginalDokument.html
-[AmandaAlzheimerVersorgungsstellenKontakt]: Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html
 [mii-cps-dokument-capabilitystatement]: CapabilityStatement-mii-cps-dokument-capabilitystatement.html
 [MII_CS_Dokument_NLP_Processing_Status]: CodeSystem-mii-cs-dokument-nlp-processing-status.html
 [MII_EX_Dokument_NLP_Processing_Status]: StructureDefinition-mii-ex-dokument-nlp-processing-status.html
@@ -18,3 +15,6 @@
 [MII_VS_Dokument_SCT_Dokument_Kategorie]: ValueSet-mii-vs-dokument-sct-dokument-kategorie.html
 [MII_VS_Dokument_SCT_Dokument_Typ]: ValueSet-mii-vs-dokument-sct-dokument-typ.html
 [mii-param-dokument-manifest]: Parameters-mii-param-dokument-manifest.html
+[AmandaAlzheimerOriginalDokument]: DocumentReference-AmandaAlzheimerOriginalDokument.html
+[AmandaAlzheimer]: Patient-AmandaAlzheimer.html
+[AmandaAlzheimerVersorgungsstellenKontakt]: Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html
