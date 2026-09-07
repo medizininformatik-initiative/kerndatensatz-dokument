@@ -16,6 +16,7 @@ Die folgende Tabelle liest Namen und Typen beim Build aus dem CapabilityStatemen
 
 {% sql {
  "query" : "select json_extract(s.value,'$.name') as Param, json_extract(s.value,'$.type') as Type from Resources r, json_each(r.Json,'$.rest[0].resource[0].searchParam') s where r.Type='CapabilityStatement'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Suchparameter", "type" : "text", "source" : "Param" },
   { "title" : "Typ", "type" : "text", "source" : "Type" }

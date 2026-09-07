@@ -29,6 +29,7 @@ Modul-eigene CodeSystems, beim Build aus dem Paket gelesen:
 
 {% sql {
  "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 order by c.Name",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "CodeSystem", "type" : "link", "source" : "Name", "target" : "Web" },
   { "title" : "Status", "type" : "text", "source" : "Status" },

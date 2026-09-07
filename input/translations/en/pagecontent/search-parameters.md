@@ -14,6 +14,7 @@ The following table reads names and types from the CapabilityStatement at build 
 
 {% sql {
  "query" : "select json_extract(s.value,'$.name') as Param, json_extract(s.value,'$.type') as Type from Resources r, json_each(r.Json,'$.rest[0].resource[0].searchParam') s where r.Type='CapabilityStatement'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Search parameter", "type" : "text", "source" : "Param" },
   { "title" : "Type", "type" : "text", "source" : "Type" }

@@ -23,6 +23,7 @@ Der IG-Publisher rendert dieses Element-zu-Ressource-Mapping auf der Artefaktsei
      truth: input/fsh/logical-model/mii-lm-dokument.fsh + mii-map-dokument.fsh. -->
 {% sql {
  "query" : "select replace(json_extract(e.value,'$.path'),'mii-lm-dokument.','') as Element, (select json_extract(m.value,'$.map') from json_each(e.value,'$.mapping') m where json_extract(m.value,'$.identity')='mii-map-dokument') as Mapping, json_extract(e.value,'$.definition') as Definition from Resources r, json_each(r.Json,'$.differential.element') e where r.Id='mii-lm-dokument' and json_extract(e.value,'$.path') <> 'mii-lm-dokument'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Logischer Datensatz", "type" : "text", "source" : "Element" },
   { "title" : "FHIR-Mapping", "type" : "text", "source" : "Mapping" },

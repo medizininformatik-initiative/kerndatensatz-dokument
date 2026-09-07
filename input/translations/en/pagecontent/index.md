@@ -22,6 +22,7 @@ standardized use of routine clinical data for medical research.
      (publisher sql directive) — version, date and status can no longer drift from sushi-config.yaml. -->
 {% sql {
  "query" : "select Version, Date, Status from Resources where Type='ImplementationGuide'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Version", "type" : "text", "source" : "Version" },
   { "title" : "Date", "type" : "text", "source" : "Date" },
@@ -114,6 +115,7 @@ links is rendered on the
 
 {% sql {
  "query" : "select json_extract(d.value,'$.packageId') as Package, json_extract(d.value,'$.version') as Version from Resources r, json_each(r.Json,'$.dependsOn') d where r.Type='ImplementationGuide'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Package", "type" : "text", "source" : "Package" },
   { "title" : "Version", "type" : "text", "source" : "Version" }

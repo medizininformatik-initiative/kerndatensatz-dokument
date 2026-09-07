@@ -22,6 +22,7 @@ Forschung.
      (publisher sql directive) — version, date and status can no longer drift from sushi-config.yaml. -->
 {% sql {
  "query" : "select Version, Date, Status from Resources where Type='ImplementationGuide'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Version", "type" : "text", "source" : "Version" },
   { "title" : "Datum", "type" : "text", "source" : "Date" },
@@ -119,6 +120,7 @@ Tabelle mit Links rendert die Seite
 
 {% sql {
  "query" : "select json_extract(d.value,'$.packageId') as Package, json_extract(d.value,'$.version') as Version from Resources r, json_each(r.Json,'$.dependsOn') d where r.Type='ImplementationGuide'",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "Paket", "type" : "text", "source" : "Package" },
   { "title" : "Version", "type" : "text", "source" : "Version" }

@@ -37,6 +37,7 @@ ValueSet-Definitionen selbst verankert.
 
 {% sql {
  "query" : "select distinct v.Name, r.Web, v.Status, v.Description from ValueSetList v join Resources r on r.Key = v.ResourceKey where v.ViewType = 1 order by v.Name",
+ "class" : "grid sql-table",
  "columns" : [
   { "title" : "ValueSet", "type" : "link", "source" : "Name", "target" : "Web" },
   { "title" : "Status", "type" : "text", "source" : "Status" },
