@@ -1,10 +1,10 @@
-# AmandaAlzheimerDeIdentifiziertesDokument - MII IG Dokument v2027.0.0-ballot.rc1
+# De-identifiziertes Dokument - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **AmandaAlzheimerDeIdentifiziertesDokument**
+* **De-identifiziertes Dokument**
 
-## Beispiel DocumentReference: AmandaAlzheimerDeIdentifiziertesDokument
+## Beispiel DocumentReference: De-identifiziertes Dokument
 
 -------
 

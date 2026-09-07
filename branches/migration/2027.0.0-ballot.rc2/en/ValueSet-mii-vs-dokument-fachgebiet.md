@@ -39,14 +39,14 @@ ValueSet zum erzeugenden Fachgebiet eines Dokuments
   "meta" : {
     "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
   },
-  "language" : "de-DE",
+  "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Dokument_Fachgebiet",
   "title" : "MII VS Dokument Fachgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T15:18:54+00:00",
+  "date" : "2026-09-07T18:27:01+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

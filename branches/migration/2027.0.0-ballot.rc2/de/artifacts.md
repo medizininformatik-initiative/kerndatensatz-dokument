@@ -69,16 +69,16 @@ Diese definieren neue CodeSysteme, die von Systemen verwendet werden, die mit di
 
 Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Systemen produziert und konsumiert werden, die mit diesem Implementierungsleitfaden konform sind.
 
-| |
-| :--- |
-| [ AmandaAlzheimer  ](Patient-AmandaAlzheimer.md) |
-| [ AmandaAlzheimerAbteilungskontakt  ](Encounter-AmandaAlzheimerAbteilungskontakt.md) |
-| [ AmandaAlzheimerAnnotiertesDokument  ](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md) |
-| [ AmandaAlzheimerDeIdentifiziertesDokument  ](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md) |
-| [ AmandaAlzheimerEinrichtungskontakt  ](Encounter-AmandaAlzheimerEinrichtungskontakt.md) |
-| [ AmandaAlzheimerKlartextDokument  ](DocumentReference-AmandaAlzheimerKlartextDokument.md) |
-| [ AmandaAlzheimerOriginalDokument  ](DocumentReference-AmandaAlzheimerOriginalDokument.md) |
-| [ AmandaAlzheimerVersorgungsstellenKontakt  ](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md) |
+| | |
+| :--- | :--- |
+| [ Abteilungskontakt  ](Encounter-AmandaAlzheimerAbteilungskontakt.md) | Synthetischer Abteilungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel. |
+| [ Annotiertes Dokument  ](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md) | Beispiel der NLP-Pipeline, Schritt Annotation: Archiv `Annotat.zip`, Status `annotated, semantic, surrogated, preprocessed, format-change`, erweitert mit `appends` den vorherigen Schritt. |
+| [ De-identifiziertes Dokument  ](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md) | Beispiel der NLP-Pipeline, Schritt De-Identification: `De-ID.txt`, Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument. |
+| [ Einrichtungskontakt  ](Encounter-AmandaAlzheimerEinrichtungskontakt.md) | Synthetischer Einrichtungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel. |
+| [ Klartext-Dokument  ](DocumentReference-AmandaAlzheimerKlartextDokument.md) | Beispiel der NLP-Pipeline, Schritt Preprocessing: Klartextfassung `Amanda_Alzheimer.txt`, Status `preprocessed, format-change`, verweist mit `transforms` auf das Original. |
+| [ Original-Dokument (DOCX)  ](DocumentReference-AmandaAlzheimerOriginalDokument.md) | Beispiel der NLP-Pipeline „Amanda Alzheimer“, Schritt Ingestion: Dokumentreferenz auf den synthetischen Entlassbrief `Amanda_Alzheimer.docx`, NLP-Verarbeitungsstatus `unprocessed`. |
+| [ Patientin Amanda Alzheimer  ](Patient-AmandaAlzheimer.md) | Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet. |
+| [ Versorgungsstellenkontakt  ](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md) | Synthetischer Versorgungsstellenkontakt (Kontaktebene) zum NLP-Pipeline-Beispiel. |
 
 ### Sonstige 
 

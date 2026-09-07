@@ -917,22 +917,13 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/AmandaAlzheimer"/>
-      </reference>
-      <name value="AmandaAlzheimer"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Encounter"/>
       </extension>
       <reference>
         <reference value="Encounter/AmandaAlzheimerAbteilungskontakt"/>
       </reference>
-      <name value="AmandaAlzheimerAbteilungskontakt"/>
+      <name value="Abteilungskontakt"/>
+      <description value="Synthetischer Abteilungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -942,7 +933,8 @@
       <reference>
         <reference value="DocumentReference/AmandaAlzheimerAnnotiertesDokument"/>
       </reference>
-      <name value="AmandaAlzheimerAnnotiertesDokument"/>
+      <name value="Annotiertes Dokument"/>
+      <description value="Beispiel der NLP-Pipeline, Schritt Annotation: Archiv `Annotat.zip`, Status `annotated, semantic, surrogated, preprocessed, format-change`, erweitert mit `appends` den vorherigen Schritt."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"/>
     </resource>
     <resource>
@@ -952,7 +944,8 @@
       <reference>
         <reference value="DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument"/>
       </reference>
-      <name value="AmandaAlzheimerDeIdentifiziertesDokument"/>
+      <name value="De-identifiziertes Dokument"/>
+      <description value="Beispiel der NLP-Pipeline, Schritt De-Identification: `De-ID.txt`, Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"/>
     </resource>
     <resource>
@@ -962,7 +955,8 @@
       <reference>
         <reference value="Encounter/AmandaAlzheimerEinrichtungskontakt"/>
       </reference>
-      <name value="AmandaAlzheimerEinrichtungskontakt"/>
+      <name value="Einrichtungskontakt"/>
+      <description value="Synthetischer Einrichtungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -972,28 +966,9 @@
       <reference>
         <reference value="DocumentReference/AmandaAlzheimerKlartextDokument"/>
       </reference>
-      <name value="AmandaAlzheimerKlartextDokument"/>
+      <name value="Klartext-Dokument"/>
+      <description value="Beispiel der NLP-Pipeline, Schritt Preprocessing: Klartextfassung `Amanda_Alzheimer.txt`, Status `preprocessed, format-change`, verweist mit `transforms` auf das Original."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="DocumentReference"/>
-      </extension>
-      <reference>
-        <reference value="DocumentReference/AmandaAlzheimerOriginalDokument"/>
-      </reference>
-      <name value="AmandaAlzheimerOriginalDokument"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
-      </extension>
-      <reference>
-        <reference value="Encounter/AmandaAlzheimerVersorgungsstellenKontakt"/>
-      </reference>
-      <name value="AmandaAlzheimerVersorgungsstellenKontakt"/>
-      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1125,6 +1100,39 @@
       </reference>
       <name value="mii-param-dokument-manifest"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/AmandaAlzheimerOriginalDokument"/>
+      </reference>
+      <name value="Original-Dokument (DOCX)"/>
+      <description value="Beispiel der NLP-Pipeline „Amanda Alzheimer“, Schritt Ingestion: Dokumentreferenz auf den synthetischen Entlassbrief `Amanda_Alzheimer.docx`, NLP-Verarbeitungsstatus `unprocessed`."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/AmandaAlzheimer"/>
+      </reference>
+      <name value="Patientin Amanda Alzheimer"/>
+      <description value="Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/AmandaAlzheimerVersorgungsstellenKontakt"/>
+      </reference>
+      <name value="Versorgungsstellenkontakt"/>
+      <description value="Synthetischer Versorgungsstellenkontakt (Kontaktebene) zum NLP-Pipeline-Beispiel."/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

@@ -59,6 +59,7 @@ This publication includes IP covered under the following statements.
 
 * HL7 Deutschland e.V.
 
+* [Kontaktebene](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/Kontaktebene): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md), [Encounter/AmandaAlzheimerEinrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.md) and [Encounter/AmandaAlzheimerVersorgungsstellenKontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
 * [Fachabteilungsschluessel](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md)
 
 
@@ -1310,21 +1311,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Patient-AmandaAlzheimer.html"
-      }],
-      "reference" : {
-        "reference" : "Patient/AmandaAlzheimer"
-      },
-      "name" : "AmandaAlzheimer",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Encounter"
       },
       {
@@ -1334,7 +1320,8 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "Encounter/AmandaAlzheimerAbteilungskontakt"
       },
-      "name" : "AmandaAlzheimerAbteilungskontakt",
+      "name" : "Abteilungskontakt",
+      "description" : "Synthetischer Abteilungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel.",
       "exampleBoolean" : true
     },
     {
@@ -1349,7 +1336,8 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "DocumentReference/AmandaAlzheimerAnnotiertesDokument"
       },
-      "name" : "AmandaAlzheimerAnnotiertesDokument",
+      "name" : "Annotiertes Dokument",
+      "description" : "Beispiel der NLP-Pipeline, Schritt Annotation: Archiv `Annotat.zip`, Status `annotated, semantic, surrogated, preprocessed, format-change`, erweitert mit `appends` den vorherigen Schritt.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
     },
     {
@@ -1364,7 +1352,8 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument"
       },
-      "name" : "AmandaAlzheimerDeIdentifiziertesDokument",
+      "name" : "De-identifiziertes Dokument",
+      "description" : "Beispiel der NLP-Pipeline, Schritt De-Identification: `De-ID.txt`, Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
     },
     {
@@ -1379,7 +1368,8 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "Encounter/AmandaAlzheimerEinrichtungskontakt"
       },
-      "name" : "AmandaAlzheimerEinrichtungskontakt",
+      "name" : "Einrichtungskontakt",
+      "description" : "Synthetischer Einrichtungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel.",
       "exampleBoolean" : true
     },
     {
@@ -1394,38 +1384,9 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "DocumentReference/AmandaAlzheimerKlartextDokument"
       },
-      "name" : "AmandaAlzheimerKlartextDokument",
+      "name" : "Klartext-Dokument",
+      "description" : "Beispiel der NLP-Pipeline, Schritt Preprocessing: Klartextfassung `Amanda_Alzheimer.txt`, Status `preprocessed, format-change`, verweist mit `transforms` auf das Original.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "DocumentReference"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DocumentReference-AmandaAlzheimerOriginalDokument.html"
-      }],
-      "reference" : {
-        "reference" : "DocumentReference/AmandaAlzheimerOriginalDokument"
-      },
-      "name" : "AmandaAlzheimerOriginalDokument",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Encounter"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html"
-      }],
-      "reference" : {
-        "reference" : "Encounter/AmandaAlzheimerVersorgungsstellenKontakt"
-      },
-      "name" : "AmandaAlzheimerVersorgungsstellenKontakt",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1617,6 +1578,54 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       "name" : "mii-param-dokument-manifest",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-AmandaAlzheimerOriginalDokument.html"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/AmandaAlzheimerOriginalDokument"
+      },
+      "name" : "Original-Dokument (DOCX)",
+      "description" : "Beispiel der NLP-Pipeline „Amanda Alzheimer“, Schritt Ingestion: Dokumentreferenz auf den synthetischen Entlassbrief `Amanda_Alzheimer.docx`, NLP-Verarbeitungsstatus `unprocessed`.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-AmandaAlzheimer.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/AmandaAlzheimer"
+      },
+      "name" : "Patientin Amanda Alzheimer",
+      "description" : "Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/AmandaAlzheimerVersorgungsstellenKontakt"
+      },
+      "name" : "Versorgungsstellenkontakt",
+      "description" : "Synthetischer Versorgungsstellenkontakt (Kontaktebene) zum NLP-Pipeline-Beispiel.",
+      "exampleBoolean" : true
     }],
     "page" : {
       "extension" : [{

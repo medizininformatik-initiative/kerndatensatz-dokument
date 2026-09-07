@@ -1,10 +1,10 @@
-# AmandaAlzheimer - MII IG Dokument v2027.0.0-ballot.rc1
+# Patientin Amanda Alzheimer - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **AmandaAlzheimer**
+* **Patientin Amanda Alzheimer**
 
-## Example Patient: AmandaAlzheimer
+## Example Patient: Patientin Amanda Alzheimer
 
 -------
 

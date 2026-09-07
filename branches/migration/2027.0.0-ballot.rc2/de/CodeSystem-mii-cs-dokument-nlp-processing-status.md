@@ -33,7 +33,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "meta" : {
     "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
   },
-  "language" : "de-DE",
+  "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CS_Dokument_NLP_Processing_Status",
@@ -66,7 +66,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T15:18:54+00:00",
+  "date" : "2026-09-07T18:27:01+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

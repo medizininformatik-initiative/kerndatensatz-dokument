@@ -130,7 +130,7 @@ Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des 
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T15:18:54+00:00",
+  "date" : "2026-09-07T18:27:01+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

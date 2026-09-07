@@ -323,17 +323,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#profil-mii-pr-dokument-dokument" id="markdown-toc-profil-mii-pr-dokument-dokument">Profil MII PR Dokument Dokument</a></li>
-  <li><a href="#namenskonventionen-für-die-erstellung-von-fhir-ressourcen-in-der-medizininformatik-initiative" id="markdown-toc-namenskonventionen-für-die-erstellung-von-fhir-ressourcen-in-der-medizininformatik-initiative">Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
+
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Standardsprachfassung. Der Abschnitt "Namenskonventionen" ist aus
-     der Simplifier-Seite TechnischeImplementierung/FHIRProfile (Index) des
-     Moduls Dokument übernommen. Die Seite selbst ist aus der früheren
+<!-- Deutsche Standardsprachfassung. Der frühere Abschnitt "Namenskonventionen"
+     (Simplifier-Seite TechnischeImplementierung/FHIRProfile, Index) wurde am
+     2026-09-07 entfernt — Wortlaut in migration-log/source-quotes/, die Seite
+     verweist auf das Meta-Modul-Wiki. Die Seite selbst ist aus der früheren
      Kombi-Seite profiles-and-extensions.md aufgeteilt (TF-KDS-abgestimmte
      Menüstruktur — eine Seite je Artefakt-Typ). Die Artefakt-Detailseiten
      erzeugt der IG-Publisher automatisch. -->
@@ -348,10 +346,6 @@ der Seite <a href="extensions.html">Extensions</a>.</p>
 technischen Detailansichten — Struktur, Differential, XML und JSON — erzeugt der
 IG-Publisher auf der Artefakt-Seite; den zugrunde liegenden fachlichen Datensatz
 beschreibt die Seite <a href="logical-models.html">Logische Modelle</a>.</p>
-
-<p>Die folgenden Konventionen gelten nicht nur für die Profile, sondern für alle
-Conformance-Ressourcen dieses Moduls (Extensions, ValueSets, CodeSystems,
-logische Modelle).</p>
 
 <h3 id="profil-mii-pr-dokument-dokument">Profil MII PR Dokument Dokument</h3>
 
@@ -760,7 +754,7 @@ logische Modelle).</p>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // fec1f161-a2f8-4d5a-8ac5-d2f52a878c25
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e8812919-4bd6-407c-9076-4415497d5961
 document.getElementById('cbmii-pr-dokument-dokumentD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-dokument-dokumentD'), 'binding', document.getElementById('cbmii-pr-dokument-dokumentD-binding').checked, document.getElementById('ppmii-pr-dokument-dokumentD'));
 document.getElementById('cbmii-pr-dokument-dokumentD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1835,7 +1829,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/resource.html">Resource</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related identifiers or resources<br /></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // fec1f161-a2f8-4d5a-8ac5-d2f52a878c25
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e8812919-4bd6-407c-9076-4415497d5961
 document.getElementById('cbmii-pr-dokument-dokumentS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-dokument-dokumentS'), 'binding', document.getElementById('cbmii-pr-dokument-dokumentS-binding').checked, document.getElementById('ppmii-pr-dokument-dokumentS'));
 document.getElementById('cbmii-pr-dokument-dokumentS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1847,248 +1841,7 @@ filterDesc(document.getElementById('mii-pr-dokument-dokumentS'), 'obligation', d
   </div>
 </div>
 
-<h3 id="namenskonventionen-für-die-erstellung-von-fhir-ressourcen-in-der-medizininformatik-initiative">Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative</h3>
-
-<p>Bitte die <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII">Seite der Namenskonventionen</a> im Kerndatensatz Wiki auf aktuellere Versionen prüfen.</p>
-
-<h4 id="allgemeines">Allgemeines</h4>
-
-<ul>
-  <li>Möglichst eindeutige und prägnante Beschreibung des Inhalts</li>
-  <li>Für CodeSystems und ValueSets: Konformität mit <a href="http://hl7.org/fhir/shareablecodesystem">http://hl7.org/fhir/shareablecodesystem</a> bzw. <a href="http://hl7.org/fhir/shareablevalueset">http://hl7.org/fhir/shareablevalueset</a> wird empfohlen</li>
-</ul>
-
-<h4 id="festlegungen-zu-modul-bezeichnungen-und-abkürzungen">Festlegungen zu Modul-Bezeichnungen und Abkürzungen</h4>
-
-<p>Für bestehende Module sind folgende Bezeichnungen abgestimmt:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Vollständiger Modulname</th>
-      <th>Technischer Modulname</th>
-      <th>Abkürzung</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td><strong>url</strong></td>
-      <td><strong>title/ name/ id</strong></td>
-    </tr>
-    <tr>
-      <td>Modul Diagnose</td>
-      <td>modul-diagnose</td>
-      <td>Diagnose</td>
-    </tr>
-    <tr>
-      <td>Modul Laborbefund</td>
-      <td>modul-labor</td>
-      <td>Labor</td>
-    </tr>
-    <tr>
-      <td>Modul Prozedur</td>
-      <td>modul-prozedur</td>
-      <td>Prozedur</td>
-    </tr>
-    <tr>
-      <td>Modul Medikation</td>
-      <td>modul-medikation</td>
-      <td>Medikation</td>
-    </tr>
-    <tr>
-      <td>Modul Person (Profile im Basismodul)</td>
-      <td>modul-person</td>
-      <td>Person</td>
-    </tr>
-    <tr>
-      <td>Modul Fall (Profile im Basismodul)</td>
-      <td>modul-fall</td>
-      <td>Fall</td>
-    </tr>
-    <tr>
-      <td>Modul Consent</td>
-      <td>modul-consent</td>
-      <td>Consent</td>
-    </tr>
-    <tr>
-      <td>Modul Mikrobiologie</td>
-      <td>modul-mikrobio</td>
-      <td>Mikrobio</td>
-    </tr>
-    <tr>
-      <td>Modul Symptom/klinischer Phänotyp</td>
-      <td>modul-symptom</td>
-      <td>Symptom</td>
-    </tr>
-    <tr>
-      <td>Modul Bildgebende Verfahren</td>
-      <td>modul-bildgebung</td>
-      <td>Bildgebung</td>
-    </tr>
-    <tr>
-      <td>Modul Intensivmedizin</td>
-      <td>modul-icu</td>
-      <td>ICU</td>
-    </tr>
-    <tr>
-      <td>Modul Medizinisches Forschungsvorhaben</td>
-      <td>modul-studie</td>
-      <td>Studie</td>
-    </tr>
-    <tr>
-      <td>Modul Onkologie</td>
-      <td>modul-onko</td>
-      <td>Onko</td>
-    </tr>
-    <tr>
-      <td>Modul Pathologiebefund</td>
-      <td>modul-patho</td>
-      <td>Patho</td>
-    </tr>
-    <tr>
-      <td>Modul Molekulargenetischer Befund</td>
-      <td>modul-molgen</td>
-      <td>MolGen</td>
-    </tr>
-    <tr>
-      <td>Modul Bioprobendaten</td>
-      <td>modul-biobank</td>
-      <td>Biobank</td>
-    </tr>
-    <tr>
-      <td>Modul Strukturdaten</td>
-      <td>modul-struktur</td>
-      <td>Struktur</td>
-    </tr>
-    <tr>
-      <td>Modul Seltene Erkrankungen</td>
-      <td>modul-seltene</td>
-      <td>Seltene</td>
-    </tr>
-    <tr>
-      <td>Modul Patient-reported Outcomes</td>
-      <td>modul-pros</td>
-      <td>PROs</td>
-    </tr>
-    <tr>
-      <td>Modul Molekulares Tumorboard</td>
-      <td>modul-mtb</td>
-      <td>MTB</td>
-    </tr>
-    <tr>
-      <td>Modul Lungenfunktion</td>
-      <td>modul-lufu</td>
-      <td>LuFu</td>
-    </tr>
-    <tr>
-      <td>Modul Schlafmedizinischer Befund</td>
-      <td><em>folgt</em></td>
-      <td><em>folgt</em></td>
-    </tr>
-    <tr>
-      <td>Modul Dokument</td>
-      <td>modul-dokument</td>
-      <td>Dokument</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Die kanonischen Namensräume <code class="language-plaintext highlighter-rouge">modul-person</code> und <code class="language-plaintext highlighter-rouge">modul-fall</code> bleiben gültig; die
-zugehörigen Profile werden seit dem KDS-Release 2026 im Basismodul
-(Package <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code>) ausgeliefert.</p>
-
-<p>Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt.</p>
-
-<h4 id="präfixe-ressourcentypen">Präfixe Ressourcentypen</h4>
-
-<ul>
-  <li>PR: StructureDefinition (Profile)</li>
-  <li>EX: StructureDefinition (Extension)</li>
-  <li>LM: Logical Model</li>
-  <li>VS: ValueSet</li>
-  <li>CS: CodeSystem</li>
-  <li>CM: ConceptMap</li>
-  <li>SM: StructureMap</li>
-  <li>NS: NamingSystem</li>
-  <li>SP: SearchParameter</li>
-  <li>CPS: CapabilityStatement</li>
-  <li>OD: OperationDefinition</li>
-  <li>IG: ImplementationGuide</li>
-  <li>QST: Questionnaire</li>
-  <li>OBSDEF: ObservationDefinition</li>
-  <li>MSR: Measure</li>
-  <li>EXA: Example</li>
-</ul>
-
-<h4 id="sprache">Sprache</h4>
-
-<p>Die bevorzugte Sprache für die Beschreibung, den Titel, sowie den Namen einer Conformance-Ressource ist Deutsch. Als Alternative kann Englisch verwendet werden, falls dies von dem jeweiligen Kümmererteam bevorzugt wird. Falls Deutsch als Sprache zur Dokumentation einer Ressource verwendet wird, muss auf den Elementen “description”, “name” und “title” eine Translation-Extension (siehe <a href="http://hl7.org/fhir/extensions/StructureDefinition-translation.html">http://hl7.org/fhir/extensions/StructureDefinition-translation.html</a>) vorhanden sein. Der Inhalt der Extension ist im englischsprachigen Implementierungsleitfaden anzuzeigen.</p>
-
-<h4 id="element-title">Element <strong>title</strong></h4>
-
-<p>(eine menschenlesbare Bezeichnung der Ressource)</p>
-
-<ul>
-  <li>Format: Leerzeichen und Klammern etc. erlaubt</li>
-  <li>Struktur: MII <code class="language-plaintext highlighter-rouge">&lt;Präfix Ressourcentyp&gt;</code> <code class="language-plaintext highlighter-rouge">&lt;Abkürzung Modulname&gt;</code> <code class="language-plaintext highlighter-rouge">&lt;Beschreibung Inhalt&gt;</code> (<code class="language-plaintext highlighter-rouge">&lt;zusätzliche Informationen&gt;</code>)
-Beispiel CodeSystem:
-<code class="language-plaintext highlighter-rouge">MII CS Mikrobio Mikrobiologische Erreger (Bakterien, Pilze)</code></li>
-  <li>Für ValueSets: zusätzlich [<code class="language-plaintext highlighter-rouge">&lt;verwendete Terminologie (z.B. Wert aus ValueSet.compose.include.system)&gt;</code>]. Bei namenslosen Terminologien weglassen (oder “Lokal”).
-Beispiel: MII VS Mikrobio Mikrobiologische Erreger (Bakterien, Pilze) [SNOMED CT]</li>
-  <li>Für ConceptMaps: zusätzlich [<code class="language-plaintext highlighter-rouge">&lt;Quellterminologie&gt; -&gt; &lt;Zielterminologie&gt;</code>]
-Beispiel: <code class="language-plaintext highlighter-rouge">MII CM Mikrobio Mikrobiologische Erreger (Bakterien, Pilze) [LOINC -&gt; SNOMED CT]</code></li>
-</ul>
-
-<p>Hinweis: Für den Sonderfall, bei dem ein VS oder eine CM mehrere Terminologien referenziert, sind diese mit Komma unterteilt aufzuführen.</p>
-
-<h4 id="element-name">Element <strong>name</strong></h4>
-
-<p>(eine maschinell verarbeitbare Bezeichnung der Ressource)</p>
-
-<ul>
-  <li>Format: Upper_Snake_Case
-Hinweis: Der FHIR-Standard ist CamelCase (siehe HL7 International: Naming Rules &amp; Guidelines im Abschnitt <a href="#referenzen">Referenzen</a>), aber wegen besserer Menschenlesbarkeit, insbesondere von Abkürzungen, wird im Rahmen der MII davon abgewichen.</li>
-  <li>Struktur: entsprechend des title, aber ohne Leer- und Sonderzeichen</li>
-  <li>Beispiel: <code class="language-plaintext highlighter-rouge">MII_VS_Mikrobio_Mikrobiologische_Erreger_Bakterien_Pilze_SNOMEDCT</code></li>
-</ul>
-
-<h4 id="element-id">Element <strong>id</strong></h4>
-
-<p>(logischer Identifier der Ressource)</p>
-
-<ul>
-  <li>Struktur: entsprechend .name, formatiert im kebab-case (lower case und “_” durch “-” ersetzt)</li>
-  <li>Begrenzung auf 64 Zeichen: Bei Bedarf abkürzen</li>
-  <li>Beispiel: <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-mikrobiologische-erreger-snomedct</code></li>
-</ul>
-
-<h4 id="element-url">Element <strong>url</strong></h4>
-
-<p>(kanonische URL der Ressource)</p>
-
-<ul>
-  <li>Struktur: <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/&lt;technischer Modulname&gt;/&lt;Ressourcentyp&gt;/&lt;id der Ressource&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;technischer Modulname&gt;</code>: Technischer Name des Moduls laut obiger Tabelle</li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;id-…&gt;</code>: wie oben spezifiziert</li>
-  <li>Regeln für die Canonical URL sollen zunächst nur bei Neuerstellung von Ressourcen angewendet werden. Etablierte URLs von veröffentlichten Artefakten sollen nachträglich nicht geändert werden.</li>
-  <li>Beispiel: <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct</code></li>
-</ul>
-
-<blockquote class="ig-highlight ig-highlight-blue">
-  <p><strong>Hinweis zu diesem Modul:</strong> Die Artefakte des Moduls Dokument sind unter dem
-etablierten Namensraum <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/…</code>
-veröffentlicht (zusätzliches Segment <code class="language-plaintext highlighter-rouge">ext</code>). Nach der Regel oben werden etablierte
-Canonical-URLs veröffentlichter Artefakte nachträglich nicht geändert.</p>
-</blockquote>
-
-<h4 id="referenzen">Referenzen</h4>
-
-<ul>
-  <li>HL7 International: Guide to Designing (FHIR) Resources: <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=35718826">https://confluence.hl7.org/pages/viewpage.action?pageId=35718826</a></li>
-  <li>HL7 International: Naming Rules &amp; Guidelines: <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=35718826%22%20l%20%22GuidetoDesigningResources-NamingRules&amp;Guidelines">https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&amp;Guidelines</a></li>
-  <li>HL7 International: Multi-Language support in FHIR (Localization/Internationalization): <a href="http://hl7.org/fhir/languages.html">http://hl7.org/fhir/languages.html</a></li>
-</ul>
+<p>Die MII-weiten Namenskonventionen für FHIR-Ressourcen (Modulbezeichnungen, Präfixe, <code class="language-plaintext highlighter-rouge">title</code>/<code class="language-plaintext highlighter-rouge">name</code>/<code class="language-plaintext highlighter-rouge">id</code>/<code class="language-plaintext highlighter-rouge">url</code>) pflegt das Meta-Modul: <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII">Namenskonventionen für FHIR-Ressourcen in der MII</a>. Sie gelten für alle Conformance-Ressourcen dieses Moduls.</p>
 
 
 
@@ -2115,7 +1868,7 @@ Canonical-URLs veröffentlichter Artefakte nachträglich nicht geändert.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 15:18+0000">2026-09-07</span>
+          Erstellt <span title="Mon, Sep 7, 2026 18:27+0000">2026-09-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

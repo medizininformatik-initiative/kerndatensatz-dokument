@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="c2d4ca3c-1472-4330-b47e-8189ce2ed94f"/>
+  <id value="81491201-4eec-4961-82a0-48f77756c9ed"/>
   <meta>
-    <lastUpdated value="2026-09-07T15:18:54.880+00:00"/>
+    <lastUpdated value="2026-09-07T18:27:01.600+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -13,10 +13,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion from tx.ontoserver.csiro.au based on:</p>
@@ -68,7 +68,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -7859,7 +7859,7 @@
         <title value="MII VS Dokument Einrichtungart"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -7868,8 +7868,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:db62d56b-d447-4115-b584-d2e390b936e6"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:0595b483-1792-4dbd-9ac2-6f596f7dc7db"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -9438,10 +9438,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion from tx.ontoserver.csiro.au based on:</p>
@@ -9493,7 +9493,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -17284,7 +17284,7 @@
         <title value="MII VS Dokument Einrichtungart"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -17293,8 +17293,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:db62d56b-d447-4115-b584-d2e390b936e6"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:0595b483-1792-4dbd-9ac2-6f596f7dc7db"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -18863,10 +18863,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion from tx.ontoserver.csiro.au based on:</p>
@@ -18918,7 +18918,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -26709,7 +26709,7 @@
         <title value="MII VS Dokument Einrichtungart"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -26718,8 +26718,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:75ff9aca-a186-45d2-a348-df994b49376f"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:c0d6710a-aaa3-4b84-9017-207e7086ad0f"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -28658,10 +28658,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion from tx.ontoserver.csiro.au based on:</p>
@@ -28713,7 +28713,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -36252,7 +36252,7 @@
         <title value="MII VS Dokument Fachgebiet"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -36261,8 +36261,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c046f0e8-16fb-4dad-b841-26f3b9eac33c"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:3c1e5e40-5233-4f98-9643-fc5b37de3dc9"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <total value="358"/>
           <offset value="0"/>
           <parameter>
@@ -37857,10 +37857,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion from tx.ontoserver.csiro.au based on:</p>
@@ -37912,7 +37912,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -45451,7 +45451,7 @@
         <title value="MII VS Dokument Fachgebiet"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -45460,8 +45460,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c046f0e8-16fb-4dad-b841-26f3b9eac33c"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:3c1e5e40-5233-4f98-9643-fc5b37de3dc9"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <total value="358"/>
           <offset value="0"/>
           <parameter>
@@ -47056,10 +47056,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion from tx.ontoserver.csiro.au based on:</p>
@@ -47111,7 +47111,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -54650,7 +54650,7 @@
         <title value="MII VS Dokument Fachgebiet"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -54659,8 +54659,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:079cd050-857d-40b0-86df-86d2a05b0e8a"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:8dfed938-8992-4907-b624-3d6a2f308980"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <total value="358"/>
           <offset value="0"/>
           <parameter>
@@ -56536,10 +56536,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc1 (CodeSystem)</a>
@@ -56560,7 +56560,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -56788,7 +56788,7 @@
         <title value="MII VS Dokument NLP Processing Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -56797,8 +56797,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:bdf0707b-8b6b-4e7f-9815-584d90d75db3"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:9f22e648-73fc-4dcd-87c6-90108fdb4875"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -56897,10 +56897,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc1 (CodeSystem)</a>
@@ -56921,7 +56921,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -57149,7 +57149,7 @@
         <title value="MII VS Dokument NLP Processing Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -57158,8 +57158,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:bdf0707b-8b6b-4e7f-9815-584d90d75db3"/>
-          <timestamp value="2026-09-07T15:20:58+00:00"/>
+          <identifier value="urn:uuid:9f22e648-73fc-4dcd-87c6-90108fdb4875"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -57258,10 +57258,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc1 (CodeSystem)</a>
@@ -57282,7 +57282,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b>
+                  <b>Display (de)</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -57510,7 +57510,7 @@
         <title value="MII VS Dokument NLP Processing Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -57519,8 +57519,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4c22bdd7-1c73-4b61-8ed6-734f1fe9bb2a"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:2028f8ad-912b-46cf-92a0-826789e2745e"/>
+          <timestamp value="2026-09-07T18:29:35+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -57619,10 +57619,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.ontoserver.csiro.au based on SNOMED CT International edition 01-Jul 2026
               <span class="copy-text-inline">
@@ -57639,7 +57639,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b> - Deutsch (Deutschland) (German (Germany), de)
+                  <b>Display (de)</b> - Deutsch (German, de)
                 </td>
                 <td>
                   <b>JSON</b>
@@ -62437,7 +62437,7 @@
         <title value="MII VS Dokument SCT Dokument Kategorie"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -62446,8 +62446,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fd20361d-e9b5-4709-92a0-5abf7a0b5900"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:525fff51-a855-4d97-85ab-fc0aac7b5f54"/>
+          <timestamp value="2026-09-07T18:29:36+00:00"/>
           <total value="239"/>
           <offset value="0"/>
           <parameter>
@@ -63469,10 +63469,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.ontoserver.csiro.au based on SNOMED CT International edition 01-Jul 2026
               <span class="copy-text-inline">
@@ -63489,7 +63489,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b> - Deutsch (Deutschland) (German (Germany), de)
+                  <b>Display (de)</b> - Deutsch (German, de)
                 </td>
                 <td>
                   <b>JSON</b>
@@ -68287,7 +68287,7 @@
         <title value="MII VS Dokument SCT Dokument Kategorie"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -68296,8 +68296,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fd20361d-e9b5-4709-92a0-5abf7a0b5900"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:525fff51-a855-4d97-85ab-fc0aac7b5f54"/>
+          <timestamp value="2026-09-07T18:29:36+00:00"/>
           <total value="239"/>
           <offset value="0"/>
           <parameter>
@@ -69319,10 +69319,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.ontoserver.csiro.au based on SNOMED CT International edition 01-Jul 2026
               <span class="copy-text-inline">
@@ -69339,7 +69339,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b> - Deutsch (Deutschland) (German (Germany), de)
+                  <b>Display (de)</b> - Deutsch (German, de)
                 </td>
                 <td>
                   <b>JSON</b>
@@ -74137,7 +74137,7 @@
         <title value="MII VS Dokument SCT Dokument Kategorie"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -74146,8 +74146,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1bd7f12e-854e-4a4b-b327-73dbc33487d1"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:86d9b735-8c84-4e05-87a2-2c4fad3934a9"/>
+          <timestamp value="2026-09-07T18:29:36+00:00"/>
           <total value="239"/>
           <offset value="0"/>
           <parameter>
@@ -75408,10 +75408,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.ontoserver.csiro.au based on SNOMED CT International edition 01-Jul 2026
               <span class="copy-text-inline">
@@ -75428,7 +75428,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b> - Deutsch (Deutschland) (German (Germany), de)
+                  <b>Display (de)</b> - Deutsch (German, de)
                 </td>
                 <td>
                   <b>JSON</b>
@@ -79826,7 +79826,7 @@
         <title value="MII VS Dokument SCT Dokument Typ"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -79835,8 +79835,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:28be7aa2-c44c-489b-82b8-8220daef4682"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:ee3f9c34-6dbb-4d66-9512-a523ba7552b4"/>
+          <timestamp value="2026-09-07T18:29:36+00:00"/>
           <total value="219"/>
           <offset value="0"/>
           <parameter>
@@ -80778,10 +80778,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.ontoserver.csiro.au based on SNOMED CT International edition 01-Jul 2026
               <span class="copy-text-inline">
@@ -80798,7 +80798,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b> - Deutsch (Deutschland) (German (Germany), de)
+                  <b>Display (de)</b> - Deutsch (German, de)
                 </td>
                 <td>
                   <b>JSON</b>
@@ -85196,7 +85196,7 @@
         <title value="MII VS Dokument SCT Dokument Typ"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -85205,8 +85205,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:28be7aa2-c44c-489b-82b8-8220daef4682"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:ee3f9c34-6dbb-4d66-9512-a523ba7552b4"/>
+          <timestamp value="2026-09-07T18:29:36+00:00"/>
           <total value="219"/>
           <offset value="0"/>
           <parameter>
@@ -86148,10 +86148,10 @@
         <meta>
           <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
         </meta>
-        <language value="de-DE"/>
+        <language value="de"/>
         <text>
           <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE" data-fhir="generated">
+          <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.ontoserver.csiro.au based on SNOMED CT International edition 01-Jul 2026
               <span class="copy-text-inline">
@@ -86168,7 +86168,7 @@
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>Display (de-DE)</b> - Deutsch (Deutschland) (German (Germany), de)
+                  <b>Display (de)</b> - Deutsch (German, de)
                 </td>
                 <td>
                   <b>JSON</b>
@@ -90566,7 +90566,7 @@
         <title value="MII VS Dokument SCT Dokument Typ"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-07T15:18:54+00:00"/>
+        <date value="2026-09-07T18:27:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -90575,8 +90575,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:3d00066b-3efb-4f3a-bd06-a30ca1fe7f06"/>
-          <timestamp value="2026-09-07T15:20:59+00:00"/>
+          <identifier value="urn:uuid:b6b2453c-b356-4bf4-bf67-48dd33c50dcd"/>
+          <timestamp value="2026-09-07T18:29:36+00:00"/>
           <total value="219"/>
           <offset value="0"/>
           <parameter>

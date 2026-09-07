@@ -1,10 +1,10 @@
-# AmandaAlzheimerAbteilungskontakt - MII IG Dokument v2027.0.0-ballot.rc1
+# Abteilungskontakt - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **AmandaAlzheimerAbteilungskontakt**
+* **Abteilungskontakt**
 
-## Example Encounter: AmandaAlzheimerAbteilungskontakt
+## Example Encounter: Abteilungskontakt
 
 -------
 
@@ -59,6 +59,7 @@ Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://medizini
   },
   "type" : [{
     "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/Kontaktebene",
       "code" : "abteilungskontakt",
       "display" : "Abteilungskontakt"
     }]

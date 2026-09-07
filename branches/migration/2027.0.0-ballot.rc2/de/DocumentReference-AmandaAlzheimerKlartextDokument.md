@@ -1,10 +1,10 @@
-# AmandaAlzheimerKlartextDokument - MII IG Dokument v2027.0.0-ballot.rc1
+# Klartext-Dokument - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **AmandaAlzheimerKlartextDokument**
+* **Klartext-Dokument**
 
-## Beispiel DocumentReference: AmandaAlzheimerKlartextDokument
+## Beispiel DocumentReference: Klartext-Dokument
 
 -------
 

@@ -1,10 +1,10 @@
-# AmandaAlzheimerEinrichtungskontakt - MII IG Dokument v2027.0.0-ballot.rc1
+# Einrichtungskontakt - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **AmandaAlzheimerEinrichtungskontakt**
+* **Einrichtungskontakt**
 
-## Beispiel Encounter: AmandaAlzheimerEinrichtungskontakt
+## Beispiel Encounter: Einrichtungskontakt
 
 -------
 
@@ -55,6 +55,7 @@ Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://medizini
   },
   "type" : [{
     "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/Kontaktebene",
       "code" : "einrichtungskontakt",
       "display" : "Einrichtungskontakt"
     }]

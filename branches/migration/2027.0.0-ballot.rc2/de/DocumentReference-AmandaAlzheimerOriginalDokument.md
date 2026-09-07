@@ -1,10 +1,10 @@
-# AmandaAlzheimerOriginalDokument - MII IG Dokument v2027.0.0-ballot.rc1
+# Original-Dokument (DOCX) - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **AmandaAlzheimerOriginalDokument**
+* **Original-Dokument (DOCX)**
 
-## Beispiel DocumentReference: AmandaAlzheimerOriginalDokument
+## Beispiel DocumentReference: Original-Dokument (DOCX)
 
 -------
 

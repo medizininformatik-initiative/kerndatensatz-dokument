@@ -1,10 +1,10 @@
-# AmandaAlzheimerAnnotiertesDokument - MII IG Dokument v2027.0.0-ballot.rc1
+# Annotiertes Dokument - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **AmandaAlzheimerAnnotiertesDokument**
+* **Annotiertes Dokument**
 
-## Beispiel DocumentReference: AmandaAlzheimerAnnotiertesDokument
+## Beispiel DocumentReference: Annotiertes Dokument
 
 -------
 

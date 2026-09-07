@@ -1,10 +1,10 @@
-# AmandaAlzheimerVersorgungsstellenKontakt - MII IG Dokument v2027.0.0-ballot.rc1
+# Versorgungsstellenkontakt - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **AmandaAlzheimerVersorgungsstellenKontakt**
+* **Versorgungsstellenkontakt**
 
-## Beispiel Encounter: AmandaAlzheimerVersorgungsstellenKontakt
+## Beispiel Encounter: Versorgungsstellenkontakt
 
 -------
 
@@ -57,6 +57,7 @@ Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://medizini
   },
   "type" : [{
     "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/Kontaktebene",
       "code" : "versorgungsstellenkontakt",
       "display" : "Versorgungsstellenkontakt"
     }]
