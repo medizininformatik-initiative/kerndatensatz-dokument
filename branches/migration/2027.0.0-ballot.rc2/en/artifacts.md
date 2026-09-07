@@ -86,7 +86,7 @@ These are example instances that show what data produced and consumed by systems
 
 These are resources that are used within this implementation guide that do not fit into one of the other categories.
 
-| |
-| :--- |
-| [ mii-param-dokument-manifest  ](Parameters-mii-param-dokument-manifest.md) |
+| | |
+| :--- | :--- |
+| [ Expansion-Manifest  ](Parameters-mii-param-dokument-manifest.md) | Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens. |
 

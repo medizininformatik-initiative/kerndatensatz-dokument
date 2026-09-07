@@ -962,6 +962,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/mii-param-dokument-manifest"/>
+      </reference>
+      <name value="Expansion-Manifest"/>
+      <description value="Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="DocumentReference"/>
       </extension>
       <reference>
@@ -1090,16 +1101,6 @@
       </reference>
       <name value="MII VS Dokument SCT Dokument Typ"/>
       <description value="SNOMED CT ValueSet zum Typ eines Dokuments"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/mii-param-dokument-manifest"/>
-      </reference>
-      <name value="mii-param-dokument-manifest"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

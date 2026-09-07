@@ -184,7 +184,7 @@ Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/doc
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T18:27:01+00:00",
+  "date" : "2026-09-07T18:38:14+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

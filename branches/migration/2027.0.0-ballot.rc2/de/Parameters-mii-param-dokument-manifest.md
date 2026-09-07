@@ -1,10 +1,10 @@
-# mii-param-dokument-manifest - MII IG Dokument v2027.0.0-ballot.rc1
+# Expansion-Manifest - MII IG Dokument v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-param-dokument-manifest**
+* **Expansion-Manifest**
 
-## Parameters: mii-param-dokument-manifest
+## Parameters: Expansion-Manifest
 
 
 

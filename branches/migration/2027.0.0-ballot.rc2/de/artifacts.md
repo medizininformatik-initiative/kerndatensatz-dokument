@@ -84,7 +84,7 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 
 Dies sind Ressourcen, die in diesem Implementierungsleitfaden verwendet werden, die in keine der anderen Kategorien passen.
 
-| |
-| :--- |
-| [ mii-param-dokument-manifest  ](Parameters-mii-param-dokument-manifest.md) |
+| | |
+| :--- | :--- |
+| [ Expansion-Manifest  ](Parameters-mii-param-dokument-manifest.md) | Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens. |
 

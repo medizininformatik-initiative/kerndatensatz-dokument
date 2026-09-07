@@ -1375,6 +1375,22 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-mii-param-dokument-manifest.html"
+      }],
+      "reference" : {
+        "reference" : "Parameters/mii-param-dokument-manifest"
+      },
+      "name" : "Expansion-Manifest",
+      "description" : "Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       },
       {
@@ -1562,21 +1578,6 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       "name" : "MII VS Dokument SCT Dokument Typ",
       "description" : "SNOMED CT ValueSet zum Typ eines Dokuments",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Parameters-mii-param-dokument-manifest.html"
-      }],
-      "reference" : {
-        "reference" : "Parameters/mii-param-dokument-manifest"
-      },
-      "name" : "mii-param-dokument-manifest",
       "exampleBoolean" : false
     },
     {
