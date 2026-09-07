@@ -148,6 +148,12 @@ dependencies:
   #  version: 0.3.30
 # Page titles are GERMAN (DE-first); the English titles live in the IG-level
 # catalogue input/translations/en/ImplementationGuide-mii-ig-dokument.po.
+# Metadata for resources that are not authored in FSH (input/resources/*.json).
+resources:
+  Parameters/mii-param-dokument-manifest:
+    name: Expansion-Manifest
+    description: Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.
+
 pages:
   index.md:
     title: Startseite

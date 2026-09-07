@@ -295,6 +295,14 @@
       },
       {
         "reference": {
+          "reference": "Parameters/mii-param-dokument-manifest"
+        },
+        "description": "Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.",
+        "exampleBoolean": false,
+        "name": "Expansion-Manifest"
+      },
+      {
+        "reference": {
           "reference": "DocumentReference/AmandaAlzheimerKlartextDokument"
         },
         "name": "Klartext-Dokument",
@@ -388,13 +396,6 @@
         "name": "MII VS Dokument SCT Dokument Typ",
         "description": "SNOMED CT ValueSet zum Typ eines Dokuments",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Parameters/mii-param-dokument-manifest"
-        },
-        "exampleBoolean": false,
-        "name": "mii-param-dokument-manifest"
       },
       {
         "reference": {
