@@ -37,7 +37,7 @@ Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil 
 
 #### Ablauf als ExampleScenario
 
-Die Pipeline ist zusätzlich als FHIR-Ressource [ExampleScenario „NLP-Pipeline Amanda Alzheimer“](ExampleScenario-NlpPipelineAmandaAlzheimer.md) modelliert: Akteure, die vier Verarbeitungsschritte als Prozess und die beteiligten Instanzen, die auf die Beispielressourcen oben verweisen. Der IG Publisher erzeugt daraus das folgende Sequenzdiagramm und die Prozesstabelle.
+Die Pipeline ist zusätzlich als FHIR-Ressource [ExampleScenario „NLP-Pipeline Amanda Alzheimer“](ExampleScenario-NlpPipelineAmandaAlzheimer.md) modelliert: Akteure (Dokumentenquelle, NLP-Pipeline mit Annotierenden im Human-in-the-Loop, Dokumentenrepository), die Verarbeitungsschritte der Pipeline und die Ablage ihrer Ergebnisse als Dokumentreferenzen im Repository sowie die beteiligten Instanzen, die auf die Beispielressourcen oben verweisen. Das Repository transformiert nichts; die Dokumentreferenzen dokumentieren die Ergebnisse und verknüpfen sie. Der IG Publisher erzeugt daraus das folgende Sequenzdiagramm und die Prozesstabelle.
 
 #### DocumentReference-Ressourcen der Pipeline
 

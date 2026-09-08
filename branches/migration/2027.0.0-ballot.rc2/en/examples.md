@@ -39,7 +39,7 @@ The following FHIR DocumentReference resources used the document profile ([MII P
 
 #### The pipeline as an ExampleScenario
 
-The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline Amanda Alzheimer"](ExampleScenario-NlpPipelineAmandaAlzheimer.md): actors, the four processing steps as a process, and the participating instances, which link to the example resources above. The IG Publisher generates the sequence diagram and the process table below from it.
+The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline Amanda Alzheimer"](ExampleScenario-NlpPipelineAmandaAlzheimer.md): actors (document source, NLP pipeline with reviewers in the loop, document repository), the pipeline's processing steps and the filing of their results as document references in the repository, and the participating instances, which link to the example resources above. The repository transforms nothing; the document references document the results and link them. The IG Publisher generates the sequence diagram and the process table below from it.
 
 #### DocumentReference resources of the pipeline
 

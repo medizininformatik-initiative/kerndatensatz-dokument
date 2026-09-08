@@ -32,9 +32,6 @@
     ]
   },
   "usage": {
-    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content": [
-      "ExampleScenario.instance"
-    ],
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
       "ImplementationGuide"
     ],
