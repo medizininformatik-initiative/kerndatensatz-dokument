@@ -104,7 +104,7 @@ Domain contacts for this module:
 * Frank Meineke, SMITH, information modeling/domain representation
 * Jakob Faller, MIRACUM, information modeling/domain representation
 * Katja Hoffmann, MIRACUM/DigiHub MiHUBx, technical implementation
-* Marcel Susky, MIRACUM/DigiHub MiHUBx, information modeling/domain representation/technical implementation
+* Marcel Susky, MIRACUM/DigiHub MiHUB, information modeling/domain representation/technical implementation
 * Martin Boeker, MIRACUM, domain representation
 * Noemi Deppenwiese, MIRACUM, technical implementation
 * Thomas Ganslandt, MIRACUM, domain representation

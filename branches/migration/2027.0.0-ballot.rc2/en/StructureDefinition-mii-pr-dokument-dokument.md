@@ -178,7 +178,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T08:49:15+00:00",
+  "date" : "2026-09-08T09:59:59+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
