@@ -102,7 +102,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T08:42:22+00:00",
+  "date" : "2026-09-08T08:49:15+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
