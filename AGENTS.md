@@ -14,7 +14,7 @@ migrated from Simplifier onto the
 scaffold (v0.13.1) and is built with the HL7 IG Publisher; the migration record
 is [`migration-log/migration-report.md`](migration-log/migration-report.md).
 
-It releases with **CalVer `YYYY.n.n`** (currently `2027.0.0-ballot.rc1`) via
+It releases with **CalVer `YYYY.n.n`** (currently `2027.0.0-ballot.rc2`) via
 `.github/workflows/module-release.yml` — **never SemVer, never Release Please**.
 
 The **look** of the IG comes from the MII IG template
@@ -168,7 +168,7 @@ hand-copy the content into the runtime directories.
 
 `docs/` was inherited from `mii-kds-module-template` and kept as this module's
 own documentation. The one-time first-run bootstrap
-([`docs/recipes/first-run-setup.md`](docs/recipes/first-run-setup.md)) has
+(the (completed) first-run setup) has
 already run here; the recipe and
 [`scripts/first-run-bootstrap.sh`](scripts/first-run-bootstrap.sh) stay as the
 record of what it did. Pages that describe creating a *new* module carry an

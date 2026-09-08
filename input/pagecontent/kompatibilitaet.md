@@ -7,7 +7,7 @@
      Diese Seite ist im Seitenbaum unter "implementer-guidance" eingehängt und
      hat bewusst keinen eigenen Menüeintrag. -->
 
-Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil `ISiKDokumentenMetadaten`, Version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, Version 1.7.0) und IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, Package `ihe.iti.mhd`, Version 4.2.3) wurde anhand der [Qualitätssicherungsberichte dieses Leitfadens](../qa.html), der Profilvergleiche des HL7 FHIR Validators (`compare`-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil `mii-pr-dokument-dokument` in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei `content.attachment.title` und `description` ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen `KBV_PR_Base_DocumentReference|1.7.0`. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
+Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil `ISiKDokumentenMetadaten`, Version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, Version 1.7.0) und IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, Package `ihe.iti.mhd`, Version 4.2.3) wurde anhand der [Qualitätssicherungsberichte dieses Leitfadens](../qa.html), der Profilvergleiche des HL7 FHIR Validators (`compare`-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil `mii-pr-dokument-dokument` in Version 2027.0.0-ballot.rc2. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei `content.attachment.title` und `description` ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen `KBV_PR_Base_DocumentReference|1.7.0`. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
 
 ---
 
@@ -28,7 +28,7 @@ Die Kompatibilität mit dem ISiK Dokumentenaustausch ist essenziell, um sektoren
 
 Das MII KDS Dokument Profil ist als Superset des ISiK Profils konzipiert und deckt alle ISiK-Anforderungen ab. Die wichtigsten Vergleichspunkte sind:
 
-| FHIR-Element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc1) | ISiK Dokumentenaustausch (`ISiKDokumentenMetadaten` 6.0.0) | Kompatibilität                        |
+| FHIR-Element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | ISiK Dokumentenaustausch (`ISiKDokumentenMetadaten` 6.0.0) | Kompatibilität                        |
 |-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
 | `status`          | 1..1, Must Support                                 | 1..1, Must Support                      | ✓ Vollständig kompatibel              |
 | `type`            | 0..1, Must Support (KDL/XDS empfohlen, Slices auf `type.coding`) | 1..1, Must Support (KDL *und* XDS über Slices gefordert) | ✓ MII KDS Dokument unterstützt ISiK-Codes |
@@ -73,7 +73,7 @@ Die Kompatibilität mit dem KBV MIO Basis Profil ist entscheidend für die Integ
 
 Beide Profile sind auf Flexibilität und Interoperabilität ausgelegt:
 
-| FHIR-Element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc1) | KBV MIO Basis (`KBV_PR_Base_DocumentReference` 1.7.0) | Kompatibilität                        |
+| FHIR-Element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | KBV MIO Basis (`KBV_PR_Base_DocumentReference` 1.7.0) | Kompatibilität                        |
 |-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
 | `status`          | 1..1, Must Support                                 | 1..1                                    | ✓ Vollständig kompatibel              |
 | `type`            | 0..1, Must Support, preferred (identische Bindung wie KBV), `type.coding` 1..*, Invariante `mii-iv-dokument-dokument-type` (warning) | 0..1, preferred (`c80-doc-typecodes`) | ⚠️ Bindung identisch; MII fordert jedoch mindestens ein `coding` mit `system` und `code` |
@@ -112,7 +112,7 @@ Die Kompatibilität mit IHE MHD ermöglicht internationale Interoperabilität un
 
 Der nachfolgende Vergleich bezieht sich auf das Profil `IHE.MHD.UnContained.Comprehensive.DocumentReference` (IHE ITI MHD, Package `ihe.iti.mhd`, Version 4.2.3; abgeleitet von `IHE.MHD.Minimal.DocumentReference`). Für die *contained*-Variante von MHD Comprehensive gelten abweichende Anforderungen. IHE MHD ist in dieser Variante durchgängig **restriktiver** als das MII KDS Dokument-Profil: vierzehn Elemente sind dort verpflichtend, die im MII-Profil optional sind, und vier Elemente sind in MHD verboten bzw. enger gebunden.
 
-| FHIR-Element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc1) | IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference` 4.2.3) | Kompatibilität                        |
+| FHIR-Element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference` 4.2.3) | Kompatibilität                        |
 |-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
 | `masterIdentifier`| 0..1                                               | 1..1                                    | ⚠️ IHE MHD fordert Master Identifier       |
 | `status`          | 1..1, Must Support, required (`document-reference-status`: current \| superseded \| entered-in-error) | 1..1, required (`DocumentReferenceStats`: nur current \| superseded) | ⚠️ `entered-in-error` ist in IHE MHD nicht zulässig |

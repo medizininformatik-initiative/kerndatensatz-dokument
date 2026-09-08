@@ -29,7 +29,7 @@ each MII CalVer release is bound to one SNOMED CT International release.
 
 The shipped file carries the **verified `v2027.*` pin**, matching the 2027
 dependency line this module pins in `sushi-config.yaml` (`version:
-2027.0.0-ballot.rc1`). When your module moves to a later CalVer line, look the
+2027.0.0-ballot.rc2`). When your module moves to a later CalVer line, look the
 release up in that wiki table and update **both** pin sites:
 
 - this file (`Parameters-expansion-manifest.json`), and
@@ -85,3 +85,18 @@ Three places in `sushi-config.yaml` reference this file — all three are active
 FSH `Instance:`. Use **either** the hand-authored JSON here **or** the FSH — never
 both, or the IG Publisher sees two resources with the same id. basis keeps the
 JSON authoritative and the FSH commented out; this template does the same.
+
+### `CodeSystem-iso3166-1-fragment.json`, `CodeSystem-iso3166-2-fragment.json`, `CodeSystem-unsd-m49-fragment.json` — build terminology
+
+The IG Publisher renders the country flag in the page header only after the
+terminology server has validated the guide's jurisdiction (`urn:iso:std:iso:3166#DE`)
+against the FHIR jurisdiction value set, which is composed of ISO 3166-1,
+ISO 3166-2 and the UN M49 regions. SU-TermServ and Ontoserver carry ISO 3166 only
+as a content-less stub, so the validation failed and the header fell back to the
+text "Germany" (and the QA report carried twelve ISO 3166 warnings). These three
+`content: fragment` code systems supply just enough content (Germany, one
+subdivision, the world/Europe regions) for the validation and the publisher's
+country-code expansions to succeed on any server. They are build terminology,
+not module content: the normative codes belong to ISO and the UN, and the
+fragments are excluded from the module's own code-system table on
+`code-systems.md`.

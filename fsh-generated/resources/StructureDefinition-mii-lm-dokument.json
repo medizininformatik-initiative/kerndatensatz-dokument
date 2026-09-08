@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-lm-dokument",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "name": "MII_LM_Dokument",
   "title": "MII LM Dokument",
   "status": "active",

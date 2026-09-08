@@ -72,6 +72,14 @@
     "endLine": 15
   },
   {
+    "outputFile": "ExampleScenario-NlpPipelineAmandaAlzheimer.json",
+    "fshName": "NlpPipelineAmandaAlzheimer",
+    "fshType": "Instance",
+    "fshFile": "examples/alzheimer/mii-exs-dokument-nlp-pipeline.fsh",
+    "startLine": 6,
+    "endLine": 109
+  },
+  {
     "outputFile": "Patient-AmandaAlzheimer.json",
     "fshName": "AmandaAlzheimer",
     "fshType": "Instance",
@@ -109,7 +117,7 @@
     "fshType": "ValueSet",
     "fshFile": "terminology/mii-vs-dokument-einrichtungsart.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 10
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-fachgebiet.json",
@@ -117,7 +125,7 @@
     "fshType": "ValueSet",
     "fshFile": "terminology/mii-vs-dokument-fachgebiet.fsh",
     "startLine": 1,
-    "endLine": 7
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-format-code.json",
@@ -141,7 +149,7 @@
     "fshType": "ValueSet",
     "fshFile": "terminology/mii-vs-dokument-sct-dokument-kategorie.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-sct-dokument-typ.json",
@@ -149,6 +157,6 @@
     "fshType": "ValueSet",
     "fshFile": "terminology/mii-vs-dokument-sct-dokument-typ.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   }
 ]

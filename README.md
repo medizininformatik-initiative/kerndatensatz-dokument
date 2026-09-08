@@ -8,7 +8,7 @@ NLP-Verarbeitungsstatus, Terminologien und Beispielen.
 
 - **Package:** `de.medizininformatikinitiative.kerndatensatz.dokument`
 - **Canonical:** `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument`
-- **Aktuelle Version:** 2027.0.0-ballot.rc1 (Ballot-Release-Kandidat, Zyklus 2027)
+- **Aktuelle Version:** 2027.0.0-ballot.rc2 (Ballot-Release-Kandidat, Zyklus 2027)
 - **Lizenz:** CC BY 4.0 (siehe [LICENSE](LICENSE))
 
 ## Aufbau (seit Migration auf das MII-KDS-Modul-Template)

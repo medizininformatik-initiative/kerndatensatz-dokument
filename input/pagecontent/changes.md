@@ -82,6 +82,35 @@ werden können.</p>
 
 ---
 
+### Version 2027.0.0-ballot.rc2
+
+**Datum** 2026-09-08 · **Status** Ballot-Release-Kandidat 2 (Zyklus 2027)
+
+Zweiter Kandidat der Ballot-Version 2027 — inhaltlich der Stand von rc1 nach der
+Migration des Leitfadens von Simplifier auf den HL7 IG Publisher (MII-KDS-Modul-
+Template v0.13.1, deutsch als Standardsprache, englische Übersetzung). Keine
+Änderungen an Profil, Extension, Terminologien oder logischem Modell; die
+Paketinhalte ändern sich durch Übersetzungs-Extensions (`.po`), die
+SNOMED-CT-Lizenzhinweise auf den vier SNOMED-ValueSets, das korrigierte
+`supportedProfile` und die Suchparameter-Verweise des CapabilityStatements auf
+das Meta-Modul.
+
+* **Leitfaden neu gebaut mit dem IG Publisher** — Seitenstruktur des Templates,
+  Artefakte inline gerendert (Profil, Extension, ValueSets, CodeSystem,
+  Mapping), Tabellen aus dem Paket generiert, Beispielszenario der NLP-Pipeline
+  auf der Beispielseite, Suchparameter mit Beispielaufrufen.
+* **Abhängigkeiten** — `kerndatensatz.base` 2027.0.0-ballot.rc1,
+  `kerndatensatz.meta` 2027.0.0-ballot.rc3.
+* **CapabilityStatement** — `supportedProfile` verweist auf das Dokument-Profil
+  (rc1: auf die eigene Metadaten-URL); die drei modulspezifischen Suchparameter
+  verweisen auf die SearchParameter-Definitionen des Meta-Moduls.
+* **Beispiele** — Kontaktebene der Encounter-Beispiele mit System
+  `http://fhir.de/CodeSystem/Kontaktebene`; Titel und Beschreibungen für alle
+  Beispielinstanzen; ExampleScenario der NLP-Pipeline.
+* **Qualitätssicherung** — Fehler und Warnungen des Publishers bereinigt bzw.
+  begründet unterdrückt (siehe `input/ignoreWarnings.txt`); bekannte,
+  extern verursachte Fehler: siehe Known Issue unten.
+
 ### Version 2027.0.0-ballot.rc1
 
 **Datum** 01.09.2026 (Veröffentlichungsdatum des Leitfadens; das RC-Paket
