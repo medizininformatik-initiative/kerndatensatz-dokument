@@ -15,10 +15,10 @@ Usage: #definition
 * purpose = "Zeigt, wie das Dokument-Profil und die Extension MII_EX_Dokument_NLP_Processing_Status die Ergebnisdokumente einer NLP-Verarbeitungskette und ihre Beziehungen (relatesTo: transforms, appends) abbilden."
 // actors
 * actor[+]
-  * actorId = "dms"
+  * actorId = "source"
   * type = #entity
-  * name = "Klinisches Dokumentenmanagement"
-  * description = "Quellsystem, das den ärztlichen Entlassbrief `Amanda_Alzheimer.docx` verwaltet und der NLP-Pipeline bereitstellt."
+  * name = "Dokumentenquelle"
+  * description = "System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen — im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher."
 * actor[+]
   * actorId = "nlp"
   * type = #entity
@@ -70,13 +70,13 @@ Usage: #definition
 * process[+]
   * title = "NLP-Verarbeitung eines Entlassbriefs"
   * description = "Vier aufeinanderfolgende Verarbeitungsschritte; jeder Schritt legt eine neue Dokumentreferenz an, die den Verarbeitungsstatus kumuliert und auf die Referenz des vorherigen Schritts verweist."
-  * preConditions = "Der Entlassbrief `Amanda_Alzheimer.docx` liegt im Dokumentenmanagement vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden."
+  * preConditions = "Der Entlassbrief `Amanda_Alzheimer.docx` liegt in der Dokumentenquelle vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden."
   * postConditions = "Vier Dokumentreferenzen (Original, Klartext, de-identifiziert, annotiert) mit `relatesTo`-Kette und NLP-Verarbeitungsstatus liegen im Repository."
   * step[+].operation
     * number = "1"
     * type = "Ingestion"
     * name = "Erschließung des Originaldokuments"
-    * initiator = "dms"
+    * initiator = "source"
     * receiver = "nlp"
     * description = "Das Originaldokument wird übernommen; die Dokumentreferenz erhält den Status `unprocessed`."
     * request.resourceId = "AmandaAlzheimerOriginalDokument"
