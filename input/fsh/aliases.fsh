@@ -117,3 +117,6 @@ Alias: $crmi-release-version-behavior-codes = http://hl7.org/fhir/uv/crmi/CodeSy
 Alias: $crmi-release-experimental-behavior-codes = http://hl7.org/fhir/uv/crmi/CodeSystem/crmi-release-experimental-behavior-codes
 Alias: $crmi-release-version-behavior = http://hl7.org/fhir/uv/crmi/ValueSet/crmi-release-version-behavior
 Alias: $crmi-release-experimental-behavior = http://hl7.org/fhir/uv/crmi/ValueSet/crmi-release-experimental-behavior
+
+// ExampleScenario (R4): R5 cross-version extensions that link scenario instances to real example resources
+Alias: $exs-instance-content = http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content

@@ -31,6 +31,18 @@ Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil 
 | [Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html) | Encounter | Kontext | – |
 | [Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) | Encounter | Kontext | – |
 
+#### Ablauf als ExampleScenario
+
+Die Pipeline ist zusätzlich als FHIR-Ressource [ExampleScenario „NLP-Pipeline Amanda Alzheimer“](ExampleScenario-NlpPipelineAmandaAlzheimer.html) modelliert: Akteure, die vier Verarbeitungsschritte als Prozess und die beteiligten Instanzen, die auf die Beispielressourcen oben verweisen. Der IG Publisher erzeugt daraus das folgende Sequenzdiagramm und die Prozesstabelle.
+
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-de.xhtml %}
+
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-actor-table-de.xhtml %}
+
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-processes-de.xhtml %}
+
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-instance-table-de.xhtml %}
+
 #### DocumentReference-Ressourcen der Pipeline
 
 Jede Registerkarte zeigt die JSON-Darstellung der Dokumentreferenz eines Verarbeitungsschritts; die Artefaktseite ist jeweils verlinkt.
