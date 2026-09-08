@@ -70,6 +70,10 @@
   pre.json[class*="language-"] { background: #EFFFEF; padding: 5px; margin: 0 0 10px; font-size: 11px; text-shadow: none; }
   pre.json code[class*="language-"] { color: inherit; text-shadow: none; }
   pre.json code[class*="language-"] .token { color: inherit; background: transparent; text-shadow: none; font-weight: inherit; }
+  /* 3. publisher-generated PlantUML diagrams (ExampleScenario, class/sequence): the SVG carries a fixed
+        pixel width and height inline; cap it at the content width and let the height follow the viewBox
+        so a wide diagram scales instead of overflowing the column (same guard template-base.css has for img) */
+  #segment-content svg[data-diagram-type] { max-width: 100%; height: auto !important; }
 </style>
 
 
@@ -470,7 +474,7 @@ pipeline examples on the <a href="examples.html">Examples</a> page.</p>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Plain text representation of the concept</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // fa43cabe-79af-4d69-9a82-1fcc1932a29e
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ac44330-2ac2-483e-a674-e96c08b874ae
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusS'), 'binding', document.getElementById('cbmii-ex-dokument-nlp-processing-statusS-binding').checked, document.getElementById('ppmii-ex-dokument-nlp-processing-statusS'));
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -517,7 +521,7 @@ filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusS'), 'o
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // fa43cabe-79af-4d69-9a82-1fcc1932a29e
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 2ac44330-2ac2-483e-a674-e96c08b874ae
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusD'), 'binding', document.getElementById('cbmii-ex-dokument-nlp-processing-statusD-binding').checked, document.getElementById('ppmii-ex-dokument-nlp-processing-statusD'));
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -573,7 +577,7 @@ filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusD'), 'o
     &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-09-08T17:49:28+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-09-08T19:41:07+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NUM-DIZ&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NUM-DIZ&quot;/&gt;
@@ -1428,7 +1432,7 @@ filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusD'), 'o
     ]
   },
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-09-08T17:49:28+00:00",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-09-08T19:41:07+00:00",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "NUM-DIZ",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -2417,7 +2421,7 @@ filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusD'), 'o
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 17:49+0000">2026-09-08</span>
+          Generated <span title="Tue, Sep 8, 2026 19:41+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

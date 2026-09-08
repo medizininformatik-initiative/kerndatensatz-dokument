@@ -73,6 +73,10 @@
   pre.json[class*="language-"] { background: #EFFFEF; padding: 5px; margin: 0 0 10px; font-size: 11px; text-shadow: none; }
   pre.json code[class*="language-"] { color: inherit; text-shadow: none; }
   pre.json code[class*="language-"] .token { color: inherit; background: transparent; text-shadow: none; font-weight: inherit; }
+  /* 3. publisher-generated PlantUML diagrams (ExampleScenario, class/sequence): the SVG carries a fixed
+        pixel width and height inline; cap it at the content width and let the height follow the viewBox
+        so a wide diagram scales instead of overflowing the column (same guard template-base.css has for img) */
+  #segment-content svg[data-diagram-type] { max-width: 100%; height: auto !important; }
 </style>
 
 
@@ -493,7 +497,7 @@
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 8, 2026 17:49+0000">2026-09-08</span>
+          Erstellt <span title="Tue, Sep 8, 2026 19:41+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

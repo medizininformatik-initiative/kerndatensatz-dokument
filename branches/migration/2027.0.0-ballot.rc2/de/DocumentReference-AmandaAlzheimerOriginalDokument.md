@@ -16,9 +16,9 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 
 **MII EX Dokument NLP Processing Status**: Original
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.1.0/NamingSystem-uri.html)/urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.3.0/NamingSystem-uri.html)/urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341
 
-**identifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.1.0/NamingSystem-uri.html)/urn:uuid:4f8a2e7c-5b3d-4a12-9f87-3c2e9a1d5f04 (use: official, )
+**identifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.3.0/NamingSystem-uri.html)/urn:uuid:4f8a2e7c-5b3d-4a12-9f87-3c2e9a1d5f04 (use: official, )
 
 **status**: Current
 

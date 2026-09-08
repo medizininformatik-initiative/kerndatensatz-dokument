@@ -33,7 +33,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
   "version" : "2027.0.0-ballot.rc2",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-08T17:49:28+00:00",
+  "date" : "2026-09-08T19:41:07+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -86,7 +86,10 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
         "name" : "Originaldokument übernehmen",
         "initiator" : "source",
         "receiver" : "nlp",
-        "description" : "Die Pipeline übernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle."
+        "description" : "Die Pipeline übernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerOriginalDokument"
+        }
       }
     },
     {
@@ -109,7 +112,10 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
         "name" : "Klartext-Extraktion",
         "initiator" : "nlp",
         "receiver" : "nlp",
-        "description" : "Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`)."
+        "description" : "Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`).",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerOriginalDokument"
+        }
       }
     },
     {
@@ -132,7 +138,10 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
         "name" : "De-Identifikation mit Prüfung",
         "initiator" : "nlp",
         "receiver" : "annotators",
-        "description" : "Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`)."
+        "description" : "Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`).",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerKlartextDokument"
+        }
       }
     },
     {
@@ -155,7 +164,10 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
         "name" : "Semantische Annotation",
         "initiator" : "annotators",
         "receiver" : "nlp",
-        "description" : "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
+        "description" : "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerDeIdentifiziertesDokument"
+        }
       }
     },
     {
