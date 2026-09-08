@@ -13,7 +13,7 @@ Usage: #definition
 * status = #draft
 * name = "NlpPipelineAmandaAlzheimer"
 * purpose = "Zeigt, wie das Dokument-Profil und die Extension MII_EX_Dokument_NLP_Processing_Status die Ergebnisdokumente einer NLP-Verarbeitungskette und ihre Beziehungen (relatesTo: transforms, appends) abbilden."
-// actors
+// actors — the repository stores results only; the pipeline and the human reviewers do the work
 * actor[+]
   * actorId = "source"
   * type = #entity
@@ -22,88 +22,81 @@ Usage: #definition
 * actor[+]
   * actorId = "nlp"
   * type = #entity
-  * name = "NLP-Pipeline"
-  * description = "Verarbeitungskette aus Ingestion, Preprocessing, De-Identification und Annotation; jede Stufe erzeugt ein Ergebnisdokument und eine Dokumentreferenz."
+  * name = "NLP-Pipeline / Annotationsframework"
+  * description = "Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt."
+* actor[+]
+  * actorId = "annotators"
+  * type = #person
+  * name = "Annotierende (Human in the Loop)"
+  * description = "Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen."
 * actor[+]
   * actorId = "repo"
   * type = #entity
   * name = "Dokumentenrepository (FHIR)"
-  * description = "FHIR-Server, in dem die Dokumentreferenzen aller Stufen mit ihren NLP-Verarbeitungsstatus abgelegt werden."
-// instances — each one links the real example resource
-* instance[+]
-  * resourceId = "AmandaAlzheimerOriginalDokument"
-  * resourceType = #DocumentReference
-  * name = "Original-Dokument (Amanda_Alzheimer.docx)"
-  * description = "Dokumentreferenz auf das Originaldokument; NLP-Verarbeitungsstatus `unprocessed`."
-  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerOriginalDokument)
-* instance[+]
-  * resourceId = "AmandaAlzheimerKlartextDokument"
-  * resourceType = #DocumentReference
-  * name = "Klartext-Dokument (Amanda_Alzheimer.txt)"
-  * description = "Status `preprocessed, format-change`; `relatesTo.transforms` → Original-Dokument."
-  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerKlartextDokument)
-* instance[+]
-  * resourceId = "AmandaAlzheimerDeIdentifiziertesDokument"
-  * resourceType = #DocumentReference
-  * name = "De-identifiziertes Dokument (De-ID.txt)"
-  * description = "Status `preprocessed, format-change, surrogated`; `relatesTo.transforms` → Klartext-Dokument."
-  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerDeIdentifiziertesDokument)
-* instance[+]
-  * resourceId = "AmandaAlzheimerAnnotiertesDokument"
-  * resourceType = #DocumentReference
-  * name = "Annotiertes Dokument (Annotat.zip)"
-  * description = "Status `annotated, semantic, surrogated, preprocessed, format-change`; `relatesTo.appends` → De-identifiziertes Dokument."
-  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerAnnotiertesDokument)
-* instance[+]
-  * resourceId = "AmandaAlzheimer"
-  * resourceType = #Patient
-  * name = "Patientin Amanda Alzheimer"
-  * description = "Synthetische Patientin; nur vom Original-Dokument referenziert (`subject`)."
-  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimer)
-* instance[+]
-  * resourceId = "AmandaAlzheimerEinrichtungskontakt"
-  * resourceType = #Encounter
-  * name = "Einrichtungskontakt"
-  * description = "Kontext des Original-Dokuments (`context.encounter`)."
-  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerEinrichtungskontakt)
-// process
+  * description = "FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline."
+// process — transformations happen in the pipeline (with human review); each result is then documented in the repository
 * process[+]
   * title = "NLP-Verarbeitung eines Entlassbriefs"
-  * description = "Vier aufeinanderfolgende Verarbeitungsschritte; jeder Schritt legt eine neue Dokumentreferenz an, die den Verarbeitungsstatus kumuliert und auf die Referenz des vorherigen Schritts verweist."
+  * description = "Vier Verarbeitungsschritte der NLP-Pipeline (teil- oder vollautomatisch, mit Prüfung durch Annotierende); die FHIR-DocumentReference-Ressourcen dokumentieren nur die Ergebnisse dieser Schritte, kumulieren den NLP-Verarbeitungsstatus und verknüpfen die Ergebnisdokumente über `relatesTo`. Das Dokumentenrepository transformiert nichts — es speichert die Dokumentreferenzen."
   * preConditions = "Der Entlassbrief `Amanda_Alzheimer.docx` liegt in der Dokumentenquelle vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden."
-  * postConditions = "Vier Dokumentreferenzen (Original, Klartext, de-identifiziert, annotiert) mit `relatesTo`-Kette und NLP-Verarbeitungsstatus liegen im Repository."
+  * postConditions = "Vier Dokumentreferenzen (Original, Klartext, de-identifiziert, annotiert) mit `relatesTo`-Kette und NLP-Verarbeitungsstatus liegen im Repository; die Ergebnisdokumente selbst liegen als Anhang oder Verweis in der jeweiligen Dokumentreferenz."
   * step[+].operation
     * number = "1"
     * type = "Ingestion"
-    * name = "Erschließung des Originaldokuments"
+    * name = "Originaldokument übernehmen"
     * initiator = "source"
     * receiver = "nlp"
-    * description = "Das Originaldokument wird übernommen; die Dokumentreferenz erhält den Status `unprocessed`."
-    * request.resourceId = "AmandaAlzheimerOriginalDokument"
+    * description = "Die Pipeline übernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle."
   * step[+].operation
     * number = "2"
+    * type = "Dokumentreferenz ablegen"
+    * name = "Original dokumentieren"
+    * initiator = "nlp"
+    * receiver = "repo"
+    * description = "Dokumentreferenz auf das Original mit NLP-Verarbeitungsstatus `unprocessed`."
+    * request.resourceId = "AmandaAlzheimerOriginalDokument"
+  * step[+].operation
+    * number = "3"
     * type = "Preprocessing"
     * name = "Klartext-Extraktion"
     * initiator = "nlp"
-    * receiver = "repo"
-    * description = "Umwandlung in Klartext (`Amanda_Alzheimer.txt`); neue Dokumentreferenz mit `preprocessed, format-change`, verweist mit `transforms` auf das Original."
-    * request.resourceId = "AmandaAlzheimerOriginalDokument"
-    * response.resourceId = "AmandaAlzheimerKlartextDokument"
-  * step[+].operation
-    * number = "3"
-    * type = "De-Identification"
-    * name = "De-Identifikation"
-    * initiator = "nlp"
-    * receiver = "repo"
-    * description = "Identifizierende Inhalte werden durch Surrogate ersetzt (`De-ID.txt`); Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument."
-    * request.resourceId = "AmandaAlzheimerKlartextDokument"
-    * response.resourceId = "AmandaAlzheimerDeIdentifiziertesDokument"
+    * receiver = "nlp"
+    * description = "Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`)."
   * step[+].operation
     * number = "4"
-    * type = "Annotation"
-    * name = "Semantische Annotation"
+    * type = "Dokumentreferenz ablegen"
+    * name = "Klartext dokumentieren"
     * initiator = "nlp"
     * receiver = "repo"
-    * description = "Annotation der klinischen Inhalte (`Annotat.zip`); Status `annotated, semantic, surrogated, preprocessed, format-change`, erweitert mit `appends` die vorherige Dokumentreferenz."
+    * description = "Dokumentreferenz mit Status `preprocessed, format-change`, `relatesTo.transforms` → Original."
+    * request.resourceId = "AmandaAlzheimerKlartextDokument"
+  * step[+].operation
+    * number = "5"
+    * type = "De-Identification"
+    * name = "De-Identifikation mit Prüfung"
+    * initiator = "nlp"
+    * receiver = "annotators"
+    * description = "Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`)."
+  * step[+].operation
+    * number = "6"
+    * type = "Dokumentreferenz ablegen"
+    * name = "De-identifiziertes Dokument dokumentieren"
+    * initiator = "nlp"
+    * receiver = "repo"
+    * description = "Dokumentreferenz mit Status `preprocessed, format-change, surrogated`, `relatesTo.transforms` → Klartext-Dokument."
     * request.resourceId = "AmandaAlzheimerDeIdentifiziertesDokument"
-    * response.resourceId = "AmandaAlzheimerAnnotiertesDokument"
+  * step[+].operation
+    * number = "7"
+    * type = "Annotation"
+    * name = "Semantische Annotation"
+    * initiator = "annotators"
+    * receiver = "nlp"
+    * description = "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
+  * step[+].operation
+    * number = "8"
+    * type = "Dokumentreferenz ablegen"
+    * name = "Annotiertes Dokument dokumentieren"
+    * initiator = "nlp"
+    * receiver = "repo"
+    * description = "Dokumentreferenz mit Status `annotated, semantic, surrogated, preprocessed, format-change`, `relatesTo.appends` → de-identifiziertes Dokument."
+    * request.resourceId = "AmandaAlzheimerAnnotiertesDokument"
