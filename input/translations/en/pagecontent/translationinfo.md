@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- English translation of input/pagecontent/translationinfo.md (German is
      the default language of this IG — DE-first per the MII meta wiki,
      release 2027). Mechanics: docs/recipes/add-translation.md. -->
@@ -15,7 +14,7 @@ name as the German page); resource translations are `.po` files under
 
 The German pages carry over the text of the previous Simplifier guide verbatim
 wherever the source had a corresponding page; the remaining pages (Downloads,
-Metadata, Versioning, Change history, Examples) come from the KDS module
+Metadata, Versioning, Changelog, Examples) come from the KDS module
 template. The English pages are machine translations of the German version and
 are reviewed bilingually before publication. The FHIR artifacts themselves carry
 German designations with translation extensions for the English rendering.

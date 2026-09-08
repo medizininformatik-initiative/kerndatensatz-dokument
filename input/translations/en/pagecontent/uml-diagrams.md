@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- German default page: input/pagecontent/uml-diagrams.md. -->
 
 To illustrate the information model, the following diagram was created in the Unified Modeling Language (UML). This makes it possible to better represent the domain concepts, their relationships, and the connection to other MII KDS modules.

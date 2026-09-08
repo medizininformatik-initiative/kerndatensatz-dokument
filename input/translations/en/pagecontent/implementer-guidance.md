@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 MD007 -->
 <!-- MD007: the indented top-level list in the "References" section mirrors the
      verbatim indentation carried over from the Simplifier source page. -->
@@ -24,7 +23,7 @@ Domain context of the **Dokument** module for DIC implementers: its relationship
 
 Medical documents are essential for comprehensive patient care, for the traceability of diagnoses and treatments, and for compliance with legal and scientific standards. They also play an important role in billing medical services and support efficient resource planning in the health system.
 
-Both the technical and the content-related requirements of documentation in healthcare are highly dynamic. As a consequence, large differences in information structures have developed between institutions. Archiving and retrievability in particular come with a high diversity of metadata.
+Both the technical and the content-related requirements of documentation in healthcare are highly dynamic. As a consequence, large differences in information structures have developed between institutions. Archiving and discoverability in particular come with a high diversity of metadata.
 
 In the context of the MII core datasets, the MII KDS module Dokument introduces a harmonised, national concept that builds on established code systems and value sets and orchestrates an interoperable handling of medical documents.
 
@@ -35,7 +34,7 @@ For certain data elements, this MII KDS module builds on existing work from othe
 | MII KDS module | Description of the relationship | Mandatory use |
 |---|---|---|
 | [Person (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional (`subject` 0..1, Must Support). | Yes (where a patient reference exists) |
-| [Fall (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type. | No |
+| [Fall (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable level of contact of the MII KDS module Fall. That level typically depends on the document type. | No |
 
 ### Use by Other MII KDS Modules
 
@@ -77,7 +76,7 @@ In doing so, all data elements as well as the terminology used were reconciled a
 
 Person-related documents are assigned to a person (the base module's Patient / PatientPseudonymisiert profiles) (`subject`, 0..1). De-identified documents are marked accordingly via the security level (`securityLabel`). The data-holding site is responsible here for referencing only the corresponding anonymised or pseudonymised variants of other MII modules. Wherever possible, an encounter relation (MII KDS module Fall) is defined – where feasible at the most relevant level of the encounter-level model (`context.encounter`). In the package dependency diagram (above), the relationships between the MII modules are shown in green.
 
-We recommend the [DVMD KDL standard](https://simplifier.net/kdl), which is also used in ISiK, for the precise type description (`type`), as well as the [IHE XDS class codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) for the coarser document category (`category`). [IHE XDS type and class codes can be derived unambiguously from KDL.](https://simplifier.net/kdl/~resources?category=ConceptMap) Further codings such as local codes, SNOMED CT or LOINC are optionally possible.
+We recommend the [DVMD KDL standard](https://simplifier.net/kdl), which is also used in ISiK, for the precise type description (`type`), as well as the [IHE XDS class codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) for the coarser document category (`category`). [IHE XDS type and class codes can be derived unambiguously from KDL.](https://simplifier.net/kdl/~resources?category=ConceptMap) Further codings such as in-house codes, SNOMED CT or LOINC are optionally possible.
 
 ---
 

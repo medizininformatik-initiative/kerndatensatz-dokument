@@ -1,5 +1,3 @@
-# TODO:REVIEW machine-translated (de -> en) -- pending the bilingual review (Gate C).
-
 # CodeSystem.name
 #: CodeSystem.name
 msgid "MII_CS_Dokument_NLP_Processing_Status"
@@ -14,11 +12,6 @@ msgstr "MII CS Dokument NLP Processing Status"
 #: CodeSystem.publisher
 msgid "Medizininformatik Initiative"
 msgstr "Medizininformatik Initiative"
-
-# ContactDetail.name
-#: ContactDetail.name
-msgid "NUM-DIZ"
-msgstr "NUM-DIZ"
 
 # CodeSystem.description
 #: CodeSystem.description

@@ -1,4 +1,5 @@
-<!-- German translation of input/includes/menu.xml.
+<!-- Menu in the IG's DEFAULT language (German); the English translation is
+     input/translations/en/includes/menu.xml.
      Keep the href targets IDENTICAL to the source menu; translate only labels.
      Structure notes (OPTIONAL entries, link-only entries, the interim
      meta-wiki links) are documented in the source menu's header and in

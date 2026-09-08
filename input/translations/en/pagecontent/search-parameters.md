@@ -1,6 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page input/pagecontent/search-parameters.md. -->
-<!-- TODO:REVIEW machine-translated from the German default page -->
 
 This page gives example calls for the search parameters of the **Dokument** module. The supported search parameters are defined normatively in the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html); the standard search parameters are defined by the [FHIR base specification (DocumentReference)](https://hl7.org/fhir/R4/documentreference.html#search). The Dokument module defines no SearchParameter artifacts of its own — the three module-specific search parameters are provided by the [Meta module](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3) (package `kerndatensatz.meta` 2027.0.0-ballot.rc3):
 

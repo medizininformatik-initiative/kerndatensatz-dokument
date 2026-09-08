@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page
      input/pagecontent/kompatibilitaet.md — keep both files in step.
@@ -7,7 +6,7 @@
      This page is nested under "implementer-guidance" in the page tree and
      deliberately has no menu entry of its own. -->
 
-The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile `ISiKDokumentenMetadaten`, version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, version 1.7.0) and IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, package `ihe.iti.mhd`, version 4.2.3) was assessed on the basis of the [quality-assurance reports of this guide](../qa.html), the profile comparisons of the HL7 FHIR Validator (`compare` mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile `mii-pr-dokument-dokument` in version 2027.0.0-ballot.rc1. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for `content.attachment.title` and `description`. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against `KBV_PR_Base_DocumentReference|1.7.0`. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centres.
+The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile `ISiKDokumentenMetadaten`, version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, version 1.7.0) and IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, package `ihe.iti.mhd`, version 4.2.3) was assessed on the basis of the [quality-assurance reports of this guide](../qa.html), the profile comparisons of the HL7 FHIR Validator (`compare` mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile `mii-pr-dokument-dokument` in version 2027.0.0-ballot.rc2. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for `content.attachment.title` and `description`. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against `KBV_PR_Base_DocumentReference|1.7.0`. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centers.
 
 ---
 
@@ -19,7 +18,7 @@ This section provides a structured overview of the compatibility of the MII KDS 
 
 ##### Motivation
 
-Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centres and supports the implementation of national interoperability goals.
+Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centers and supports the implementation of national interoperability goals.
 
 > **Version basis:** the comparison below was measured against the profile `ISiKDokumentenMetadaten` in version **6.0.0**. From ISiK stage 5 onwards the human-readable designation of the document is to be carried in `content.attachment.title`; `DocumentReference.description` is dropped for this purpose in favour of an alignment with IHE MHD and the ePA specification.
 {: .ig-highlight .ig-highlight-blue}
@@ -28,7 +27,7 @@ Compatibility with ISiK document exchange is essential in order to ensure cross-
 
 The MII KDS Dokument profile is designed as a superset of the ISiK profile and covers all ISiK requirements. The most important points of comparison are:
 
-| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc1) | ISiK document exchange (`ISiKDokumentenMetadaten` 6.0.0) | Compatibility                         |
+| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | ISiK document exchange (`ISiKDokumentenMetadaten` 6.0.0) | Compatibility                         |
 |-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
 | `status`          | 1..1, Must Support                                 | 1..1, Must Support                      | ✓ Fully compatible                    |
 | `type`            | 0..1, Must Support (KDL/XDS recommended, slices on `type.coding`) | 1..1, Must Support (KDL *and* XDS required via slices) | ✓ MII KDS Dokument supports the ISiK codes |
@@ -73,7 +72,7 @@ Compatibility with the KBV MIO Basis profile is decisive for integrating documen
 
 Both profiles are designed for flexibility and interoperability:
 
-| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc1) | KBV MIO Basis (`KBV_PR_Base_DocumentReference` 1.7.0) | Compatibility                         |
+| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | KBV MIO Basis (`KBV_PR_Base_DocumentReference` 1.7.0) | Compatibility                         |
 |-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
 | `status`          | 1..1, Must Support                                 | 1..1                                    | ✓ Fully compatible                    |
 | `type`            | 0..1, Must Support, preferred (binding identical to KBV), `type.coding` 1..*, invariant `mii-iv-dokument-dokument-type` (warning) | 0..1, preferred (`c80-doc-typecodes`) | ⚠️ Binding identical; MII, however, requires at least one `coding` with `system` and `code` |
@@ -112,7 +111,7 @@ Compatibility with IHE MHD enables international interoperability and connection
 
 The comparison below refers to the profile `IHE.MHD.UnContained.Comprehensive.DocumentReference` (IHE ITI MHD, package `ihe.iti.mhd`, version 4.2.3; derived from `IHE.MHD.Minimal.DocumentReference`). Different requirements apply to the *contained* variant of MHD Comprehensive. In this variant IHE MHD is consistently **more restrictive** than the MII KDS Dokument profile: fourteen elements are mandatory there that are optional in the MII profile, and four elements are prohibited or bound more narrowly in MHD.
 
-| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc1) | IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference` 4.2.3) | Compatibility                         |
+| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference` 4.2.3) | Compatibility                         |
 |-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
 | `masterIdentifier`| 0..1                                               | 1..1                                    | ⚠️ IHE MHD requires a master identifier    |
 | `status`          | 1..1, Must Support, required (`document-reference-status`: current \| superseded \| entered-in-error) | 1..1, required (`DocumentReferenceStats`: only current \| superseded) | ⚠️ `entered-in-error` is not permitted in IHE MHD |
@@ -200,4 +199,4 @@ The element definitions compared here are laid down normatively in the
 overview of all profiles of the module is available under
 [Profiles](profiles.html). The domain context of this comparison and the list
 of external standards taken into account are given on the
-[Implementer guidance](implementer-guidance.html) page.
+[Guidance for Implementers](implementer-guidance.html) page.

@@ -38,7 +38,7 @@ in the data portal documentation: direct identifiers are removed,
 data elements not needed by the approved project are dropped, and identifying
 values are replaced by project-specific pseudonyms (FHIR Pseudonymizer
 configuration). The profiles of this module describe data *before* DIMP is
-applied; which elements survive a concrete data release is decided per project
+applied; which elements reach a concrete data provision is decided per project
 by the DIMP configuration, not by this guide.
 
 ### Module-specific aspects
@@ -55,9 +55,9 @@ body itself** via `content.attachment`. This raises aspects of its own:
 
 **Free text is this module's most sensitive data category.** A document's
 body can contain a wide range of identifying data and/or metadata (e.g.
-names, patient IDs) that structured pseudonymization does not touch. DIMP
-tooling operates on structured elements; the content of an attachment is not
-covered by it.
+names, patient IDs) that structured pseudonymization does not touch. Tools
+in the DIMP chain operate on structured elements; the content of an
+attachment is not covered by it.
 
 **Embedding vs. reference.** The profile permits both transport forms for the
 document body: embedded as Base64 (`content.attachment.data`, slice

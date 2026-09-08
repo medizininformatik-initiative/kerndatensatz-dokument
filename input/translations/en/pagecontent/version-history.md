@@ -13,7 +13,7 @@ The **Dokument** module follows the KDS calendar-versioning (CalVer)
 scheme in a SemVer-compatible numeric form:
 
 * format **`YYYY.MINOR.PATCH[-label]`** — the current version is
-  `2027.0.0-ballot.rc1`;
+  `2027.0.0-ballot.rc2`;
 * **`YYYY`** — the year in which the guide applies and is intended to be used;
   it takes the place of the major version;
 * **`MINOR`** — incremented for non-breaking additions and refinements;
@@ -59,7 +59,7 @@ detail page with three views — the **difference** analysis (what changed
 element by element), the **union** (everything either version allows) and the
 **intersection** (only what both versions allow).
 
-**How it is performed.** The IG Publisher's previous-version comparator loads
+**How it is generated.** The IG Publisher's previous-version comparator loads
 the previous release's package, pairs every profile, value set and code
 system with its counterpart by canonical URL, compares the pairs, and renders
 the report into the build output — so it publishes with the site, with no
@@ -67,7 +67,7 @@ extra deployment step. It is enabled by the `version-comparison` parameter — a
 Publisher parameter from the
 [ig-parameters registry](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html),
 passed through `sushi-config.yaml`. It has two prerequisites: a publication
-history at the canonical, and a loadable previous package. This module does not
+history at the canonical URL, and a loadable previous package. This module does not
 currently set the parameter — so the publisher default `{last}` applies; the
 value `n/a` is the documented way to switch the comparison off.
 

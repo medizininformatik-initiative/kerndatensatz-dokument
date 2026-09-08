@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 
 ### Introduction
@@ -53,12 +52,13 @@ anonymization and NLP annotations, the relation to other documents (MII KDS
 module Dokument) becomes particularly significant for representing
 processing chains (`relatesTo`).
 
-The information model separates the reference itself from the metadata of
-the referenced document (`content`). The document body is referenced via a
-locally interpreted URL (`content.attachment.url`). In principle, the
-document body of the referenced document can also be embedded directly
-within the reference (`content.attachment.data`). The module does not
-prescribe the semantics of this resolution.
+The information model separates information about the reference itself
+from the metadata of the referenced documents (`content`). The document
+body is referenced via a locally interpreted URL
+(`content.attachment.url`). In principle, the document body of the
+referenced document can also be embedded directly within the reference
+(`content.attachment.data`). The module does not prescribe the semantics of
+this resolution.
 
 The document body can contain a wide range of identifying data and/or
 metadata (e.g. names, patient ID). The data holder can express that such

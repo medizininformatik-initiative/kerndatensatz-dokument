@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page
      input/pagecontent/changes.md (DE-first) — keep both files in step.
@@ -74,6 +73,34 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 </div>
 
 ---
+
+### Version 2027.0.0-ballot.rc2
+
+**Date** 2026-09-08 · **Status** ballot release candidate 2 (2027 cycle)
+
+Second candidate of the 2027 ballot version — the rc1 content after the guide's
+migration from Simplifier to the HL7 IG Publisher (MII KDS module template
+v0.13.1, German as the default language, English translation). No changes to
+the profile, the extension, the terminologies or the logical model; the package
+content changes through translation extensions (`.po`), the SNOMED CT licence
+notice on the four SNOMED value sets, the corrected `supportedProfile` and the
+CapabilityStatement's search-parameter references to the Meta module.
+
+* **Guide rebuilt with the IG Publisher** — the template's page structure,
+  artifacts rendered inline (profile, extension, value sets, code system,
+  mapping), tables generated from the package, the NLP pipeline example
+  scenario on the examples page, search parameters with example calls.
+* **Dependencies** — `kerndatensatz.base` 2027.0.0-ballot.rc1,
+  `kerndatensatz.meta` 2027.0.0-ballot.rc3.
+* **CapabilityStatement** — `supportedProfile` points at the Dokument profile
+  (rc1: at its own metadata URL); the three module-specific search parameters
+  reference the Meta module's SearchParameter definitions.
+* **Examples** — level of contact of the Encounter examples with system
+  `http://fhir.de/CodeSystem/Kontaktebene`; titles and descriptions for all
+  example instances; ExampleScenario of the NLP pipeline.
+* **Quality assurance** — publisher errors and warnings resolved or suppressed
+  with justification (see `input/ignoreWarnings.txt`); known externally caused
+  errors: see the known issue below.
 
 ### Version 2027.0.0-ballot.rc1
 

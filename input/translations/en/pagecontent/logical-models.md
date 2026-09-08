@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 
 The logical data models of the **Dokument** module describe the domain dataset independently of its concrete FHIR representation.
@@ -17,7 +16,7 @@ The following dictionary lists every element of the logical model with its path 
 
 ### Mapping to the FHIR resource
 
-The IG Publisher does not render this element-to-resource mapping on the Logical Model's artefact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
+The IG Publisher does not render this element-to-resource mapping on the Logical Model's artifact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
 
 <!-- Generated at build time: the rows come from the logical model in package.db
      (publisher sqlToData directive); the English definitions are looked up in

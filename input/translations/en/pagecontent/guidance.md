@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page
      input/pagecontent/guidance.md (DE-first) — keep both files in step.
@@ -35,7 +34,7 @@ A further important aspect of *internal document use* is the conversion (`Dokume
 
 ##### Use by Researchers: Annotation and Pseudonymization
 
-Besides the purposes described above, *internal document use* also plays a role in research. As part of Natural Language Processing (NLP) pipelines, researchers can store intermediate results and processing steps according to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) (`Dokument verarbeiten`, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (`Dokument pseudonymisieren`, "pseudonymize document"; `Dokument annotieren`, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.
+Besides the purposes described above, *internal document use* also plays a role in research. As part of Natural Language Processing (NLP) processes, researchers can store intermediate results and processing steps according to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) (`Dokument verarbeiten`, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (`Dokument pseudonymisieren`, "pseudonymize document"; `Dokument annotieren`, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.
 
 #### External Document Use
 
@@ -52,8 +51,8 @@ For data transport, it is recommended to embed the document body in the resource
 ### Further Reading
 
 <!-- Note (repo-internal): "Datasets and Descriptions" shares its target with
-     *Artifacts → Logical Models*; neither Artifacts-Summary anchor is usable as
-     a link target — see docs/page-structure.md in this repository:
+     *Artifacts → Logical Models*; none of the Artifacts-Summary anchors is
+     usable as a link target — see docs/page-structure.md in this repository:
      https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
 * **[Datasets and Descriptions](logical-models.html)** — the module's data
   elements, described as logical models.
