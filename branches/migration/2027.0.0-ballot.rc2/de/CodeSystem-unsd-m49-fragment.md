@@ -65,7 +65,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "display" : "World",
     "property" : [{
       "code" : "class",
-      "valueCode" : "region"
+      "valueString" : "region"
     }]
   },
   {
@@ -73,7 +73,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "display" : "Europe",
     "property" : [{
       "code" : "class",
-      "valueCode" : "region"
+      "valueString" : "region"
     }]
   },
   {
@@ -81,7 +81,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "display" : "Western Europe",
     "property" : [{
       "code" : "class",
-      "valueCode" : "region"
+      "valueString" : "region"
     }]
   }]
 }

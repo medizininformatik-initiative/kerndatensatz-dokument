@@ -40,7 +40,7 @@
     <display value="World"/>
     <property>
       <code value="class"/>
-      <valueCode value="region"/>
+      <valueString value="region"/>
     </property>
   </concept>
   <concept>
@@ -48,7 +48,7 @@
     <display value="Europe"/>
     <property>
       <code value="class"/>
-      <valueCode value="region"/>
+      <valueString value="region"/>
     </property>
   </concept>
   <concept>
@@ -56,7 +56,7 @@
     <display value="Western Europe"/>
     <property>
       <code value="class"/>
-      <valueCode value="region"/>
+      <valueString value="region"/>
     </property>
   </concept>
 </CodeSystem>

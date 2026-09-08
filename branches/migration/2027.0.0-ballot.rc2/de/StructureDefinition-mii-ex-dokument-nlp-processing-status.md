@@ -137,7 +137,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:28:13+00:00",
+  "date" : "2026-09-08T14:35:38+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

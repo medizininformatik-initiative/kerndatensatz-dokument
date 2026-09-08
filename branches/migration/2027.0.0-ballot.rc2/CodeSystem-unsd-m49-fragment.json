@@ -40,7 +40,7 @@
     "display" : "World",
     "property" : [{
       "code" : "class",
-      "valueCode" : "region"
+      "valueString" : "region"
     }]
   },
   {
@@ -48,7 +48,7 @@
     "display" : "Europe",
     "property" : [{
       "code" : "class",
-      "valueCode" : "region"
+      "valueString" : "region"
     }]
   },
   {
@@ -56,7 +56,7 @@
     "display" : "Western Europe",
     "property" : [{
       "code" : "class",
-      "valueCode" : "region"
+      "valueString" : "region"
     }]
   }]
 }
