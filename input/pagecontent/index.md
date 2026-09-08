@@ -161,7 +161,7 @@ Fachliche Ansprechpartner:innen dieses Moduls:
 * Frank Meineke, SMITH, Informationsmodellierung/Fachvertretung
 * Jakob Faller, MIRACUM, Informationsmodellierung/Fachvertretung
 * Katja Hoffmann, MIRACUM/DigiHub MiHUBx, Technische Umsetzung
-* Marcel Susky, MIRACUM/DigiHub MiHUBx, Informationsmodellierung/Fachvertretung/Technische Umsetzung
+* Marcel Susky, MIRACUM/DigiHub MiHUB, Informationsmodellierung/Fachvertretung/Technische Umsetzung
 * Martin Boeker, MIRACUM, Fachvertretung
 * Noemi Deppenwiese, MIRACUM, Technische Umsetzung
 * Thomas Ganslandt, MIRACUM, Fachvertretung
