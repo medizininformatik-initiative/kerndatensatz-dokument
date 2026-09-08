@@ -19,15 +19,14 @@ on the [Value Sets](value-sets.html) page.
 > [https://mii-termserv.de/](https://mii-termserv.de/).
 {: .ig-highlight .ig-highlight-blue}
 
-<!-- TODO:REVIEW machine-translated -->
-The following section describes the module's own CodeSystem; licence information on external terminologies is held by the respective publishers (see [Copyright and License](index.html#copyright-and-license)).
+The following section describes the module's own CodeSystem; license information on external terminologies is held by the respective publishers (see [Copyright and License](index.html#copyright-and-license)).
 
 ---
 
 The module's own CodeSystems, read from the package at build time (description in the resource's source language):
 
 {% sql {
- "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 order by c.Name",
+ "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 and c.Url like 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/%' order by c.Name",
  "class" : "grid sql-table",
  "columns" : [
   { "title" : "CodeSystem", "type" : "link", "source" : "Name", "target" : "Web" },

@@ -28,7 +28,7 @@ Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu
 Modul-eigene CodeSystems, beim Build aus dem Paket gelesen (Beschreibung in der Quellsprache der Ressource):
 
 {% sql {
- "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 order by c.Name",
+ "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 and c.Url like 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/%' order by c.Name",
  "class" : "grid sql-table",
  "columns" : [
   { "title" : "CodeSystem", "type" : "link", "source" : "Name", "target" : "Web" },
