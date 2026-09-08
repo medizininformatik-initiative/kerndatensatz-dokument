@@ -11,7 +11,7 @@ translation. German is therefore both the base rendering of the guide and the
 Translated pages live under `input/translations/en/pagecontent/` (same file
 name as the German page); resource translations are `.po` files under
 `input/translations/en/`. Details:
-[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md) in this repository.
+[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md) in this repository.
 
 The German pages carry over the text of the previous Simplifier guide verbatim
 wherever the source had a corresponding page; the remaining pages (Downloads,

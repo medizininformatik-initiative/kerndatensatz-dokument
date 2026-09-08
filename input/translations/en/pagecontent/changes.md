@@ -1,12 +1,12 @@
 <!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
-<!-- Default-language (English) page. Structure ported from kerndatensatz-basis
-     input/pagecontent/changes.md (branch main) — one section per version,
-     newest first — and from the MII IG release-notes template
+<!-- English translation of the German default page
+     input/pagecontent/changes.md (DE-first) — keep both files in step.
+     Structure ported from kerndatensatz-basis input/pagecontent/changes.md
+     (branch main) — one section per version, newest first — and from the MII IG
+     release-notes template
      (kerndatensatz-meta/implementation-guides/MedizininformatikInitiative-ImplementationGuide-Template/
      MII-IG-Modul--Modul/Release-notes.page.md), which prescribes Keep a Changelog.
-     German mirror: input/translations/de/pagecontent/changes.md — both files
-     must say the same thing.
 
      Maintenance rule: add a new `### Version <x>` section on top for every
      release, in BOTH languages, as part of the release pull request. Never edit
@@ -62,9 +62,10 @@ implementations while every stored instance stays valid).</p>
 scheme (<code>YYYY.n.n</code>) carries no major-version signal the way SemVer
 does — this changelog section is the <i>only</i> warning a reader gets.</p>
 <p><b>Link the technical delta.</b> From the second formal publication on,
-enable the IG Publisher's version comparison (<code>version-comparison</code>
-in <code>sushi-config.yaml</code> — see the <a href="version-history.html">
-Versioning</a> page for the setup and its prerequisites); it publishes a
+enable the IG Publisher's version comparison (<code>version-comparison</code>,
+to be added to <code>sushi-config.yaml</code> — see the
+<a href="version-history.html">Versioning</a> page for the setup and its
+prerequisites); it publishes a
 machine-generated comparison at
 <code>comparison-v&lt;previous&gt;/index.html</code>. Link it from the version
 section, so the prose explanation and the technical diff sit side by side.</p>
@@ -76,7 +77,8 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ### Version 2027.0.0-ballot.rc1
 
-**Date** 2026-08-28
+**Date** 2026-09-01 (publication date of the guide; the RC package was released
+in the package registry on 2026-08-28)
 
 #### Added
 

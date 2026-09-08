@@ -64,7 +64,7 @@ Auflösung.
 
 Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten
 (z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte
-De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder
+De-Identifizierung dieser Daten durch geeignete `securityLabel` und/oder
 Codes der Erweiterung NLP-Processing Status
 ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html))
 ausdrücken.
@@ -82,7 +82,7 @@ Dieser Implementierungsleitfaden richtet sich an:
 <div class="ig-highlight ig-highlight-green">
 <p><b>Forschende</b></p>
 <p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br/>
-→ siehe <a href="guidance.html">Anleitung für Forschende</a>.</p>
+→ siehe <a href="guidance.html">Anleitung</a>.</p>
 </div>
 
 ### Inhalt dieses Leitfadens
@@ -97,7 +97,7 @@ Dieser Implementierungsleitfaden richtet sich an:
 - **[Profile](profiles.html)** und die weiteren
   **[Artefakt-Seiten](artifacts.html)** — die technischen Artefakte.
 - **[Beispiele](examples.html)** — Beispielinstanzen.
-- **[Abhängigkeiten](ImplementationGuide-mii-ig-dokument.html)** — die
+- **[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html)** — die
   ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender
   Analyse und Urheberrechtshinweisen.
 
@@ -112,8 +112,10 @@ Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in
 `sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base`), KDS Meta
 (`kerndatensatz.meta`), Deutsche Basisprofile (`de.basisprofil.r4`), ISiK
 (`de.gematik.isik`), IHE-D-Terminologien (`de.ihe-d.terminology`), KDL
-(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`) sowie
-HL7-Terminologie- und Extension-Pakete. Die Versionen liest die folgende
+(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`), die
+HL7-Terminologie- und Extension-Pakete (`hl7.terminology.r4`,
+`hl7.fhir.uv.extensions.r4`) sowie die Werkzeug-Pakete `hl7.fhir.uv.crmi`
+und `hl7.fhir.uv.xver-r5.r4`. Die Versionen liest die folgende
 Tabelle beim Build aus der ImplementationGuide-Ressource; die vollständige
 Tabelle mit Links rendert die Seite
 [MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html).

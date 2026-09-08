@@ -1,11 +1,10 @@
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page input/pagecontent/extensions.md (DE-first). -->
 <!-- Split from the former combined profiles-and-extensions.md per the TF-KDS-agreed
-     menu structure (one page per artifact type).
-     German mirror: input/translations/de/pagecontent/extensions.md. -->
+     menu structure (one page per artifact type). -->
 
 This page lists the FHIR extensions defined by the **Dokument** module
-(naming convention `MII_EX_<Module>_<Name>`). Extensions carry information the
+(naming convention `MII_EX_<Modul>_<Name>`, where `<Modul>` is the German module name — here `Dokument`). Extensions carry information the
 base resources and profiles cannot express; the profiles that use them are on
 the [Profiles](profiles.html) page.
 
@@ -17,4 +16,4 @@ pipeline examples on the [Examples](examples.html) page.
 
 ### Extension structure
 
-{% include structure-tabs.html artifact="StructureDefinition-mii-ex-dokument-nlp-processing-status" %}
+{% include structure-tabs.html artifact="StructureDefinition-mii-ex-dokument-nlp-processing-status" lang="en" %}

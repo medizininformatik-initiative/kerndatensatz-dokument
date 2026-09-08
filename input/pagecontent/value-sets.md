@@ -33,7 +33,7 @@ ValueSet-Definitionen selbst verankert.
 
 ### Definierte ValueSets
 
-Übersicht der modul-eigenen ValueSets, beim Build aus dem Paket gelesen:
+Übersicht der modul-eigenen ValueSets, beim Build aus dem Paket gelesen (Beschreibungen in der Quellsprache der Ressourcen):
 
 {% sql {
  "query" : "select distinct v.Name, r.Web, v.Status, v.Description from ValueSetList v join Resources r on r.Key = v.ResourceKey where v.ViewType = 1 order by v.Name",
@@ -135,10 +135,10 @@ Für die im Basisprofil FHIR R4 deklarierten ValueSets gelten im weiteren folgen
 | [document-reference-status](https://www.hl7.org/fhir/R4/valueset-document-reference-status.html) | HL7 Basisprofil, meist: `current` |
 | [composition-status](https://www.hl7.org/fhir/R4/valueset-composition-status.html) | HL7 Basisprofil, meist `final` |
 | [document.relationship-type](https://www.hl7.org/fhir/R4/valueset-document-relationship-type.html) | HL7 Basisprofil, meist: `transforms` oder `appends`|
-| [security-labels](https://www.hl7.org/fhir/R4/valueset-security-labels.html) | Wir empfehlen, auch für die ISIK Kompatibilität, zumindest die Nutzung des HL7 Basisprofil Subsets aus http://terminology.hl7.org/CodeSystem/v3-Confidentiality, z.B. `N` für restricted / patientenbezogene Dokumente |
+| [security-labels](https://www.hl7.org/fhir/R4/valueset-security-labels.html) | Wir empfehlen, auch für die ISiK Kompatibilität, zumindest die Nutzung des HL7 Basisprofil Subsets aus http://terminology.hl7.org/CodeSystem/v3-Confidentiality, z. B. `N` (normal) für patientenbezogene Dokumente; `R` (restricted) und `V` (very restricted) für besonders schutzbedürftige Inhalte |
 |  [mimetypes](https://www.hl7.org/fhir/R4/valueset-mimetypes.html) | HL7 Basisprofil, z.B. `text/plain` |
 |  [languages](https://www.hl7.org/fhir/R4/valueset-languages.html) | HL7 Basisprofil, z.B. `de` oder `de-DE` |
 | content.format | Keine gesonderte Empfehlung, aber ISiK möglich|
 | context.event | Keine gesonderte Empfehlung, aber ISiK möglich |
-| context.facilityType | Empfehlung nach [ISIK](https://simplifier.net/packages/de.basisprofil.r4/1.4.0/files/656621), meist `KHS` |
+| context.facilityType | Empfehlung nach den [Deutschen Basisprofilen](https://simplifier.net/packages/de.basisprofil.r4/1.6.0), meist `KHS` |
 | context.practiceSetting | Keine gesonderte Empfehlung, aber ISiK möglich |

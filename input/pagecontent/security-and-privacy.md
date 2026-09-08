@@ -10,8 +10,8 @@
 
 Dieser Abschnitt richtet sich an Sicherheits- und Datenschutz-Fachleute.
 Allgemeine Anforderungen stehen in der FHIR-Kernspezifikation —
-[Security & Privacy Module](https://build.fhir.org/secpriv-module.html) und die
-[Security-Checkliste](https://build.fhir.org/security.html). Diese Seite
+[Security & Privacy Module](http://hl7.org/fhir/R4/secpriv-module.html) und die
+[Security-Checkliste](http://hl7.org/fhir/R4/security.html). Diese Seite
 wiederholt sie nicht; sie verlinkt den übergreifenden Datenschutzrahmen und nennt,
 was **für dieses Modul spezifisch** ist.
 
@@ -77,11 +77,14 @@ gilt diese Einschränkung nicht.
 **De-Identifikationsstatus explizit kennzeichnen.** Eine erfolgte
 De-Identifizierung wird über geeignete `securityLabel` und/oder die
 [NLP-Processing-Status-Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
-(Codes `unprocessed`, `preprocessed`, `annotated`, `surrogated`)
+(die vier übergeordneten Codes `unprocessed`, `preprocessed`, `annotated`,
+`surrogated` — `preprocessed` und `annotated` jeweils mit den Lvl-2-Codes
+`format-change`/`content-change` bzw. `preanno`/`deid`/`semantic`)
 ausgedrückt. Die datenhaltende Stelle ist verantwortlich, für
 Forschungszwecke ausschließlich auf anonymisierte bzw. pseudonymisierte
-Varianten zu verweisen (`subject`, `context.encounter` → pseudonymisierte
-Profile des Basismoduls).
+Varianten zu verweisen (`subject` → das pseudonymisierte Patient-Profil des
+Basismoduls; für `context.encounter` existiert keine pseudonymisierte
+Variante im Basismodul).
 
 **Verarbeitungsketten können Re-Identifizierungspfade öffnen.** Die
 NLP-Pipeline verknüpft Original-, Klartext-, de-identifizierte und annotierte

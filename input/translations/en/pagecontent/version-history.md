@@ -1,11 +1,10 @@
 <!-- markdownlint-disable MD041 -->
-<!-- English translation of the German default page input/pagecontent/version-history.md (DE-first). -->
-<!-- Default-language (English) page. Ported from kerndatensatz-basis
+<!-- English translation of the German default page
+     input/pagecontent/version-history.md (DE-first) — keep both files in step.
+     Content ported from kerndatensatz-basis
      input/pagecontent/version-history.md (branch main); the release process is
      the MII meta wiki page "Module Release Workflow"
-     (https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow).
-     German mirror: input/translations/de/pagecontent/version-history.md — both
-     files must say the same thing. -->
+     (https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow). -->
 
 
 ### Version scheme
@@ -66,21 +65,13 @@ system with its counterpart by canonical URL, compares the pairs, and renders
 the report into the build output — so it publishes with the site, with no
 extra deployment step. It is enabled by the `version-comparison` parameter — an official IG
 Publisher parameter from the
-[ig-parameters registry](https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html),
-passed through `sushi-config.yaml` (the commented block there explains the
-setup and its two prerequisites: a publication history at the canonical, and
-a loadable previous package). Absent, it defaults to `{last}`; the value
-`n/a` is the documented way to switch the comparison off.
+[ig-parameters registry](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html),
+passed through `sushi-config.yaml`. It has two prerequisites: a publication
+history at the canonical, and a loadable previous package. This module does not
+currently set the parameter — so the publisher default `{last}` applies; the
+value `n/a` is the documented way to switch the comparison off.
 
-**The demonstration below** (this template repository's preview only) shows
-the same kind of report before any formal publication exists: the build
-compares itself against the previous `dev` preview using the FHIR validator's
-`-compare` command and publishes the result at `comparison-demo/index.html`.
-The repository variable `ENABLE_VERSION_COMPARISON=false` switches the whole
-feature off — the publisher's comparison in every build workflow and this
-demonstration alike; a created module never renders the demonstration.
-
-> [TODO: If your module has a versioning policy of its own beyond the KDS scheme
-> — for example a support window for older versions, or a deprecation policy for
-> profiles — describe it here. Delete this prompt afterwards.]
-{: .ig-highlight .ig-highlight-grey}
+**Switching it off.** The repository variable
+`ENABLE_VERSION_COMPARISON=false` switches the publisher's comparison off in
+every build workflow of this module; while the parameter is unset it has no
+effect.

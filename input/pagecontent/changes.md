@@ -69,9 +69,9 @@ Instanz valide bleibt).</p>
 Changelog-Abschnitt ist die <i>einzige</i> Warnung, die Lesende bekommen.</p>
 <p><b>Verlinken Sie das technische Delta.</b> Ab der zweiten formalen
 Publikation aktivieren Sie den Versionsvergleich des IG Publishers
-(<code>version-comparison</code> in <code>sushi-config.yaml</code> — siehe die
-Seite <a href="version-history.html">Versionierung</a> zur Einrichtung und
-ihren Voraussetzungen); er veröffentlicht einen maschinell erzeugten
+(<code>version-comparison</code>, in <code>sushi-config.yaml</code> zu
+ergänzen — siehe die Seite <a href="version-history.html">Versionierung</a>
+zur Einrichtung und ihren Voraussetzungen); er veröffentlicht einen maschinell erzeugten
 Vergleich unter <code>comparison-v&lt;Vorversion&gt;/index.html</code>.
 Verlinken Sie ihn aus dem Versionsabschnitt, damit die Erläuterung und der
 technische Diff nebeneinanderstehen.</p>
@@ -84,7 +84,8 @@ werden können.</p>
 
 ### Version 2027.0.0-ballot.rc1
 
-**Datum** 28.08.2026
+**Datum** 01.09.2026 (Veröffentlichungsdatum des Leitfadens; das RC-Paket
+wurde am 28.08.2026 in der Paket-Registry veröffentlicht)
 
 #### Hinzugefügt
 

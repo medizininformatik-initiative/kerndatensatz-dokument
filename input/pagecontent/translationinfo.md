@@ -11,7 +11,7 @@ zwischen `/de/` und `/en/`.
 Übersetzte Seiten liegen unter `input/translations/en/pagecontent/` (gleicher
 Dateiname wie die deutsche Seite); Ressourcen-Übersetzungen als `.po`-Dateien
 unter `input/translations/en/`. Details:
-[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md) in diesem Repository.
+[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md) in diesem Repository.
 
 Die deutschen Seiten übernehmen den Text des bisherigen Simplifier-Leitfadens
 wortgetreu, soweit die Quelle eine entsprechende Seite hatte; die übrigen Seiten

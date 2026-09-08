@@ -1,9 +1,8 @@
 <!-- markdownlint-disable MD041 -->
-<!-- English translation of the German default page input/pagecontent/downloads.md (DE-first). -->
-<!-- Default-language (English) page. Ported from kerndatensatz-basis
-     input/pagecontent/downloads.md (branch main).
-     German mirror: input/translations/de/pagecontent/downloads.md — both files
-     must say the same thing.
+<!-- English translation of the German default page
+     input/pagecontent/downloads.md (DE-first) — keep both files in step.
+     Content ported from kerndatensatz-basis input/pagecontent/downloads.md
+     (branch main).
 
      The `../<file>` links below point at the artifacts the IG Publisher writes
      NEXT TO the rendered pages. The publisher does NOT add them to a narrative

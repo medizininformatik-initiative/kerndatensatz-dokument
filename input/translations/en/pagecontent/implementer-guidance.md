@@ -34,12 +34,12 @@ For certain data elements, this MII KDS module builds on existing work from othe
 
 | MII KDS module | Description of the relationship | Mandatory use |
 |---|---|---|
-| [Person (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional. | Yes |
+| [Person (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional (`subject` 0..1, Must Support). | Yes (where a patient reference exists) |
 | [Fall (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type. | No |
 
 ### Use by Other MII KDS Modules
 
-The MII KDS module is based on the [FHIR DocumentReference](https://www.hl7.org/fhir/documentreference.html). FHIR DocumentReferences are already used in other MII KDS modules. We recommend migrating to the MII KDS module specified here.
+The MII KDS module is based on the [FHIR DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html). FHIR DocumentReferences are already used in other MII KDS modules. We recommend migrating to the MII KDS module specified here.
 
 Should the specified document categories and types not adequately cover the requirements of a domain, the use of further domain-specific code systems and value sets is permitted.
 
@@ -56,10 +56,10 @@ Should the specified document categories and types not adequately cover the requ
 The MII KDS module Dokument is designed so that instances can be compatible with the following FHIR-based standards at the same time:
 
   * [KBV base profiles with Medical Information Objects (MIO)](https://simplifier.net/base1x0) – profile for referencing external or attached documents
-  * [Gematik Information Technology Systems in Hospitals (ISiK) document exchange](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5)  - profile for representing the metadata required for document exchange
+  * [Gematik Information Technology Systems in Hospitals (ISiK) document exchange, Stufe 6](https://simplifier.net/packages/de.gematik.isik/6.0.0)  - profile for representing the metadata required for document exchange
   * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - profile for exchanging health documents via mobile applications, mobile devices or other resource- and platform-constrained systems
 
-This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see the [Compatibility](kompatibilitaet.html) page). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
+This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/packages/de.gematik.isik/6.0.0) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see the [Compatibility](kompatibilitaet.html) page). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
 
 [![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.svg)](Paketabhaengigkeiten.svg)
 
@@ -75,9 +75,9 @@ This makes it possible to attribute resources such that they are valid against M
 
 In doing so, all data elements as well as the terminology used were reconciled and represented in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html). The cardinalities are kept open, so that no (further or new) restrictions were introduced in this respect. The terminology used in the reconciled profiles was incorporated and represented in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html).
 
-Person-related documents are always assigned to a person (MII KDS module Person) (`subject`). De-identified documents are marked accordingly via the security level (`securityLabel`). The data-holding site is responsible here for referencing only the corresponding anonymised or pseudonymised variants of other MII modules. Wherever possible, an encounter relation (MII KDS module Fall) is defined – where feasible at the most relevant level of the encounter-level model (`context.encounter`). In the package dependency diagram (above), the relationships between the MII modules are shown in green.
+Person-related documents are assigned to a person (the base module's Patient / PatientPseudonymisiert profiles) (`subject`, 0..1). De-identified documents are marked accordingly via the security level (`securityLabel`). The data-holding site is responsible here for referencing only the corresponding anonymised or pseudonymised variants of other MII modules. Wherever possible, an encounter relation (MII KDS module Fall) is defined – where feasible at the most relevant level of the encounter-level model (`context.encounter`). In the package dependency diagram (above), the relationships between the MII modules are shown in green.
 
-We recommend the [DVMD KDL standard](https://simplifier.net/KDL/), which is also used in ISiK, for the precise type description (`type`), as well as the [IHE XDS class codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) for the coarser document category (`category`). [IHE XDS type and class codes can be derived unambiguously from KDL.](https://simplifier.net/kdl/~resources?category=ConceptMap) Further codings such as local codes, SNOMED CT or LOINC are optionally possible.
+We recommend the [DVMD KDL standard](https://simplifier.net/kdl), which is also used in ISiK, for the precise type description (`type`), as well as the [IHE XDS class codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) for the coarser document category (`category`). [IHE XDS type and class codes can be derived unambiguously from KDL.](https://simplifier.net/kdl/~resources?category=ConceptMap) Further codings such as local codes, SNOMED CT or LOINC are optionally possible.
 
 ---
 

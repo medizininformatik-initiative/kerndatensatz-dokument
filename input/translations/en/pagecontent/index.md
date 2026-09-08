@@ -6,7 +6,7 @@
 The present specification describes the FHIR representation of the Core
 Dataset (KDS) module Dokument of the Medical Informatics Initiative.
 In the following, the use cases of the module as well as the associated
-FHIR profiles and terminology resources are described in their normative
+FHIR profiles and terminology resources are described in their binding
 form.
 
 The Core Dataset of the Medical Informatics Initiative (MII) enables the
@@ -43,7 +43,7 @@ navigation and document archiving are addressed by the module and
 coordinated according to a standardized scheme.
 
 The MII KDS module enables the creation of document references with the
-option of establishing relationships to the Case and Person modules, which
+option of establishing relationships to the Fall and Person modules, which
 have been folded into the base module. The module also contains an NLP
 extension that represents the processing status with respect to NLP
 procedures such as annotations (see [UML](uml-diagrams.html) for this).
@@ -62,7 +62,7 @@ prescribe the semantics of this resolution.
 
 The document body can contain a wide range of identifying data and/or
 metadata (e.g. names, patient ID). The data holder can express that such
-data has been de-identified via an appropriate `securityLevel` and/or codes
+data has been de-identified via an appropriate `securityLabel` and/or codes
 of the NLP Processing Status extension
 ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
 
@@ -79,7 +79,7 @@ This implementation guide is aimed at:
 <div class="ig-highlight ig-highlight-green">
 <p><b>Researchers</b></p>
 <p>Scientists using KDS data for medical research.<br/>
-→ see <a href="guidance.html">Guidance for Researchers</a>.</p>
+→ see <a href="guidance.html">Guidance</a>.</p>
 </div>
 
 ### Contents
@@ -93,7 +93,7 @@ This implementation guide is aimed at:
 - **[Profiles](profiles.html)** and the further
   **[artifact pages](artifacts.html)** — the technical artifacts.
 - **[Examples](examples.html)** — example instances.
-- **[Dependencies](ImplementationGuide-mii-ig-dokument.html)** — the
+- **[MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html)** — the
   ImplementationGuide resource with the dependency table, cross-version
   analysis and copyright statements.
 
@@ -107,8 +107,10 @@ Formal dependencies of this module (see `dependencies` in
 `sushi-config.yaml`): KDS base module (`kerndatensatz.base`), KDS Meta
 (`kerndatensatz.meta`), German base profiles (`de.basisprofil.r4`), ISiK
 (`de.gematik.isik`), IHE-D terminology (`de.ihe-d.terminology`), KDL
-(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`) plus the HL7
-terminology and extensions packages. The following table reads the versions
+(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`), the HL7
+terminology and extensions packages (`hl7.terminology.r4`,
+`hl7.fhir.uv.extensions.r4`) plus the tooling packages `hl7.fhir.uv.crmi`
+and `hl7.fhir.uv.xver-r5.r4`. The following table reads the versions
 from the ImplementationGuide resource at build time; the complete table with
 links is rendered on the
 [MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
@@ -130,7 +132,7 @@ More FHIR implementation guides can be found in the official
 
 This guide was created within the Medical Informatics Initiative and is
 subject, by its governance process, to the coordination procedure of the
-Interoperability Forum and the technical committees of HL7 Germany.
+Interoperability Forum and the technical committees of HL7 Deutschland e. V.
 
 ### Contact
 

@@ -1,8 +1,8 @@
 <!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
-<!-- Source: kerndatensatz-basis input/pagecontent/guidance.md (MII module page set).
-     "Guidance" overview page. German mirror:
-     input/translations/de/pagecontent/guidance.md — keep both in step. -->
+<!-- English translation of the German default page
+     input/pagecontent/guidance.md (DE-first) — keep both files in step.
+     "Anleitung" overview page. -->
 
 This section collects the domain guidance for implementing and using the
 **Dokument** module.
@@ -54,7 +54,7 @@ For data transport, it is recommended to embed the document body in the resource
 <!-- Note (repo-internal): "Datasets and Descriptions" shares its target with
      *Artifacts → Logical Models*; neither Artifacts-Summary anchor is usable as
      a link target — see docs/page-structure.md in this repository:
-     https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/page-structure.md -->
+     https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
 * **[Datasets and Descriptions](logical-models.html)** — the module's data
   elements, described as logical models.
 * **[UML Diagrams](uml-diagrams.html)** — visual representation of the data

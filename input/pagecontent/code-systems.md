@@ -21,11 +21,11 @@ beschreibt die Seite [ValueSets](value-sets.html).
 > [https://mii-termserv.de/](https://mii-termserv.de/).
 {: .ig-highlight .ig-highlight-blue}
 
-Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu externen Terminologien stehen bei den jeweiligen Herausgebern (siehe [Impressum](index.html#urheberrecht-und-lizenz)).
+Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu externen Terminologien stehen bei den jeweiligen Herausgebern (siehe [Urheberrecht und Lizenz](index.html#urheberrecht-und-lizenz)).
 
 ---
 
-Modul-eigene CodeSystems, beim Build aus dem Paket gelesen:
+Modul-eigene CodeSystems, beim Build aus dem Paket gelesen (Beschreibung in der Quellsprache der Ressource):
 
 {% sql {
  "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 order by c.Name",

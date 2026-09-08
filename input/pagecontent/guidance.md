@@ -50,7 +50,7 @@ Für den Datentransport wird empfohlen den Dokumentkörper in die Ressource einz
 <!-- Hinweis (repo-intern): "Datensätze und Beschreibungen" teilt sein Ziel mit
      *Artefakte → Logische Modelle*; keiner der Anker der Artefakt-Übersicht ist
      als Linkziel nutzbar — siehe docs/page-structure.md in diesem Repository:
-     https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/page-structure.md -->
+     https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
 * **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente
   des Moduls, beschrieben als logische Modelle.
 * **[UML-Diagramme](uml-diagrams.html)** — visuelle Darstellung der Datenmodelle

@@ -1,19 +1,19 @@
 <!-- markdownlint-disable MD041 -->
-<!-- English rendering of input/pagecontent/security-and-privacy.md.
+<!-- English translation of the German default page
+     input/pagecontent/security-and-privacy.md (DE-first) — keep both files in
+     step.
      Structured in the TF-KDS-agreed THREE stages: (1) the overarching data
      protection concept, (2) DIMP in the data portal, (3) the
      module-specific aspects. Stages 1 and 2 are static overarching content —
      keep them; stage 3 is where your module writes. Module-specific
      aspects WRITTEN from the profile and module descriptions (owner request
-     2026-08-30, revising the earlier default-text decision; review box dissolved 2026-09-04).
-     German mirror: input/translations/de/pagecontent/security-and-privacy.md —
-     both files must say the same thing. -->
+     2026-08-30, revising the earlier default-text decision; review box dissolved 2026-09-04). -->
 
 
 This section addresses security and privacy experts. General requirements are in
 the FHIR core specification —
-[Security & Privacy Module](https://build.fhir.org/secpriv-module.html) and the
-[security checklist](https://build.fhir.org/security.html). This page does not
+[Security & Privacy Module](http://hl7.org/fhir/R4/secpriv-module.html) and the
+[security checklist](http://hl7.org/fhir/R4/security.html). This page does not
 repeat them; it links the overarching data protection framework and states what is
 **specific to this module**.
 
@@ -75,10 +75,14 @@ affected by this restriction.
 **Mark the de-identification status explicitly.** Completed de-identification
 is expressed via suitable `securityLabel` values and/or the
 [NLP Processing Status extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
-(codes `unprocessed`, `preprocessed`, `annotated`, `surrogated`). The
+(the four top-level codes `unprocessed`, `preprocessed`, `annotated`,
+`surrogated` — `preprocessed` and `annotated` each with the level-2 codes
+`format-change`/`content-change` and `preanno`/`deid`/`semantic`
+respectively). The
 data-holding site is responsible for referencing only anonymized or
-pseudonymized variants for research purposes (`subject`, `context.encounter`
-→ the base module's pseudonymized profiles).
+pseudonymized variants for research purposes (`subject` → the base module's
+pseudonymized Patient profile; `context.encounter` has no pseudonymized
+variant in the base module).
 
 **Processing chains can open re-identification paths.** The NLP pipeline
 links original, plain-text, de-identified and annotated versions via

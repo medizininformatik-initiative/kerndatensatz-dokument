@@ -1,10 +1,9 @@
 <!-- markdownlint-disable MD041 -->
-<!-- English translation of the German default page input/pagecontent/metadata.md (DE-first). -->
-<!-- Default-language (English) page. Ported from kerndatensatz-basis
-     input/pagecontent/metadata.md (branch main) and reduced to what THIS
-     scaffold actually declares in sushi-config.yaml.
-     German mirror: input/translations/de/pagecontent/metadata.md — both files
-     must say the same thing.
+<!-- English translation of the German default page
+     input/pagecontent/metadata.md (DE-first) — keep both files in step.
+     Content ported from kerndatensatz-basis input/pagecontent/metadata.md
+     (branch main) and reduced to what THIS guide actually declares in
+     sushi-config.yaml.
 
      This page is HAND-MAINTAINED. Nothing here is generated: the IG Publisher
      renders the artifact pages, but it does not write this narrative. Whenever
@@ -51,10 +50,10 @@ parts that are directly useful for publishing a KDS module.
 | CRMI area | Used in this guide | Purpose |
 | --- | --- | --- |
 | [Artifact lifecycle](https://hl7.org/fhir/uv/crmi/STU2/en/artifact-lifecycle.html) | Shareable and publishable ImplementationGuide profiles; `status`; `version`; `resource-approvalDate`; `resource-effectivePeriod`; contributor extensions | Positions the artifacts in authoring, release, publication and maintenance workflows. |
-| [Version manifest](https://hl7.org/fhir/uv/crmi/STU2/en/version-manifest.html) | `package-source`; canonical version pinning (`pin-canonicals: pin-all`); *optionally* `CRMIManifestParameters` + `cqf-expansionParameters` | Supports reproducible terminology expansion and stable canonical version resolution. |
+| [Version manifest](https://hl7.org/fhir/uv/crmi/STU2/en/version-manifest.html) | `package-source`; canonical version pinning (`pin-canonicals: pin-all`); `CRMIManifestParameters` (`Parameters/mii-param-dokument-manifest`) + `cqf-expansionParameters` | Supports reproducible terminology expansion and stable canonical version resolution. |
 | [Artifact conventions](https://hl7.org/fhir/uv/crmi/STU2/en/artifact-conventions.html) | Canonical URLs; alignment of package and resource version; `artifact-versionAlgorithm`; `artifact-versionPolicy` | Aligns the guide with the canonical-resource authoring and versioning conventions. |
 | [Packaging](https://hl7.org/fhir/uv/crmi/STU2/en/packaging.html) | FHIR package; `ImplementationGuide.packageId`; package version; `package-source` | Connects the artifacts to the package in which they are authored, tested, released and distributed. |
-| [Publishing](https://hl7.org/fhir/uv/crmi/STU2/en/publishing.html) | Publishable profile; contributor extensions; `resource-approvalDate`; `resource-effectivePeriod`; `artifact-purpose`; `artifact-usage`; *optionally* `artifact-relatedArtifact` | Adds trust, governance, publication context and human-readable intent. |
+| [Publishing](https://hl7.org/fhir/uv/crmi/STU2/en/publishing.html) | Publishable profile; contributor extensions; `resource-approvalDate`; `resource-effectivePeriod`; `artifact-purpose`; `artifact-usage` (`artifact-relatedArtifact`: not used by this module) | Adds trust, governance, publication context and human-readable intent. |
 | [Distribution](https://hl7.org/fhir/uv/crmi/STU2/en/distribution.html) | Published guide pages; JSON/XML resources; package download | Supports downstream retrieval and tooling through the FHIR publishing ecosystem. CRMI repository operations are not implemented. |
 | [Signing](https://hl7.org/fhir/uv/crmi/STU2/en/artifact-signing.html) | Not implemented | Candidate future enhancement for integrity, authenticity and non-repudiation of released artifacts. |
 
@@ -66,38 +65,36 @@ These may be considered in future release-workflow work.
 ### CRMI metadata declared by this guide
 
 The following CRMI-related metadata is set in
-[`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml)
+[`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml)
 and ends up in the generated `ImplementationGuide` resource.
 
 | Metadata artifact | CRMI area | Location in this guide | Role in artifact management |
 | --- | --- | --- | --- |
 | [CRMI Shareable ImplementationGuide](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-shareableimplementationguide.html)<br/>[CRMI Publishable ImplementationGuide](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-publishableimplementationguide.html)<br/>[CRMI ImplementationGuide](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-implementationguide.html) | Artifact lifecycle; publishing; packaging | `ImplementationGuide.meta.profile` | Enforces the minimum ImplementationGuide metadata set and adds the post-publication metadata needed for distribution, repository inclusion, consumption and implementation. |
-| [CQF Knowledge Capability](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-knowledgeCapability.html) | Artifact lifecycle; artifact conventions | `ImplementationGuide.extension` (`shareable`, `publishable`) | Declares the knowledge capability of the artifact on resources that have no native `knowledgeCapability` element. |
-| [Artifact Purpose](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-purpose.html) | Publishing; distribution | `ImplementationGuide.extension` | States why the artifact is needed and why it was designed as it is. |
-| [Artifact Usage](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-usage.html) | Publishing; implementation | `ImplementationGuide.extension` | States how the artifact is to be used within the MII core dataset specification. |
-| [Artifact Topic](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-topic.html) | Publishing; distribution | `ImplementationGuide.extension`, coded with the NCI Thesaurus | Adds high-level content topics for filtering, searching and grouping. |
-| [Artifact Version Algorithm](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionAlgorithm.html) | Artifact conventions; versioning | `ImplementationGuide.extension` (`semver`) | Declares how versions are compared to determine which is more current. |
-| [Artifact Version Policy](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionPolicy.html) | Artifact lifecycle; versioning | `ImplementationGuide.extension` (`package`) | Declares that artifact versions are managed with the package version — a release can bump an artifact's version even when its content did not change. |
-| [Package Source](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-package-source.html) | Version manifest; packaging; distribution | `ImplementationGuide.extension` (packageId, version, uri) | Declares the package in which an artifact is defined, so evaluation environments resolve namespaces and dependencies in the intended scope. |
-| [Resource Approval Date](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html) | Artifact lifecycle; publishing; governance | `ImplementationGuide.extension` (`2026-08-28`) | Records the date on which the publisher officially approved the content for use. |
-| [Resource Effective Period](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-effectivePeriod.html) | Artifact lifecycle; publishing; implementation | `ImplementationGuide.extension` (start `2027`) | Records the period during which the content is planned to be, or has been, effective. |
-| [Artifact Author](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-author.html)<br/>[Artifact Editor](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-editor.html)<br/>[Artifact Reviewer](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-reviewer.html)<br/>[Artifact Endorser](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-endorser.html) | Publishing; governance; provenance | `ImplementationGuide.extension` | Records the author, the editor responsible for internal coherence, the reviewers, and the bodies that officially endorse the release. For a KDS module the editor, reviewers and endorsers are the governance bodies of the core-dataset process. |
+| [CQF Knowledge Capability](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-cqf-knowledgeCapability.html) | Artifact lifecycle; artifact conventions | `ImplementationGuide.extension` (`shareable`, `publishable`) | Declares the knowledge capability of the artifact on resources that have no native `knowledgeCapability` element. |
+| [Artifact Purpose](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-purpose.html) | Publishing; distribution | `ImplementationGuide.extension` | States why the artifact is needed and why it was designed as it is. |
+| [Artifact Usage](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-usage.html) | Publishing; implementation | `ImplementationGuide.extension` | States how the artifact is to be used within the MII core dataset specification. |
+| [Artifact Topic](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-topic.html) | Publishing; distribution | `ImplementationGuide.extension`, coded with the NCI Thesaurus | Adds high-level content topics for filtering, searching and grouping. |
+| [Artifact Version Algorithm](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-versionAlgorithm.html) | Artifact conventions; versioning | `ImplementationGuide.extension` (`semver`) | Declares how versions are compared to determine which is more current. |
+| [Artifact Version Policy](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-versionPolicy.html) | Artifact lifecycle; versioning | `ImplementationGuide.extension` (`package`) | Declares that artifact versions are managed with the package version — a release can bump an artifact's version even when its content did not change. |
+| [Package Source](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-package-source.html) | Version manifest; packaging; distribution | `ImplementationGuide.extension` (packageId, version, uri) | Declares the package in which an artifact is defined, so evaluation environments resolve namespaces and dependencies in the intended scope. |
+| [Resource Approval Date](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-resource-approvalDate.html) | Artifact lifecycle; publishing; governance | `ImplementationGuide.extension` (`2026-09-01`) | Records the date on which the publisher officially approved the content for use. |
+| [Resource Effective Period](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-resource-effectivePeriod.html) | Artifact lifecycle; publishing; implementation | `ImplementationGuide.extension` (start `2027`) | Records the period during which the content is planned to be, or has been, effective. |
+| [Artifact Author](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-author.html)<br/>[Artifact Editor](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-editor.html)<br/>[Artifact Reviewer](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-reviewer.html)<br/>[Artifact Endorser](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-endorser.html) | Publishing; governance; provenance | `ImplementationGuide.extension` | Records the author, the editor responsible for internal coherence, the reviewers, and the bodies that officially endorse the release. For a KDS module the editor, reviewers and endorsers are the governance bodies of the core-dataset process. |
+| [CQF Expansion Parameters](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-cqf-expansionParameters.html)<br/>[CRMI Manifest Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html) | Version manifest; packaging; distribution | `ImplementationGuide.extension` → [`Parameters/mii-param-dokument-manifest`](Parameters-mii-param-dokument-manifest.html); plus the publisher parameters `path-expansion-params` and `pin-manifest` | Pins the terminology expansion of the build (SNOMED CT International Edition `20260701`; `artifact-version-policy-codes` `3.0.0`) and keeps the parameters used inspectable in one stable place. |
 
-Not enabled in this scaffold, but prepared as commented blocks in
-`sushi-config.yaml`:
+Not used by this guide:
 
-* [Artifact Related Artifact](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-relatedArtifact.html)
-  — a literature citation for the module.
-* [CQF Expansion Parameters](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-expansionParameters.html)
-  together with a
-  [CRMI Manifest Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)
-  resource and the `path-expansion-params` / `pin-manifest` parameters.
+* [Artifact Related Artifact](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-relatedArtifact.html)
+  — a literature citation for the module; this module carries none.
 
-> [TODO: Enable the blocks your module needs and then update the tables above.
-> If your module also applies the CRMI shareable/publishable profiles to its own
-> StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-> `kerndatensatz-basis` idiom is a shared `RuleSet` in
-> [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
+> **CRMI profiles at artifact level.** This module claims the CRMI
+> shareable/publishable profiles on the `ImplementationGuide` resource. Its
+> StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets do not
+> carry them; the CodeSystems and ValueSets claim the HL7 base profiles
+> *ShareableCodeSystem* and *ShareableValueSet*. For artifact-level use, the
+> `kerndatensatz-basis` idiom is available as a shared `RuleSet` in
+> [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/input/fsh/rulesets/crmi.fsh).
 {: .ig-highlight .ig-highlight-grey}
 
 #### CodeSystem supplements
@@ -143,17 +140,18 @@ Canonical references are pinned in the built package (`pin-canonicals: pin-all`
 in `sushi-config.yaml`), which is a CRMI expectation and makes the output
 stable.
 
-A module that additionally wants reproducible terminology expansion adds a
-CRMI Manifest Parameters resource — the `kerndatensatz-basis` idiom is
+For reproducible terminology expansion, this guide adds a CRMI Manifest
+Parameters resource — following the `kerndatensatz-basis` idiom
 `Parameters/mii-param-<slug>-manifest` — links it from the
 `ImplementationGuide` via `cqf-expansionParameters`, and points the publisher at
 it with `path-expansion-params` and `pin-manifest`. Both readers and tooling
-then have one stable place to inspect the parameters used for expansion and
+therefore have one stable place to inspect the parameters used for expansion and
 package pinning.
 
-> [TODO: Add the manifest for your module (see the commented blocks in
-> `sushi-config.yaml`) and link the generated `Parameters` resource page here,
-> or state explicitly that this module does not pin expansion parameters.]
+> **This module pins its expansion parameters.** They live in
+> [`Parameters/mii-param-dokument-manifest`](Parameters-mii-param-dokument-manifest.html):
+> SNOMED CT International Edition `20260701` and
+> `artifact-version-policy-codes` `3.0.0`.
 {: .ig-highlight .ig-highlight-grey}
 
 ### Relationship to FAIR
@@ -203,11 +201,6 @@ asserted to be a persistently identified FAIR dataset.
 | R1.3 | RDA-R1.3-01M | Metadata complies with a community standard | FHIR R4, the CRMI profiles, the KDS publication conventions and canonical resource metadata. |
 | R1.3 | RDA-R1.3-01D | Data complies with a community standard | The examples declare this module's profiles. In production, conformance must be validated against the profiles, bindings and CapabilityStatement expectations. |
 | R1.3 | RDA-R1.3-02M | Metadata is machine-understandable per a community standard | CRMI-conformant FHIR metadata as JSON/XML and as a FHIR package in the NPM package format used by the IG Publisher ecosystem. |
-
-> [TODO: The table lists the indicators of priority *Essential*. If your module
-> wants the complete self-assessment, extend it with the *Important* and
-> *Useful* indicators — `kerndatensatz-basis` carries the full table.]
-{: .ig-highlight .ig-highlight-grey}
 
 ### Practical use
 

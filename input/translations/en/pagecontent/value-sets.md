@@ -8,11 +8,10 @@
      code-systems.md). Only the two small module-owned ValueSets are rendered
      inline, and as a content logical definition (-cld) rather than as an
      expansion, because expansions depend on the build environment's
-     terminology server.
-     German mirror: input/translations/de/pagecontent/value-sets.md. -->
+     terminology server. -->
 
 This page describes the ValueSets of the **Dokument** module (naming
-convention `MII_VS_<Module>_<Name>`). For general guidance on using codes, see
+convention `MII_VS_<Modul>_<Name>`, where `<Modul>` is the German module name — here `Dokument`). For general guidance on using codes, see
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems
 the sets draw from are described on the [Code Systems](code-systems.html) page.
 
@@ -133,10 +132,10 @@ For the ValueSets declared in the FHIR R4 base profile, the following recommenda
 | [document-reference-status](https://www.hl7.org/fhir/R4/valueset-document-reference-status.html) | HL7 base profile, usually: `current` |
 | [composition-status](https://www.hl7.org/fhir/R4/valueset-composition-status.html) | HL7 base profile, usually `final` |
 | [document.relationship-type](https://www.hl7.org/fhir/R4/valueset-document-relationship-type.html) | HL7 base profile, usually: `transforms` or `appends` |
-| [security-labels](https://www.hl7.org/fhir/R4/valueset-security-labels.html) | We recommend, also for ISiK compatibility, at least the use of the HL7 base profile subset from http://terminology.hl7.org/CodeSystem/v3-Confidentiality, e.g. `N` for restricted / patient-related documents |
+| [security-labels](https://www.hl7.org/fhir/R4/valueset-security-labels.html) | We recommend, also for ISiK compatibility, at least the use of the HL7 base profile subset from http://terminology.hl7.org/CodeSystem/v3-Confidentiality, e.g. `N` (normal) for patient-related documents; `R` (restricted) and `V` (very restricted) for particularly sensitive content |
 | [mimetypes](https://www.hl7.org/fhir/R4/valueset-mimetypes.html) | HL7 base profile, e.g. `text/plain` |
 | [languages](https://www.hl7.org/fhir/R4/valueset-languages.html) | HL7 base profile, e.g. `de` or `de-DE` |
 | content.format | No separate recommendation, but ISiK possible |
 | context.event | No separate recommendation, but ISiK possible |
-| context.facilityType | Recommendation per [ISiK](https://simplifier.net/packages/de.basisprofil.r4/1.4.0/files/656621), usually `KHS` |
+| context.facilityType | Recommendation per the [German base profiles](https://simplifier.net/packages/de.basisprofil.r4/1.6.0), usually `KHS` |
 | context.practiceSetting | No separate recommendation, but ISiK possible |

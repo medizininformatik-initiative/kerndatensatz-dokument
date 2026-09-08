@@ -8,7 +8,7 @@
      Publisher generates the artifact detail pages automatically. -->
 
 This page lists the FHIR profiles of the **Dokument** module (naming convention
-`MII_PR_<Module>_<Name>`). The module's extensions are listed on the
+`MII_PR_<Modul>_<Name>` (where `<Modul>` is the German module name — here `Dokument`)). The module's extensions are listed on the
 [Extensions](extensions.html) page.
 
 The module defines one profile:

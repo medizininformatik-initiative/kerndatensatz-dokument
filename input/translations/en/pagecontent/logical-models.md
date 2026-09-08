@@ -30,4 +30,4 @@ The IG Publisher does not render this element-to-resource mapping on the Logical
 | Logical dataset element | FHIR mapping | Description |
 | --- | --- | --- |
 {% for row in lmmapping %}| {{ row.Element }} | {{ row.Mapping }} | {{ lmtx[row.Definition] | default: row.Definition }} |
-{% endfor %}
+{% endfor %}{: .grid .sql-table}

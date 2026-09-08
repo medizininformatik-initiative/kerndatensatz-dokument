@@ -1,7 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page input/pagecontent/examples.md (DE-first). -->
-<!-- Source: kerndatensatz-basis input/pagecontent/examples.md.
-     German mirror: input/translations/de/pagecontent/examples.md. -->
+<!-- Source: kerndatensatz-basis input/pagecontent/examples.md. -->
 This page lists the example instances of the **Dokument** module.
 
 > **Synthetic data only** — never use real or realistic-looking patient data in
