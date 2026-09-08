@@ -351,36 +351,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#supported-search-parameters" id="markdown-toc-supported-search-parameters">Supported search parameters</a></li>
-  <li><a href="#example-calls" id="markdown-toc-example-calls">Example calls</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html).
+
+</p>
+
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page input/pagecontent/search-parameters.md. -->
 <!-- TODO:REVIEW machine-translated from the German default page -->
 
-<p>This page lists the search parameters of the <strong>Dokument</strong> module. The module
-defines no module-specific SearchParameter artifacts (naming convention
-<code class="language-plaintext highlighter-rouge">MII_SP_&lt;Module&gt;_&lt;Name&gt;</code>); cross-module search parameters are defined by the
-Meta module. The normative definition of the supported search parameters is the
-<a href="CapabilityStatement-mii-cps-dokument-capabilitystatement.html">module's CapabilityStatement</a>.</p>
+<p>This page gives example calls for the search parameters of the <strong>Dokument</strong> module. The supported search parameters are defined normatively in the <a href="CapabilityStatement-mii-cps-dokument-capabilitystatement.html">module's CapabilityStatement</a>; the standard search parameters are defined by the <a href="https://hl7.org/fhir/R4/documentreference.html#search">FHIR base specification (DocumentReference)</a>. The Dokument module defines no SearchParameter artifacts of its own — the three module-specific search parameters are provided by the <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3">Meta module</a> (package <code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code> 2027.0.0-ballot.rc3):</p>
 
-<h3 id="supported-search-parameters">Supported search parameters</h3>
-
-<p>The following table reads names and types from the CapabilityStatement at build time:</p>
-
-<table class="grid sql-table"><tr><td style="background-color: #eeeeee">Search parameter</td><td style="background-color: #eeeeee">Type</td></tr><tr><td>_id</td><td>token</td></tr><tr><td>_profile</td><td>uri</td></tr><tr><td>identifier</td><td>token</td></tr><tr><td>status</td><td>token</td></tr><tr><td>doc-status</td><td>token</td></tr><tr><td>type</td><td>token</td></tr><tr><td>category</td><td>token</td></tr><tr><td>patient</td><td>reference</td></tr><tr><td>relation</td><td>token</td></tr><tr><td>relatesto</td><td>reference</td></tr><tr><td>relationship</td><td>composite</td></tr><tr><td>description</td><td>string</td></tr><tr><td>security-label</td><td>token</td></tr><tr><td>contenttype</td><td>token</td></tr><tr><td>language</td><td>token</td></tr><tr><td>location</td><td>uri</td></tr><tr><td>creation</td><td>date</td></tr><tr><td>format</td><td>token</td></tr><tr><td>encounter</td><td>reference</td></tr><tr><td>event</td><td>token</td></tr><tr><td>period</td><td>date</td></tr><tr><td>facility</td><td>token</td></tr><tr><td>setting</td><td>token</td></tr><tr><td>nlp-processing-status</td><td>token</td></tr></table>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">doc-status</code> — SearchParameter <code class="language-plaintext highlighter-rouge">mii-sp-meta-dokument-documentreference-doc-status</code>
+(<code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">creation</code> — SearchParameter <code class="language-plaintext highlighter-rouge">mii-sp-meta-dokument-documentreference-attachment-creation</code>
+(<code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">nlp-processing-status</code> — SearchParameter <code class="language-plaintext highlighter-rouge">mii-sp-meta-dokument-documentreference-nlp-processing-status</code>
+(<code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status</code>)</li>
+</ul>
 
 <h3 id="example-calls">Example calls</h3>
 
-<p>The following search parameters are relevant for this module, including in combination:</p>
+<p>Example calls for the search parameters the CapabilityStatement requires (they can be combined):</p>
 
 <ol>
   <li>
-    <p>The search parameter "_id" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">_id</code></p>
 
     <p>Examples:</p>
 
@@ -389,7 +391,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "_id" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "_profile" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">_profile</code></p>
 
     <p>Examples:</p>
 
@@ -398,7 +400,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "_profile" can be found in the <a href="https://hl7.org/fhir/R4/search.html#uri">FHIR base specification - section "URI Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "identifier" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">identifier</code></p>
 
     <p>Examples:</p>
 
@@ -407,7 +409,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "identifier" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "status" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">status</code></p>
 
     <p>Examples:</p>
 
@@ -416,7 +418,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "status" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "doc-status" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">doc-status</code></p>
 
     <p>Examples:</p>
 
@@ -425,7 +427,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "doc-status" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "type" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">type</code></p>
 
     <p>Examples:</p>
 
@@ -434,7 +436,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "type" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "category" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">category</code></p>
 
     <p>Examples:</p>
 
@@ -443,7 +445,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "category" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "patient" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">patient</code></p>
 
     <p>Examples:</p>
 
@@ -452,7 +454,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "patient" can be found in the <a href="https://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "Reference Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "relation" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">relation</code></p>
 
     <p>Examples:</p>
 
@@ -461,7 +463,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "relation" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "relatesto" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">relatesto</code></p>
 
     <p>Examples:</p>
 
@@ -470,7 +472,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "relatesto" can be found in the <a href="https://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "Reference Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "relationship" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">relationship</code></p>
 
     <p>Examples:</p>
 
@@ -479,7 +481,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "relationship" can be found in the <a href="https://hl7.org/fhir/R4/search.html#composite">FHIR base specification - section "Composite Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "description" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">description</code></p>
 
     <p>Examples:</p>
 
@@ -488,7 +490,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "description" can be found in the <a href="https://hl7.org/fhir/R4/search.html#string">FHIR base specification - section "String Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "security-label" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">security-label</code></p>
 
     <p>Examples:</p>
 
@@ -497,7 +499,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "security-label" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "contenttype" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">contenttype</code></p>
 
     <p>Examples:</p>
 
@@ -506,7 +508,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "contenttype" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "language" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">language</code></p>
 
     <p>Examples:</p>
 
@@ -515,7 +517,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "language" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "location" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">location</code></p>
 
     <p>Examples:</p>
 
@@ -524,7 +526,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "location" can be found in the <a href="https://hl7.org/fhir/R4/search.html#uri">FHIR base specification - section "URI Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "creation" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">creation</code></p>
 
     <p>Examples:</p>
 
@@ -533,7 +535,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "creation" can be found in the <a href="https://hl7.org/fhir/R4/search.html#date">FHIR base specification - section "Date Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "format" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">format</code></p>
 
     <p>Examples:</p>
 
@@ -542,7 +544,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "format" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "encounter" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">encounter</code></p>
 
     <p>Examples:</p>
 
@@ -551,7 +553,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "encounter" can be found in the <a href="https://hl7.org/fhir/R4/search.html#reference">FHIR base specification - section "Reference Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "event" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">event</code></p>
 
     <p>Examples:</p>
 
@@ -560,7 +562,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "event" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "period" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">period</code></p>
 
     <p>Examples:</p>
 
@@ -569,7 +571,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "period" can be found in the <a href="https://hl7.org/fhir/R4/search.html#date">FHIR base specification - section "Date Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "facility" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">facility</code></p>
 
     <p>Examples:</p>
 
@@ -578,7 +580,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "facility" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "setting" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">setting</code></p>
 
     <p>Examples:</p>
 
@@ -587,7 +589,7 @@ Meta module. The normative definition of the supported search parameters is the
     <p>Usage notes: further information on searching by "setting" can be found in the <a href="https://hl7.org/fhir/R4/search.html#token">FHIR base specification - section "Token Search"</a>.</p>
   </li>
   <li>
-    <p>The search parameter "nlp-processing-status" MUST be supported:</p>
+    <p><code class="language-plaintext highlighter-rouge">nlp-processing-status</code></p>
 
     <p>Examples:</p>
 
@@ -622,7 +624,7 @@ Meta module. The normative definition of the supported search parameters is the
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

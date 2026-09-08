@@ -342,8 +342,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Dieser Abschnitt richtet sich an Sicherheits- und Datenschutz-Fachleute.
 Allgemeine Anforderungen stehen in der FHIR-Kernspezifikation —
-<a href="https://build.fhir.org/secpriv-module.html">Security &amp; Privacy Module</a> und die
-<a href="https://build.fhir.org/security.html">Security-Checkliste</a>. Diese Seite
+<a href="http://hl7.org/fhir/R4/secpriv-module.html">Security &amp; Privacy Module</a> und die
+<a href="http://hl7.org/fhir/R4/security.html">Security-Checkliste</a>. Diese Seite
 wiederholt sie nicht; sie verlinkt den übergreifenden Datenschutzrahmen und nennt,
 was <strong>für dieses Modul spezifisch</strong> ist.</p>
 
@@ -409,11 +409,14 @@ gilt diese Einschränkung nicht.</p>
 <p><strong>De-Identifikationsstatus explizit kennzeichnen.</strong> Eine erfolgte
 De-Identifizierung wird über geeignete <code class="language-plaintext highlighter-rouge">securityLabel</code> und/oder die
 <a href="StructureDefinition-mii-ex-dokument-nlp-processing-status.html">NLP-Processing-Status-Extension</a>
-(Codes <code class="language-plaintext highlighter-rouge">unprocessed</code>, <code class="language-plaintext highlighter-rouge">preprocessed</code>, <code class="language-plaintext highlighter-rouge">annotated</code>, <code class="language-plaintext highlighter-rouge">surrogated</code>)
+(die vier übergeordneten Codes <code class="language-plaintext highlighter-rouge">unprocessed</code>, <code class="language-plaintext highlighter-rouge">preprocessed</code>, <code class="language-plaintext highlighter-rouge">annotated</code>,
+<code class="language-plaintext highlighter-rouge">surrogated</code> — <code class="language-plaintext highlighter-rouge">preprocessed</code> und <code class="language-plaintext highlighter-rouge">annotated</code> jeweils mit den Lvl-2-Codes
+<code class="language-plaintext highlighter-rouge">format-change</code>/<code class="language-plaintext highlighter-rouge">content-change</code> bzw. <code class="language-plaintext highlighter-rouge">preanno</code>/<code class="language-plaintext highlighter-rouge">deid</code>/<code class="language-plaintext highlighter-rouge">semantic</code>)
 ausgedrückt. Die datenhaltende Stelle ist verantwortlich, für
 Forschungszwecke ausschließlich auf anonymisierte bzw. pseudonymisierte
-Varianten zu verweisen (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code> → pseudonymisierte
-Profile des Basismoduls).</p>
+Varianten zu verweisen (<code class="language-plaintext highlighter-rouge">subject</code> → das pseudonymisierte Patient-Profil des
+Basismoduls; für <code class="language-plaintext highlighter-rouge">context.encounter</code> existiert keine pseudonymisierte
+Variante im Basismodul).</p>
 
 <p><strong>Verarbeitungsketten können Re-Identifizierungspfade öffnen.</strong> Die
 NLP-Pipeline verknüpft Original-, Klartext-, de-identifizierte und annotierte
@@ -452,7 +455,7 @@ erreicht, entscheidet die projektspezifische DIMP-Konfiguration.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Erstellt <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

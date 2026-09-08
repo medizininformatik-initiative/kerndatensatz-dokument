@@ -368,11 +368,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      code-systems.md). Only the two small module-owned ValueSets are rendered
      inline, and as a content logical definition (-cld) rather than as an
      expansion, because expansions depend on the build environment's
-     terminology server.
-     German mirror: input/translations/de/pagecontent/value-sets.md. -->
+     terminology server. -->
 
 <p>This page describes the ValueSets of the <strong>Dokument</strong> module (naming
-convention <code class="language-plaintext highlighter-rouge">MII_VS_&lt;Module&gt;_&lt;Name&gt;</code>). For general guidance on using codes, see
+convention <code class="language-plaintext highlighter-rouge">MII_VS_&lt;Modul&gt;_&lt;Name&gt;</code>, where <code class="language-plaintext highlighter-rouge">&lt;Modul&gt;</code> is the German module name — here <code class="language-plaintext highlighter-rouge">Dokument</code>). For general guidance on using codes, see
 <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a>; the code systems
 the sets draw from are described on the <a href="code-systems.html">Code Systems</a> page.</p>
 
@@ -528,7 +527,7 @@ it is bound by the extension
     </tr>
     <tr>
       <td><a href="https://www.hl7.org/fhir/R4/valueset-security-labels.html">security-labels</a></td>
-      <td>We recommend, also for ISiK compatibility, at least the use of the HL7 base profile subset from http://terminology.hl7.org/CodeSystem/v3-Confidentiality, e.g. <code class="language-plaintext highlighter-rouge">N</code> for restricted / patient-related documents</td>
+      <td>We recommend, also for ISiK compatibility, at least the use of the HL7 base profile subset from http://terminology.hl7.org/CodeSystem/v3-Confidentiality, e.g. <code class="language-plaintext highlighter-rouge">N</code> (normal) for patient-related documents; <code class="language-plaintext highlighter-rouge">R</code> (restricted) and <code class="language-plaintext highlighter-rouge">V</code> (very restricted) for particularly sensitive content</td>
     </tr>
     <tr>
       <td><a href="https://www.hl7.org/fhir/R4/valueset-mimetypes.html">mimetypes</a></td>
@@ -548,7 +547,7 @@ it is bound by the extension
     </tr>
     <tr>
       <td>context.facilityType</td>
-      <td>Recommendation per <a href="https://simplifier.net/packages/de.basisprofil.r4/1.4.0/files/656621">ISiK</a>, usually <code class="language-plaintext highlighter-rouge">KHS</code></td>
+      <td>Recommendation per the <a href="https://simplifier.net/packages/de.basisprofil.r4/1.6.0">German base profiles</a>, usually <code class="language-plaintext highlighter-rouge">KHS</code></td>
     </tr>
     <tr>
       <td>context.practiceSetting</td>
@@ -582,7 +581,7 @@ it is bound by the extension
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

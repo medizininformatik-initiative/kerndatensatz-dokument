@@ -13,5 +13,5 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/
 
 Artifact page: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md)
 
-The supported search parameters are listed on the [Search Parameters](search-parameters.md) page.
+Example calls for the search parameters and the links to the Meta module's SearchParameter definitions are on the [Search Parameters](search-parameters.md) page.
 

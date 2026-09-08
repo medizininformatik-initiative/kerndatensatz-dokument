@@ -439,7 +439,7 @@ Auflösung.</p>
 
 <p>Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten
 (z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte
-De-Identifizierung dieser Daten durch geeignete <code class="language-plaintext highlighter-rouge">securityLevel</code> und/oder
+De-Identifizierung dieser Daten durch geeignete <code class="language-plaintext highlighter-rouge">securityLabel</code> und/oder
 Codes der Erweiterung NLP-Processing Status
 (<a href="StructureDefinition-mii-ex-dokument-nlp-processing-status.html">MII EX Dokument NLP Processing Status</a>)
 ausdrücken.</p>
@@ -457,7 +457,7 @@ ausdrücken.</p>
 <div class="ig-highlight ig-highlight-green">
 <p><b>Forschende</b></p>
 <p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br />
-→ siehe <a href="guidance.html">Anleitung für Forschende</a>.</p>
+→ siehe <a href="guidance.html">Anleitung</a>.</p>
 </div>
 
 <h3 id="inhalt-dieses-leitfadens">Inhalt dieses Leitfadens</h3>
@@ -473,7 +473,7 @@ Leitfadens.</li>
   <li><strong><a href="profiles.html">Profile</a></strong> und die weiteren
 <strong><a href="artifacts.html">Artefakt-Seiten</a></strong> — die technischen Artefakte.</li>
   <li><strong><a href="examples.html">Beispiele</a></strong> — Beispielinstanzen.</li>
-  <li><strong><a href="ImplementationGuide-mii-ig-dokument.html">Abhängigkeiten</a></strong> — die
+  <li><strong><a href="ImplementationGuide-mii-ig-dokument.html">MII-ImplementationGuide-Ressource</a></strong> — die
 ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender
 Analyse und Urheberrechtshinweisen.</li>
 </ul>
@@ -489,8 +489,10 @@ beschrieben.</p>
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>): KDS Basismodul (<code class="language-plaintext highlighter-rouge">kerndatensatz.base</code>), KDS Meta
 (<code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code>), Deutsche Basisprofile (<code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code>), ISiK
 (<code class="language-plaintext highlighter-rouge">de.gematik.isik</code>), IHE-D-Terminologien (<code class="language-plaintext highlighter-rouge">de.ihe-d.terminology</code>), KDL
-(<code class="language-plaintext highlighter-rouge">dvmd.kdl.r4</code>), IHE FormatCode (<code class="language-plaintext highlighter-rouge">ihe.formatcode.fhir</code>) sowie
-HL7-Terminologie- und Extension-Pakete. Die Versionen liest die folgende
+(<code class="language-plaintext highlighter-rouge">dvmd.kdl.r4</code>), IHE FormatCode (<code class="language-plaintext highlighter-rouge">ihe.formatcode.fhir</code>), die
+HL7-Terminologie- und Extension-Pakete (<code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code>,
+<code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code>) sowie die Werkzeug-Pakete <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.crmi</code>
+und <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.xver-r5.r4</code>. Die Versionen liest die folgende
 Tabelle beim Build aus der ImplementationGuide-Ressource; die vollständige
 Tabelle mit Links rendert die Seite
 <a href="ImplementationGuide-mii-ig-dokument.html">MII-ImplementationGuide-Ressource</a>.</p>
@@ -588,7 +590,7 @@ aus dem Inhalt dieser Spezifikation entstehen könnten.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Erstellt <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

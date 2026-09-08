@@ -366,7 +366,7 @@ ValueSet-Definitionen selbst verankert.</p>
 
 <h3 id="definierte-valuesets">Definierte ValueSets</h3>
 
-<p>Übersicht der modul-eigenen ValueSets, beim Build aus dem Paket gelesen:</p>
+<p>Übersicht der modul-eigenen ValueSets, beim Build aus dem Paket gelesen (Beschreibungen in der Quellsprache der Ressourcen):</p>
 
 <table class="grid sql-table"><tr><td style="background-color: #eeeeee">ValueSet</td><td style="background-color: #eeeeee">Status</td><td style="background-color: #eeeeee">Beschreibung</td></tr><tr><td><a href="ValueSet-mii-vs-dokument-einrichtungsart.html">MII_VS_Dokument_Einrichtungsart</a></td><td>active</td><td><div><p>ValueSet zur Art der erzeugenden Einrichtung eines Dokuments</p>
 </div></td></tr><tr><td><a href="ValueSet-mii-vs-dokument-fachgebiet.html">MII_VS_Dokument_Fachgebiet</a></td><td>active</td><td><div><p>ValueSet zum erzeugenden Fachgebiet eines Dokuments</p>
@@ -502,7 +502,7 @@ gebunden.</p>
     </tr>
     <tr>
       <td><a href="https://www.hl7.org/fhir/R4/valueset-security-labels.html">security-labels</a></td>
-      <td>Wir empfehlen, auch für die ISIK Kompatibilität, zumindest die Nutzung des HL7 Basisprofil Subsets aus http://terminology.hl7.org/CodeSystem/v3-Confidentiality, z.B. <code class="language-plaintext highlighter-rouge">N</code> für restricted / patientenbezogene Dokumente</td>
+      <td>Wir empfehlen, auch für die ISiK Kompatibilität, zumindest die Nutzung des HL7 Basisprofil Subsets aus http://terminology.hl7.org/CodeSystem/v3-Confidentiality, z. B. <code class="language-plaintext highlighter-rouge">N</code> (normal) für patientenbezogene Dokumente; <code class="language-plaintext highlighter-rouge">R</code> (restricted) und <code class="language-plaintext highlighter-rouge">V</code> (very restricted) für besonders schutzbedürftige Inhalte</td>
     </tr>
     <tr>
       <td><a href="https://www.hl7.org/fhir/R4/valueset-mimetypes.html">mimetypes</a></td>
@@ -522,7 +522,7 @@ gebunden.</p>
     </tr>
     <tr>
       <td>context.facilityType</td>
-      <td>Empfehlung nach <a href="https://simplifier.net/packages/de.basisprofil.r4/1.4.0/files/656621">ISIK</a>, meist <code class="language-plaintext highlighter-rouge">KHS</code></td>
+      <td>Empfehlung nach den <a href="https://simplifier.net/packages/de.basisprofil.r4/1.6.0">Deutschen Basisprofilen</a>, meist <code class="language-plaintext highlighter-rouge">KHS</code></td>
     </tr>
     <tr>
       <td>context.practiceSetting</td>
@@ -556,7 +556,7 @@ gebunden.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Erstellt <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

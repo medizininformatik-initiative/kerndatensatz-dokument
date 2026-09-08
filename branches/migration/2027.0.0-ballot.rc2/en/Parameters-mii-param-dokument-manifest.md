@@ -55,6 +55,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Resource-id|4.0.1"
   },
   {
@@ -68,6 +72,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DocumentReference-status|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status|2027.0.0-ballot.rc3"
   },
   {
     "name" : "default-canonical-version",
@@ -115,6 +123,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DocumentReference-format|4.0.1"
   },
   {
@@ -139,6 +151,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0"
   },
   {
@@ -148,10 +164,6 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",

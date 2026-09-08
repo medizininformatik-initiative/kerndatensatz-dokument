@@ -52,7 +52,7 @@ These define sets of codes used by systems conforming to this implementation gui
 
 | | |
 | :--- | :--- |
-| [ MII VS Dokument Einrichtungart  ](ValueSet-mii-vs-dokument-einrichtungsart.md) | ValueSet zur Art der erzeugenden Einrichtung eines Dokuments |
+| [ MII VS Dokument Einrichtungsart  ](ValueSet-mii-vs-dokument-einrichtungsart.md) | ValueSet zur Art der erzeugenden Einrichtung eines Dokuments |
 | [ MII VS Dokument Fachgebiet  ](ValueSet-mii-vs-dokument-fachgebiet.md) | ValueSet zum erzeugenden Fachgebiet eines Dokuments |
 | [ MII VS Dokument Format Code  ](ValueSet-mii-vs-dokument-format-code.md) | ValueSet zum (komplexen) Format Code eines Dokuments |
 | [ MII VS Dokument NLP Processing Status  ](ValueSet-mii-vs-dokument-nlp-processing-status.md) | ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments |

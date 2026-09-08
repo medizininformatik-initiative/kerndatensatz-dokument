@@ -377,8 +377,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base">Person (im Basismodul)</a></td>
-      <td>Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet.</td>
-      <td>Ja</td>
+      <td>Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet (<code class="language-plaintext highlighter-rouge">subject</code> 0..1, Must Support).</td>
+      <td>Ja (sofern ein Patientenbezug besteht)</td>
     </tr>
     <tr>
       <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base">Fall (im Basismodul)</a></td>
@@ -390,7 +390,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="nutzung-durch-andere-mii-kds-module">Nutzung durch andere MII KDS-Module</h3>
 
-<p>Die Grundlage des MII KDS-Moduls bildet die <a href="https://www.hl7.org/fhir/documentreference.html">FHIR DocumentReference</a>. FHIR DocumentReferences werden bereits in anderen MII KDS-Modulen verwendet. Wir empfehlen die Umstellung auf das hier spezifizierte MII KDS-Modul.</p>
+<p>Die Grundlage des MII KDS-Moduls bildet die <a href="https://www.hl7.org/fhir/R4/documentreference.html">FHIR DocumentReference</a>. FHIR DocumentReferences werden bereits in anderen MII KDS-Modulen verwendet. Wir empfehlen die Umstellung auf das hier spezifizierte MII KDS-Modul.</p>
 
 <p>Für den Fall, dass die spezifizierten Dokumentkategorien und -typen die Anforderungen einer Domäne nicht adäquat abbilden können, ist die Nutzung weiterer Domänen-spezifischer CodeSysteme und ValueSets erlaubt.</p>
 
@@ -437,11 +437,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><a href="https://simplifier.net/base1x0">KBV Basis-Profile mit Medizinischen Informationsobjekten (MIO)</a> – Profil zum Verweis auf externe oder angehängte Dokumente</li>
-  <li><a href="https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5">Gematik Informationstechnischen Systeme im Krankenhaus (ISiK) Dokumentenaustausch</a>  - Profil zur Abbildung erforderlicher Metadaten für den Dokumentenaustausch</li>
+  <li><a href="https://simplifier.net/packages/de.gematik.isik/6.0.0">Gematik Informationstechnische Systeme im Krankenhaus (ISiK) Dokumentenaustausch, Stufe 6</a>  - Profil zur Abbildung erforderlicher Metadaten für den Dokumentenaustausch</li>
   <li><a href="https://profiles.ihe.net/ITI/MHD">IHE Mobile access to Health Documents (MHD)</a> - Profil zum Austausch von Gesundheitsdokumenten über mobile Anwendungen, mobile Geräte oder anderen Systemen, die ressourcen- und plattformbeschränkt sind</li>
 </ul>
 
-<p>Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur <a href="https://www.hl7.org/fhir/R4/documentreference.html#resource">DocumentReference-Ressource</a> orientiert. Die bestehenden der <a href="https://simplifier.net/base1x0">KBV Basis-Profile</a>, des <a href="https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5">Gematik ISiK</a> und von <a href="https://profiles.ihe.net/ITI/MHD">IHE MHD</a> sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Seite <a href="kompatibilitaet.html">Kompatibilität</a>) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:</p>
+<p>Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur <a href="https://www.hl7.org/fhir/R4/documentreference.html#resource">DocumentReference-Ressource</a> orientiert. Die bestehenden der <a href="https://simplifier.net/base1x0">KBV Basis-Profile</a>, des <a href="https://simplifier.net/packages/de.gematik.isik/6.0.0">Gematik ISiK</a> und von <a href="https://profiles.ihe.net/ITI/MHD">IHE MHD</a> sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Seite <a href="kompatibilitaet.html">Kompatibilität</a>) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:</p>
 
 <p><a href="Paketabhaengigkeiten.svg"><img src="Paketabhaengigkeiten.svg" alt="Paketabhängigkeiten des MII KDS-Moduls Dokument" /></a></p>
 
@@ -453,13 +453,13 @@ KDS-Release 2026 innerhalb des Basismoduls
 Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
 den von der NSG freigegebenen Stand.</p>
 
-<p>Dadurch ist es möglich Ressourcen so zu attributieren, dass sie gleichzeitig MII KDS als auch ISIK bzw. IHE valide sind. Auch sind ISIK und IHE Module prinzipiell kompatibel, jedoch empfehlen wir in der Nutzung sowohl die Angabe des <code class="language-plaintext highlighter-rouge">type</code> (aus KDL /ISIK) und <code class="language-plaintext highlighter-rouge">category</code> (aus IHE), die keines der beides Profile ISIK, IHE gleichzeitig anbietet.</p>
+<p>Dadurch ist es möglich Ressourcen so zu attributieren, dass sie gleichzeitig MII KDS als auch ISiK bzw. IHE valide sind. Auch sind ISiK und IHE Module prinzipiell kompatibel, jedoch empfehlen wir in der Nutzung sowohl die Angabe des <code class="language-plaintext highlighter-rouge">type</code> (aus KDL /ISiK) und <code class="language-plaintext highlighter-rouge">category</code> (aus IHE), die keines der beides Profile ISiK, IHE gleichzeitig anbietet.</p>
 
 <p>Dabei wurde ein Abgleich aller Datenelemente sowie der verwendeten Terminologie durchgeführt und im <a href="StructureDefinition-mii-pr-dokument-dokument.html">Dokument-Profil</a> abgebildet. Die Kardinalitäten sind offen gestaltet, sodass in dieser Hinsicht keine (weiteren oder neuen) Einschränkungen eingeführt wurden. Die in den abgeglichenen Profilen verwendete Terminologie wurde im <a href="StructureDefinition-mii-pr-dokument-dokument.html">Dokument-Profil</a> einbezogen und abgebildet.</p>
 
-<p>Personenbezogene Dokumente werden immer einer Person (MII KDS-Modul Person) zugeordnet (<code class="language-plaintext highlighter-rouge">subject</code>). De-Identifizierte Dokumente sind über die Sicherheitsstufe (<code class="language-plaintext highlighter-rouge">securityLabel</code>) entsprechend markiert. Die datenhaltende Stelle ist hier verantwortlich, nur auf entsprechende anonymisierte bzw. pseudonymisierte Varianten anderer MII Module zu verweisen. Wo immer möglich wird ein Fallzusammenhang (MII KDS-Modul Fall) definiert – nach Möglichkeit auf die relevanteste Ebene des Fallstufenmodells (<code class="language-plaintext highlighter-rouge">context.encounter</code>). Im Paketabhängigkeitsdiagramm (oben) sind die Zusammenhänge zwischen den MII Modulen grün dargestellt.</p>
+<p>Personenbezogene Dokumente werden einer Person (Profile Patient bzw. PatientPseudonymisiert des Basismoduls) zugeordnet (<code class="language-plaintext highlighter-rouge">subject</code>, 0..1). De-Identifizierte Dokumente sind über die Sicherheitsstufe (<code class="language-plaintext highlighter-rouge">securityLabel</code>) entsprechend markiert. Die datenhaltende Stelle ist hier verantwortlich, nur auf entsprechende anonymisierte bzw. pseudonymisierte Varianten anderer MII Module zu verweisen. Wo immer möglich wird ein Fallzusammenhang (MII KDS-Modul Fall) definiert – nach Möglichkeit auf die relevanteste Ebene des Fallstufenmodells (<code class="language-plaintext highlighter-rouge">context.encounter</code>). Im Paketabhängigkeitsdiagramm (oben) sind die Zusammenhänge zwischen den MII Modulen grün dargestellt.</p>
 
-<p>Wir empfehlen den auch in ISIK verwendeten <a href="https://simplifier.net/KDL/">DVMD KDL-Standard</a> für die präzise Typbeschreibung (<code class="language-plaintext highlighter-rouge">type</code>) sowie die <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">IHE XDS Class-Codes</a> für die gröbere Dokumentkategorie (<code class="language-plaintext highlighter-rouge">category</code>) zu verwenden. <a href="https://simplifier.net/kdl/~resources?category=ConceptMap">IHE XDS Type- und Class-Codes können eindeutig aus KDL hergeleitet werden.</a> Weitere Kodierungen wie Hauscodes, SNOMED CT oder LOINC sind optional möglich.</p>
+<p>Wir empfehlen den auch in ISiK verwendeten <a href="https://simplifier.net/kdl">DVMD KDL-Standard</a> für die präzise Typbeschreibung (<code class="language-plaintext highlighter-rouge">type</code>) sowie die <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">IHE XDS Class-Codes</a> für die gröbere Dokumentkategorie (<code class="language-plaintext highlighter-rouge">category</code>) zu verwenden. <a href="https://simplifier.net/kdl/~resources?category=ConceptMap">IHE XDS Type- und Class-Codes können eindeutig aus KDL hergeleitet werden.</a> Weitere Kodierungen wie Hauscodes, SNOMED CT oder LOINC sind optional möglich.</p>
 
 <hr />
 
@@ -496,7 +496,7 @@ sie gelten für dieses Modul unverändert.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Erstellt <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

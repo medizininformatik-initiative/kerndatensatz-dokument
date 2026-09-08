@@ -65,7 +65,7 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
         "valueCode" : "SHALL"
       }],
       "type" : "DocumentReference",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement/metadata"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -128,7 +128,7 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
           "valueCode" : "SHALL"
         }],
         "name" : "doc-status",
-        "definition" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-doc-status",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status",
         "type" : "token"
       },
       {
@@ -236,7 +236,7 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
           "valueCode" : "SHALL"
         }],
         "name" : "creation",
-        "definition" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-creation",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation",
         "type" : "date"
       },
       {
@@ -299,7 +299,7 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
           "valueCode" : "SHALL"
         }],
         "name" : "nlp-processing-status",
-        "definition" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-nlp-processing-status",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status",
         "type" : "token"
       }]
     }]

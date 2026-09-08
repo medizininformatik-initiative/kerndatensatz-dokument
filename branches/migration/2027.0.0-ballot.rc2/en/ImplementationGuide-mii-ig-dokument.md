@@ -40,7 +40,7 @@ This IG contains the following dependencies on other IGs.
 
 
 
-> **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
+> **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
 
@@ -92,7 +92,7 @@ This publication includes IP covered under the following statements.
 
 ### IG Parameter Settings and Expansion Parameters
 
-Expansion parameters are query parameters that can be passed to a `ValueSet` `$expand` operation to control how the ValueSet is expanded — that is, how the full list of codes is generated from the ValueSet definition. The [IG Parameters](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html) used for this IG are declared in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml) (`parameters:`). A module that pins its expansion parameters through a CRMI manifest additionally links the generated `Parameters` resource from here (see the commented manifest blocks in `sushi-config.yaml` and the Metadata Overview page, if the module keeps it).
+Expansion parameters are query parameters that can be passed to a `ValueSet` `$expand` operation to control how the ValueSet is expanded — that is, how the full list of codes is generated from the ValueSet definition. The [IG Parameters](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html) used for this IG are declared in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml) (`parameters:`). This guide additionally pins its expansion parameters through a CRMI manifest: the resource [`Parameters/mii-param-dokument-manifest`](Parameters-mii-param-dokument-manifest.md) (SNOMED CT International Edition `20260701`), linked via `cqf-expansionParameters` and made known to the publisher through `path-expansion-params` / `pin-manifest`. The [Metadata Overview](metadata.md) page has the details.
 
 
 
@@ -1496,7 +1496,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "ValueSet/mii-vs-dokument-einrichtungsart"
       },
-      "name" : "MII VS Dokument Einrichtungart",
+      "name" : "MII VS Dokument Einrichtungsart",
       "description" : "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
       "exampleBoolean" : false
     },

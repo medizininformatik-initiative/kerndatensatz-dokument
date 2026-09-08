@@ -34,7 +34,7 @@ Ein Versionsabschnitt mit einer Breaking Change ist erst vollständig, wenn er a
 
 **Die Versionsnummer warnt niemanden.** Das KDS-Kalender-Versionsschema (`JJJJ.n.n`) trägt kein Major-Signal wie SemVer — dieser Changelog-Abschnitt ist die *einzige* Warnung, die Lesende bekommen.
 
-**Verlinken Sie das technische Delta.** Ab der zweiten formalen Publikation aktivieren Sie den Versionsvergleich des IG Publishers (`version-comparison` in `sushi-config.yaml` — siehe die Seite [Versionierung](version-history.md) zur Einrichtung und ihren Voraussetzungen); er veröffentlicht einen maschinell erzeugten Vergleich unter `comparison-v<Vorversion>/index.html`. Verlinken Sie ihn aus dem Versionsabschnitt, damit die Erläuterung und der technische Diff nebeneinanderstehen.
+**Verlinken Sie das technische Delta.** Ab der zweiten formalen Publikation aktivieren Sie den Versionsvergleich des IG Publishers (`version-comparison`, in `sushi-config.yaml` zu ergänzen — siehe die Seite [Versionierung](version-history.md) zur Einrichtung und ihren Voraussetzungen); er veröffentlicht einen maschinell erzeugten Vergleich unter `comparison-v<Vorversion>/index.html`. Verlinken Sie ihn aus dem Versionsabschnitt, damit die Erläuterung und der technische Diff nebeneinanderstehen.
 
 Kennzeichnen Sie solche Einträge deutlich (zum Beispiel mit dem Präfix **BREAKING:**), damit sie beim Überfliegen des Abschnitts nicht übersehen werden können.
 
@@ -42,7 +42,7 @@ Kennzeichnen Sie solche Einträge deutlich (zum Beispiel mit dem Präfix **BREAK
 
 ### Version 2027.0.0-ballot.rc1
 
-**Datum** 28.08.2026
+**Datum** 01.09.2026 (Veröffentlichungsdatum des Leitfadens; das RC-Paket wurde am 28.08.2026 in der Paket-Registry veröffentlicht)
 
 #### Hinzugefügt
 

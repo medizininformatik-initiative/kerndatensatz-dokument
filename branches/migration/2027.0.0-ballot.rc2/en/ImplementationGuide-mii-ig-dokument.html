@@ -362,18 +362,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <!-- markdownlint-disable MD041 -->
-<!-- English translation of the German default page input/pagecontent/ImplementationGuide-mii-ig-dokument.md (DE-first). -->
-<!-- Default-language (English) intro for the ImplementationGuide RESOURCE page —
-     the artifact page the IG Publisher generates for the IG resource itself
-     (ImplementationGuide-<id>.html). Without this file the page renders bare:
-     no dependency table, no cross-version analysis, no copyright statements.
-     Ported from kerndatensatz-basis input/pagecontent/ImplementationGuide-mii-ig-base.md
-     and adapted to the scaffold.
-     German mirror: input/translations/de/pagecontent/ (same file name) — both
-     files must say the same thing.
+<!-- English translation of the German default page
+     input/pagecontent/ImplementationGuide-mii-ig-dokument.md (DE-first) — keep
+     both files in step. It is the intro for the ImplementationGuide RESOURCE
+     page — the artifact page the IG Publisher generates for the IG resource
+     itself (ImplementationGuide-<id>.html). Without this file the page renders
+     bare: no dependency table, no cross-version analysis, no copyright
+     statements. Ported from kerndatensatz-basis
+     input/pagecontent/ImplementationGuide-mii-ig-base.md and adapted.
      FILE NAME CARRIES THE IG ID: like the IG-level .po catalogue, this file and
-     its German mirror must be RENAMED to your concrete IG id when you create a
-     module (docs/recipes/create-a-new-module.md step 4) — the pages: entry in
+     the German default page must be RENAMED to your concrete IG id when you
+     create a module (docs/recipes/create-a-new-module.md step 4) — the pages: entry in
      sushi-config.yaml references it by that name. The template repo's CI
      self-check renames all three automatically for the preview. -->
 <p>This ImplementationGuide resource defines the technical details of this
@@ -496,7 +495,7 @@ Version 2025</p>
 <blockquote class="ig-highlight ig-highlight-grey">
   <p><strong>Where the versions come from.</strong> Every package in the table is pinned
 directly in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
 (<code class="language-plaintext highlighter-rouge">dependencies:</code>) — including <code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code> (THO) and
 <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code>, and those two deliberately so: the IG
 Publisher's
@@ -572,11 +571,14 @@ means this module declares none.</p>
 full list of codes is generated from the ValueSet definition. The
 <a href="https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html">IG Parameters</a>
 used for this IG are declared in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
-(<code class="language-plaintext highlighter-rouge">parameters:</code>). A module that pins its expansion parameters through a CRMI
-manifest additionally links the generated <code class="language-plaintext highlighter-rouge">Parameters</code> resource from here (see
-the commented manifest blocks in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> and the Metadata Overview
-page, if the module keeps it).</p>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
+(<code class="language-plaintext highlighter-rouge">parameters:</code>). This guide additionally pins its expansion parameters through
+a CRMI manifest: the resource
+<a href="Parameters-mii-param-dokument-manifest.html"><code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code></a>
+(SNOMED CT International Edition <code class="language-plaintext highlighter-rouge">20260701</code>), linked via
+<code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code> and made known to the publisher through
+<code class="language-plaintext highlighter-rouge">path-expansion-params</code> / <code class="language-plaintext highlighter-rouge">pin-manifest</code>. The
+<a href="metadata.html">Metadata Overview</a> page has the details.</p>
 
 
 
@@ -603,7 +605,7 @@ page, if the module keeps it).</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

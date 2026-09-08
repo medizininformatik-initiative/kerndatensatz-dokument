@@ -37,7 +37,7 @@ Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen, Anonymi
 
 Das Informationsmodell trennt Angaben zur Referenz selbst und den Metadaten der referenzierten Dokumente (`content`). Auf den Körper des Dokuments wird über eine lokal zu interpretierende URL (`content.attachment.url`) verwiesen. Grundsätzlich kann der Dokumentkörper des referenzierten Dokuments auch innerhalb der Referenz (`content.attachment.data`) eingebettet werden. Das Modul gibt keine Vorgaben zur Semantik dieser Auflösung.
 
-Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder Codes der Erweiterung NLP-Processing Status ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)) ausdrücken.
+Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte De-Identifizierung dieser Daten durch geeignete `securityLabel` und/oder Codes der Erweiterung NLP-Processing Status ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)) ausdrücken.
 
 ### Zielgruppe
 
@@ -51,7 +51,7 @@ Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen
 **Forschende**
 
 Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.
- → siehe [Anleitung für Forschende](guidance.md).
+ → siehe [Anleitung](guidance.md).
 
 ### Inhalt dieses Leitfadens
 
@@ -59,13 +59,13 @@ Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.
 * **Konformität** — die KDS-weiten Konformitätsregeln (Anforderungssprache, Must-Support, Umgang mit fehlenden Daten) pflegt zentral das [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance); die modul-spezifischen Aspekte zu [Sicherheit und Datenschutz](security-and-privacy.md) sind Teil dieses Leitfadens.
 * **[Profile](profiles.md)** und die weiteren **[Artefakt-Seiten](artifacts.md)** — die technischen Artefakte.
 * **[Beispiele](examples.md)** — Beispielinstanzen.
-* **[Abhängigkeiten](ImplementationGuide-mii-ig-dokument.md)** — die ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender Analyse und Urheberrechtshinweisen.
+* **[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.md)** — die ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender Analyse und Urheberrechtshinweisen.
 
 ### Verwandte Leitfäden
 
 Dieses Modul ist Teil des MII-Kerndatensatzes; die weiteren KDS-Module und ihre Abhängigkeiten sind unter [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/) beschrieben.
 
-Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base`), KDS Meta (`kerndatensatz.meta`), Deutsche Basisprofile (`de.basisprofil.r4`), ISiK (`de.gematik.isik`), IHE-D-Terminologien (`de.ihe-d.terminology`), KDL (`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`) sowie HL7-Terminologie- und Extension-Pakete. Die Versionen liest die folgende Tabelle beim Build aus der ImplementationGuide-Ressource; die vollständige Tabelle mit Links rendert die Seite [MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.md).
+Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base`), KDS Meta (`kerndatensatz.meta`), Deutsche Basisprofile (`de.basisprofil.r4`), ISiK (`de.gematik.isik`), IHE-D-Terminologien (`de.ihe-d.terminology`), KDL (`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`), die HL7-Terminologie- und Extension-Pakete (`hl7.terminology.r4`, `hl7.fhir.uv.extensions.r4`) sowie die Werkzeug-Pakete `hl7.fhir.uv.crmi` und `hl7.fhir.uv.xver-r5.r4`. Die Versionen liest die folgende Tabelle beim Build aus der ImplementationGuide-Ressource; die vollständige Tabelle mit Links rendert die Seite [MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.md).
 
 | | |
 | :--- | :--- |

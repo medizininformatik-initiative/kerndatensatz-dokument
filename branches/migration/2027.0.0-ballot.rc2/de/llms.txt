@@ -31,7 +31,7 @@
 
 ### ValueSets
 
-* [MII VS Dokument Einrichtungart](ValueSet-mii-vs-dokument-einrichtungsart.md)
+* [MII VS Dokument Einrichtungsart](ValueSet-mii-vs-dokument-einrichtungsart.md)
 * [MII VS Dokument Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.md)
 * [MII VS Dokument Format Code](ValueSet-mii-vs-dokument-format-code.md)
 * [MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.md)

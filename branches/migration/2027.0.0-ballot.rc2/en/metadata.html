@@ -364,12 +364,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <!-- markdownlint-disable MD041 -->
-<!-- English translation of the German default page input/pagecontent/metadata.md (DE-first). -->
-<!-- Default-language (English) page. Ported from kerndatensatz-basis
-     input/pagecontent/metadata.md (branch main) and reduced to what THIS
-     scaffold actually declares in sushi-config.yaml.
-     German mirror: input/translations/de/pagecontent/metadata.md — both files
-     must say the same thing.
+<!-- English translation of the German default page
+     input/pagecontent/metadata.md (DE-first) — keep both files in step.
+     Content ported from kerndatensatz-basis input/pagecontent/metadata.md
+     (branch main) and reduced to what THIS guide actually declares in
+     sushi-config.yaml.
 
      This page is HAND-MAINTAINED. Nothing here is generated: the IG Publisher
      renders the artifact pages, but it does not write this narrative. Whenever
@@ -429,7 +428,7 @@ parts that are directly useful for publishing a KDS module.</p>
     </tr>
     <tr>
       <td><a href="https://hl7.org/fhir/uv/crmi/STU2/en/version-manifest.html">Version manifest</a></td>
-      <td><code class="language-plaintext highlighter-rouge">package-source</code>; canonical version pinning (<code class="language-plaintext highlighter-rouge">pin-canonicals: pin-all</code>); <em>optionally</em> <code class="language-plaintext highlighter-rouge">CRMIManifestParameters</code> + <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code></td>
+      <td><code class="language-plaintext highlighter-rouge">package-source</code>; canonical version pinning (<code class="language-plaintext highlighter-rouge">pin-canonicals: pin-all</code>); <code class="language-plaintext highlighter-rouge">CRMIManifestParameters</code> (<code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code>) + <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code></td>
       <td>Supports reproducible terminology expansion and stable canonical version resolution.</td>
     </tr>
     <tr>
@@ -444,7 +443,7 @@ parts that are directly useful for publishing a KDS module.</p>
     </tr>
     <tr>
       <td><a href="https://hl7.org/fhir/uv/crmi/STU2/en/publishing.html">Publishing</a></td>
-      <td>Publishable profile; contributor extensions; <code class="language-plaintext highlighter-rouge">resource-approvalDate</code>; <code class="language-plaintext highlighter-rouge">resource-effectivePeriod</code>; <code class="language-plaintext highlighter-rouge">artifact-purpose</code>; <code class="language-plaintext highlighter-rouge">artifact-usage</code>; <em>optionally</em> <code class="language-plaintext highlighter-rouge">artifact-relatedArtifact</code></td>
+      <td>Publishable profile; contributor extensions; <code class="language-plaintext highlighter-rouge">resource-approvalDate</code>; <code class="language-plaintext highlighter-rouge">resource-effectivePeriod</code>; <code class="language-plaintext highlighter-rouge">artifact-purpose</code>; <code class="language-plaintext highlighter-rouge">artifact-usage</code> (<code class="language-plaintext highlighter-rouge">artifact-relatedArtifact</code>: not used by this module)</td>
       <td>Adds trust, governance, publication context and human-readable intent.</td>
     </tr>
     <tr>
@@ -468,7 +467,7 @@ These may be considered in future release-workflow work.</p>
 <h3 id="crmi-metadata-declared-by-this-guide">CRMI metadata declared by this guide</h3>
 
 <p>The following CRMI-related metadata is set in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
 and ends up in the generated <code class="language-plaintext highlighter-rouge">ImplementationGuide</code> resource.</p>
 
 <table>
@@ -488,86 +487,89 @@ and ends up in the generated <code class="language-plaintext highlighter-rouge">
       <td>Enforces the minimum ImplementationGuide metadata set and adds the post-publication metadata needed for distribution, repository inclusion, consumption and implementation.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-knowledgeCapability.html">CQF Knowledge Capability</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-cqf-knowledgeCapability.html">CQF Knowledge Capability</a></td>
       <td>Artifact lifecycle; artifact conventions</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">shareable</code>, <code class="language-plaintext highlighter-rouge">publishable</code>)</td>
       <td>Declares the knowledge capability of the artifact on resources that have no native <code class="language-plaintext highlighter-rouge">knowledgeCapability</code> element.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-purpose.html">Artifact Purpose</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-purpose.html">Artifact Purpose</a></td>
       <td>Publishing; distribution</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code></td>
       <td>States why the artifact is needed and why it was designed as it is.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-usage.html">Artifact Usage</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-usage.html">Artifact Usage</a></td>
       <td>Publishing; implementation</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code></td>
       <td>States how the artifact is to be used within the MII core dataset specification.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-topic.html">Artifact Topic</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-topic.html">Artifact Topic</a></td>
       <td>Publishing; distribution</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code>, coded with the NCI Thesaurus</td>
       <td>Adds high-level content topics for filtering, searching and grouping.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionAlgorithm.html">Artifact Version Algorithm</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-versionAlgorithm.html">Artifact Version Algorithm</a></td>
       <td>Artifact conventions; versioning</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">semver</code>)</td>
       <td>Declares how versions are compared to determine which is more current.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionPolicy.html">Artifact Version Policy</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-versionPolicy.html">Artifact Version Policy</a></td>
       <td>Artifact lifecycle; versioning</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">package</code>)</td>
       <td>Declares that artifact versions are managed with the package version — a release can bump an artifact's version even when its content did not change.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-package-source.html">Package Source</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-package-source.html">Package Source</a></td>
       <td>Version manifest; packaging; distribution</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (packageId, version, uri)</td>
       <td>Declares the package in which an artifact is defined, so evaluation environments resolve namespaces and dependencies in the intended scope.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html">Resource Approval Date</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-resource-approvalDate.html">Resource Approval Date</a></td>
       <td>Artifact lifecycle; publishing; governance</td>
-      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">2026-08-28</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">2026-09-01</code>)</td>
       <td>Records the date on which the publisher officially approved the content for use.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-effectivePeriod.html">Resource Effective Period</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-resource-effectivePeriod.html">Resource Effective Period</a></td>
       <td>Artifact lifecycle; publishing; implementation</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (start <code class="language-plaintext highlighter-rouge">2027</code>)</td>
       <td>Records the period during which the content is planned to be, or has been, effective.</td>
     </tr>
     <tr>
-      <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-author.html">Artifact Author</a><br /><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-editor.html">Artifact Editor</a><br /><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-reviewer.html">Artifact Reviewer</a><br /><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-endorser.html">Artifact Endorser</a></td>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-author.html">Artifact Author</a><br /><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-editor.html">Artifact Editor</a><br /><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-reviewer.html">Artifact Reviewer</a><br /><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-endorser.html">Artifact Endorser</a></td>
       <td>Publishing; governance; provenance</td>
       <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code></td>
       <td>Records the author, the editor responsible for internal coherence, the reviewers, and the bodies that officially endorse the release. For a KDS module the editor, reviewers and endorsers are the governance bodies of the core-dataset process.</td>
     </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-cqf-expansionParameters.html">CQF Expansion Parameters</a><br /><a href="https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html">CRMI Manifest Parameters</a></td>
+      <td>Version manifest; packaging; distribution</td>
+      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> → <a href="Parameters-mii-param-dokument-manifest.html"><code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code></a>; plus the publisher parameters <code class="language-plaintext highlighter-rouge">path-expansion-params</code> and <code class="language-plaintext highlighter-rouge">pin-manifest</code></td>
+      <td>Pins the terminology expansion of the build (SNOMED CT International Edition <code class="language-plaintext highlighter-rouge">20260701</code>; <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code> <code class="language-plaintext highlighter-rouge">3.0.0</code>) and keeps the parameters used inspectable in one stable place.</td>
+    </tr>
   </tbody>
 </table>
 
-<p>Not enabled in this scaffold, but prepared as commented blocks in
-<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>:</p>
+<p>Not used by this guide:</p>
 
 <ul>
-  <li><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-relatedArtifact.html">Artifact Related Artifact</a>
-— a literature citation for the module.</li>
-  <li><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-expansionParameters.html">CQF Expansion Parameters</a>
-together with a
-<a href="https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html">CRMI Manifest Parameters</a>
-resource and the <code class="language-plaintext highlighter-rouge">path-expansion-params</code> / <code class="language-plaintext highlighter-rouge">pin-manifest</code> parameters.</li>
+  <li><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-artifact-relatedArtifact.html">Artifact Related Artifact</a>
+— a literature citation for the module; this module carries none.</li>
 </ul>
 
 <blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Enable the blocks your module needs and then update the tables above.
-If your module also applies the CRMI shareable/publishable profiles to its own
-StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-<code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> idiom is a shared <code class="language-plaintext highlighter-rouge">RuleSet</code> in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a> — add the corresponding rows here.]</p>
+  <p><strong>CRMI profiles at artifact level.</strong> This module claims the CRMI
+shareable/publishable profiles on the <code class="language-plaintext highlighter-rouge">ImplementationGuide</code> resource. Its
+StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets do not
+carry them; the CodeSystems and ValueSets claim the HL7 base profiles
+<em>ShareableCodeSystem</em> and <em>ShareableValueSet</em>. For artifact-level use, the
+<code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> idiom is available as a shared <code class="language-plaintext highlighter-rouge">RuleSet</code> in
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a>.</p>
 </blockquote>
 
 <h4 id="codesystem-supplements">CodeSystem supplements</h4>
@@ -633,18 +635,19 @@ version being implemented.</p>
 in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>), which is a CRMI expectation and makes the output
 stable.</p>
 
-<p>A module that additionally wants reproducible terminology expansion adds a
-CRMI Manifest Parameters resource — the <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> idiom is
+<p>For reproducible terminology expansion, this guide adds a CRMI Manifest
+Parameters resource — following the <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> idiom
 <code class="language-plaintext highlighter-rouge">Parameters/mii-param-&lt;slug&gt;-manifest</code> — links it from the
 <code class="language-plaintext highlighter-rouge">ImplementationGuide</code> via <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>, and points the publisher at
 it with <code class="language-plaintext highlighter-rouge">path-expansion-params</code> and <code class="language-plaintext highlighter-rouge">pin-manifest</code>. Both readers and tooling
-then have one stable place to inspect the parameters used for expansion and
+therefore have one stable place to inspect the parameters used for expansion and
 package pinning.</p>
 
 <blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Add the manifest for your module (see the commented blocks in
-<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) and link the generated <code class="language-plaintext highlighter-rouge">Parameters</code> resource page here,
-or state explicitly that this module does not pin expansion parameters.]</p>
+  <p><strong>This module pins its expansion parameters.</strong> They live in
+<a href="Parameters-mii-param-dokument-manifest.html"><code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code></a>:
+SNOMED CT International Edition <code class="language-plaintext highlighter-rouge">20260701</code> and
+<code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code> <code class="language-plaintext highlighter-rouge">3.0.0</code>.</p>
 </blockquote>
 
 <h3 id="relationship-to-fair">Relationship to FAIR</h3>
@@ -805,12 +808,6 @@ asserted to be a persistently identified FAIR dataset.</p>
   </tbody>
 </table>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: The table lists the indicators of priority <em>Essential</em>. If your module
-wants the complete self-assessment, extend it with the <em>Important</em> and
-<em>Useful</em> indicators — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> carries the full table.]</p>
-</blockquote>
-
 <h3 id="practical-use">Practical use</h3>
 
 <p>Implementers can use this metadata to:</p>
@@ -855,7 +852,7 @@ metadata.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

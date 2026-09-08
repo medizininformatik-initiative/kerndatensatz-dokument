@@ -416,7 +416,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The present specification describes the FHIR representation of the Core
 Dataset (KDS) module Dokument of the Medical Informatics Initiative.
 In the following, the use cases of the module as well as the associated
-FHIR profiles and terminology resources are described in their normative
+FHIR profiles and terminology resources are described in their binding
 form.</p>
 
 <p>The Core Dataset of the Medical Informatics Initiative (MII) enables the
@@ -446,7 +446,7 @@ navigation and document archiving are addressed by the module and
 coordinated according to a standardized scheme.</p>
 
 <p>The MII KDS module enables the creation of document references with the
-option of establishing relationships to the Case and Person modules, which
+option of establishing relationships to the Fall and Person modules, which
 have been folded into the base module. The module also contains an NLP
 extension that represents the processing status with respect to NLP
 procedures such as annotations (see <a href="uml-diagrams.html">UML</a> for this).</p>
@@ -465,7 +465,7 @@ prescribe the semantics of this resolution.</p>
 
 <p>The document body can contain a wide range of identifying data and/or
 metadata (e.g. names, patient ID). The data holder can express that such
-data has been de-identified via an appropriate <code class="language-plaintext highlighter-rouge">securityLevel</code> and/or codes
+data has been de-identified via an appropriate <code class="language-plaintext highlighter-rouge">securityLabel</code> and/or codes
 of the NLP Processing Status extension
 (<a href="StructureDefinition-mii-ex-dokument-nlp-processing-status.html">MII EX Dokument NLP Processing Status</a>).</p>
 
@@ -482,7 +482,7 @@ of the NLP Processing Status extension
 <div class="ig-highlight ig-highlight-green">
 <p><b>Researchers</b></p>
 <p>Scientists using KDS data for medical research.<br />
-→ see <a href="guidance.html">Guidance for Researchers</a>.</p>
+→ see <a href="guidance.html">Guidance</a>.</p>
 </div>
 
 <h3 id="contents">Contents</h3>
@@ -497,7 +497,7 @@ considerations are part of this guide.</li>
   <li><strong><a href="profiles.html">Profiles</a></strong> and the further
 <strong><a href="artifacts.html">artifact pages</a></strong> — the technical artifacts.</li>
   <li><strong><a href="examples.html">Examples</a></strong> — example instances.</li>
-  <li><strong><a href="ImplementationGuide-mii-ig-dokument.html">Dependencies</a></strong> — the
+  <li><strong><a href="ImplementationGuide-mii-ig-dokument.html">MII ImplementationGuide Resource</a></strong> — the
 ImplementationGuide resource with the dependency table, cross-version
 analysis and copyright statements.</li>
 </ul>
@@ -512,8 +512,10 @@ dependencies are described at
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>): KDS base module (<code class="language-plaintext highlighter-rouge">kerndatensatz.base</code>), KDS Meta
 (<code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code>), German base profiles (<code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code>), ISiK
 (<code class="language-plaintext highlighter-rouge">de.gematik.isik</code>), IHE-D terminology (<code class="language-plaintext highlighter-rouge">de.ihe-d.terminology</code>), KDL
-(<code class="language-plaintext highlighter-rouge">dvmd.kdl.r4</code>), IHE FormatCode (<code class="language-plaintext highlighter-rouge">ihe.formatcode.fhir</code>) plus the HL7
-terminology and extensions packages. The following table reads the versions
+(<code class="language-plaintext highlighter-rouge">dvmd.kdl.r4</code>), IHE FormatCode (<code class="language-plaintext highlighter-rouge">ihe.formatcode.fhir</code>), the HL7
+terminology and extensions packages (<code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code>,
+<code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code>) plus the tooling packages <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.crmi</code>
+and <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.xver-r5.r4</code>. The following table reads the versions
 from the ImplementationGuide resource at build time; the complete table with
 links is rendered on the
 <a href="ImplementationGuide-mii-ig-dokument.html">MII ImplementationGuide Resource</a> page.</p>
@@ -528,7 +530,7 @@ links is rendered on the
 
 <p>This guide was created within the Medical Informatics Initiative and is
 subject, by its governance process, to the coordination procedure of the
-Interoperability Forum and the technical committees of HL7 Germany.</p>
+Interoperability Forum and the technical committees of HL7 Deutschland e. V.</p>
 
 <h3 id="contact">Contact</h3>
 
@@ -608,7 +610,7 @@ from the content of this specification.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

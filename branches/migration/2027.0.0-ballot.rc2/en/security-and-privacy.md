@@ -5,7 +5,7 @@
 
 ## Security and Privacy
 
-This section addresses security and privacy experts. General requirements are in the FHIR core specification — [Security & Privacy Module](https://build.fhir.org/secpriv-module.html) and the [security checklist](https://build.fhir.org/security.html). This page does not repeat them; it links the overarching data protection framework and states what is **specific to this module**.
+This section addresses security and privacy experts. General requirements are in the FHIR core specification — [Security & Privacy Module](http://hl7.org/fhir/R4/secpriv-module.html) and the [security checklist](http://hl7.org/fhir/R4/security.html). This page does not repeat them; it links the overarching data protection framework and states what is **specific to this module**.
 
 ### The overarching data protection concept
 
@@ -27,7 +27,7 @@ Unlike purely structured KDS modules, this module also carries the **document bo
 
 **Embedding vs. reference.** The profile permits both transport forms for the document body: embedded as Base64 (`content.attachment.data`, slice `Binaerdaten`) or as a locally resolvable reference (`content.attachment.url`, slice `Verweis`). Where the document contains **medical or identifying data about patients or treatment**, the document body SHOULD NOT be embedded when data is provided via the German Portal for Medical Research Data (FDPG) or in UAC-approved projects: embedded content travels through every processing and transfer stage and escapes the document store's access control. A reference (`Verweis`) keeps resolution under the control of the data-holding site (DIZ), where it can be filtered and logged in conformance with DIMP. Documents without such content — for example fully surrogated versions — are not affected by this restriction.
 
-**Mark the de-identification status explicitly.** Completed de-identification is expressed via suitable `securityLabel` values and/or the [NLP Processing Status extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.md) (codes `unprocessed`, `preprocessed`, `annotated`, `surrogated`). The data-holding site is responsible for referencing only anonymized or pseudonymized variants for research purposes (`subject`, `context.encounter` → the base module's pseudonymized profiles).
+**Mark the de-identification status explicitly.** Completed de-identification is expressed via suitable `securityLabel` values and/or the [NLP Processing Status extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.md) (the four top-level codes `unprocessed`, `preprocessed`, `annotated`, `surrogated` — `preprocessed` and `annotated` each with the level-2 codes `format-change`/`content-change` and `preanno`/`deid`/`semantic` respectively). The data-holding site is responsible for referencing only anonymized or pseudonymized variants for research purposes (`subject` → the base module's pseudonymized Patient profile; `context.encounter` has no pseudonymized variant in the base module).
 
 **Processing chains can open re-identification paths.** The NLP pipeline links original, plain-text, de-identified and annotated versions via `relatesTo` (`transforms`/`appends`). A data provision must not deliver de-identified or surrogated documents together with resolvable references to their original versions — otherwise the chain undoes the de-identification.
 

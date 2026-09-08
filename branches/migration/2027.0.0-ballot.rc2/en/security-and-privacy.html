@@ -360,20 +360,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <!-- markdownlint-disable MD041 -->
-<!-- English rendering of input/pagecontent/security-and-privacy.md.
+<!-- English translation of the German default page
+     input/pagecontent/security-and-privacy.md (DE-first) — keep both files in
+     step.
      Structured in the TF-KDS-agreed THREE stages: (1) the overarching data
      protection concept, (2) DIMP in the data portal, (3) the
      module-specific aspects. Stages 1 and 2 are static overarching content —
      keep them; stage 3 is where your module writes. Module-specific
      aspects WRITTEN from the profile and module descriptions (owner request
-     2026-08-30, revising the earlier default-text decision; review box dissolved 2026-09-04).
-     German mirror: input/translations/de/pagecontent/security-and-privacy.md —
-     both files must say the same thing. -->
+     2026-08-30, revising the earlier default-text decision; review box dissolved 2026-09-04). -->
 
 <p>This section addresses security and privacy experts. General requirements are in
 the FHIR core specification —
-<a href="https://build.fhir.org/secpriv-module.html">Security &amp; Privacy Module</a> and the
-<a href="https://build.fhir.org/security.html">security checklist</a>. This page does not
+<a href="http://hl7.org/fhir/R4/secpriv-module.html">Security &amp; Privacy Module</a> and the
+<a href="http://hl7.org/fhir/R4/security.html">security checklist</a>. This page does not
 repeat them; it links the overarching data protection framework and states what is
 <strong>specific to this module</strong>.</p>
 
@@ -435,10 +435,14 @@ affected by this restriction.</p>
 <p><strong>Mark the de-identification status explicitly.</strong> Completed de-identification
 is expressed via suitable <code class="language-plaintext highlighter-rouge">securityLabel</code> values and/or the
 <a href="StructureDefinition-mii-ex-dokument-nlp-processing-status.html">NLP Processing Status extension</a>
-(codes <code class="language-plaintext highlighter-rouge">unprocessed</code>, <code class="language-plaintext highlighter-rouge">preprocessed</code>, <code class="language-plaintext highlighter-rouge">annotated</code>, <code class="language-plaintext highlighter-rouge">surrogated</code>). The
+(the four top-level codes <code class="language-plaintext highlighter-rouge">unprocessed</code>, <code class="language-plaintext highlighter-rouge">preprocessed</code>, <code class="language-plaintext highlighter-rouge">annotated</code>,
+<code class="language-plaintext highlighter-rouge">surrogated</code> — <code class="language-plaintext highlighter-rouge">preprocessed</code> and <code class="language-plaintext highlighter-rouge">annotated</code> each with the level-2 codes
+<code class="language-plaintext highlighter-rouge">format-change</code>/<code class="language-plaintext highlighter-rouge">content-change</code> and <code class="language-plaintext highlighter-rouge">preanno</code>/<code class="language-plaintext highlighter-rouge">deid</code>/<code class="language-plaintext highlighter-rouge">semantic</code>
+respectively). The
 data-holding site is responsible for referencing only anonymized or
-pseudonymized variants for research purposes (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code>
-→ the base module's pseudonymized profiles).</p>
+pseudonymized variants for research purposes (<code class="language-plaintext highlighter-rouge">subject</code> → the base module's
+pseudonymized Patient profile; <code class="language-plaintext highlighter-rouge">context.encounter</code> has no pseudonymized
+variant in the base module).</p>
 
 <p><strong>Processing chains can open re-identification paths.</strong> The NLP pipeline
 links original, plain-text, de-identified and annotated versions via
@@ -476,7 +480,7 @@ project-specific DIMP configuration.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

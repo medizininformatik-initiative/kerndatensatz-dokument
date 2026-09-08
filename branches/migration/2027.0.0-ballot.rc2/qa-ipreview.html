@@ -249,7 +249,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 
           IG &copy; 2026+ NUM-DIZ.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on FHIR 4.0.1.
-          Generated 2026-09-07
+          Generated 2026-09-08
           
           
             
@@ -275,7 +275,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 
           IG &copy; 2026+ NUM-DIZ.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf FHIR 4.0.1.
-          Erstellt 2026-09-07
+          Erstellt 2026-09-08
           
           
             
@@ -495,7 +495,7 @@ Konformität<b class="caret"> </b>          </a>
 .  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
-          Erstellt           <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Erstellt           <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
 
                     <br/>
 
@@ -719,12 +719,12 @@ Konformität<b class="caret"> </b>          </a>
           <a href="de/ImplementationGuide-mii-ig-dokument.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">github.com</a>
         </td>
         <td>
           <strong>Woher die Versionen kommen.</strong>
  Jedes Paket der Tabelle ist direkt in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
 
 (          <code class="language-plaintext highlighter-rouge">dependencies:</code>
@@ -816,7 +816,7 @@ Some content from IHE&reg; Copyright &copy; 2015           <a href="http://www.i
           <a href="de/ImplementationGuide-mii-ig-dokument.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">github.com</a>
         </td>
         <td>
 Expansionsparameter sind Query-Parameter, die an eine           <code class="language-plaintext highlighter-rouge">ValueSet</code>
@@ -828,17 +828,24 @@ ValueSet-Definition erzeugt wird. Die für diesen IG verwendeten
           <a href="https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html">IG-Parameter</a>
 
 sind in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
 
 (          <code class="language-plaintext highlighter-rouge">parameters:</code>
-) deklariert. Ein Modul, das seine Expansionsparameter über ein
-CRMI-Manifest pinnt, verlinkt hier zusätzlich die generierte
-          <code class="language-plaintext highlighter-rouge">Parameters</code>
--Ressource (siehe die auskommentierten Manifest-Blöcke in
-          <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>
- und die Seite Metadata Overview, sofern das Modul sie
-behält).
+) deklariert. Dieser Leitfaden pinnt seine Expansionsparameter
+zusätzlich über ein CRMI-Manifest: die Ressource
+          <a href="Parameters-mii-param-dokument-manifest.html">
+<code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code>          </a>
+
+(SNOMED CT International Edition           <code class="language-plaintext highlighter-rouge">20260701</code>
+), verlinkt über
+          <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>
+ und dem Publisher über           <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+ /
+          <code class="language-plaintext highlighter-rouge">pin-manifest</code>
+ bekannt gemacht. Einzelheiten beschreibt die Seite
+          <a href="metadata.html">Metadaten-Übersicht</a>
+.
         </td>
       </tr>
       <tr>
@@ -10315,7 +10322,7 @@ für die technischen Artefakte siehe           <a href="profiles.html">Profile</
         <td>
 Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur           <a href="https://www.hl7.org/fhir/R4/documentreference.html#resource">DocumentReference-Ressource</a>
  orientiert. Die bestehenden der           <a href="https://simplifier.net/base1x0">KBV Basis-Profile</a>
-, des           <a href="https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5">Gematik ISiK</a>
+, des           <a href="https://simplifier.net/packages/de.gematik.isik/6.0.0">Gematik ISiK</a>
  und von           <a href="https://profiles.ihe.net/ITI/MHD">IHE MHD</a>
  sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Seite           <a href="kompatibilitaet.html">Kompatibilität</a>
 ) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
@@ -10329,7 +10336,7 @@ Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur           <a
           <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">art-decor.org</a>
         </td>
         <td>
-Wir empfehlen den auch in ISIK verwendeten           <a href="https://simplifier.net/KDL/">DVMD KDL-Standard</a>
+Wir empfehlen den auch in ISiK verwendeten           <a href="https://simplifier.net/kdl">DVMD KDL-Standard</a>
  für die präzise Typbeschreibung (          <code class="language-plaintext highlighter-rouge">type</code>
 ) sowie die           <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">IHE XDS Class-Codes</a>
  für die gröbere Dokumentkategorie (          <code class="language-plaintext highlighter-rouge">category</code>
@@ -10471,11 +10478,11 @@ Die offiziell beschlossene Version des Informationsmodells befinden sich auf    
           <a href="de/metadata.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">github.com</a>
         </td>
         <td>
 Die folgenden CRMI-Metadaten werden in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
 
 gesetzt und landen in der erzeugten           <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>
@@ -10487,19 +10494,25 @@ gesetzt und landen in der erzeugten           <code class="language-plaintext hi
           <a href="de/metadata.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/input/fsh/rulesets/crmi.fsh">github.com</a>
         </td>
         <td>
-[TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die
-Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile
-zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements,
-CodeSysteme und ValueSets anwendet — das Idiom aus           <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
- ist
-ein gemeinsames           <code class="language-plaintext highlighter-rouge">RuleSet</code>
- in           <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh">
+          <strong>CRMI-Profile auf Artefakt-Ebene.</strong>
+ Die CRMI-Shareable-/Publishable-Profile
+beansprucht dieses Modul auf der           <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>
+-Ressource. Seine
+StructureDefinitions, CapabilityStatements, CodeSysteme und ValueSets tragen
+sie nicht; CodeSysteme und ValueSets beanspruchen die HL7-Basisprofile
+          <em>ShareableCodeSystem</em>
+ bzw.           <em>ShareableValueSet</em>
+. Für die artefaktweise
+Anwendung liegt das Idiom aus           <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
+ als gemeinsames           <code class="language-plaintext highlighter-rouge">RuleSet</code>
+
+in           <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/input/fsh/rulesets/crmi.fsh">
 <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code>          </a>
- —, ergänzen Sie die
-entsprechenden Zeilen.]
+
+bereit.
         </td>
       </tr>
       <tr>
@@ -10605,7 +10618,7 @@ nicht dieser Leitfaden.
           <a href="de/translationinfo.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md">github.com</a>
         </td>
         <td>
 Übersetzte Seiten liegen unter           <code class="language-plaintext highlighter-rouge">input/translations/en/pagecontent/</code>
@@ -10614,7 +10627,7 @@ Dateiname wie die deutsche Seite); Ressourcen-Übersetzungen als           <code
 -Dateien
 unter           <code class="language-plaintext highlighter-rouge">input/translations/en/</code>
 . Details:
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md">
 <code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code>          </a>
  in diesem Repository.
         </td>
@@ -10822,7 +10835,7 @@ Conformance<b class="caret"> </b>          </a>
 .  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
-          Generated           <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Generated           <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
 
                     <br/>
 
@@ -11046,13 +11059,13 @@ Conformance<b class="caret"> </b>          </a>
           <a href="en/ImplementationGuide-mii-ig-dokument.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">github.com</a>
         </td>
         <td>
           <strong>Where the versions come from.</strong>
  Every package in the table is pinned
 directly in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
 
 (          <code class="language-plaintext highlighter-rouge">dependencies:</code>
@@ -11079,7 +11092,7 @@ and the exact versions a concrete build used are recorded in its
           <a href="en/ImplementationGuide-mii-ig-dokument.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">github.com</a>
         </td>
         <td>
 Expansion parameters are query parameters that can be passed to a           <code class="language-plaintext highlighter-rouge">ValueSet</code>
@@ -11090,16 +11103,24 @@ full list of codes is generated from the ValueSet definition. The
           <a href="https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html">IG Parameters</a>
 
 used for this IG are declared in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
 
 (          <code class="language-plaintext highlighter-rouge">parameters:</code>
-). A module that pins its expansion parameters through a CRMI
-manifest additionally links the generated           <code class="language-plaintext highlighter-rouge">Parameters</code>
- resource from here (see
-the commented manifest blocks in           <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>
- and the Metadata Overview
-page, if the module keeps it).
+). This guide additionally pins its expansion parameters through
+a CRMI manifest: the resource
+          <a href="Parameters-mii-param-dokument-manifest.html">
+<code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code>          </a>
+
+(SNOMED CT International Edition           <code class="language-plaintext highlighter-rouge">20260701</code>
+), linked via
+          <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>
+ and made known to the publisher through
+          <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+ /           <code class="language-plaintext highlighter-rouge">pin-manifest</code>
+. The
+          <a href="metadata.html">Metadata Overview</a>
+ page has the details.
         </td>
       </tr>
       <tr>
@@ -11201,7 +11222,7 @@ for the technical artifacts see           <a href="profiles.html">Profiles</a>
         <td>
 This specification follows the FHIR core specification for the           <a href="https://www.hl7.org/fhir/R4/documentreference.html#resource">DocumentReference resource</a>
 . The existing profiles of the           <a href="https://simplifier.net/base1x0">KBV base profiles</a>
-, of           <a href="https://simplifier.net/guide/isik-dokumentenaustausch-stufe-5">Gematik ISiK</a>
+, of           <a href="https://simplifier.net/packages/de.gematik.isik/6.0.0">Gematik ISiK</a>
  and of           <a href="https://profiles.ihe.net/ITI/MHD">IHE MHD</a>
  were taken into account during modelling with regard to freedom from contradiction (see the           <a href="kompatibilitaet.html">Compatibility</a>
  page). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
@@ -11215,7 +11236,7 @@ This specification follows the FHIR core specification for the           <a href
           <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">art-decor.org</a>
         </td>
         <td>
-We recommend the           <a href="https://simplifier.net/KDL/">DVMD KDL standard</a>
+We recommend the           <a href="https://simplifier.net/kdl">DVMD KDL standard</a>
 , which is also used in ISiK, for the precise type description (          <code class="language-plaintext highlighter-rouge">type</code>
 ), as well as the           <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">IHE XDS class codes</a>
  for the coarser document category (          <code class="language-plaintext highlighter-rouge">category</code>
@@ -11353,11 +11374,11 @@ The officially adopted version of the information model is located on           
           <a href="en/metadata.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">github.com</a>
         </td>
         <td>
 The following CRMI-related metadata is set in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml">
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
 
 and ends up in the generated           <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>
@@ -11369,18 +11390,24 @@ and ends up in the generated           <code class="language-plaintext highlight
           <a href="en/metadata.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/input/fsh/rulesets/crmi.fsh">github.com</a>
         </td>
         <td>
-[TODO: Enable the blocks your module needs and then update the tables above.
-If your module also applies the CRMI shareable/publishable profiles to its own
-StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
+          <strong>CRMI profiles at artifact level.</strong>
+ This module claims the CRMI
+shareable/publishable profiles on the           <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>
+ resource. Its
+StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets do not
+carry them; the CodeSystems and ValueSets claim the HL7 base profiles
+          <em>ShareableCodeSystem</em>
+ and           <em>ShareableValueSet</em>
+. For artifact-level use, the
           <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
- idiom is a shared           <code class="language-plaintext highlighter-rouge">RuleSet</code>
+ idiom is available as a shared           <code class="language-plaintext highlighter-rouge">RuleSet</code>
  in
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/input/fsh/rulesets/crmi.fsh">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/input/fsh/rulesets/crmi.fsh">
 <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code>          </a>
- — add the corresponding rows here.]
+.
         </td>
       </tr>
       <tr>
@@ -11482,7 +11509,7 @@ by the DIMP configuration, not by this guide.
           <a href="en/translationinfo.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md">github.com</a>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md">github.com</a>
         </td>
         <td>
 Translated pages live under           <code class="language-plaintext highlighter-rouge">input/translations/en/pagecontent/</code>
@@ -11491,7 +11518,7 @@ name as the German page); resource translations are           <code class="langu
  files under
           <code class="language-plaintext highlighter-rouge">input/translations/en/</code>
 . Details:
-          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/docs/recipes/add-translation.md">
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md">
 <code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code>          </a>
  in this repository.
         </td>

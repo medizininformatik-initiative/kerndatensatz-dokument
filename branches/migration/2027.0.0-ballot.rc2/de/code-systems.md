@@ -9,11 +9,11 @@ Diese Seite beschreibt die CodeSystems des Moduls **Dokument** (Namenskonvention
 
 > **Wichtig:** CodeSystem-Ressourcen externer Terminologien (z. B. ICD-10-GM, OPS, SNOMED CT) werden in diesem Modul **nicht** publiziert, sondern über den zentralen KDS-Terminologieserver (SU-TermServ) bezogen: [https://mii-termserv.de/](https://mii-termserv.de/).
 
-Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu externen Terminologien stehen bei den jeweiligen Herausgebern (siehe [Impressum](index.md#urheberrecht-und-lizenz)).
+Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu externen Terminologien stehen bei den jeweiligen Herausgebern (siehe [Urheberrecht und Lizenz](index.md#urheberrecht-und-lizenz)).
 
 -------
 
-Modul-eigene CodeSystems, beim Build aus dem Paket gelesen:
+Modul-eigene CodeSystems, beim Build aus dem Paket gelesen (Beschreibung in der Quellsprache der Ressource):
 
 | | | |
 | :--- | :--- | :--- |

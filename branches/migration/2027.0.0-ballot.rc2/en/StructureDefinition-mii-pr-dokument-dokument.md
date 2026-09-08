@@ -13,7 +13,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-d
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_PR_Dokument_Dokument |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_Dokument_Dokument |
 
  
 Klinisches Dokument mit zugehörigen Metadaten 
@@ -37,6 +37,7 @@ An overview of all example instances of the module is on the [Examples](examples
 **Usages:**
 
 * Examples for this Profile: [DocumentReference/AmandaAlzheimerAnnotiertesDokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md), [DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md), [DocumentReference/AmandaAlzheimerKlartextDokument](DocumentReference-AmandaAlzheimerKlartextDokument.md) and [DocumentReference/AmandaAlzheimerOriginalDokument](DocumentReference-AmandaAlzheimerOriginalDokument.md)
+* CapabilityStatements using this Profile: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.dokument|current/StructureDefinition/StructureDefinition-mii-pr-dokument-dokument.json)
 
@@ -177,7 +178,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
     }]
   },
   "status" : "active",
-  "date" : "2026-09-07T18:38:14+00:00",
+  "date" : "2026-09-08T08:42:22+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

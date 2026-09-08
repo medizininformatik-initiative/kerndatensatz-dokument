@@ -334,14 +334,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <!-- markdownlint-disable MD041 -->
-<!-- German mirror of input/pagecontent/ImplementationGuide-mii-ig-dokument.md —
-     both files must say the same thing. ALL generated fragments (cross-version
-     analysis included) are included with an explicit language suffix (the Publisher's lang-fragment keyword resolves to -en on every page, measured 2026-09-04): the pinned
-     publisher writes _includes/<name>-<lang>.xhtml plus a bare default-language
-     alias, and no .html variant — kerndatensatz-basis' .html include names
-     belong to a different publisher version, do not copy them here.
-     FILE NAME CARRIES THE IG ID — rename together with the English page and
-     the IG-level .po catalogue (docs/recipes/create-a-new-module.md step 4). -->
+<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
+     input/translations/en/pagecontent/ImplementationGuide-mii-ig-dokument.md —
+     beide Dateien müssen dasselbe aussagen. ALLE erzeugten Fragmente (auch die
+     versionsübergreifende Analyse) werden mit ausdrücklichem Sprachsuffix
+     eingebunden (das lang-Fragment-Schlüsselwort des Publishers löst auf jeder
+     Seite zu -en auf, gemessen am 2026-09-04): Der gepinnte Publisher schreibt
+     _includes/<name>-<lang>.xhtml plus einen Alias ohne Suffix für die
+     Standardsprache, aber keine .html-Variante — die .html-Include-Namen aus
+     kerndatensatz-basis gehören zu einer anderen Publisher-Version und dürfen
+     hier nicht übernommen werden.
+     DER DATEINAME TRÄGT DIE IG-ID — zusammen mit der englischen Seite und dem
+     IG-weiten .po-Katalog umbenennen (docs/recipes/create-a-new-module.md
+     Schritt 4). -->
 <p>Diese ImplementationGuide-Ressource definiert die technischen Details dieser
 Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.</p>
 
@@ -461,7 +466,7 @@ Version 2025</p>
 
 <blockquote class="ig-highlight ig-highlight-grey">
   <p><strong>Woher die Versionen kommen.</strong> Jedes Paket der Tabelle ist direkt in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
 (<code class="language-plaintext highlighter-rouge">dependencies:</code>) gepinnt — auch <code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code> (THO) und
 <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code>, und diese beiden mit Bedacht: Die
 <a href="https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages">Automatik des IG Publishers</a>
@@ -537,12 +542,14 @@ expandiert wird — also wie die vollständige Liste der Codes aus der
 ValueSet-Definition erzeugt wird. Die für diesen IG verwendeten
 <a href="https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html">IG-Parameter</a>
 sind in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
-(<code class="language-plaintext highlighter-rouge">parameters:</code>) deklariert. Ein Modul, das seine Expansionsparameter über ein
-CRMI-Manifest pinnt, verlinkt hier zusätzlich die generierte
-<code class="language-plaintext highlighter-rouge">Parameters</code>-Ressource (siehe die auskommentierten Manifest-Blöcke in
-<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> und die Seite Metadata Overview, sofern das Modul sie
-behält).</p>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
+(<code class="language-plaintext highlighter-rouge">parameters:</code>) deklariert. Dieser Leitfaden pinnt seine Expansionsparameter
+zusätzlich über ein CRMI-Manifest: die Ressource
+<a href="Parameters-mii-param-dokument-manifest.html"><code class="language-plaintext highlighter-rouge">Parameters/mii-param-dokument-manifest</code></a>
+(SNOMED CT International Edition <code class="language-plaintext highlighter-rouge">20260701</code>), verlinkt über
+<code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code> und dem Publisher über <code class="language-plaintext highlighter-rouge">path-expansion-params</code> /
+<code class="language-plaintext highlighter-rouge">pin-manifest</code> bekannt gemacht. Einzelheiten beschreibt die Seite
+<a href="metadata.html">Metadaten-Übersicht</a>.</p>
 
 
 
@@ -569,7 +576,7 @@ behält).</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 7, 2026 18:38+0000">2026-09-07</span>
+          Erstellt <span title="Tue, Sep 8, 2026 08:42+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

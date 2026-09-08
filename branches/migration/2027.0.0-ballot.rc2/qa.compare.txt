@@ -1,30 +1,30 @@
 MII_IG_Dokument : Validation Results
 =========================================
 
-err = 4, warn = 120, info = 822
+err = 4, warn = 116, info = 481
 $--
 Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz.dokument#$-- (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
  Build Errors : 1 / 3 / 0
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 7 / 23
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 2 / 56
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument : 0 / 1 / 6
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument : 0 / 1 / 6
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerKlartextDokument : 1 / 3 / 6
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerOriginalDokument : 1 / 3 / 6
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 3 / 27
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 2 / 47
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument : 0 / 1 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument : 0 / 1 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerKlartextDokument : 1 / 3 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerOriginalDokument : 1 / 3 / 5
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerAbteilungskontakt : 0 / 2 / 4
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerEinrichtungskontakt : 0 / 2 / 4
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerVersorgungsstellenKontakt : 0 / 2 / 4
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 1 / 13 / 71
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 1 / 13 / 49
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Patient-AmandaAlzheimer : 0 / 2 / 1
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 1 / 33
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 67 / 136
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 0 / 7 / 454
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 0 / 2 / 6
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 0 / 2 / 6
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 5 / 7
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 2 / 7
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 0 / 2 / 5
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 0 / 2 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 1 / 21
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 67 / 26
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 0 / 7 / 272
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 0 / 2 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 0 / 2 / 5
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 5 / 6
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 2 / 6
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 0 / 2 / 4
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 0 / 2 / 4
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/Parameters-expansion-manifest : 0 / 0 / 1
 </table>
 == n/a ==
@@ -33,10 +33,12 @@ WARNING: ImplementationGuide.dependency[2].url: The canonical URL for an Impleme
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be de.medizininformatikinitiative.kerndatensatz.dokument
 WARNING: 5: An HTML fragment from the set [expansion-params.xhtml, expansion-params.xhtml] is not included anywhere in the produced implementation guide
 == fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement.json ==
+INFORMATION: CapabilityStatement.rest[0].resource[0].supportedProfile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.rc1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-id to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[1].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-profile to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[2].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-identifier to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[3].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-status to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[4].definition: Pinned the version of https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status to 2027.0.0-ballot.rc3
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[5].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-type to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[6].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-category to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[7].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-patient to 4.0.1
@@ -48,40 +50,31 @@ INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[12].definition:
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[13].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-contenttype to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[14].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-language to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[15].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-location to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[16].definition: Pinned the version of https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation to 2027.0.0-ballot.rc3
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[17].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-format to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[18].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-encounter to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[19].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-event to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[20].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-period to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[21].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-facility to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[22].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-setting to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[23].definition: Pinned the version of https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status to 2027.0.0-ballot.rc3
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.format[0].code: Unknown Code 'xml' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.format[1].code: Unknown Code 'json' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.rest[0].resource[0].supportedProfile[0]: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement/metadata' kann nicht aufgelöst werden
-WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.rest[0].resource[0].searchParam[4].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-doc-status' kann nicht aufgelöst werden
-WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.rest[0].resource[0].searchParam[16].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-creation' kann nicht aufgelöst werden
-WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.rest[0].resource[0].searchParam[23].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-nlp-processing-status' kann nicht aufgelöst werden
 INFORMATION: Resource: The resource CapabilityStatement/mii-cps-dokument-capabilitystatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status.json ==
 INFORMATION: CodeSystem.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablecodesystem to 4.0.2
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.name.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.description.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].concept[0].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].concept[0].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].concept[1].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].concept[1].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].concept[0].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
@@ -90,10 +83,8 @@ INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concep
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].concept[1].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].concept[2].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[2].concept[2].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[3].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[3].designation[0].language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[3].designation[0].language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
-INFORMATION: CodeSystem.publisher: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
 INFORMATION: ContactDetail.name: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
 INFORMATION: Coding.display: Unused 'en' translation 'Germany' -> 'Germany'
 INFORMATION: CodeSystem.concept.display: Unused 'en' translation 'Original' -> 'Original document'
@@ -123,21 +114,18 @@ INFORMATION: CodeSystem.concept.designation.value: Unused 'en' translation 'Surr
 INFORMATION: DocumentReference/AmandaAlzheimerAnnotiertesDokument: DocumentReference.type: Keiner der angegebenen Codes ist im Valueset 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://dvmd.de/fhir/CodeSystem/kdl#AD010110, http://ihe-d.de/CodeSystems/IHEXDStypeCode#BERI)
 INFORMATION: DocumentReference/AmandaAlzheimerAnnotiertesDokument: DocumentReference.securityLabel[0].coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-Confidentiality#L for language(s) 'de'. The display is 'low' which is a valid display for the default language
 WARNING: DocumentReference/AmandaAlzheimerAnnotiertesDokument: DocumentReference.content[0].attachment.contentType.code: Unknown Code 'application/zip' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-INFORMATION: DocumentReference/AmandaAlzheimerAnnotiertesDokument: DocumentReference.content[0].attachment.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: DocumentReference/AmandaAlzheimerAnnotiertesDokument: DocumentReference.content[0].attachment.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: DocumentReference/AmandaAlzheimerAnnotiertesDokument: DocumentReference.content[0].attachment.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 == fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json ==
 INFORMATION: DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument: DocumentReference.type: Keiner der angegebenen Codes ist im Valueset 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://dvmd.de/fhir/CodeSystem/kdl#AD010110, http://ihe-d.de/CodeSystems/IHEXDStypeCode#BERI)
 INFORMATION: DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument: DocumentReference.securityLabel[0].coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-Confidentiality#L for language(s) 'de'. The display is 'low' which is a valid display for the default language
 WARNING: DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument: DocumentReference.content[0].attachment.contentType.code: Unknown Code 'text/plain' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-INFORMATION: DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument: DocumentReference.content[0].attachment.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument: DocumentReference.content[0].attachment.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument: DocumentReference.content[0].attachment.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 == fsh-generated/resources/DocumentReference-AmandaAlzheimerKlartextDokument.json ==
 INFORMATION: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.type: Keiner der angegebenen Codes ist im Valueset 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://dvmd.de/fhir/CodeSystem/kdl#AD010110, http://ihe-d.de/CodeSystems/IHEXDStypeCode#BERI)
 INFORMATION: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.securityLabel[0].coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N for language(s) 'de'. The display is 'normal' which is a valid display for the default language
 WARNING: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.content[0].attachment.contentType.code: Unknown Code 'text/plain' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-INFORMATION: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.content[0].attachment.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.content[0].attachment.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.content[0].attachment.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.context.event[0]: ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html kann nicht gefunden werden
@@ -147,7 +135,6 @@ ERROR: DocumentReference/AmandaAlzheimerKlartextDokument: DocumentReference.cont
 INFORMATION: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.type: Keiner der angegebenen Codes ist im Valueset 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://dvmd.de/fhir/CodeSystem/kdl#AD010110, http://ihe-d.de/CodeSystems/IHEXDStypeCode#BERI)
 INFORMATION: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.securityLabel[0].coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N for language(s) 'de'. The display is 'normal' which is a valid display for the default language
 WARNING: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.content[0].attachment.contentType.code: Unknown Code 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-INFORMATION: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.content[0].attachment.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.content[0].attachment.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.content[0].attachment.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: DocumentReference/AmandaAlzheimerOriginalDokument: DocumentReference.context.event[0]: ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html kann nicht gefunden werden
@@ -176,7 +163,6 @@ INFORMATION: ImplementationGuide.definition.resource[1].profile[0]: Pinned the v
 INFORMATION: ImplementationGuide.definition.resource[2].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.rc1
 INFORMATION: ImplementationGuide.definition.resource[5].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.rc1
 INFORMATION: ImplementationGuide.definition.resource[17].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.rc1
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[3].value.ofType(CodeableConcept).coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package for language(s) 'de'. The display is 'Package' which is a valid display for the default language
@@ -187,27 +173,6 @@ WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[0].u
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[1].uri: Canonical URL 'http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[5].uri: Canonical URL 'http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.resource[6].description: Wert sollte nicht mit Leerzeichen beginnen oder enden
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[0].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[1].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[1].page[0].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[1].page[0].page[0].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[1].page[1].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[2].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[3].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[4].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[5].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[6].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[7].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[8].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[9].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[10].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[11].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[12].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[13].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[14].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[15].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[16].title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[0]: The canonical URL http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4 doesn't point to an actual ImplementationGuide resource
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[1]: The canonical URL http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik doesn't point to an actual ImplementationGuide resource
 ERROR: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[2]: The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
@@ -273,20 +238,8 @@ INFORMATION: StructureDefinition.snapshot.element[13].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[14].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[15].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.differential.element[4].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status to 2027.0.0-ballot.rc1
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.name.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.snapshot.element[0].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.snapshot.element[0].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.snapshot.element[4].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.snapshot.element[4].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.differential.element[0].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.differential.element[0].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.differential.element[3].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.differential.element[3].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: Resource: The resource StructureDefinition/mii-ex-dokument-nlp-processing-status could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: StructureDefinition.publisher: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
-INFORMATION: StructureDefinition.contact.name: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
 == fsh-generated/resources/StructureDefinition-mii-lm-dokument.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[0].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
@@ -312,184 +265,74 @@ INFORMATION: StructureDefinition.snapshot.element[33].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[33].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.name.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.mapping[0].name.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.mapping[0].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[0].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[0].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[0]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[1]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[2]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[3].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[3].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[3]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[4]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[5]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[6]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[7].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[7].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[7]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[8].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[8].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[8]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[9].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[9].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[9]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[10].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[10].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[10]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[11].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[11].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[11]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[12].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[12].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[12]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[13].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[13].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[13]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[14].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[14].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[14]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[15].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[15].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[15]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[16].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[16].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[16]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[17]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[18]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[19]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[20].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[20].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[20]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[21].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[21].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[21]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[22].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[22].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[22]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[23]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[24]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[25]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[26].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[26].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[26]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[27].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[27].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[27]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[28].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[28].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[28]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[29].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[29].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[29]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[30].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[30].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[30]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[31].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[31].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[31]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[32]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[33]: Regel eld-20 fehlgeschlagen
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[34]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[35].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[35].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[35]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[36].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[36].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[36]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[37].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[37].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[37]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[38].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[38].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[38]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[39].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[39].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[39]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[0].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[0].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[0]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[1].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[1].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[1]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[2].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[2].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[2]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[3].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[3].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[3]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[4].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[4].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[4]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[5].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[5].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[5]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[6].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[6].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[6]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[7].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[7].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[7]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[8].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[8].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[8]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[9].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[9].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[9]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[10].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[10].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[10]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[11].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[11].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[11]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[12].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[12].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[12]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[13].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[13].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[13]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[14].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[14].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[14]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[15].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[15].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[15]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[16].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[16].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[16]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[17].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[17].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[17]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[18].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[18].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[18]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[19].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[19].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[19]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[20].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[20].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[20]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[21].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[21].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[21]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[22].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[22].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[22]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[23].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[23].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[23]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[24].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[24].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[24]: Regel eld-20 fehlgeschlagen
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[25].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[25].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.differential.element[25]: Regel eld-20 fehlgeschlagen
 INFORMATION: Resource: The resource StructureDefinition/mii-lm-dokument could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: StructureDefinition.publisher: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
-INFORMATION: StructureDefinition.contact.name: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
 == fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/DocumentReference to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[0].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
@@ -753,197 +596,15 @@ INFORMATION: StructureDefinition.differential.element[62].type[0].targetProfile[
 INFORMATION: StructureDefinition.differential.element[63].binding.valueSet: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSeventCodeList to 2021-07-06T21:19:41
 INFORMATION: StructureDefinition.differential.element[68].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart to 2027.0.0-ballot.rc1
 INFORMATION: StructureDefinition.differential.element[72].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet to 2027.0.0-ballot.rc1
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.name.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.title.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[12].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[16].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[16].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[18].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[18].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[19].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[19].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[19].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[20].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[20].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[20].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[21].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[21].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[21].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[22].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[22].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[22].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[66].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[66].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[66].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[102].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[102].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[102].type[0].targetProfile[1]: There are multiple different potential matches for the url 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot.rc1', found versions: 2026.0.0 (from de.medizininformatikinitiative.kerndatensatz.base#2026.0.0), 2027.0.0-ballot.rc1 (from de.medizininformatikinitiative.kerndatensatz.base#2027.0.0-ballot.rc1). Suggested fix: change the canonical reference from 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient' to 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient|2027.0.0-ballot.rc1'
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[102].type[0].targetProfile[2]: There are multiple different potential matches for the url 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot.rc1', found versions: 2026.0.0 (from de.medizininformatikinitiative.kerndatensatz.base#2026.0.0), 2027.0.0-ballot.rc1 (from de.medizininformatikinitiative.kerndatensatz.base#2027.0.0-ballot.rc1). Suggested fix: change the canonical reference from 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert' to 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert|2027.0.0-ballot.rc1'
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[107].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[107].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[111].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[111].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[111].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[112].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[112].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[113].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[113].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[114].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[114].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[114].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[115].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[115].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[119].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[119].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[122].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[122].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[122].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[123].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[123].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[123].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[124].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[124].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[124].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[125].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[125].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[125].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[129].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[129].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[129].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[130].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[130].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[130].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[135].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[135].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[138].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[138].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[138].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[139].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[139].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[139].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[140].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[140].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[140].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[141].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[141].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[141].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[145].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[145].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[145].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[146].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[146].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[146].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[151].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[151].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[154].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[154].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[154].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[155].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[155].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[155].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[156].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[156].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[156].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[157].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[157].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[157].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[161].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[161].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[161].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[162].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[162].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[162].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[163].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[163].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[167].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[167].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[167].type[0].targetProfile[1]: There are multiple different potential matches for the url 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot.rc1', found versions: 2026.0.0 (from de.medizininformatikinitiative.kerndatensatz.base#2026.0.0), 2027.0.0-ballot.rc1 (from de.medizininformatikinitiative.kerndatensatz.base#2027.0.0-ballot.rc1). Suggested fix: change the canonical reference from 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung' to 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2027.0.0-ballot.rc1'
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[168].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[168].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[180].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[180].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[181].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[181].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[181].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[193].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[193].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[193].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[4].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[4].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[5].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[5].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[6].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[6].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[6].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[7].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[7].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[7].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[8].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[8].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[8].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[9].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[9].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[9].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[21].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[21].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[21].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[31].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[31].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[31].type[0].targetProfile[1]: There are multiple different potential matches for the url 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot.rc1', found versions: 2026.0.0 (from de.medizininformatikinitiative.kerndatensatz.base#2026.0.0), 2027.0.0-ballot.rc1 (from de.medizininformatikinitiative.kerndatensatz.base#2027.0.0-ballot.rc1). Suggested fix: change the canonical reference from 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient' to 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient|2027.0.0-ballot.rc1'
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[31].type[0].targetProfile[2]: There are multiple different potential matches for the url 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot.rc1', found versions: 2026.0.0 (from de.medizininformatikinitiative.kerndatensatz.base#2026.0.0), 2027.0.0-ballot.rc1 (from de.medizininformatikinitiative.kerndatensatz.base#2027.0.0-ballot.rc1). Suggested fix: change the canonical reference from 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert' to 'https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/PatientPseudonymisiert|2027.0.0-ballot.rc1'
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[32].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[32].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[33].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[33].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[33].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[34].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[34].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[35].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[35].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[36].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[36].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[36].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[37].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[37].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[38].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[38].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[39].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[39].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[39].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[40].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[40].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[40].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[41].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[41].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[41].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[42].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[42].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[42].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[43].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[43].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[43].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[44].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[44].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[44].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[61].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[61].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[62].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[62].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[62].type[0].targetProfile[1]: There are multiple different potential matches for the url 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot.rc1', found versions: 2026.0.0 (from de.medizininformatikinitiative.kerndatensatz.base#2026.0.0), 2027.0.0-ballot.rc1 (from de.medizininformatikinitiative.kerndatensatz.base#2027.0.0-ballot.rc1). Suggested fix: change the canonical reference from 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung' to 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung|2027.0.0-ballot.rc1'
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[63].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[63].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[67].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[67].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[68].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[68].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[68].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[72].short.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[72].definition.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.differential.element[72].comment.extension[0].extension[0].value.ofType(code): Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: Resource: The resource StructureDefinition/mii-pr-dokument-dokument could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: StructureDefinition.publisher: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
-INFORMATION: StructureDefinition.contact.name: Unused 'en' translation 'NUM-DIZ' -> 'NUM-DIZ'
 INFORMATION: StructureDefinition.mapping.workflow/name: Unused 'en' translation 'Workflow Pattern' -> 'Workflow Pattern'
 INFORMATION: StructureDefinition.mapping.fhircomposition/name: Unused 'en' translation 'FHIR Composition' -> 'FHIR Composition'
 INFORMATION: StructureDefinition.mapping.w5/name: Unused 'en' translation 'FiveWs Pattern Mapping' -> 'FiveWs Pattern Mapping'
@@ -954,14 +615,12 @@ INFORMATION: StructureDefinition.element.DocumentReference.category/constraint: 
 == fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 INFORMATION: ValueSet.compose.include[3].valueSet[0]: Pinned the version of http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode to 2021-07-06T21:23:52
-INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 == fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 INFORMATION: ValueSet.compose.include[1].valueSet[0]: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode to 2019-05-17T13:46:31
-INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
@@ -969,7 +628,6 @@ WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.jurisdiction[0].coding[0]
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 INFORMATION: ValueSet.compose.include[0].valueSet[0]: Pinned the version of http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode to 1.4.0
 INFORMATION: ValueSet.compose.include[1].valueSet[0]: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSformatCodeDE to 2018-12-14T17:07:12
-INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ValueSet/mii-vs-dokument-format-code: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
@@ -982,19 +640,16 @@ Information: X-Request-Id: be6ac152-c0fc-4a91-b6c3-a5ac0acfc22a)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status.json ==
 INFORMATION: ValueSet.compose.include[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status to 2027.0.0-ballot.rc1
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
-INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 == fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
-INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 == fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
-INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: Reference to draft CodeSystem urn:ietf:bcp:47|2018-05-14
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated

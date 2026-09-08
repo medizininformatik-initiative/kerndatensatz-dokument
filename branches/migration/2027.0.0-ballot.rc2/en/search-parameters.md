@@ -5,66 +5,40 @@
 
 ## Search Parameters
 
-This page lists the search parameters of the **Dokument** module. The module defines no module-specific SearchParameter artifacts (naming convention `MII_SP_<Module>_<Name>`); cross-module search parameters are defined by the Meta module. The normative definition of the supported search parameters is the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md).
+ This page includes translations from the original source language in which the guide was authored. Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html). 
 
-### Supported search parameters
+This page gives example calls for the search parameters of the **Dokument** module. The supported search parameters are defined normatively in the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md); the standard search parameters are defined by the [FHIR base specification (DocumentReference)](https://hl7.org/fhir/R4/documentreference.html#search). The Dokument module defines no SearchParameter artifacts of its own — the three module-specific search parameters are provided by the [Meta module](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3) (package `kerndatensatz.meta` 2027.0.0-ballot.rc3):
 
-The following table reads names and types from the CapabilityStatement at build time:
-
-| | |
-| :--- | :--- |
-| Search parameter | Type |
-| _id | token |
-| _profile | uri |
-| identifier | token |
-| status | token |
-| doc-status | token |
-| type | token |
-| category | token |
-| patient | reference |
-| relation | token |
-| relatesto | reference |
-| relationship | composite |
-| description | string |
-| security-label | token |
-| contenttype | token |
-| language | token |
-| location | uri |
-| creation | date |
-| format | token |
-| encounter | reference |
-| event | token |
-| period | date |
-| facility | token |
-| setting | token |
-| nlp-processing-status | token |
+* `doc-status` — SearchParameter `mii-sp-meta-dokument-documentreference-doc-status` (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status`)
+* `creation` — SearchParameter `mii-sp-meta-dokument-documentreference-attachment-creation` (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation`)
+* `nlp-processing-status` — SearchParameter `mii-sp-meta-dokument-documentreference-nlp-processing-status` (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status`)
 
 ### Example calls
 
-The following search parameters are relevant for this module, including in combination:
+Example calls for the search parameters the CapabilityStatement requires (they can be combined):
 
-1. The search parameter "_id" MUST be supported:Examples:`GET [base]/DocumentReference?_id=12345`Usage notes: further information on searching by "_id" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "_profile" MUST be supported:Examples:`GET [base]/DocumentReference?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument`Usage notes: further information on searching by "_profile" can be found in the [FHIR base specification - section "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
-1. The search parameter "identifier" MUST be supported:Examples:`GET [base]/DocumentReference?identifier=urn:ietf:rfc:3986|urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21`Usage notes: further information on searching by "identifier" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "status" MUST be supported:Examples:`GET [base]/DocumentReference?status=current`Usage notes: further information on searching by "status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "doc-status" MUST be supported:Examples:`GET [base]/DocumentReference?doc-status=final`Usage notes: further information on searching by "doc-status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "type" MUST be supported:Examples:`GET [base]/DocumentReference?type=http://dvmd.de/fhir/CodeSystem/kdl|AD010110`Usage notes: further information on searching by "type" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "category" MUST be supported:Examples:`GET [base]/DocumentReference?category=http://ihe-d.de/CodeSystems/IHEXDSclassCode|BRI`Usage notes: further information on searching by "category" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "patient" MUST be supported:Examples:`GET [base]/DocumentReference?patient=Patient/AmandaAlzheimer`Usage notes: further information on searching by "patient" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
-1. The search parameter "relation" MUST be supported:Examples:`GET [base]/DocumentReference?relation=http://hl7.org/fhir/document-relationship-type|transforms`Usage notes: further information on searching by "relation" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "relatesto" MUST be supported:Examples:`GET [base]/DocumentReference?relatesto=DocumentReference/AmandaAlzheimerOriginalDokument`Usage notes: further information on searching by "relatesto" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
-1. The search parameter "relationship" MUST be supported:Examples:`GET [base]/DocumentReference?relationship=http://hl7.org/fhir/document-relationship-type|transforms$DocumentReference/AmandaAlzheimerOriginalDokument`Usage notes: further information on searching by "relationship" can be found in the [FHIR base specification - section "Composite Search"](https://hl7.org/fhir/R4/search.html#composite).
-1. The search parameter "description" MUST be supported:Examples:`GET [base]/DocumentReference?description:contains=Bericht`Usage notes: further information on searching by "description" can be found in the [FHIR base specification - section "String Search"](https://hl7.org/fhir/R4/search.html#string).
-1. The search parameter "security-label" MUST be supported:Examples:`GET [base]/DocumentReference?security-label=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|L`Usage notes: further information on searching by "security-label" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "contenttype" MUST be supported:Examples:`GET [base]/DocumentReference?contenttype=urn:ietf:bcp:13|text/plain`Usage notes: further information on searching by "contenttype" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "language" MUST be supported:Examples:`GET [base]/DocumentReference?language=urn:ietf:bcp:47|de-AT`Usage notes: further information on searching by "language" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "location" MUST be supported:Examples:`GET [base]/DocumentReference?location=below:http://uk-musterstadt.de/document-management-system`Usage notes: further information on searching by "location" can be found in the [FHIR base specification - section "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
-1. The search parameter "creation" MUST be supported:Examples:`GET [base]/DocumentReference?creation=eq2025-06-23`Usage notes: further information on searching by "creation" can be found in the [FHIR base specification - section "Date Search"](https://hl7.org/fhir/R4/search.html#date).
-1. The search parameter "format" MUST be supported:Examples:`GET [base]/DocumentReference?format=http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode|urn:ihe:iti:xds:2017:mimeTypeSufficient`Usage notes: further information on searching by "format" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "encounter" MUST be supported:Examples:`GET [base]/DocumentReference?encounter=Encounter/AmandaAlzheimerEinrichtungskontakt`Usage notes: further information on searching by "encounter" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
-1. The search parameter "event" MUST be supported:Examples:`GET [base]/DocumentReference?event=http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung|E234`Usage notes: further information on searching by "event" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "period" MUST be supported:Examples:`GET [base]/DocumentReference?period=ge2028-01-24&period=le2028-02-06`Usage notes: further information on searching by "period" can be found in the [FHIR base specification - section "Date Search"](https://hl7.org/fhir/R4/search.html#date).
-1. The search parameter "facility" MUST be supported:Examples:`GET [base]/DocumentReference?facility=http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung|KHS`Usage notes: further information on searching by "facility" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "setting" MUST be supported:Examples:`GET [base]/DocumentReference?setting=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen|INTZ`Usage notes: further information on searching by "setting" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-1. The search parameter "nlp-processing-status" MUST be supported:Examples:`GET [base]/DocumentReference?nlp-processing-status=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|unprocessed`Usage notes: further information on searching by "nlp-processing-status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `_id`Examples:`GET [base]/DocumentReference?_id=12345`Usage notes: further information on searching by "_id" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `_profile`Examples:`GET [base]/DocumentReference?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument`Usage notes: further information on searching by "_profile" can be found in the [FHIR base specification - section "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
+1. `identifier`Examples:`GET [base]/DocumentReference?identifier=urn:ietf:rfc:3986|urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21`Usage notes: further information on searching by "identifier" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `status`Examples:`GET [base]/DocumentReference?status=current`Usage notes: further information on searching by "status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `doc-status`Examples:`GET [base]/DocumentReference?doc-status=final`Usage notes: further information on searching by "doc-status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `type`Examples:`GET [base]/DocumentReference?type=http://dvmd.de/fhir/CodeSystem/kdl|AD010110`Usage notes: further information on searching by "type" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `category`Examples:`GET [base]/DocumentReference?category=http://ihe-d.de/CodeSystems/IHEXDSclassCode|BRI`Usage notes: further information on searching by "category" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `patient`Examples:`GET [base]/DocumentReference?patient=Patient/AmandaAlzheimer`Usage notes: further information on searching by "patient" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
+1. `relation`Examples:`GET [base]/DocumentReference?relation=http://hl7.org/fhir/document-relationship-type|transforms`Usage notes: further information on searching by "relation" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `relatesto`Examples:`GET [base]/DocumentReference?relatesto=DocumentReference/AmandaAlzheimerOriginalDokument`Usage notes: further information on searching by "relatesto" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
+1. `relationship`Examples:`GET [base]/DocumentReference?relationship=http://hl7.org/fhir/document-relationship-type|transforms$DocumentReference/AmandaAlzheimerOriginalDokument`Usage notes: further information on searching by "relationship" can be found in the [FHIR base specification - section "Composite Search"](https://hl7.org/fhir/R4/search.html#composite).
+1. `description`Examples:`GET [base]/DocumentReference?description:contains=Bericht`Usage notes: further information on searching by "description" can be found in the [FHIR base specification - section "String Search"](https://hl7.org/fhir/R4/search.html#string).
+1. `security-label`Examples:`GET [base]/DocumentReference?security-label=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|L`Usage notes: further information on searching by "security-label" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `contenttype`Examples:`GET [base]/DocumentReference?contenttype=urn:ietf:bcp:13|text/plain`Usage notes: further information on searching by "contenttype" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `language`Examples:`GET [base]/DocumentReference?language=urn:ietf:bcp:47|de-AT`Usage notes: further information on searching by "language" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `location`Examples:`GET [base]/DocumentReference?location=below:http://uk-musterstadt.de/document-management-system`Usage notes: further information on searching by "location" can be found in the [FHIR base specification - section "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
+1. `creation`Examples:`GET [base]/DocumentReference?creation=eq2025-06-23`Usage notes: further information on searching by "creation" can be found in the [FHIR base specification - section "Date Search"](https://hl7.org/fhir/R4/search.html#date).
+1. `format`Examples:`GET [base]/DocumentReference?format=http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode|urn:ihe:iti:xds:2017:mimeTypeSufficient`Usage notes: further information on searching by "format" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `encounter`Examples:`GET [base]/DocumentReference?encounter=Encounter/AmandaAlzheimerEinrichtungskontakt`Usage notes: further information on searching by "encounter" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
+1. `event`Examples:`GET [base]/DocumentReference?event=http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung|E234`Usage notes: further information on searching by "event" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `period`Examples:`GET [base]/DocumentReference?period=ge2028-01-24&period=le2028-02-06`Usage notes: further information on searching by "period" can be found in the [FHIR base specification - section "Date Search"](https://hl7.org/fhir/R4/search.html#date).
+1. `facility`Examples:`GET [base]/DocumentReference?facility=http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung|KHS`Usage notes: further information on searching by "facility" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `setting`Examples:`GET [base]/DocumentReference?setting=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen|INTZ`Usage notes: further information on searching by "setting" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+1. `nlp-processing-status`Examples:`GET [base]/DocumentReference?nlp-processing-status=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|unprocessed`Usage notes: further information on searching by "nlp-processing-status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 

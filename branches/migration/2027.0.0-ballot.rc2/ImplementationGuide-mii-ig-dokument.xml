@@ -1044,7 +1044,7 @@
       <reference>
         <reference value="ValueSet/mii-vs-dokument-einrichtungsart"/>
       </reference>
-      <name value="MII VS Dokument Einrichtungart"/>
+      <name value="MII VS Dokument Einrichtungsart"/>
       <description value="ValueSet zur Art der erzeugenden Einrichtung eines Dokuments"/>
       <exampleBoolean value="false"/>
     </resource>

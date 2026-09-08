@@ -4,7 +4,7 @@
     "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Dokument_Einrichtungsart",
-    "title" : "MII VS Dokument Einrichtungart",
+    "title" : "MII VS Dokument Einrichtungsart",
     "description" : "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
     "systems" : ["http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung",
     "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung",
