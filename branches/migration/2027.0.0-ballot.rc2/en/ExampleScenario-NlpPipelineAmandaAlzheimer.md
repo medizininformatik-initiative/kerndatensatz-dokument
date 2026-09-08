@@ -31,7 +31,7 @@
   "version" : "2027.0.0-ballot.rc2",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-08T15:07:59+00:00",
+  "date" : "2026-09-08T15:32:50+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
