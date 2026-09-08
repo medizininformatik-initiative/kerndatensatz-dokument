@@ -39,7 +39,7 @@ Every undecided optional page is visible in **three forms**:
 | --- | --- | --- | --- |
 | Guidance for Researchers (Guidance) | `researcher-guidance.md` | your module's data needs research-specific interpretation notes | the guidance page covers everything |
 | Extensions (Artifacts) | `extensions.md` | the module defines its own extensions | it defines none |
-| Search Parameters (Artifacts) | `search-parameters.md` | the module defines its own search parameters | it defines none (cross-module ones live in the Meta module) |
+| Search Parameters (Artifacts) | `search-parameters.md` | the module defines its own search parameters **or** its CapabilityStatement mandates search parameters that need documenting (example calls, links to the cross-module ones) | neither applies (cross-module SearchParameter artifacts live in the Meta module) |
 | Operations (Artifacts) | `operations.md` | the module defines FHIR operations | it defines none |
 | Value Sets (Artifacts) | `value-sets.md` | the module defines ValueSets | it defines none |
 | Code Systems (Artifacts) | `code-systems.md` | the module defines CodeSystems | it defines none |

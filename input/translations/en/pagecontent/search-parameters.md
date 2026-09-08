@@ -2,30 +2,20 @@
 <!-- English translation of the German default page input/pagecontent/search-parameters.md. -->
 <!-- TODO:REVIEW machine-translated from the German default page -->
 
-This page lists the search parameters of the **Dokument** module. The module
-defines no module-specific SearchParameter artifacts (naming convention
-`MII_SP_<Module>_<Name>`); cross-module search parameters are defined by the
-Meta module. The normative definition of the supported search parameters is the
-[module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html).
+This page gives example calls for the search parameters of the **Dokument** module. The supported search parameters are defined normatively in the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html); the standard search parameters are defined by the [FHIR base specification (DocumentReference)](https://hl7.org/fhir/R4/documentreference.html#search). The Dokument module defines no SearchParameter artifacts of its own — the three module-specific search parameters are provided by the [Meta module](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3) (package `kerndatensatz.meta` 2027.0.0-ballot.rc3):
 
-### Supported search parameters
-
-The following table reads names and types from the CapabilityStatement at build time:
-
-{% sql {
- "query" : "select json_extract(s.value,'$.name') as Param, json_extract(s.value,'$.type') as Type from Resources r, json_each(r.Json,'$.rest[0].resource[0].searchParam') s where r.Type='CapabilityStatement'",
- "class" : "grid sql-table",
- "columns" : [
-  { "title" : "Search parameter", "type" : "text", "source" : "Param" },
-  { "title" : "Type", "type" : "text", "source" : "Type" }
- ]
-} %}
+- `doc-status` — SearchParameter `mii-sp-meta-dokument-documentreference-doc-status`
+  (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status`)
+- `creation` — SearchParameter `mii-sp-meta-dokument-documentreference-attachment-creation`
+  (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation`)
+- `nlp-processing-status` — SearchParameter `mii-sp-meta-dokument-documentreference-nlp-processing-status`
+  (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status`)
 
 ### Example calls
 
-The following search parameters are relevant for this module, including in combination:
+Example calls for the search parameters the CapabilityStatement requires (they can be combined):
 
-1. The search parameter "_id" MUST be supported:
+1. `_id`
 
     Examples:
 
@@ -33,7 +23,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "_id" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-2. The search parameter "_profile" MUST be supported:
+2. `_profile`
 
     Examples:
 
@@ -41,7 +31,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "_profile" can be found in the [FHIR base specification - section "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
 
-3. The search parameter "identifier" MUST be supported:
+3. `identifier`
 
     Examples:
 
@@ -49,7 +39,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "identifier" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-4. The search parameter "status" MUST be supported:
+4. `status`
 
     Examples:
 
@@ -57,7 +47,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-5. The search parameter "doc-status" MUST be supported:
+5. `doc-status`
 
     Examples:
 
@@ -65,7 +55,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "doc-status" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-6. The search parameter "type" MUST be supported:
+6. `type`
 
     Examples:
 
@@ -73,7 +63,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "type" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-7. The search parameter "category" MUST be supported:
+7. `category`
 
     Examples:
 
@@ -81,7 +71,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "category" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-8. The search parameter "patient" MUST be supported:
+8. `patient`
 
     Examples:
 
@@ -89,7 +79,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "patient" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
 
-9. The search parameter "relation" MUST be supported:
+9. `relation`
 
     Examples:
 
@@ -97,7 +87,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "relation" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-10. The search parameter "relatesto" MUST be supported:
+10. `relatesto`
 
     Examples:
 
@@ -105,7 +95,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "relatesto" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
 
-11. The search parameter "relationship" MUST be supported:
+11. `relationship`
 
     Examples:
 
@@ -113,7 +103,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "relationship" can be found in the [FHIR base specification - section "Composite Search"](https://hl7.org/fhir/R4/search.html#composite).
 
-12. The search parameter "description" MUST be supported:
+12. `description`
 
     Examples:
 
@@ -121,7 +111,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "description" can be found in the [FHIR base specification - section "String Search"](https://hl7.org/fhir/R4/search.html#string).
 
-13. The search parameter "security-label" MUST be supported:
+13. `security-label`
 
     Examples:
 
@@ -129,7 +119,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "security-label" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-14. The search parameter "contenttype" MUST be supported:
+14. `contenttype`
 
     Examples:
 
@@ -137,7 +127,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "contenttype" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-15. The search parameter "language" MUST be supported:
+15. `language`
 
     Examples:
 
@@ -145,7 +135,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "language" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-16. The search parameter "location" MUST be supported:
+16. `location`
 
     Examples:
 
@@ -153,7 +143,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "location" can be found in the [FHIR base specification - section "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
 
-17. The search parameter "creation" MUST be supported:
+17. `creation`
 
     Examples:
 
@@ -161,7 +151,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "creation" can be found in the [FHIR base specification - section "Date Search"](https://hl7.org/fhir/R4/search.html#date).
 
-18. The search parameter "format" MUST be supported:
+18. `format`
 
     Examples:
 
@@ -169,7 +159,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "format" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-19. The search parameter "encounter" MUST be supported:
+19. `encounter`
 
     Examples:
 
@@ -177,7 +167,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "encounter" can be found in the [FHIR base specification - section "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
 
-20. The search parameter "event" MUST be supported:
+20. `event`
 
     Examples:
 
@@ -185,7 +175,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "event" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-21. The search parameter "period" MUST be supported:
+21. `period`
 
     Examples:
 
@@ -193,7 +183,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "period" can be found in the [FHIR base specification - section "Date Search"](https://hl7.org/fhir/R4/search.html#date).
 
-22. The search parameter "facility" MUST be supported:
+22. `facility`
 
     Examples:
 
@@ -201,7 +191,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "facility" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-23. The search parameter "setting" MUST be supported:
+23. `setting`
 
     Examples:
 
@@ -209,7 +199,7 @@ The following search parameters are relevant for this module, including in combi
 
     Usage notes: further information on searching by "setting" can be found in the [FHIR base specification - section "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-24. The search parameter "nlp-processing-status" MUST be supported:
+24. `nlp-processing-status`
 
     Examples:
 

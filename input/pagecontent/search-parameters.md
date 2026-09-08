@@ -1,33 +1,24 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Optionale Seite des KDS-Modul-Templates, für dieses Modul BEHALTEN (2026-09-05):
-     das Modul definiert keine eigenen SearchParameter-Artefakte, die vom
-     CapabilityStatement geforderten Suchparameter sind hier dokumentiert.
+     das Modul definiert keine eigenen SearchParameter-Artefakte; die drei
+     modulspezifischen definiert das Meta-Modul, diese Seite verlinkt sie und
+     hält die Beispielaufrufe.
      Englische Übersetzung: input/translations/en/pagecontent/search-parameters.md -->
 
-Diese Seite listet die Suchparameter des Moduls **Dokument**. Modul-spezifische
-SearchParameter-Artefakte (Namenskonvention `MII_SP_<Modul>_<Name>`) definiert das
-Modul nicht; modulübergreifende Suchparameter definiert das Meta-Modul. Die
-normative Festlegung der unterstützten Suchparameter ist das
-[CapabilityStatement des Moduls](CapabilityStatement-mii-cps-dokument-capabilitystatement.html).
+Diese Seite führt Beispielaufrufe für die Suchparameter des Moduls **Dokument** auf. Normativ festgelegt sind die unterstützten Suchparameter im [CapabilityStatement des Moduls](CapabilityStatement-mii-cps-dokument-capabilitystatement.html); die Standard-Suchparameter definiert die [FHIR-Basisspezifikation (DocumentReference)](https://hl7.org/fhir/R4/documentreference.html#search). Modul-spezifische SearchParameter-Artefakte definiert das Modul Dokument nicht selbst — die drei modulspezifischen Suchparameter stellt das [Meta-Modul](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3) bereit (Paket `kerndatensatz.meta` 2027.0.0-ballot.rc3):
 
-### Unterstützte Suchparameter
-
-Die folgende Tabelle liest Namen und Typen beim Build aus dem CapabilityStatement:
-
-{% sql {
- "query" : "select json_extract(s.value,'$.name') as Param, json_extract(s.value,'$.type') as Type from Resources r, json_each(r.Json,'$.rest[0].resource[0].searchParam') s where r.Type='CapabilityStatement'",
- "class" : "grid sql-table",
- "columns" : [
-  { "title" : "Suchparameter", "type" : "text", "source" : "Param" },
-  { "title" : "Typ", "type" : "text", "source" : "Type" }
- ]
-} %}
+- `doc-status` — SearchParameter `mii-sp-meta-dokument-documentreference-doc-status`
+  (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status`)
+- `creation` — SearchParameter `mii-sp-meta-dokument-documentreference-attachment-creation`
+  (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation`)
+- `nlp-processing-status` — SearchParameter `mii-sp-meta-dokument-documentreference-nlp-processing-status`
+  (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status`)
 
 ### Beispielaufrufe
 
-Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
+Beispielaufrufe für die im CapabilityStatement geforderten Suchparameter (auch in Kombination anwendbar):
 
-1. Der Suchparameter "_id" MUSS unterstützt werden:
+1. `_id`
 
     Beispiele:
 
@@ -35,7 +26,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
+2. `_profile`
 
     Beispiele:
 
@@ -43,7 +34,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
 
-3. Der Suchparameter "identifier" MUSS unterstützt werden:
+3. `identifier`
 
     Beispiele:
 
@@ -51,7 +42,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "identifier" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-4. Der Suchparameter "status" MUSS unterstützt werden:
+4. `status`
 
     Beispiele:
 
@@ -59,7 +50,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-5. Der Suchparameter "doc-status" MUSS unterstützt werden:
+5. `doc-status`
 
     Beispiele:
 
@@ -67,7 +58,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "doc-status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-6. Der Suchparameter "type" MUSS unterstützt werden:
+6. `type`
 
     Beispiele:
 
@@ -75,7 +66,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "type" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-7. Der Suchparameter "category" MUSS unterstützt werden:
+7. `category`
 
     Beispiele:
 
@@ -83,7 +74,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-8. Der Suchparameter "patient" MUSS unterstützt werden:
+8. `patient`
 
     Beispiele:
 
@@ -91,7 +82,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "patient" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
 
-9. Der Suchparameter "relation" MUSS unterstützt werden:
+9. `relation`
 
     Beispiele:
 
@@ -99,7 +90,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "relation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-10. Der Suchparameter "relatesto" MUSS unterstützt werden:
+10. `relatesto`
 
     Beispiele:
 
@@ -107,7 +98,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "relatesto" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
 
-11. Der Suchparameter "relationship" MUSS unterstützt werden:
+11. `relationship`
 
     Beispiele:
 
@@ -115,7 +106,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "relationship" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Composite Search"](https://hl7.org/fhir/R4/search.html#composite).
 
-12. Der Suchparameter "description" MUSS unterstützt werden:
+12. `description`
 
     Beispiele:
 
@@ -123,7 +114,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "description" finden sich in der [FHIR-Basisspezifikation - Abschnitt "String Search"](https://hl7.org/fhir/R4/search.html#string).
 
-13. Der Suchparameter "security-label" MUSS unterstützt werden:
+13. `security-label`
 
     Beispiele:
 
@@ -131,7 +122,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "security-label" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-14. Der Suchparameter "contenttype" MUSS unterstützt werden:
+14. `contenttype`
 
     Beispiele:
 
@@ -139,7 +130,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "contenttype" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-15. Der Suchparameter "language" MUSS unterstützt werden:
+15. `language`
 
     Beispiele:
 
@@ -147,7 +138,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "language" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-16. Der Suchparameter "location" MUSS unterstützt werden:
+16. `location`
 
     Beispiele:
 
@@ -155,7 +146,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "location" finden sich in der [FHIR-Basisspezifikation - Abschnitt "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
 
-17. Der Suchparameter "creation" MUSS unterstützt werden:
+17. `creation`
 
     Beispiele:
 
@@ -163,7 +154,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "creation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](https://hl7.org/fhir/R4/search.html#date).
 
-18. Der Suchparameter "format" MUSS unterstützt werden:
+18. `format`
 
     Beispiele:
 
@@ -171,7 +162,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "format" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-19. Der Suchparameter "encounter" MUSS unterstützt werden:
+19. `encounter`
 
     Beispiele:
 
@@ -179,7 +170,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
 
-20. Der Suchparameter "event" MUSS unterstützt werden:
+20. `event`
 
     Beispiele:
 
@@ -187,7 +178,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "event" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-21. Der Suchparameter "period" MUSS unterstützt werden:
+21. `period`
 
     Beispiele:
 
@@ -195,7 +186,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "period" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](https://hl7.org/fhir/R4/search.html#date).
 
-22. Der Suchparameter "facility" MUSS unterstützt werden:
+22. `facility`
 
     Beispiele:
 
@@ -203,7 +194,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "facility" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-23. Der Suchparameter "setting" MUSS unterstützt werden:
+23. `setting`
 
     Beispiele:
 
@@ -211,7 +202,7 @@ Folgende Suchparameter sind für dieses Modul relevant, auch in Kombination:
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "setting" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-24. Der Suchparameter "nlp-processing-status" MUSS unterstützt werden:
+24. `nlp-processing-status`
 
     Beispiele:
 

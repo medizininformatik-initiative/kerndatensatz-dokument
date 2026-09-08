@@ -16,4 +16,4 @@ Artifact page: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cp
 
 {% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-en.xhtml %}
 
-The supported search parameters are listed on the [Search Parameters](search-parameters.html) page.
+Example calls for the search parameters and the links to the Meta module's SearchParameter definitions are on the [Search Parameters](search-parameters.html) page.

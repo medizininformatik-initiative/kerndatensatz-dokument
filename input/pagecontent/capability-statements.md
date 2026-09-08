@@ -15,4 +15,4 @@ Artefakt-Seite: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-c
 
 {% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-de.xhtml %}
 
-Die unterstützten Suchparameter listet die Seite [Suchparameter](search-parameters.html).
+Beispielaufrufe zu den Suchparametern und die Verweise auf die SearchParameter-Definitionen des Meta-Moduls stehen auf der Seite [Suchparameter](search-parameters.html).
