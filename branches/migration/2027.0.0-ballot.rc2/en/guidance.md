@@ -1,4 +1,4 @@
-# Guidance - MII IG Dokument v2027.0.0-ballot.rc1
+# Guidance - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Guidance**
@@ -35,7 +35,7 @@ A further important aspect of **internal document use** is the conversion (`Doku
 
 ##### Use by Researchers: Annotation and Pseudonymization
 
-Besides the purposes described above, **internal document use** also plays a role in research. As part of Natural Language Processing (NLP) pipelines, researchers can store intermediate results and processing steps according to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.md) (`Dokument verarbeiten`, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (`Dokument pseudonymisieren`, "pseudonymize document"; `Dokument annotieren`, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.
+Besides the purposes described above, **internal document use** also plays a role in research. As part of Natural Language Processing (NLP) processes, researchers can store intermediate results and processing steps according to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.md) (`Dokument verarbeiten`, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (`Dokument pseudonymisieren`, "pseudonymize document"; `Dokument annotieren`, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.
 
 #### External Document Use
 

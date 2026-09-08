@@ -1,4 +1,4 @@
-# Kompatibilität zu anderen Spezifikationen - MII IG Dokument v2027.0.0-ballot.rc1
+# Kompatibilität zu anderen Spezifikationen - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Anleitung**](guidance.md)
@@ -7,7 +7,7 @@
 
 ## Kompatibilität zu anderen Spezifikationen
 
-Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil `ISiKDokumentenMetadaten`, Version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, Version 1.7.0) und IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, Package `ihe.iti.mhd`, Version 4.2.3) wurde anhand der [Qualitätssicherungsberichte dieses Leitfadens](../qa.md), der Profilvergleiche des HL7 FHIR Validators (`compare`-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil `mii-pr-dokument-dokument` in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei `content.attachment.title` und `description` ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen `KBV_PR_Base_DocumentReference|1.7.0`. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
+Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil `ISiKDokumentenMetadaten`, Version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, Version 1.7.0) und IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, Package `ihe.iti.mhd`, Version 4.2.3) wurde anhand der [Qualitätssicherungsberichte dieses Leitfadens](../qa.md), der Profilvergleiche des HL7 FHIR Validators (`compare`-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil `mii-pr-dokument-dokument` in Version 2027.0.0-ballot.rc2. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei `content.attachment.title` und `description` ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen `KBV_PR_Base_DocumentReference|1.7.0`. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.
 
 -------
 

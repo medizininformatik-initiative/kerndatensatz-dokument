@@ -1,4 +1,4 @@
-# Code Systems - MII IG Dokument v2027.0.0-ballot.rc1
+# Code Systems - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Code Systems**
@@ -11,7 +11,7 @@ This page describes the CodeSystems of the **Dokument** module (naming conventio
 
 > **Important:** CodeSystem resources of external terminologies (e.g. ICD-10-GM, OPS, SNOMED CT) are **not** published in this module; they are obtained from the central KDS terminology service (SU-TermServ): [https://mii-termserv.de/](https://mii-termserv.de/).
 
-The following section describes the module's own CodeSystem; licence information on external terminologies is held by the respective publishers (see [Copyright and License](index.md#copyright-and-license)).
+The following section describes the module's own CodeSystem; license information on external terminologies is held by the respective publishers (see [Copyright and License](index.md#copyright-and-license)).
 
 -------
 

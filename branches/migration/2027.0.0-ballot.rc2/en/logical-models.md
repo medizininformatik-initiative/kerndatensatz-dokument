@@ -1,4 +1,4 @@
-# Logical Models - MII IG Dokument v2027.0.0-ballot.rc1
+# Logical Models - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Logical Models**
@@ -21,7 +21,7 @@ Guidance on how to interpret the contents of this table can be found[here](https
 
 ### Mapping to the FHIR resource
 
-The IG Publisher does not render this element-to-resource mapping on the Logical Model's artefact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
+The IG Publisher does not render this element-to-resource mapping on the Logical Model's artifact page (the "Mappings" tab stays empty there). The following table therefore lists it here.
 
 | | | |
 | :--- | :--- | :--- |
@@ -30,8 +30,8 @@ The IG Publisher does not render this element-to-resource mapping on the Logical
 | Dokument.Businessidentifikator | DocumentReference.identifier | Other version-independent identifier assigned to the document (e.g. by further document-processing systems) |
 | Dokument.Dokumentenreferenzstatus | DocumentReference.status | Status of this document reference (current, superseded, or entered in error) |
 | Dokument.Dokumentenstatus | DocumentReference.docStatus | Status of the underlying document (preliminary, final, amended, or entered in error) |
-| Dokument.Dokumententyp | DocumentReference.type | Type of the referenced document (e.g. history and examination, discharge letter, progress report) |
-| Dokument.Dokumentenkategorie | DocumentReference.category | Higher-level category of the referenced document (e.g. physician letters or physician documentation) |
+| Dokument.Dokumententyp | DocumentReference.type | Type of the referenced document (e.g. history and examination, discharge summary, progress report) |
+| Dokument.Dokumentenkategorie | DocumentReference.category | Higher-level category of the referenced document (e.g. physician reports or physician documentation) |
 | Dokument.Patient | DocumentReference.subject | Patient to whom the referenced document relates |
 | Dokument.Beschreibung | DocumentReference.description | Human-readable description of the referenced document |
 | Dokument.Sicherheitsstufe | DocumentReference.securityLabel | Degree of confidentiality/security of the referenced document (e.g. unrestricted, low, moderate, normal, or restricted) |
@@ -46,8 +46,8 @@ The IG Publisher does not render this element-to-resource mapping on the Logical
 | Dokument.Anhang.Dokumentenformat | DocumentReference.attachment.contentType | MIME type of the document content |
 | Dokument.Kontext | DocumentReference.context | Clinical context in which the document was created |
 | Dokument.Kontext.Gesundheitseinrichtungskontakt | DocumentReference.context.encounter | Contact with the healthcare facility, or the type of care associated with the document content |
-| Dokument.Kontext.Vorgang | DocumentReference.context.event | Actions or procedures documented in the context |
+| Dokument.Kontext.Vorgang | DocumentReference.context.event | Acts or procedures documented in the context |
 | Dokument.Kontext.Fachgebiet | DocumentReference.context.practiceSetting | Clinical specialty in which the document content was created |
-| Dokument.Kontext.Dokumentationszeitraum | DocumentReference.context.period | Period during which the action or procedure described in the document was performed |
-| Dokument.Kontext.Einrichtungsart | DocumentReference.context.facilityType | Type of facility in which the action or procedure was performed on the patient |
+| Dokument.Kontext.Dokumentationszeitraum | DocumentReference.context.period | Period during which the act or procedure described in the document was performed |
+| Dokument.Kontext.Einrichtungsart | DocumentReference.context.facilityType | Type of facility in which the act or procedure was performed on the patient |
 

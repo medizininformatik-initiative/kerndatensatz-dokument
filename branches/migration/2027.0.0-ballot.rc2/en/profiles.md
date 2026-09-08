@@ -1,4 +1,4 @@
-# Profiles - MII IG Dokument v2027.0.0-ballot.rc1
+# Profiles - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Profiles**
@@ -13,7 +13,7 @@ The module defines one profile: [MII PR Dokument Dokument](StructureDefinition-m
 
 ### Profile MII PR Dokument Dokument
 
-The module defines one profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.md) on `DocumentReference` — "clinical document with its metadata". The implementation notes, the mapping to the logical dataset and the examples are on the artifact page; the structure is rendered here directly (the profile's XML and JSON are embedded only on the artifact page because of their size).
+The module defines one profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.md) on `DocumentReference` — "clinical document with its metadata". The domain notes, the mapping to the logical dataset and the examples are on the artifact page; the structure is rendered here directly (the profile's XML and JSON are embedded only on the artifact page because of their size).
 
 The MII-wide naming conventions for FHIR resources (module designations, prefixes, `title`/`name`/`id`/`url`) are maintained by the Meta module: [Naming conventions for FHIR resources in the MII](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII). They apply to all conformance resources of this module.
 

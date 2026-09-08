@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Compatibility with Other Specifications - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Compatibility with Other Specifications - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (English).
+              <!-- English translation of input/includes/menu.xml (the German default menu).
      The IG Publisher renders the navigation from this file. To translate it,
      ship a per-language copy at input/translations/<lang>/includes/menu.xml —
      this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
@@ -335,7 +335,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Compatibility with Other Specifications</h2>
   
 
@@ -359,7 +359,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page
      input/pagecontent/kompatibilitaet.md — keep both files in step.
@@ -368,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      This page is nested under "implementer-guidance" in the page tree and
      deliberately has no menu entry of its own. -->
 
-<p>The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>, version 6.0.0), KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>, version 1.7.0) and IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>, package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, version 4.2.3) was assessed on the basis of the <a href="../qa.html">quality-assurance reports of this guide</a>, the profile comparisons of the HL7 FHIR Validator (<code class="language-plaintext highlighter-rouge">compare</code> mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> in version 2027.0.0-ballot.rc1. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for <code class="language-plaintext highlighter-rouge">content.attachment.title</code> and <code class="language-plaintext highlighter-rouge">description</code>. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centres.</p>
+<p>The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>, version 6.0.0), KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>, version 1.7.0) and IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>, package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, version 4.2.3) was assessed on the basis of the <a href="../qa.html">quality-assurance reports of this guide</a>, the profile comparisons of the HL7 FHIR Validator (<code class="language-plaintext highlighter-rouge">compare</code> mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> in version 2027.0.0-ballot.rc2. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for <code class="language-plaintext highlighter-rouge">content.attachment.title</code> and <code class="language-plaintext highlighter-rouge">description</code>. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centers.</p>
 
 <hr />
 
@@ -380,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h5 id="motivation">Motivation</h5>
 
-<p>Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centres and supports the implementation of national interoperability goals.</p>
+<p>Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centers and supports the implementation of national interoperability goals.</p>
 
 <blockquote class="ig-highlight ig-highlight-blue">
   <p><strong>Version basis:</strong> the comparison below was measured against the profile <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code> in version <strong>6.0.0</strong>. From ISiK stage 5 onwards the human-readable designation of the document is to be carried in <code class="language-plaintext highlighter-rouge">content.attachment.title</code>; <code class="language-plaintext highlighter-rouge">DocumentReference.description</code> is dropped for this purpose in favour of an alignment with IHE MHD and the ePA specification.</p>
@@ -394,7 +393,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
       <th>ISiK document exchange (<code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code> 6.0.0)</th>
       <th>Compatibility</th>
     </tr>
@@ -539,7 +538,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
       <th>KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code> 1.7.0)</th>
       <th>Compatibility</th>
     </tr>
@@ -657,7 +656,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
       <th>IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code> 4.2.3)</th>
       <th>Compatibility</th>
     </tr>
@@ -884,7 +883,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 overview of all profiles of the module is available under
 <a href="profiles.html">Profiles</a>. The domain context of this comparison and the list
 of external standards taken into account are given on the
-<a href="implementer-guidance.html">Implementer guidance</a> page.</p>
+<a href="implementer-guidance.html">Guidance for Implementers</a> page.</p>
 
 
 
@@ -910,8 +909,8 @@ of external standards taken into account are given on the
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -1,6 +1,6 @@
 {
   "package": "de.medizininformatikinitiative.kerndatensatz.dokument",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [
@@ -32,6 +32,9 @@
     ]
   },
   "usage": {
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content": [
+      "ExampleScenario.instance"
+    ],
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
       "ImplementationGuide"
     ],

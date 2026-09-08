@@ -1,4 +1,4 @@
-# Security and Privacy - MII IG Dokument v2027.0.0-ballot.rc1
+# Security and Privacy - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Security and Privacy**
@@ -13,7 +13,7 @@ The [overarching data protection concept of the Medical Informatics Initiative](
 
 ### De-identification, minimisation and pseudonymisation (DIMP)
 
-How data leaving a Data Integration Center is de-identified in practice is specified by [DIMP (De-Identification — Minimisation — Pseudonymisation)](https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html) in the data portal documentation: direct identifiers are removed, data elements not needed by the approved project are dropped, and identifying values are replaced by project-specific pseudonyms (FHIR Pseudonymizer configuration). The profiles of this module describe data **before** DIMP is applied; which elements survive a concrete data release is decided per project by the DIMP configuration, not by this guide.
+How data leaving a Data Integration Center is de-identified in practice is specified by [DIMP (De-Identification — Minimisation — Pseudonymisation)](https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html) in the data portal documentation: direct identifiers are removed, data elements not needed by the approved project are dropped, and identifying values are replaced by project-specific pseudonyms (FHIR Pseudonymizer configuration). The profiles of this module describe data **before** DIMP is applied; which elements reach a concrete data provision is decided per project by the DIMP configuration, not by this guide.
 
 ### Module-specific aspects
 
@@ -23,7 +23,7 @@ The following module-specific aspects were derived from the profile and the modu
 
 Unlike purely structured KDS modules, this module also carries the **document body itself** via `content.attachment`. This raises aspects of its own:
 
-**Free text is this module's most sensitive data category.** A document's body can contain a wide range of identifying data and/or metadata (e.g. names, patient IDs) that structured pseudonymization does not touch. DIMP tooling operates on structured elements; the content of an attachment is not covered by it.
+**Free text is this module's most sensitive data category.** A document's body can contain a wide range of identifying data and/or metadata (e.g. names, patient IDs) that structured pseudonymization does not touch. Tools in the DIMP chain operate on structured elements; the content of an attachment is not covered by it.
 
 **Embedding vs. reference.** The profile permits both transport forms for the document body: embedded as Base64 (`content.attachment.data`, slice `Binaerdaten`) or as a locally resolvable reference (`content.attachment.url`, slice `Verweis`). Where the document contains **medical or identifying data about patients or treatment**, the document body SHOULD NOT be embedded when data is provided via the German Portal for Medical Research Data (FDPG) or in UAC-approved projects: embedded content travels through every processing and transfer stage and escapes the document store's access control. A reference (`Verweis`) keeps resolution under the control of the data-holding site (DIZ), where it can be filtered and logged in conformance with DIMP. Documents without such content — for example fully surrogated versions — are not affected by this restriction.
 

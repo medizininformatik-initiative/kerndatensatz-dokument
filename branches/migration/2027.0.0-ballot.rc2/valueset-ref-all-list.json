@@ -256,7 +256,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot.rc2",
     "status" : "active",
     "name" : "MII_VS_Dokument_Einrichtungsart",
     "title" : "MII VS Dokument Einrichtungsart",
@@ -270,7 +270,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot.rc2",
     "status" : "active",
     "name" : "MII_VS_Dokument_Fachgebiet",
     "title" : "MII VS Dokument Fachgebiet",
@@ -284,7 +284,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot.rc2",
     "status" : "active",
     "name" : "MII_VS_Dokument_Format_Code",
     "title" : "MII VS Dokument Format Code",
@@ -301,7 +301,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot.rc2",
     "status" : "active",
     "name" : "MII_VS_Dokument_NLP_Processing_Status",
     "title" : "MII VS Dokument NLP Processing Status",
@@ -313,7 +313,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot.rc2",
     "status" : "active",
     "name" : "MII_VS_Dokument_SCT_Dokument_Kategorie",
     "title" : "MII VS Dokument SCT Dokument Kategorie",
@@ -325,7 +325,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ",
-    "version" : "2027.0.0-ballot.rc1",
+    "version" : "2027.0.0-ballot.rc2",
     "status" : "active",
     "name" : "MII_VS_Dokument_SCT_Dokument_Typ",
     "title" : "MII VS Dokument SCT Dokument Typ",

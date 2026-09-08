@@ -1,4 +1,4 @@
-# Home - MII IG Dokument v2027.0.0-ballot.rc1
+# Home - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc2 |
 | Draft as of 2026-09-01 | *Computable Name*:MII_IG_Dokument |
 
 ### Introduction
@@ -21,7 +21,7 @@ The Core Dataset of the Medical Informatics Initiative (MII) enables the standar
 | | | |
 | :--- | :--- | :--- |
 | Version | Date | Status |
-| 2027.0.0-ballot.rc1 | 2026-09-01 | draft |
+| 2027.0.0-ballot.rc2 | 2026-09-01 | draft |
 
 Realm: DE (jurisdiction Germany). Versioning follows CalVer `YYYY.n.n`.
 
@@ -35,7 +35,7 @@ The MII KDS module enables the creation of document references with the option o
 
 With regard to document processing workflows, e.g. format conversions, anonymization and NLP annotations, the relation to other documents (MII KDS module Dokument) becomes particularly significant for representing processing chains (`relatesTo`).
 
-The information model separates the reference itself from the metadata of the referenced document (`content`). The document body is referenced via a locally interpreted URL (`content.attachment.url`). In principle, the document body of the referenced document can also be embedded directly within the reference (`content.attachment.data`). The module does not prescribe the semantics of this resolution.
+The information model separates information about the reference itself from the metadata of the referenced documents (`content`). The document body is referenced via a locally interpreted URL (`content.attachment.url`). In principle, the document body of the referenced document can also be embedded directly within the reference (`content.attachment.data`). The module does not prescribe the semantics of this resolution.
 
 The document body can contain a wide range of identifying data and/or metadata (e.g. names, patient ID). The data holder can express that such data has been de-identified via an appropriate `securityLabel` and/or codes of the NLP Processing Status extension ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md)).
 

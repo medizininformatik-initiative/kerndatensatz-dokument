@@ -1,4 +1,4 @@
-# MII EX Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot.rc1
+# MII EX Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-dokument-n
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.rc2 |
 | Active as of 2026-09-08 | *Computable Name*:MII_EX_Dokument_NLP_Processing_Status |
 
 Status der NLP-Verarbeitung des referenzierten Dokuments
@@ -21,7 +21,7 @@ Status der NLP-Verarbeitung des referenzierten Dokuments
 
 ### Description
 
-This extension serves the structured description of the processing status of a document within an NLP project. Processing documents that carry unstructured information typically happens in a series of consecutive processing steps. In the course of these process chains, different transformations of the original document arise, as well as relations between the source document and the intermediate products derived from it.
+This extension is used for the structured description of the processing status of a document within an NLP project. Processing documents that carry unstructured information typically happens in a series of consecutive processing steps. In the course of these process chains, different transformations of the original document arise, as well as relations between the source document and the intermediate products derived from it.
 
 For this purpose the NLP extension provides a code system with which the various processing states and intermediate products of an NLP workflow can be described and archived consistently.
 
@@ -100,7 +100,7 @@ Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des 
   "resourceType" : "StructureDefinition",
   "id" : "mii-ex-dokument-nlp-processing-status",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
   "_name" : {
     "extension" : [{
@@ -130,7 +130,7 @@ Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des 
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T09:59:59+00:00",
+  "date" : "2026-09-08T14:28:13+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

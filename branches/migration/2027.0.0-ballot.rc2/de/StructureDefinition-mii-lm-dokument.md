@@ -1,4 +1,4 @@
-# MII LM Dokument - MII IG Dokument v2027.0.0-ballot.rc1
+# MII LM Dokument - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-dokum
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_LM_Dokument |
 
  
@@ -72,7 +72,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
   "resourceType" : "StructureDefinition",
   "id" : "mii-lm-dokument",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_LM_Dokument",
   "_name" : {
     "extension" : [{
@@ -102,7 +102,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T09:59:59+00:00",
+  "date" : "2026-09-08T14:28:13+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -420,7 +420,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
           },
           {
             "url" : "content",
-            "valueString" : "Type of the referenced document (e.g. history and examination, discharge letter, progress report)"
+            "valueString" : "Type of the referenced document (e.g. history and examination, discharge summary, progress report)"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -461,7 +461,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
           },
           {
             "url" : "content",
-            "valueString" : "Higher-level category of the referenced document (e.g. physician letters or physician documentation)"
+            "valueString" : "Higher-level category of the referenced document (e.g. physician reports or physician documentation)"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1021,7 +1021,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
           },
           {
             "url" : "content",
-            "valueString" : "Reference to the encounter"
+            "valueString" : "Reference to the facility encounter"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1076,7 +1076,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
           },
           {
             "url" : "content",
-            "valueString" : "Actions or procedures documented in the context"
+            "valueString" : "Acts or procedures documented in the context"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1158,7 +1158,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
           },
           {
             "url" : "content",
-            "valueString" : "Period during which the action or procedure described in the document was performed"
+            "valueString" : "Period during which the act or procedure described in the document was performed"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1199,7 +1199,7 @@ Diese Struktur ist abgeleitet von [Element](http://hl7.org/fhir/R4/datatypes.htm
           },
           {
             "url" : "content",
-            "valueString" : "Type of facility in which the action or procedure was performed on the patient"
+            "valueString" : "Type of facility in which the act or procedure was performed on the patient"
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

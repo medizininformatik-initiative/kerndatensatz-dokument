@@ -41,7 +41,7 @@
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc1"
+      "valueString" : "2027.0.0-ballot.rc2"
     },
     {
       "url" : "uri",
@@ -141,7 +141,7 @@
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_IG_Dokument",
   "title" : "MII IG Dokument",
   "status" : "draft",
@@ -252,6 +252,39 @@
       {
         "url" : "value",
         "valueString" : "ballot"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166:-2"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://unstats.un.org/unsd/methods/m49/m49.htm"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -746,6 +779,39 @@
       {
         "url" : "value",
         "valueString" : "ballot"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166:-2"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://unstats.un.org/unsd/methods/m49/m49.htm"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1274,6 +1340,30 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/iso3166-1-fragment"
+      },
+      "name" : "ISO 3166-1 (Build-Fragment)",
+      "description" : "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/iso3166-2-fragment"
+      },
+      "name" : "ISO 3166-2 (Build-Fragment)",
+      "description" : "Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       }],
       "reference" : {
@@ -1418,6 +1508,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ExampleScenario"
+      }],
+      "reference" : {
+        "reference" : "ExampleScenario/NlpPipelineAmandaAlzheimer"
+      },
+      "name" : "NLP-Pipeline „Amanda Alzheimer“",
+      "description" : "Beispielszenario: Verarbeitung eines synthetischen ärztlichen Entlassbriefs durch eine NLP-Pipeline — Ingestion, Preprocessing, De-Identification und Annotation — mit den Dokumentreferenzen jedes Verarbeitungsschritts und ihren NLP-Verarbeitungsstatus.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       }],
       "reference" : {
@@ -1438,6 +1540,18 @@
       "name" : "Patientin Amanda Alzheimer",
       "description" : "Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet.",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/unsd-m49-fragment"
+      },
+      "name" : "UN M49 (Build-Fragment)",
+      "description" : "Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{

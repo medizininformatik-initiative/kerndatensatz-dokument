@@ -1,4 +1,4 @@
-# MII PR Dokument Dokument - MII IG Dokument v2027.0.0-ballot.rc1
+# MII PR Dokument Dokument - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-dokum
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_PR_Dokument_Dokument |
 
  
@@ -155,7 +155,7 @@ Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/doc
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-dokument-dokument",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Dokument_Dokument",
   "_name" : {
     "extension" : [{
@@ -185,7 +185,7 @@ Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/doc
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T09:59:59+00:00",
+  "date" : "2026-09-08T14:28:13+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

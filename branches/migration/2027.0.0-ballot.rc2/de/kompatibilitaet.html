@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Kompatibilität zu anderen Spezifikationen - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Kompatibilität zu anderen Spezifikationen - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- German translation of input/includes/menu.xml.
+              <!-- Menu in the IG's DEFAULT language (German); the English translation is
+     input/translations/en/includes/menu.xml.
      Keep the href targets IDENTICAL to the source menu; translate only labels.
      Structure notes (OPTIONAL entries, link-only entries, the interim
      meta-wiki links) are documented in the source menu's header and in
@@ -307,7 +308,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Kompatibilität zu anderen Spezifikationen</h2>
   
 
@@ -340,7 +341,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      Diese Seite ist im Seitenbaum unter "implementer-guidance" eingehängt und
      hat bewusst keinen eigenen Menüeintrag. -->
 
-<p>Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>, Version 6.0.0), KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>, Version 1.7.0) und IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>, Package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, Version 4.2.3) wurde anhand der <a href="../qa.html">Qualitätssicherungsberichte dieses Leitfadens</a>, der Profilvergleiche des HL7 FHIR Validators (<code class="language-plaintext highlighter-rouge">compare</code>-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> in Version 2027.0.0-ballot.rc1. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei <code class="language-plaintext highlighter-rouge">content.attachment.title</code> und <code class="language-plaintext highlighter-rouge">description</code> ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.</p>
+<p>Die Kompatibilität der FHIR DocumentReference-Profile des MII KDS Dokument mit den Profilen aus gematik ISiK Dokumentenaustausch (Profil <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>, Version 6.0.0), KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>, Version 1.7.0) und IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>, Package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, Version 4.2.3) wurde anhand der <a href="../qa.html">Qualitätssicherungsberichte dieses Leitfadens</a>, der Profilvergleiche des HL7 FHIR Validators (<code class="language-plaintext highlighter-rouge">compare</code>-Modus) gegen diese drei Profile und der technischen Profileigenschaften geprüft. Bezugspunkt aller Angaben ist das MII-Profil <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> in Version 2027.0.0-ballot.rc2. Die Angaben zu ISiK beziehen sich auf ISiK 6.0.0; frühere Stufen weichen insbesondere bei <code class="language-plaintext highlighter-rouge">content.attachment.title</code> und <code class="language-plaintext highlighter-rouge">description</code> ab. Die Angaben zu KBV MIO Basis beruhen auf dem Profilvergleich des HL7-Validators gegen <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>. Im Fokus stehen die Kardinalitäten, Must Support (MS)-Kennzeichnungen und die Terminologie-Bindungen, da diese für die automatisierte Transformation und Integration, z.B. in Datenintegrationszentren, entscheidend sind.</p>
 
 <hr />
 
@@ -366,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR-Element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
       <th>ISiK Dokumentenaustausch (<code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code> 6.0.0)</th>
       <th>Kompatibilität</th>
     </tr>
@@ -511,7 +512,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR-Element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
       <th>KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code> 1.7.0)</th>
       <th>Kompatibilität</th>
     </tr>
@@ -629,7 +630,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR-Element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc1)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
       <th>IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code> 4.2.3)</th>
       <th>Kompatibilität</th>
     </tr>
@@ -882,8 +883,8 @@ die Liste der berücksichtigten externen Standards führt die Seite
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

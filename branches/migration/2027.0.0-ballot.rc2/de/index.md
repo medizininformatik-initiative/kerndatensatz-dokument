@@ -1,4 +1,4 @@
-# Startseite - MII IG Dokument v2027.0.0-ballot.rc1
+# Startseite - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Startseite**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc2 |
 | Draft Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_IG_Dokument |
 
 ### Einleitung
@@ -21,7 +21,7 @@ Der Kerndatensatz der Medizininformatik-Initiative (MII) dient der standardisier
 | | | |
 | :--- | :--- | :--- |
 | Version | Datum | Status |
-| 2027.0.0-ballot.rc1 | 2026-09-01 | draft |
+| 2027.0.0-ballot.rc2 | 2026-09-01 | draft |
 
 Realm: DE (Jurisdiktion Deutschland). Versionierung nach CalVer `JJJJ.n.n`.
 

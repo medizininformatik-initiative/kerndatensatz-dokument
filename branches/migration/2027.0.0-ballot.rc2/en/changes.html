@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Changelog - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Changelog - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (English).
+              <!-- English translation of input/includes/menu.xml (the German default menu).
      The IG Publisher renders the navigation from this file. To translate it,
      ship a per-language copy at input/translations/<lang>/includes/menu.xml —
      this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
@@ -335,7 +335,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Changelog</h2>
   
 
@@ -353,13 +353,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#version-202700-ballotrc2" id="markdown-toc-version-202700-ballotrc2">Version 2027.0.0-ballot.rc2</a></li>
   <li><a href="#version-202700-ballotrc1" id="markdown-toc-version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</a></li>
   <li><a href="#version-202601" id="markdown-toc-version-202601">Version 2026.0.1</a></li>
   <li><a href="#version-202600" id="markdown-toc-version-202600">Version 2026.0.0</a></li>
 </ul>
 
 </div>
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page
      input/pagecontent/changes.md (DE-first) — keep both files in step.
@@ -437,6 +437,36 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 </div>
 
 <hr />
+
+<h3 id="version-202700-ballotrc2">Version 2027.0.0-ballot.rc2</h3>
+
+<p><strong>Date</strong> 2026-09-08 · <strong>Status</strong> ballot release candidate 2 (2027 cycle)</p>
+
+<p>Second candidate of the 2027 ballot version — the rc1 content after the guide's
+migration from Simplifier to the HL7 IG Publisher (MII KDS module template
+v0.13.1, German as the default language, English translation). No changes to
+the profile, the extension, the terminologies or the logical model; the package
+content changes through translation extensions (<code class="language-plaintext highlighter-rouge">.po</code>), the SNOMED CT licence
+notice on the four SNOMED value sets, the corrected <code class="language-plaintext highlighter-rouge">supportedProfile</code> and the
+CapabilityStatement's search-parameter references to the Meta module.</p>
+
+<ul>
+  <li><strong>Guide rebuilt with the IG Publisher</strong> — the template's page structure,
+artifacts rendered inline (profile, extension, value sets, code system,
+mapping), tables generated from the package, the NLP pipeline example
+scenario on the examples page, search parameters with example calls.</li>
+  <li><strong>Dependencies</strong> — <code class="language-plaintext highlighter-rouge">kerndatensatz.base</code> 2027.0.0-ballot.rc1,
+<code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code> 2027.0.0-ballot.rc3.</li>
+  <li><strong>CapabilityStatement</strong> — <code class="language-plaintext highlighter-rouge">supportedProfile</code> points at the Dokument profile
+(rc1: at its own metadata URL); the three module-specific search parameters
+reference the Meta module's SearchParameter definitions.</li>
+  <li><strong>Examples</strong> — level of contact of the Encounter examples with system
+<code class="language-plaintext highlighter-rouge">http://fhir.de/CodeSystem/Kontaktebene</code>; titles and descriptions for all
+example instances; ExampleScenario of the NLP pipeline.</li>
+  <li><strong>Quality assurance</strong> — publisher errors and warnings resolved or suppressed
+with justification (see <code class="language-plaintext highlighter-rouge">input/ignoreWarnings.txt</code>); known externally caused
+errors: see the known issue below.</li>
+</ul>
 
 <h3 id="version-202700-ballotrc1">Version 2027.0.0-ballot.rc1</h3>
 
@@ -548,8 +578,8 @@ see
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

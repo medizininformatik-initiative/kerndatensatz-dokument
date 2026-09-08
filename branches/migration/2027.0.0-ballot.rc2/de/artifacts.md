@@ -1,4 +1,4 @@
-# Artefaktübersicht - MII IG Dokument v2027.0.0-ballot.rc1
+# Artefaktübersicht - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Artefaktübersicht**
@@ -63,7 +63,18 @@ Diese definieren neue CodeSysteme, die von Systemen verwendet werden, die mit di
 
 | | |
 | :--- | :--- |
+| [ ISO 3166-1 (Build-Fragment)  ](CodeSystem-iso3166-1-fragment.md) | Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann. |
+| [ ISO 3166-2 (Build-Fragment)  ](CodeSystem-iso3166-2-fragment.md) | Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets. |
 | [ MII CS Dokument NLP Processing Status  ](CodeSystem-mii-cs-dokument-nlp-processing-status.md) | Status der NLP-Verarbeitung des referenzierten Dokuments |
+| [ UN M49 (Build-Fragment)  ](CodeSystem-unsd-m49-fragment.md) | Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets. |
+
+### Beispiel: ExampleScenarios 
+
+Diese definieren Gruppen zusammenhängender Beispiele, die einen oder mehrere der von diesem Implementierungsleitfaden unterstützten Workflows demonstrieren.
+
+| | |
+| :--- | :--- |
+| [ NLP-Pipeline „Amanda Alzheimer“  ](ExampleScenario-NlpPipelineAmandaAlzheimer.md) | Beispielszenario: Verarbeitung eines synthetischen ärztlichen Entlassbriefs durch eine NLP-Pipeline — Ingestion, Preprocessing, De-Identification und Annotation — mit den Dokumentreferenzen jedes Verarbeitungsschritts und ihren NLP-Verarbeitungsstatus. |
 
 ### Beispiel: Beispielinstanzen 
 

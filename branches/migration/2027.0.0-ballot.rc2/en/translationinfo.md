@@ -1,4 +1,4 @@
-# Translation Information - MII IG Dokument v2027.0.0-ballot.rc1
+# Translation Information - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Translation Information**
@@ -11,5 +11,5 @@ This guide is **German-language** (default language); **English** is the transla
 
 Translated pages live under `input/translations/en/pagecontent/` (same file name as the German page); resource translations are `.po` files under `input/translations/en/`. Details: [`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md) in this repository.
 
-The German pages carry over the text of the previous Simplifier guide verbatim wherever the source had a corresponding page; the remaining pages (Downloads, Metadata, Versioning, Change history, Examples) come from the KDS module template. The English pages are machine translations of the German version and are reviewed bilingually before publication. The FHIR artifacts themselves carry German designations with translation extensions for the English rendering.
+The German pages carry over the text of the previous Simplifier guide verbatim wherever the source had a corresponding page; the remaining pages (Downloads, Metadata, Versioning, Changelog, Examples) come from the KDS module template. The English pages are machine translations of the German version and are reviewed bilingually before publication. The FHIR artifacts themselves carry German designations with translation extensions for the English rendering.
 

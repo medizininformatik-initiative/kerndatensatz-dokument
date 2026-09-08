@@ -1,4 +1,4 @@
-# MII EX Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot.rc1
+# MII EX Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-dokum
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_EX_Dokument_NLP_Processing_Status |
 
 Status der NLP-Verarbeitung des referenzierten Dokuments
@@ -107,7 +107,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
   "resourceType" : "StructureDefinition",
   "id" : "mii-ex-dokument-nlp-processing-status",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
   "_name" : {
     "extension" : [{
@@ -137,7 +137,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T09:59:59+00:00",
+  "date" : "2026-09-08T14:28:13+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Guidance for Implementers - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Guidance for Implementers - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (English).
+              <!-- English translation of input/includes/menu.xml (the German default menu).
      The IG Publisher renders the navigation from this file. To translate it,
      ship a per-language copy at input/translations/<lang>/includes/menu.xml —
      this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
@@ -335,7 +335,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Guidance for Implementers</h2>
   
 
@@ -360,7 +360,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 MD007 -->
 <!-- MD007: the indented top-level list in the "References" section mirrors the
      verbatim indentation carried over from the Simplifier source page. -->
@@ -386,7 +385,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Medical documents are essential for comprehensive patient care, for the traceability of diagnoses and treatments, and for compliance with legal and scientific standards. They also play an important role in billing medical services and support efficient resource planning in the health system.</p>
 
-<p>Both the technical and the content-related requirements of documentation in healthcare are highly dynamic. As a consequence, large differences in information structures have developed between institutions. Archiving and retrievability in particular come with a high diversity of metadata.</p>
+<p>Both the technical and the content-related requirements of documentation in healthcare are highly dynamic. As a consequence, large differences in information structures have developed between institutions. Archiving and discoverability in particular come with a high diversity of metadata.</p>
 
 <p>In the context of the MII core datasets, the MII KDS module Dokument introduces a harmonised, national concept that builds on established code systems and value sets and orchestrates an interoperable handling of medical documents.</p>
 
@@ -410,7 +409,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base">Fall (in the base module)</a></td>
-      <td>Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable encounter level of the MII KDS module Fall. That level typically depends on the document type.</td>
+      <td>Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable level of contact of the MII KDS module Fall. That level typically depends on the document type.</td>
       <td>No</td>
     </tr>
   </tbody>
@@ -486,7 +485,7 @@ shows the state approved by the NSG.</p>
 
 <p>Person-related documents are assigned to a person (the base module's Patient / PatientPseudonymisiert profiles) (<code class="language-plaintext highlighter-rouge">subject</code>, 0..1). De-identified documents are marked accordingly via the security level (<code class="language-plaintext highlighter-rouge">securityLabel</code>). The data-holding site is responsible here for referencing only the corresponding anonymised or pseudonymised variants of other MII modules. Wherever possible, an encounter relation (MII KDS module Fall) is defined – where feasible at the most relevant level of the encounter-level model (<code class="language-plaintext highlighter-rouge">context.encounter</code>). In the package dependency diagram (above), the relationships between the MII modules are shown in green.</p>
 
-<p>We recommend the <a href="https://simplifier.net/kdl">DVMD KDL standard</a>, which is also used in ISiK, for the precise type description (<code class="language-plaintext highlighter-rouge">type</code>), as well as the <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">IHE XDS class codes</a> for the coarser document category (<code class="language-plaintext highlighter-rouge">category</code>). <a href="https://simplifier.net/kdl/~resources?category=ConceptMap">IHE XDS type and class codes can be derived unambiguously from KDL.</a> Further codings such as local codes, SNOMED CT or LOINC are optionally possible.</p>
+<p>We recommend the <a href="https://simplifier.net/kdl">DVMD KDL standard</a>, which is also used in ISiK, for the precise type description (<code class="language-plaintext highlighter-rouge">type</code>), as well as the <a href="https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&amp;effectiveDate=2018-07-13T13:23:15&amp;language=de-DE">IHE XDS class codes</a> for the coarser document category (<code class="language-plaintext highlighter-rouge">category</code>). <a href="https://simplifier.net/kdl/~resources?category=ConceptMap">IHE XDS type and class codes can be derived unambiguously from KDL.</a> Further codings such as in-house codes, SNOMED CT or LOINC are optionally possible.</p>
 
 <hr />
 
@@ -522,8 +521,8 @@ they apply to this module unchanged.</p>
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

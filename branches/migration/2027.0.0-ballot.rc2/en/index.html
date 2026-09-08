@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Home - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (English).
+              <!-- English translation of input/includes/menu.xml (the German default menu).
      The IG Publisher renders the navigation from this file. To translate it,
      ship a per-language copy at input/translations/<lang>/includes/menu.xml —
      this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
@@ -335,7 +335,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -350,7 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2027.0.0-ballot.rc1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument|2027.0.0-ballot.rc1"/></span>
+      <span class="copy-text">2027.0.0-ballot.rc2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument|2027.0.0-ballot.rc2"/></span>
       </td>
     </tr>
 
@@ -408,7 +408,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 
 <h3 id="introduction">Introduction</h3>
@@ -431,7 +430,7 @@ images or videos as well.</p>
 
 <!-- Generated at build time from the ImplementationGuide resource in package.db
      (publisher sql directive) — version, date and status can no longer drift from sushi-config.yaml. -->
-<table class="grid sql-table"><tr><td style="background-color: #eeeeee">Version</td><td style="background-color: #eeeeee">Date</td><td style="background-color: #eeeeee">Status</td></tr><tr><td>2027.0.0-ballot.rc1</td><td>2026-09-01</td><td>draft</td></tr></table>
+<table class="grid sql-table"><tr><td style="background-color: #eeeeee">Version</td><td style="background-color: #eeeeee">Date</td><td style="background-color: #eeeeee">Status</td></tr><tr><td>2027.0.0-ballot.rc2</td><td>2026-09-01</td><td>draft</td></tr></table>
 
 <p>Realm: DE (jurisdiction Germany). Versioning follows CalVer <code class="language-plaintext highlighter-rouge">YYYY.n.n</code>.</p>
 
@@ -456,12 +455,13 @@ anonymization and NLP annotations, the relation to other documents (MII KDS
 module Dokument) becomes particularly significant for representing
 processing chains (<code class="language-plaintext highlighter-rouge">relatesTo</code>).</p>
 
-<p>The information model separates the reference itself from the metadata of
-the referenced document (<code class="language-plaintext highlighter-rouge">content</code>). The document body is referenced via a
-locally interpreted URL (<code class="language-plaintext highlighter-rouge">content.attachment.url</code>). In principle, the
-document body of the referenced document can also be embedded directly
-within the reference (<code class="language-plaintext highlighter-rouge">content.attachment.data</code>). The module does not
-prescribe the semantics of this resolution.</p>
+<p>The information model separates information about the reference itself
+from the metadata of the referenced documents (<code class="language-plaintext highlighter-rouge">content</code>). The document
+body is referenced via a locally interpreted URL
+(<code class="language-plaintext highlighter-rouge">content.attachment.url</code>). In principle, the document body of the
+referenced document can also be embedded directly within the reference
+(<code class="language-plaintext highlighter-rouge">content.attachment.data</code>). The module does not prescribe the semantics of
+this resolution.</p>
 
 <p>The document body can contain a wide range of identifying data and/or
 metadata (e.g. names, patient ID). The data holder can express that such
@@ -609,8 +609,8 @@ from the content of this specification.</p>
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

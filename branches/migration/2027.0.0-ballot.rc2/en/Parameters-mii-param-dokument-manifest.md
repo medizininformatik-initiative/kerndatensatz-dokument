@@ -1,4 +1,4 @@
-# Expansion-Manifest - MII IG Dokument v2027.0.0-ballot.rc1
+# Expansion-Manifest - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -51,11 +51,11 @@
   },
   {
     "name" : "system-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
@@ -175,7 +175,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
@@ -191,7 +191,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -203,7 +203,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -215,7 +215,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -235,7 +235,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
@@ -251,11 +251,11 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet|2027.0.0-ballot.rc2"
   }]
 }
 

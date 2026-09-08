@@ -1,4 +1,4 @@
-# MII CPS Dokument CapabilityStatement - MII IG Dokument v2027.0.0-ballot.rc1
+# MII CPS Dokument CapabilityStatement - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2025-06-23 | *Maschinenlesbarer Name*:MII_CPS_Dokument_CapabilityStatement |
 
  
@@ -32,7 +32,7 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
   "resourceType" : "CapabilityStatement",
   "id" : "mii-cps-dokument-capabilitystatement",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_CPS_Dokument_CapabilityStatement",
   "title" : "MII CPS Dokument CapabilityStatement",
   "status" : "active",

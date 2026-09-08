@@ -1,4 +1,3 @@
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- Migrated from the Simplifier guide mii-ig-dokument-de, page
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md.

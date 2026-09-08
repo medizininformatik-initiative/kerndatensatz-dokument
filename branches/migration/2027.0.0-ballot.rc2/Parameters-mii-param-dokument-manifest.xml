@@ -39,11 +39,11 @@
   </parameter>
   <parameter>
     <name value="system-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
@@ -163,7 +163,7 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
@@ -179,7 +179,7 @@
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
@@ -191,7 +191,7 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
@@ -203,7 +203,7 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
@@ -223,7 +223,7 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-canonical-version"/>
@@ -239,10 +239,10 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart|2027.0.0-ballot.rc2"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet|2027.0.0-ballot.rc1"/>
+    <valueCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet|2027.0.0-ballot.rc2"/>
   </parameter>
 </Parameters>

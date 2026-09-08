@@ -1,4 +1,4 @@
-# Compatibility with Other Specifications - MII IG Dokument v2027.0.0-ballot.rc1
+# Compatibility with Other Specifications - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)
@@ -7,7 +7,7 @@
 
 ## Compatibility with Other Specifications
 
-The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile `ISiKDokumentenMetadaten`, version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, version 1.7.0) and IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, package `ihe.iti.mhd`, version 4.2.3) was assessed on the basis of the [quality-assurance reports of this guide](../qa.md), the profile comparisons of the HL7 FHIR Validator (`compare` mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile `mii-pr-dokument-dokument` in version 2027.0.0-ballot.rc1. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for `content.attachment.title` and `description`. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against `KBV_PR_Base_DocumentReference|1.7.0`. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centres.
+The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile `ISiKDokumentenMetadaten`, version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, version 1.7.0) and IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, package `ihe.iti.mhd`, version 4.2.3) was assessed on the basis of the [quality-assurance reports of this guide](../qa.md), the profile comparisons of the HL7 FHIR Validator (`compare` mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile `mii-pr-dokument-dokument` in version 2027.0.0-ballot.rc2. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for `content.attachment.title` and `description`. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against `KBV_PR_Base_DocumentReference|1.7.0`. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centers.
 
 -------
 
@@ -19,7 +19,7 @@ This section provides a structured overview of the compatibility of the MII KDS 
 
 ##### Motivation
 
-Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centres and supports the implementation of national interoperability goals.
+Compatibility with ISiK document exchange is essential in order to ensure cross-sector interoperability in the German healthcare system. ISiK defines binding metadata standards for documents in hospitals. Harmonisation enables the smooth integration of ISiK-conformant documents into MII data integration centers and supports the implementation of national interoperability goals.
 
 > **Version basis:** the comparison below was measured against the profile `ISiKDokumentenMetadaten` in version **6.0.0**. From ISiK stage 5 onwards the human-readable designation of the document is to be carried in `content.attachment.title`; `DocumentReference.description` is dropped for this purpose in favour of an alignment with IHE MHD and the ePA specification.
 
@@ -195,5 +195,5 @@ The MII KDS Dokument profile is designed as a flexible superset and enables the 
 
 -------
 
-The element definitions compared here are laid down normatively in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.md); an overview of all profiles of the module is available under [Profiles](profiles.md). The domain context of this comparison and the list of external standards taken into account are given on the [Implementer guidance](implementer-guidance.md) page.
+The element definitions compared here are laid down normatively in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.md); an overview of all profiles of the module is available under [Profiles](profiles.md). The domain context of this comparison and the list of external standards taken into account are given on the [Guidance for Implementers](implementer-guidance.md) page.
 

@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Artifacts Summary - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (English).
+              <!-- English translation of input/includes/menu.xml (the German default menu).
      The IG Publisher renders the navigation from this file. To translate it,
      ship a per-language copy at input/translations/<lang>/includes/menu.xml —
      this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
@@ -335,7 +335,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   <p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
@@ -372,10 +372,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#6">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#7">Example: Example Instances</a>
+         <a href="#7">Example: Example Scenarios</a>
       </li>
       <li>
-         <a href="#8">Other</a>
+         <a href="#8">Example: Example Instances</a>
+      </li>
+      <li>
+         <a href="#9">Other</a>
       </li>
    </ul>
 </div>
@@ -554,6 +557,30 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-iso3166-1-fragment.html"
+                  title="CodeSystem/iso3166-1-fragment">
+                  <span title="CodeSystem/iso3166-1-fragment">ISO 3166-1 (Build-Fragment)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-iso3166-2-fragment.html"
+                  title="CodeSystem/iso3166-2-fragment">
+                  <span title="CodeSystem/iso3166-2-fragment">ISO 3166-2 (Build-Fragment)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html"
                   title="CodeSystem/mii-cs-dokument-nlp-processing-status">
                   <span title="CodeSystem/mii-cs-dokument-nlp-processing-status">MII CS Dokument NLP Processing Status
@@ -564,9 +591,41 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
 <p>Status der NLP-Verarbeitung des referenzierten Dokuments</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-unsd-m49-fragment.html"
+                  title="CodeSystem/unsd-m49-fragment">
+                  <span title="CodeSystem/unsd-m49-fragment">UN M49 (Build-Fragment)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets.</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="7"> </a>
+   <h3>Example: Example Scenarios </h3>
+    <p>These define groups of interrelated examples that demonstrate one or more of the workflows supported by this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ExampleScenario-NlpPipelineAmandaAlzheimer.html"
+                  title="ExampleScenario/NlpPipelineAmandaAlzheimer">
+                  <span title="ExampleScenario/NlpPipelineAmandaAlzheimer">NLP-Pipeline „Amanda Alzheimer“
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispielszenario: Verarbeitung eines synthetischen ärztlichen Entlassbriefs durch eine NLP-Pipeline — Ingestion, Preprocessing, De-Identification und Annotation — mit den Dokumentreferenzen jedes Verarbeitungsschritts und ihren NLP-Verarbeitungsstatus.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -669,7 +728,7 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
          </tr>
       </tbody>
    </table>
-   <a name="8"> </a>
+   <a name="9"> </a>
    <h3>Other </h3>
     <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
 <table class="grid">
@@ -712,8 +771,8 @@ um das Modul Dokument der Medizininformatik Initiative zu implementieren.
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

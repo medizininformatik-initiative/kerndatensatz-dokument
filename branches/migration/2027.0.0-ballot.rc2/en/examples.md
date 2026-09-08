@@ -1,4 +1,4 @@
-# Examples - MII IG Dokument v2027.0.0-ballot.rc1
+# Examples - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Examples**
@@ -36,6 +36,12 @@ The following FHIR DocumentReference resources used the document profile ([MII P
 | [Facility encounter](Encounter-AmandaAlzheimerEinrichtungskontakt.md) | Encounter | Context | – |
 | [Department encounter](Encounter-AmandaAlzheimerAbteilungskontakt.md) | Encounter | Context | – |
 | [Care-unit encounter](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md) | Encounter | Context | – |
+
+#### The pipeline as an ExampleScenario
+
+The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline Amanda Alzheimer"](ExampleScenario-NlpPipelineAmandaAlzheimer.md): actors, the four processing steps as a process, and the participating instances, which link to the example resources above. The IG Publisher generates the sequence diagram and the process table below from it.
+
+<?plantuml 1.2026.1?>
 
 #### DocumentReference resources of the pipeline
 

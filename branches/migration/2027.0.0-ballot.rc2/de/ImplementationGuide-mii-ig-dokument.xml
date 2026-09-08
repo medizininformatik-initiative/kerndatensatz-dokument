@@ -36,7 +36,7 @@
       <valueId value="de.medizininformatikinitiative.kerndatensatz.dokument"/>
     </extension>
     <extension url="version">
-      <valueString value="2027.0.0-ballot.rc1"/>
+      <valueString value="2027.0.0-ballot.rc2"/>
     </extension>
     <extension url="uri">
       <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument"/>
@@ -122,7 +122,7 @@
     </valueCodeableConcept>
   </extension>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument"/>
-  <version value="2027.0.0-ballot.rc1"/>
+  <version value="2027.0.0-ballot.rc2"/>
   <name value="MII_IG_Dokument"/>
   <title value="MII IG Dokument"/>
   <status value="draft"/>
@@ -217,6 +217,30 @@
       </extension>
       <extension url="value">
         <valueString value="ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:iso:std:iso:3166"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:iso:std:iso:3166:-2"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -577,6 +601,30 @@
       </extension>
       <extension url="value">
         <valueString value="ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:iso:std:iso:3166"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:iso:std:iso:3166:-2"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -972,6 +1020,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/iso3166-1-fragment"/>
+      </reference>
+      <name value="ISO 3166-1 (Build-Fragment)"/>
+      <description value="Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/iso3166-2-fragment"/>
+      </reference>
+      <name value="ISO 3166-2 (Build-Fragment)"/>
+      <description value="Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="DocumentReference"/>
       </extension>
       <reference>
@@ -1104,6 +1174,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/NlpPipelineAmandaAlzheimer"/>
+      </reference>
+      <name value="NLP-Pipeline „Amanda Alzheimer“"/>
+      <description value="Beispielszenario: Verarbeitung eines synthetischen ärztlichen Entlassbriefs durch eine NLP-Pipeline — Ingestion, Preprocessing, De-Identification und Annotation — mit den Dokumentreferenzen jedes Verarbeitungsschritts und ihren NLP-Verarbeitungsstatus."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="DocumentReference"/>
       </extension>
       <reference>
@@ -1123,6 +1204,17 @@
       <name value="Patientin Amanda Alzheimer"/>
       <description value="Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet."/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/unsd-m49-fragment"/>
+      </reference>
+      <name value="UN M49 (Build-Fragment)"/>
+      <description value="Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

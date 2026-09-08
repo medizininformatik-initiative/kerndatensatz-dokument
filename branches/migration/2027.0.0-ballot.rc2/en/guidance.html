@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Guidance - MII IG Dokument v2027.0.0-ballot.rc1</title>
+    <title>Guidance - MII IG Dokument v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,11 +168,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
-  Germany
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
 
 
             </span>
@@ -197,7 +197,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (English).
+              <!-- English translation of input/includes/menu.xml (the German default menu).
      The IG Publisher renders the navigation from this file. To translate it,
      ship a per-language copy at input/translations/<lang>/includes/menu.xml —
      this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
@@ -335,7 +335,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Dokument - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Guidance</h2>
   
 
@@ -358,7 +358,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<!-- TODO:REVIEW machine-translated from the German default page -->
 <!-- markdownlint-disable MD041 -->
 <!-- English translation of the German default page
      input/pagecontent/guidance.md (DE-first) — keep both files in step.
@@ -397,7 +396,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h5 id="use-by-researchers-annotation-and-pseudonymization">Use by Researchers: Annotation and Pseudonymization</h5>
 
-<p>Besides the purposes described above, <em>internal document use</em> also plays a role in research. As part of Natural Language Processing (NLP) pipelines, researchers can store intermediate results and processing steps according to the <a href="StructureDefinition-mii-pr-dokument-dokument.html">Dokument profile</a> (<code class="language-plaintext highlighter-rouge">Dokument verarbeiten</code>, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (<code class="language-plaintext highlighter-rouge">Dokument pseudonymisieren</code>, "pseudonymize document"; <code class="language-plaintext highlighter-rouge">Dokument annotieren</code>, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.</p>
+<p>Besides the purposes described above, <em>internal document use</em> also plays a role in research. As part of Natural Language Processing (NLP) processes, researchers can store intermediate results and processing steps according to the <a href="StructureDefinition-mii-pr-dokument-dokument.html">Dokument profile</a> (<code class="language-plaintext highlighter-rouge">Dokument verarbeiten</code>, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (<code class="language-plaintext highlighter-rouge">Dokument pseudonymisieren</code>, "pseudonymize document"; <code class="language-plaintext highlighter-rouge">Dokument annotieren</code>, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.</p>
 
 <h4 id="external-document-use">External Document Use</h4>
 
@@ -414,8 +413,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="further-reading">Further Reading</h3>
 
 <!-- Note (repo-internal): "Datasets and Descriptions" shares its target with
-     *Artifacts → Logical Models*; neither Artifacts-Summary anchor is usable as
-     a link target — see docs/page-structure.md in this repository:
+     *Artifacts → Logical Models*; none of the Artifacts-Summary anchors is
+     usable as a link target — see docs/page-structure.md in this repository:
      https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
 <ul>
   <li><strong><a href="logical-models.html">Datasets and Descriptions</a></strong> — the module's data
@@ -454,8 +453,8 @@ for the technical artifacts see <a href="profiles.html">Profiles</a>.</p>
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 09:59+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Tue, Sep 8, 2026 14:28+0000">2026-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

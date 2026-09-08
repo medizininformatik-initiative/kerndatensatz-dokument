@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII IG Dokument v2027.0.0-ballot.rc1
+# MII ImplementationGuide Resource - MII IG Dokument v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -61,11 +61,6 @@ This publication includes IP covered under the following statements.
 
 * [Kontaktebene](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/Kontaktebene): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md), [Encounter/AmandaAlzheimerEinrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.md) and [Encounter/AmandaAlzheimerVersorgungsstellenKontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
 * [Fachabteilungsschluessel](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md)
-
-
-* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
-
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [MII_CPS_Dokument_CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md), [MII_CS_Dokument_NLP_Processing_Status](CodeSystem-mii-cs-dokument-nlp-processing-status.md)... Show 10 more, [MII_EX_Dokument_NLP_Processing_Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md), [MII_IG_Dokument](index.md), [MII_LM_Dokument](StructureDefinition-mii-lm-dokument.md), [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md), [MII_VS_Dokument_Einrichtungsart](ValueSet-mii-vs-dokument-einrichtungsart.md), [MII_VS_Dokument_Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.md), [MII_VS_Dokument_Format_Code](ValueSet-mii-vs-dokument-format-code.md), [MII_VS_Dokument_NLP_Processing_Status](ValueSet-mii-vs-dokument-nlp-processing-status.md), [MII_VS_Dokument_SCT_Dokument_Kategorie](ValueSet-mii-vs-dokument-sct-dokument-kategorie.md) and [MII_VS_Dokument_SCT_Dokument_Typ](ValueSet-mii-vs-dokument-sct-dokument-typ.md)
 
 
 * Some content from IHE® Copyright © 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property) .
@@ -138,7 +133,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc1"
+      "valueString" : "2027.0.0-ballot.rc2"
     },
     {
       "url" : "uri",
@@ -238,7 +233,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_IG_Dokument",
   "title" : "MII IG Dokument",
   "status" : "draft",
@@ -349,6 +344,39 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "ballot"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166:-2"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://unstats.un.org/unsd/methods/m49/m49.htm"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -843,6 +871,39 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "ballot"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:3166:-2"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://unstats.un.org/unsd/methods/m49/m49.htm"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1391,6 +1452,38 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-iso3166-1-fragment.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/iso3166-1-fragment"
+      },
+      "name" : "ISO 3166-1 (Build-Fragment)",
+      "description" : "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-iso3166-2-fragment.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/iso3166-2-fragment"
+      },
+      "name" : "ISO 3166-2 (Build-Fragment)",
+      "description" : "Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       },
       {
@@ -1583,6 +1676,22 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ExampleScenario"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ExampleScenario-NlpPipelineAmandaAlzheimer.html"
+      }],
+      "reference" : {
+        "reference" : "ExampleScenario/NlpPipelineAmandaAlzheimer"
+      },
+      "name" : "NLP-Pipeline „Amanda Alzheimer“",
+      "description" : "Beispielszenario: Verarbeitung eines synthetischen ärztlichen Entlassbriefs durch eine NLP-Pipeline — Ingestion, Preprocessing, De-Identification und Annotation — mit den Dokumentreferenzen jedes Verarbeitungsschritts und ihren NLP-Verarbeitungsstatus.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       },
       {
@@ -1611,6 +1720,22 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "name" : "Patientin Amanda Alzheimer",
       "description" : "Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet.",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-unsd-m49-fragment.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/unsd-m49-fragment"
+      },
+      "name" : "UN M49 (Build-Fragment)",
+      "description" : "Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
