@@ -4,8 +4,8 @@
   <id value="NlpPipelineAmandaAlzheimer"/>
   <language value="en"/>
   <text>
-    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ExampleScenario NlpPipelineAmandaAlzheimer</b></p><a name="en-NlpPipelineAmandaAlzheimer"> </a><a name="en-hcNlpPipelineAmandaAlzheimer"> </a><p><b>url</b>: <a href="ExampleScenario-NlpPipelineAmandaAlzheimer.html">NlpPipelineAmandaAlzheimer</a></p><p><b>version</b>: 2027.0.0-ballot.rc2</p><p><b>name</b>: NlpPipelineAmandaAlzheimer</p><p><b>status</b>: Draft</p><p><b>date</b>: 2026-09-08 14:35:38+0000</p><p><b>publisher</b>: NUM-DIZ</p><p><b>contact</b>: NUM-DIZ: <a href="https://www.netzwerk-universitaetsmedizin.de">https://www.netzwerk-universitaetsmedizin.de</a></p><p><b>jurisdiction</b>: <span title="Codes:{urn:iso:std:iso:3166 DE}">Germany</span></p><p><b>purpose</b>: </p><div><p>Zeigt, wie das Dokument-Profil und die Extension MII_EX_Dokument_NLP_Processing_Status die Ergebnisdokumente einer NLP-Verarbeitungskette und ihre Beziehungen (relatesTo: transforms, appends) abbilden.</p>
-</div><blockquote><p><b>actor</b></p><p><b>actorId</b>: dms</p><p><b>type</b>: System</p><p><b>name</b>: Klinisches Dokumentenmanagement</p><p><b>description</b>: </p><div><p>Quellsystem, das den ärztlichen Entlassbrief <code>Amanda_Alzheimer.docx</code> verwaltet und der NLP-Pipeline bereitstellt.</p>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ExampleScenario NlpPipelineAmandaAlzheimer</b></p><a name="en-NlpPipelineAmandaAlzheimer"> </a><a name="en-hcNlpPipelineAmandaAlzheimer"> </a><p><b>url</b>: <a href="ExampleScenario-NlpPipelineAmandaAlzheimer.html">NlpPipelineAmandaAlzheimer</a></p><p><b>version</b>: 2027.0.0-ballot.rc2</p><p><b>name</b>: NlpPipelineAmandaAlzheimer</p><p><b>status</b>: Draft</p><p><b>date</b>: 2026-09-08 14:50:12+0000</p><p><b>publisher</b>: NUM-DIZ</p><p><b>contact</b>: NUM-DIZ: <a href="https://www.netzwerk-universitaetsmedizin.de">https://www.netzwerk-universitaetsmedizin.de</a></p><p><b>jurisdiction</b>: <span title="Codes:{urn:iso:std:iso:3166 DE}">Germany</span></p><p><b>purpose</b>: </p><div><p>Zeigt, wie das Dokument-Profil und die Extension MII_EX_Dokument_NLP_Processing_Status die Ergebnisdokumente einer NLP-Verarbeitungskette und ihre Beziehungen (relatesTo: transforms, appends) abbilden.</p>
+</div><blockquote><p><b>actor</b></p><p><b>actorId</b>: source</p><p><b>type</b>: System</p><p><b>name</b>: Dokumentenquelle</p><p><b>description</b>: </p><div><p>System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen — im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief <code>Amanda_Alzheimer.docx</code> stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher.</p>
 </div></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: nlp</p><p><b>type</b>: System</p><p><b>name</b>: NLP-Pipeline</p><p><b>description</b>: </p><div><p>Verarbeitungskette aus Ingestion, Preprocessing, De-Identification und Annotation; jede Stufe erzeugt ein Ergebnisdokument und eine Dokumentreferenz.</p>
 </div></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: repo</p><p><b>type</b>: System</p><p><b>name</b>: Dokumentenrepository (FHIR)</p><p><b>description</b>: </p><div><p>FHIR-Server, in dem die Dokumentreferenzen aller Stufen mit ihren NLP-Verarbeitungsstatus abgelegt werden.</p>
 </div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href="DocumentReference-AmandaAlzheimerOriginalDokument.html">DocumentReference: extension = Original document; masterIdentifier = OID:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341; identifier = UUID:4f8a2e7c-5b3d-4a12-9f87-3c2e9a1d5f04 (use: official, ); status = current; docStatus = final; type = Ärztlicher Verlaufsbericht; category = Brief; securityLabel = normal</a></p><p><b>resourceId</b>: AmandaAlzheimerOriginalDokument</p><p><b>resourceType</b>: DocumentReference</p><p><b>name</b>: Original-Dokument (Amanda_Alzheimer.docx)</p><p><b>description</b>: </p><div><p>Dokumentreferenz auf das Originaldokument; NLP-Verarbeitungsstatus <code>unprocessed</code>.</p>
@@ -15,9 +15,9 @@
 </div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href="Patient-AmandaAlzheimer.html">Alzheimer Amanda (official) Female, DoB Unknown ( Medical record number (use: usual, ))</a></p><p><b>resourceId</b>: AmandaAlzheimer</p><p><b>resourceType</b>: Patient</p><p><b>name</b>: Patientin Amanda Alzheimer</p><p><b>description</b>: </p><div><p>Synthetische Patientin; nur vom Original-Dokument referenziert (<code>subject</code>).</p>
 </div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href="Encounter-AmandaAlzheimerEinrichtungskontakt.html">Encounter: identifier = Visit number; status = finished; class = inpatient encounter (ActCode#IMP); type = Einrichtungskontakt; period = 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</a></p><p><b>resourceId</b>: AmandaAlzheimerEinrichtungskontakt</p><p><b>resourceType</b>: Encounter</p><p><b>name</b>: Einrichtungskontakt</p><p><b>description</b>: </p><div><p>Kontext des Original-Dokuments (<code>context.encounter</code>).</p>
 </div></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: NLP-Verarbeitung eines Entlassbriefs</p><p><b>description</b>: </p><div><p>Vier aufeinanderfolgende Verarbeitungsschritte; jeder Schritt legt eine neue Dokumentreferenz an, die den Verarbeitungsstatus kumuliert und auf die Referenz des vorherigen Schritts verweist.</p>
-</div><p><b>preConditions</b>: </p><div><p>Der Entlassbrief <code>Amanda_Alzheimer.docx</code> liegt im Dokumentenmanagement vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden.</p>
+</div><p><b>preConditions</b>: </p><div><p>Der Entlassbrief <code>Amanda_Alzheimer.docx</code> liegt in der Dokumentenquelle vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden.</p>
 </div><p><b>postConditions</b>: </p><div><p>Vier Dokumentreferenzen (Original, Klartext, de-identifiziert, annotiert) mit <code>relatesTo</code>-Kette und NLP-Verarbeitungsstatus liegen im Repository.</p>
-</div><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 1</p><p><b>type</b>: Ingestion</p><p><b>name</b>: Erschließung des Originaldokuments</p><p><b>initiator</b>: dms</p><p><b>receiver</b>: nlp</p><p><b>description</b>: </p><div><p>Das Originaldokument wird übernommen; die Dokumentreferenz erhält den Status <code>unprocessed</code>.</p>
+</div><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 1</p><p><b>type</b>: Ingestion</p><p><b>name</b>: Erschließung des Originaldokuments</p><p><b>initiator</b>: source</p><p><b>receiver</b>: nlp</p><p><b>description</b>: </p><div><p>Das Originaldokument wird übernommen; die Dokumentreferenz erhält den Status <code>unprocessed</code>.</p>
 </div><h3>Requests</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ResourceId</b></td></tr><tr><td style="display: none">*</td><td>AmandaAlzheimerOriginalDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 2</p><p><b>type</b>: Preprocessing</p><p><b>name</b>: Klartext-Extraktion</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Umwandlung in Klartext (<code>Amanda_Alzheimer.txt</code>); neue Dokumentreferenz mit <code>preprocessed, format-change</code>, verweist mit <code>transforms</code> auf das Original.</p>
 </div><h3>Requests</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ResourceId</b></td></tr><tr><td style="display: none">*</td><td>AmandaAlzheimerOriginalDokument</td></tr></table><h3>Responses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ResourceId</b></td></tr><tr><td style="display: none">*</td><td>AmandaAlzheimerKlartextDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 3</p><p><b>type</b>: De-Identification</p><p><b>name</b>: De-Identifikation</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Identifizierende Inhalte werden durch Surrogate ersetzt (<code>De-ID.txt</code>); Status <code>preprocessed, format-change, surrogated</code>, verweist mit <code>transforms</code> auf das Klartextdokument.</p>
 </div><h3>Requests</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ResourceId</b></td></tr><tr><td style="display: none">*</td><td>AmandaAlzheimerKlartextDokument</td></tr></table><h3>Responses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ResourceId</b></td></tr><tr><td style="display: none">*</td><td>AmandaAlzheimerDeIdentifiziertesDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 4</p><p><b>type</b>: Annotation</p><p><b>name</b>: Semantische Annotation</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Annotation der klinischen Inhalte (<code>Annotat.zip</code>); Status <code>annotated, semantic, surrogated, preprocessed, format-change</code>, erweitert mit <code>appends</code> die vorherige Dokumentreferenz.</p>
@@ -27,7 +27,7 @@
   <version value="2027.0.0-ballot.rc2"/>
   <name value="NlpPipelineAmandaAlzheimer"/>
   <status value="draft"/>
-  <date value="2026-09-08T14:35:38+00:00"/>
+  <date value="2026-09-08T14:50:12+00:00"/>
   <publisher value="NUM-DIZ"/>
   <contact>
     <name value="NUM-DIZ"/>
@@ -45,10 +45,10 @@
   </jurisdiction>
   <purpose value="Zeigt, wie das Dokument-Profil und die Extension MII_EX_Dokument_NLP_Processing_Status die Ergebnisdokumente einer NLP-Verarbeitungskette und ihre Beziehungen (relatesTo: transforms, appends) abbilden."/>
   <actor>
-    <actorId value="dms"/>
+    <actorId value="source"/>
     <type value="entity"/>
-    <name value="Klinisches Dokumentenmanagement"/>
-    <description value="Quellsystem, das den ärztlichen Entlassbrief `Amanda_Alzheimer.docx` verwaltet und der NLP-Pipeline bereitstellt."/>
+    <name value="Dokumentenquelle"/>
+    <description value="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen — im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher."/>
   </actor>
   <actor>
     <actorId value="nlp"/>
@@ -131,14 +131,14 @@
   <process>
     <title value="NLP-Verarbeitung eines Entlassbriefs"/>
     <description value="Vier aufeinanderfolgende Verarbeitungsschritte; jeder Schritt legt eine neue Dokumentreferenz an, die den Verarbeitungsstatus kumuliert und auf die Referenz des vorherigen Schritts verweist."/>
-    <preConditions value="Der Entlassbrief `Amanda_Alzheimer.docx` liegt im Dokumentenmanagement vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden."/>
+    <preConditions value="Der Entlassbrief `Amanda_Alzheimer.docx` liegt in der Dokumentenquelle vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden."/>
     <postConditions value="Vier Dokumentreferenzen (Original, Klartext, de-identifiziert, annotiert) mit `relatesTo`-Kette und NLP-Verarbeitungsstatus liegen im Repository."/>
     <step>
       <operation>
         <number value="1"/>
         <type value="Ingestion"/>
         <name value="Erschließung des Originaldokuments"/>
-        <initiator value="dms"/>
+        <initiator value="source"/>
         <receiver value="nlp"/>
         <description value="Das Originaldokument wird übernommen; die Dokumentreferenz erhält den Status `unprocessed`."/>
         <request>

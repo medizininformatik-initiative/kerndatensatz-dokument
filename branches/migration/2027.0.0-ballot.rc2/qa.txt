@@ -3,7 +3,7 @@ MII_IG_Dokument : Validation Results
 
 err = 4, warn = 105, info = 498
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.4
-Generated Tue Sep 08 14:38:51 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
+Generated Tue Sep 08 14:58:44 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
  Build Errors : 1 / 3 / 0
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 2 / 28
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 1 / 47
@@ -639,11 +639,11 @@ INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference 
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.rc2
 WARNING: ValueSet.where(id = 'mii-vs-dokument-format-code'): Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [01d4401c-392a-4f79-acd4-1dfe67dea70f]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 853a2b4d-13c0-43f9-ac79-09f4906a05a2)
+Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [149544f5-4a34-4964-b874-4e7cca335103]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
+Information: X-Request-Id: 1231676a-1835-42ff-99ad-dc3517ba8ee1)
 WARNING: ValueSet.where(id = 'mii-vs-dokument-format-code'): Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [d3ac3831-9c44-49d5-bfcd-874d4374d6c9]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: f9f1f420-29d3-4c39-b120-405e4341bb74)
+Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [788943f4-9c03-40d1-9612-e3ef1bbdae4d]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
+Information: X-Request-Id: 1eddce97-cdfa-4af6-9f96-db29ff9888c3)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status.json ==
 INFORMATION: ValueSet.compose.include[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status to 2027.0.0-ballot.rc2
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
