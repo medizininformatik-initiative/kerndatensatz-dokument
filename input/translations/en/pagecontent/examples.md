@@ -37,7 +37,9 @@ The following FHIR DocumentReference resources used the document profile ([MII P
 
 The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline Amanda Alzheimer"](ExampleScenario-NlpPipelineAmandaAlzheimer.html): actors, the four processing steps as a process, and the participating instances, which link to the example resources above. The IG Publisher generates the sequence diagram and the process table below from it.
 
-{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-en.xhtml %}
+{% capture exs_diagram %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-en.xhtml %}{% endcapture %}
+{% comment %} PlantUML writes XML processing instructions (<?plantuml …?>, <?plantuml-src …?>) before the <svg>; browsers show them as text — keep only the SVG {% endcomment %}
+{{ exs_diagram | split: '<svg' | last | prepend: '<svg' }}
 
 {% include ExampleScenario-NlpPipelineAmandaAlzheimer-actor-table-en.xhtml %}
 
