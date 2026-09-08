@@ -2,6 +2,7 @@
  "CodeSystem-mii-cs-dokument-nlp-processing-status": {
   "MII_CS_Dokument_NLP_Processing_Status": "MII_CS_Dokument_NLP_Processing_Status",
   "MII CS Dokument NLP Processing Status": "MII CS Dokument NLP Processing Status",
+  "Medizininformatik Initiative": "Medizininformatik Initiative",
   "NUM-DIZ": "NUM-DIZ",
   "Status der NLP-Verarbeitung des referenzierten Dokuments": "Status of the NLP processing of the referenced document",
   "Germany": "Germany",
@@ -59,14 +60,14 @@
  "StructureDefinition-mii-ex-dokument-nlp-processing-status": {
   "MII_EX_Dokument_NLP_Processing_Status": "MII_EX_Dokument_NLP_Processing_Status",
   "MII EX Dokument NLP Processing Status": "MII EX Dokument NLP Processing Status",
-  "NUM-DIZ": "NUM-DIZ",
+  "Medizininformatik Initiative": "Medizininformatik Initiative",
   "Status der NLP-Verarbeitung des referenzierten Dokuments": "Status of the NLP processing of the referenced document",
   "NLP Processing Status": "NLP Processing Status"
  },
  "StructureDefinition-mii-lm-dokument": {
   "MII_LM_Dokument": "MII_LM_Dokument",
   "MII LM Dokument": "MII LM Dokument",
-  "NUM-DIZ": "NUM-DIZ",
+  "Medizininformatik Initiative": "Medizininformatik Initiative",
   "MII MAP Dokument": "MII MAP Dokument",
   "MII Mappings KDS-Modul Dokument": "MII mappings for the KDS module Dokument",
   "MII Logical Model KDS-Modul Dokument": "MII logical model for the KDS module Dokument",
@@ -124,7 +125,7 @@
  "StructureDefinition-mii-pr-dokument-dokument": {
   "MII_PR_Dokument_Dokument": "MII_PR_Dokument_Dokument",
   "MII PR Dokument Dokument": "MII PR Dokument Dokument",
-  "NUM-DIZ": "NUM-DIZ",
+  "Medizininformatik Initiative": "Medizininformatik Initiative",
   "Workflow Pattern": "Workflow Pattern",
   "FHIR Composition": "FHIR Composition",
   "FiveWs Pattern Mapping": "FiveWs Pattern Mapping",

@@ -17,7 +17,7 @@
 //   "2019+ Medical Informatics Initiative (MII)" → "2026+ …"
 //   the basis artifact-author contact email      → office@medizininformatik-initiative.de
 // The approval date and the artifact topic stay RuleSet PARAMETERS (as in
-// basis); pass 2026-08-28 / C19498 at the call site.
+// basis); pass 2026-09-01 / C19498 at the call site.
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Resource-independent version policy ──────────────────────────────────────
@@ -45,7 +45,7 @@ RuleSet: CRMICopyrightLabelInstance
 * extension[=].valueString = "2026+ Medical Informatics Initiative (MII)"
 
 // ── Approval date (StructureDefinition, CapabilityStatement, IG) ─────────────
-// Call with the module's approval date, e.g. `insert CRMIApprovalDate(2026-08-28)`.
+// Call with the module's approval date, e.g. `insert CRMIApprovalDate(2026-09-01)`.
 
 RuleSet: CRMIApprovalDate(approvalDate)
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-approvalDate"

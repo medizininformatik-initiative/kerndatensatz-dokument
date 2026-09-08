@@ -171,11 +171,15 @@ the job **skips with a `::notice`; it never fails the release**. Setting the
 Both gates are *wired and fall back safely*, but until the credential exists the
 "enabled" code path has never executed. Verify each once, right after enabling:
 
-**SU-TermServ.** Push any branch (or re-run the IG build) and open the
-log of the terminology step. Enabled and working looks like
-`SU-TermServ client certificate present — starting a local client-cert nginx proxy`
-followed by a green build; not configured looks like
-`No SU-TermServ client certificate configured — falling back to the public HL7 terminology server https://tx.fhir.org`.
+**SU-TermServ.** Push any branch (or re-run the IG build) and open the job
+summary of the terminology step. Enabled and working writes
+`Terminology: SU-TermServ via client-certificate proxy`
+to the step summary, followed by a green build; not configured writes
+`Terminology: public HL7 fallback (https://tx.fhir.org)` there, plus a `::notice`
+in the log — `ig-publisher.yml` words it
+`No SU-TermServ client certificate configured — falling back to the public HL7 terminology server https://tx.fhir.org`,
+while `module-release.yml` and `go-publish.yml` word the same notice
+`SU-TermServ client-certificate secrets are not configured; falling back to …`.
 If the proxy fails to start, the step fails loudly rather than silently
 mis-expanding value sets — re-check that the cert/key are **base64-encoded** and
 that the key password is correct.

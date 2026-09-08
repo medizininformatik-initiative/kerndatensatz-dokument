@@ -12,8 +12,8 @@ msgstr "MII CS Dokument NLP Processing Status"
 
 # CodeSystem.publisher
 #: CodeSystem.publisher
-msgid "NUM-DIZ"
-msgstr "NUM-DIZ"
+msgid "Medizininformatik Initiative"
+msgstr "Medizininformatik Initiative"
 
 # ContactDetail.name
 #: ContactDetail.name

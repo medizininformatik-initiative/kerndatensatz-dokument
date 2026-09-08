@@ -62,7 +62,7 @@ that enable the gated features.
 | Convention check | `ENABLE_CONVENTION_CHECK` | ON |
 | Dependency check | `ENABLE_DEPENDENCY_CHECK` | ON |
 | Security scan | `ENABLE_SECURITY_SCAN` | ON |
-| Publisher version comparison | `ENABLE_VERSION_COMPARISON` | ON (no-op while `version-comparison` is commented out) |
+| Publisher version comparison | `ENABLE_VERSION_COMPARISON` | ON (no-op while the `version-comparison` parameter is not set in `sushi-config.yaml` (it is currently absent, so the publisher default `{last}` applies)
 | Module release (CalVer) | `ENABLE_MODULE_RELEASE` | ON |
 | MII Zulip announcement | `ENABLE_ZULIP_ANNOUNCE` | ON |
 | Production `-go-publish` | manual `workflow_dispatch` + `publish:false` | OFF (gated) |

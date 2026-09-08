@@ -160,5 +160,5 @@ printf '%s' "${PWV}" | gh secret set SU_TERMSERV_CLIENT_PASSWORD "${REPO_ARGS[@]
 echo
 echo "Done — the SU-TermServ credential is configured."
 echo "Verify in CI: push any branch and read the terminology step's log."
-echo "  enabled  -> 'SU-TermServ client certificate present — starting a local client-cert nginx proxy'"
+echo "  enabled  -> 'Terminology: SU-TermServ via client-certificate proxy'"
 echo "  fallback -> 'No SU-TermServ credential — falling back to the public HL7 terminology server'"

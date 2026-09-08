@@ -3,7 +3,7 @@
   "status": "active",
   "name": "MII_VS_Dokument_Einrichtungsart",
   "id": "mii-vs-dokument-einrichtungsart",
-  "title": "MII VS Dokument Einrichtungart",
+  "title": "MII VS Dokument Einrichtungsart",
   "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
   "version": "2027.0.0-ballot.rc1",

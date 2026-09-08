@@ -25,17 +25,28 @@ each MII CalVer release is bound to one SNOMED CT International release.
 |---|---|---|
 | `v2025.*` | 2024-07-01 | `http://snomed.info/sct/900000000000207008/version/20240701` |
 | `v2026.*` | 2025-07-01 | `http://snomed.info/sct/900000000000207008/version/20250701` |
+| `v2027.*` | 2026-07-01 | `http://snomed.info/sct/900000000000207008/version/20260701` |
 
-The shipped file carries the **verified `v2026.*` pin**, matching the 2026
-dependency line this template pins in `sushi-config.yaml`. When your module moves
-to a later CalVer line, look the release up in that wiki table and update this
-file **and** the `$sct` alias in `input/fsh/aliases.fsh`. Do not guess a version —
-if the wiki has no row for your CalVer line yet, ask the MII Taskforce Core Data
-Set / the Interoperability Working Group before releasing.
+The shipped file carries the **verified `v2027.*` pin**, matching the 2027
+dependency line this module pins in `sushi-config.yaml` (`version:
+2027.0.0-ballot.rc1`). When your module moves to a later CalVer line, look the
+release up in that wiki table and update **both** pin sites:
+
+- this file (`Parameters-expansion-manifest.json`), and
+- the six `$SCT|…/version/<yyyymmdd>` includes in
+  `input/fsh/terminology/mii-vs-dokument-{sct-dokument-typ,sct-dokument-kategorie,einrichtungsart,fachgebiet}.fsh`
+  — the ValueSets inline the versioned system, they do **not** go through the
+  `$sct` alias in `input/fsh/aliases.fsh` (that alias is currently unused, so
+  bumping it alone changes nothing).
+
+Do not guess a version — if the wiki has no row for your CalVer line yet, ask the
+MII Taskforce Core Data Set / the Interoperability Working Group before releasing.
 
 The second pin, `artifact-version-policy-codes|3.0.0`, is the code system behind
-the CRMI version-policy extension that `input/fsh/rulesets/crmi.fsh` puts on every
-artifact (basis pins it the same way). Add a `system-version` entry for every
+the CRMI version-policy extension that `sushi-config.yaml` puts on the
+ImplementationGuide resource (the RuleSets in `input/fsh/rulesets/crmi.fsh` are
+provided but not yet applied to the individual artifacts; basis pins the code
+system the same way). Add a `system-version` entry for every
 further code system your module's value sets expand against — e.g. basis also
 pins `http://hl7.org/fhir/encounter-status|4.0.1` because its Encounter profile
 binds to it.

@@ -12,13 +12,8 @@ msgstr "MII LM Dokument"
 
 # The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.
 #: StructureDefinition.publisher
-msgid "NUM-DIZ"
-msgstr "NUM-DIZ"
-
-# The name of an individual to contact.
-#: StructureDefinition.contact.name
-msgid "NUM-DIZ"
-msgstr "NUM-DIZ"
+msgid "Medizininformatik Initiative"
+msgstr "Medizininformatik Initiative"
 
 # A name for the specification that is being mapped to.
 #: StructureDefinition.mapping.mii-map-dokument/name

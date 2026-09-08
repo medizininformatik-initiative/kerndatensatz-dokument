@@ -353,7 +353,7 @@
         "reference": {
           "reference": "ValueSet/mii-vs-dokument-einrichtungsart"
         },
-        "name": "MII VS Dokument Einrichtungart",
+        "name": "MII VS Dokument Einrichtungsart",
         "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
         "exampleBoolean": false
       },

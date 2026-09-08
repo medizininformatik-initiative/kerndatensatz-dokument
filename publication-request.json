@@ -7,7 +7,7 @@
    "sequence": "2027",
    "desc": "Ballot release candidate 1 for the 2027 release cycle",
    "first": true,
-   "title": "MII Implementation Guide Dokument",
+   "title": "MII IG Dokument",
    "ci-build": "https://medizininformatik-initiative.github.io/kerndatensatz-dokument/branches/dev/",
    "category": "Research",
    "introduction": "Medizininformatik Initiative - KDS-Modul Dokument",
