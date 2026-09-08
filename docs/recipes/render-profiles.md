@@ -5,7 +5,7 @@ parts it cannot invent — the prose that explains *why* a profile looks the way
 does.
 
 **Prerequisites.** A module that builds (see
-[create a new module](create-a-new-module.md)) and at least one profile
+create a new module) and at least one profile
 ([add a profile](add-a-profile.md)).
 
 ## What you get for free

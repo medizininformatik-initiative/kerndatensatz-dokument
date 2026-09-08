@@ -20,7 +20,6 @@ task in hand; this page is the map of everything else.
 | Know who owns the page set and the menu, and what the agreed structure is | [page-structure.md](page-structure.md) |
 | Revisit the optional (0..1) menu entries — keep or remove | [optional-pages.md](optional-pages.md) |
 | Know what is unfinished, and why | the [issue tracker](../../../issues); decided limits: [maintenance.md](maintenance.md) |
-| Understand where the IG template comes from, and the decisions still open on it | [org-move.md](org-move.md) |
 | Translate the pages, menu and page titles | [recipes/add-translation.md](recipes/add-translation.md) |
 | Read the specifications this is built on | [further-reading.md](further-reading.md) |
 

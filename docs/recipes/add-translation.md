@@ -7,7 +7,6 @@ contents**.
 
 **Prerequisites.**
 
-- A module that builds ([create a new module](create-a-new-module.md)).
 - The language must be declared in `sushi-config.yaml`: listed under
   `i18n-lang`, **and** its source folder listed under the
   `translation-sources` parameter. `en` ships pre-declared:
@@ -211,7 +210,7 @@ git mv 'input/translations/en/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po' \
 > ImplementationGuide intro pages (`ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md`
 > in `input/pagecontent/` and its English mirror) carry a placeholder in their
 > file *name* — those fail the build loudly when unrenamed
-> ([create-a-new-module.md](create-a-new-module.md) step 4 renames all three);
+> (the (completed) module bootstrap step 4 renames all three);
 > every other placeholder in this repository lives in file *contents* only.
 
 #### The `msgid` rule

@@ -38,7 +38,6 @@ build on earlier ones.
 | **Module (KDS module)** | One part of the MII Kerndatensatz (Person, Diagnose, Prozedur, …), published as its own IG. **This repository is the module *Dokument*.** |
 | **CRMI** | *Canonical Resource Management Infrastructure* — an HL7 IG whose profiles this module claims on its ImplementationGuide resource (shareable/publishable/computable), so the module is a well-described, versioned publication unit. |
 | **Metadata contract** | The set of `sushi-config.yaml` fields (packageId, id, name, title, canonical, version, CRMI profiles, `artifact-*` extensions) a module must fill correctly; the `convention-check` enforces the patterns. |
-| **First-run bootstrap** | The one-time step that turned the template copy into this module repository: it created `dev`, applied branch protection and removed the template's own release automation. It has already run here; the record is [recipes/first-run-setup.md](recipes/first-run-setup.md). |
 | **`publication-request.json`** | The file the IG Publisher's `-go-publish` reads to publish an IG (version, path, dates). |
 | **`special-url`** | A `sushi-config.yaml` list of canonical URLs a module defines that do **not** start with its own canonical. See [recipes/regenerate-special-url.md](recipes/regenerate-special-url.md). |
 | **`-go-publish`** | The IG Publisher's production-publication mode. Here it is a **gated**, manual, dry-run-by-default workflow — never run automatically. |

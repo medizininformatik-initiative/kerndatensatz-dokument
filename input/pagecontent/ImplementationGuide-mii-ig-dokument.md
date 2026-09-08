@@ -10,8 +10,7 @@
      kerndatensatz-basis gehören zu einer anderen Publisher-Version und dürfen
      hier nicht übernommen werden.
      DER DATEINAME TRÄGT DIE IG-ID — zusammen mit der englischen Seite und dem
-     IG-weiten .po-Katalog umbenennen (docs/recipes/create-a-new-module.md
-     Schritt 4). -->
+     IG-weiten .po-Katalog umbenennen (bootstrap step, completed). -->
 Diese ImplementationGuide-Ressource definiert die technischen Details dieser
 Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.
 

@@ -21,8 +21,6 @@ already run here; they are kept as the record of what was done.
 
 | Recipe | What it records |
 | --- | --- |
-| [first-run setup of a new module](first-run-setup.md) | Creating `dev`, branch protection, and removing the template's own release automation |
-| [create a new module](create-a-new-module.md) | Filling in the module metadata and the first content |
 
 ## Authoring content
 

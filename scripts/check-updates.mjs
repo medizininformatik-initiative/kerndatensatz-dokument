@@ -264,7 +264,7 @@ async function fetchJson(url, { github = false, allow404 = false } = {}) {
 const TEMPLATE_PKG_ID = "de.medizininformatikinitiative.template";
 // The repository that HOSTS the template releases — its home in the
 // medizininformatik-initiative organisation since the 2026-08-27 org move
-// (docs/org-move.md); the pre-move repository is an archived snapshot.
+// (see that repository's docs); the pre-move repository is an archived snapshot.
 const TEMPLATE_REPO = "medizininformatik-initiative/ig-template-mii-kds";
 
 // The FIXED FHIR package watch list: these always get a row, even

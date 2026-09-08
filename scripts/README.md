@@ -31,7 +31,6 @@ list — not a glob, because this directory now holds unrelated helpers too.
 
 | Script | What it does | Run by |
 | --- | --- | --- |
-| `first-run-bootstrap.sh` | One-time setup of a created module: branches, protection, removal of template-only files | a module author, once |
 | `convention-check.mjs` | Asserts the MII metadata contract (id/canonical/name/packageId, pinned versions) and that OPTIONAL (0..1) menu pages are decided before a release (M9, `docs/optional-pages.md`) | `convention-check.yml` |
 | `po-to-data.mjs` | Derives `input/data/translations_<lang>.json` from `input/translations/<lang>/*.po` so pages that generate tables with the publisher's `sql`/`sqlToData` directives can look up translated resource text in Liquid (`--check` = parity only; convention-check M14) | local, before committing translation changes |
 | `language-model-check.sh` | Fails the build when prose contradicts the German-default / English-translation language model | `convention-check.yml` |

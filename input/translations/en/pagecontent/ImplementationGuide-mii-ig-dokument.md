@@ -9,7 +9,7 @@
      input/pagecontent/ImplementationGuide-mii-ig-base.md and adapted.
      FILE NAME CARRIES THE IG ID: like the IG-level .po catalogue, this file and
      the German default page must be RENAMED to your concrete IG id when you
-     create a module (docs/recipes/create-a-new-module.md step 4) — the pages: entry in
+     create a module (bootstrap step, completed) — the pages: entry in
      sushi-config.yaml references it by that name. The template repo's CI
      self-check renames all three automatically for the preview. -->
 This ImplementationGuide resource defines the technical details of this

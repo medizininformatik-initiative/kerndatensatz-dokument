@@ -39,7 +39,7 @@ is authoritative; when it and this repo disagree, the wiki wins.
 - [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry) — the public IG/template
   registry; `templates.json` is where the MII IG template would get listed. That
   listing belongs to the IG template repository, not to this module — see
-  [org-move.md](org-move.md).
+  the template's home in ig-template-mii-kds.
 - [FHIR sample IG](https://build.fhir.org/ig/FHIR/sample-ig/) — a minimal reference
   IG, useful when you want to see a complete small example.
 
