@@ -8,7 +8,7 @@ DocumentReference-AmandaAlzheimerOriginalDokument.json           AmandaAlzheimer
 Encounter-AmandaAlzheimerAbteilungskontakt.json                  AmandaAlzheimerAbteilungskontakt          Instance    examples/alzheimer/mii-exa-dokument-encounter-abteilungskontakt.fsh         1 - 16
 Encounter-AmandaAlzheimerEinrichtungskontakt.json                AmandaAlzheimerEinrichtungskontakt        Instance    examples/alzheimer/mii-exa-dokument-encounter-einrichtungskontakt.fsh       1 - 14
 Encounter-AmandaAlzheimerVersorgungsstellenKontakt.json          AmandaAlzheimerVersorgungsstellenKontakt  Instance    examples/alzheimer/mii-exa-dokument-encounter-versorgungstellenkontakt.fsh  1 - 15
-ExampleScenario-NlpPipelineAmandaAlzheimer.json                  NlpPipelineAmandaAlzheimer                Instance    examples/alzheimer/mii-exs-dokument-nlp-pipeline.fsh                        6 - 102
+ExampleScenario-NlpPipelineAmandaAlzheimer.json                  NlpPipelineAmandaAlzheimer                Instance    examples/alzheimer/mii-exs-dokument-nlp-pipeline.fsh                        6 - 111
 Patient-AmandaAlzheimer.json                                     AmandaAlzheimer                           Instance    examples/alzheimer/mii-exa-dokument-patient-alzheimer.fsh                   1 - 13
 StructureDefinition-mii-ex-dokument-nlp-processing-status.json   MII_EX_Dokument_NLP_Processing_Status     Extension   extensions/mii-ex-dokument-nlp-processing-status.fsh                        1 - 17
 StructureDefinition-mii-lm-dokument.json                         MII_LM_Dokument                           Logical     logical-model/mii-lm-dokument.fsh                                           1 - 31

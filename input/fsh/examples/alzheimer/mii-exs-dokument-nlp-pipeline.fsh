@@ -35,6 +35,11 @@ Usage: #definition
   * name = "Dokumentenrepository (FHIR)"
   * description = "FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline."
 // process — transformations happen in the pipeline (with human review); each result is then documented in the repository
+// Every operation carries a request payload: the transformation steps name the document they
+// consume, the filing steps the document reference they store. The publisher's ExampleScenario
+// renderer (org.hl7.fhir.r5 ExampleScenarioRenderer.toPlantUml) writes the PlantUML line break
+// only after a request/response payload, so a step without one is glued onto the next line —
+// two steps in one arrow label, a literal "nlp -> repo:" in the diagram and a width beyond the page.
 * process[+]
   * title = "NLP-Verarbeitung eines Entlassbriefs"
   * description = "Vier Verarbeitungsschritte der NLP-Pipeline (teil- oder vollautomatisch, mit Prüfung durch Annotierende); die FHIR-DocumentReference-Ressourcen dokumentieren nur die Ergebnisse dieser Schritte, kumulieren den NLP-Verarbeitungsstatus und verknüpfen die Ergebnisdokumente über `relatesTo`. Das Dokumentenrepository transformiert nichts — es speichert die Dokumentreferenzen."
@@ -47,6 +52,7 @@ Usage: #definition
     * initiator = "source"
     * receiver = "nlp"
     * description = "Die Pipeline übernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle."
+    * request.resourceId = "AmandaAlzheimerOriginalDokument"
   * step[+].operation
     * number = "2"
     * type = "Dokumentreferenz ablegen"
@@ -62,6 +68,7 @@ Usage: #definition
     * initiator = "nlp"
     * receiver = "nlp"
     * description = "Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`)."
+    * request.resourceId = "AmandaAlzheimerOriginalDokument"
   * step[+].operation
     * number = "4"
     * type = "Dokumentreferenz ablegen"
@@ -77,6 +84,7 @@ Usage: #definition
     * initiator = "nlp"
     * receiver = "annotators"
     * description = "Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`)."
+    * request.resourceId = "AmandaAlzheimerKlartextDokument"
   * step[+].operation
     * number = "6"
     * type = "Dokumentreferenz ablegen"
@@ -92,6 +100,7 @@ Usage: #definition
     * initiator = "annotators"
     * receiver = "nlp"
     * description = "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
+    * request.resourceId = "AmandaAlzheimerDeIdentifiziertesDokument"
   * step[+].operation
     * number = "8"
     * type = "Dokumentreferenz ablegen"

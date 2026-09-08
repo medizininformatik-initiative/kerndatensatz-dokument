@@ -57,7 +57,10 @@
             "name": "Originaldokument übernehmen",
             "initiator": "source",
             "receiver": "nlp",
-            "description": "Die Pipeline übernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle."
+            "description": "Die Pipeline übernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle.",
+            "request": {
+              "resourceId": "AmandaAlzheimerOriginalDokument"
+            }
           }
         },
         {
@@ -80,7 +83,10 @@
             "name": "Klartext-Extraktion",
             "initiator": "nlp",
             "receiver": "nlp",
-            "description": "Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`)."
+            "description": "Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`).",
+            "request": {
+              "resourceId": "AmandaAlzheimerOriginalDokument"
+            }
           }
         },
         {
@@ -103,7 +109,10 @@
             "name": "De-Identifikation mit Prüfung",
             "initiator": "nlp",
             "receiver": "annotators",
-            "description": "Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`)."
+            "description": "Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`).",
+            "request": {
+              "resourceId": "AmandaAlzheimerKlartextDokument"
+            }
           }
         },
         {
@@ -126,7 +135,10 @@
             "name": "Semantische Annotation",
             "initiator": "annotators",
             "receiver": "nlp",
-            "description": "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
+            "description": "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst.",
+            "request": {
+              "resourceId": "AmandaAlzheimerDeIdentifiziertesDokument"
+            }
           }
         },
         {
