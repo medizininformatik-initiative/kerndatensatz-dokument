@@ -41,8 +41,6 @@ The following FHIR DocumentReference resources used the document profile ([MII P
 
 The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline Amanda Alzheimer"](ExampleScenario-NlpPipelineAmandaAlzheimer.md): actors, the four processing steps as a process, and the participating instances, which link to the example resources above. The IG Publisher generates the sequence diagram and the process table below from it.
 
-<?plantuml 1.2026.1?>
-
 #### DocumentReference resources of the pipeline
 
 Each tab shows the JSON representation of one processing step's document reference; the artifact page is linked in each.
