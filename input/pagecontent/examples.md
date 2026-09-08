@@ -37,7 +37,7 @@ Die Pipeline ist zusätzlich als FHIR-Ressource [ExampleScenario „NLP-Pipeline
 
 {% capture exs_diagram %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-de.xhtml %}{% endcapture %}
 {% comment %} The publisher renders the ExampleScenario fragments with English labels regardless of the page language (not internationalized in publisher 2.3.2); the replace chains below map them to German on this page. PlantUML writes XML processing instructions (<?plantuml …?>, <?plantuml-src …?>) before the <svg>; browsers show them as text — keep only the SVG {% endcomment %}
-{{ exs_diagram | split: '<svg' | last | prepend: '<svg' }}
+{{ exs_diagram | split: '<svg' | last | prepend: '<svg' | split: '</svg>' | first | append: '</svg>' }}
 
 {% capture exs_actor_table %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-actor-table-de.xhtml %}{% endcapture %}
 {{ exs_actor_table | replace: '>Step<', '>Schritt<' | replace: '>Description<', '>Beschreibung<' | replace: '>Receiver<', '>Empfänger<' | replace: '>Request<', '>Anfrage<' | replace: '>Response<', '>Antwort<' | replace: '>Type<', '>Typ<' | replace: '>Content<', '>Inhalt<' | replace: 'Process:', 'Prozess:' | replace: 'Pre-conditions:', 'Vorbedingungen:' | replace: 'Post-conditions:', 'Nachbedingungen:' }}

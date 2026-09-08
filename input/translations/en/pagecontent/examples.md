@@ -39,7 +39,7 @@ The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline
 
 {% capture exs_diagram %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-en.xhtml %}{% endcapture %}
 {% comment %} PlantUML writes XML processing instructions (<?plantuml …?>, <?plantuml-src …?>) before the <svg>; browsers show them as text — keep only the SVG {% endcomment %}
-{{ exs_diagram | split: '<svg' | last | prepend: '<svg' }}
+{{ exs_diagram | split: '<svg' | last | prepend: '<svg' | split: '</svg>' | first | append: '</svg>' }}
 
 {% include ExampleScenario-NlpPipelineAmandaAlzheimer-actor-table-en.xhtml %}
 
