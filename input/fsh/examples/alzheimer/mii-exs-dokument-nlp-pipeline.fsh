@@ -34,6 +34,58 @@ Usage: #definition
   * type = #entity
   * name = "Dokumentenrepository (FHIR)"
   * description = "FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline."
+// instances — the eight Amanda-Alzheimer example resources, each linked through the
+// R5 cross-version extension ExampleScenario.instance.content. The publisher renders
+// them as the instance table and anchors every entry, which is what the sequence
+// diagram's payload links point at. Every description states the resource's own values.
+* instance[+]
+  * resourceId = "AmandaAlzheimerOriginalDokument"
+  * resourceType = #DocumentReference
+  * name = "Originaldokument (Amanda_Alzheimer.docx)"
+  * description = "Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`)."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerOriginalDokument)
+* instance[+]
+  * resourceId = "AmandaAlzheimerKlartextDokument"
+  * resourceType = #DocumentReference
+  * name = "Klartext-Dokument (Amanda_Alzheimer.txt)"
+  * description = "Ergebnis der Klartext-Extraktion: `Amanda_Alzheimer.txt` (`text/plain`, `attachment.creation` 2028-02-06). Status `preprocessed`, `format-change`; `relatesTo.transforms` → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerKlartextDokument)
+* instance[+]
+  * resourceId = "AmandaAlzheimerDeIdentifiziertesDokument"
+  * resourceType = #DocumentReference
+  * name = "De-identifiziertes Dokument (De-ID.txt)"
+  * description = "Ergebnis der De-Identifikation: `De-ID.txt` (`text/plain`). Status `preprocessed`, `format-change`, `surrogated`; `relatesTo.transforms` → Klartext-Dokument. Ohne `subject` und ohne `context.encounter` — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerDeIdentifiziertesDokument)
+* instance[+]
+  * resourceId = "AmandaAlzheimerAnnotiertesDokument"
+  * resourceType = #DocumentReference
+  * name = "Annotiertes Dokument (Annotat.zip)"
+  * description = "Ergebnis der semantischen Annotation: `Annotat.zip` (`application/zip`). Status `annotated`, `semantic`, `surrogated`, `preprocessed`, `format-change`; `relatesTo.appends` → de-identifiziertes Dokument, da die Annotationen das Dokument ergänzen und nicht ersetzen. Ebenfalls ohne `subject` und `context.encounter`."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerAnnotiertesDokument)
+* instance[+]
+  * resourceId = "AmandaAlzheimer"
+  * resourceType = #Patient
+  * name = "Patientin Amanda Alzheimer"
+  * description = "Synthetische Patientin; `subject` des Original- und des Klartext-Dokuments. Ab der De-Identifikation wird sie nicht mehr referenziert."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimer)
+* instance[+]
+  * resourceId = "AmandaAlzheimerEinrichtungskontakt"
+  * resourceType = #Encounter
+  * name = "Einrichtungskontakt"
+  * description = "`context.encounter` des Original- und des Klartext-Dokuments und oberster Kontakt der Kontakthierarchie (ohne `partOf`)."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerEinrichtungskontakt)
+* instance[+]
+  * resourceId = "AmandaAlzheimerAbteilungskontakt"
+  * resourceType = #Encounter
+  * name = "Abteilungskontakt"
+  * description = "Mittlere Ebene der Kontakthierarchie (`partOf` → Einrichtungskontakt); von keiner Dokumentreferenz unmittelbar referenziert."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerAbteilungskontakt)
+* instance[+]
+  * resourceId = "AmandaAlzheimerVersorgungsstellenKontakt"
+  * resourceType = #Encounter
+  * name = "Versorgungsstellenkontakt"
+  * description = "Unterste Ebene der Kontakthierarchie (`partOf` → Abteilungskontakt); von keiner Dokumentreferenz unmittelbar referenziert."
+  * extension[$exs-instance-content].valueReference = Reference(AmandaAlzheimerVersorgungsstellenKontakt)
 // process — transformations happen in the pipeline (with human review); each result is then documented in the repository
 // Every operation carries a request payload: the transformation steps name the document they
 // consume, the filing steps the document reference they store. The publisher's ExampleScenario
