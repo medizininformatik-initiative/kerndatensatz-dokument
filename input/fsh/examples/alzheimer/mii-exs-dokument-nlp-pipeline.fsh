@@ -27,7 +27,7 @@ Usage: #definition
 * actor[+]
   * actorId = "annotators"
   * type = #person
-  * name = "Annotierende (Human in the Loop)"
+  * name = "Annotierende"
   * description = "Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen."
 * actor[+]
   * actorId = "repo"
@@ -151,7 +151,7 @@ Usage: #definition
     * name = "Semantische Annotation"
     * initiator = "annotators"
     * receiver = "nlp"
-    * description = "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
+    * description = "Semantische Annotation der klinischen Inhalte im Annotationsframework durch die Annotierenden; die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
     * request.resourceId = "AmandaAlzheimerDeIdentifiziertesDokument"
   * step[+].operation
     * number = "8"

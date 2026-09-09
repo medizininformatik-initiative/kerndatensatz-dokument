@@ -31,8 +31,8 @@ msgstr "Tool chain that carries out the processing steps semi- or fully automati
 
 # ExampleScenario.actor.name
 #: ExampleScenario.actor.name
-msgid "Annotierende (Human in the Loop)"
-msgstr "Annotators (human in the loop)"
+msgid "Annotierende"
+msgstr "Annotators"
 
 # ExampleScenario.actor.description
 #: ExampleScenario.actor.description
@@ -241,8 +241,8 @@ msgstr "Semantic annotation"
 
 # ExampleScenario.process.step.operation.description
 #: ExampleScenario.process.step.operation.description
-msgid "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
-msgstr "Semantic annotation of the clinical content in the annotation framework (human in the loop); the result files are bundled as `Annotat.zip`."
+msgid "Semantische Annotation der klinischen Inhalte im Annotationsframework durch die Annotierenden; die Ergebnisdateien werden als `Annotat.zip` zusammengefasst."
+msgstr "Semantic annotation of the clinical content in the annotation framework by the annotators; the result files are bundled as `Annotat.zip`."
 
 # ExampleScenario.process.step.operation.name
 #: ExampleScenario.process.step.operation.name
