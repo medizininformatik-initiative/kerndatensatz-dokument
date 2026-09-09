@@ -33,7 +33,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
   "version" : "2027.0.0-ballot.rc2",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-09T18:13:45+00:00",
+  "date" : "2026-09-09T18:45:51+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -130,7 +130,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
   {
     "actorId" : "annotators",
     "type" : "person",
-    "name" : "Annotierende (Human in the Loop)",
+    "name" : "Annotierende",
     "_name" : {
       "extension" : [{
         "extension" : [{
@@ -139,7 +139,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
         },
         {
           "url" : "content",
-          "valueString" : "Annotators (human in the loop)"
+          "valueString" : "Annotators"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/translation"
       }]
@@ -806,7 +806,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
         },
         "initiator" : "annotators",
         "receiver" : "nlp",
-        "description" : "Semantische Annotation der klinischen Inhalte im Annotationsframework (Human in the Loop); die Ergebnisdateien werden als `Annotat.zip` zusammengefasst.",
+        "description" : "Semantische Annotation der klinischen Inhalte im Annotationsframework durch die Annotierenden; die Ergebnisdateien werden als `Annotat.zip` zusammengefasst.",
         "_description" : {
           "extension" : [{
             "extension" : [{
@@ -815,7 +815,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
             },
             {
               "url" : "content",
-              "valueString" : "Semantic annotation of the clinical content in the annotation framework (human in the loop); the result files are bundled as `Annotat.zip`."
+              "valueString" : "Semantic annotation of the clinical content in the annotation framework by the annotators; the result files are bundled as `Annotat.zip`."
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
