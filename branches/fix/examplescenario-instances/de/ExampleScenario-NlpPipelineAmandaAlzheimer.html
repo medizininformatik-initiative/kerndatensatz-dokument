@@ -409,9 +409,6 @@
 <!-- Deutsche Standardsprachfassung; englische Übersetzung: input/translations/en/intro-notes/ExampleScenario-NlpPipelineAmandaAlzheimer-intro.md -->
 <p>Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzheimer“; die Beispielinstanzen selbst, das Ablaufdiagramm und die Erläuterung der <code class="language-plaintext highlighter-rouge">relatesTo</code>-Beziehungen stehen auf der Seite <a href="examples.html#beispielszenario-nlp-pipeline-amanda-alzheimer">Beispiele</a>.</p>
 
-<!-- The publisher's sequence diagram links its payloads to anchors i_<instance> that no generated fragment provides (publisher 2.3.2); the anchors below make those links resolve on this page. -->
-<p><a id="i_AmandaAlzheimerOriginalDokument"></a><a id="i_AmandaAlzheimerKlartextDokument"></a><a id="i_AmandaAlzheimerDeIdentifiziertesDokument"></a><a id="i_AmandaAlzheimerAnnotiertesDokument"></a></p>
-
 
 </div>
 
@@ -460,7 +457,7 @@
 </div></td>
 <td><a href="#a_source" title="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen — im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher.">Dokumentenquelle</a></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
-<td><b>Bad reference: AmandaAlzheimerOriginalDokument</b></td>
+<td><a href="#i_AmandaAlzheimerOriginalDokument" title="Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`).">Originaldokument (Amanda_Alzheimer.docx)</a></td>
 <td></td></tr>
 <tr><td><a name="node3"> </a>2</td>
 <td>Original dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
@@ -468,7 +465,7 @@
 </div></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
 <td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
-<td><b>Bad reference: AmandaAlzheimerOriginalDokument</b></td>
+<td><a href="#i_AmandaAlzheimerOriginalDokument" title="Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`).">Originaldokument (Amanda_Alzheimer.docx)</a></td>
 <td></td></tr>
 <tr><td><a name="node4"> </a>3</td>
 <td>Klartext-Extraktion - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Preprocessing (Details: FHIR Restful Interactions code Preprocessing)</a></td>
@@ -476,7 +473,7 @@
 </div></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
-<td><b>Bad reference: AmandaAlzheimerOriginalDokument</b></td>
+<td><a href="#i_AmandaAlzheimerOriginalDokument" title="Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`).">Originaldokument (Amanda_Alzheimer.docx)</a></td>
 <td></td></tr>
 <tr><td><a name="node5"> </a>4</td>
 <td>Klartext dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
@@ -484,7 +481,7 @@
 </div></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
 <td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
-<td><b>Bad reference: AmandaAlzheimerKlartextDokument</b></td>
+<td><a href="#i_AmandaAlzheimerKlartextDokument" title="Ergebnis der Klartext-Extraktion: `Amanda_Alzheimer.txt` (`text/plain`, `attachment.creation` 2028-02-06). Status `preprocessed`, `format-change`; `relatesTo.transforms` → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt.">Klartext-Dokument (Amanda_Alzheimer.txt)</a></td>
 <td></td></tr>
 <tr><td><a name="node6"> </a>5</td>
 <td>De-Identifikation mit Prüfung - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">De-Identification (Details: FHIR Restful Interactions code De-Identification)</a></td>
@@ -492,7 +489,7 @@
 </div></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
 <td><a href="#a_annotators" title="Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen.">Annotierende (Human in the Loop)</a></td>
-<td><b>Bad reference: AmandaAlzheimerKlartextDokument</b></td>
+<td><a href="#i_AmandaAlzheimerKlartextDokument" title="Ergebnis der Klartext-Extraktion: `Amanda_Alzheimer.txt` (`text/plain`, `attachment.creation` 2028-02-06). Status `preprocessed`, `format-change`; `relatesTo.transforms` → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt.">Klartext-Dokument (Amanda_Alzheimer.txt)</a></td>
 <td></td></tr>
 <tr><td><a name="node7"> </a>6</td>
 <td>De-identifiziertes Dokument dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
@@ -500,7 +497,7 @@
 </div></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
 <td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
-<td><b>Bad reference: AmandaAlzheimerDeIdentifiziertesDokument</b></td>
+<td><a href="#i_AmandaAlzheimerDeIdentifiziertesDokument" title="Ergebnis der De-Identifikation: `De-ID.txt` (`text/plain`). Status `preprocessed`, `format-change`, `surrogated`; `relatesTo.transforms` → Klartext-Dokument. Ohne `subject` und ohne `context.encounter` — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet.">De-identifiziertes Dokument (De-ID.txt)</a></td>
 <td></td></tr>
 <tr><td><a name="node8"> </a>7</td>
 <td>Semantische Annotation - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Annotation (Details: FHIR Restful Interactions code Annotation)</a></td>
@@ -508,7 +505,7 @@
 </div></td>
 <td><a href="#a_annotators" title="Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen.">Annotierende (Human in the Loop)</a></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
-<td><b>Bad reference: AmandaAlzheimerDeIdentifiziertesDokument</b></td>
+<td><a href="#i_AmandaAlzheimerDeIdentifiziertesDokument" title="Ergebnis der De-Identifikation: `De-ID.txt` (`text/plain`). Status `preprocessed`, `format-change`, `surrogated`; `relatesTo.transforms` → Klartext-Dokument. Ohne `subject` und ohne `context.encounter` — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet.">De-identifiziertes Dokument (De-ID.txt)</a></td>
 <td></td></tr>
 <tr><td><a name="node9"> </a>8</td>
 <td>Annotiertes Dokument dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
@@ -516,13 +513,53 @@
 </div></td>
 <td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
 <td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
-<td><b>Bad reference: AmandaAlzheimerAnnotiertesDokument</b></td>
+<td><a href="#i_AmandaAlzheimerAnnotiertesDokument" title="Ergebnis der semantischen Annotation: `Annotat.zip` (`application/zip`). Status `annotated`, `semantic`, `surrogated`, `preprocessed`, `format-change`; `relatesTo.appends` → de-identifiziertes Dokument, da die Annotationen das Dokument ergänzen und nicht ersetzen. Ebenfalls ohne `subject` und `context.encounter`.">Annotiertes Dokument (Annotat.zip)</a></td>
 <td></td></tr></table></div></div>
 
 <a name="instances"> </a>
 <h4>Instanzen</h4>
   <div data-fhir="generated"><p class="res-header-id"></p>
-<table class="table-striped table-bordered" data-fhir="generated"><tr><th>Name</th><th>Type</th><th>Content</th><th>Description</th></tr></table></div>
+<table class="table-striped table-bordered" data-fhir="generated"><tr><th>Name</th><th>Type</th><th>Content</th><th>Description</th></tr>
+<tr><td><a name="i_AmandaAlzheimerOriginalDokument"> </a>Originaldokument (Amanda_Alzheimer.docx)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerOriginalDokument.html">here</a></td>
+<td><div><p>Ausgangspunkt der Kette: <code>Amanda_Alzheimer.docx</code> (<code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code>, <code>attachment.creation</code> 2028-02-06). NLP-Verarbeitungsstatus <code>unprocessed</code>; kein <code>relatesTo</code>. Verweist auf die Patientin (<code>subject</code>) und den Einrichtungskontakt (<code>context.encounter</code>).</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerKlartextDokument"> </a>Klartext-Dokument (Amanda_Alzheimer.txt)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerKlartextDokument.html">here</a></td>
+<td><div><p>Ergebnis der Klartext-Extraktion: <code>Amanda_Alzheimer.txt</code> (<code>text/plain</code>, <code>attachment.creation</code> 2028-02-06). Status <code>preprocessed</code>, <code>format-change</code>; <code>relatesTo.transforms</code> → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerDeIdentifiziertesDokument"> </a>De-identifiziertes Dokument (De-ID.txt)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html">here</a></td>
+<td><div><p>Ergebnis der De-Identifikation: <code>De-ID.txt</code> (<code>text/plain</code>). Status <code>preprocessed</code>, <code>format-change</code>, <code>surrogated</code>; <code>relatesTo.transforms</code> → Klartext-Dokument. Ohne <code>subject</code> und ohne <code>context.encounter</code> — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerAnnotiertesDokument"> </a>Annotiertes Dokument (Annotat.zip)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerAnnotiertesDokument.html">here</a></td>
+<td><div><p>Ergebnis der semantischen Annotation: <code>Annotat.zip</code> (<code>application/zip</code>). Status <code>annotated</code>, <code>semantic</code>, <code>surrogated</code>, <code>preprocessed</code>, <code>format-change</code>; <code>relatesTo.appends</code> → de-identifiziertes Dokument, da die Annotationen das Dokument ergänzen und nicht ersetzen. Ebenfalls ohne <code>subject</code> und <code>context.encounter</code>.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimer"> </a>Patientin Amanda Alzheimer</td>
+<td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td>
+<td><a href="Patient-AmandaAlzheimer.html">here</a></td>
+<td><div><p>Synthetische Patientin; <code>subject</code> des Original- und des Klartext-Dokuments. Ab der De-Identifikation wird sie nicht mehr referenziert.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerEinrichtungskontakt"> </a>Einrichtungskontakt</td>
+<td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+<td><a href="Encounter-AmandaAlzheimerEinrichtungskontakt.html">here</a></td>
+<td><div><p><code>context.encounter</code> des Original- und des Klartext-Dokuments und oberster Kontakt der Kontakthierarchie (ohne <code>partOf</code>).</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerAbteilungskontakt"> </a>Abteilungskontakt</td>
+<td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+<td><a href="Encounter-AmandaAlzheimerAbteilungskontakt.html">here</a></td>
+<td><div><p>Mittlere Ebene der Kontakthierarchie (<code>partOf</code> → Einrichtungskontakt); von keiner Dokumentreferenz unmittelbar referenziert.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerVersorgungsstellenKontakt"> </a>Versorgungsstellenkontakt</td>
+<td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+<td><a href="Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html">here</a></td>
+<td><div><p>Unterste Ebene der Kontakthierarchie (<code>partOf</code> → Abteilungskontakt); von keiner Dokumentreferenz unmittelbar referenziert.</p>
+</div></td></tr></table></div>
 
   <!-- insert notes if present -->
   
@@ -553,7 +590,7 @@
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 18:07+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 18:13+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -32,6 +32,9 @@
     ]
   },
   "usage": {
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content": [
+      "ExampleScenario.instance"
+    ],
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
       "ImplementationGuide"
     ],
@@ -103,6 +106,17 @@
       "CodeSystem.description",
       "CodeSystem.name",
       "CodeSystem.title",
+      "ExampleScenario.actor.description",
+      "ExampleScenario.actor.name",
+      "ExampleScenario.instance.description",
+      "ExampleScenario.instance.name",
+      "ExampleScenario.process.description",
+      "ExampleScenario.process.postConditions",
+      "ExampleScenario.process.preConditions",
+      "ExampleScenario.process.step.operation.description",
+      "ExampleScenario.process.step.operation.name",
+      "ExampleScenario.process.title",
+      "ExampleScenario.purpose",
       "ImplementationGuide.definition.page.page.page.page.title",
       "ImplementationGuide.definition.page.page.page.title",
       "ImplementationGuide.definition.page.page.title",
