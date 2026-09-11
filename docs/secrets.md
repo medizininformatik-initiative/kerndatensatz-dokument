@@ -14,10 +14,18 @@ gh variable set NAME --repo <owner>/<module-repo> --body "value"
 ## SU-TermServ terminology server (optional)
 
 The IG build/preview and `go-publish` resolve terminology against the public HL7
-server `tx.fhir.org` by default. To use the **MII SU-TermServ**
+server `tx.ontoserver.csiro.au` by default. To use the **MII SU-TermServ**
 (`ontoserver.mii-termserv.de`), which fully expands MII value sets (SNOMED CT,
 ICD-10-GM, OPS, …), supply the client certificate. It is client-certificate-gated
 and granted only to entities in Germany.
+
+> **Why Ontoserver and not the HL7 server:** this module pins the SNOMED CT
+> International Edition `20260701` per the MII Terminology Version Policy.
+> `tx.fhir.org` does not carry that edition, so the four SNOMED value sets
+> cannot expand there and the rendered guide loses their code tables.
+> Ontoserver carries it. SU-TermServ stays the first choice — it is the only
+> server with the MII-specific value sets — and Ontoserver is the fallback
+> that keeps the rendering useful when the certificate is absent.
 
 Store the certificate **once**, under `SU_TERMSERV_CLIENT_CERT`,
 `SU_TERMSERV_CLIENT_KEY` and `SU_TERMSERV_CLIENT_PASSWORD`. The two files are
@@ -36,7 +44,7 @@ all four — you never store the certificate twice.
 The build workflows pass `-fhir-settings .github/fhir-settings.json` to the
 IG Publisher: it allowlists the proxy's plain-HTTP private-network address
 (`http://127.0.0.1:8090/fhir`), which the publisher's SSRF hardening (2.3.1+)
-would otherwise refuse. The file has no effect on the `tx.fhir.org` fallback.
+would otherwise refuse. The file has no effect on the Ontoserver fallback.
 
 SU-TermServ authenticates clients with **mutual TLS**. Verified against the live
 server (`openssl s_client` to `ontoserver.mii-termserv.de:443`):
@@ -125,7 +133,7 @@ Three traps that each cost a failed CI run — all handled by the helper script:
 
 Re-run the helper with the new certificate — `gh secret set` overwrites. To turn
 the integration off again, delete the three secrets; the preview and publish
-builds fall back to `tx.fhir.org` on the next run with a `::notice`, and the
+builds fall back to `tx.ontoserver.csiro.au` on the next run with a `::notice`, and the
 HL7 Java validator job **skips** (its upstream workflow has no fallback —
 without the certificate it would fail, not fall back). Note the expiry date: an expired
 certificate fails the handshake, so rotate before `notAfter`.
@@ -175,9 +183,9 @@ Both gates are *wired and fall back safely*, but until the credential exists the
 summary of the terminology step. Enabled and working writes
 `Terminology: SU-TermServ via client-certificate proxy`
 to the step summary, followed by a green build; not configured writes
-`Terminology: public HL7 fallback (https://tx.fhir.org)` there, plus a `::notice`
+`Terminology: Ontoserver fallback (https://tx.ontoserver.csiro.au/fhir)` there, plus a `::notice`
 in the log — `ig-publisher.yml` words it
-`No SU-TermServ client certificate configured — falling back to the public HL7 terminology server https://tx.fhir.org`,
+`No SU-TermServ client certificate configured — falling back to https://tx.ontoserver.csiro.au/fhir`,
 while `module-release.yml` and `go-publish.yml` word the same notice
 `SU-TermServ client-certificate secrets are not configured; falling back to …`.
 If the proxy fails to start, the step fails loudly rather than silently

@@ -8,9 +8,8 @@
      menu structure — one page per artifact type). The IG Publisher generates
      the artifact detail pages automatically. -->
 
-This page lists the FHIR profiles of the **Dokument** module (naming convention
-`MII_PR_<Modul>_<Name>` (where `<Modul>` is the German module name — here `Dokument`)). The module's extensions are listed on the
-[Extensions](extensions.html) page.
+This page lists the FHIR profiles of the **Dokument** module. The module's
+extensions are listed on the [Extensions](extensions.html) page.
 
 The module defines one profile:
 [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
@@ -38,4 +37,3 @@ The module defines one profile: [MII PR Dokument Dokument](StructureDefinition-m
   </div>
 </div>
 
-The MII-wide naming conventions for FHIR resources (module designations, prefixes, `title`/`name`/`id`/`url`) are maintained by the Meta module: [Naming conventions for FHIR resources in the MII](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII). They apply to all conformance resources of this module.

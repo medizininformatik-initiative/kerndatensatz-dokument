@@ -9,9 +9,8 @@
      links to the artifact pages the IG Publisher generates. The sections on the
      defined and the used ValueSets live on the value-sets.md page. -->
 
-This page describes the CodeSystems of the **Dokument** module (naming
-convention `MII_CS_<Modul>_<Name>`, where `<Modul>` is the German module name — here `Dokument`). The ValueSets built on them are described
-on the [Value Sets](value-sets.html) page.
+This page describes the CodeSystems of the **Dokument** module. The ValueSets
+built on them are described on the [Value Sets](value-sets.html) page.
 
 > **Important:** CodeSystem resources of external terminologies (e.g. ICD-10-GM,
 > OPS, SNOMED CT) are **not** published in this module; they are obtained from the

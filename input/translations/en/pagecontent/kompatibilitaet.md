@@ -6,7 +6,32 @@
      This page is nested under "implementer-guidance" in the page tree and
      deliberately has no menu entry of its own. -->
 
-The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile `ISiKDokumentenMetadaten`, version 6.0.0), KBV MIO Basis (`KBV_PR_Base_DocumentReference`, version 1.7.0) and IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`, package `ihe.iti.mhd`, version 4.2.3) was assessed on the basis of the [quality-assurance reports of this guide](../qa.html), the profile comparisons of the HL7 FHIR Validator (`compare` mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile `mii-pr-dokument-dokument` in version 2027.0.0-ballot.rc2. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for `content.attachment.title` and `description`. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against `KBV_PR_Base_DocumentReference|1.7.0`. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centers.
+This page compares the FHIR DocumentReference profiles from gematik ISiK
+document exchange (`ISiKDokumentenMetadaten`), KBV MIO Basis
+(`KBV_PR_Base_DocumentReference`) and IHE MHD
+(`IHE.MHD.UnContained.Comprehensive.DocumentReference`) with this module's
+profile.
+
+> **How to read this:** the MII KDS Dokument profile is throughout the **target**
+> of the comparison. Every table puts the source profile on the left and the MII
+> profile on the right, and answers one question: what does it take to carry a
+> DocumentReference from ISiK, KBV MIO Basis or IHE MHD **into** MII KDS
+> Dokument? Statements about the opposite direction are marked as such where
+> they occur.
+{: .ig-highlight .ig-highlight-grey}
+
+The basis is the [quality-assurance reports of this guide](../qa.html), the
+profile comparisons of the HL7 FHIR Validator (`compare` mode) against the three
+profiles, and the technical profile properties. The focus is on cardinalities,
+Must Support (MS) flags and terminology bindings, because these are decisive for
+automated transformation and integration, for example in data integration
+centres.
+
+Package versions are deliberately not repeated in the prose, so that this page
+does not need re-checking by hand on every dependency update. The authoritative
+list is the
+[dependency overview of this guide](ImplementationGuide-mii-ig-dokument.html#ig-dependencies);
+it names every package with the version this build was made against.
 
 ---
 
@@ -27,25 +52,25 @@ Compatibility with ISiK document exchange is essential in order to ensure cross-
 
 The MII KDS Dokument profile is designed as a superset of the ISiK profile and covers all ISiK requirements. The most important points of comparison are:
 
-| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | ISiK document exchange (`ISiKDokumentenMetadaten` 6.0.0) | Compatibility                         |
-|-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
-| `status`          | 1..1, Must Support                                 | 1..1, Must Support                      | ✓ Fully compatible                    |
-| `type`            | 0..1, Must Support (KDL/XDS recommended, slices on `type.coding`) | 1..1, Must Support (KDL *and* XDS required via slices) | ✓ MII KDS Dokument supports the ISiK codes |
-| `category`        | 0..*, Must Support                                  | 0..1, Must Support, derived from KDL    | ✓ MII KDS Dokument allows several categories      |
-| `subject`         | 0..1, Must Support                                 | 1..1, Must Support                      | ⚠️ ISiK requires the patient reference |
-| `content`         | 1..*, Must Support                                 | 1..1, Must Support                      | ✓ MII KDS Dokument allows several contents        |
-| `securityLabel`   | 0..*, Must Support, extensible (`security-labels`) | 1..*, required (`ISiKConfidentialityCodes`: N \| R \| V) | ⚠️ MII KDS Dokument makes security labels optional |
-| `context`         | 0..1, Must Support                                 | 1..1, Must Support                      | ⚠️ MII KDS Dokument makes context optional         |
-| `masterIdentifier`| 0..1, Must Support                                 | 1..1, Must Support                      | ⚠️ ISiK requires a master identifier   |
-| `content.attachment.contentType` | 0..1, Must Support                | 1..1, Must Support                      | ⚠️ ISiK requires the MIME type         |
-| `content.attachment.language`    | 0..1, Must Support                | 1..1, Must Support                      | ⚠️ ISiK requires the language          |
-| `content.attachment.title`       | 0..1                              | 1..1, Must Support                      | ⚠️ ISiK requires the document title    |
-| `content.attachment.creation`    | 0..1, Must Support                | 1..1, Must Support                      | ⚠️ ISiK requires the document date     |
-| `content.format`  | 0..1, Must Support, preferred (`MII_VS_Dokument_Format_Code`) | 1..1, Must Support, required            | ⚠️ ISiK requires a format code         |
-| `context.facilityType`  | 0..1, Must Support, required                 | 1..1, Must Support, required            | ⚠️ ISiK requires the facility type     |
-| `context.practiceSetting` | 0..1, Must Support, required               | 1..1, Must Support, required            | ⚠️ ISiK requires the practice setting  |
-| `context.encounter` | 0..*, Must Support                               | 0..1, Must Support                      | ✓ MII KDS Dokument allows several encounter references |
-| `implicitRules`   | 0..1                                               | 0..0 (excluded)                         | ⚠️ ISiK excludes the element           |
+| FHIR element      | ISiK document exchange (`ISiKDokumentenMetadaten`) | MII KDS Dokument (`mii-pr-dokument-dokument`) | Compatibility                         |
+|-------------------|-----------------------------------------|----------------------------------------------------|---------------------------------------|
+| `status`          | 1..1, Must Support                      | 1..1, Must Support                                 | ✓ Fully compatible                    |
+| `type`            | 1..1, Must Support (KDL *and* XDS required via slices) | 0..1, Must Support (KDL/XDS recommended, slices on `type.coding`) | ✓ MII KDS Dokument supports the ISiK codes |
+| `category`        | 0..1, Must Support, derived from KDL    | 0..*, Must Support                                  | ✓ MII KDS Dokument allows several categories      |
+| `subject`         | 1..1, Must Support                      | 0..1, Must Support                                 | ⚠️ ISiK requires the patient reference |
+| `content`         | 1..1, Must Support                      | 1..*, Must Support                                 | ✓ MII KDS Dokument allows several contents        |
+| `securityLabel`   | 1..*, required (`ISiKConfidentialityCodes`: N \| 0..*, Must Support, extensible (`security-labels`) | R \| V) | ⚠️ MII KDS Dokument makes security labels optional |
+| `context`         | 1..1, Must Support                      | 0..1, Must Support                                 | ⚠️ MII KDS Dokument makes context optional         |
+| `masterIdentifier`| 1..1, Must Support                      | 0..1, Must Support                                 | ⚠️ ISiK requires a master identifier   |
+| `content.attachment.contentType` | 1..1, Must Support                      | 0..1, Must Support                | ⚠️ ISiK requires the MIME type         |
+| `content.attachment.language`    | 1..1, Must Support                      | 0..1, Must Support                | ⚠️ ISiK requires the language          |
+| `content.attachment.title`       | 1..1, Must Support                      | 0..1                              | ⚠️ ISiK requires the document title    |
+| `content.attachment.creation`    | 1..1, Must Support                      | 0..1, Must Support                | ⚠️ ISiK requires the document date     |
+| `content.format`  | 1..1, Must Support, required            | 0..1, Must Support, preferred (`MII_VS_Dokument_Format_Code`) | ⚠️ ISiK requires a format code         |
+| `context.facilityType`  | 1..1, Must Support, required            | 0..1, Must Support, required                 | ⚠️ ISiK requires the facility type     |
+| `context.practiceSetting` | 1..1, Must Support, required            | 0..1, Must Support, required               | ⚠️ ISiK requires the practice setting  |
+| `context.encounter` | 0..1, Must Support                      | 0..*, Must Support                               | ✓ MII KDS Dokument allows several encounter references |
+| `implicitRules`   | 0..0 (excluded)                         | 0..1                                               | ⚠️ ISiK excludes the element           |
 
 Notes:
 
@@ -72,21 +97,21 @@ Compatibility with the KBV MIO Basis profile is decisive for integrating documen
 
 Both profiles are designed for flexibility and interoperability:
 
-| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | KBV MIO Basis (`KBV_PR_Base_DocumentReference` 1.7.0) | Compatibility                         |
-|-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
-| `status`          | 1..1, Must Support                                 | 1..1                                    | ✓ Fully compatible                    |
-| `type`            | 0..1, Must Support, preferred (binding identical to KBV), `type.coding` 1..*, invariant `mii-iv-dokument-dokument-type` (warning) | 0..1, preferred (`c80-doc-typecodes`) | ⚠️ Binding identical; MII, however, requires at least one `coding` with `system` and `code` |
-| `category`        | 0..*, Must Support, example (binding identical to KBV), `category.coding` 1..*, invariant `mii-iv-dokument-dokument-category` (warning) | 0..*, example (`document-classcodes`) | ⚠️ Binding identical; MII, however, requires at least one `coding` with `system` and `code` |
-| `subject`         | 0..1, Must Support, only Reference(Patient \| MII Patient \| MII PatientPseudonymisiert) | 0..1, Reference(Patient \| Practitioner \| Group \| Device \| KBV_PR_Base_*) | ⚠️ Same cardinality, but MII restricts the permitted reference targets |
-| `content`         | 1..*, Must Support                                 | 1..*                                    | ✓ Fully compatible                    |
-| `author`          | 0..* (no Must Support)                             | 0..*, restricted to KBV_PR_Base_* profiles | ✓ Fully compatible (MII is wider here) |
-| `custodian`       | 0..1                                               | 0..1                                    | ✓ Fully compatible                    |
-| `securityLabel`   | 0..*, Must Support, extensible                     | 0..*, extensible                        | ✓ Fully compatible                    |
-| `content.format`  | 0..1, Must Support, preferred (`MII_VS_Dokument_Format_Code`) | 0..1, preferred (IHE `formatcodes`)     | ⚠️ Different value sets at the same binding strength |
-| `context.event`   | 0..*, Must Support, required (`IHEXDSeventCodeList`), `coding` 1..* | 0..*, example (`v3-ActCode`)            | ⚠️ Binding strength tightened from example to required |
-| `context.facilityType` | 0..1, Must Support, required (`mii-vs-dokument-einrichtungsart`), `coding` 1..* | 0..1, example (`c80-facilitycodes`) | ⚠️ Binding strength tightened from example to required |
-| `context.practiceSetting` | 0..1, Must Support, required (`mii-vs-dokument-fachgebiet`), `coding` 1..* | 0..1, example (`c80-practice-codes`) | ⚠️ example → required; 117 codes of the KBV example value set are not contained in the MII value set |
-| `context.encounter` | 0..*, Must Support, Reference(Encounter \| MII KontaktGesundheitseinrichtung) | 0..*, Reference(Encounter \| EpisodeOfCare) | ⚠️ MII does not permit `EpisodeOfCare` |
+| FHIR element      | KBV MIO Basis (`KBV_PR_Base_DocumentReference`) | MII KDS Dokument (`mii-pr-dokument-dokument`) | Compatibility                         |
+|-------------------|-----------------------------------------|----------------------------------------------------|---------------------------------------|
+| `status`          | 1..1                                    | 1..1, Must Support                                 | ✓ Fully compatible                    |
+| `type`            | 0..1, preferred (`c80-doc-typecodes`) | 0..1, Must Support, preferred (binding identical to KBV), `type.coding` 1..*, invariant `mii-iv-dokument-dokument-type` (warning) | ⚠️ Binding identical; MII, however, requires at least one `coding` with `system` and `code` |
+| `category`        | 0..*, example (`document-classcodes`) | 0..*, Must Support, example (binding identical to KBV), `category.coding` 1..*, invariant `mii-iv-dokument-dokument-category` (warning) | ⚠️ Binding identical; MII, however, requires at least one `coding` with `system` and `code` |
+| `subject`         | MII Patient \| 0..1, Must Support, only Reference(Patient \| MII PatientPseudonymisiert) | 0..1, Reference(Patient \| Practitioner \| Group \| Device \| KBV_PR_Base_*) | ⚠️ Same cardinality, but MII restricts the permitted reference targets |
+| `content`         | 1..*                                    | 1..*, Must Support                                 | ✓ Fully compatible                    |
+| `author`          | 0..*, restricted to KBV_PR_Base_* profiles | 0..* (no Must Support)                             | ✓ Fully compatible (MII is wider here) |
+| `custodian`       | 0..1                                    | 0..1                                               | ✓ Fully compatible                    |
+| `securityLabel`   | 0..*, extensible                        | 0..*, Must Support, extensible                     | ✓ Fully compatible                    |
+| `content.format`  | 0..1, preferred (IHE `formatcodes`)     | 0..1, Must Support, preferred (`MII_VS_Dokument_Format_Code`) | ⚠️ Different value sets at the same binding strength |
+| `context.event`   | 0..*, example (`v3-ActCode`)            | 0..*, Must Support, required (`IHEXDSeventCodeList`), `coding` 1..* | ⚠️ Binding strength tightened from example to required |
+| `context.facilityType` | 0..1, example (`c80-facilitycodes`) | 0..1, Must Support, required (`mii-vs-dokument-einrichtungsart`), `coding` 1..* | ⚠️ Binding strength tightened from example to required |
+| `context.practiceSetting` | 0..1, example (`c80-practice-codes`) | 0..1, Must Support, required (`mii-vs-dokument-fachgebiet`), `coding` 1..* | ⚠️ example → required; 117 codes of the KBV example value set are not contained in the MII value set |
+| `context.encounter` | MII KontaktGesundheitseinrichtung) | 0..*, Must Support, Reference(Encounter \| 0..*, Reference(Encounter \| EpisodeOfCare) | ⚠️ MII does not permit `EpisodeOfCare` |
 
 Notes:
 
@@ -111,28 +136,28 @@ Compatibility with IHE MHD enables international interoperability and connection
 
 The comparison below refers to the profile `IHE.MHD.UnContained.Comprehensive.DocumentReference` (IHE ITI MHD, package `ihe.iti.mhd`, version 4.2.3; derived from `IHE.MHD.Minimal.DocumentReference`). Different requirements apply to the *contained* variant of MHD Comprehensive. In this variant IHE MHD is consistently **more restrictive** than the MII KDS Dokument profile: fourteen elements are mandatory there that are optional in the MII profile, and four elements are prohibited or bound more narrowly in MHD.
 
-| FHIR element      | MII KDS Dokument (`mii-pr-dokument-dokument` 2027.0.0-ballot.rc2) | IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference` 4.2.3) | Compatibility                         |
-|-------------------|----------------------------------------------------|-----------------------------------------|---------------------------------------|
-| `masterIdentifier`| 0..1                                               | 1..1                                    | ⚠️ IHE MHD requires a master identifier    |
-| `status`          | 1..1, Must Support, required (`document-reference-status`: current \| superseded \| entered-in-error) | 1..1, required (`DocumentReferenceStats`: only current \| superseded) | ⚠️ `entered-in-error` is not permitted in IHE MHD |
-| `docStatus`       | 0..1, Must Support                                 | **0..0 (prohibited)**                   | ❌ `docStatus` has to be dropped for IHE MHD (loss of information) |
-| `type`            | 0..1, Must Support, preferred (`c80-doc-typecodes`), constraint `mii-iv-dokument-dokument-type` | 1..1, preferred (`c80-doc-typecodes`) | ⚠️ IHE MHD requires a document type; terminology binding identical |
-| `category`        | 0..*, Must Support, example (`document-classcodes`), constraint `mii-iv-dokument-dokument-category` | 1..1, example (`document-classcodes`) | ⚠️ IHE MHD requires exactly **one** category; multiple `category` entries are MHD-invalid |
-| `subject`         | 0..1, Must Support, Reference(Patient \| MII Patient \| MII PatientPseudonymisiert) | 1..1, Reference(Patient) | ⚠️ IHE MHD requires the patient reference |
-| `securityLabel`   | 0..*, Must Support, extensible (`security-labels`) | 1..*, Must Support, extensible (`security-labels`) | ⚠️ IHE MHD requires at least one security label |
-| `content`         | 1..*, Must Support, slicing by `exists:attachment.url` | 1..1                              | ⚠️ Multiple `content` entries are MHD-invalid |
-| `content.attachment` | 1..1, Must Support                              | 1..1                                    | ✓ Cardinality identical (MS only in the MII profile) |
-| `content.attachment.data` | 0..1                                       | **0..0 (prohibited)**                   | ❌ Inline base64 is excluded in this MHD variant |
-| `content.attachment.url` | 0..1                                        | 1..1                                    | ❌ MHD requires the URL; a document delivered purely via `data` cannot be represented in MHD |
-| `content.attachment.contentType` | 0..1, Must Support                | 1..1                                    | ⚠️ IHE MHD requires the MIME type |
-| `content.attachment.language` | 0..1, Must Support                     | 1..1                                    | ⚠️ IHE MHD requires the language |
-| `content.attachment.creation` | 0..1, Must Support                     | 1..1                                    | ⚠️ IHE MHD requires the creation date |
-| `content.format`  | 0..1, Must Support, preferred (`mii-vs-dokument-format-code`) | 1..1, Must Support, preferred (`ihe.formatcode.fhir/ValueSet/formatcode`) | ⚠️ IHE MHD requires a format code; the (preferred) value sets differ |
-| `context`         | 0..1, Must Support                                 | 1..1                                    | ⚠️ IHE MHD requires context                |
-| `context.facilityType` | 0..1, **required** (`mii-vs-dokument-einrichtungsart`) | 1..1, example (`c80-facilitycodes`) | ⚠️ Cardinality: MHD stricter — terminology: **MII stricter** |
-| `context.practiceSetting` | 0..1, **required** (`mii-vs-dokument-fachgebiet`) | 1..1, example (`c80-practice-codes`) | ⚠️ Cardinality: MHD stricter — terminology: **MII stricter** |
-| `context.event`   | 0..*, Must Support, **required** (`IHEXDSeventCodeList`) | 0..*, example (`v3-ActCode`)      | ⚠️ Terminology: **MII stricter** |
-| `context.sourcePatientInfo` | 0..1                                     | 1..1, Must Support                      | ⚠️ IHE MHD requires the source patient information |
+| FHIR element      | IHE MHD (`IHE.MHD.UnContained.Comprehensive.DocumentReference`) | MII KDS Dokument (`mii-pr-dokument-dokument`) | Compatibility                         |
+|-------------------|-----------------------------------------|----------------------------------------------------|---------------------------------------|
+| `masterIdentifier`| 1..1                                    | 0..1                                               | ⚠️ IHE MHD requires a master identifier    |
+| `status`          | superseded \| 1..1, Must Support, required (`document-reference-status`: current \| entered-in-error) | 1..1, required (`DocumentReferenceStats`: only current \| superseded) | ⚠️ `entered-in-error` is not permitted in IHE MHD |
+| `docStatus`       | **0..0 (prohibited)**                   | 0..1, Must Support                                 | ❌ `docStatus` has to be dropped for IHE MHD (loss of information) |
+| `type`            | 1..1, preferred (`c80-doc-typecodes`) | 0..1, Must Support, preferred (`c80-doc-typecodes`), constraint `mii-iv-dokument-dokument-type` | ⚠️ IHE MHD requires a document type; terminology binding identical |
+| `category`        | 1..1, example (`document-classcodes`) | 0..*, Must Support, example (`document-classcodes`), constraint `mii-iv-dokument-dokument-category` | ⚠️ IHE MHD requires exactly **one** category; multiple `category` entries are MHD-invalid |
+| `subject`         | MII Patient \| 0..1, Must Support, Reference(Patient \| MII PatientPseudonymisiert) | 1..1, Reference(Patient) | ⚠️ IHE MHD requires the patient reference |
+| `securityLabel`   | 1..*, Must Support, extensible (`security-labels`) | 0..*, Must Support, extensible (`security-labels`) | ⚠️ IHE MHD requires at least one security label |
+| `content`         | 1..1                              | 1..*, Must Support, slicing by `exists:attachment.url` | ⚠️ Multiple `content` entries are MHD-invalid |
+| `content.attachment` | 1..1                                    | 1..1, Must Support                              | ✓ Cardinality identical (MS only in the MII profile) |
+| `content.attachment.data` | **0..0 (prohibited)**                   | 0..1                                       | ❌ Inline base64 is excluded in this MHD variant |
+| `content.attachment.url` | 1..1                                    | 0..1                                        | ❌ MHD requires the URL; a document delivered purely via `data` cannot be represented in MHD |
+| `content.attachment.contentType` | 1..1                                    | 0..1, Must Support                | ⚠️ IHE MHD requires the MIME type |
+| `content.attachment.language` | 1..1                                    | 0..1, Must Support                     | ⚠️ IHE MHD requires the language |
+| `content.attachment.creation` | 1..1                                    | 0..1, Must Support                     | ⚠️ IHE MHD requires the creation date |
+| `content.format`  | 1..1, Must Support, preferred (`ihe.formatcode.fhir/ValueSet/formatcode`) | 0..1, Must Support, preferred (`mii-vs-dokument-format-code`) | ⚠️ IHE MHD requires a format code; the (preferred) value sets differ |
+| `context`         | 1..1                                    | 0..1, Must Support                                 | ⚠️ IHE MHD requires context                |
+| `context.facilityType` | 1..1, example (`c80-facilitycodes`) | 0..1, **required** (`mii-vs-dokument-einrichtungsart`) | ⚠️ Cardinality: MHD stricter — terminology: **MII stricter** |
+| `context.practiceSetting` | 1..1, example (`c80-practice-codes`) | 0..1, **required** (`mii-vs-dokument-fachgebiet`) | ⚠️ Cardinality: MHD stricter — terminology: **MII stricter** |
+| `context.event`   | 0..*, example (`v3-ActCode`)      | 0..*, Must Support, **required** (`IHEXDSeventCodeList`) | ⚠️ Terminology: **MII stricter** |
+| `context.sourcePatientInfo` | 1..1, Must Support                      | 0..1                                     | ⚠️ IHE MHD requires the source patient information |
 
 Notes:
 
@@ -186,11 +211,11 @@ The MII KDS Dokument profile is designed as a flexible superset and enables the 
 
 **Compatibility overview:**
 
-| Target profile          | Compatibility            | Main limitations                                |
+| Source profile          | Compatibility            | Main limitations                                |
 |-------------------------|--------------------------|-------------------------------------------------|
-| ISiK document exchange (6.0.0) | Very high         | Security label, context, mandatory fields (MII→ISiK) |
-| KBV MIO Basis (1.7.0)   | High                     | Reference targets (`subject`, `context.encounter`), required bindings in `context`, `coding` 1..* at `type`/`category`, Must Support differences |
-| IHE MHD (UnContained Comprehensive 4.2.3) | Medium, with adaptations in both directions | 14 mandatory fields (among others masterIdentifier, subject, context, attachment.url); elements prohibited in MHD (docStatus, attachment.data, multiple content); status without `entered-in-error`; required MII bindings at facilityType/practiceSetting/event; masterIdentifier is required by ISiK as well from 6.0.0 |
+| ISiK document exchange | Very high         | Security label, context, mandatory fields (MII→ISiK) |
+| KBV MIO Basis   | High                     | Reference targets (`subject`, `context.encounter`), required bindings in `context`, `coding` 1..* at `type`/`category`, Must Support differences |
+| IHE MHD (UnContained Comprehensive) | Medium, with adaptations in both directions | 14 mandatory fields (among others masterIdentifier, subject, context, attachment.url); elements prohibited in MHD (docStatus, attachment.data, multiple content); status without `entered-in-error`; required MII bindings at facilityType/practiceSetting/event; masterIdentifier is required by ISiK as well from 6.0.0 |
 
 ---
 
