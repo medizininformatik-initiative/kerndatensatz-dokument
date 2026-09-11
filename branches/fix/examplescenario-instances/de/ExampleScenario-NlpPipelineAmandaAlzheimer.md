@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer | *Version*:2027.0.0-ballot.rc2 |
-| Draft Stand: 2026-09-09 | *Maschinenlesbarer Name*:NlpPipelineAmandaAlzheimer |
+| Draft Stand: 2026-09-11 | *Maschinenlesbarer Name*:NlpPipelineAmandaAlzheimer |
 
 Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzheimer“; die Beispielinstanzen selbst, das Ablaufdiagramm und die Erläuterung der `relatesTo`-Beziehungen stehen auf der Seite [Beispiele](examples.md#beispielszenario-nlp-pipeline-amanda-alzheimer).
 
@@ -33,7 +33,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
   "version" : "2027.0.0-ballot.rc2",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-09T18:45:51+00:00",
+  "date" : "2026-09-11T08:42:21+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

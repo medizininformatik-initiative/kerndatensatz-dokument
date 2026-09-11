@@ -5,7 +5,7 @@
 
 ## CodeSystems
 
-Diese Seite beschreibt die CodeSystems des Moduls **Dokument** (Namenskonvention `MII_CS_<Modul>_<Name>`). Die darauf aufbauenden ValueSets beschreibt die Seite [ValueSets](value-sets.md).
+Diese Seite beschreibt die CodeSystems des Moduls **Dokument**. Die darauf aufbauenden ValueSets beschreibt die Seite [ValueSets](value-sets.md).
 
 > **Wichtig:** CodeSystem-Ressourcen externer Terminologien (z. B. ICD-10-GM, OPS, SNOMED CT) werden in diesem Modul **nicht** publiziert, sondern über den zentralen KDS-Terminologieserver (SU-TermServ) bezogen: [https://mii-termserv.de/](https://mii-termserv.de/).
 

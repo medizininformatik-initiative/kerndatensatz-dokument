@@ -375,9 +375,8 @@ This page includes translations from the original source language in which the g
      menu structure — one page per artifact type). The IG Publisher generates
      the artifact detail pages automatically. -->
 
-<p>This page lists the FHIR profiles of the <strong>Dokument</strong> module (naming convention
-<code class="language-plaintext highlighter-rouge">MII_PR_&lt;Modul&gt;_&lt;Name&gt;</code> (where <code class="language-plaintext highlighter-rouge">&lt;Modul&gt;</code> is the German module name — here <code class="language-plaintext highlighter-rouge">Dokument</code>)). The module's extensions are listed on the
-<a href="extensions.html">Extensions</a> page.</p>
+<p>This page lists the FHIR profiles of the <strong>Dokument</strong> module. The module's
+extensions are listed on the <a href="extensions.html">Extensions</a> page.</p>
 
 <p>The module defines one profile:
 <a href="StructureDefinition-mii-pr-dokument-dokument.html">MII PR Dokument Dokument</a>
@@ -793,7 +792,7 @@ the <a href="logical-models.html">Logical Models</a> page.</p>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 5e240730-1810-4340-b6c0-409b5f45b3e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 08b4b9c7-bc97-44dd-9a82-6b67ee52432a
 document.getElementById('cbmii-pr-dokument-dokumentD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-dokument-dokumentD'), 'binding', document.getElementById('cbmii-pr-dokument-dokumentD-binding').checked, document.getElementById('ppmii-pr-dokument-dokumentD'));
 document.getElementById('cbmii-pr-dokument-dokumentD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1868,7 +1867,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/resource.html">Resource</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related identifiers or resources<br /></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 5e240730-1810-4340-b6c0-409b5f45b3e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 08b4b9c7-bc97-44dd-9a82-6b67ee52432a
 document.getElementById('cbmii-pr-dokument-dokumentS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-dokument-dokumentS'), 'binding', document.getElementById('cbmii-pr-dokument-dokumentS-binding').checked, document.getElementById('ppmii-pr-dokument-dokumentS'));
 document.getElementById('cbmii-pr-dokument-dokumentS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1879,8 +1878,6 @@ filterDesc(document.getElementById('mii-pr-dokument-dokumentS'), 'obligation', d
     </div>
   </div>
 </div>
-
-<p>The MII-wide naming conventions for FHIR resources (module designations, prefixes, <code class="language-plaintext highlighter-rouge">title</code>/<code class="language-plaintext highlighter-rouge">name</code>/<code class="language-plaintext highlighter-rouge">id</code>/<code class="language-plaintext highlighter-rouge">url</code>) are maintained by the Meta module: <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII">Naming conventions for FHIR resources in the MII</a>. They apply to all conformance resources of this module.</p>
 
 
 
@@ -1907,7 +1904,7 @@ filterDesc(document.getElementById('mii-pr-dokument-dokumentS'), 'obligation', d
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 18:45+0000">2026-09-09</span>
+          Generated <span title="Fri, Sep 11, 2026 08:42+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
