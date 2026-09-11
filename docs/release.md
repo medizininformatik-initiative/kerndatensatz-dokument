@@ -172,7 +172,7 @@ repository is:
 > **Terminology & release notes:** author the module's changelog in the IG's
 > release-notes page (`input/pagecontent/…`). Terminology is selected
 > automatically by the build (SU-TermServ when the client certificate secret is
-> present, else the public HL7 fallback `https://tx.fhir.org`) — see
+> present, else the Ontoserver fallback `https://tx.ontoserver.csiro.au/fhir`) — see
 > [`docs/maintenance.md`](./maintenance.md) and the workflow header.
 
 ### 3–4. Open the release PR and pass validation — *human + automated*

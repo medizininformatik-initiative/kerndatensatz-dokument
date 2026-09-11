@@ -10,8 +10,8 @@
      expansion, because expansions depend on the build environment's
      terminology server. -->
 
-This page describes the ValueSets of the **Dokument** module (naming
-convention `MII_VS_<Modul>_<Name>`, where `<Modul>` is the German module name — here `Dokument`). For general guidance on using codes, see
+This page describes the ValueSets of the **Dokument** module. For general
+guidance on using codes, see
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems
 the sets draw from are described on the [Code Systems](code-systems.html) page.
 

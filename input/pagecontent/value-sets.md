@@ -9,9 +9,8 @@
      und zwar als Content Logical Definition (-cld) statt als Expansion, weil
      Expansionen vom Terminologieserver der Build-Umgebung abhängen. -->
 
-Diese Seite beschreibt die ValueSets des Moduls **Dokument**
-(Namenskonvention `MII_VS_<Modul>_<Name>`). Allgemeine Hinweise zur Verwendung
-von Codes: siehe
+Diese Seite beschreibt die ValueSets des Moduls **Dokument**. Allgemeine
+Hinweise zur Verwendung von Codes: siehe
 [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); die
 zugrunde liegenden CodeSystems beschreibt die Seite
 [CodeSystems](code-systems.html).

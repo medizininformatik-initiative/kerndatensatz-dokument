@@ -11,8 +11,8 @@
      ersetzt. Die Abschnitte zu den definierten und den verwendeten ValueSets
      stehen auf der Seite value-sets.md. -->
 
-Diese Seite beschreibt die CodeSystems des Moduls **Dokument**
-(Namenskonvention `MII_CS_<Modul>_<Name>`). Die darauf aufbauenden ValueSets
+Diese Seite beschreibt die CodeSystems des Moduls **Dokument**. Die darauf
+aufbauenden ValueSets
 beschreibt die Seite [ValueSets](value-sets.html).
 
 > **Wichtig:** CodeSystem-Ressourcen externer Terminologien (z. B. ICD-10-GM, OPS,

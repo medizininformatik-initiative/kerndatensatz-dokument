@@ -4,7 +4,7 @@
      der früheren Kombi-Seite profiles-and-extensions.md). -->
 
 Diese Seite listet die FHIR-Extensions, die das Modul **Dokument**
-definiert (Namenskonvention `MII_EX_<Modul>_<Name>`). Extensions transportieren
+definiert. Extensions transportieren
 Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die
 Profile, die sie verwenden, stehen auf der Seite [Profile](profiles.html).
 

@@ -120,13 +120,13 @@ access (the first build downloads the base image and tools):
 
    > **Terminology note (expected, not an error):** without an SU-TermServ
    > client certificate the publisher resolves terminology against the
-   > official HL7 server `https://tx.fhir.org` (its default). Some
+   > Ontoserver at `https://tx.ontoserver.csiro.au/fhir`. Some
    > MII-specific value sets may not fully expand there — that surfaces as
    > QA *notes*, not a hard failure. CI behaves the same way: it uses the
    > MII central terminology server (SU-TermServ,
    > `https://ontoserver.mii-termserv.de/fhir`) only when the repository
    > secret with the client certificate is configured, and otherwise falls
-   > back to `tx.fhir.org` with a notice. The build must still succeed in
+   > back to `tx.ontoserver.csiro.au` with a notice. The build must still succeed in
    > fallback mode.
 
 ## Expected result
@@ -150,7 +150,7 @@ access (the first build downloads the base image and tools):
 | First build seems stuck at the Ruby feature | Ruby is compiling from source; this is the slow step. | Wait — it can take several minutes. Do not cancel. |
 | Publisher dies with `java.lang.OutOfMemoryError: Java heap space` | The IG Publisher needs more heap than the JVM default; KDS builds with many dependencies are memory-hungry. | Run it with an explicit heap limit: `java -Xmx6g -jar publisher.jar -ig ig.ini` (raise to `-Xmx8g` if your machine has the RAM; also raise Docker Desktop's memory limit if the container itself is capped). |
 | Publisher hangs or fails while "Fetching" / "Loading" packages; or errors mention a corrupt package | The FHIR package cache (`~/.fhir/packages`) has a truncated download from an interrupted run. | Delete the offending package directory from `~/.fhir/packages` on the host (or the whole `packages` folder in the worst case) and rebuild — the cache repopulates. |
-| QA report notes that value sets could not be expanded; log shows a fallback notice about `tx.fhir.org` | No SU-TermServ client certificate configured, so the build used the public HL7 terminology server, which does not carry every MII-specific value set. | Expected fallback behavior, not a failure — see the terminology note in step 8. For full expansion a maintainer configures the SU-TermServ client-certificate secret (Germany-only access). |
+| QA report notes that value sets could not be expanded; log shows a fallback notice about `tx.ontoserver.csiro.au` | No SU-TermServ client certificate configured, so the build used the public HL7 terminology server, which does not carry every MII-specific value set. | Expected fallback behavior, not a failure — see the terminology note in step 8. For full expansion a maintainer configures the SU-TermServ client-certificate secret (Germany-only access). |
 | `npm install -g` or `gem install` fails with `EACCES` / "permission denied" during post-create | A stale container image from an older configuration. | Run `F1` → **Dev Containers: Rebuild Container Without Cache**. |
 | Downloads fail with TLS/certificate errors | A corporate proxy intercepts TLS. | Configure Docker and VS Code for your proxy (ask your IT for the CA certificate), or build outside the proxied network once. |
 | You edited `.devcontainer/devcontainer.json` but nothing changed | The old container is still running. | `F1` → **Dev Containers: Rebuild Container**. |
