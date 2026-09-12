@@ -33,7 +33,7 @@ The scenario describes the NLP processing chain of the "Amanda Alzheimer" exampl
   "version" : "2027.0.0-ballot.rc2",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-12T22:42:36+00:00",
+  "date" : "2026-09-12T22:48:46+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
