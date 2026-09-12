@@ -35,7 +35,7 @@
    starter shows.
    > **Why start terminology-light:** a profile that binds to external code systems
    > needs a terminology server to validate. Cardinality + Must-Support constraints
-   > build cleanly on the `tx.fhir.org` fallback — add coded bindings once your
+   > build cleanly on the `tx.ontoserver.csiro.au` fallback — add coded bindings once your
    > terminology is set up.
 3. Add at least one example `Instance:` (use an obviously **synthetic** name, e.g.
    `Max Mustermann-Testpatient` — never real or realistic patient data).

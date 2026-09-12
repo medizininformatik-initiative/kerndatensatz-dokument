@@ -7,9 +7,8 @@
      Menüstruktur — eine Seite je Artefakt-Typ). Die Artefakt-Detailseiten
      erzeugt der IG-Publisher automatisch. -->
 
-Diese Seite listet die FHIR-Profile des Moduls **Dokument**
-(Namenskonvention `MII_PR_<Modul>_<Name>`). Die Extensions des Moduls stehen auf
-der Seite [Extensions](extensions.html).
+Diese Seite listet die FHIR-Profile des Moduls **Dokument**. Die Extensions
+des Moduls stehen auf der Seite [Extensions](extensions.html).
 
 Das Modul definiert ein Profil:
 [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
@@ -37,4 +36,3 @@ Das Modul definiert ein Profil: [MII PR Dokument Dokument](StructureDefinition-m
   </div>
 </div>
 
-Die MII-weiten Namenskonventionen für FHIR-Ressourcen (Modulbezeichnungen, Präfixe, `title`/`name`/`id`/`url`) pflegt das Meta-Modul: [Namenskonventionen für FHIR-Ressourcen in der MII](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII). Sie gelten für alle Conformance-Ressourcen dieses Moduls.

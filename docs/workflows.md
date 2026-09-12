@@ -34,7 +34,8 @@ Notes:
   validator may ignore). The .NET job is configured upstream to always pass, so a
   naming violation appears in its log, not as a red check.
 - **Terminology** is auto-selected, not a toggle: builds use **SU-TermServ** when the
-  client-cert secrets are present, else fall back to HL7 `tx.fhir.org` with a notice.
+  client-cert secrets are present, else fall back to Ontoserver
+  (`tx.ontoserver.csiro.au`) with a notice.
   The reusable Java validation has no such fallback (see [secrets.md](secrets.md)).
 - **Pages mode** (`vars.PAGES_ACTIONS_ENABLED`) chooses the gh-pages push vs the
   Actions deploy path; either serves the previews. Set it to match Settings →

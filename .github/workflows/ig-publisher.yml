@@ -37,7 +37,7 @@
 # Terminology: the IG Publisher build prefers the MII terminology server
 #            (SU-TermServ) through a client-certificate nginx proxy when the repo
 #            secrets SU_TERMSERV_CLIENT_CERT / _KEY / _PASSWORD are set, and
-#            otherwise falls back to the public HL7 server https://tx.fhir.org
+#            otherwise falls back to https://tx.ontoserver.csiro.au/fhir
 #            with a ::notice. The build must not hard-fail without the cert;
 #            some MII-specific value sets may then not fully expand (a QA note).
 #
@@ -251,9 +251,9 @@ jobs:
             echo "tx=http://127.0.0.1:8090/fhir" >> "${GITHUB_OUTPUT}"
             echo "Terminology: SU-TermServ via client-certificate proxy" >> "${GITHUB_STEP_SUMMARY}"
           else
-            echo "tx=https://tx.fhir.org" >> "${GITHUB_OUTPUT}"
-            echo "::notice::No SU-TermServ client certificate configured — falling back to the public HL7 terminology server https://tx.fhir.org. Some MII-specific value sets may not fully expand (a QA note, not a failure)."
-            echo "Terminology: public HL7 fallback (https://tx.fhir.org)" >> "${GITHUB_STEP_SUMMARY}"
+            echo "tx=https://tx.ontoserver.csiro.au/fhir" >> "${GITHUB_OUTPUT}"
+            echo "::notice::No SU-TermServ client certificate configured — falling back to https://tx.ontoserver.csiro.au/fhir. It carries the SNOMED CT edition this module pins, so the SNOMED value sets still expand; MII-specific value sets may not (a QA note, not a failure)."
+            echo "Terminology: Ontoserver fallback (https://tx.ontoserver.csiro.au/fhir)" >> "${GITHUB_STEP_SUMMARY}"
           fi
 
       - name: Seed the comparison cache (previous-version packages)
@@ -281,7 +281,7 @@ jobs:
           # (http://127.0.0.1:8090) for the publisher's terminology access:
           # publisher 2.3.1+ SSRF hardening can refuse plain-HTTP/private-
           # network -tx targets without it (basis idiom, kerndatensatz-basis
-          # @190a3a18). Inert on the tx.fhir.org fallback path.
+          # @190a3a18). Inert on the Ontoserver fallback path.
           java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" -ig ig.ini -tx "${TX_URL}" \
             -fhir-settings "${GITHUB_WORKSPACE}/.github/fhir-settings.json"
           test -s output/index.html
