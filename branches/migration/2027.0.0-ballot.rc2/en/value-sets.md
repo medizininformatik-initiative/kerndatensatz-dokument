@@ -5,7 +5,7 @@
 
 ## Value Sets
 
-This page describes the ValueSets of the **Dokument** module (naming convention `MII_VS_<Modul>_<Name>`, where `<Modul>` is the German module name — here `Dokument`). For general guidance on using codes, see [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems the sets draw from are described on the [Code Systems](code-systems.md) page.
+This page describes the ValueSets of the **Dokument** module. For general guidance on using codes, see [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html); the code systems the sets draw from are described on the [Code Systems](code-systems.md) page.
 
 > **Expansions:** ValueSet expansions in this guide are produced by a FHIR terminology server — SU-TermServ if the client certificate is configured, otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific ValueSets may not expand completely).
 

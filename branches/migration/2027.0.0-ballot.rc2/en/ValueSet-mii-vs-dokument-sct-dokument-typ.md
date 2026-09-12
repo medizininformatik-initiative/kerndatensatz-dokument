@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-08 | *Computable Name*:MII_VS_Dokument_SCT_Dokument_Typ |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Dokument_SCT_Dokument_Typ |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -47,7 +47,7 @@ SNOMED CT ValueSet zum Typ eines Dokuments
   "title" : "MII VS Dokument SCT Dokument Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T19:41:07+00:00",
+  "date" : "2026-09-12T21:08:11+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

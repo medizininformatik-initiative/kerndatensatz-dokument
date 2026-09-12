@@ -371,7 +371,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      This page is nested under "implementer-guidance" in the page tree and
      deliberately has no menu entry of its own. -->
 
-<p>The compatibility of the FHIR DocumentReference profiles of MII KDS Dokument with the profiles from gematik ISiK document exchange (profile <code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>, version 6.0.0), KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>, version 1.7.0) and IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>, package <code class="language-plaintext highlighter-rouge">ihe.iti.mhd</code>, version 4.2.3) was assessed on the basis of the <a href="../qa.html">quality-assurance reports of this guide</a>, the profile comparisons of the HL7 FHIR Validator (<code class="language-plaintext highlighter-rouge">compare</code> mode) against these three profiles, and the technical profile properties. The reference point for all statements is the MII profile <code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> in version 2027.0.0-ballot.rc2. The statements on ISiK refer to ISiK 6.0.0; earlier stages differ in particular for <code class="language-plaintext highlighter-rouge">content.attachment.title</code> and <code class="language-plaintext highlighter-rouge">description</code>. The statements on KBV MIO Basis are based on the HL7 Validator profile comparison against <code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference|1.7.0</code>. The focus is on cardinalities, Must Support (MS) flags and terminology bindings, because these are decisive for automated transformation and integration, e.g. in data integration centers.</p>
+<p>This page compares the FHIR DocumentReference profiles from gematik ISiK
+document exchange (<code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>), KBV MIO Basis
+(<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>) and IHE MHD
+(<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>) with this module's
+profile.</p>
+
+<blockquote class="ig-highlight ig-highlight-grey">
+  <p><strong>How to read this:</strong> the MII KDS Dokument profile is throughout the <strong>target</strong>
+of the comparison. Every table puts the source profile on the left and the MII
+profile on the right, and answers one question: what does it take to carry a
+DocumentReference from ISiK, KBV MIO Basis or IHE MHD <strong>into</strong> MII KDS
+Dokument? Statements about the opposite direction are marked as such where
+they occur.</p>
+</blockquote>
+
+<p>The basis is the <a href="../qa.html">quality-assurance reports of this guide</a>, the
+profile comparisons of the HL7 FHIR Validator (<code class="language-plaintext highlighter-rouge">compare</code> mode) against the three
+profiles, and the technical profile properties. The focus is on cardinalities,
+Must Support (MS) flags and terminology bindings, because these are decisive for
+automated transformation and integration, for example in data integration
+centres.</p>
+
+<p>Package versions are deliberately not repeated in the prose, so that this page
+does not need re-checking by hand on every dependency update. The authoritative
+list is the
+<a href="ImplementationGuide-mii-ig-dokument.html#ig-dependencies">dependency overview of this guide</a>;
+it names every package with the version this build was made against.</p>
 
 <hr />
 
@@ -397,8 +423,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
-      <th>ISiK document exchange (<code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code> 6.0.0)</th>
+      <th>ISiK document exchange (<code class="language-plaintext highlighter-rouge">ISiKDokumentenMetadaten</code>)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code>)</th>
       <th>Compatibility</th>
     </tr>
   </thead>
@@ -411,98 +437,98 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td>0..1, Must Support (KDL/XDS recommended, slices on <code class="language-plaintext highlighter-rouge">type.coding</code>)</td>
       <td>1..1, Must Support (KDL <em>and</em> XDS required via slices)</td>
+      <td>0..1, Must Support (KDL/XDS recommended, slices on <code class="language-plaintext highlighter-rouge">type.coding</code>)</td>
       <td>✓ MII KDS Dokument supports the ISiK codes</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
-      <td>0..*, Must Support</td>
       <td>0..1, Must Support, derived from KDL</td>
+      <td>0..*, Must Support</td>
       <td>✓ MII KDS Dokument allows several categories</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ ISiK requires the patient reference</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content</code></td>
-      <td>1..*, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>1..*, Must Support</td>
       <td>✓ MII KDS Dokument allows several contents</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
-      <td>0..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
-      <td>1..*, required (<code class="language-plaintext highlighter-rouge">ISiKConfidentialityCodes</code>: N | R | V)</td>
+      <td>1..<em>, required (<code class="language-plaintext highlighter-rouge">ISiKConfidentialityCodes</code>: N | 0..</em>, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
+      <td>R | V)</td>
       <td>⚠️ MII KDS Dokument makes security labels optional</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ MII KDS Dokument makes context optional</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">masterIdentifier</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ ISiK requires a master identifier</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.contentType</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ ISiK requires the MIME type</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.language</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ ISiK requires the language</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.title</code></td>
-      <td>0..1</td>
       <td>1..1, Must Support</td>
+      <td>0..1</td>
       <td>⚠️ ISiK requires the document title</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.creation</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1, Must Support</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ ISiK requires the document date</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
-      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">MII_VS_Dokument_Format_Code</code>)</td>
       <td>1..1, Must Support, required</td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">MII_VS_Dokument_Format_Code</code>)</td>
       <td>⚠️ ISiK requires a format code</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.facilityType</code></td>
-      <td>0..1, Must Support, required</td>
       <td>1..1, Must Support, required</td>
+      <td>0..1, Must Support, required</td>
       <td>⚠️ ISiK requires the facility type</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.practiceSetting</code></td>
-      <td>0..1, Must Support, required</td>
       <td>1..1, Must Support, required</td>
+      <td>0..1, Must Support, required</td>
       <td>⚠️ ISiK requires the practice setting</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.encounter</code></td>
-      <td>0..*, Must Support</td>
       <td>0..1, Must Support</td>
+      <td>0..*, Must Support</td>
       <td>✓ MII KDS Dokument allows several encounter references</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">implicitRules</code></td>
-      <td>0..1</td>
       <td>0..0 (excluded)</td>
+      <td>0..1</td>
       <td>⚠️ ISiK excludes the element</td>
     </tr>
   </tbody>
@@ -542,46 +568,46 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
-      <th>KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code> 1.7.0)</th>
+      <th>KBV MIO Basis (<code class="language-plaintext highlighter-rouge">KBV_PR_Base_DocumentReference</code>)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code>)</th>
       <th>Compatibility</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">status</code></td>
-      <td>1..1, Must Support</td>
       <td>1..1</td>
+      <td>1..1, Must Support</td>
       <td>✓ Fully compatible</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td>0..1, Must Support, preferred (binding identical to KBV), <code class="language-plaintext highlighter-rouge">type.coding</code> 1..*, invariant <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code> (warning)</td>
       <td>0..1, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>)</td>
+      <td>0..1, Must Support, preferred (binding identical to KBV), <code class="language-plaintext highlighter-rouge">type.coding</code> 1..*, invariant <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code> (warning)</td>
       <td>⚠️ Binding identical; MII, however, requires at least one <code class="language-plaintext highlighter-rouge">coding</code> with <code class="language-plaintext highlighter-rouge">system</code> and <code class="language-plaintext highlighter-rouge">code</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
-      <td>0..<em>, Must Support, example (binding identical to KBV), <code class="language-plaintext highlighter-rouge">category.coding</code> 1..</em>, invariant <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code> (warning)</td>
       <td>0..*, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>)</td>
+      <td>0..<em>, Must Support, example (binding identical to KBV), <code class="language-plaintext highlighter-rouge">category.coding</code> 1..</em>, invariant <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code> (warning)</td>
       <td>⚠️ Binding identical; MII, however, requires at least one <code class="language-plaintext highlighter-rouge">coding</code> with <code class="language-plaintext highlighter-rouge">system</code> and <code class="language-plaintext highlighter-rouge">code</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>0..1, Must Support, only Reference(Patient | MII Patient | MII PatientPseudonymisiert)</td>
+      <td>MII Patient | 0..1, Must Support, only Reference(Patient | MII PatientPseudonymisiert)</td>
       <td>0..1, Reference(Patient | Practitioner | Group | Device | KBV_PR_Base_*)</td>
       <td>⚠️ Same cardinality, but MII restricts the permitted reference targets</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content</code></td>
-      <td>1..*, Must Support</td>
       <td>1..*</td>
+      <td>1..*, Must Support</td>
       <td>✓ Fully compatible</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">author</code></td>
-      <td>0..* (no Must Support)</td>
       <td>0..<em>, restricted to KBV_PR_Base_</em> profiles</td>
+      <td>0..* (no Must Support)</td>
       <td>✓ Fully compatible (MII is wider here)</td>
     </tr>
     <tr>
@@ -592,38 +618,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
-      <td>0..*, Must Support, extensible</td>
       <td>0..*, extensible</td>
+      <td>0..*, Must Support, extensible</td>
       <td>✓ Fully compatible</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
-      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">MII_VS_Dokument_Format_Code</code>)</td>
       <td>0..1, preferred (IHE <code class="language-plaintext highlighter-rouge">formatcodes</code>)</td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">MII_VS_Dokument_Format_Code</code>)</td>
       <td>⚠️ Different value sets at the same binding strength</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.event</code></td>
-      <td>0..<em>, Must Support, required (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..</em></td>
       <td>0..*, example (<code class="language-plaintext highlighter-rouge">v3-ActCode</code>)</td>
+      <td>0..<em>, Must Support, required (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..</em></td>
       <td>⚠️ Binding strength tightened from example to required</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.facilityType</code></td>
-      <td>0..1, Must Support, required (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..*</td>
       <td>0..1, example (<code class="language-plaintext highlighter-rouge">c80-facilitycodes</code>)</td>
+      <td>0..1, Must Support, required (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..*</td>
       <td>⚠️ Binding strength tightened from example to required</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.practiceSetting</code></td>
-      <td>0..1, Must Support, required (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..*</td>
       <td>0..1, example (<code class="language-plaintext highlighter-rouge">c80-practice-codes</code>)</td>
+      <td>0..1, Must Support, required (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>), <code class="language-plaintext highlighter-rouge">coding</code> 1..*</td>
       <td>⚠️ example → required; 117 codes of the KBV example value set are not contained in the MII value set</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.encounter</code></td>
-      <td>0..*, Must Support, Reference(Encounter | MII KontaktGesundheitseinrichtung)</td>
-      <td>0..*, Reference(Encounter | EpisodeOfCare)</td>
+      <td>MII KontaktGesundheitseinrichtung)</td>
+      <td>0..<em>, Must Support, Reference(Encounter | 0..</em>, Reference(Encounter | EpisodeOfCare)</td>
       <td>⚠️ MII does not permit <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code></td>
     </tr>
   </tbody>
@@ -660,130 +686,130 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th>FHIR element</th>
-      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code> 2027.0.0-ballot.rc2)</th>
-      <th>IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code> 4.2.3)</th>
+      <th>IHE MHD (<code class="language-plaintext highlighter-rouge">IHE.MHD.UnContained.Comprehensive.DocumentReference</code>)</th>
+      <th>MII KDS Dokument (<code class="language-plaintext highlighter-rouge">mii-pr-dokument-dokument</code>)</th>
       <th>Compatibility</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">masterIdentifier</code></td>
-      <td>0..1</td>
       <td>1..1</td>
+      <td>0..1</td>
       <td>⚠️ IHE MHD requires a master identifier</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">status</code></td>
-      <td>1..1, Must Support, required (<code class="language-plaintext highlighter-rouge">document-reference-status</code>: current | superseded | entered-in-error)</td>
+      <td>superseded | 1..1, Must Support, required (<code class="language-plaintext highlighter-rouge">document-reference-status</code>: current | entered-in-error)</td>
       <td>1..1, required (<code class="language-plaintext highlighter-rouge">DocumentReferenceStats</code>: only current | superseded)</td>
       <td>⚠️ <code class="language-plaintext highlighter-rouge">entered-in-error</code> is not permitted in IHE MHD</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">docStatus</code></td>
-      <td>0..1, Must Support</td>
       <td><strong>0..0 (prohibited)</strong></td>
+      <td>0..1, Must Support</td>
       <td>❌ <code class="language-plaintext highlighter-rouge">docStatus</code> has to be dropped for IHE MHD (loss of information)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">type</code></td>
-      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>), constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code></td>
       <td>1..1, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>)</td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">c80-doc-typecodes</code>), constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-type</code></td>
       <td>⚠️ IHE MHD requires a document type; terminology binding identical</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
-      <td>0..*, Must Support, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>), constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code></td>
       <td>1..1, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>)</td>
+      <td>0..*, Must Support, example (<code class="language-plaintext highlighter-rouge">document-classcodes</code>), constraint <code class="language-plaintext highlighter-rouge">mii-iv-dokument-dokument-category</code></td>
       <td>⚠️ IHE MHD requires exactly <strong>one</strong> category; multiple <code class="language-plaintext highlighter-rouge">category</code> entries are MHD-invalid</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>0..1, Must Support, Reference(Patient | MII Patient | MII PatientPseudonymisiert)</td>
+      <td>MII Patient | 0..1, Must Support, Reference(Patient | MII PatientPseudonymisiert)</td>
       <td>1..1, Reference(Patient)</td>
       <td>⚠️ IHE MHD requires the patient reference</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
-      <td>0..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
       <td>1..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
+      <td>0..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
       <td>⚠️ IHE MHD requires at least one security label</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content</code></td>
-      <td>1..*, Must Support, slicing by <code class="language-plaintext highlighter-rouge">exists:attachment.url</code></td>
       <td>1..1</td>
+      <td>1..*, Must Support, slicing by <code class="language-plaintext highlighter-rouge">exists:attachment.url</code></td>
       <td>⚠️ Multiple <code class="language-plaintext highlighter-rouge">content</code> entries are MHD-invalid</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment</code></td>
-      <td>1..1, Must Support</td>
       <td>1..1</td>
+      <td>1..1, Must Support</td>
       <td>✓ Cardinality identical (MS only in the MII profile)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.data</code></td>
-      <td>0..1</td>
       <td><strong>0..0 (prohibited)</strong></td>
+      <td>0..1</td>
       <td>❌ Inline base64 is excluded in this MHD variant</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.url</code></td>
-      <td>0..1</td>
       <td>1..1</td>
+      <td>0..1</td>
       <td>❌ MHD requires the URL; a document delivered purely via <code class="language-plaintext highlighter-rouge">data</code> cannot be represented in MHD</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.contentType</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ IHE MHD requires the MIME type</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.language</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ IHE MHD requires the language</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.attachment.creation</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ IHE MHD requires the creation date</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">content.format</code></td>
-      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-format-code</code>)</td>
       <td>1..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">ihe.formatcode.fhir/ValueSet/formatcode</code>)</td>
+      <td>0..1, Must Support, preferred (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-format-code</code>)</td>
       <td>⚠️ IHE MHD requires a format code; the (preferred) value sets differ</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context</code></td>
-      <td>0..1, Must Support</td>
       <td>1..1</td>
+      <td>0..1, Must Support</td>
       <td>⚠️ IHE MHD requires context</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.facilityType</code></td>
-      <td>0..1, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>)</td>
       <td>1..1, example (<code class="language-plaintext highlighter-rouge">c80-facilitycodes</code>)</td>
+      <td>0..1, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-einrichtungsart</code>)</td>
       <td>⚠️ Cardinality: MHD stricter — terminology: <strong>MII stricter</strong></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.practiceSetting</code></td>
-      <td>0..1, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>)</td>
       <td>1..1, example (<code class="language-plaintext highlighter-rouge">c80-practice-codes</code>)</td>
+      <td>0..1, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">mii-vs-dokument-fachgebiet</code>)</td>
       <td>⚠️ Cardinality: MHD stricter — terminology: <strong>MII stricter</strong></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.event</code></td>
-      <td>0..*, Must Support, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>)</td>
       <td>0..*, example (<code class="language-plaintext highlighter-rouge">v3-ActCode</code>)</td>
+      <td>0..*, Must Support, <strong>required</strong> (<code class="language-plaintext highlighter-rouge">IHEXDSeventCodeList</code>)</td>
       <td>⚠️ Terminology: <strong>MII stricter</strong></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code></td>
-      <td>0..1</td>
       <td>1..1, Must Support</td>
+      <td>0..1</td>
       <td>⚠️ IHE MHD requires the source patient information</td>
     </tr>
   </tbody>
@@ -856,24 +882,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <table>
   <thead>
     <tr>
-      <th>Target profile</th>
+      <th>Source profile</th>
       <th>Compatibility</th>
       <th>Main limitations</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>ISiK document exchange (6.0.0)</td>
+      <td>ISiK document exchange</td>
       <td>Very high</td>
       <td>Security label, context, mandatory fields (MII→ISiK)</td>
     </tr>
     <tr>
-      <td>KBV MIO Basis (1.7.0)</td>
+      <td>KBV MIO Basis</td>
       <td>High</td>
       <td>Reference targets (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code>), required bindings in <code class="language-plaintext highlighter-rouge">context</code>, <code class="language-plaintext highlighter-rouge">coding</code> 1..* at <code class="language-plaintext highlighter-rouge">type</code>/<code class="language-plaintext highlighter-rouge">category</code>, Must Support differences</td>
     </tr>
     <tr>
-      <td>IHE MHD (UnContained Comprehensive 4.2.3)</td>
+      <td>IHE MHD (UnContained Comprehensive)</td>
       <td>Medium, with adaptations in both directions</td>
       <td>14 mandatory fields (among others masterIdentifier, subject, context, attachment.url); elements prohibited in MHD (docStatus, attachment.data, multiple content); status without <code class="language-plaintext highlighter-rouge">entered-in-error</code>; required MII bindings at facilityType/practiceSetting/event; masterIdentifier is required by ISiK as well from 6.0.0</td>
     </tr>
@@ -914,7 +940,7 @@ of external standards taken into account are given on the
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 8, 2026 19:41+0000">2026-09-08</span>
+          Generated <span title="Sat, Sep 12, 2026 21:08+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
