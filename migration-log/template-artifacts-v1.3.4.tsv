@@ -1,0 +1,7 @@
+# Re-measured for the KDS Dokument migration run 2026-08-30: the same two
+# starter files (input/fsh/profiles/example-patient.fsh +
+# instances/example-patient-instance.fsh) verified present in
+# mii-kds-module-template v0.13.1, which references ig-template-mii-kds
+# v1.3.4 by repository URL; deletion by skill step 3 confirmed in this tree.
+token	template_version	verified_on	why
+example-patient	v1.3.4	2026-08-30	the template's example Patient profile + instance and their pages, deleted by step 3 (re-verified at module-template v0.13.1 / ig-template v1.3.4 by URL reference)

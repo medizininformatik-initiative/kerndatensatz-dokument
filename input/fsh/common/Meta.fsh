@@ -6,7 +6,7 @@ RuleSet: CS_VS_Meta(url)
 * insert Status
 * ^url = {url}
 * ^experimental = false
-* ^language = #de-DE
+* ^language = #de
 
 RuleSet: CS_Meta(url)
 * insert CS_VS_Meta({url})

@@ -25,7 +25,7 @@ Usage: #definition
 
 // General requirements
 * insert SupportResource(DocumentReference, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement/metadata, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 
@@ -36,7 +36,7 @@ Usage: #definition
 
 // DocumentReference requirements
 * insert SupportSearchParam(status, http://hl7.org/fhir/SearchParameter/DocumentReference-status, #token, #SHALL)
-* insert SupportSearchParam(doc-status, https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-doc-status, #token, #SHALL)
+* insert SupportSearchParam(doc-status, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status, #token, #SHALL)
 * insert SupportSearchParam(type, http://hl7.org/fhir/SearchParameter/clinical-type, #token, #SHALL)
 * insert SupportSearchParam(category, http://hl7.org/fhir/SearchParameter/DocumentReference-category, #token, #SHALL)
 * insert SupportSearchParam(patient, http://hl7.org/fhir/SearchParameter/clinical-patient, #reference, #SHALL)
@@ -50,7 +50,7 @@ Usage: #definition
 * insert SupportSearchParam(contenttype, http://hl7.org/fhir/SearchParameter/DocumentReference-contenttype, #token, #SHALL)
 * insert SupportSearchParam(language, http://hl7.org/fhir/SearchParameter/DocumentReference-language, #token, #SHALL)
 * insert SupportSearchParam(location, http://hl7.org/fhir/SearchParameter/DocumentReference-location, #uri, #SHALL)
-* insert SupportSearchParam(creation, https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-creation, #date, #SHALL)
+* insert SupportSearchParam(creation, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-attachment-creation, #date, #SHALL)
 * insert SupportSearchParam(format, http://hl7.org/fhir/SearchParameter/DocumentReference-format, #token, #SHALL)
 
 // DocumentReference.context requirements
@@ -61,4 +61,4 @@ Usage: #definition
 * insert SupportSearchParam(setting, http://hl7.org/fhir/SearchParameter/DocumentReference-setting, #token, #SHALL)
 
 // DocumentReference.extension requirements
-* insert SupportSearchParam(nlp-processing-status, https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-nlp-processing-status, #token, #SHALL)
+* insert SupportSearchParam(nlp-processing-status, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status, #token, #SHALL)

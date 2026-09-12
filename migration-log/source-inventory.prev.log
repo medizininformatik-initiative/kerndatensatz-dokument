@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/mk-inventory.py", line 9, in <module>
+    if d.get("id") and ("Id: " + d["id"]) in t or (name and any(x + name in t for x in ("Profile: ", "Extension: ", "ValueSet: ", "CodeSystem: ", "Logical: ", "Instance: "))):
+                                                            ^^^
+  File "/tmp/mk-inventory.py", line 9, in <genexpr>
+    if d.get("id") and ("Id: " + d["id"]) in t or (name and any(x + name in t for x in ("Profile: ", "Extension: ", "ValueSet: ", "CodeSystem: ", "Logical: ", "Instance: "))):
+                                                                ~~^~~~~~
+TypeError: can only concatenate str (not "list") to str

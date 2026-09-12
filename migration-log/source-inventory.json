@@ -1,0 +1,282 @@
+{
+ "generated_from": "tag v2027.0.0-ballot.rc1 content (= branch base)",
+ "artifacts": [
+  {
+   "resourceType": "CapabilityStatement",
+   "id": "mii-cps-dokument-capabilitystatement",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement",
+   "name": "MII_CPS_Dokument_CapabilityStatement",
+   "generated": "fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement.json",
+   "fsh_source": "input/fsh/definitions/mii-cps-dokument-capabilitystatement.fsh"
+  },
+  {
+   "resourceType": "CodeSystem",
+   "id": "mii-cs-dokument-nlp-processing-status",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+   "name": "MII_CS_Dokument_NLP_Processing_Status",
+   "generated": "fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status.json",
+   "fsh_source": "input/fsh/terminology/mii-cs-dokument-nlp-processing-status.fsh"
+  },
+  {
+   "resourceType": "DocumentReference",
+   "id": "AmandaAlzheimerAnnotiertesDokument",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh"
+  },
+  {
+   "resourceType": "DocumentReference",
+   "id": "AmandaAlzheimerDeIdentifiziertesDokument",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh"
+  },
+  {
+   "resourceType": "DocumentReference",
+   "id": "AmandaAlzheimerKlartextDokument",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/DocumentReference-AmandaAlzheimerKlartextDokument.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-klartext.fsh"
+  },
+  {
+   "resourceType": "DocumentReference",
+   "id": "AmandaAlzheimerOriginalDokument",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/DocumentReference-AmandaAlzheimerOriginalDokument.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh"
+  },
+  {
+   "resourceType": "Encounter",
+   "id": "AmandaAlzheimerAbteilungskontakt",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/Encounter-AmandaAlzheimerAbteilungskontakt.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-abteilungskontakt.fsh"
+  },
+  {
+   "resourceType": "Encounter",
+   "id": "AmandaAlzheimerEinrichtungskontakt",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/Encounter-AmandaAlzheimerEinrichtungskontakt.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-einrichtungskontakt.fsh"
+  },
+  {
+   "resourceType": "Encounter",
+   "id": "AmandaAlzheimerVersorgungsstellenKontakt",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/Encounter-AmandaAlzheimerVersorgungsstellenKontakt.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-versorgungstellenkontakt.fsh"
+  },
+  {
+   "resourceType": "ImplementationGuide",
+   "id": "mii-ig-dokument",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
+   "name": "MII_IG_Dokument",
+   "generated": "fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json",
+   "fsh_source": "sushi-config.yaml (IG resource, generated)"
+  },
+  {
+   "resourceType": "Patient",
+   "id": "AmandaAlzheimer",
+   "url": null,
+   "name": null,
+   "generated": "fsh-generated/resources/Patient-AmandaAlzheimer.json",
+   "fsh_source": "input/fsh/examples/alzheimer/mii-exa-dokument-patient-alzheimer.fsh"
+  },
+  {
+   "resourceType": "StructureDefinition",
+   "id": "mii-ex-dokument-nlp-processing-status",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
+   "name": "MII_EX_Dokument_NLP_Processing_Status",
+   "generated": "fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status.json",
+   "fsh_source": "input/fsh/extensions/mii-ex-dokument-nlp-processing-status.fsh"
+  },
+  {
+   "resourceType": "StructureDefinition",
+   "id": "mii-lm-dokument",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument",
+   "name": "MII_LM_Dokument",
+   "generated": "fsh-generated/resources/StructureDefinition-mii-lm-dokument.json",
+   "fsh_source": "input/fsh/logical-model/mii-lm-dokument.fsh"
+  },
+  {
+   "resourceType": "StructureDefinition",
+   "id": "mii-pr-dokument-dokument",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+   "name": "MII_PR_Dokument_Dokument",
+   "generated": "fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument.json",
+   "fsh_source": "input/fsh/profiles/mii-pr-dokument-dokument.fsh"
+  },
+  {
+   "resourceType": "ValueSet",
+   "id": "mii-vs-dokument-einrichtungsart",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
+   "name": "MII_VS_Dokument_Einrichtungsart",
+   "generated": "fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart.json",
+   "fsh_source": "input/fsh/terminology/mii-vs-dokument-einrichtungsart.fsh"
+  },
+  {
+   "resourceType": "ValueSet",
+   "id": "mii-vs-dokument-fachgebiet",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
+   "name": "MII_VS_Dokument_Fachgebiet",
+   "generated": "fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet.json",
+   "fsh_source": "input/fsh/terminology/mii-vs-dokument-fachgebiet.fsh"
+  },
+  {
+   "resourceType": "ValueSet",
+   "id": "mii-vs-dokument-format-code",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code",
+   "name": "MII_VS_Dokument_Format_Code",
+   "generated": "fsh-generated/resources/ValueSet-mii-vs-dokument-format-code.json",
+   "fsh_source": "input/fsh/terminology/mii-vs-dokument-format-code.fsh"
+  },
+  {
+   "resourceType": "ValueSet",
+   "id": "mii-vs-dokument-nlp-processing-status",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
+   "name": "MII_VS_Dokument_NLP_Processing_Status",
+   "generated": "fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status.json",
+   "fsh_source": "input/fsh/terminology/mii-vs-dokument-nlp-processing-status.fsh"
+  },
+  {
+   "resourceType": "ValueSet",
+   "id": "mii-vs-dokument-sct-dokument-kategorie",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie",
+   "name": "MII_VS_Dokument_SCT_Dokument_Kategorie",
+   "generated": "fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie.json",
+   "fsh_source": "input/fsh/terminology/mii-vs-dokument-sct-dokument-kategorie.fsh"
+  },
+  {
+   "resourceType": "ValueSet",
+   "id": "mii-vs-dokument-sct-dokument-typ",
+   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ",
+   "name": "MII_VS_Dokument_SCT_Dokument_Typ",
+   "generated": "fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ.json",
+   "fsh_source": "input/fsh/terminology/mii-vs-dokument-sct-dokument-typ.fsh"
+  }
+ ],
+ "narrative": [
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+   "words": 152,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Index.page.md",
+   "words": 13,
+   "stub": true
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+   "words": 562,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+   "words": 162,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+   "words": 239,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/HinweisTemplate.page.md",
+   "words": 4,
+   "stub": true
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+   "words": 288,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Kontext-Bezuege.page.md",
+   "words": 391,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+   "words": 377,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+   "words": 226,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+   "words": 92,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md",
+   "words": 491,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+   "words": 791,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md",
+   "words": 672,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+   "words": 727,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Index.page.md",
+   "words": 12,
+   "stub": true
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+   "words": 1845,
+   "stub": false
+  },
+  {
+   "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+   "words": 572,
+   "stub": false
+  },
+  {
+   "path": "input/pagecontent/index.md",
+   "words": 14,
+   "stub": true
+  }
+ ],
+ "assets": [
+  "implementation-guides/binaries/Amanda_Alzheimer.docx",
+  "implementation-guides/binaries/Amanda_Alzheimer.txt",
+  "implementation-guides/binaries/Annotat.zip",
+  "implementation-guides/binaries/De-ID.txt",
+  "implementation-guides/images/ExterneDokumentennutzung.png",
+  "implementation-guides/images/Informationsmodell.png",
+  "implementation-guides/images/InterneDokumentennutzung.png",
+  "implementation-guides/images/NLP-Pipeline.png",
+  "implementation-guides/images/NLP-Pipeline.svg",
+  "implementation-guides/images/Paketabhaengigkeiten.png",
+  "implementation-guides/images/Warning.jpg",
+  "implementation-guides/mii-ig-dokument-de/styles/MIICustomIGStyle/master.html",
+  "implementation-guides/mii-ig-dokument-de/styles/MIICustomIGStyle/settings.style",
+  "implementation-guides/mii-ig-dokument-de/styles/MIICustomIGStyle/style.css",
+  "input/fsh/examples/alzheimer/attachments/Amanda_Alzheimer.docx",
+  "input/fsh/examples/alzheimer/attachments/Amanda_Alzheimer.txt",
+  "input/fsh/examples/alzheimer/attachments/Annotat.zip",
+  "input/fsh/examples/alzheimer/attachments/De-ID.txt"
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "iso3166-2-fragment",
+  "url": "urn:iso:std:iso:3166:-2",
+  "version": "2021",
+  "name": "ISO3166Part2Fragment",
+  "title": "ISO 3166-2 Subdivisionscodes (Fragment: Sachsen)",
+  "status": "active",
+  "experimental": true,
+  "date": "2026-09-08",
+  "publisher": "Medizininformatik Initiative",
+  "description": "Build-Terminologie: Fragment des Codesystems, das dieser Leitfaden mitliefert, damit der IG Publisher die Jurisdiktion `urn:iso:std:iso:3166#DE` auf jedem Terminologieserver validieren kann (SU-TermServ und Ontoserver führen ISO 3166 nur als Stub ohne Inhalt). Kein Bestandteil der fachlichen Festlegungen des Moduls; die normativen Codes stehen beim jeweiligen Herausgeber.",
+  "caseSensitive": true,
+  "content": "fragment",
+  "concept": [
+    {
+      "code": "DE-SN",
+      "display": "Sachsen"
+    }
+  ]
+}

@@ -112,7 +112,7 @@
       ]
     }
   ],
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -125,7 +125,7 @@
     }
   ],
   "experimental": false,
-  "language": "de-DE",
+  "language": "de",
   "caseSensitive": true,
   "meta": {
     "profile": [

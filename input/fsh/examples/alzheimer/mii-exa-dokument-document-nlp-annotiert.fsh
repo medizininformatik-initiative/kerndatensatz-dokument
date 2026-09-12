@@ -1,5 +1,7 @@
 Instance: AmandaAlzheimerAnnotiertesDokument
 InstanceOf: MII_PR_Dokument_Dokument
+Title: "Annotiertes Dokument"
+Description: "Beispiel der NLP-Pipeline, Schritt Annotation: Archiv `Annotat.zip`, Status `annotated, semantic, surrogated, preprocessed, format-change`, erweitert mit `appends` den vorherigen Schritt."
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * status = #current

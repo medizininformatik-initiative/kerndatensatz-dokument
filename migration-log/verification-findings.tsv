@@ -1,0 +1,135 @@
+id	layer	check	verdict	subject	evidence	autofix	action
+C1-56ad97	conservation	C1	IDENTISCH	19 source artefacts	all present in fsh-generated, matched by id or canonical url (source: fsh-generated/resources)	-	-
+C2-6aea4a	conservation	C2	IDENTISCH	output/de (19 artefacts)	every generated resource is rendered and listed in artifacts.html	-	-
+C2-b0691b	conservation	C2	IDENTISCH	output/en (19 artefacts)	every generated resource is rendered and listed in artifacts.html	-	-
+C3-2e311d	conservation	C3	IDENTISCH	index.md	migrated -> input/pagecontent/index.md (input/pagecontent/index.md)	-	-
+C3-0b1699	conservation	C3	IDENTISCH	Datensaetze.page.md	migrated -> input/pagecontent/logical-models.md (input/pagecontent/logical-models.md)	-	-
+C3-d2d566	conservation	C3	IDENTISCH	AnwendungsflleInformationsmodell/Index.page.md	retired: 13-word navigation stub [MAP-EDIT: all 3 children routed to template pages (guidance/logical-models/uml-diagrams); a hub would hold nothing]	-	-
+C3-ec086e	conservation	C3	IDENTISCH	Szenarien.page.md	migrated -> input/pagecontent/guidance.md (input/pagecontent/guidance.md)	-	-
+C3-fcd593	conservation	C3	IDENTISCH	UML.page.md	migrated -> input/pagecontent/uml-diagrams.md (input/pagecontent/uml-diagrams.md)	-	-
+C3-b3ccf2	conservation	C3	IDENTISCH	Beschreibung.page.md	migrated -> input/pagecontent/index.md (input/pagecontent/index.md)	-	-
+C3-2456fc	conservation	C3	IDENTISCH	HinweisTemplate.page.md	retired: orphan Simplifier authoring stub [MAP-EDIT: 4 words, not in toc, contains the {{render:HereBeDragons}} error artifact - not module content]	-	-
+C3-7717f8	conservation	C3	IDENTISCH	MIIIGModulDokument/Index.page.md	migrated -> input/pagecontent/index.md (input/pagecontent/index.md)	-	-
+C3-2c8296	conservation	C3	IDENTISCH	Kontext-Bezuege.page.md	migrated -> input/pagecontent/implementer-guidance.md (input/pagecontent/implementer-guidance.md)	-	-
+C3-b75bba	conservation	C3	IDENTISCH	Referenzen.page.md	migrated -> input/pagecontent/implementer-guidance.md (input/pagecontent/implementer-guidance.md)	-	-
+C3-126e79	conservation	C3	IDENTISCH	Release-Notes.page.md	migrated -> input/pagecontent/changes.md (input/pagecontent/changes.md)	-	-
+C3-32eff4	conservation	C3	IDENTISCH	CapabilityStatement.page.md	migrated -> input/pagecontent/capability-statements.md (input/pagecontent/capability-statements.md)	-	-
+C3-d58f1b	conservation	C3	IDENTISCH	Conformance.page.md	migrated -> input/pagecontent/implementer-guidance.md (input/pagecontent/implementer-guidance.md)	-	-
+C3-8fa51d	conservation	C3	IDENTISCH	Dokument-DocumentReference.page.md	migrated -> input/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md (input/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md)	-	-
+C3-66a80b	conservation	C3	IDENTISCH	FHIRProfile/Index.page.md	migrated -> input/pagecontent/profiles.md (input/pagecontent/profiles.md)	-	-
+C3-edca56	conservation	C3	IDENTISCH	NLP-Processing-Status-Extension.page.md	migrated -> input/intro-notes/StructureDefinition-mii-ex-dokument-nlp-processing-status-intro.md (input/intro-notes/StructureDefinition-mii-ex-dokument-nlp-processing-status-intro.md)	-	-
+C3-2fe7d8	conservation	C3	IDENTISCH	TechnischeImplementierung/Index.page.md	retired: 12-word navigation stub [MAP-EDIT: all 5 children routed; a hub would hold nothing]	-	-
+C3-5746cf	conservation	C3	IDENTISCH	Kompatibilitaet.page.md	migrated -> input/pagecontent/kompatibilitaet.md (input/pagecontent/kompatibilitaet.md)	-	-
+C3-d04b32	conservation	C3	IDENTISCH	Terminologien.page.md	migrated -> input/pagecontent/code-systems.md (input/pagecontent/code-systems.md)	-	-
+C4-7b2767	conservation	C4	NICHT PRUEFBAR	AnwendungsflleInformationsmodell/Index.page.md	the source page carries NO prose -- 0 generated table row(s) only	-	conservation of a generated view is not a text question; confirm the artefact page replaces it (R1)
+C4-d2b82b	conservation	C4	DIVERGIERT	Beschreibung.page.md	1 of 15 PROSE runs of the source page are in no target page (first: Der Datenhalter kann eine erfolgte De-Identifizierung dieser…)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-196ae3	conservation	C4	DIVERGIERT	CapabilityStatement.page.md	3 of 6 PROSE runs of the source page are in no target page (first: Um eine dezentrale Datenauswertung mittels des Deutschen For…)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-0a8096	conservation	C4	DIVERGIERT	Conformance.page.md	25 of 25 PROSE runs of the source page are in no target page (first: Diese Seite beschreibt, wie Konformitätsanforderungen dokume…); 9 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-f3c91c	conservation	C4	DIVERGIERT	Datensaetze.page.md	2 of 7 PROSE runs of the source page are in no target page (first: Für jedes Element innerhalb des Logical Models existiert ein…)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-68e681	conservation	C4	NICHT PRUEFBAR	Dokument-DocumentReference.page.md	the source page embeds an element-tree rendering (4 occurrences of the renderer's marker); 4 of 29 runs are in no target page, but prose and rendered view cannot be told apart in it	-	read the page against its target: migration replaces the VIEW with the artefact page (R1), so only its prose has to be conserved -- and only a human can say which is which here
+C4-39c9c7	conservation	C4	DIVERGIERT	FHIRProfile/Index.page.md	8 of 24 PROSE runs of the source page are in no target page (first: Einleitung FHIR Profile Bitte die [Seite der Namenskonventio…); 26 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-c975ec	conservation	C4	NICHT PRUEFBAR	HinweisTemplate.page.md	the source page carries NO prose -- 0 generated table row(s) only	-	conservation of a generated view is not a text question; confirm the artefact page replaces it (R1)
+C4-11b5dc	conservation	C4	DIVERGIERT	Kompatibilitaet.page.md	2 of 70 PROSE runs of the source page are in no target page (first: Die Kompatibilität der FHIR DocumentReference-Profile des MI…); 34 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-3b379e	conservation	C4	IDENTISCH	Kontext-Bezuege.page.md	all 12 prose runs present in the target's de corpus; 11 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT)	-	-
+C4-920d02	conservation	C4	DIVERGIERT	MIIIGModulDokument/Index.page.md	3 of 12 PROSE runs of the source page are in no target page (first: * Frank Meineke, SMITH * Jakob Faller, MIRACUM Fragen zu der…); 6 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-14e9a5	conservation	C4	NICHT PRUEFBAR	NLP-Processing-Status-Extension.page.md	the source page embeds an element-tree rendering (13 occurrences of the renderer's marker); 3 of 35 runs are in no target page, but prose and rendered view cannot be told apart in it	-	read the page against its target: migration replaces the VIEW with the artefact page (R1), so only its prose has to be conserved -- and only a human can say which is which here
+C4-fe91db	conservation	C4	DIVERGIERT	Referenzen.page.md	7 of 19 PROSE runs of the source page are in no target page (first: * [KBV Basis-Profile mit Medizinischen Informationsobjekten …)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-03ec0a	conservation	C4	DIVERGIERT	Release-Notes.page.md	7 of 14 PROSE runs of the source page are in no target page (first: Datum 28.08.2026 - **NLP-Pipeline-Beispiele überarbeitet** (…)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-f0499f	conservation	C4	DIVERGIERT	Szenarien.page.md	5 of 32 PROSE runs of the source page are in no target page (first: Grundsätzlich soll mit dem Dokument-Profil ( ) die Möglichke…)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-fc1144	conservation	C4	NICHT PRUEFBAR	TechnischeImplementierung/Index.page.md	the source page carries NO prose -- 0 generated table row(s) only	-	conservation of a generated view is not a text question; confirm the artefact page replaces it (R1)
+C4-dcd614	conservation	C4	DIVERGIERT	Terminologien.page.md	7 of 14 PROSE runs of the source page are in no target page (first: - [Definierte CodeSystems] - [Klassifikation von NLP-Verarbe…); 12 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT)	-	map the missing text to a target page section, or record the loss in the report's content map
+C4-d47516	conservation	C4	IDENTISCH	UML.page.md	all 9 prose runs present in the target's de corpus	-	-
+C4-ef59ff	conservation	C4	DIVERGIERT	index.md	1 of 1 PROSE runs of the source page are in no target page (first: # MII_IG_Dok_DE Feel free to modify this index page with you…)	-	map the missing text to a target page section, or record the loss in the report's content map
+C5-f09e26	conservation	C5	IDENTISCH	input/includes/menu.xml	all 27 menu entries resolve to a real page	-	-
+C5-89fa79	conservation	C5	IDENTISCH	input/translations/en/includes/menu.xml	all 27 menu entries resolve to a real page	-	-
+C5-8e783d	conservation	C5	IDENTISCH	19 narrative pages	every one is reachable from a menu entry	-	-
+C5-3cab9a	conservation	C5	IDENTISCH	target page set	every narrative page is either the template's or a page-map target	-	-
+C6-3deab4	conservation	C6	IDENTISCH	Beschreibung.page.md	14 of 15 runs placed, most on index -- the mapped target	-	-
+C6-c81fe3	conservation	C6	IDENTISCH	CapabilityStatement.page.md	3 of 6 runs placed, most on capability-statements -- the mapped target	-	-
+C6-a8e46e	conservation	C6	IDENTISCH	Datensaetze.page.md	5 of 7 runs placed, most on logical-models -- the mapped target	-	-
+C6-da7baf	conservation	C6	IDENTISCH	Dokument-DocumentReference.page.md	25 of 29 runs placed, most on StructureDefinition-mii-pr-dokument-dokument-intro -- the mapped target	-	-
+C6-089cbe	conservation	C6	IDENTISCH	FHIRProfile/Index.page.md	16 of 24 runs placed, most on profiles -- the mapped target	-	-
+C6-7d2cd9	conservation	C6	IDENTISCH	Kompatibilitaet.page.md	68 of 70 runs placed, most on kompatibilitaet -- the mapped target	-	-
+C6-9fc4cd	conservation	C6	IDENTISCH	Kontext-Bezuege.page.md	12 of 12 runs placed, most on implementer-guidance -- the mapped target	-	-
+C6-4b21c6	conservation	C6	IDENTISCH	MIIIGModulDokument/Index.page.md	9 of 12 runs placed, most on index -- the mapped target	-	-
+C6-dd118a	conservation	C6	IDENTISCH	NLP-Processing-Status-Extension.page.md	32 of 35 runs placed, most on StructureDefinition-mii-ex-dokument-nlp-processing-status-intro -- the mapped target	-	-
+C6-997ea5	conservation	C6	IDENTISCH	Referenzen.page.md	12 of 19 runs placed, most on implementer-guidance -- the mapped target	-	-
+C6-23da97	conservation	C6	IDENTISCH	Release-Notes.page.md	7 of 14 runs placed, most on changes -- the mapped target	-	-
+C6-dfd414	conservation	C6	IDENTISCH	Szenarien.page.md	27 of 32 runs placed, most on guidance -- the mapped target	-	-
+C6-8d2119	conservation	C6	IDENTISCH	Terminologien.page.md	7 of 14 runs placed, most on code-systems -- the mapped target	-	-
+C6-dcdd2a	conservation	C6	IDENTISCH	UML.page.md	9 of 9 runs placed, most on uml-diagrams -- the mapped target	-	-
+C7-9191f0	conservation	C7	DIVERGIERT	capability-statements	3 of 6 prose runs of the source page CapabilityStatement.page.md are in no target page (C4), and capability-statements carries no DERIVED marker at all -- text was rewritten and the guide does not say so	-	mark the passage per spec section 9d (the DERIVED comment plus the visible box, in BOTH language mirrors), or restore the source wording; if the text was deliberately dropped, record that in migration-log/page-map.tsv instead
+C7-4f50d8	conservation	C7	DIVERGIERT	changes	7 of 14 prose runs of the source page Release-Notes.page.md are in no target page (C4), and changes carries no DERIVED marker at all -- text was rewritten and the guide does not say so	-	mark the passage per spec section 9d (the DERIVED comment plus the visible box, in BOTH language mirrors), or restore the source wording; if the text was deliberately dropped, record that in migration-log/page-map.tsv instead
+C7-118c68	conservation	C7	DIVERGIERT	guidance	5 of 32 prose runs of the source page Szenarien.page.md are in no target page (C4), and guidance carries no DERIVED marker at all -- text was rewritten and the guide does not say so	-	mark the passage per spec section 9d (the DERIVED comment plus the visible box, in BOTH language mirrors), or restore the source wording; if the text was deliberately dropped, record that in migration-log/page-map.tsv instead
+C7-fabfa8	conservation	C7	DIVERGIERT	code-systems	7 of 14 prose runs of the source page Terminologien.page.md are in no target page (C4), and code-systems carries no DERIVED marker at all -- text was rewritten and the guide does not say so	-	mark the passage per spec section 9d (the DERIVED comment plus the visible box, in BOTH language mirrors), or restore the source wording; if the text was deliberately dropped, record that in migration-log/page-map.tsv instead
+C7-bba487	conservation	C7	NICHT PRUEFBAR	Dokument-DocumentReference.page.md	C4 could not tell this page's prose from its embedded element-tree rendering, so whether anything was rewritten here is not measured	-	read the page against its target (the same human action C4 asks for) and mark whatever the migration wrote per spec section 9d
+C7-c9621a	conservation	C7	NICHT PRUEFBAR	NLP-Processing-Status-Extension.page.md	C4 could not tell this page's prose from its embedded element-tree rendering, so whether anything was rewritten here is not measured	-	read the page against its target (the same human action C4 asks for) and mark whatever the migration wrote per spec section 9d
+F1-093008	fidelity	F1	IDENTISCH	id	mii-ig-dokument (identical to the source)	-	-
+F1-bacf3c	fidelity	F1	IDENTISCH	packageId	de.medizininformatikinitiative.kerndatensatz.dokument (identical to the source)	-	-
+F1-489e82	fidelity	F1	IDENTISCH	canonical	https://www.medizininformatik-initiative.de/fhir/ext/modul-d… (identical to the source)	-	-
+F1-6cbfea	fidelity	F1	IDENTISCH	version	2027.0.0-ballot.rc1 (identical to the source)	-	-
+F1-8a3995	fidelity	F1	IDENTISCH	status	draft (identical to the source)	-	-
+F1-b5b102	fidelity	F1	IDENTISCH	title	MII IG Dokument (identical to the source)	-	-
+F1-7bae24	fidelity	F1	DIVERGIERT	license	target CC-BY-4.0  vs  source CC0-1.0	-	the SOURCE wins (spec 2.2); restore it or record the divergence as a Gate-A decision -- never normalise silently
+F1-5451f2	fidelity	F1	IDENTISCH	publisher	Medizininformatik-Initiative (identical to the source)	-	-
+F1-f60f40	fidelity	F1	IDENTISCH	fhirVersion	4.0.1 (identical to the source)	-	-
+F2-d14403	fidelity	F2	IDENTISCH	de.basisprofil.r4	pinned 1.6.0, identical to the source pin (the source tree (--source))	-	-
+F2-1e50ed	fidelity	F2	IDENTISCH	de.gematik.isik	pinned 6.0.0, identical to the source pin (the source tree (--source))	-	-
+F2-2efb2b	fidelity	F2	IDENTISCH	de.ihe-d.terminology	pinned 3.0.1, identical to the source pin (the source tree (--source))	-	-
+F2-0519f5	fidelity	F2	IDENTISCH	de.medizininformatikinitiative.kerndatensatz.base	pinned 2026.0.0, identical to the source pin (the source tree (--source))	-	-
+F2-ce5cda	fidelity	F2	IDENTISCH	de.medizininformatikinitiative.kerndatensatz.meta	pinned 2026.0.0, identical to the source pin (the source tree (--source))	-	-
+F2-26953e	fidelity	F2	IDENTISCH	dvmd.kdl.r4	pinned 2025.0.1, identical to the source pin (the source tree (--source))	-	-
+F2-047205	fidelity	F2	IDENTISCH	hl7.fhir.uv.extensions.r4	pinned 5.2.0, identical to the source pin (the source tree (--source))	-	-
+F2-8f9355	fidelity	F2	IDENTISCH	hl7.terminology.r4	pinned 7.1.0, identical to the source pin (the source tree (--source))	-	-
+F2-3ab6a1	fidelity	F2	IDENTISCH	ihe.formatcode.fhir	pinned 1.4.0, identical to the source pin (the source tree (--source))	-	-
+F2-fd0e73	fidelity	F2	NICHT PRUEFBAR	hl7.fhir.uv.crmi	target-only dependency 2.0.0 (not in the source)	-	confirm at Gate A that this is template machinery (hl7.fhir.uv.crmi is) and not an accidental addition
+F2-e78ce4	fidelity	F2	NICHT PRUEFBAR	hl7.fhir.uv.xver-r5.r4	target-only dependency 0.1.0 (not in the source)	-	confirm at Gate A that this is template machinery (hl7.fhir.uv.crmi is) and not an accidental addition
+F3-1a29c4	fidelity	F3	IDENTISCH	license	CC-BY-4.0 asserted from tier H (implementation-guides/…/Index.page.md:46-50 (guide footer: '…)	-	-
+F3-ce21cb	fidelity	F3	IDENTISCH	LICENSE file	the file text is CC-BY-4.0 (header: 'attribution 4.0 international'), matching the declared scalar	-	-
+F4-e659dc	fidelity	F4	IDENTISCH	36 FSH files	no fhir_comments rules, no whitespace-bearing code references	-	-
+P1-fded0e	provenance	P1	IDENTISCH	template	rendered de.medizininformatikinitiative.template#1.3.4 == recorded template release v1.3.4 (URL reference)	-	-
+P2-27e398	provenance	P2	IDENTISCH	scaffold template ref	v0.13.1 == latest release v0.13.1	-	-
+P3-a28a47	provenance	P3	IDENTISCH	IG Publisher version	2.3.2 == the workflow pin	-	-
+P3-c39a79	provenance	P3	NICHT PRUEFBAR	IG Publisher currency	the publisher reports itself out of date (current 2.3.3)	-	upgrading the publisher is a target-repository decision, not a migration one -- record it, do not act on it here
+P4-379bde	provenance	P4	IDENTISCH	source guide version	pinned current), (run.log, action source-inventory)	-	-
+P5-ae41ea	provenance	P5	IDENTISCH	ig.ini	`ig = fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json` exists in the target	-	-
+R1-866fe1	rendering	R1	IDENTISCH	output/de	tables, tabs and images all non-empty and resolvable	-	-
+R2-48ed52	rendering	R2	DIVERGIERT	output/de id="ig-status" [{{]	on 1 page(s), e.g. searchform.html: Search {{title}} (Current Build)	-	rendered header/footer metadata defect -- qa.txt does not report it. Fix the metadata it renders (a jurisdiction code the template cannot resolve is the measured case)
+R1-e1bc49	rendering	R1	IDENTISCH	output/en	tables, tabs and images all non-empty and resolvable	-	-
+R2-d1da9a	rendering	R2	DIVERGIERT	output/en id="ig-status" [{{]	on 1 page(s), e.g. searchform.html: Search {{title}} (Current Build)	-	rendered header/footer metadata defect -- qa.txt does not report it. Fix the metadata it renders (a jurisdiction code the template cannot resolve is the measured case)
+R1-76f413	rendering	R1	NICHT PRUEFBAR	source-versus-target rendering	no harvested source HTML (./migration-log/guide-harvest/html) and/or no page map	-	harvest with --keep-html and write the page map; without a source rendering, 'non-empty where non-empty in the source' has no reference
+R3-c3bc54	rendering	R3	IDENTISCH	output/de	all 19 narrative pages differ from the default language	-	-
+R4-84ad62	rendering	R4	IDENTISCH	template example links	none, over 1 token(s) from template-artifacts-v1.3.4.tsv (verified against template package v1.3.4)	-	-
+R5-299acd	rendering	R5	IDENTISCH	input/translations/en/ImplementationGuide-mii-ig-dokument.po	a translated unit for every one of the 20 page titles	-	-
+L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	299 parsed lines, 1 runs	-	-
+L1-9622bf	log	L1	DIVERGIERT	5.5/gen-page-title-po @ 2026-08-30T06:06:26Z	silent-partial-success: 1 of 20 page-title unit(s) have an empty msgstr and fall back to de	-	the WARN this whole convention exists for was emitted and NOTHING acted on it. Re-run the step, or record the resolution with a `resolved:` line naming this action
+L2-0e48db	log	L2	IDENTISCH	1 preflight-analysis	present in the log	-	-
+L2-5e1c48	log	L2	IDENTISCH	pre.2 classify-source-shape	present in the log	-	-
+L2-4fd559	log	L2	IDENTISCH	pre.5 toolchain	present in the log	-	-
+L2-541189	log	L2	IDENTISCH	5.1 source-inventory	present in the log	-	-
+L2-9a6da6	log	L2	IDENTISCH	2.1 read-identity	present in the log	-	-
+L2-23b069	log	L2	NICHT PRUEFBAR	2.1 package-identity	no line in the log; the step is conditional (no sushi-config.yaml in the source)	-	confirm the condition did not hold -- The published package is the only machine source for the dependency PINS (spec §2.1.1).
+L2-7163a2	log	L2	NICHT PRUEFBAR	2.1 repo-identity	no line in the log; the step is conditional (no sushi-config.yaml in the source)	-	confirm the condition did not hold -- The repository's LICENSE text is the only machine source for `license` — the field that must never default (spec §2.2).
+L2-07bdbb	log	L2	NICHT PRUEFBAR	5.1c simplifier-discover	no line in the log; the step is conditional (no rendered-IG URL was supplied)	-	confirm the condition did not hold -- Without the discovery chain the guide is not found, and a migration then ships the template's starter pages.
+L2-930ba2	log	L2	NICHT PRUEFBAR	5.1d guide-harvest	no line in the log; the step is conditional (the narrative is not in the repository)	-	confirm the condition did not hold -- This is the step whose absence shipped the template's starter pages under a module's name.
+L2-666ef6	log	L2	IDENTISCH	5.2 skeleton-vendored	present in the log	-	-
+L2-1e1cb5	log	L2	IDENTISCH	5.2 template-reference	present in the log	-	-
+L2-200a9d	log	L2	IDENTISCH	5.2 sushi-skeleton	present in the log	-	-
+L2-f09283	log	L2	IDENTISCH	5.2 license-align	present in the log	-	-
+L2-9a700e	log	L2	IDENTISCH	5.3 transfer-artefacts	present in the log	-	-
+L2-8fadca	log	L2	IDENTISCH	5.4 fql-scan	present in the log	-	-
+L2-ec69ec	log	L2	IDENTISCH	5.4a optional-page-decisions	present in the log	-	-
+L2-b6ec8c	log	L2	IDENTISCH	5.4b security-privacy-decision	present in the log	-	-
+L2-254dc3	log	L2	IDENTISCH	5.4c page-routing	present in the log	-	-
+L2-21c0ec	log	L2	IDENTISCH	5.4d derived-scan	present in the log	-	-
+L2-a85d96	log	L2	IDENTISCH	5.5 gen-page-title-po	present in the log	-	-
+L2-619c38	log	L2	IDENTISCH	5.6 sushi-build	present in the log	-	-
+L2-a60619	log	L2	IDENTISCH	5.6 ig-publisher	present in the log	-	-
+L2-d8144d	log	L2	IDENTISCH	5.6a sibling-skill-check	present in the log	-	-
+L2-bce311	log	L2	IDENTISCH	7 prepost-delta	present in the log	-	-
+L2-3b5912	log	L2	IDENTISCH	11 verify-migration	present in the log	-	-
+L3-9164a9	log	L3	DIVERGIERT	identity field license	1 unresolved contradiction WARN(s), first at 2026-08-29T22:27:25Z: identity-contradiction: field=license now=CC-BY-4.0 (tier H, implementation-guides/…/Index.page.md:46-50 (guid…	-	unresolved at verification time. It is a Gate-A decision, never a precedence puzzle to settle mechanically -- record it with a `decision:` line naming the field
+L3-8766f8	log	L3	IDENTISCH	identity ledger	migration-log/identity-claims.tsv present, 14 claim(s)	-	-
+L4-106e61	log	L4	NICHT PRUEFBAR	conversion count	no `gofsh-convert … actual=` line in the log	-	shape B only; for shape A there is nothing to convert
+L4-f17740	log	L4	NICHT PRUEFBAR	page count	no harvested count in the log and/or no harvest manifest	-	harvest the guide (step 2c) where the narrative is not in the repo
+L4-40cf60	log	L4	IDENTISCH	artifact count	artifacts.html lists 19 for 19 generated resources	-	-

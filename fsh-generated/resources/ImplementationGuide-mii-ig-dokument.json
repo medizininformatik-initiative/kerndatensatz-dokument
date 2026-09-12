@@ -1,24 +1,175 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-dokument",
-  "language": "de-DE",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-09-01"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "version": "3.0.0",
+            "code": "package",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source",
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "de.medizininformatikinitiative.kerndatensatz.dokument"
+        },
+        {
+          "url": "version",
+          "valueString": "2027.0.0-ballot.rc2"
+        },
+        {
+          "url": "uri",
+          "valueUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument"
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2027"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "office@medizininformatik-initiative.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters",
+      "valueReference": {
+        "reference": "Parameters/mii-param-dokument-manifest"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this ImplementationGuide resource as a computable definition of all the parts of the corresponding module of the Medical Informatics Initiative core data set."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-purpose",
+      "valueMarkdown": "Provide the computable publication unit for the MII Core Dataset Dokument module, enabling implementers to discover, validate, version, and apply the specification consistently."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+            "code": "C19498"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "name": "MII_IG_Dokument",
   "title": "MII IG Dokument",
   "status": "draft",
-  "publisher": "Medizininformatik-Initiative",
+  "experimental": false,
+  "date": "2026-09-01",
+  "publisher": "NUM-DIZ",
   "contact": [
     {
-      "name": "Medizininformatik-Initiative",
+      "name": "NUM-DIZ",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        },
-        {
-          "system": "email",
-          "value": "office@medizininformatik-initiative.de"
+          "value": "https://www.netzwerk-universitaetsmedizin.de"
         }
       ]
     }
@@ -28,14 +179,15 @@
     {
       "coding": [
         {
-          "code": "276",
-          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
         }
       ]
     }
   ],
   "packageId": "de.medizininformatikinitiative.kerndatensatz.dokument",
-  "license": "CC0-1.0",
+  "license": "CC-BY-4.0",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -60,13 +212,13 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.base",
-      "version": "2026.0.0",
+      "version": "2027.0.0-ballot.rc1",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
       "id": "de_medizininformatikinitiative_kerndatensatz_base"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "2026.0.0",
+      "version": "2027.0.0-ballot.rc3",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
@@ -93,65 +245,85 @@
       "version": "1.4.0",
       "uri": "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/ImplementationGuide/ihe.formatcode.fhir",
       "id": "ihe_formatcode_fhir"
+    },
+    {
+      "packageId": "hl7.fhir.uv.crmi",
+      "version": "2.0.0",
+      "uri": "http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi",
+      "id": "hl7_fhir_uv_crmi"
+    },
+    {
+      "packageId": "hl7.fhir.uv.xver-r5.r4",
+      "version": "0.1.0",
+      "uri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "id": "hl7_fhir_uv_xver_r5_r4"
     }
   ],
   "definition": {
     "resource": [
       {
         "reference": {
-          "reference": "Patient/AmandaAlzheimer"
-        },
-        "name": "AmandaAlzheimer",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Encounter/AmandaAlzheimerAbteilungskontakt"
         },
-        "name": "AmandaAlzheimerAbteilungskontakt",
+        "name": "Abteilungskontakt",
+        "description": "Synthetischer Abteilungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel.",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "DocumentReference/AmandaAlzheimerAnnotiertesDokument"
         },
-        "name": "AmandaAlzheimerAnnotiertesDokument",
+        "name": "Annotiertes Dokument",
+        "description": "Beispiel der NLP-Pipeline, Schritt Annotation: Archiv `Annotat.zip`, Status `annotated, semantic, surrogated, preprocessed, format-change`, erweitert mit `appends` den vorherigen Schritt.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
       },
       {
         "reference": {
           "reference": "DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument"
         },
-        "name": "AmandaAlzheimerDeIdentifiziertesDokument",
+        "name": "De-identifiziertes Dokument",
+        "description": "Beispiel der NLP-Pipeline, Schritt De-Identification: `De-ID.txt`, Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
       },
       {
         "reference": {
           "reference": "Encounter/AmandaAlzheimerEinrichtungskontakt"
         },
-        "name": "AmandaAlzheimerEinrichtungskontakt",
+        "name": "Einrichtungskontakt",
+        "description": "Synthetischer Einrichtungskontakt (Kontaktebene) zum NLP-Pipeline-Beispiel.",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Parameters/mii-param-dokument-manifest"
+        },
+        "description": "Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.",
+        "exampleBoolean": false,
+        "name": "Expansion-Manifest"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/iso3166-1-fragment"
+        },
+        "description": "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
+        "exampleBoolean": false,
+        "name": "ISO 3166-1 (Build-Fragment)"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/iso3166-2-fragment"
+        },
+        "description": "Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets.",
+        "exampleBoolean": false,
+        "name": "ISO 3166-2 (Build-Fragment)"
       },
       {
         "reference": {
           "reference": "DocumentReference/AmandaAlzheimerKlartextDokument"
         },
-        "name": "AmandaAlzheimerKlartextDokument",
+        "name": "Klartext-Dokument",
+        "description": "Beispiel der NLP-Pipeline, Schritt Preprocessing: Klartextfassung `Amanda_Alzheimer.txt`, Status `preprocessed, format-change`, verweist mit `transforms` auf das Original.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/AmandaAlzheimerOriginalDokument"
-        },
-        "name": "AmandaAlzheimerOriginalDokument",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/AmandaAlzheimerVersorgungsstellenKontakt"
-        },
-        "name": "AmandaAlzheimerVersorgungsstellenKontakt",
-        "exampleBoolean": true
       },
       {
         "reference": {
@@ -197,7 +369,7 @@
         "reference": {
           "reference": "ValueSet/mii-vs-dokument-einrichtungsart"
         },
-        "name": "MII VS Dokument Einrichtungart",
+        "name": "MII VS Dokument Einrichtungsart",
         "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
         "exampleBoolean": false
       },
@@ -240,6 +412,46 @@
         "name": "MII VS Dokument SCT Dokument Typ",
         "description": "SNOMED CT ValueSet zum Typ eines Dokuments",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ExampleScenario/NlpPipelineAmandaAlzheimer"
+        },
+        "name": "NLP-Pipeline „Amanda Alzheimer“",
+        "description": "Beispielszenario: Verarbeitung eines synthetischen ärztlichen Entlassbriefs durch eine NLP-Pipeline — Ingestion, Preprocessing, De-Identification und Annotation — mit den Dokumentreferenzen jedes Verarbeitungsschritts und ihren NLP-Verarbeitungsstatus.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/AmandaAlzheimerOriginalDokument"
+        },
+        "name": "Original-Dokument (DOCX)",
+        "description": "Beispiel der NLP-Pipeline „Amanda Alzheimer“, Schritt Ingestion: Dokumentreferenz auf den synthetischen Entlassbrief `Amanda_Alzheimer.docx`, NLP-Verarbeitungsstatus `unprocessed`.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+      },
+      {
+        "reference": {
+          "reference": "Patient/AmandaAlzheimer"
+        },
+        "name": "Patientin Amanda Alzheimer",
+        "description": "Synthetische Patientin des NLP-Pipeline-Beispiels; wird nur vom Original-Dokument und dessen Dokumentreferenz verwendet.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/unsd-m49-fragment"
+        },
+        "description": "Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets.",
+        "exampleBoolean": false,
+        "name": "UN M49 (Build-Fragment)"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/AmandaAlzheimerVersorgungsstellenKontakt"
+        },
+        "name": "Versorgungsstellenkontakt",
+        "description": "Synthetischer Versorgungsstellenkontakt (Kontaktebene) zum NLP-Pipeline-Beispiel.",
+        "exampleBoolean": true
       }
     ],
     "page": {
@@ -250,6 +462,105 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "implementer-guidance.html",
+              "title": "Guidance for Implementers",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "kompatibilitaet.html",
+                  "title": "Compatibility with Other Specifications",
+                  "generation": "markdown"
+                }
+              ]
+            },
+            {
+              "nameUrl": "uml-diagrams.html",
+              "title": "UML Diagrams",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "security-and-privacy.html",
+          "title": "Security and Privacy",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "extensions.html",
+          "title": "Extensions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "capability-statements.html",
+          "title": "Capability Statements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "search-parameters.html",
+          "title": "Search Parameters",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "logical-models.html",
+          "title": "Logical Models",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "value-sets.html",
+          "title": "Value Sets",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "code-systems.html",
+          "title": "Code Systems",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "examples.html",
+          "title": "Examples",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changelog",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "metadata.html",
+          "title": "Metadata Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "version-history.html",
+          "title": "Versioning",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-mii-ig-dokument.html",
+          "title": "MII ImplementationGuide Resource",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "translationinfo.html",
+          "title": "Translation Information",
           "generation": "markdown"
         }
       ]
@@ -262,6 +573,94 @@
       {
         "code": "releaselabel",
         "value": "ballot"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:iso:std:iso:3166"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:iso:std:iso:3166:-2"
+      },
+      {
+        "code": "special-url",
+        "value": "http://unstats.un.org/unsd/methods/m49/m49.htm"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/predefined-resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/intro-notes"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "en"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "de"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/de"
+      },
+      {
+        "code": "excludexml",
+        "value": "false"
+      },
+      {
+        "code": "excludejson",
+        "value": "false"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "excludemap",
+        "value": "false"
+      },
+      {
+        "code": "logging",
+        "value": "init"
+      },
+      {
+        "code": "logging",
+        "value": "progress"
+      },
+      {
+        "code": "logging",
+        "value": "context"
+      },
+      {
+        "code": "logging",
+        "value": "html"
+      },
+      {
+        "code": "logging",
+        "value": "tx"
+      },
+      {
+        "code": "pin-canonicals",
+        "value": "pin-all"
+      },
+      {
+        "code": "path-expansion-params",
+        "value": "../../input/resources/Parameters-expansion-manifest.json"
+      },
+      {
+        "code": "pin-manifest",
+        "value": "mii-param-dokument-manifest"
+      },
+      {
+        "code": "suppress-mappings",
+        "value": "http://hl7.org/v3"
+      },
+      {
+        "code": "suppress-mappings",
+        "value": "http://hl7.org/v3/cda"
       }
     ]
   }

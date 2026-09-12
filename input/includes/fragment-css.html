@@ -1,0 +1,55 @@
+<!-- MODULE OVERRIDE of the template's includes/fragment-css.html (ig-template-mii-kds 1.3.4).
+     The template occupies the base's CSS extension point, so a module that needs
+     one more rule has to carry the template's include verbatim and append to it.
+     Everything above the <style> block is the template's file, unchanged.
+     Module rules (2026-09-07, review on migration/2027.0.0-ballot.rc2):
+       1. narrative Markdown tables and this module's sql tables (class "grid sql-table",
+          set through the directive's "class" property — the publisher's own grid
+          tables stay untouched, template styleguide §5)
+          use the full width of the content column instead of shrink-to-fit;
+       2. the publisher adds Prism's class="language-json" to SOME of its own
+          JSON renderings (one of the four DocumentReference examples), which
+          re-colours that block green; inside pre.json the Prism tokens now
+          inherit the publisher's own colouring, so all JSON blocks look alike.
+     REMOVAL: delete this file the day the template ships both rules
+     (ig-template-mii-kds PR "fix(css): full-width narrative tables, uniform JSON blocks"). -->
+<!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="{{site.data.info.assets}}assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="{{site.data.info.assets}}assets/css/template-base.css" rel="stylesheet"/>
+{% if site.data.brand.design == 'mii' %}
+<link href="{{site.data.info.assets}}assets/css/mii.css" rel="stylesheet"/>
+{% else %}
+<link href="{{site.data.info.assets}}assets/css/num-diz.css" rel="stylesheet"/>
+{% endif %}
+<style>
+  /* 1. tables use the content width (same selector chain as template-base.css, see its comment) */
+  table:not([class]):not([style]):not([border]):not([data-fhir]),
+  table.sql-table { width: 100%; }
+  /* 2. publisher JSON blocks: neutralise Prism's re-colouring where the publisher added its class */
+  /*    Prism.js also copies its language class onto the parent <pre> at load time, which
+        swaps fhir.css's pre.json look (green #EFFFEF, 11px, 5px padding) for Prism's grey theme;
+        the pre-level rule puts the publisher's values back. */
+  pre.json[class*="language-"] { background: #EFFFEF; padding: 5px; margin: 0 0 10px; font-size: 11px; text-shadow: none; }
+  pre.json code[class*="language-"] { color: inherit; text-shadow: none; }
+  pre.json code[class*="language-"] .token { color: inherit; background: transparent; text-shadow: none; font-weight: inherit; }
+  /* 3. publisher-generated PlantUML diagrams (ExampleScenario, class/sequence): the SVG carries a fixed
+        pixel width and height inline; cap it at the content width and let the height follow the viewBox
+        so a wide diagram scales instead of overflowing the column (same guard template-base.css has for img) */
+  #segment-content svg[data-diagram-type] { max-width: 100%; height: auto !important; }
+</style>

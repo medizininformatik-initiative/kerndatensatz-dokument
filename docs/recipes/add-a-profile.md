@@ -1,0 +1,63 @@
+# Recipe: add a profile
+
+**Goal.** Write your first FHIR profile in FSH, build it, and read the QA report.
+
+**Prerequisites.** A build that runs (see
+[first-build-in-devcontainer.md](first-build-in-devcontainer.md)).
+
+## Steps
+
+1. Look at the module's profile `input/fsh/profiles/mii-pr-dokument-dokument.fsh`
+   and one of its instances under `input/fsh/examples/alzheimer/` — copy their
+   shape.
+2. Create your profile file under `input/fsh/profiles/`. Name the **artifact**
+   per the MII naming conventions (meta wiki, *Namenskonventionen für
+   FHIR-Ressourcen in der MII*). For the **file** name this module follows
+   kerndatensatz-basis, lowercased as in `mii-pr-dokument-dokument.fsh`; SUSHI
+   does not care, but matching basis keeps MII modules navigable the same way.
+   The quickest correct start is to copy the existing profile file, rename it,
+   and edit — it already carries the shared metadata rule sets. The shape:
+   ```fsh
+   Profile: MII_PR_Person_Patient
+   Parent: Patient
+   Id: mii-pr-person-patient
+   Title: "MII PR Person Patient"
+   Description: "…"
+   // Copy the shared MII metadata block (insert Translation, PR_CS_VS_Version,
+   // Publisher, the licence and the CRMI rules) verbatim from
+   // input/fsh/profiles/mii-pr-dokument-dokument.fsh — every MII conformance resource
+   // carries it. See input/fsh/rulesets/README.md.
+   * name 1..* MS
+   * birthDate 1..1 MS
+   ```
+   `Title` and `Description` follow the MII naming conventions, which prefer
+   German wording for a conformance resource, independently of which language
+   the narrative guide renders in.
+   language; English goes in additively via the `Translation` RuleSet, as the
+   starter shows.
+   > **Why start terminology-light:** a profile that binds to external code systems
+   > needs a terminology server to validate. Cardinality + Must-Support constraints
+   > build cleanly on the `tx.ontoserver.csiro.au` fallback — add coded bindings once your
+   > terminology is set up.
+3. Add at least one example `Instance:` (use an obviously **synthetic** name, e.g.
+   `Max Mustermann-Testpatient` — never real or realistic patient data).
+4. Add the profile's page to the nav if you want it prominent (the `Profiles and
+   Extensions` page auto-lists artifacts).
+5. Build: `sushi .` (fast — catches FSH errors), then the IG Publisher for the full
+   QA. Or push a `feature/*` branch for the CI preview.
+6. **Read the QA report:** open `output/qa.html`. It lists errors (must fix),
+   warnings (review), and information. Aim for **0 errors**.
+
+## Expected result
+
+Your profile appears on the IG's "Profiles and Extensions" page with a rendered
+structure, and your example validates against it; `qa.html` shows 0 errors.
+
+## Common errors & fixes
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| SUSHI error "unknown parent" | Misspelled `Parent:` or a missing dependency | Check the resource/profile name and `sushi-config.yaml` dependencies |
+| "Unable to resolve code system" | A coded binding needs a terminology server | Configure SU-TermServ, or drop the binding while prototyping |
+| Example fails validation | The instance violates your own constraints | Fix the instance or relax the constraint |
+| Profile not shown | Not compiled (wrong folder/extension) | It must be a `.fsh` file under `input/fsh/` |

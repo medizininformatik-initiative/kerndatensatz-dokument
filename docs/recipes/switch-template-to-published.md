@@ -1,0 +1,144 @@
+# Recipe: switch to the published template package
+
+**Goal.** Move this module's `ig.ini` from the **interim** template reference
+(the repository URL) to the **pinned published** MII template package
+(`template = de.medizininformatikinitiative.template#x.y.z`) — proving with a
+rebuild that the switch changed nothing visible.
+
+> **Why the module starts on the interim form:** the IG Publisher needs a template to
+> build, and while the template package has no registry entry a module cannot
+> reference one — see [concepts.md § 2](../concepts.md#2-how-it-references-the-mii-ig-template--url-now-published-package-later)
+> and the template's home in ig-template-mii-kds for whether it is published yet.
+> After this switch the module tracks a versioned dependency like every other
+> package, and the scheduled dependency checker proposes upgrades for you.
+
+**Prerequisites.** The template repository has cut a release **and** that release
+resolves for the IG Publisher (see below). The module must build green before
+you start, so you can tell the switch apart from an unrelated breakage.
+
+## When you do this
+
+Do this **once**, as soon as the template repository
+[`medizininformatik-initiative/ig-template-mii-kds`](https://github.com/medizininformatik-initiative/ig-template-mii-kds)
+has cut its first release **and** that release is resolvable by the IG Publisher
+(see the prerequisite below). Before that point, keep the interim reference — a
+published reference that cannot be resolved makes the build fail.
+
+## Where the published version number comes from
+
+The template repo releases with **SemVer** (`vMAJOR.MINOR.PATCH`) — *not* CalVer
+(only modules use CalVer). Find the exact number to pin, in order of preference:
+
+1. **The template repo's Releases page** —
+   <https://github.com/medizininformatik-initiative/ig-template-mii-kds/releases>.
+   Use the latest non-prerelease tag, e.g. `0.1.0` (drop the leading `v` in
+   `ig.ini`; the reference is `de.medizininformatikinitiative.template#0.1.0`).
+2. **The template's `package-list.json`** (in that repo) — only once a formal
+   publication has added a released entry; today it holds a single `ci-build`
+   row, so this source answers nothing until then.
+3. **The FHIR package registry** —
+   `https://packages.fhir.org/de.medizininformatikinitiative.template` lists the
+   published versions once the template is registered there.
+
+> **Why pin an exact `x.y.z` and never `#current`:** fixed versions keep a 2029
+> rebuild byte-stable. The convention check rejects a template
+> pinned to `current`/`latest`/`dev`, and the dependency checker
+> (`scripts/check-updates.mjs`, which already watches
+> `de.medizininformatikinitiative.template`) surfaces newer template releases
+> in the continuously-updated dependencies tracking issue — you never need a
+> floating pin to stay current.
+
+- The published template is **resolvable by the IG Publisher**. For a
+  version pin (`template = de.medizininformatikinitiative.template#x.y.z`) the
+  Publisher resolves **only** through the FHIR package server — the package
+  must exist on `packages.fhir.org`; registration in
+  [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)'s `templates.json`
+  is a directory listing, **not** an alternative resolution path
+  (`TemplateManager.loadPackage`: `#folder` → local directory, `id`/`id#ver` →
+  package server, GitHub URL → zip; nothing reads `templates.json`). Quick
+  check: the registry URL above returns the version you intend to pin
+  (HTTP 200, not 404). Until the package is on the package server, the
+  supported alternatives are a GitHub URL reference (what this module uses) or a
+  local template folder.
+- The module already builds green today against the current template reference (so you
+  have a clean baseline to compare against).
+- `sushi` (`3.20.1`), the IG Publisher jar, and `jq` are available —
+  the dev container has all three. Or push the branch and let the
+  `IG build and preview` workflow build it for you.
+
+## Steps
+
+1. **Capture the baseline QA** from the current build, so you can
+   prove the switch changes nothing. Build once, then save the QA summary:
+
+   ```bash
+   sushi .
+   java -Xmx6g -jar publisher.jar -ig ig.ini
+   cp output/qa.json /tmp/qa-before.json
+   jq '{errs, warnings, hints}' output/qa.json   # note these counts
+   ```
+
+2. **Edit `ig.ini`** — replace the current reference with the pinned
+   published package. Change:
+
+   ```ini
+   template = https://github.com/medizininformatik-initiative/ig-template-mii-kds
+   ```
+
+   to (use the real version from the section above):
+
+   ```ini
+   template = de.medizininformatikinitiative.template#0.1.0
+   ```
+
+   Remove the now-stale bring-up comment block above the `template =` line while
+   you are there.
+
+   > **On the `#`:** in a package reference `id#version` the `#` separates the
+   > version. A *leading* `#` would instead mean "a local template folder" —
+   > this repository has none, and must not grow one.
+
+3. **Rebuild** against the published template:
+
+   ```bash
+   sushi .
+   java -Xmx6g -jar publisher.jar -ig ig.ini
+   ```
+
+   The Publisher now downloads `de.medizininformatikinitiative.template#0.1.0`
+   (and its pinned base `fhir2.base.template`) from the registry instead of
+   fetching the template repository.
+
+4. **QA compare** — confirm the switch is behaviour-neutral. The error/warning
+   counts must not increase, and the branding (header logo, footer imprint
+   links, colours) must look identical:
+
+   ```bash
+   jq '{errs, warnings, hints}' output/qa.json          # compare to step 1
+   diff <(jq -S 'del(.date)' /tmp/qa-before.json) \
+        <(jq -S 'del(.date)' output/qa.json) || true    # only the date should differ
+   ```
+
+   Open `output/index.html` (or the branch preview the CI publishes) and eyeball
+   the header/footer against the baseline build.
+
+5. **Open a PR to `dev`** with the `ig.ini` change. The `IG build and preview`
+   workflow rebuilds and posts the preview
+   URL; the convention check confirms `template = de.medizininformatikinitiative.template#0.1.0`
+   is a valid pinned reference. Merge once green.
+
+## Expected result
+
+- `ig.ini` references `de.medizininformatikinitiative.template#x.y.z`.
+- The rebuilt IG looks identical to the baseline build (same branding, same
+  pages), and the QA error/warning counts did not increase.
+- The convention check passes (`M7 no floating pins` shows the pinned template
+  reference), and future template releases arrive as dependency-checker PRs.
+
+## Common errors & fixes
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| Publisher aborts: `Unable to resolve template de.medizininformatikinitiative.template#x.y.z` | The template is not yet published/registered, or the version does not exist | Confirm the registry URL returns that version (prerequisite); if it 404s, the template repo has not published it yet — revert to the repository-URL form and wait |
+| Convention check fails on the template line | You pinned `#current` / `#latest` / left a `TODO` | Pin an exact SemVer `x.y.z` from the template repo's release |
+| QA error count jumped after the switch | The published release differs from the state the URL form fetched (a newer template version) | Expected if you jumped versions — read the template repo's release notes for the delta |

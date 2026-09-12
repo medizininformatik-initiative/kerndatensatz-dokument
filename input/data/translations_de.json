@@ -1,0 +1,25 @@
+{
+ "ImplementationGuide-mii-ig-dokument": {
+  "Table of Contents": "Table of Contents",
+  "Home": "Startseite",
+  "Guidance": "Anleitung",
+  "Guidance for Implementers": "Anleitung für Implementierende",
+  "Compatibility with Other Specifications": "Kompatibilität zu anderen Spezifikationen",
+  "UML Diagrams": "UML-Diagramme",
+  "Security and Privacy": "Sicherheit und Datenschutz",
+  "Profiles": "Profile",
+  "Extensions": "Extensions",
+  "Capability Statements": "CapabilityStatements",
+  "Logical Models": "Logische Modelle",
+  "Value Sets": "ValueSets",
+  "Code Systems": "CodeSystems",
+  "Examples": "Beispiele",
+  "Downloads": "Downloads",
+  "Changelog": "Änderungshistorie",
+  "Metadata Overview": "Metadaten-Übersicht",
+  "Versioning": "Versionierung",
+  "MII ImplementationGuide Resource": "MII-ImplementationGuide-Ressource",
+  "Translation Information": "Übersetzungsinformationen",
+  "Search Parameters": "Suchparameter"
+ }
+}

@@ -1,6 +1,6 @@
-// ISiK canonical url: https://gematik.de/fhir/isik/StructureDefinition/ISiKDokumentenMetadaten|5.1.0
+// ISiK canonical url: https://gematik.de/fhir/isik/StructureDefinition/ISiKDokumentenMetadaten|6.0.0
 // KBV MIO canonical url: https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DocumentReference|1.7.0
-// IHE MHD canonical url: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference|4.2.2
+// IHE MHD canonical url: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference|4.2.3
 
 Profile: MII_PR_Dokument_Dokument
 Parent: DocumentReference

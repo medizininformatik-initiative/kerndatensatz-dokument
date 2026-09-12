@@ -1,0 +1,2 @@
+2026-08-29T22:39:30Z  INFO   5.2  license-align  params  source=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/7ea8f04a-474c-4703-a1c0-0fde707c6889/scratchpad/mig/source target=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/7ea8f04a-474c-4703-a1c0-0fde707c6889/scratchpad/mig/source
+2026-08-29T22:39:30Z  INFO   5.2  license-align  result  already aligned: the target LICENSE is byte-identical to the source's (CC-BY-4.0)  exit=0
