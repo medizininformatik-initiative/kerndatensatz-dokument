@@ -5,6 +5,8 @@
 
 ## Profile
 
+ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
+
 Diese Seite listet die FHIR-Profile des Moduls **Dokument**. Die Extensions des Moduls stehen auf der Seite [Extensions](extensions.md).
 
 Das Modul definiert ein Profil: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.md) (`MII_PR_Dokument_Dokument`) auf Basis der Ressource `DocumentReference`. Die technischen Detailansichten — Struktur, Differential, XML und JSON — erzeugt der IG-Publisher auf der Artefakt-Seite; den zugrunde liegenden fachlichen Datensatz beschreibt die Seite [Logische Modelle](logical-models.md).

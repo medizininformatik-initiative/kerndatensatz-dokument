@@ -102,7 +102,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"]
   },
-  "language" : "de",
+  "language" : "en",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
     "valueDate" : "2026-09-01"
@@ -387,7 +387,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "de"
+        "valueString" : "en"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -398,7 +398,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "en"
+        "valueString" : "de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -409,7 +409,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "input/translations/en"
+        "valueString" : "input/translations/de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -914,7 +914,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "de"
+        "valueString" : "en"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -925,7 +925,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "en"
+        "valueString" : "de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -936,7 +936,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "input/translations/en"
+        "valueString" : "input/translations/de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1764,7 +1764,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
         "extension" : [{
           "extension" : [{
             "url" : "lang",
-            "valueCode" : "en"
+            "valueCode" : "de"
           },
           {
             "url" : "content",
@@ -1780,16 +1780,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "index.html"
         }],
         "nameUrl" : "index.html",
-        "title" : "Startseite",
+        "title" : "Home",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Home"
+              "valueString" : "Startseite"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1802,16 +1802,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "guidance.html"
         }],
         "nameUrl" : "guidance.html",
-        "title" : "Anleitung",
+        "title" : "Guidance",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Guidance"
+              "valueString" : "Anleitung"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1823,16 +1823,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
             "valueUrl" : "implementer-guidance.html"
           }],
           "nameUrl" : "implementer-guidance.html",
-          "title" : "Anleitung für Implementierende",
+          "title" : "Guidance for Implementers",
           "_title" : {
             "extension" : [{
               "extension" : [{
                 "url" : "lang",
-                "valueCode" : "en"
+                "valueCode" : "de"
               },
               {
                 "url" : "content",
-                "valueString" : "Guidance for Implementers"
+                "valueString" : "Anleitung für Implementierende"
               }],
               "url" : "http://hl7.org/fhir/StructureDefinition/translation"
             }]
@@ -1844,16 +1844,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
               "valueUrl" : "kompatibilitaet.html"
             }],
             "nameUrl" : "kompatibilitaet.html",
-            "title" : "Kompatibilität zu anderen Spezifikationen",
+            "title" : "Compatibility with Other Specifications",
             "_title" : {
               "extension" : [{
                 "extension" : [{
                   "url" : "lang",
-                  "valueCode" : "en"
+                  "valueCode" : "de"
                 },
                 {
                   "url" : "content",
-                  "valueString" : "Compatibility with Other Specifications"
+                  "valueString" : "Kompatibilität zu anderen Spezifikationen"
                 }],
                 "url" : "http://hl7.org/fhir/StructureDefinition/translation"
               }]
@@ -1867,16 +1867,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
             "valueUrl" : "uml-diagrams.html"
           }],
           "nameUrl" : "uml-diagrams.html",
-          "title" : "UML-Diagramme",
+          "title" : "UML Diagrams",
           "_title" : {
             "extension" : [{
               "extension" : [{
                 "url" : "lang",
-                "valueCode" : "en"
+                "valueCode" : "de"
               },
               {
                 "url" : "content",
-                "valueString" : "UML Diagrams"
+                "valueString" : "UML-Diagramme"
               }],
               "url" : "http://hl7.org/fhir/StructureDefinition/translation"
             }]
@@ -1890,16 +1890,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "security-and-privacy.html"
         }],
         "nameUrl" : "security-and-privacy.html",
-        "title" : "Sicherheit und Datenschutz",
+        "title" : "Security and Privacy",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Security and Privacy"
+              "valueString" : "Sicherheit und Datenschutz"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1912,16 +1912,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "profiles.html"
         }],
         "nameUrl" : "profiles.html",
-        "title" : "Profile",
+        "title" : "Profiles",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Profiles"
+              "valueString" : "Profile"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1939,7 +1939,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
@@ -1956,16 +1956,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "capability-statements.html"
         }],
         "nameUrl" : "capability-statements.html",
-        "title" : "CapabilityStatements",
+        "title" : "Capability Statements",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Capability Statements"
+              "valueString" : "CapabilityStatements"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1978,16 +1978,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "search-parameters.html"
         }],
         "nameUrl" : "search-parameters.html",
-        "title" : "Suchparameter",
+        "title" : "Search Parameters",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Search Parameters"
+              "valueString" : "Suchparameter"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2000,16 +2000,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "logical-models.html"
         }],
         "nameUrl" : "logical-models.html",
-        "title" : "Logische Modelle",
+        "title" : "Logical Models",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Logical Models"
+              "valueString" : "Logische Modelle"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2022,16 +2022,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "value-sets.html"
         }],
         "nameUrl" : "value-sets.html",
-        "title" : "ValueSets",
+        "title" : "Value Sets",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Value Sets"
+              "valueString" : "ValueSets"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2044,16 +2044,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "code-systems.html"
         }],
         "nameUrl" : "code-systems.html",
-        "title" : "CodeSystems",
+        "title" : "Code Systems",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Code Systems"
+              "valueString" : "CodeSystems"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2066,16 +2066,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "examples.html"
         }],
         "nameUrl" : "examples.html",
-        "title" : "Beispiele",
+        "title" : "Examples",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Examples"
+              "valueString" : "Beispiele"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2093,7 +2093,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
@@ -2110,16 +2110,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "changes.html"
         }],
         "nameUrl" : "changes.html",
-        "title" : "Änderungshistorie",
+        "title" : "Changelog",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Changelog"
+              "valueString" : "Änderungshistorie"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2132,16 +2132,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "metadata.html"
         }],
         "nameUrl" : "metadata.html",
-        "title" : "Metadaten-Übersicht",
+        "title" : "Metadata Overview",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Metadata Overview"
+              "valueString" : "Metadaten-Übersicht"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2154,16 +2154,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "version-history.html"
         }],
         "nameUrl" : "version-history.html",
-        "title" : "Versionierung",
+        "title" : "Versioning",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Versioning"
+              "valueString" : "Versionierung"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2176,16 +2176,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "ImplementationGuide-mii-ig-dokument.html"
         }],
         "nameUrl" : "ImplementationGuide-mii-ig-dokument.html",
-        "title" : "MII-ImplementationGuide-Ressource",
+        "title" : "MII ImplementationGuide Resource",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "MII ImplementationGuide Resource"
+              "valueString" : "MII-ImplementationGuide-Ressource"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2198,16 +2198,16 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
           "valueUrl" : "translationinfo.html"
         }],
         "nameUrl" : "translationinfo.html",
-        "title" : "Übersetzungsinformationen",
+        "title" : "Translation Information",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Translation Information"
+              "valueString" : "Übersetzungsinformationen"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]

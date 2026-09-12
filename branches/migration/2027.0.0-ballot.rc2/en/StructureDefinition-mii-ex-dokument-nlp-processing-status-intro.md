@@ -2,7 +2,7 @@
 <!-- Intro note for the extension MII_EX_Dokument_NLP_Processing_Status. Migrated from
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md
      of the Simplifier guide mii-ig-dokument-de. The IG Publisher renders this text
-     above the generated tables of the artifact page; German default page:
+     above the generated tables of the artifact page; English default page:
      input/intro-notes/ (same file name). -->
 
 ### Description

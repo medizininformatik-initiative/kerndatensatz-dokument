@@ -6,10 +6,10 @@
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"]
   },
-  "language" : "de",
+  "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name=\"mii-ig-dokument\"> </a><a name=\"hcmii-ig-dokument\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: de</p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html\">CRMI Shareable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html\">CRMI Publishable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html\">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>\n</div></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name=\"en-mii-ig-dokument\"> </a><a name=\"en-hcmii-ig-dokument\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: de</p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html\">CRMI Shareable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html\">CRMI Publishable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html\">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>\n</div></div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name=\"mii-ig-dokument\"> </a><a name=\"hcmii-ig-dokument\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html\">CRMI Shareable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html\">CRMI Publishable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html\">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>\n</div></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name=\"de-mii-ig-dokument\"> </a><a name=\"de-hcmii-ig-dokument\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html\">CRMI Shareable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html\">CRMI Publishable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html\">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>\n</div></div></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
@@ -295,7 +295,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "de"
+        "valueString" : "en"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -306,7 +306,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "en"
+        "valueString" : "de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -317,7 +317,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "input/translations/en"
+        "valueString" : "input/translations/de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -822,7 +822,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "de"
+        "valueString" : "en"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -833,7 +833,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "en"
+        "valueString" : "de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -844,7 +844,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "input/translations/en"
+        "valueString" : "input/translations/de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1576,7 +1576,7 @@
         "extension" : [{
           "extension" : [{
             "url" : "lang",
-            "valueCode" : "en"
+            "valueCode" : "de"
           },
           {
             "url" : "content",
@@ -1592,16 +1592,16 @@
           "valueUrl" : "index.html"
         }],
         "nameUrl" : "index.html",
-        "title" : "Startseite",
+        "title" : "Home",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Home"
+              "valueString" : "Startseite"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1614,16 +1614,16 @@
           "valueUrl" : "guidance.html"
         }],
         "nameUrl" : "guidance.html",
-        "title" : "Anleitung",
+        "title" : "Guidance",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Guidance"
+              "valueString" : "Anleitung"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1635,16 +1635,16 @@
             "valueUrl" : "implementer-guidance.html"
           }],
           "nameUrl" : "implementer-guidance.html",
-          "title" : "Anleitung für Implementierende",
+          "title" : "Guidance for Implementers",
           "_title" : {
             "extension" : [{
               "extension" : [{
                 "url" : "lang",
-                "valueCode" : "en"
+                "valueCode" : "de"
               },
               {
                 "url" : "content",
-                "valueString" : "Guidance for Implementers"
+                "valueString" : "Anleitung für Implementierende"
               }],
               "url" : "http://hl7.org/fhir/StructureDefinition/translation"
             }]
@@ -1656,16 +1656,16 @@
               "valueUrl" : "kompatibilitaet.html"
             }],
             "nameUrl" : "kompatibilitaet.html",
-            "title" : "Kompatibilität zu anderen Spezifikationen",
+            "title" : "Compatibility with Other Specifications",
             "_title" : {
               "extension" : [{
                 "extension" : [{
                   "url" : "lang",
-                  "valueCode" : "en"
+                  "valueCode" : "de"
                 },
                 {
                   "url" : "content",
-                  "valueString" : "Compatibility with Other Specifications"
+                  "valueString" : "Kompatibilität zu anderen Spezifikationen"
                 }],
                 "url" : "http://hl7.org/fhir/StructureDefinition/translation"
               }]
@@ -1679,16 +1679,16 @@
             "valueUrl" : "uml-diagrams.html"
           }],
           "nameUrl" : "uml-diagrams.html",
-          "title" : "UML-Diagramme",
+          "title" : "UML Diagrams",
           "_title" : {
             "extension" : [{
               "extension" : [{
                 "url" : "lang",
-                "valueCode" : "en"
+                "valueCode" : "de"
               },
               {
                 "url" : "content",
-                "valueString" : "UML Diagrams"
+                "valueString" : "UML-Diagramme"
               }],
               "url" : "http://hl7.org/fhir/StructureDefinition/translation"
             }]
@@ -1702,16 +1702,16 @@
           "valueUrl" : "security-and-privacy.html"
         }],
         "nameUrl" : "security-and-privacy.html",
-        "title" : "Sicherheit und Datenschutz",
+        "title" : "Security and Privacy",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Security and Privacy"
+              "valueString" : "Sicherheit und Datenschutz"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1724,16 +1724,16 @@
           "valueUrl" : "profiles.html"
         }],
         "nameUrl" : "profiles.html",
-        "title" : "Profile",
+        "title" : "Profiles",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Profiles"
+              "valueString" : "Profile"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1751,7 +1751,7 @@
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
@@ -1768,16 +1768,16 @@
           "valueUrl" : "capability-statements.html"
         }],
         "nameUrl" : "capability-statements.html",
-        "title" : "CapabilityStatements",
+        "title" : "Capability Statements",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Capability Statements"
+              "valueString" : "CapabilityStatements"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1790,16 +1790,16 @@
           "valueUrl" : "search-parameters.html"
         }],
         "nameUrl" : "search-parameters.html",
-        "title" : "Suchparameter",
+        "title" : "Search Parameters",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Search Parameters"
+              "valueString" : "Suchparameter"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1812,16 +1812,16 @@
           "valueUrl" : "logical-models.html"
         }],
         "nameUrl" : "logical-models.html",
-        "title" : "Logische Modelle",
+        "title" : "Logical Models",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Logical Models"
+              "valueString" : "Logische Modelle"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1834,16 +1834,16 @@
           "valueUrl" : "value-sets.html"
         }],
         "nameUrl" : "value-sets.html",
-        "title" : "ValueSets",
+        "title" : "Value Sets",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Value Sets"
+              "valueString" : "ValueSets"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1856,16 +1856,16 @@
           "valueUrl" : "code-systems.html"
         }],
         "nameUrl" : "code-systems.html",
-        "title" : "CodeSystems",
+        "title" : "Code Systems",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Code Systems"
+              "valueString" : "CodeSystems"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1878,16 +1878,16 @@
           "valueUrl" : "examples.html"
         }],
         "nameUrl" : "examples.html",
-        "title" : "Beispiele",
+        "title" : "Examples",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Examples"
+              "valueString" : "Beispiele"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1905,7 +1905,7 @@
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
@@ -1922,16 +1922,16 @@
           "valueUrl" : "changes.html"
         }],
         "nameUrl" : "changes.html",
-        "title" : "Änderungshistorie",
+        "title" : "Changelog",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Changelog"
+              "valueString" : "Änderungshistorie"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1944,16 +1944,16 @@
           "valueUrl" : "metadata.html"
         }],
         "nameUrl" : "metadata.html",
-        "title" : "Metadaten-Übersicht",
+        "title" : "Metadata Overview",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Metadata Overview"
+              "valueString" : "Metadaten-Übersicht"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1966,16 +1966,16 @@
           "valueUrl" : "version-history.html"
         }],
         "nameUrl" : "version-history.html",
-        "title" : "Versionierung",
+        "title" : "Versioning",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Versioning"
+              "valueString" : "Versionierung"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -1988,16 +1988,16 @@
           "valueUrl" : "ImplementationGuide-mii-ig-dokument.html"
         }],
         "nameUrl" : "ImplementationGuide-mii-ig-dokument.html",
-        "title" : "MII-ImplementationGuide-Ressource",
+        "title" : "MII ImplementationGuide Resource",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "MII ImplementationGuide Resource"
+              "valueString" : "MII-ImplementationGuide-Ressource"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
@@ -2010,16 +2010,16 @@
           "valueUrl" : "translationinfo.html"
         }],
         "nameUrl" : "translationinfo.html",
-        "title" : "Übersetzungsinformationen",
+        "title" : "Translation Information",
         "_title" : {
           "extension" : [{
             "extension" : [{
               "url" : "lang",
-              "valueCode" : "en"
+              "valueCode" : "de"
             },
             {
               "url" : "content",
-              "valueString" : "Translation Information"
+              "valueString" : "Übersetzungsinformationen"
             }],
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]

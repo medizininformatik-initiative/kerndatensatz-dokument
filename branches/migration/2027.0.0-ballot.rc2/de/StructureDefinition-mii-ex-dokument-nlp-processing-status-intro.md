@@ -1,4 +1,6 @@
 <!-- markdownlint-disable MD041 -->
+<!-- German translation of the English default page input/intro-notes/StructureDefinition-mii-ex-dokument-nlp-processing-status-intro.md.
+     Keep structure, headings and links 1:1 with the source; translate only the text. -->
 <!-- Intro-Note zur Extension MII_EX_Dokument_NLP_Processing_Status. Migriert aus
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md
      des Simplifier-Leitfadens mii-ig-dokument-de. Der IG-Publisher rendert diesen

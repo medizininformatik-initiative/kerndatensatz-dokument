@@ -5,8 +5,6 @@
 
 ## Search Parameters
 
- This page includes translations from the original source language in which the guide was authored. Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html). 
-
 This page gives example calls for the search parameters of the **Dokument** module. The supported search parameters are defined normatively in the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md); the standard search parameters are defined by the [FHIR base specification (DocumentReference)](https://hl7.org/fhir/R4/documentreference.html#search). The Dokument module defines no SearchParameter artifacts of its own — the three module-specific search parameters are provided by the [Meta module](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3) (package `kerndatensatz.meta` 2027.0.0-ballot.rc3):
 
 * `doc-status` — SearchParameter `mii-sp-meta-dokument-documentreference-doc-status` (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status`)

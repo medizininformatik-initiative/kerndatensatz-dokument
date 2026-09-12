@@ -25,29 +25,29 @@ The IG Publisher does not render this element-to-resource mapping on the Logical
 
 | | | |
 | :--- | :--- | :--- |
-| Dokument | DocumentReference | Clinical document including metadata, content, creation context and relationships |
-| Dokument.Masteridentifikator | DocumentReference.masterIdentifier | Version-specific unique identifier assigned to the document by the document source |
-| Dokument.Businessidentifikator | DocumentReference.identifier | Other version-independent identifier assigned to the document (e.g. by further document-processing systems) |
-| Dokument.Dokumentenreferenzstatus | DocumentReference.status | Status of this document reference (current, superseded, or entered in error) |
-| Dokument.Dokumentenstatus | DocumentReference.docStatus | Status of the underlying document (preliminary, final, amended, or entered in error) |
-| Dokument.Dokumententyp | DocumentReference.type | Type of the referenced document (e.g. history and examination, discharge summary, progress report) |
-| Dokument.Dokumentenkategorie | DocumentReference.category | Higher-level category of the referenced document (e.g. physician reports or physician documentation) |
-| Dokument.Patient | DocumentReference.subject | Patient to whom the referenced document relates |
-| Dokument.Beschreibung | DocumentReference.description | Human-readable description of the referenced document |
-| Dokument.Sicherheitsstufe | DocumentReference.securityLabel | Degree of confidentiality/security of the referenced document (e.g. unrestricted, low, moderate, normal, or restricted) |
-| Dokument.Dokumentenbeziehung | DocumentReference.relatesTo | Relationships of the referenced document to other documents |
-| Dokument.Dokumentenbeziehung.Beziehungstyp | DocumentReference.relatesTo.code | Relationship to other documents |
-| Dokument.Dokumentenbeziehung.Beziehungsreferenz | DocumentReference.relatesTo.target | Target of the document relationship |
-| Dokument.Anhang | DocumentReference.content | Document (base64-encoded data) or reference (URL) with relevant metadata for the attachment |
-| Dokument.Anhang.Sprache | DocumentReference.attachment.language | Language used in the document |
-| Dokument.Anhang.Erstellungsdatum | DocumentReference.attachment.creation | Date the document was created |
-| Dokument.Anhang.Daten | DocumentReference.attachment.data | Document as binary data |
-| Dokument.Anhang.DokumentenUrl | DocumentReference.attachment.url | Reference to the (local) storage location of the document |
-| Dokument.Anhang.Dokumentenformat | DocumentReference.attachment.contentType | MIME type of the document content |
-| Dokument.Kontext | DocumentReference.context | Clinical context in which the document was created |
-| Dokument.Kontext.Gesundheitseinrichtungskontakt | DocumentReference.context.encounter | Contact with the healthcare facility, or the type of care associated with the document content |
-| Dokument.Kontext.Vorgang | DocumentReference.context.event | Acts or procedures documented in the context |
-| Dokument.Kontext.Fachgebiet | DocumentReference.context.practiceSetting | Clinical specialty in which the document content was created |
-| Dokument.Kontext.Dokumentationszeitraum | DocumentReference.context.period | Period during which the act or procedure described in the document was performed |
-| Dokument.Kontext.Einrichtungsart | DocumentReference.context.facilityType | Type of facility in which the act or procedure was performed on the patient |
+| Dokument | DocumentReference | Klinisches Dokument inkl. Metadaten, Inhalt, Erzeugungskontext und Beziehungen |
+| Dokument.Masteridentifikator | DocumentReference.masterIdentifier | Versionsspezifische eindeutige Kennung, die dem Dokument durch die Dokumentenquelle zugewiesen wurde |
+| Dokument.Businessidentifikator | DocumentReference.identifier | Andere versionsunabhängige Kennung, die dem Dokument (z.B. durch weitere dokumentenverarbeitende Systeme) zugewiesen wurde |
+| Dokument.Dokumentenreferenzstatus | DocumentReference.status | Status dieser Dokumentenreferenz (aktuell, überholt oder irrtümlich eingegeben) |
+| Dokument.Dokumentenstatus | DocumentReference.docStatus | Status des zugrunde liegenden Dokuments (vorläufig, final, geändert oder irrtümlich eingegeben) |
+| Dokument.Dokumententyp | DocumentReference.type | Art des Dokuments auf das verwiesen wird (z.B. Anamnese und Untersuchung, Entlassungsbericht, Verlaufsbericht) |
+| Dokument.Dokumentenkategorie | DocumentReference.category | Übergeordnete Kategorie des Dokuments auf das verwiesen wird (z.B. Arztberichte oder Arztdokumentation) |
+| Dokument.Patient | DocumentReference.subject | Patient auf den sich das verwiesene Dokument bezieht |
+| Dokument.Beschreibung | DocumentReference.description | Menschenlesbare Beschreibung zum verwiesenen Dokuments |
+| Dokument.Sicherheitsstufe | DocumentReference.securityLabel | Grad der Vertraulichkeit/Sicherheit des verwiesenen Dokuments (z. B. uneingeschränkt, gering, mittel, normal oder eingeschränkt) |
+| Dokument.Dokumentenbeziehung | DocumentReference.relatesTo | Beziehungen des verwiesenen Dokuments zu anderen Dokumenten |
+| Dokument.Dokumentenbeziehung.Beziehungstyp | DocumentReference.relatesTo.code | Beziehung zu anderen Dokumenten |
+| Dokument.Dokumentenbeziehung.Beziehungsreferenz | DocumentReference.relatesTo.target | Ziel der Dokumentenbeziehung |
+| Dokument.Anhang | DocumentReference.content | Dokument (Base64-kodierte Daten) oder Verweis (URL) mit relevanten Metadaten zum Anhang |
+| Dokument.Anhang.Sprache | DocumentReference.attachment.language | Verwendete Sprache in dem Dokument |
+| Dokument.Anhang.Erstellungsdatum | DocumentReference.attachment.creation | Datum der Erstellung des Dokumentes |
+| Dokument.Anhang.Daten | DocumentReference.attachment.data | Dokument als Binärdaten |
+| Dokument.Anhang.DokumentenUrl | DocumentReference.attachment.url | Verweis auf den (lokalen) Ablageort des Dokuments |
+| Dokument.Anhang.Dokumentenformat | DocumentReference.attachment.contentType | MIME-Typ des Dokumenteninhalts |
+| Dokument.Kontext | DocumentReference.context | Klinischer Kontext, in welchem das Dokument erzeugt wurde |
+| Dokument.Kontext.Gesundheitseinrichtungskontakt | DocumentReference.context.encounter | Kontakt zur Gesundheitseinrichtung oder die Art der Versorgung, die mit dem Dokumenteninhalt assoziiert ist |
+| Dokument.Kontext.Vorgang | DocumentReference.context.event | Handlungen oder Prozeduren, die im Kontext dokumentiert wurden |
+| Dokument.Kontext.Fachgebiet | DocumentReference.context.practiceSetting | Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde |
+| Dokument.Kontext.Dokumentationszeitraum | DocumentReference.context.period | Zeitraum, in dem die in dem Dokument beschriebene Handlung oder Prozedur durchgeführt wurde |
+| Dokument.Kontext.Einrichtungsart | DocumentReference.context.facilityType | Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte |
 

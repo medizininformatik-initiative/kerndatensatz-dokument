@@ -5,7 +5,7 @@
      StructureDefinition-mii-pr-dokument-dokument.html. The source page's "Uebersicht",
      "Metadaten" and "Inhalt" sections are gone, because the artifact page renders the header
      data (canonical, status, version, base) and the structure, XML and JSON views itself.
-     German default page: input/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md -->
+     English default page: input/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md -->
 
 This profile describes the metadata of a clinical document. A detailed description and
 recommendations for using the profile can be found in the

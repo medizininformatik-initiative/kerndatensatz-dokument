@@ -7,10 +7,10 @@
     <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide"/>
     <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"/>
   </meta>
-  <language value="de"/>
+  <language value="en"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name="mii-ig-dokument"> </a><a name="hcmii-ig-dokument"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html">CRMI Shareable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html">CRMI Publishable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>
-</div></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name="en-mii-ig-dokument"> </a><a name="en-hcmii-ig-dokument"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html">CRMI Shareable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html">CRMI Publishable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name="mii-ig-dokument"> </a><a name="hcmii-ig-dokument"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html">CRMI Shareable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html">CRMI Publishable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>
+</div></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-dokument</b></p><a name="de-mii-ig-dokument"> </a><a name="de-hcmii-ig-dokument"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html">CRMI Shareable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html">CRMI Publishable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Dokument</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument</pre><div><p>Medizininformatik Initiative - KDS-Modul Dokument</p>
 </div></div></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
@@ -249,7 +249,7 @@
         <valueString value="i18n-default-lang"/>
       </extension>
       <extension url="value">
-        <valueString value="de"/>
+        <valueString value="en"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -257,7 +257,7 @@
         <valueString value="i18n-lang"/>
       </extension>
       <extension url="value">
-        <valueString value="en"/>
+        <valueString value="de"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -265,7 +265,7 @@
         <valueString value="translation-sources"/>
       </extension>
       <extension url="value">
-        <valueString value="input/translations/en"/>
+        <valueString value="input/translations/de"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -633,7 +633,7 @@
         <valueCode value="i18n-default-lang"/>
       </extension>
       <extension url="value">
-        <valueString value="de"/>
+        <valueString value="en"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -641,7 +641,7 @@
         <valueCode value="i18n-lang"/>
       </extension>
       <extension url="value">
-        <valueString value="en"/>
+        <valueString value="de"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -649,7 +649,7 @@
         <valueCode value="translation-sources"/>
       </extension>
       <extension url="value">
-        <valueString value="input/translations/en"/>
+        <valueString value="input/translations/de"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -1236,7 +1236,7 @@
       <title value="Table of Contents">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
-            <valueCode value="en"/>
+            <valueCode value="de"/>
           </extension>
           <extension url="content">
             <valueString value="Table of Contents"/>
@@ -1249,13 +1249,13 @@
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="Startseite">
+        <title value="Home">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Home"/>
+              <valueString value="Startseite"/>
             </extension>
           </extension>
         </title>
@@ -1266,13 +1266,13 @@
           <valueUrl value="guidance.html"/>
         </extension>
         <nameUrl value="guidance.html"/>
-        <title value="Anleitung">
+        <title value="Guidance">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Guidance"/>
+              <valueString value="Anleitung"/>
             </extension>
           </extension>
         </title>
@@ -1282,13 +1282,13 @@
             <valueUrl value="implementer-guidance.html"/>
           </extension>
           <nameUrl value="implementer-guidance.html"/>
-          <title value="Anleitung für Implementierende">
+          <title value="Guidance for Implementers">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
               <extension url="lang">
-                <valueCode value="en"/>
+                <valueCode value="de"/>
               </extension>
               <extension url="content">
-                <valueString value="Guidance for Implementers"/>
+                <valueString value="Anleitung für Implementierende"/>
               </extension>
             </extension>
           </title>
@@ -1298,13 +1298,13 @@
               <valueUrl value="kompatibilitaet.html"/>
             </extension>
             <nameUrl value="kompatibilitaet.html"/>
-            <title value="Kompatibilität zu anderen Spezifikationen">
+            <title value="Compatibility with Other Specifications">
               <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                 <extension url="lang">
-                  <valueCode value="en"/>
+                  <valueCode value="de"/>
                 </extension>
                 <extension url="content">
-                  <valueString value="Compatibility with Other Specifications"/>
+                  <valueString value="Kompatibilität zu anderen Spezifikationen"/>
                 </extension>
               </extension>
             </title>
@@ -1316,13 +1316,13 @@
             <valueUrl value="uml-diagrams.html"/>
           </extension>
           <nameUrl value="uml-diagrams.html"/>
-          <title value="UML-Diagramme">
+          <title value="UML Diagrams">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
               <extension url="lang">
-                <valueCode value="en"/>
+                <valueCode value="de"/>
               </extension>
               <extension url="content">
-                <valueString value="UML Diagrams"/>
+                <valueString value="UML-Diagramme"/>
               </extension>
             </extension>
           </title>
@@ -1334,13 +1334,13 @@
           <valueUrl value="security-and-privacy.html"/>
         </extension>
         <nameUrl value="security-and-privacy.html"/>
-        <title value="Sicherheit und Datenschutz">
+        <title value="Security and Privacy">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Security and Privacy"/>
+              <valueString value="Sicherheit und Datenschutz"/>
             </extension>
           </extension>
         </title>
@@ -1351,13 +1351,13 @@
           <valueUrl value="profiles.html"/>
         </extension>
         <nameUrl value="profiles.html"/>
-        <title value="Profile">
+        <title value="Profiles">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Profiles"/>
+              <valueString value="Profile"/>
             </extension>
           </extension>
         </title>
@@ -1371,7 +1371,7 @@
         <title value="Extensions">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
               <valueString value="Extensions"/>
@@ -1385,13 +1385,13 @@
           <valueUrl value="capability-statements.html"/>
         </extension>
         <nameUrl value="capability-statements.html"/>
-        <title value="CapabilityStatements">
+        <title value="Capability Statements">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Capability Statements"/>
+              <valueString value="CapabilityStatements"/>
             </extension>
           </extension>
         </title>
@@ -1402,13 +1402,13 @@
           <valueUrl value="search-parameters.html"/>
         </extension>
         <nameUrl value="search-parameters.html"/>
-        <title value="Suchparameter">
+        <title value="Search Parameters">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Search Parameters"/>
+              <valueString value="Suchparameter"/>
             </extension>
           </extension>
         </title>
@@ -1419,13 +1419,13 @@
           <valueUrl value="logical-models.html"/>
         </extension>
         <nameUrl value="logical-models.html"/>
-        <title value="Logische Modelle">
+        <title value="Logical Models">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Logical Models"/>
+              <valueString value="Logische Modelle"/>
             </extension>
           </extension>
         </title>
@@ -1436,13 +1436,13 @@
           <valueUrl value="value-sets.html"/>
         </extension>
         <nameUrl value="value-sets.html"/>
-        <title value="ValueSets">
+        <title value="Value Sets">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Value Sets"/>
+              <valueString value="ValueSets"/>
             </extension>
           </extension>
         </title>
@@ -1453,13 +1453,13 @@
           <valueUrl value="code-systems.html"/>
         </extension>
         <nameUrl value="code-systems.html"/>
-        <title value="CodeSystems">
+        <title value="Code Systems">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Code Systems"/>
+              <valueString value="CodeSystems"/>
             </extension>
           </extension>
         </title>
@@ -1470,13 +1470,13 @@
           <valueUrl value="examples.html"/>
         </extension>
         <nameUrl value="examples.html"/>
-        <title value="Beispiele">
+        <title value="Examples">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Examples"/>
+              <valueString value="Beispiele"/>
             </extension>
           </extension>
         </title>
@@ -1490,7 +1490,7 @@
         <title value="Downloads">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
               <valueString value="Downloads"/>
@@ -1504,13 +1504,13 @@
           <valueUrl value="changes.html"/>
         </extension>
         <nameUrl value="changes.html"/>
-        <title value="Änderungshistorie">
+        <title value="Changelog">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Changelog"/>
+              <valueString value="Änderungshistorie"/>
             </extension>
           </extension>
         </title>
@@ -1521,13 +1521,13 @@
           <valueUrl value="metadata.html"/>
         </extension>
         <nameUrl value="metadata.html"/>
-        <title value="Metadaten-Übersicht">
+        <title value="Metadata Overview">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Metadata Overview"/>
+              <valueString value="Metadaten-Übersicht"/>
             </extension>
           </extension>
         </title>
@@ -1538,13 +1538,13 @@
           <valueUrl value="version-history.html"/>
         </extension>
         <nameUrl value="version-history.html"/>
-        <title value="Versionierung">
+        <title value="Versioning">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Versioning"/>
+              <valueString value="Versionierung"/>
             </extension>
           </extension>
         </title>
@@ -1555,13 +1555,13 @@
           <valueUrl value="ImplementationGuide-mii-ig-dokument.html"/>
         </extension>
         <nameUrl value="ImplementationGuide-mii-ig-dokument.html"/>
-        <title value="MII-ImplementationGuide-Ressource">
+        <title value="MII ImplementationGuide Resource">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="MII ImplementationGuide Resource"/>
+              <valueString value="MII-ImplementationGuide-Ressource"/>
             </extension>
           </extension>
         </title>
@@ -1572,13 +1572,13 @@
           <valueUrl value="translationinfo.html"/>
         </extension>
         <nameUrl value="translationinfo.html"/>
-        <title value="Übersetzungsinformationen">
+        <title value="Translation Information">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
-              <valueCode value="en"/>
+              <valueCode value="de"/>
             </extension>
             <extension url="content">
-              <valueString value="Translation Information"/>
+              <valueString value="Übersetzungsinformationen"/>
             </extension>
           </extension>
         </title>

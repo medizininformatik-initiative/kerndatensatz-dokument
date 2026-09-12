@@ -201,12 +201,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- Menu in the IG's DEFAULT language (German); the English translation is
-     input/translations/en/includes/menu.xml.
-     Keep the href targets IDENTICAL to the source menu; translate only labels.
-     Structure notes (OPTIONAL entries, link-only entries, the interim
-     meta-wiki links) are documented in the source menu's header and in
-     docs/page-structure.md / docs/optional-pages.md. -->
+              <!-- German translation of input/includes/menu.xml (the English default menu).
+     Keep the href targets IDENTICAL to the source menu; translate only labels. -->
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">Startseite</a></li>
   <li class="dropdown">
@@ -337,25 +333,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+<!-- German translation of the English default page input/pagecontent/implementer-guidance.md.
+     Keep structure, headings and links 1:1 with the source; translate only the text. -->
 <!-- markdownlint-disable MD041 MD007 -->
 <!-- MD007: die eingerueckte Standard-Liste im Abschnitt "Referenzen" ist die
      verbatim uebernommene Einrueckung der Simplifier-Quellseite. -->
-<!-- Deutsche Standardseite (Default-Sprache des Leitfadens).
-     Englische Übersetzung: input/translations/en/pagecontent/implementer-guidance.md
-     — beide Dateien synchron halten.
-     Migriert aus dem Simplifier-Guide "MII IG Modul Dokument":
-     MIIIGModulDokument/Kontext-Bezuege.page.md,
-     MIIIGModulDokument/Referenzen.page.md und
-     MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md
-     (letztere nur ausgewertet, KEINE Prosa uebernommen: sie enthielt
-     ausschliesslich die KDS-weiten Konformitaetsregeln des Meta-Moduls —
-     "Anforderungsdokumentation" (RFC-2119-Schluesselworte), "Must Support (MS)"
-     und "Fehlende Daten". Alle drei Abschnitte deckt im Template der
-     Nur-Link-Menueeintrag "Konformitaet" ab, der direkt auf das
-     Meta-Modul-Wiki verweist (input/includes/menu.xml: #anforderungsdokumentation,
-     #must-support-ms, #fehlende-daten); die Quellseite selbst verwies fuer die
-     jeweils aktuelle Fassung ebenfalls dorthin. Eine Kopie im Modulleitfaden
-     wuerde zentral gepflegte Regeln duplizieren und veralten. -->
 
 <p>Fachlicher Kontext des Moduls <strong>Dokument</strong> für DIZ-Implementierende: die Bezüge zu den übrigen MII KDS-Modulen und die externen Standards, zu denen das Modul kompatibel gehalten wird.</p>
 
@@ -501,7 +483,7 @@ sie gelten für dieses Modul unverändert.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Sat, Sep 12, 2026 22:28+0000">2026-09-12</span>
+          Erstellt <span title="Sat, Sep 12, 2026 22:35+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

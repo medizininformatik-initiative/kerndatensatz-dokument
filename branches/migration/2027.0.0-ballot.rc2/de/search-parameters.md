@@ -5,6 +5,8 @@
 
 ## Suchparameter
 
+ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
+
 Diese Seite führt Beispielaufrufe für die Suchparameter des Moduls **Dokument** auf. Normativ festgelegt sind die unterstützten Suchparameter im [CapabilityStatement des Moduls](CapabilityStatement-mii-cps-dokument-capabilitystatement.md); die Standard-Suchparameter definiert die [FHIR-Basisspezifikation (DocumentReference)](https://hl7.org/fhir/R4/documentreference.html#search). Modul-spezifische SearchParameter-Artefakte definiert das Modul Dokument nicht selbst — die drei modulspezifischen Suchparameter stellt das [Meta-Modul](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta/2027.0.0-ballot.rc3) bereit (Paket `kerndatensatz.meta` 2027.0.0-ballot.rc3):
 
 * `doc-status` — SearchParameter `mii-sp-meta-dokument-documentreference-doc-status` (`https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-doc-status`)

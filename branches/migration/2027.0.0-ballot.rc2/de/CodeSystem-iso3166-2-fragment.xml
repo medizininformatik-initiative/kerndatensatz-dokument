@@ -4,7 +4,7 @@
   <id value="iso3166-2-fragment"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem iso3166-2-fragment</b></p><a name="iso3166-2-fragment"> </a><a name="hciso3166-2-fragment"> </a><p>This case-sensitive code system <code>urn:iso:std:iso:3166:-2</code> provides <b>a fragment</b> that includes following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">DE-SN<a name="iso3166-2-fragment-DE-SN"> </a></td><td>Sachsen</td></tr></table></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem iso3166-2-fragment</b></p><a name="de-iso3166-2-fragment"> </a><a name="de-hciso3166-2-fragment"> </a><p>This case-sensitive code system <code>urn:iso:std:iso:3166:-2</code> provides <b>a fragment</b> that includes following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">DE-SN<a name="de-iso3166-2-fragment-DE-SN"> </a></td><td>Sachsen</td></tr></table></div>
   </text>
   <url value="urn:iso:std:iso:3166:-2"/>
   <version value="2027.0.0-ballot.rc2"/>

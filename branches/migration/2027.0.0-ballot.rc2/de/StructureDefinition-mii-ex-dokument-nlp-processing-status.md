@@ -109,35 +109,9 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
-  "_name" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "MII_EX_Dokument_NLP_Processing_Status"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "title" : "MII EX Dokument NLP Processing Status",
-  "_title" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "MII EX Dokument NLP Processing Status"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "status" : "active",
-  "date" : "2026-09-12T22:28:47+00:00",
+  "date" : "2026-09-12T22:35:19+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -169,33 +143,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
       "id" : "Extension",
       "path" : "Extension",
       "short" : "MII EX Dokument NLP Processing Status",
-      "_short" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "en"
-          },
-          {
-            "url" : "content",
-            "valueString" : "MII EX Dokument NLP Processing Status"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
-      "definition" : "Status der NLP-Verarbeitung des referenzierten Dokuments",
-      "_definition" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "en"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Status of the NLP processing of the referenced document"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      }
+      "definition" : "Status der NLP-Verarbeitung des referenzierten Dokuments"
     },
     {
       "id" : "Extension.extension",
@@ -211,33 +159,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
       "short" : "NLP Processing Status",
-      "_short" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "en"
-          },
-          {
-            "url" : "content",
-            "valueString" : "NLP Processing Status"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
       "definition" : "Status der NLP-Verarbeitung des referenzierten Dokuments",
-      "_definition" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "en"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Status of the NLP processing of the referenced document"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
       "min" : 1,
       "type" : [{
         "code" : "CodeableConcept"

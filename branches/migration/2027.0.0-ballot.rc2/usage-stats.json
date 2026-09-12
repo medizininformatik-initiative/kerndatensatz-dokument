@@ -102,21 +102,6 @@
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/translation": [
-      "CodeSystem.concept.definition",
-      "CodeSystem.description",
-      "CodeSystem.name",
-      "CodeSystem.title",
-      "ExampleScenario.actor.description",
-      "ExampleScenario.actor.name",
-      "ExampleScenario.instance.description",
-      "ExampleScenario.instance.name",
-      "ExampleScenario.process.description",
-      "ExampleScenario.process.postConditions",
-      "ExampleScenario.process.preConditions",
-      "ExampleScenario.process.step.operation.description",
-      "ExampleScenario.process.step.operation.name",
-      "ExampleScenario.process.title",
-      "ExampleScenario.purpose",
       "ImplementationGuide.definition.page.page.page.page.title",
       "ImplementationGuide.definition.page.page.page.title",
       "ImplementationGuide.definition.page.page.title",
@@ -124,13 +109,9 @@
       "StructureDefinition.differential.element.comment",
       "StructureDefinition.differential.element.definition",
       "StructureDefinition.differential.element.short",
-      "StructureDefinition.mapping.comment",
-      "StructureDefinition.mapping.name",
-      "StructureDefinition.name",
       "StructureDefinition.snapshot.element.comment",
       "StructureDefinition.snapshot.element.definition",
-      "StructureDefinition.snapshot.element.short",
-      "StructureDefinition.title"
+      "StructureDefinition.snapshot.element.short"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
       "ImplementationGuide.definition"

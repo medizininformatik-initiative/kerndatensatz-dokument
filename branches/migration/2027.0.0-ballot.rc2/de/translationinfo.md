@@ -5,6 +5,8 @@
 
 ## Übersetzungsinformationen
 
+ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
+
 Dieser Leitfaden ist **deutschsprachig** (Standardsprache); **Englisch** ist die Übersetzung. Deutsch ist damit sowohl die Basis-Darstellung des Leitfadens als auch die `/de/`-Darstellung; über den Sprachumschalter oben rechts wechseln Sie zwischen `/de/` und `/en/`.
 
 Übersetzte Seiten liegen unter `input/translations/en/pagecontent/` (gleicher Dateiname wie die deutsche Seite); Ressourcen-Übersetzungen als `.po`-Dateien unter `input/translations/en/`. Details: [`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md) in diesem Repository.

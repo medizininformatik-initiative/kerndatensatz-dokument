@@ -12,7 +12,7 @@
 | Active as of 2026-09-12 | *Computable Name*:MII_CS_Dokument_NLP_Processing_Status |
 
  
-Status of the NLP processing of the referenced document 
+Status der NLP-Verarbeitung des referenzierten Dokuments 
 
 This Code system is referenced in the definition of the following value sets:
 
@@ -37,36 +37,10 @@ This Code system is referenced in the definition of the following value sets:
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_CS_Dokument_NLP_Processing_Status",
-  "_name" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "MII_CS_Dokument_NLP_Processing_Status"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "title" : "MII CS Dokument NLP Processing Status",
-  "_title" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "MII CS Dokument NLP Processing Status"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T22:28:47+00:00",
+  "date" : "2026-09-12T22:35:19+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -76,19 +50,6 @@ This Code system is referenced in the definition of the following value sets:
     }]
   }],
   "description" : "Status der NLP-Verarbeitung des referenzierten Dokuments",
-  "_description" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "Status of the NLP processing of the referenced document"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -104,19 +65,6 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "unprocessed",
     "display" : "Original",
     "definition" : "Dokument im Original",
-    "_definition" : {
-      "extension" : [{
-        "extension" : [{
-          "url" : "lang",
-          "valueCode" : "en"
-        },
-        {
-          "url" : "content",
-          "valueString" : "Document in its original form"
-        }],
-        "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-      }]
-    },
     "designation" : [{
       "language" : "en",
       "value" : "Original document"
@@ -126,19 +74,6 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "preprocessed",
     "display" : "Vorverarbeitetes Dokument",
     "definition" : "Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung",
-    "_definition" : {
-      "extension" : [{
-        "extension" : [{
-          "url" : "lang",
-          "valueCode" : "en"
-        },
-        {
-          "url" : "content",
-          "valueString" : "Preparation and editing of textual information for further processing"
-        }],
-        "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-      }]
-    },
     "designation" : [{
       "language" : "en",
       "value" : "Preprocessed document"
@@ -166,19 +101,6 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "annotated",
     "display" : "Annotiertes Dokument",
     "definition" : "Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren",
-    "_definition" : {
-      "extension" : [{
-        "extension" : [{
-          "url" : "lang",
-          "valueCode" : "en"
-        },
-        {
-          "url" : "content",
-          "valueString" : "Document with annotations relating to de-identifying or semantic content or to automated procedures"
-        }],
-        "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-      }]
-    },
     "designation" : [{
       "language" : "en",
       "value" : "Annotated document"
@@ -215,19 +137,6 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "surrogated",
     "display" : "Surrogiertes Dokument",
     "definition" : "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.",
-    "_definition" : {
-      "extension" : [{
-        "extension" : [{
-          "url" : "lang",
-          "valueCode" : "en"
-        },
-        {
-          "url" : "content",
-          "valueString" : "Selected information in the document has been replaced with new information. As a rule this happens in the course of pseudonymisation. Previously annotated personal identifier concepts are replaced, for example, by fictitious concepts."
-        }],
-        "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-      }]
-    },
     "designation" : [{
       "language" : "en",
       "value" : "Surrogated document"

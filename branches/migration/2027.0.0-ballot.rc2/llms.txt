@@ -1,81 +1,81 @@
-# de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2: MII IG Dokument(de)
+# de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2: MII IG Dokument(en)
 
 ## Pages
 
-* [Startseite](de/index.md)
-* [Sicherheit und Datenschutz](de/security-and-privacy.md)
-* [Änderungshistorie](de/changes.md)
-* [Kompatibilität zu anderen Spezifikationen](de/kompatibilitaet.md)
-* [CodeSystems](de/code-systems.md)
-* [Beispiele](de/examples.md)
-* [ValueSets](de/value-sets.md)
-* [CapabilityStatements](de/capability-statements.md)
-* [Artefaktübersicht](de/artifacts.md)
-* [Metadaten-Übersicht](de/metadata.md)
-* [UML-Diagramme](de/uml-diagrams.md)
-* [Übersetzungsinformationen](de/translationinfo.md)
-* [Downloads](de/downloads.md)
-* [Anleitung](de/guidance.md)
-* [Extensions](de/extensions.md)
-* [Profile](de/profiles.md)
-* [Versionierung](de/version-history.md)
-* [Anleitung für Implementierende](de/implementer-guidance.md)
-* [Logische Modelle](de/logical-models.md)
-* [Suchparameter](de/search-parameters.md)
+* [Home](en/index.md)
+* [Security and Privacy](en/security-and-privacy.md)
+* [Changelog](en/changes.md)
+* [Compatibility with Other Specifications](en/kompatibilitaet.md)
+* [Code Systems](en/code-systems.md)
+* [Examples](en/examples.md)
+* [Value Sets](en/value-sets.md)
+* [Capability Statements](en/capability-statements.md)
+* [Artifacts Summary](en/artifacts.md)
+* [Metadata Overview](en/metadata.md)
+* [UML Diagrams](en/uml-diagrams.md)
+* [Translation Information](en/translationinfo.md)
+* [Downloads](en/downloads.md)
+* [Guidance](en/guidance.md)
+* [Extensions](en/extensions.md)
+* [Profiles](en/profiles.md)
+* [Versioning](en/version-history.md)
+* [Guidance for Implementers](en/implementer-guidance.md)
+* [Logical Models](en/logical-models.md)
+* [Search Parameters](en/search-parameters.md)
 
 ## Resources
 
 ### CodeSystems
 
-* [ISO 3166-1 Ländercodes (Fragment: Deutschland)](de/CodeSystem-iso3166-1-fragment.md)
-* [ISO 3166-2 Subdivisionscodes (Fragment: Sachsen)](de/CodeSystem-iso3166-2-fragment.md)
-* [MII CS Dokument NLP Processing Status](de/CodeSystem-mii-cs-dokument-nlp-processing-status.md)
-* [UN M49 Regionen (Fragment: Welt, Europa)](de/CodeSystem-unsd-m49-fragment.md)
+* [ISO 3166-1 Ländercodes (Fragment: Deutschland)](en/CodeSystem-iso3166-1-fragment.md)
+* [ISO 3166-2 Subdivisionscodes (Fragment: Sachsen)](en/CodeSystem-iso3166-2-fragment.md)
+* [MII CS Dokument NLP Processing Status](en/CodeSystem-mii-cs-dokument-nlp-processing-status.md)
+* [UN M49 Regionen (Fragment: Welt, Europa)](en/CodeSystem-unsd-m49-fragment.md)
 
 ### ValueSets
 
-* [MII VS Dokument Einrichtungsart](de/ValueSet-mii-vs-dokument-einrichtungsart.md)
-* [MII VS Dokument Fachgebiet](de/ValueSet-mii-vs-dokument-fachgebiet.md)
-* [MII VS Dokument Format Code](de/ValueSet-mii-vs-dokument-format-code.md)
-* [MII VS Dokument NLP Processing Status](de/ValueSet-mii-vs-dokument-nlp-processing-status.md)
-* [MII VS Dokument SCT Dokument Kategorie](de/ValueSet-mii-vs-dokument-sct-dokument-kategorie.md)
-* [MII VS Dokument SCT Dokument Typ](de/ValueSet-mii-vs-dokument-sct-dokument-typ.md)
+* [MII VS Dokument Einrichtungsart](en/ValueSet-mii-vs-dokument-einrichtungsart.md)
+* [MII VS Dokument Fachgebiet](en/ValueSet-mii-vs-dokument-fachgebiet.md)
+* [MII VS Dokument Format Code](en/ValueSet-mii-vs-dokument-format-code.md)
+* [MII VS Dokument NLP Processing Status](en/ValueSet-mii-vs-dokument-nlp-processing-status.md)
+* [MII VS Dokument SCT Dokument Kategorie](en/ValueSet-mii-vs-dokument-sct-dokument-kategorie.md)
+* [MII VS Dokument SCT Dokument Typ](en/ValueSet-mii-vs-dokument-sct-dokument-typ.md)
 
 ### Logicals
 
-* [MII LM Dokument](de/StructureDefinition-mii-lm-dokument.md)
+* [MII LM Dokument](en/StructureDefinition-mii-lm-dokument.md)
 
 ### Resource Profiles
 
-* [MII PR Dokument Dokument](de/StructureDefinition-mii-pr-dokument-dokument.md)
+* [MII PR Dokument Dokument](en/StructureDefinition-mii-pr-dokument-dokument.md)
 
 ### Extensions
 
-* [MII EX Dokument NLP Processing Status](de/StructureDefinition-mii-ex-dokument-nlp-processing-status.md)
+* [MII EX Dokument NLP Processing Status](en/StructureDefinition-mii-ex-dokument-nlp-processing-status.md)
 
 ### CapabilityStatements
 
-* [MII CPS Dokument CapabilityStatement](de/CapabilityStatement-mii-cps-dokument-capabilitystatement.md)
+* [MII CPS Dokument CapabilityStatement](en/CapabilityStatement-mii-cps-dokument-capabilitystatement.md)
 
 ### ExampleScenarios
 
-* [NlpPipelineAmandaAlzheimer](de/ExampleScenario-NlpPipelineAmandaAlzheimer.md)
+* [NlpPipelineAmandaAlzheimer](en/ExampleScenario-NlpPipelineAmandaAlzheimer.md)
 
 ### ImplementationGuides
 
-* [MII IG Dokument](de/ImplementationGuide-mii-ig-dokument.md)
+* [MII IG Dokument](en/ImplementationGuide-mii-ig-dokument.md)
 
 ### Parameters
 
-* [mii-param-dokument-manifest](de/Parameters-mii-param-dokument-manifest.md)
+* [mii-param-dokument-manifest](en/Parameters-mii-param-dokument-manifest.md)
 
 ### Examples
 
-* [AmandaAlzheimerAnnotiertesDokument (DocumentReference)](de/DocumentReference-AmandaAlzheimerAnnotiertesDokument.md)
-* [AmandaAlzheimerDeIdentifiziertesDokument (DocumentReference)](de/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md)
-* [AmandaAlzheimerKlartextDokument (DocumentReference)](de/DocumentReference-AmandaAlzheimerKlartextDokument.md)
-* [AmandaAlzheimerOriginalDokument (DocumentReference)](de/DocumentReference-AmandaAlzheimerOriginalDokument.md)
-* [AmandaAlzheimerAbteilungskontakt (Encounter)](de/Encounter-AmandaAlzheimerAbteilungskontakt.md)
-* [AmandaAlzheimerEinrichtungskontakt (Encounter)](de/Encounter-AmandaAlzheimerEinrichtungskontakt.md)
-* [AmandaAlzheimerVersorgungsstellenKontakt (Encounter)](de/Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
-* [AmandaAlzheimer (Patient)](de/Patient-AmandaAlzheimer.md)
+* [AmandaAlzheimerAnnotiertesDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerAnnotiertesDokument.md)
+* [AmandaAlzheimerDeIdentifiziertesDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md)
+* [AmandaAlzheimerKlartextDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerKlartextDokument.md)
+* [AmandaAlzheimerOriginalDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerOriginalDokument.md)
+* [AmandaAlzheimerAbteilungskontakt (Encounter)](en/Encounter-AmandaAlzheimerAbteilungskontakt.md)
+* [AmandaAlzheimerEinrichtungskontakt (Encounter)](en/Encounter-AmandaAlzheimerEinrichtungskontakt.md)
+* [AmandaAlzheimerVersorgungsstellenKontakt (Encounter)](en/Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
+* [AmandaAlzheimer (Patient)](en/Patient-AmandaAlzheimer.md)

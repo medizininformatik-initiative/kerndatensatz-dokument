@@ -150,35 +150,9 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Dokument_Dokument",
-  "_name" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "MII_PR_Dokument_Dokument"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "title" : "MII PR Dokument Dokument",
-  "_title" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "en"
-      },
-      {
-        "url" : "content",
-        "valueString" : "MII PR Dokument Dokument"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
   "status" : "active",
-  "date" : "2026-09-12T22:28:47+00:00",
+  "date" : "2026-09-12T22:35:19+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -258,33 +232,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
       "path" : "DocumentReference.extension",
       "sliceName" : "nlp-processing-status",
       "short" : "NLP Processing Status",
-      "_short" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "en"
-          },
-          {
-            "url" : "content",
-            "valueString" : "NLP Processing Status"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
       "definition" : "Status der NLP-Verarbeitung des referenzierten Dokuments",
-      "_definition" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "en"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Status of the NLP processing of the referenced document"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
       "min" : 0,
       "max" : "1",
       "type" : [{

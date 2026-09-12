@@ -1,4 +1,6 @@
 <!-- markdownlint-disable MD041 -->
+<!-- German translation of the English default page input/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md.
+     Keep structure, headings and links 1:1 with the source; translate only the text. -->
 <!-- Migriert aus dem Simplifier-Guide mii-ig-dokument-de, Seite
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md.
      Diese Datei ist eine Intro-Note: der IG-Publisher rendert sie oberhalb der generierten

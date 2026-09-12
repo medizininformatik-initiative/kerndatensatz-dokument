@@ -44,7 +44,7 @@ Mark such entries clearly (for example, prefix them with **BREAKING:**) so a rea
 
 **Date** 2026-09-08 · **Status** ballot release candidate 2 (2027 cycle)
 
-Second candidate of the 2027 ballot version — the rc1 content after the guide's migration from Simplifier to the HL7 IG Publisher (MII KDS module template v0.13.1, German as the default language, English translation). No changes to the profile, the extension, the terminologies or the logical model; the package content changes through translation extensions (`.po`), the SNOMED CT licence notice on the four SNOMED value sets, the corrected `supportedProfile` and the CapabilityStatement's search-parameter references to the Meta module.
+Second candidate of the 2027 ballot version — the rc1 content after the guide's migration from Simplifier to the HL7 IG Publisher (MII KDS module template v0.13.1, English as the default language, German translation). No changes to the profile, the extension, the terminologies or the logical model; the package content changes through translation extensions (`.po`), the SNOMED CT licence notice on the four SNOMED value sets, the corrected `supportedProfile` and the CapabilityStatement's search-parameter references to the Meta module.
 
 * **Guide rebuilt with the IG Publisher** — the template's page structure, artifacts rendered inline (profile, extension, value sets, code system, mapping), tables generated from the package, the NLP pipeline example scenario on the examples page, search parameters with example calls.
 * **Dependencies** — `kerndatensatz.base` 2027.0.0-ballot.rc1, `kerndatensatz.meta` 2027.0.0-ballot.rc3.
