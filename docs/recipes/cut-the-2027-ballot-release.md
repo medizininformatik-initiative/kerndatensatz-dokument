@@ -75,8 +75,9 @@ node scripts/convention-check.mjs
 
 ## 3. Release notes — *human* (wiki step 3)
 
-Add the version's section to `input/pagecontent/changes.md` **and**
-`input/translations/en/pagecontent/changes.md`, in the Keep-a-Changelog
+Add the version's section to `input/pagecontent/changes.md` (English, the
+default language) **and**
+`input/translations/de/pagecontent/changes.md`, in the Keep-a-Changelog
 structure the page's own preamble mandates.
 
 ## 4. Pull request — *human* (wiki step 4)
