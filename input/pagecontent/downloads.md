@@ -1,72 +1,68 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
-     input/translations/en/pagecontent/downloads.md — beide Dateien müssen dasselbe aussagen. Quelle: kerndatensatz-basis
-     input/pagecontent/downloads.md (Branch main).
+<!-- English translation of the English default page
+     input/pagecontent/downloads.md (EN-first) — keep both files in step.
+     Content ported from kerndatensatz-basis input/pagecontent/downloads.md
+     (branch main).
 
-     Die `../<datei>`-Links unten zeigen auf die Artefakte, die der IG-Publisher
-     NEBEN die gerenderten Seiten schreibt. Der Publisher trägt sie NICHT von
-     selbst in eine Fließtext-Seite ein — diese Seite IST die Download-Liste.
-     Halten Sie sie deshalb mit dem in Einklang, was der Build tatsächlich
-     erzeugt (z. B. entfiele examples.xml.zip bei `excludexml: true` in
-     sushi-config.yaml). Die Links funktionieren nur in der veröffentlichten
-     Ausgabe, nicht in einer lokalen Vorschau dieser Markdown-Datei. -->
+     The `../<file>` links below point at the artifacts the IG Publisher writes
+     NEXT TO the rendered pages. The publisher does NOT add them to a narrative
+     page by itself — this page IS the download list, so keep it in step with
+     what the build actually produces (e.g. `excludexml: true` in
+     sushi-config.yaml would remove examples.xml.zip). The links resolve only in
+     the published output, not in a local preview of this Markdown file. -->
 
 
-Diese Seite verlinkt die herunterladbaren Artefakte des Moduls
-**Dokument**.
+This page links the downloadable artifacts of the **Dokument** module.
 
-### Paketdatei
+### Package file
 
-Die Paketdatei ist ein FHIR-Paket im NPM-Format, wie es die meisten
-FHIR-Werkzeuge verwenden. Sie enthält alle ValueSets, Profile, Extensions sowie
-die Liste der Seiten und URLs dieses Leitfadens in dieser Version. Sie SOLLTE die
-erste Wahl sein, wann immer Implementierungsartefakte erzeugt werden, denn sie
-trägt alle Regeln, die die Profile gültig machen. Implementierende müssen
-darüber hinaus den Inhalt der Spezifikation und die einschlägigen Profile kennen,
-um eine konforme Umsetzung zu bauen — siehe die FHIR-Dokumentation zur
-[Validierung von Profilen und Ressourcen](http://hl7.org/fhir/R4/validation.html).
+The package file is an NPM-format FHIR package used by most FHIR tooling. It
+contains all value sets, profiles, extensions and the list of pages and URLs of
+this guide, as defined by this version. It **SHOULD** be the first choice
+whenever implementation artifacts are generated, because it carries all rules
+that make the profiles valid. Implementers still need to know the specification
+content and the applicable profiles to build a conformant implementation — see
+the FHIR documentation on
+[validating profiles and resources](http://hl7.org/fhir/R4/validation.html).
 
-* [Paket (komprimierter Ordner)](../package.tgz){::download="true"}
+* [Package (compressed folder)](../package.tgz){::download="true"}
 
-### Herunterladbare Kopie dieses Leitfadens
+### Downloadable copy of this guide
 
-Eine herunterladbare Fassung des gerenderten Leitfadens für den lokalen Betrieb:
+A downloadable copy of the rendered guide, for hosting locally:
 
-* [Herunterladbare Kopie (komprimierter Ordner)](../full-ig.zip)
+* [Downloadable copy (compressed folder)](../full-ig.zip)
 
-### Beispiele
+### Examples
 
-Alle Beispiele dieses Leitfadens:
+All examples of this guide:
 
-* [XML (komprimierter Ordner)](../examples.xml.zip)
-* [JSON (komprimierter Ordner)](../examples.json.zip)
+* [XML (compressed folder)](../examples.xml.zip)
+* [JSON (compressed folder)](../examples.json.zip)
 
-### Konsolidierte CSV- und Excel-Darstellungen der Profile
+### Consolidated CSV and Excel representations of the profiles
 
-Die Profilinformationen des gesamten Leitfadens in einer einzigen CSV- oder
-Excel-Datei — nützlich für Testende und Analysierende, die Element-Eigenschaften
-profilübergreifend in einer Tabelle sichten wollen:
+The profile information of the whole guide in a single CSV or Excel file —
+useful for testers and analysts who want to review element properties across
+profiles in one table:
 
-* [CSV (komprimierter Ordner)](../csvs.zip)
-* [Excel (komprimierter Ordner)](../excels.zip)
+* [CSV (compressed folder)](../csvs.zip)
+* [Excel (compressed folder)](../excels.zip)
 
 ### Schematrons
 
-* [Schematrons (komprimierter Ordner)](../schematrons.zip)
+* [Schematrons (compressed folder)](../schematrons.zip)
 
-### ImplementationGuide-Ressource
+### ImplementationGuide resource
 
-Die `ImplementationGuide`-Ressource trägt die technischen Details dieser
-Veröffentlichung einschließlich ihrer Abhängigkeiten und
-Veröffentlichungsparameter. Sie ist auf der Seite
-[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html)
-dokumentiert.
+The `ImplementationGuide` resource carries the technical details of this
+publication, including its dependencies and publication parameters. It is documented on the
+[MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
 
 * [XML](../ImplementationGuide-mii-ig-dokument.xml)
 * [JSON](../ImplementationGuide-mii-ig-dokument.json)
 
-### Paket-Registry
+### Package registry
 
-Das FHIR-Package ist zusätzlich in der Simplifier-Package-Registry
-veröffentlicht:
+The FHIR package is additionally published in the Simplifier package registry:
 [`de.medizininformatikinitiative.kerndatensatz.dokument`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.dokument).

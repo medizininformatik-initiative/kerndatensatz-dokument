@@ -1,63 +1,63 @@
 <!-- markdownlint-disable MD041 -->
 
-Dieser Abschnitt bündelt die fachlichen Hinweise zur Umsetzung und Nutzung des
-Moduls **Dokument**.
+This section collects the domain guidance for implementing and using the
+**Dokument** module.
 
-Grundsätzlich soll mit dem [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) die Möglichkeit gegeben werden Dokumente aus der klinischen Routine, sowohl intern als auch extern, interoperabel zu nutzen. Die definierten Metadaten unterstützen die Auffindbarkeit, Selektion und Weiterverarbeitung dieser Dokumente. Dokumente aus der klinischen Routine bilden jedoch eine sehr heterogene Gruppe. Eine Vielzahl unterschiedlicher Quellsysteme, historisch gewachsene Strukturen und Terminologien – wie zum Beispiel interne Hauscodes zur Kategorisierung der Dokumentarten – verhindern eine effektive Nutzung vor Ort und über die Standorte hinweg.
+The [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) is intended to enable the interoperable use of documents from clinical routine, both internally and externally. The defined metadata supports the discoverability, selection and further processing of these documents. However, documents from clinical routine form a very heterogeneous group. A large number of different source systems, historically grown structures and terminologies — for example internal in-house codes for categorizing document types — prevent effective use both locally and across sites.
 
-### Anwendungsszenarien
+### Usage Scenarios
 
-#### Interne Dokumentennutzung
+#### Internal Document Use
 
-[![Anwendungsfalldiagramm: Interne Dokumentennutzung](InterneDokumentennutzung.svg)](InterneDokumentennutzung.svg)
+[![Use-case diagram: internal document use](InterneDokumentennutzung.svg)](InterneDokumentennutzung.svg)
 
-Die *Interne Dokumentennutzung* umfasst die Archivierung, Verwaltung und Nutzung klinischer Dokumente innerhalb eines Krankenhauses oder einer klinischen Einrichtung. Dabei stehen die Datenintegrationszentren (`Standort`) als zentrale Instanzen für die Datenverwaltung im Fokus.
+*Internal document use* covers the archiving, management and use of clinical documents within a hospital or clinical institution. The data integration centers (`Standort`, "site") are the central instances for data management in this scenario.
 
-##### Archivierung und Auffindbarkeit klinischer Dokumente
+##### Archiving and Discoverability of Clinical Documents
 
-Datenintegrationszentren sollen in der Lage sein, klinische Dokumente zusammen mit ihren Metadaten zu archivieren (`Dokument archivieren`) und auffindbar (`Dokumentenarchiv navigieren`) zu machen. Die Metadaten, die im [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) beschrieben werden, umfassen unter anderem:
+Data integration centers should be able to archive clinical documents together with their metadata (`Dokument archivieren`, "archive document") and make them discoverable (`Dokumentenarchiv navigieren`, "navigate document archive"). The metadata described in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) includes, among other things:
 
-- Dokumententyp (z. B. Arztbrief, Befundbericht),
-- Bezeichner (z. B. eindeutige IDs),
-- Erstellungsdatum,
-- Autor und
-- Zugehörigkeit zu einem Patienten.
+- document type (e.g. physician's letter, findings report),
+- identifier (e.g. unique IDs),
+- creation date,
+- author, and
+- association with a patient.
 
-Durch die standardisierte Beschreibung dieser Metadaten wird eine effiziente Navigation im Archiv ermöglicht. Ärzte und andere klinische Nutzer können Dokumente gezielt anfragen (`Hausinterne Anfragen bearbeiten`) und durchsuchen, um relevante Informationen zu finden.
+The standardized description of this metadata enables efficient navigation of the archive. Physicians and other clinical users can query documents in a targeted way (`Hausinterne Anfragen bearbeiten`, "process in-house requests") and search them to find relevant information.
 
-##### Konvertierung bestehender Dokumente
+##### Converting Existing Documents
 
-Ein weiterer wichtiger Aspekt der *Internen Dokumentennutzung* ist die Konvertierung (`Dokument konvertieren`) von klinischen Dokumenten und Metadaten, die nach anderen Interoperabilitätsstandards (z. B. HL7 CDA, Gematik ISiK, KBV MIO) vorliegen, in einen Datensatz gemäß dem [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html). Diese Konvertierung stellt sicher, dass auch ältere oder anders erzeugte Dokumente und Metadaten integriert und einheitlich verwaltet werden können.
+A further important aspect of *internal document use* is the conversion (`Dokument konvertieren`, "convert document") of clinical documents and metadata that exist according to other interoperability standards (e.g. HL7 CDA, gematik ISiK, KBV MIO) into a dataset conforming to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html). This conversion ensures that older documents, or documents produced differently, and their metadata can also be integrated and managed consistently.
 
-##### Nutzung durch Wissenschaftler:innen: Annotation und Pseudonymisierung
+##### Use by Researchers: Annotation and Pseudonymization
 
-Neben den vorher beschriebenen Zwecken spielt die *Interne Dokumentennutzung* ebenso eine Rolle in der Forschung. Wissenschaftler:innen können im Rahmen von Natural Language Processing (NLP)-Prozessen Zwischenergebnisse und Verarbeitungsschritte gemäß dem [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) speichern (`Dokument verarbeiten`). Zum Beispiel können die Zwischenergebnisse einzelner aufeinander aufbauender Prozessierungsschritte miteinander verknüpft und dokumentiert werden (`Dokument pseudonymisieren`, `Dokument annotieren`). Dadurch wird die Nachvollzieh- und Reproduzierbarkeit von NLP-Pipelines für Wissenschaftlicher:innen unterstützt.
+Besides the purposes described above, *internal document use* also plays a role in research. As part of Natural Language Processing (NLP) processes, researchers can store intermediate results and processing steps according to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) (`Dokument verarbeiten`, "process document"). For example, the intermediate results of individual, successively building processing steps can be linked to one another and documented (`Dokument pseudonymisieren`, "pseudonymize document"; `Dokument annotieren`, "annotate document"). This supports the traceability and reproducibility of NLP pipelines for researchers.
 
-#### Externe Dokumentennutzung
+#### External Document Use
 
-[![Anwendungsfalldiagramm: Externe Dokumentennutzung](ExterneDokumentennutzung.svg)](ExterneDokumentennutzung.svg)
+[![Use-case diagram: external document use](ExterneDokumentennutzung.svg)](ExterneDokumentennutzung.svg)
 
-Die *Externe Dokumentennutzung* zielt auf die Bereitstellung von klinischen Dokumenten und deren Metadaten für Forschungszwecke ab. Hierbei steht die Nutzung durch Wissenschaftler:innen im Vordergrund, die auf Basis der archivierten Daten neue Erkenntnisse gewinnen möchten.
+*External document use* aims at providing clinical documents and their metadata for research purposes. Here, the focus is on use by researchers who want to gain new insights based on the archived data.
 
-Wissenschaftler:innen (`Wissenschaftler:in`) können auf einen mit Metadaten angereicherten Korpus klinischer Dokumente zugreifen (`Kohorte definieren`). Die Metadaten, die gemäß dem [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) beschrieben werden, ermöglichen eine gezielte Auswahl und Filterung der Dokumente (`Daten selektieren`). So können beispielsweise Dokumente eines bestimmten Typs, aus einem bestimmten Zeitraum oder von einer bestimmten Kohorte identifiziert werden.
+Researchers (`Wissenschaftler:in`, "researcher") can access a corpus of clinical documents enriched with metadata (`Kohorte definieren`, "define cohort"). The metadata described according to the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) enables targeted selection and filtering of documents (`Daten selektieren`, "select data"). For example, documents of a particular type, from a particular time period, or from a particular cohort can be identified this way.
 
-Ein zentraler Bestandteil für Forschenden ist der Zugang zu Daten und Metadaten klinischer Dokumente über das Forschungsdatenportal für Gesundheit (FDPG). Darüber können Wissenschaftler:innen Machbarkeitsanfragen stellen (`Machbarkeitsanfrage stellen`), um zu prüfen, ob die benötigten Daten für bspw. eine geplante Studie verfügbar sind. Das Forschungsdatenportal nutzt die im [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) hinterlegten Informationen, um die Benutzeroberflächen zu generieren. Beispielsweise werden die Metadaten zu Dokumententypen, Bezeichnern und Beschriftungen verwendet, um die Formulare dynamisch zu erstellen.
+A central component for researchers is access to data and metadata of clinical documents via the German Portal for Medical Research Data (Forschungsdatenportal für Gesundheit, FDPG). Through it, researchers can submit feasibility queries (`Machbarkeitsanfrage stellen`, "submit feasibility query") to check whether the data needed is available for, e.g., a planned study. The research data portal uses the information stored in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html) to generate its user interfaces. For example, the metadata on document types, identifiers and labels is used to build the forms dynamically.
 
-Für den Datentransport wird empfohlen den Dokumentkörper in die Ressource einzubetten. Die Dateien können hier auch zuvor komprimiert werden. Zusätzliche Dateien, die für die Interpretation und Nachnutzung des Dokuments notwendig sind (z.B. TypeSystem Dateien bei semantisch annotierten Dokumenten) können so auch direkt beigefügt werden.
+For data transport, it is recommended to embed the document body in the resource. Files can also be compressed beforehand. Additional files needed for interpreting and reusing the document (e.g. TypeSystem files for semantically annotated documents) can thus also be attached directly.
 
-### Weiterführende Seiten
+### Further Reading
 
-<!-- Hinweis (repo-intern): "Datensätze und Beschreibungen" teilt sein Ziel mit
-     *Artefakte → Logische Modelle*; keiner der Anker der Artefakt-Übersicht ist
-     als Linkziel nutzbar — siehe docs/page-structure.md in diesem Repository:
+<!-- Note (repo-internal): "Datasets and Descriptions" shares its target with
+     *Artifacts → Logical Models*; none of the Artifacts-Summary anchors is
+     usable as a link target — see docs/page-structure.md in this repository:
      https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
-* **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente
-  des Moduls, beschrieben als logische Modelle.
-* **[UML-Diagramme](uml-diagrams.html)** — visuelle Darstellung der Datenmodelle
-  und ihrer Beziehungen.
-* **[Anleitung für Implementierende](implementer-guidance.html)** — technische
-  Hinweise für DIZ-Implementierende.
+* **[Datasets and Descriptions](logical-models.html)** — the module's data
+  elements, described as logical models.
+* **[UML Diagrams](uml-diagrams.html)** — visual representation of the data
+  models and their relationships.
+* **[Guidance for Implementers](implementer-guidance.html)** — technical
+  guidance for DIC implementers.
 
-Für die KDS-weiten Konformitätsanforderungen siehe die
-[Konformitätsregeln des Meta-Moduls](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
-für die technischen Artefakte siehe [Profile](profiles.html).
+For the KDS-wide conformance requirements see the
+[Conformance rules of the Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
+for the technical artifacts see [Profiles](profiles.html).

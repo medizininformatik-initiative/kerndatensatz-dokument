@@ -176,9 +176,9 @@ observation").
   edited by the module — but the **mandatory (1..1) entries are the agreed
   MII structure**: keep them; decide the (0..1) entries per
   [optional-pages.md](optional-pages.md).
-- The **menu** is maintained as `input/includes/menu.xml` (German, the default
+- The **menu** is maintained as `input/includes/menu.xml` (English, the default
   language) plus an English translation at
-  `input/translations/en/includes/menu.xml` — not via the `menu:` property,
+  `input/translations/de/includes/menu.xml` — not via the `menu:` property,
   which cannot be translated. Update both files, the `pages:` tree and the
   IG-level `.po` catalogue together (same commit).
 - The IG template carries no `structure/` folder and no page set; there is no

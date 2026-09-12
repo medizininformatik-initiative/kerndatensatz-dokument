@@ -1,21 +1,20 @@
 <!-- markdownlint-disable MD041 -->
 
-### Einleitung
+### Introduction
 
-Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des
-Kerndatensatz Moduls Dokument der Medizininformatik Initiative.
-Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen
-FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form
-beschrieben.
+The present specification describes the FHIR representation of the Core
+Dataset (KDS) module Dokument of the Medical Informatics Initiative.
+In the following, the use cases of the module as well as the associated
+FHIR profiles and terminology resources are described in their binding
+form.
 
-Der Kerndatensatz der Medizininformatik-Initiative (MII) dient der
-standardisierten Nutzung klinischer Routinedaten für die medizinische
-Forschung.
+The Core Dataset of the Medical Informatics Initiative (MII) enables the
+standardized use of routine clinical data for medical research.
 
-> Mit dem MII KDS-Modul Dokument können Metadaten zu Dokumenten jeglicher
-> Art mit klinischer Relevanz für beliebige Zwecke strukturiert erfasst
-> werden. Dokumente sind in diesem Kontext beliebige Binärobjekte, also
-> beispielsweise auch Bilder oder Videos.
+> With the MII KDS module Dokument, metadata about clinically relevant
+> documents of any kind can be captured in a structured way for any purpose.
+> In this context, documents are arbitrary binary objects — for example
+> images or videos as well.
 {: .ig-highlight .ig-highlight-grey}
 
 <!-- Generated at build time from the ImplementationGuide resource in package.db
@@ -25,168 +24,161 @@ Forschung.
  "class" : "grid sql-table",
  "columns" : [
   { "title" : "Version", "type" : "text", "source" : "Version" },
-  { "title" : "Datum", "type" : "text", "source" : "Date" },
+  { "title" : "Date", "type" : "text", "source" : "Date" },
   { "title" : "Status", "type" : "text", "source" : "Status" }
  ]
 } %}
 
-Realm: DE (Jurisdiktion Deutschland). Versionierung nach CalVer `JJJJ.n.n`.
+Realm: DE (jurisdiction Germany). Versioning follows CalVer `YYYY.n.n`.
 
-Die vollständige Versionshistorie des Leitfadens ist auf der Seite [Änderungen](changes.html) dokumentiert.
+The guide's full version history is documented on the [Changes](changes.html) page.
 
-### Modulbeschreibung
+### Module description
 
-Durch die Nutzung des Profils soll die interne und externe Nutzung von
-Dokumenten erleichtert werden. Die zentralen Punkte der Charakterisierung
-durch Metadaten: Dokumentenbeziehungen, Dokumentenstatus,
-Dokumentenauffindbarkeit, Korpus-Navigation und Dokumentenarchivierung
-werden von dem Modul aufgegriffen und nach standardisiertem Schema
-koordiniert.
+Using the profile is intended to make internal and external use of
+documents easier. The central aspects of characterization by metadata:
+document relationships, document status, document discoverability, corpus
+navigation and document archiving are addressed by the module and
+coordinated according to a standardized scheme.
 
-Das MII KDS-Modul ermöglicht die Erstellung von Dokumentenreferenzen mit den
-Optionen Bezüge zu den im Basismodul aufgegangenen Modulen Fall und Person
-herzustellen. Zudem enthält das Modul eine NLP-Extension, welche den
-Bearbeitungsstatus mit Hinsicht auf NLP-Verfahren wie zum Beispiel
-Annotationen abbildet (siehe hierfür [UML](uml-diagrams.html)).
+The MII KDS module enables the creation of document references with the
+option of establishing relationships to the Fall and Person modules, which
+have been folded into the base module. The module also contains an NLP
+extension that represents the processing status with respect to NLP
+procedures such as annotations (see [UML](uml-diagrams.html) for this).
 
-Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen,
-Anonymisierung und NLP-Annotationen, bekommt der Relation zu anderen
-Dokumenten (MII KDS-Modul Dokument) eine besondere Bedeutung zu, um
-Verarbeitungsketten abzubilden (`relatesTo`).
+With regard to document processing workflows, e.g. format conversions,
+anonymization and NLP annotations, the relation to other documents (MII KDS
+module Dokument) becomes particularly significant for representing
+processing chains (`relatesTo`).
 
-Das Informationsmodell trennt Angaben zur Referenz selbst und den Metadaten
-der referenzierten Dokumente (`content`). Auf den Körper des Dokuments wird
-über eine lokal zu interpretierende URL (`content.attachment.url`)
-verwiesen. Grundsätzlich kann der Dokumentkörper des referenzierten
-Dokuments auch innerhalb der Referenz (`content.attachment.data`)
-eingebettet werden. Das Modul gibt keine Vorgaben zur Semantik dieser
-Auflösung.
+The information model separates information about the reference itself
+from the metadata of the referenced documents (`content`). The document
+body is referenced via a locally interpreted URL
+(`content.attachment.url`). In principle, the document body of the
+referenced document can also be embedded directly within the reference
+(`content.attachment.data`). The module does not prescribe the semantics of
+this resolution.
 
-Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten
-(z.B. Namen, Patienten-ID) enthalten. Der Datenhalter kann eine erfolgte
-De-Identifizierung dieser Daten durch geeignete `securityLabel` und/oder
-Codes der Erweiterung NLP-Processing Status
-([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html))
-ausdrücken.
+The document body can contain a wide range of identifying data and/or
+metadata (e.g. names, patient ID). The data holder can express that such
+data has been de-identified via an appropriate `securityLabel` and/or codes
+of the NLP Processing Status extension
+([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
 
-### Zielgruppe
+### Target audience
 
-Dieser Implementierungsleitfaden richtet sich an:
+This implementation guide is aimed at:
 
 <div class="ig-highlight ig-highlight-blue">
-<p><b>Implementierende</b></p>
-<p>Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.<br/>
-→ siehe <a href="profiles.html">Profile</a> und <a href="logical-models.html">Logische Modelle</a>.</p>
+<p><b>Implementers</b></p>
+<p>Data Integration Centers (DIC), software developers and system architects building FHIR-based solutions.<br/>
+→ see <a href="profiles.html">Profiles</a> and <a href="logical-models.html">Logical Models</a>.</p>
 </div>
 
 <div class="ig-highlight ig-highlight-green">
-<p><b>Forschende</b></p>
-<p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br/>
-→ siehe <a href="guidance.html">Anleitung</a>.</p>
+<p><b>Researchers</b></p>
+<p>Scientists using KDS data for medical research.<br/>
+→ see <a href="guidance.html">Guidance</a>.</p>
 </div>
 
-### Inhalt dieses Leitfadens
+### Contents
 
-- **[Anleitung](guidance.html)** — Einstieg und fachliche Hinweise.
-- **Konformität** — die KDS-weiten Konformitätsregeln (Anforderungssprache,
-  Must-Support, Umgang mit fehlenden Daten) pflegt zentral das
-  [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
-  die modul-spezifischen Aspekte zu
-  [Sicherheit und Datenschutz](security-and-privacy.html) sind Teil dieses
-  Leitfadens.
-- **[Profile](profiles.html)** und die weiteren
-  **[Artefakt-Seiten](artifacts.html)** — die technischen Artefakte.
-- **[Beispiele](examples.html)** — Beispielinstanzen.
-- **[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html)** — die
-  ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender
-  Analyse und Urheberrechtshinweisen.
+- **[Guidance](guidance.html)** — getting started and domain notes.
+- **Conformance** — the KDS-wide conformance rules (requirements language,
+  Must Support, handling missing data) are maintained centrally by the
+  [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
+  the module-specific [Security and Privacy](security-and-privacy.html)
+  considerations are part of this guide.
+- **[Profiles](profiles.html)** and the further
+  **[artifact pages](artifacts.html)** — the technical artifacts.
+- **[Examples](examples.html)** — example instances.
+- **[MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html)** — the
+  ImplementationGuide resource with the dependency table, cross-version
+  analysis and copyright statements.
 
-### Verwandte Leitfäden
+### Related guides
 
-Dieses Modul ist Teil des MII-Kerndatensatzes; die weiteren KDS-Module und ihre
-Abhängigkeiten sind unter
-[medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/)
-beschrieben.
+This module is part of the MII Core Dataset; the other KDS modules and their
+dependencies are described at
+[medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
-Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in
-`sushi-config.yaml`): KDS Basismodul (`kerndatensatz.base`), KDS Meta
-(`kerndatensatz.meta`), Deutsche Basisprofile (`de.basisprofil.r4`), ISiK
-(`de.gematik.isik`), IHE-D-Terminologien (`de.ihe-d.terminology`), KDL
-(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`), die
-HL7-Terminologie- und Extension-Pakete (`hl7.terminology.r4`,
-`hl7.fhir.uv.extensions.r4`) sowie die Werkzeug-Pakete `hl7.fhir.uv.crmi`
-und `hl7.fhir.uv.xver-r5.r4`. Die Versionen liest die folgende
-Tabelle beim Build aus der ImplementationGuide-Ressource; die vollständige
-Tabelle mit Links rendert die Seite
-[MII-ImplementationGuide-Ressource](ImplementationGuide-mii-ig-dokument.html).
+Formal dependencies of this module (see `dependencies` in
+`sushi-config.yaml`): KDS base module (`kerndatensatz.base`), KDS Meta
+(`kerndatensatz.meta`), German base profiles (`de.basisprofil.r4`), ISiK
+(`de.gematik.isik`), IHE-D terminology (`de.ihe-d.terminology`), KDL
+(`dvmd.kdl.r4`), IHE FormatCode (`ihe.formatcode.fhir`), the HL7
+terminology and extensions packages (`hl7.terminology.r4`,
+`hl7.fhir.uv.extensions.r4`) plus the tooling packages `hl7.fhir.uv.crmi`
+and `hl7.fhir.uv.xver-r5.r4`. The following table reads the versions
+from the ImplementationGuide resource at build time; the complete table with
+links is rendered on the
+[MII ImplementationGuide Resource](ImplementationGuide-mii-ig-dokument.html) page.
 
 {% sql {
  "query" : "select json_extract(d.value,'$.packageId') as Package, json_extract(d.value,'$.version') as Version from Resources r, json_each(r.Json,'$.dependsOn') d where r.Type='ImplementationGuide'",
  "class" : "grid sql-table",
  "columns" : [
-  { "title" : "Paket", "type" : "text", "source" : "Package" },
+  { "title" : "Package", "type" : "text", "source" : "Package" },
   { "title" : "Version", "type" : "text", "source" : "Version" }
  ]
 } %}
 
-Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
-**[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle:
+More FHIR implementation guides can be found in the official
+**[FHIR IG Registry](https://fhir.org/guides/registry/)** (source:
 [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 
-### Impressum
+### Imprint
 
-Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt wurden
-und unterliegt per Governance Prozess dem Abstimmungsverfahren des
-Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.
+This guide was created within the Medical Informatics Initiative and is
+subject, by its governance process, to the coordination procedure of the
+Interoperability Forum and the technical committees of HL7 Deutschland e. V.
 
-### Ansprechpartner
+### Contact
 
-Fragen zu der vorliegenden Publikation können jederzeit unter
-[chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative'
-gestellt werden. Ergänzend steht das MII-Zulip
-[mii.zulipchat.com](https://mii.zulipchat.com/) im Stream
-`MII-Kerndatensatz` zur Verfügung.
+Questions about the present publication can be asked at any time on
+[chat.fhir.org](https://chat.fhir.org) in the 'german/mi-initiative' stream.
+In addition, the MII Zulip [mii.zulipchat.com](https://mii.zulipchat.com/)
+is available in the `MII-Kerndatensatz` stream.
 
-Anmerkungen und Kritik wird in Form von 'Issues' im
-[GitHub Projekt](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues)
-stets gern entgegengenommen.
+Comments and criticism are always gladly received in the form of 'Issues' in
+the [GitHub project](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues).
 
-Fachliche Ansprechpartner:innen dieses Moduls:
+Domain contacts for this module:
 
 * Frank Meineke, SMITH
 * Jakob Faller, MIRACUM
 
-### Autor:innen (in alphabetischer Reihenfolge)
+### Authors (in alphabetical order)
 
-* Frank Meineke, SMITH, Informationsmodellierung/Fachvertretung
-* Jakob Faller, MIRACUM, Informationsmodellierung/Fachvertretung
-* Katja Hoffmann, MIRACUM/DigiHub MiHUBx, Technische Umsetzung
-* Marcel Susky, MIRACUM/DigiHub MiHUB, Informationsmodellierung/Fachvertretung/Technische Umsetzung
-* Martin Boeker, MIRACUM, Fachvertretung
-* Noemi Deppenwiese, MIRACUM, Technische Umsetzung
-* Thomas Ganslandt, MIRACUM, Fachvertretung
+* Frank Meineke, SMITH, information modeling/domain representation
+* Jakob Faller, MIRACUM, information modeling/domain representation
+* Katja Hoffmann, MIRACUM/DigiHub MiHUBx, technical implementation
+* Marcel Susky, MIRACUM/DigiHub MiHUB, information modeling/domain representation/technical implementation
+* Martin Boeker, MIRACUM, domain representation
+* Noemi Deppenwiese, MIRACUM, technical implementation
+* Thomas Ganslandt, MIRACUM, domain representation
 
-### Urheberrecht und Lizenz
+### Copyright and License
 
 © 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin.
 
-Dieses Werk ist lizenziert unter der
-[Creative Commons Namensnennung 4.0 International Lizenz](https://creativecommons.org/licenses/by/4.0/deed.de)
+This work is licensed under the
+[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
 (CC BY 4.0).
 
-Zu den Nutzungsrechten der zugrunde liegenden FHIR-Technologie siehe die
-FHIR-Basis-Spezifikation.
+For the usage rights of the underlying FHIR technology, see the FHIR base
+specification.
 
-Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben
-und gepflegt. Es gilt das Copyright der dort jeweils aufgeführten Herausgeber
-(Publisher).
+Some of the code systems used are published and maintained by other
+organizations. The copyright of the publishers listed there applies.
 
-### Haftungsausschluss
+### Disclaimer
 
-Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses
-Dokuments auf FHIR Version R4 beruhen, für die Copyright HL7 International
-gilt.
+The content of this document is public. Please note that parts of this
+document are based on FHIR version R4, for which the copyright of
+HL7 International applies.
 
-Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die
-Autor:innen keine Haftung für direkte oder indirekte Schäden übernehmen, die
-aus dem Inhalt dieser Spezifikation entstehen könnten.
+Although this publication was prepared with the greatest care, the authors
+cannot accept any liability for direct or indirect damage that may arise
+from the content of this specification.

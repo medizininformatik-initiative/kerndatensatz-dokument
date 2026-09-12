@@ -20,7 +20,7 @@ Every undecided optional page is visible in **three forms**:
    reviewing the preview sees the open decision without reading source.
 2. **In the source** — an `OPTIONAL-PAGE` HTML comment in the page file (both
    languages) and `OPTIONAL (0..1)` comments at the menu entries
-   (`input/includes/menu.xml`, `input/translations/en/includes/menu.xml`) and
+   (`input/includes/menu.xml`, `input/translations/de/includes/menu.xml`) and
    in the `sushi-config.yaml` `pages:` tree.
 3. **In CI** — the convention check's rule **M9**
    (`scripts/convention-check.mjs`): on development branches it *reports* the
@@ -51,7 +51,7 @@ Delete the optional-page **banner block and the `OPTIONAL-PAGE` marker
 comment** from
 
 - `input/pagecontent/<page>.md` **and**
-- `input/translations/en/pagecontent/<page>.md`
+- `input/translations/de/pagecontent/<page>.md`
 
 then fill in the page's `[TODO]` blocks as usual. (The `OPTIONAL (0..1)`
 comments in the menu files and `sushi-config.yaml` may stay or go — they are
@@ -62,14 +62,14 @@ not checked; removing them keeps the source tidy.)
 For any optional page `<page>.md` remove, in the same commit:
 
 1. **both page files** —
-   `git rm input/pagecontent/<page>.md input/translations/en/pagecontent/<page>.md`
+   `git rm input/pagecontent/<page>.md input/translations/de/pagecontent/<page>.md`
 2. **both menu entries** — the `<li>` (and its `OPTIONAL` comment line) in
    `input/includes/menu.xml` **and**
-   `input/translations/en/includes/menu.xml`
+   `input/translations/de/includes/menu.xml`
 3. **the `pages:` entry** — the two lines (`<page>.md:` + `title:`) in
    `sushi-config.yaml`
 4. **the `.po` unit** — the page's `msgid`/`msgstr` block in
-   `input/translations/en/ImplementationGuide-<your-ig-id>.po`
+   `input/translations/de/ImplementationGuide-<your-ig-id>.po`
 5. **inbound links** — grep the remaining pages for `<page>.html` and reroute
    (`git grep -n '<page>.html' input/`). The scaffold's known cross-links:
    `profiles.md` ↔ `extensions.md` and `value-sets.md` ↔ `code-systems.md`

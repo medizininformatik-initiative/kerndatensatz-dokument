@@ -1,79 +1,71 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
-     input/translations/en/pagecontent/version-history.md — beide Dateien müssen dasselbe
-     aussagen. Quelle: kerndatensatz-basis input/pagecontent/version-history.md
-     (Branch main); der Release-Prozess ist die Seite "Module Release Workflow"
-     des MII-Meta-Wikis
-     (https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow). -->
 
 
-### Versionsschema
+### Version scheme
 
-Das Modul **Dokument** folgt dem KDS-Schema der Kalender-Versionierung
-(CalVer) in einer SemVer-kompatiblen numerischen Form:
+The **Dokument** module follows the KDS calendar-versioning (CalVer)
+scheme in a SemVer-compatible numeric form:
 
-* Format **`JJJJ.MINOR.PATCH[-label]`** — die aktuelle Version ist
+* format **`YYYY.MINOR.PATCH[-label]`** — the current version is
   `2027.0.0-ballot.rc2`;
-* **`JJJJ`** — das Jahr, in dem der Leitfaden gilt und genutzt werden soll; es
-  tritt an die Stelle der Major-Version;
-* **`MINOR`** — wird für nicht brechende Ergänzungen und Präzisierungen erhöht;
-* **`PATCH`** — wird für Korrekturen und Fehlerbehebungen erhöht;
-* **`label`** — optionales Vorab- oder Build-Label, z. B. `draft`, `ballot` oder
+* **`YYYY`** — the year in which the guide applies and is intended to be used;
+  it takes the place of the major version;
+* **`MINOR`** — incremented for non-breaking additions and refinements;
+* **`PATCH`** — incremented for corrections and bug fixes;
+* **`label`** — optional pre-release or build label, e.g. `draft`, `ballot` or
   `cibuild`.
 
-### Versionen vergleichen
+### Comparing versions
 
-Stabile Releases lassen sich vergleichen, indem die numerischen Bestandteile als
-SemVer-artiges `<major>.<minor>.<patch>` gelesen werden, mit dem Kalenderjahr
-als Major-Komponente: `2026.1.0` ist neuer als `2026.0.3`. Labels kennzeichnen
-den Vorab- oder Build-Status; zwischen Labels wird keine Reihenfolge abgeleitet.
+Stable releases can be compared by reading the numeric components as
+SemVer-style `<major>.<minor>.<patch>`, with the calendar year as the major
+component: `2026.1.0` is newer than `2026.0.3`. Labels denote pre-release or
+build status; no ordering is inferred among labels.
 
-### Artefakt-Versionen
+### Artifact versions
 
-Alle veröffentlichten FHIR-Artefakte im Paket tragen dieselbe Version wie der
-Leitfaden und sein Paket. Ein Artefakt kann daher beim Release eine neue Version
-erhalten, obwohl es selbst unverändert geblieben ist. Die maschinenlesbaren
-Metadaten, die Versionsalgorithmus, Versionierungs-Politik, Paketquelle und
-Manifest-Parameter deklarieren, beschreibt die Seite
-[Metadaten-Übersicht](metadata.html).
+All released FHIR artifacts in the package carry the same version as the guide
+and its package. An artifact may therefore receive a new version on release even
+when the artifact itself did not change. The computable metadata that declares
+the version algorithm, the versioning policy, the package source and the
+manifest parameters is described on the [Metadata Overview](metadata.html) page.
 
-### Release-Prozess
+### Release process
 
-Releases folgen dem
+Releases follow the
 [Module Release Workflow](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow):
-Die Version wird im Release-Branch angehoben, der Changelog-Eintrag geschrieben,
-die Validierungs-Workflows laufen auf dem Release-Pull-Request, und nach dem
-Merge wird das Release getaggt. Die Änderungen jeder veröffentlichten Version
-verzeichnet die [Änderungshistorie](changes.html).
+the version is raised in the release branch, the changelog entry is written, the
+validation workflows run on the release pull request, and the release is tagged
+after the merge. The changes of each released version are recorded in the
+[Changelog](changes.html).
 
-### Versionsvergleich
+### Version comparison
 
-Ab der zweiten **formalen Publikation** veröffentlicht dieser Leitfaden
-zusätzlich einen **maschinell erzeugten Versionsvergleich**. Er ergänzt die
-Änderungshistorie: Die Änderungshistorie erklärt *warum* und *was zu tun
-ist*, der Vergleich zeigt, *was sich genau geändert hat*.
+From the second **formal publication** on, this guide also publishes a
+**machine-generated version comparison**. It complements the changelog: the
+changelog explains *why* and *what to do*, the comparison shows *exactly what
+changed*.
 
-**Wo er liegt.** Der Bericht ist Teil der veröffentlichten Website selbst:
-`comparison-v<Vorversion>/index.html` neben den Seiten des Leitfadens,
-verlinkt aus dem QA-Bericht. Der Index listet die verglichenen
-Artefakt-Paare; jedes Paar verlinkt eine Detailseite mit drei Ansichten — der
-**Differenz**-Analyse (was sich Element für Element geändert hat), der
-**Vereinigung** (alles, was eine der beiden Versionen erlaubt) und dem
-**Schnitt** (nur was beide Versionen erlauben).
+**Where it lives.** The report is part of the published site itself:
+`comparison-v<previous>/index.html` next to the guide's pages, linked from the
+QA report. The index lists the compared artifact pairs; each pair links a
+detail page with three views — the **difference** analysis (what changed
+element by element), the **union** (everything either version allows) and the
+**intersection** (only what both versions allow).
 
-**Wie er erzeugt wird.** Der Vorversions-Vergleicher des IG Publishers lädt
-das Paket des vorherigen Releases, ordnet jedes Profil, ValueSet und
-CodeSystem über die kanonische URL seinem Gegenstück zu, vergleicht die Paare
-und rendert den Bericht in die Build-Ausgabe — er wird also mit der Website
-veröffentlicht, ohne zusätzlichen Deployment-Schritt. Aktiviert wird er über den Parameter `version-comparison` — einen
-offiziellen IG-Publisher-Parameter aus der
-[ig-parameters-Registry](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html),
-durchgereicht über die `sushi-config.yaml`. Zwei Voraussetzungen müssen dafür
-erfüllt sein: eine Publikationshistorie an der kanonischen URL und ein ladbares
-Vorversions-Paket. Dieses Modul setzt den Parameter derzeit nicht — damit gilt
-der Publisher-Standard `{last}`; der Wert `n/a` ist der dokumentierte Weg, den
-Vergleich abzuschalten.
+**How it is generated.** The IG Publisher's previous-version comparator loads
+the previous release's package, pairs every profile, value set and code
+system with its counterpart by canonical URL, compares the pairs, and renders
+the report into the build output — so it publishes with the site, with no
+extra deployment step. It is enabled by the `version-comparison` parameter — an official IG
+Publisher parameter from the
+[ig-parameters registry](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html),
+passed through `sushi-config.yaml`. It has two prerequisites: a publication
+history at the canonical URL, and a loadable previous package. This module does not
+currently set the parameter — so the publisher default `{last}` applies; the
+value `n/a` is the documented way to switch the comparison off.
 
-**Abschalten.** Die Repository-Variable `ENABLE_VERSION_COMPARISON=false`
-schaltet den Vergleich des Publishers in allen Build-Workflows dieses Moduls ab;
-solange der Parameter nicht gesetzt ist, bleibt sie ohne Wirkung.
+**Switching it off.** The repository variable
+`ENABLE_VERSION_COMPARISON=false` switches the publisher's comparison off in
+every build workflow of this module; while the parameter is unset it has no
+effect.

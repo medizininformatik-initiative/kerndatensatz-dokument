@@ -111,7 +111,7 @@ place and a prompt) · ➖ not applicable.
 | Dependencies are pinned to fixed versions (never `current`/`dev`) | ✅ | `dependencies:` in `sushi-config.yaml`; enforced by `convention-check.yml`, monitored by `dependency-check.yml` |
 | Version scheme follows the MII module release workflow (CalVer) | ✅ | `version: {{CALVER_VERSION}}`, released via `module-release.yml` — see [`docs/release.md`](release.md) |
 | Publication runs through the IG Publisher's `-go-publish` | ✅ | `go-publish.yml`, manual and dry-run by default — see [`docs/release.md`](release.md) |
-| Multi-language is set up the supported way | ✅ | `i18n-default-lang: de`, `i18n-lang: [en]`, `translation-sources`; menu/content/resource translation per [`docs/recipes/add-translation.md`](recipes/add-translation.md) (S3) |
+| Multi-language is set up the supported way | ✅ | `i18n-default-lang: en`, `i18n-lang: [de]`, `translation-sources`; menu/content/resource translation per [`docs/recipes/add-translation.md`](recipes/add-translation.md) (S3) |
 | Required IG metadata is complete (publisher, contact, jurisdiction, licence, copyright) | ✅ | `sushi-config.yaml` — `publisher`, `jurisdiction: DE`, `license: CC-BY-4.0`, `copyrightYear` |
 
 ---

@@ -1,17 +1,18 @@
 <!-- markdownlint-disable MD041 -->
+<!-- English default page: input/pagecontent/uml-diagrams.md. -->
 
-Zur Veranschaulichung des Informationsmodells wurde das nachfolgende Diagramm in der Unified Modeling Language (UML) erstellt. Dadurch lassen sich die Fachkonzepte, deren Zusammenhänge sowie der Bezug zu weiteren MII KDS-Modulen besser darstellen.
+To illustrate the information model, the following diagram was created in the Unified Modeling Language (UML). This makes it possible to better represent the domain concepts, their relationships, and the connection to other MII KDS modules.
 
-Mit einem *Dokument* lassen sich die Metadaten zu einem klinischen Dokument, einer Bild-, Audio- oder Videodatei beschreiben. Ein *Dokument* wird in der Regel in einem klinischen *Kontext* (`context`) erzeugt. Darüber hinaus kann ein *Dokument* auf eine bestimmte Art und Weise in Beziehung (`relatesTo`) zu einem oder mehreren anderen *Dokumenten* stehen, abhängig vom jeweiligen Szenario. Über einen oder mehrere *Anhänge* (`attachment`) lassen sich Details zum Speicherort und -format des klinischen Dokuments, der Bild-, Audio- oder Videodatei festlegen.
+A *Dokument* (document) is used to describe the metadata of a clinical document, or an image, audio, or video file. A *Dokument* is typically created in a clinical *Kontext* (context) (`context`). In addition, depending on the scenario, a *Dokument* can be related (`relatesTo`) in a specific way to one or more other *Dokumente*. One or more *Anhänge* (attachments) (`attachment`) are used to specify details about the storage location and format of the clinical document, or the image, audio, or video file.
 
-Ein *Dokument* kann in Abhängigkeit vom Szenario einen Patientenbezug (`subject`) ([MII KDS-Modul Person]) aufweisen. Der Patientenbezug kann anhand identifizierender Eigenschaften, pseudonym oder anonym erfolgen. Analog lässt sich über einen klinischen *Kontext* der Bezug zum konkreten Fall (`encounter`) ([MII KDS-Modul Fall]) herstellen.
+Depending on the scenario, a *Dokument* can have a reference to a patient (`subject`) ([MII KDS module Person]). The patient reference can be established using identifying attributes, or on a pseudonymous or anonymous basis. Similarly, a clinical *Kontext* (context) can be used to establish the reference to the specific case/encounter (`encounter`) ([MII KDS module Fall]).
 
-Die Module Person und Fall sind seit dem KDS-Release 2026 im Basismodul
-(Package `de.medizininformatikinitiative.kerndatensatz.base`) aufgegangen; die
-Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
-den von der NSG freigegebenen Stand.
+Since the KDS release 2026, the modules Person and Fall have been folded into
+the base module (package `de.medizininformatikinitiative.kerndatensatz.base`);
+the canonical URLs of the referenced profiles are unchanged. The diagram shows
+the state approved by the NSG.
 
-[![UML-Diagramm des Informationsmodells zum Modul Dokument](Informationsmodell.svg)](Informationsmodell.svg)
+[![UML diagram of the information model for the Dokument module](Informationsmodell.svg)](Informationsmodell.svg)
 
-[MII KDS-Modul Person]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
-[MII KDS-Modul Fall]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
+[MII KDS module Person]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base
+[MII KDS module Fall]: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base

@@ -13,11 +13,11 @@ contents**.
 
   ```yaml
   parameters:
-    i18n-default-lang: de
+    i18n-default-lang: en
     i18n-lang:
       - en
     translation-sources:
-      - input/translations/en
+      - input/translations/de
   ```
 
   A folder that is not in `translation-sources` is never read — no warning, no
@@ -25,17 +25,17 @@ contents**.
 
 The five layers are independent — translate only the ones you need.
 
-**Language policy.** This module is **German-default with an English translation**
-(DE-first, per the MII meta wiki for Release 2027): German is the default
-rendering language (`i18n-default-lang: de`), English
-the recommended second rendering (`i18n-lang: [en]`, sources under
-`input/translations/en`). Everything below works the same for a further language
+**Language policy.** This module is **English-default with a German translation**
+(matching the sibling KDS modules): English is the default
+rendering language (`i18n-default-lang: en`), English
+the recommended second rendering (`i18n-lang: [de]`, sources under
+`input/translations/de`). Everything below works the same for a further language
 — replace `en` with that language code and add it to `i18n-lang` **and**
 `translation-sources`.
 
-> **Why translation is *additive*:** you never edit the German source to
+> **Why translation is *additive*:** you never edit the English source to
 > translate it. Each language gets its own file beside the source, and a part
-> with no translation falls back to the German source. Nothing added here can
+> with no translation falls back to the English source. Nothing added here can
 > break a build — at worst it is ignored.
 
 ---
@@ -63,17 +63,17 @@ Your IG's visible text comes from five places, each with its **own** mechanism:
 ### 1. Narrative content (pages)
 
 Put the translated page under `pagecontent/` in the translation-source folder,
-with the **same file name** as the German source page:
+with the **same file name** as the English source page:
 
 ```text
-input/pagecontent/index.md                     # German  — the source
-input/translations/en/pagecontent/index.md     # English — renders on /en/
+input/pagecontent/index.md                     # English — the source
+input/translations/de/pagecontent/index.md     # English — renders on /de/
 ```
 
-- Keep structure, headings and links 1:1 with the German source page.
+- Keep structure, headings and links 1:1 with the English source page.
 - Translate prose, not identifiers: leave artifact links
   (`StructureDefinition-<id>.html`, …) and FHIR ids unchanged.
-- A page with no English translation falls back to the German source on `/en/`,
+- A page with no English translation falls back to the English source on `/en/`,
   with a "no translation available" note. Translate the pages that matter most
   first.
 
@@ -90,8 +90,8 @@ input/translations/en/pagecontent/index.md     # English — renders on /en/
 This module maintains its menu as **files**, one per language:
 
 ```text
-input/includes/menu.xml                      # German  — the source menu
-input/translations/en/includes/menu.xml      # English translation
+input/includes/menu.xml                      # English — the source menu
+input/translations/de/includes/menu.xml      # German translation
 ```
 
 When you add, rename or remove a page, update **both** files (and the `pages:`
@@ -136,10 +136,10 @@ For each resource whose text you want in English, add one supplement named
 exactly `<ResourceType>-<id>.po`:
 
 ```text
-input/translations/en/StructureDefinition-example-patient.po
+input/translations/de/StructureDefinition-example-patient.po
 ```
 
-Format (`msgid` = the German source, `msgstr` = the English translation):
+Format (`msgid` = the English source, `msgstr` = the English translation):
 
 ```po
 #: StructureDefinition.description
@@ -176,7 +176,7 @@ Page titles do **not** come from the page files. They come from
 catalogue for the ImplementationGuide resource itself:
 
 ```text
-input/translations/en/ImplementationGuide-<your-ig-id>.po
+input/translations/de/ImplementationGuide-<your-ig-id>.po
 ```
 
 This one file drives the page heading, the breadcrumb trail and the table of
@@ -189,7 +189,7 @@ contents on `/en/`. Without it, a page whose prose is fully English still render
 The scaffold ships the catalogue as:
 
 ```text
-input/translations/en/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po
+input/translations/de/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po
 ```
 
 **The publisher matches the catalogue to its IG resource BY FILE NAME**
@@ -199,8 +199,8 @@ input/translations/en/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po
 
 ```sh
 # your sushi-config.yaml has:  id: mii-ig-person
-git mv 'input/translations/en/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po' \
-       'input/translations/en/ImplementationGuide-mii-ig-person.po'
+git mv 'input/translations/de/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po' \
+       'input/translations/de/ImplementationGuide-mii-ig-person.po'
 ```
 
 > **Why this bites:** a catalogue whose name does not match an IG resource id is
@@ -260,7 +260,7 @@ sushi .
 2. `/en/` — menu in English; footer shows `Package … based on FHIR …` and
    `Generated <date>`.
 3. A translated page renders in English on `/en/`; an untranslated one falls back
-   to the German source.
+   to the English source.
 4. A translated resource's `description` is English on that resource's own `/en/`
    page, German on `/de/`. The artifacts index keeps the default-language
    (German) title and description in **both** trees.
@@ -287,7 +287,7 @@ moves between them.
 | Menu QA error about `href="#"` | A dropdown parent has no real target | Point it at a real page (§2) |
 | Navigation differs between languages | An entry was added to one menu file only | Keep both menu files in step (§2) |
 | Base/footer labels blank in some language | The template lacks that language's UI-string catalog | Fix in the template repo (§3); rebuild once released — the URL reference in `ig.ini` fetches it |
-| A translated page does not appear on `/en/` | It is a `<name>-en.md` sibling, or the file name differs from the German source page | Move it to `input/translations/en/pagecontent/<same-filename>` (§1) |
+| A translated page does not appear on `/de/` | It is a `<name>-en.md` sibling, or the file name differs from the English source page | Move it to `input/translations/de/pagecontent/<same-filename>` (§1) |
 | A resource supplement does nothing | `msgid` mismatch, wrong file name, or an untranslatable field | Copy the `msgid` from `fsh-generated/resources/…`; check §4 |
 | **Page content is English but the title, breadcrumb and ToC entry stay German** | The IG-level catalogue was never renamed from `ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po` to your IG id, so the publisher never matched it to the resource | Rename it to `ImplementationGuide-<your-ig-id>.po` (§5) |
 | One page title is English, another is not | That page's title is missing from the catalogue, or its `msgid` does not match the `pages:` title character for character | Add/correct the `msgid` (§5) |

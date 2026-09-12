@@ -1,22 +1,20 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachliche Seite (Deutsch ist die Standardsprache dieser IG —
-     DE-First gemäß MII-Meta-Wiki, Release 2027). Englische Übersetzung:
-     input/translations/en/pagecontent/translationinfo.md.
-     Mechanik: siehe docs/recipes/add-translation.md. -->
-Dieser Leitfaden ist **deutschsprachig** (Standardsprache); **Englisch** ist die
-Übersetzung. Deutsch ist damit sowohl die Basis-Darstellung des Leitfadens als
-auch die `/de/`-Darstellung; über den Sprachumschalter oben rechts wechseln Sie
-zwischen `/de/` und `/en/`.
+<!-- English translation of input/pagecontent/translationinfo.md (German is
+     the default language of this IG — EN-first per the MII meta wiki,
+     release 2027). Mechanics: docs/recipes/add-translation.md. -->
+This guide is **English-language** (default language); **German** is the
+translation. German is therefore both the base rendering of the guide and the
+`/de/` rendering; use the language switcher at the top right to change between
+`/de/` and `/en/`.
 
-Übersetzte Seiten liegen unter `input/translations/en/pagecontent/` (gleicher
-Dateiname wie die deutsche Seite); Ressourcen-Übersetzungen als `.po`-Dateien
-unter `input/translations/en/`. Details:
-[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md) in diesem Repository.
+Translated pages live under `input/translations/de/pagecontent/` (same file
+name as the German page); resource translations are `.po` files under
+`input/translations/de/`. Details:
+[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/recipes/add-translation.md) in this repository.
 
-Die deutschen Seiten übernehmen den Text des bisherigen Simplifier-Leitfadens
-wortgetreu, soweit die Quelle eine entsprechende Seite hatte; die übrigen Seiten
-(Downloads, Metadaten, Versionierung, Änderungshistorie, Beispiele) stammen aus
-dem KDS-Modul-Template. Die englischen Seiten sind maschinelle Übersetzungen der
-deutschen Fassung und werden vor der Veröffentlichung zweisprachig
-gegengelesen. Die FHIR-Artefakte selbst tragen deutsche Bezeichnungen mit
-Translation-Extensions für die englische Darstellung.
+The German pages carry over the text of the previous Simplifier guide verbatim
+wherever the source had a corresponding page; the remaining pages (Downloads,
+Metadata, Versioning, Changelog, Examples) come from the KDS module
+template. The English pages are machine translations of the German version and
+are reviewed bilingually before publication. The FHIR artifacts themselves carry
+German designations with translation extensions for the English rendering.

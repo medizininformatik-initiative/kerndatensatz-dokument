@@ -1,44 +1,44 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Intro-Note zur Extension MII_EX_Dokument_NLP_Processing_Status. Migriert aus
+<!-- Intro note for the extension MII_EX_Dokument_NLP_Processing_Status. Migrated from
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md
-     des Simplifier-Leitfadens mii-ig-dokument-de. Der IG-Publisher rendert diesen
-     Text oberhalb der generierten Tabellen der Artefakt-Seite; englische
-     Übersetzung: input/translations/en/intro-notes/ (gleicher Dateiname). -->
+     of the Simplifier guide mii-ig-dokument-de. The IG Publisher renders this text
+     above the generated tables of the artifact page; English default page:
+     input/intro-notes/ (same file name). -->
 
-### Beschreibung
+### Description
 
-Diese Erweiterung dient der strukturierten Beschreibung des Bearbeitungsstatus eines Dokuments innerhalb eines NLP-Projekts. Die Verarbeitung von Dokumenten mit unstrukturierter Information erfolgt typischerweise in einer Vielzahl aufeinanderfolgender Verarbeitungsschritte. Im Verlauf dieser Prozessketten entstehen unterschiedliche Transformationen des Originaldokuments sowie Relationen zwischen dem Ursprungsdokument und daraus abgeleiteten Zwischenprodukten.
+This extension is used for the structured description of the processing status of a document within an NLP project. Processing documents that carry unstructured information typically happens in a series of consecutive processing steps. In the course of these process chains, different transformations of the original document arise, as well as relations between the source document and the intermediate products derived from it.
 
-Die NLP Extension stellt hierfür ein Codesystem bereit, mit dem die verschiedenen Bearbeitungszustände und Zwischenprodukte eines NLP-Workflows konsistent beschrieben und archiviert werden können.
+For this purpose the NLP extension provides a code system with which the various processing states and intermediate products of an NLP workflow can be described and archived consistently.
 
-Das Codesystem der NLP Extension ist hierarchisch aufgebaut und umfasst zwei Ebenen: Level 1 (Lvl 1) und Level 2 (Lvl 2). Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: `annotated`, Lvl 2: `deid`, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde.
+The code system of the NLP extension is hierarchical and comprises two levels: level 1 (Lvl 1) and level 2 (Lvl 2). Lvl 1 describes a superordinate process status, for example annotated. Lvl 2 serves to specify that status. One example is the combination Lvl 1: `annotated`, Lvl 2: `deid`, which indicates that a document has been furnished with de-identifying annotations.
 
-Die Nutzung beider Hierarchieebenen ist nicht verpflichtend. Abhängig vom jeweiligen Anwendungsszenario kann frei entschieden werden, ob nur der übergeordnete Status (Lvl 1) oder zusätzlich eine spezifische Ausdifferenzierung über Lvl 2 verwendet wird.
-Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden. Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden.
+Using both hierarchy levels is not mandatory. Depending on the respective application scenario, it can be decided freely whether only the superordinate status (Lvl 1) or additionally a specific differentiation via Lvl 2 is used.
+Please note: if a Lvl 2 specification such as `deid` is used, the corresponding Lvl 1 `annotated` must also be used. Otherwise `deid` could be misunderstood as a fully de-identified document.
 
-Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationsprojekts, das bereits aus einem Quellsystem extrahiert und anonymisiert wurde. Bis zum aktuellen Bearbeitungsstand können mehrere Verarbeitungsschritte erfolgt sein, beispielsweise:
+An exemplary use case is a document within an annotation project that has already been extracted from a source system and anonymised. Several processing steps may have taken place up to the current processing state, for example:
 
-- Transformation des Dateiformats von `.pdf` zu `.txt` (`preprocessed` – `format-change`)
-- Entfernung von Dokumentheadern (`preprocessed` – `content-change`)
-- maschinelle Vorannotation identifizierender Strukturen (`annotated` – `preanno` `deid`)
-- anschließende manuelle Annotation dieser Strukturen (`annotated` – `deid`)
-- irreversible Ersetzung aller identifizierenden Annotationen durch Surrogate (`surrogated`)
+- transformation of the file format from `.pdf` to `.txt` (`preprocessed` – `format-change`)
+- removal of document headers (`preprocessed` – `content-change`)
+- machine pre-annotation of identifying structures (`annotated` – `preanno` `deid`)
+- subsequent manual annotation of those structures (`annotated` – `deid`)
+- irreversible replacement of all identifying annotations by surrogates (`surrogated`)
 
-Die NLP Extension lässt bewusst Freiheitsgrade bei der Dokumentation solcher Prozessketten. Es ist möglich, sämtliche Verarbeitungsschritte eines Dokuments abzubilden. Alternativ kann sich die Beschreibung auf ausgewählte, für den jeweiligen Anwendungsfall wesentliche Bearbeitungszustände beschränken, beispielsweise ausschließlich auf den finalen Status surrogated.
+The NLP extension deliberately leaves degrees of freedom in documenting such process chains. It is possible to represent every processing step of a document. Alternatively, the description may be limited to selected processing states that are essential for the respective use case, for example exclusively to the final status surrogated.
 
-### Inhalt
+### Content
 
-Die technische Struktur dieser Extension — Differential, Key Elements, Snapshot
-sowie die XML- und JSON-Serialisierung — rendert der IG-Publisher unmittelbar
-unterhalb dieses Abschnitts auf dieser Artefakt-Seite. Dort stehen auch die
-Must-Support-Elemente mit ihren Kurzbeschreibungen und Hinweisen; Kanonische
-URL, Status, Version und Basisdefinition führt der Kopfbereich der Seite.
+The technical structure of this extension — differential, key elements, snapshot
+and the XML and JSON serialisations — is rendered by the IG Publisher directly
+below this section on this artifact page. The Must Support elements with their
+short descriptions and comments are shown there as well; canonical URL, status,
+version and base definition are carried by the page header.
 
-Die Codes des NLP-Verarbeitungsstatus definiert das CodeSystem
+The codes of the NLP processing status are defined by the code system
 [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html)
-mit seiner zweistufigen Hierarchie; gebunden wird die Extension über das ValueSet
+with its two-level hierarchy; the extension is bound via the value set
 [MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.html).
 
-### Beispiele
+### Examples
 
-Das Beispielszenario zur NLP-Pipeline — Ablaufdiagramm, die Verarbeitungsschritte mit ihren NLP-Verarbeitungsstatus und die zugehörigen DocumentReference-, Patient- und Encounter-Ressourcen — steht auf der Seite [Beispiele](examples.html#beispielszenario-nlp-pipeline-amanda-alzheimer).
+The NLP pipeline example scenario — flow diagram, the processing steps with their NLP processing status and the associated DocumentReference, Patient and Encounter resources — is on the [Examples](examples.html#example-scenario-amanda-alzheimer-nlp-pipeline) page.

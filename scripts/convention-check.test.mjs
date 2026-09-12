@@ -365,8 +365,8 @@ test("M12: a root package.json in parity passes", () => {
   assert.ok(!ids(findings, "fail").includes("M12 package.json parity"));
 });
 
-test("readTranslationLangs reads i18n-lang (DE-first modules translate into en)", () => {
-  const de = "parameters:\n  i18n-default-lang: de\n  i18n-lang:\n    - en\n  translation-sources:\n    - input/translations/en\n";
+test("readTranslationLangs reads i18n-lang (EN-first modules translate into en)", () => {
+  const de = "parameters:\n  i18n-default-lang: en\n  i18n-lang:\n    - de\n  translation-sources:\n    - input/translations/de\n";
   assert.deepEqual(readTranslationLangs(de), ["en"]);
   assert.deepEqual(readTranslationLangs("parameters:\n  excludexml: false\n"), []);
 });

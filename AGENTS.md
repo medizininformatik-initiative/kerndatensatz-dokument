@@ -74,10 +74,10 @@ Author identity is the configured human committer.
   `scripts/convention-check.mjs` (placeholder-aware). Do not add a second
   metadata linter. `convention-check.yml` also runs `scripts/language-model-check.sh`
   — a separate concern (see below), not a second metadata linter.
-- **This module is DE-first** (`sushi-config.yaml`: `i18n-default-lang: de`):
+- **This module is EN-first** (`sushi-config.yaml`: `i18n-default-lang: en`):
   the source pages are `input/pagecontent/**` and `input/includes/menu.xml`, the
-  translation lives under `input/translations/en/**`. Every change to a source
-  page has to be carried into its English twin in the same commit.
+  translation lives under `input/translations/de/**`. Every change to a source
+  page has to be carried into its German twin in the same commit.
   `scripts/language-model-check.sh` guards exactly this model: it fails on
   residue of the template's inverted model (for example its `translations/de/` folder path).
 - Do not change canonical URLs of published artifacts.

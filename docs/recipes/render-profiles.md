@@ -49,7 +49,7 @@ differs from a neighbouring profile, and any scenario a reader needs to picture.
 **Use the notes for:** element-level explanations, deliberate omissions, and the
 rationale behind a constraint that will otherwise look arbitrary in five years.
 
-Translations go to `input/translations/en/intro-notes/` with the same file names.
+Translations go to `input/translations/de/intro-notes/` with the same file names.
 
 ## Steps
 

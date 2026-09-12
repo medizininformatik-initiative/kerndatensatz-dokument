@@ -20,15 +20,15 @@ longer marked optional — in **both** languages, in one pass.
 For page `<p>` (e.g. `extensions`):
 
 1. **Menu, both languages** — delete the `<li><a href="<p>.html">… (optional)</a></li>`
-   line from `input/includes/menu.xml` **and** `input/translations/en/includes/menu.xml`
+   line from `input/includes/menu.xml` **and** `input/translations/de/includes/menu.xml`
    (including the `OPTIONAL (0..1)` comment line above it).
 2. **Pages tree** — delete the `<p>.md:` block (with its `title:`) from
    `sushi-config.yaml` `pages:`.
 3. **Page files** — delete `input/pagecontent/<p>.md` **and**
-   `input/translations/en/pagecontent/<p>.md`.
+   `input/translations/de/pagecontent/<p>.md`.
 4. **Page-title catalogue** — delete the page's unit (the
    `#: ImplementationGuide.definition.page.title` entry whose `msgid` is the
-   page's German title) from `input/translations/en/ImplementationGuide-*.po`.
+   page's English title) from `input/translations/de/ImplementationGuide-*.po`.
 5. Rebuild (`sushi .` + the IG Publisher, or push and let CI build) — the menu
    must show no gap, no link may 404, and `node scripts/convention-check.mjs`
    must report M9 PASS without the page.

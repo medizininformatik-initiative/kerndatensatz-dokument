@@ -1,18 +1,14 @@
 
 <!-- markdownlint-disable MD041 -->
-<!-- Migriert aus dem Simplifier-Leitfaden "MII IG Modul Dokument":
-     MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md.
-     Englische Übersetzung: input/translations/en/pagecontent/capability-statements.md
-     — beide Dateien inhaltlich synchron halten. -->
 
-Um eine dezentrale Datenauswertung mittels des Deutschen Forschungsdatenportals für Gesundheit der Medizininformatik-Initiative zu ermöglichen MUSS die [Capabilities-Interaktion](https://www.hl7.org/fhir/R4/http.html#capabilities) unterstützt werden, sodass durch den FHIR-Server unter `[BASE_URL]/metadata` ein CapabilityStatement exponiert wird. Innerhalb dieses CapabilityStatement MUSS angegeben werden welche Profile inkl. Version, sowie welche Suchparameter unterstützt werden.
+To enable decentralized data analysis via the German Portal for Medical Research Data (FDPG) of the Medical Informatics Initiative, the [capabilities interaction](https://www.hl7.org/fhir/R4/http.html#capabilities) MUST be supported, so that the FHIR server exposes a CapabilityStatement under `[BASE_URL]/metadata`. Within this CapabilityStatement it MUST be stated which profiles, including their version, as well as which search parameters are supported.
 
-Nachfolgend wird aufgelistet welche Inhalte verpflichtend im CapabilityStatement angegeben werden MÜSSEN. Darüber hinaus MUSS eine Konformität zu dem nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement Instanz unter [`CapabilityStatement.instantiates`](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates) angegeben werden.
+The following lists which content MUST be stated in the CapabilityStatement. In addition, conformance to the following CapabilityStatement MUST be declared in the respective CapabilityStatement instance under [`CapabilityStatement.instantiates`](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates).
 
 Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement`
 
-Artefakt-Seite: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html)
+Artifact page: [MII CPS Dokument CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html)
 
-{% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-de.xhtml %}
+{% include CapabilityStatement-mii-cps-dokument-capabilitystatement-html-en.xhtml %}
 
-Beispielaufrufe zu den Suchparametern und die Verweise auf die SearchParameter-Definitionen des Meta-Moduls stehen auf der Seite [Suchparameter](search-parameters.html).
+Example calls for the search parameters and the links to the Meta module's SearchParameter definitions are on the [Search Parameters](search-parameters.html) page.

@@ -37,6 +37,20 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.extension",
+        "path": "DocumentReference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "DocumentReference.extension:nlp-processing-status",
         "path": "DocumentReference.extension",
         "sliceName": "nlp-processing-status",

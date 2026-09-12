@@ -1,58 +1,58 @@
-<!-- Menu in the IG's DEFAULT language (German); the English translation is
-     input/translations/en/includes/menu.xml.
-     Keep the href targets IDENTICAL to the source menu; translate only labels.
-     Structure notes (OPTIONAL entries, link-only entries, the interim
-     meta-wiki links) are documented in the source menu's header and in
-     docs/page-structure.md / docs/optional-pages.md. -->
+<!-- Menu in the IG's DEFAULT language (English); the German translation is
+     input/translations/de/includes/menu.xml.
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     the `menu:` property in sushi-config.yaml generates a single menu.xml and
+     cannot be translated. -->
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li><a href="index.html">Startseite</a></li>
+  <li><a href="index.html">Home</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li><a href="guidance.html">Anleitung</a></li>
-      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
-      <li><a href="kompatibilitaet.html">Kompatibilität zu anderen Spezifikationen</a></li>
-      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
-      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
-      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <li><a href="kompatibilitaet.html">Compatibility with Other Specifications</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
     </ul>
   </li>
   <li class="dropdown">
-    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
-         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
-         Quell-Menü). -->
-    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
-      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
-      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
-      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
-      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
-      <li><a href="profiles.html">Profile</a></li>
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
       <li><a href="extensions.html">Extensions</a></li>
-      <li><a href="capability-statements.html">CapabilityStatements</a></li>
-      <li><a href="search-parameters.html">Suchparameter</a></li>
-      <li><a href="logical-models.html">Logische Modelle</a></li>
-      <li><a href="value-sets.html">ValueSets</a></li>
-      <li><a href="code-systems.html">CodeSystems</a></li>
-      <li><a href="examples.html">Beispiele</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="search-parameters.html">Search Parameters</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <li><a href="value-sets.html">Value Sets</a></li>
+      <li><a href="code-systems.html">Code Systems</a></li>
+      <li><a href="examples.html">Examples</a></li>
     </ul>
   </li>
   <li><a href="downloads.html">Downloads</a></li>
-  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li><a href="changes.html">Changelog</a></li>
   <li class="dropdown">
-    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
-         die Metadaten-Übersicht ist optional. -->
-    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-      <li><a href="metadata.html">Metadaten-Übersicht</a></li>
-      <li><a href="version-history.html">Versionierung</a></li>
+      <li><a href="metadata.html">Metadata Overview</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
     </ul>
   </li>
 </ul>

@@ -33,7 +33,7 @@ list — not a glob, because this directory now holds unrelated helpers too.
 | --- | --- | --- |
 | `convention-check.mjs` | Asserts the MII metadata contract (id/canonical/name/packageId, pinned versions) and that OPTIONAL (0..1) menu pages are decided before a release (M9, `docs/optional-pages.md`) | `convention-check.yml` |
 | `po-to-data.mjs` | Derives `input/data/translations_<lang>.json` from `input/translations/<lang>/*.po` so pages that generate tables with the publisher's `sql`/`sqlToData` directives can look up translated resource text in Liquid (`--check` = parity only; convention-check M14) | local, before committing translation changes |
-| `language-model-check.sh` | Fails the build when prose contradicts the German-default / English-translation language model | `convention-check.yml` |
+| `language-model-check.sh` | Fails the build when prose contradicts the English-default / German-translation language model | `convention-check.yml` |
 | `check-updates.mjs` | Reports drift between the pinned toolchain and what upstream released | `dependency-check.yml` |
 | `gen-rendering-demo.py` | Regenerates the demonstration page in both languages from `demo-en.md` / `demo-de.md` + `rendering-demo-codes.json` — run `python3 scripts/gen-rendering-demo.py .` after editing either source; never hand-edit the generated pages | a maintainer, after editing the demo sources |
 | `set-su-termserv-secrets.sh` | Validates an SU-TermServ client certificate and uploads it as repository secrets | a maintainer, once |

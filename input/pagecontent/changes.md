@@ -1,160 +1,151 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
-     input/translations/en/pagecontent/changes.md — beide Dateien müssen dasselbe aussagen. Struktur aus kerndatensatz-basis
-     input/pagecontent/changes.md (Branch main) — ein Abschnitt je Version,
-     neueste zuerst — und aus der MII-Release-Notes-Vorlage
+<!-- English translation of the English default page
+     input/pagecontent/changes.md (EN-first) — keep both files in step.
+     Structure ported from kerndatensatz-basis input/pagecontent/changes.md
+     (branch main) — one section per version, newest first — and from the MII IG
+     release-notes template
      (kerndatensatz-meta/implementation-guides/MedizininformatikInitiative-ImplementationGuide-Template/
-     MII-IG-Modul--Modul/Release-notes.page.md), die "Keep a Changelog" vorgibt.
+     MII-IG-Modul--Modul/Release-notes.page.md), which prescribes Keep a Changelog.
 
-     Pflegeregel: Für jedes Release oben einen neuen Abschnitt
-     `### Version <x>` ergänzen, in BEIDEN Sprachen, als Teil des
-     Release-Pull-Requests. Einen veröffentlichten Abschnitt danach nicht mehr
-     ändern. -->
+     Maintenance rule: add a new `### Version <x>` section on top for every
+     release, in BOTH languages, as part of the release pull request. Never edit
+     a released section afterwards. -->
 
-Diese Seite enthält einen Changelog mit Beschreibung der Änderungen zwischen
-Versionen.
+This page contains a changelog describing the changes between versions.
 
-Sie hält die Änderungen zwischen den veröffentlichten Versionen des
-Moduls **Dokument** fest, die neueste Version zuerst, und folgt
-[Keep a Changelog](https://keepachangelog.com/de/1.1.0/) und dem
-KDS-CalVer-Schema, das die Seite [Versionierung](version-history.html)
-beschreibt.
+It records the changes between the released versions of the
+**Dokument** module, newest version first, and follows
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the KDS calendar
+versioning scheme described on the [Versioning](version-history.html) page.
 
-Jede Version erhält einen eigenen Abschnitt mit dem Release-Datum und den nach
-Kategorien gruppierten Änderungen:
+Each version gets its own section with the release date and the changes grouped
+by category:
 
-* **Hinzugefügt** — neue Profile, Extensions, ValueSets, Suchparameter, Seiten.
-* **Geändert** — geänderte Einschränkungen, Bindings, Hinweise oder
-  Dokumentation.
-* **Abgekündigt** — Artefakte, die noch existieren, aber nicht mehr genutzt
-  werden sollen.
-* **Entfernt** — zurückgezogene Artefakte.
-* **Behoben** — Korrekturen von Fehlern.
-* **Sicherheit** — Änderungen mit Auswirkung auf Sicherheit oder Datenschutz.
+* **Added** — new profiles, extensions, value sets, search parameters, pages.
+* **Changed** — modified constraints, bindings, guidance or documentation.
+* **Deprecated** — artifacts that still exist but should no longer be used.
+* **Removed** — artifacts that were withdrawn.
+* **Fixed** — corrections of defects.
+* **Security** — changes with a security or data-protection impact.
 
-Kategorien ohne Inhalt werden weggelassen. Geht eine Änderung auf ein Issue oder
-einen Pull-Request zurück, wird darauf verlinkt.
+Leave out the categories with nothing to report. Where a change is driven by an
+issue or a pull request, link it.
 
 <div class="ig-highlight ig-highlight-red">
-<p><b>Breaking Changes MÜSSEN berichtet und erläutert werden</b></p>
-<p>Ein Versionsabschnitt mit einer Breaking Change ist erst vollständig, wenn
-er ausdrücklich und in diesem Changelog beantwortet:</p>
+<p><b>Breaking changes MUST be reported and explained</b></p>
+<p>A version section that contains a breaking change is not complete until it
+answers, explicitly and in this changelog:</p>
 <ul>
-<li><b>Was genau sich geändert hat</b> zwischen den beiden Versionen — das
-Artefakt, das Element, die alte und die neue Einschränkung (nicht nur
-„Profil X wurde überarbeitet“).</li>
-<li><b>Was das für bestehende Daten bedeutet:</b> Validieren Daten, die der
-Vorversion entsprachen, weiterhin gegen die neue Version? Falls nein: welche
-Ressourcen und Elemente sind betroffen, und wie zeigt sich der Fehler?</li>
-<li><b>Was Implementierende tun sollten:</b> die Empfehlung der Autorinnen
-und Autoren zur Migration bestehender Daten auf die neue Version —
-Transformationsschritte, Standardwerte, Umkodierungs-Hinweise — oder die
-ausdrückliche Aussage, dass kein Migrationspfad bereitgestellt wird, und
-warum.</li>
+<li><b>What exactly changed</b> between the two versions — the artifact, the
+element, the old and the new constraint (not just "profile X was revised").</li>
+<li><b>What it means for existing data:</b> does data that conformed to the
+previous version still validate against the new one? If not, which resources
+and elements are affected, and how does the failure show up?</li>
+<li><b>What implementers should do:</b> the authors' recommendation for
+migrating existing data to the new version — transformation steps, default
+values, re-coding guidance — or an explicit statement that no migration path
+is provided and why.</li>
 </ul>
-<p><b>Was als Breaking Change zählt</b> — behandeln Sie eine Änderung als
-Breaking Change, wenn sie eines der Folgenden tut, auch wenn sie klein wirkt:
-eine Kardinalität verschärft (<code>0..*</code> → <code>1..1</code>), eine
-Binding-Stärke erhöht (example → required), Codes aus einem required-ValueSet
-entfernt, ein Element oder einen Slice entfernt oder umbenennt, einen Typ
-einengt, eine Invariante oder eine Must-Support-Pflicht hinzufügt oder eine
-kanonische URL ändert. Im Zweifel: als Breaking Change berichten.</p>
-<p><b>Breaking für wen:</b> benennen Sie beide Perspektiven — <i>gespeicherte
-Daten</i> (Instanzen, die gegen die alte Version valide sind) und
-<i>Implementierungen</i> (Clients und Server, die dagegen gebaut wurden; ein
-entfernter Suchparameter bricht Implementierungen, während jede gespeicherte
-Instanz valide bleibt).</p>
-<p><b>Die Versionsnummer warnt niemanden.</b> Das KDS-Kalender-Versionsschema
-(<code>JJJJ.n.n</code>) trägt kein Major-Signal wie SemVer — dieser
-Changelog-Abschnitt ist die <i>einzige</i> Warnung, die Lesende bekommen.</p>
-<p><b>Verlinken Sie das technische Delta.</b> Ab der zweiten formalen
-Publikation aktivieren Sie den Versionsvergleich des IG Publishers
-(<code>version-comparison</code>, in <code>sushi-config.yaml</code> zu
-ergänzen — siehe die Seite <a href="version-history.html">Versionierung</a>
-zur Einrichtung und ihren Voraussetzungen); er veröffentlicht einen maschinell erzeugten
-Vergleich unter <code>comparison-v&lt;Vorversion&gt;/index.html</code>.
-Verlinken Sie ihn aus dem Versionsabschnitt, damit die Erläuterung und der
-technische Diff nebeneinanderstehen.</p>
-<p>Kennzeichnen Sie solche Einträge deutlich (zum Beispiel mit dem Präfix
-<b>BREAKING:</b>), damit sie beim Überfliegen des Abschnitts nicht übersehen
-werden können.</p>
+<p><b>What counts as breaking</b> — treat a change as breaking if it does any
+of the following, even when it looks small: tightens a cardinality
+(<code>0..*</code> → <code>1..1</code>), raises a binding strength (example →
+required), removes codes from a required value set, removes or renames an
+element or a slice, narrows a type, adds an invariant or a must-support
+obligation, or changes a canonical URL. When in doubt, report it as
+breaking.</p>
+<p><b>Breaking for whom:</b> state both perspectives — <i>stored data</i>
+(instances valid against the old version) and <i>implementations</i> (clients
+and servers built against it; a removed search parameter breaks
+implementations while every stored instance stays valid).</p>
+<p><b>The version number will not warn anyone.</b> The KDS calendar versioning
+scheme (<code>YYYY.n.n</code>) carries no major-version signal the way SemVer
+does — this changelog section is the <i>only</i> warning a reader gets.</p>
+<p><b>Link the technical delta.</b> From the second formal publication on,
+enable the IG Publisher's version comparison (<code>version-comparison</code>,
+to be added to <code>sushi-config.yaml</code> — see the
+<a href="version-history.html">Versioning</a> page for the setup and its
+prerequisites); it publishes a
+machine-generated comparison at
+<code>comparison-v&lt;previous&gt;/index.html</code>. Link it from the version
+section, so the prose explanation and the technical diff sit side by side.</p>
+<p>Mark such entries clearly (for example, prefix them with
+<b>BREAKING:</b>) so a reader scanning the section cannot miss them.</p>
 </div>
 
 ---
 
 ### Version 2027.0.0-ballot.rc2
 
-**Datum** 2026-09-08 · **Status** Ballot-Release-Kandidat 2 (Zyklus 2027)
+**Date** 2026-09-08 · **Status** ballot release candidate 2 (2027 cycle)
 
-Zweiter Kandidat der Ballot-Version 2027 — inhaltlich der Stand von rc1 nach der
-Migration des Leitfadens von Simplifier auf den HL7 IG Publisher (MII-KDS-Modul-
-Template v0.13.1, deutsch als Standardsprache, englische Übersetzung). Keine
-Änderungen an Profil, Extension, Terminologien oder logischem Modell; die
-Paketinhalte ändern sich durch Übersetzungs-Extensions (`.po`), die
-SNOMED-CT-Lizenzhinweise auf den vier SNOMED-ValueSets, das korrigierte
-`supportedProfile` und die Suchparameter-Verweise des CapabilityStatements auf
-das Meta-Modul.
+Second candidate of the 2027 ballot version — the rc1 content after the guide's
+migration from Simplifier to the HL7 IG Publisher (MII KDS module template
+v0.13.1, English as the default language, German translation). No changes to
+the profile, the extension, the terminologies or the logical model; the package
+content changes through translation extensions (`.po`), the SNOMED CT licence
+notice on the four SNOMED value sets, the corrected `supportedProfile` and the
+CapabilityStatement's search-parameter references to the Meta module.
 
-* **Leitfaden neu gebaut mit dem IG Publisher** — Seitenstruktur des Templates,
-  Artefakte inline gerendert (Profil, Extension, ValueSets, CodeSystem,
-  Mapping), Tabellen aus dem Paket generiert, Beispielszenario der NLP-Pipeline
-  auf der Beispielseite, Suchparameter mit Beispielaufrufen.
-* **Abhängigkeiten** — `kerndatensatz.base` 2027.0.0-ballot.rc1,
+* **Guide rebuilt with the IG Publisher** — the template's page structure,
+  artifacts rendered inline (profile, extension, value sets, code system,
+  mapping), tables generated from the package, the NLP pipeline example
+  scenario on the examples page, search parameters with example calls.
+* **Dependencies** — `kerndatensatz.base` 2027.0.0-ballot.rc1,
   `kerndatensatz.meta` 2027.0.0-ballot.rc3.
-* **CapabilityStatement** — `supportedProfile` verweist auf das Dokument-Profil
-  (rc1: auf die eigene Metadaten-URL); die drei modulspezifischen Suchparameter
-  verweisen auf die SearchParameter-Definitionen des Meta-Moduls.
-* **Beispiele** — Kontaktebene der Encounter-Beispiele mit System
-  `http://fhir.de/CodeSystem/Kontaktebene`; Titel und Beschreibungen für alle
-  Beispielinstanzen; ExampleScenario der NLP-Pipeline.
-* **Qualitätssicherung** — Fehler und Warnungen des Publishers bereinigt bzw.
-  begründet unterdrückt (siehe `input/ignoreWarnings.txt`); bekannte,
-  extern verursachte Fehler: siehe Known Issue unten.
+* **CapabilityStatement** — `supportedProfile` points at the Dokument profile
+  (rc1: at its own metadata URL); the three module-specific search parameters
+  reference the Meta module's SearchParameter definitions.
+* **Examples** — level of contact of the Encounter examples with system
+  `http://fhir.de/CodeSystem/Kontaktebene`; titles and descriptions for all
+  example instances; ExampleScenario of the NLP pipeline.
+* **Quality assurance** — publisher errors and warnings resolved or suppressed
+  with justification (see `input/ignoreWarnings.txt`); known externally caused
+  errors: see the known issue below.
 
 ### Version 2027.0.0-ballot.rc1
 
-**Datum** 01.09.2026 (Veröffentlichungsdatum des Leitfadens; das RC-Paket
-wurde am 28.08.2026 in der Paket-Registry veröffentlicht)
+**Date** 2026-09-01 (publication date of the guide; the RC package was released
+in the package registry on 2026-08-28)
 
-#### Hinzugefügt
+#### Added
 
-* **Neue Abhängigkeit ISiK Stufe 6** (`de.gematik.isik 6.0.0`); aktualisierte
-  Abhängigkeiten `de.basisprofil.r4 1.6.0`, `hl7.terminology.r4 7.1.0`;
-  `hl7.fhir.uv.extensions.r4 5.2.0` jetzt explizit deklariert
-* Werkzeug-/Qualitätssicherung: `advisor.json` für die Validator-Pipeline
-  ergänzt, Quality-Control-Regeln aktualisiert
+* **New dependency ISiK Level 6** (`de.gematik.isik 6.0.0`); updated
+  dependencies `de.basisprofil.r4 1.6.0`, `hl7.terminology.r4 7.1.0`;
+  `hl7.fhir.uv.extensions.r4 5.2.0` now declared explicitly
+* Tooling/quality assurance: `advisor.json` added for the validator pipeline,
+  quality-control rules updated
 
-#### Geändert
+#### Changed
 
-* **NLP-Pipeline-Beispiele überarbeitet** (die Extension
-  `MII_EX_Dokument_NLP_Processing_Status` selbst ist bereits seit 2026.0.1
-  enthalten und inhaltlich unverändert): neues Beispiel
-  `AmandaAlzheimerKlartextDokument` als Klartext-Extraktionsschritt;
-  Original-Dokument nun als DOCX
-  (`application/vnd.…wordprocessingml.document`) statt `text/plain`;
-  Verarbeitungsstatus-Codes entlang der Pipeline korrigiert
-  (`annotated`/`preprocessed`/`surrogated` gemäß Illustration statt pauschal
-  `deid`); `transforms`-Verkettung der Pipeline-Schritte aktualisiert
-* **SNOMED-CT-Versions-Pinning** gemäß MII Terminology Version Policy: alle
-  SNOMED-CT-Includes (ValueSets Typ, Kategorie, Einrichtungsart, Fachgebiet)
-  referenzieren die International Edition
+* **NLP pipeline examples revised** (the extension
+  `MII_EX_Dokument_NLP_Processing_Status` itself has already been included,
+  unchanged in content, since 2026.0.1): new example
+  `AmandaAlzheimerKlartextDokument` as a plain-text extraction step; the
+  original document now provided as DOCX
+  (`application/vnd.…wordprocessingml.document`) instead of `text/plain`;
+  processing-status codes along the pipeline corrected
+  (`annotated`/`preprocessed`/`surrogated` per the illustration, instead of
+  uniformly `deid`); the `transforms` chaining of the pipeline steps updated
+* **SNOMED CT version pinning** per the MII Terminology Version Policy: all
+  SNOMED CT includes (value sets Type, Category, Facility Type, Discipline)
+  reference the International Edition
   `http://snomed.info/sct/900000000000207008/version/20260701`
 
-#### Behoben
+#### Fixed
 
-* **CodeSystem NLP Processing Status**: Definition des Konzepts `surrogated`
-  präzisiert; Titel des CodeSystems korrigiert („MII CS Dokument …" statt
-  fälschlich „MII VS Dokument …")
-* **Logisches Modell `MII_LM_Dokument`** wird nun mit dem Package ausgeliefert
-  (Status `draft` → `active`; war bislang durch den Package-Build-Filter
-  ausgeschlossen)
+* **CodeSystem NLP Processing Status**: definition of the `surrogated` concept
+  clarified; the CodeSystem's title corrected ("MII CS Dokument …" instead of
+  the erroneous "MII VS Dokument …")
+* **Logical model `MII_LM_Dokument`** is now shipped with the package (status
+  `draft` → `active`; it had previously been excluded by the package build
+  filter)
 
-Profil `MII_PR_Dokument_Dokument`, Extension und CapabilityStatement sind
-gegenüber 2026.0.1 inhaltlich unverändert.
+The `MII_PR_Dokument_Dokument` profile, the extension and the
+CapabilityStatement are unchanged in content compared to 2026.0.1.
 
-> **Known Issue**: 2 Validierungsfehler bei Beispielen mit `context.event`
-> (eventCodeList-Expansion, Upstream-Bug in `de.ihe-d.terminology 3.0.1`) —
-> siehe
+> **Known Issue**: 2 validation errors on examples with `context.event`
+> (eventCodeList expansion, an upstream bug in `de.ihe-d.terminology 3.0.1`) —
+> see
 > [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
 {: .ig-highlight .ig-highlight-grey}
 
@@ -162,23 +153,24 @@ gegenüber 2026.0.1 inhaltlich unverändert.
 
 ### Version 2026.0.1
 
-**Datum** 11.03.2026
+**Date** 2026-03-11
 
-#### Geändert
+#### Changed
 
-* Ändert Abhängigkeiten von MII KDS Fall/Person zu MII KDS Basis
-* Update Abhängigkeiten und Beschreibungen auf MII KDS Modulversion 2026
+* Changes dependencies from MII KDS Fall/Person to MII KDS Basis
+* Updates dependencies and descriptions to MII KDS module version 2026
 
-#### Behoben
+#### Fixed
 
-* Korrigiert falschen Display-Name bei Beispielen für Einrichtungskontakt
+* Corrects incorrect display name on examples for Einrichtungskontakt
+  (facility contact)
 
 ---
 
 ### Version 2026.0.0
 
-**Datum** 10.12.2025
+**Date** 2025-12-10
 
-#### Hinzugefügt
+#### Added
 
-* Initiales Release des MII KDS-Moduls Dokument
+* Initial release of the MII KDS module Dokument

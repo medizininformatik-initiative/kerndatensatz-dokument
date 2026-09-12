@@ -1,18 +1,18 @@
-# Multi-language support (German default, English translation)
+# Multi-language support (English default, German translation)
 
-This module produces a bilingual IG with **German as the default language
-and English as the translation** (DE-first per the MII meta wiki, Release 2027) — the inverse of
+This module produces a bilingual IG with **English as the default language
+and English as the translation** (EN-first per the MII meta wiki, Release 2027) — the inverse of
 [kerndatensatz-basis](https://github.com/medizininformatik-initiative/kerndatensatz-basis).
 
 The corresponding `sushi-config.yaml` parameters (already set):
 
 ```yaml
 parameters:
-  i18n-default-lang: de
+  i18n-default-lang: en
   i18n-lang:
     - en
   translation-sources:
-    - input/translations/en
+    - input/translations/de
 ```
 
 ## Directory structure
@@ -20,7 +20,7 @@ parameters:
 ```
 input/
 └── translations/
-    └── en/                          # English translation supplements
+    └── en/                          # German translation supplements
         ├── pagecontent/             # Translated narrative pages (same file
         │                            #   names as input/pagecontent/)
         ├── includes/                # Translated fragments (e.g. menu.xml)
@@ -35,20 +35,20 @@ input/
 ## Workflow: adding English translations
 
 1. **Build first.** The IG Publisher generates translation templates for
-   every resource into `translations/<lang>/po/` — `translations/en/po/` for
+   every resource into `translations/<lang>/po/` — `translations/de/po/` for
    this module — at the repo root (gitignored) on each build.
 2. **Resources (profiles, extensions, value sets, …):** copy the generated
-   `.po` file into `input/translations/en/`, translate the `msgstr` lines
+   `.po` file into `input/translations/de/`, translate the `msgstr` lines
    (Poedit, any text editor, or machine translation with human review), and
    rebuild. Only some resource types and fields actually render — see the
    renders/does-not-render table in
    [`docs/recipes/add-translation.md`](../../docs/recipes/add-translation.md)
    §4 before you invest in a supplement.
 3. **Pages:** create the English page under
-   `input/translations/en/pagecontent/<same-filename>.md`; the publisher
-   matches it to the German source page in `input/pagecontent/` by file name.
+   `input/translations/de/pagecontent/<same-filename>.md`; the publisher
+   matches it to the English source page in `input/pagecontent/` by file name.
 4. **Menu:** maintain the translated `menu.xml` under
-   `input/translations/en/includes/`.
+   `input/translations/de/includes/`.
 5. **Page titles, breadcrumbs and the table of contents:** these come from the
    ImplementationGuide resource, not from the pages, so they need the IG-level
    catalogue `ImplementationGuide-<your-ig-id>.po`. This repository ships it as
@@ -59,7 +59,7 @@ input/
    `"Table of Contents"`. See
    [`docs/recipes/add-translation.md`](../../docs/recipes/add-translation.md) §5.
 
-Translations placed under `input/translations/en/` are preserved across
+Translations placed under `input/translations/de/` are preserved across
 rebuilds; everything under the repo-root `translations/` directory is
 generated output.
 

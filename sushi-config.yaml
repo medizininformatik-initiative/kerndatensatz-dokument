@@ -9,7 +9,7 @@
 # │ 2026-08-30, resolving the config-vs-guide licence contradiction).                  │
 # │                                                                                    │
 # │ DE-FIRST (meta-wiki Release-2027 "IG Umbau – DE First"): German is the             │
-# │ default language, English the translation under input/translations/en/.           │
+# │ default language, English the translation under input/translations/de/.           │
 # ╰────────────────────────────────────────────────────────────────────────────────────╯
 id: mii-ig-dokument
 # Source canonical carried unchanged (never rename a published canonical); the
@@ -146,8 +146,8 @@ dependencies:
   #  id: ihe-de.iti.xds-vs
   #  uri: https://build.fhir.org/ig/IHE-Germany/ITI.XDS.VS/package.r4.tgz
   #  version: 0.3.30
-# Page titles are GERMAN (DE-first); the English titles live in the IG-level
-# catalogue input/translations/en/ImplementationGuide-mii-ig-dokument.po.
+# Page titles are GERMAN (EN-first); the English titles live in the IG-level
+# catalogue input/translations/de/ImplementationGuide-mii-ig-dokument.po.
 # Metadata for resources that are not authored in FSH (input/resources/*.json).
 resources:
   CodeSystem/iso3166-1-fragment:
@@ -165,45 +165,45 @@ resources:
 
 pages:
   index.md:
-    title: Startseite
+    title: Home
   guidance.md:
-    title: Anleitung
+    title: Guidance
     implementer-guidance.md:
-      title: Anleitung für Implementierende
+      title: Guidance for Implementers
       kompatibilitaet.md:
-        title: Kompatibilität zu anderen Spezifikationen
+        title: Compatibility with Other Specifications
     uml-diagrams.md:
-      title: UML-Diagramme
+      title: UML Diagrams
   security-and-privacy.md:
-    title: Sicherheit und Datenschutz
+    title: Security and Privacy
   profiles.md:
-    title: Profile
+    title: Profiles
   extensions.md: # OPTIONAL (0..1) — see docs/optional-pages.md
     title: Extensions
   capability-statements.md:
-    title: CapabilityStatements
+    title: Capability Statements
   search-parameters.md:
-    title: Suchparameter
+    title: Search Parameters
   logical-models.md:
-    title: Logische Modelle
+    title: Logical Models
   value-sets.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: ValueSets
+    title: Value Sets
   code-systems.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: CodeSystems
+    title: Code Systems
   examples.md:
-    title: Beispiele
+    title: Examples
   downloads.md:
     title: Downloads
   changes.md:
-    title: Änderungshistorie
+    title: Changelog
   metadata.md: # OPTIONAL (0..1) — see docs/optional-pages.md
-    title: Metadaten-Übersicht
+    title: Metadata Overview
   version-history.md:
-    title: Versionierung
+    title: Versioning
   ImplementationGuide-mii-ig-dokument.md:
-    title: MII-ImplementationGuide-Ressource
+    title: MII ImplementationGuide Resource
   translationinfo.md:
-    title: Übersetzungsinformationen
+    title: Translation Information
 parameters:
   # Canonical URLs defined by this IG that do not start with its canonical: the three
   # build-terminology fragments (see input/resources/README.md).
@@ -215,13 +215,13 @@ parameters:
     - input/predefined-resources
   path-pages:
     - input/intro-notes # Custom introductory notes
-  # DE-FIRST: German is the default language, English the translation
+  # EN-FIRST: English is the default language, German the translation
   # (meta-wiki Release-2027; inverted from the template default).
-  i18n-default-lang: de
+  i18n-default-lang: en
   i18n-lang:
-    - en
+    - de
   translation-sources:
-    - input/translations/en
+    - input/translations/de
   excludexml: false
   excludejson: false
   excludettl: true

@@ -1,34 +1,33 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migriert aus dem Simplifier-Guide mii-ig-dokument-de, Seite
+<!-- Migrated from the Simplifier guide mii-ig-dokument-de, page
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md.
-     Diese Datei ist eine Intro-Note: der IG-Publisher rendert sie oberhalb der generierten
-     Artefaktseite StructureDefinition-mii-pr-dokument-dokument.html. Die Abschnitte
-     "Uebersicht", "Metadaten" und "Inhalt" der Quellseite entfallen, weil die Artefaktseite
-     Kopfdaten (Canonical, Status, Version, Basis) sowie Struktur-, XML- und JSON-Ansicht
-     selbst rendert.
-     Englische Fassung: input/translations/en/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md -->
+     This file is an intro note: the IG Publisher renders it above the generated artifact page
+     StructureDefinition-mii-pr-dokument-dokument.html. The source page's "Uebersicht",
+     "Metadaten" and "Inhalt" sections are gone, because the artifact page renders the header
+     data (canonical, status, version, base) and the structure, XML and JSON views itself.
+     English default page: input/intro-notes/StructureDefinition-mii-pr-dokument-dokument-intro.md -->
 
-Dieses Profil beschreibt die Metadaten zu einem klinischen Dokument. Eine ausführliche
-Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der
-[Beschreibung des Moduls](index.html).
+This profile describes the metadata of a clinical document. A detailed description and
+recommendations for using the profile can be found in the
+[module description](index.html).
 
-### Mapping Datensatz zu FHIR
+### Mapping of the dataset to FHIR
 
-Die vollständige Gegenüberstellung der Datenelemente des logischen Modells
-[MII LM Dokument](StructureDefinition-mii-lm-dokument.html) mit den Elementen dieses
-DocumentReference-Profils wird an einer einzigen Stelle gepflegt und steht auf der Seite
-[Logische Modelle](logical-models.html#mapping-auf-die-fhir-ressource).
+The complete mapping of the data elements of the logical model
+[MII LM Dokument](StructureDefinition-mii-lm-dokument.html) onto the elements of this
+DocumentReference profile is maintained in a single place and is shown on the
+[Logical Models](logical-models.html#mapping-to-the-fhir-resource) page.
 
 
-### Suchparameter
+### Search parameters
 
-Die unterstützten Suchparameter mit Beispielaufrufen stehen auf der Seite [Suchparameter](search-parameters.html); normativ festgelegt sind sie im [CapabilityStatement des Moduls](CapabilityStatement-mii-cps-dokument-capabilitystatement.html).
+The supported search parameters with example calls are on the [Search Parameters](search-parameters.html) page; the [module's CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.html) defines them normatively.
 
-### Beispiele
+### Examples
 
-Umfangreiche Beispiele, die das Profil und die Erweiterung gemeinsam veranschaulichen, sind auf
-der Seite der Erweiterung zu finden
+Extensive examples that illustrate the profile and the extension together can be found on the
+extension's page
 ([MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
 
-Eine Übersicht aller Beispielinstanzen des Moduls steht auf der Seite
-[Beispiele](examples.html).
+An overview of all example instances of the module is on the
+[Examples](examples.html) page.

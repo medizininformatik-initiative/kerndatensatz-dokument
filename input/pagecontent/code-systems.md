@@ -1,31 +1,27 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch; DE-first). Englische Übersetzung:
-     input/translations/en/pagecontent/code-systems.md (aufgeteilt aus
-     der früheren Seite terminology.md gemäß der TF-KDS-abgestimmten Menüstruktur).
-     Der IG-Publisher listet die CodeSystems auf den Artefakt-Seiten
-     automatisch; hier stehen die MII-Hinweise dazu.
-     Die Prosa der Simplifier-Seite "Terminologien" (MIIIGModulDokument/
-     TechnischeImplementierung/Terminologien) ist hier wortgetreu übernommen;
-     die render-Direktiven der Simplifier-Seite sind durch eingebettete
-     Fragmente bzw. Verweise auf die vom IG-Publisher erzeugten Artefaktseiten
-     ersetzt. Die Abschnitte zu den definierten und den verwendeten ValueSets
-     stehen auf der Seite value-sets.md. -->
+<!-- Split from the former terminology.md per the TF-KDS-agreed menu structure (one
+     page per artifact type). The IG Publisher lists the CodeSystems on the
+     artifact pages automatically; this page carries the MII notes on them.
+     The prose of the Simplifier page "Terminologien" (MIIIGModulDokument/
+     TechnischeImplementierung/Terminologien) is carried over here; the
+     Simplifier render directives are replaced by embedded fragments and by
+     links to the artifact pages the IG Publisher generates. The sections on the
+     defined and the used ValueSets live on the value-sets.md page. -->
 
-Diese Seite beschreibt die CodeSystems des Moduls **Dokument**. Die darauf
-aufbauenden ValueSets
-beschreibt die Seite [ValueSets](value-sets.html).
+This page describes the CodeSystems of the **Dokument** module. The ValueSets
+built on them are described on the [Value Sets](value-sets.html) page.
 
-> **Wichtig:** CodeSystem-Ressourcen externer Terminologien (z. B. ICD-10-GM, OPS,
-> SNOMED CT) werden in diesem Modul **nicht** publiziert, sondern über den
-> zentralen KDS-Terminologieserver (SU-TermServ) bezogen:
+> **Important:** CodeSystem resources of external terminologies (e.g. ICD-10-GM,
+> OPS, SNOMED CT) are **not** published in this module; they are obtained from the
+> central KDS terminology service (SU-TermServ):
 > [https://mii-termserv.de/](https://mii-termserv.de/).
 {: .ig-highlight .ig-highlight-blue}
 
-Der folgende Abschnitt beschreibt das modul-eigene CodeSystem; Lizenzhinweise zu externen Terminologien stehen bei den jeweiligen Herausgebern (siehe [Urheberrecht und Lizenz](index.html#urheberrecht-und-lizenz)).
+The following section describes the module's own CodeSystem; license information on external terminologies is held by the respective publishers (see [Copyright and License](index.html#copyright-and-license)).
 
 ---
 
-Modul-eigene CodeSystems, beim Build aus dem Paket gelesen (Beschreibung in der Quellsprache der Ressource):
+The module's own CodeSystems, read from the package at build time (description in the resource's source language):
 
 {% sql {
  "query" : "select distinct c.Name, r.Web, c.Status, c.Description from CodeSystemList c join Resources r on r.Key = c.ResourceKey where c.ViewType = 1 and c.Url like 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/%' order by c.Name",
@@ -33,20 +29,20 @@ Modul-eigene CodeSystems, beim Build aus dem Paket gelesen (Beschreibung in der 
  "columns" : [
   { "title" : "CodeSystem", "type" : "link", "source" : "Name", "target" : "Web" },
   { "title" : "Status", "type" : "text", "source" : "Status" },
-  { "title" : "Beschreibung", "type" : "markdown", "source" : "Description" }
+  { "title" : "Description", "type" : "markdown", "source" : "Description" }
  ]
 } %}
 
-### Klassifikation von NLP-Verarbeitungsergebnissen
+### Classification of NLP processing results
 
-Die Konzepte des CodeSystems
+The concepts of the CodeSystem
 [MII CS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html)
-zeigt die folgende Übersicht; das zugehörige ValueSet ist
+are shown below; the corresponding ValueSet is
 [MII VS Dokument NLP Processing Status](ValueSet-mii-vs-dokument-nlp-processing-status.html)
-(siehe auch die Extension
+(see also the extension
 [NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
 
-{% include CodeSystem-mii-cs-dokument-nlp-processing-status-content-de.xhtml %}
+{% include CodeSystem-mii-cs-dokument-nlp-processing-status-content-en.xhtml %}
 
-Die in diesem Modul definierten sowie die aus anderen Spezifikationen verwendeten
-ValueSets beschreibt die Seite [ValueSets](value-sets.html).
+The ValueSets defined in this module, and those used from other specifications,
+are described on the [Value Sets](value-sets.html) page.
