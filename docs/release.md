@@ -160,7 +160,7 @@ repository is:
   set is not enough.
 - **The narrative pages** — `index.md`, `changes.md`, `metadata.md` and
   `version-history.md`, and their English mirrors under
-  `input/translations/en/pagecontent/`, print the version in prose.
+  `input/translations/de/pagecontent/`, print the version in prose.
 
 > **Why keep the three `sushi-config.yaml` spots in sync:** the metadata
 > contract asserts only that `version:` itself is CalVer (M6 in

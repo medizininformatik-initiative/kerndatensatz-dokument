@@ -1,91 +1,74 @@
 <!-- markdownlint-disable MD041 MD007 -->
-<!-- MD007: die eingerueckte Standard-Liste im Abschnitt "Referenzen" ist die
-     verbatim uebernommene Einrueckung der Simplifier-Quellseite. -->
-<!-- Deutsche Standardseite (Default-Sprache des Leitfadens).
-     Englische Übersetzung: input/translations/en/pagecontent/implementer-guidance.md
-     — beide Dateien synchron halten.
-     Migriert aus dem Simplifier-Guide "MII IG Modul Dokument":
-     MIIIGModulDokument/Kontext-Bezuege.page.md,
-     MIIIGModulDokument/Referenzen.page.md und
-     MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md
-     (letztere nur ausgewertet, KEINE Prosa uebernommen: sie enthielt
-     ausschliesslich die KDS-weiten Konformitaetsregeln des Meta-Moduls —
-     "Anforderungsdokumentation" (RFC-2119-Schluesselworte), "Must Support (MS)"
-     und "Fehlende Daten". Alle drei Abschnitte deckt im Template der
-     Nur-Link-Menueeintrag "Konformitaet" ab, der direkt auf das
-     Meta-Modul-Wiki verweist (input/includes/menu.xml: #anforderungsdokumentation,
-     #must-support-ms, #fehlende-daten); die Quellseite selbst verwies fuer die
-     jeweils aktuelle Fassung ebenfalls dorthin. Eine Kopie im Modulleitfaden
-     wuerde zentral gepflegte Regeln duplizieren und veralten. -->
+<!-- MD007: the indented top-level list in the "References" section mirrors the
+     verbatim indentation carried over from the Simplifier source page. -->
 
-Fachlicher Kontext des Moduls **Dokument** für DIZ-Implementierende: die Bezüge zu den übrigen MII KDS-Modulen und die externen Standards, zu denen das Modul kompatibel gehalten wird.
+Domain context of the **Dokument** module for DIC implementers: its relationships to the other MII KDS modules and the external standards it is kept compatible with.
 
-### Kontext
+### Context
 
-Medizinische Dokumente sind entscheidend für eine umfassende Patientenversorgung, die Nachvollziehbarkeit von Diagnosen und Behandlungen sowie die Einhaltung rechtlicher und wissenschaftlicher Standards. Sie spielen auch eine wichtige Rolle bei der Abrechnung medizinischer Leistungen und unterstützen eine effiziente Ressourcenplanung im Gesundheitssystem.
+Medical documents are essential for comprehensive patient care, for the traceability of diagnoses and treatments, and for compliance with legal and scientific standards. They also play an important role in billing medical services and support efficient resource planning in the health system.
 
-Sowohl die technischen als auch inhaltlichen Anforderungen der Dokumentation im Gesundheitswesen unterliegen einer hohen Dynamik. In der Folge haben sich zwischen den Häusern große Unterschiede in Bezug auf die Informationsstrukturen entwickelt. Insbesondere die Archivierung und Auffindbarkeit gehen mit einer hohen Diversität in Bezug auf Metadaten einher.
+Both the technical and the content-related requirements of documentation in healthcare are highly dynamic. As a consequence, large differences in information structures have developed between institutions. Archiving and discoverability in particular come with a high diversity of metadata.
 
-Im Kontext der MII-Kerndatensätze wird mit dem MII KDS-Modul Dokument ein abgestimmtes, nationales Konzept eingeführt, welches sich an gängigen CodeSystemen und ValueSets orientiert und einen interoperablen Umgang mit medizinischen Dokumenten orchestriert.
+In the context of the MII core datasets, the MII KDS module Dokument introduces a harmonised, national concept that builds on established code systems and value sets and orchestrates an interoperable handling of medical documents.
 
-### Beziehung zu anderen MII KDS-Modulen
+### Relationship to Other MII KDS Modules
 
-Dieses MII KDS-Modul greift bei bestimmten Datenelementen auf existierende Vorarbeiten aus anderen MII KDS-Modulen zurück, um eine Harmonisierung zu erzielen und die Kompatibilität zu erhöhen. Im Nachfolgenden werden die Abhängigkeiten zu diesen Vorarbeiten beschrieben.
+For certain data elements, this MII KDS module builds on existing work from other MII KDS modules in order to achieve harmonisation and increase compatibility. The dependencies on that prior work are described below.
 
-| MII KDS-Modul | Beschreibung des Bezugs | Verpflichtende Nutzung |
+| MII KDS module | Description of the relationship | Mandatory use |
 |---|---|---|
-| [Person (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS-Modul Person genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS-Modul Person lediglich als optional gekennzeichnet (`subject` 0..1, Must Support). | Ja (sofern ein Patientenbezug besteht) |
-| [Fall (im Basismodul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die am besten geeignete Kontaktebene des MII KDS-Moduls Fall verwiesen werden. Diese Ebene ist typisch vom Dokumenttyp abhängig. | Nein |
+| [Person (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | The majority of medical documentation relates to patients. The MII KDS module Person is used to reference the link between patient and document. In some cases the documentation focuses on medical objects, procedures or administrative acts. That is the only reason why the reference to the MII KDS module Person is marked as optional (`subject` 0..1, Must Support). | Yes (where a patient reference exists) |
+| [Fall (in the base module)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.base) | Where the referenced document relates to an encounter with a healthcare facility, it should point directly to the most suitable level of contact of the MII KDS module Fall. That level typically depends on the document type. | No |
 
-### Nutzung durch andere MII KDS-Module
+### Use by Other MII KDS Modules
 
-Die Grundlage des MII KDS-Moduls bildet die [FHIR DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html). FHIR DocumentReferences werden bereits in anderen MII KDS-Modulen verwendet. Wir empfehlen die Umstellung auf das hier spezifizierte MII KDS-Modul.
+The MII KDS module is based on the [FHIR DocumentReference](https://www.hl7.org/fhir/R4/documentreference.html). FHIR DocumentReferences are already used in other MII KDS modules. We recommend migrating to the MII KDS module specified here.
 
-Für den Fall, dass die spezifizierten Dokumentkategorien und -typen die Anforderungen einer Domäne nicht adäquat abbilden können, ist die Nutzung weiterer Domänen-spezifischer CodeSysteme und ValueSets erlaubt.
+Should the specified document categories and types not adequately cover the requirements of a domain, the use of further domain-specific code systems and value sets is permitted.
 
-| MII KDS-Modul | Beschreibung des Bezugs | Verpflichtende Nutzung |
+| MII KDS module | Description of the relationship | Mandatory use |
 |---|---|---|
-| [Consent](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.consent) | Das MII KDS-Modul referenziert Einwilligungsdokumente in z.B. gescannter Form. Ein Fall-Bezug ist denkbar. | Nein |
-| [Studie](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.studie) | Das MII KDS-Modul referenziert Studienunterlagen. Dokumente können auch ohne Patientenbezug vorliegen. | Nein |
-| [Bildgebung](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.bildgebung) | Das MII KDS-Modul referenziert Dokumente als Ersatz für strukturierte Diagnostische Berichte. | Nein |
-| [Molgen Befund](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.molgen) | Das MII KDS-Modul referenziert eine Reihe von Dokumenttypen, die jedoch an existierende Standards gebunden sind. | Nein |
-| [Meta](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta) | Das MII KDS-Modul erweitert zahlreiche Profile um Definitionen von Suchparametern - so auch zum MII KDS-Modul Dokument. | Nein |
+| [Consent](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.consent) | The MII KDS module references consent documents, e.g. in scanned form. A relation to an encounter is conceivable. | No |
+| [Studie](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.studie) | The MII KDS module references study documents. Documents may also exist without a patient reference. | No |
+| [Bildgebung](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.bildgebung) | The MII KDS module references documents as a substitute for structured diagnostic reports. | No |
+| [Molgen Befund](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.molgen) | The MII KDS module references a number of document types which are, however, bound to existing standards. | No |
+| [Meta](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta) | The MII KDS module extends numerous profiles with search parameter definitions — including those for the MII KDS module Dokument. | No |
 
-### Referenzierte Standards
+### Referenced Standards
 
-Das MII KDS-Modul Dokument ist darauf ausgelegt, dass Instanzen folgender FHIR-basierten Standards gleichzeitig kompatibel sein können:
+The MII KDS module Dokument is designed so that instances can be compatible with the following FHIR-based standards at the same time:
 
-  * [KBV Basis-Profile mit Medizinischen Informationsobjekten (MIO)](https://simplifier.net/base1x0) – Profil zum Verweis auf externe oder angehängte Dokumente
-  * [Gematik Informationstechnische Systeme im Krankenhaus (ISiK) Dokumentenaustausch, Stufe 6](https://simplifier.net/packages/de.gematik.isik/6.0.0)  - Profil zur Abbildung erforderlicher Metadaten für den Dokumentenaustausch
-  * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - Profil zum Austausch von Gesundheitsdokumenten über mobile Anwendungen, mobile Geräte oder anderen Systemen, die ressourcen- und plattformbeschränkt sind
+  * [KBV base profiles with Medical Information Objects (MIO)](https://simplifier.net/base1x0) – profile for referencing external or attached documents
+  * [Gematik Information Technology Systems in Hospitals (ISiK) document exchange, Stufe 6](https://simplifier.net/packages/de.gematik.isik/6.0.0)  - profile for representing the metadata required for document exchange
+  * [IHE Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD) - profile for exchanging health documents via mobile applications, mobile devices or other resource- and platform-constrained systems
 
-Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Die bestehenden der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/packages/de.gematik.isik/6.0.0) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) sind bei der Modellierung bzgl. einer Widerspruchsfreiheit (siehe Seite [Kompatibilität](kompatibilitaet.html)) berücksichtigt worden. Wichtig ist hierbei zu beachten, dass eine Kompatibilität aus der klinischen Routine zu der Referenz Dokument gewährleistet werden kann, aber keine Rückwärtskompatibilität in die Routine vorgesehen ist. Siehe auch das Paketabhängigkeitsdiagramm:
+This specification follows the FHIR core specification for the [DocumentReference resource](https://www.hl7.org/fhir/R4/documentreference.html#resource). The existing profiles of the [KBV base profiles](https://simplifier.net/base1x0), of [Gematik ISiK](https://simplifier.net/packages/de.gematik.isik/6.0.0) and of [IHE MHD](https://profiles.ihe.net/ITI/MHD) were taken into account during modelling with regard to freedom from contradiction (see the [Compatibility](kompatibilitaet.html) page). It is important to note here that compatibility from clinical routine towards the Dokument reference can be ensured, but that backward compatibility into routine care is not intended. See also the package dependency diagram:
 
-[![Paketabhängigkeiten des MII KDS-Moduls Dokument](Paketabhaengigkeiten.svg)](Paketabhaengigkeiten.svg)
+[![Package dependencies of the MII KDS module Dokument](Paketabhaengigkeiten.svg)](Paketabhaengigkeiten.svg)
 
-Die im Diagramm gezeigten Pakete
-`de.medizininformatikinitiative.kerndatensatz.person` und
-`de.medizininformatikinitiative.kerndatensatz.fall` werden seit dem
-KDS-Release 2026 innerhalb des Basismoduls
-(`de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert; die
-Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
-den von der NSG freigegebenen Stand.
+The packages `de.medizininformatikinitiative.kerndatensatz.person` and
+`de.medizininformatikinitiative.kerndatensatz.fall` shown in the diagram have
+been delivered inside the base module
+(`de.medizininformatikinitiative.kerndatensatz.base`) since the KDS release
+2026; the canonical URLs of the referenced profiles are unchanged. The diagram
+shows the state approved by the NSG.
 
 
-Dadurch ist es möglich Ressourcen so zu attributieren, dass sie gleichzeitig MII KDS als auch ISiK bzw. IHE valide sind. Auch sind ISiK und IHE Module prinzipiell kompatibel, jedoch empfehlen wir in der Nutzung sowohl die Angabe des `type` (aus KDL /ISiK) und `category` (aus IHE), die keines der beides Profile ISiK, IHE gleichzeitig anbietet.
+This makes it possible to attribute resources such that they are valid against MII KDS as well as against ISiK or IHE at the same time. ISiK and IHE modules are also compatible in principle; in use, however, we recommend stating both the `type` (from KDL / ISiK) and the `category` (from IHE), which neither of the two profiles ISiK, IHE offers at the same time.
 
-Dabei wurde ein Abgleich aller Datenelemente sowie der verwendeten Terminologie durchgeführt und im [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) abgebildet. Die Kardinalitäten sind offen gestaltet, sodass in dieser Hinsicht keine (weiteren oder neuen) Einschränkungen eingeführt wurden. Die in den abgeglichenen Profilen verwendete Terminologie wurde im [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) einbezogen und abgebildet.
+In doing so, all data elements as well as the terminology used were reconciled and represented in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html). The cardinalities are kept open, so that no (further or new) restrictions were introduced in this respect. The terminology used in the reconciled profiles was incorporated and represented in the [Dokument profile](StructureDefinition-mii-pr-dokument-dokument.html).
 
-Personenbezogene Dokumente werden einer Person (Profile Patient bzw. PatientPseudonymisiert des Basismoduls) zugeordnet (`subject`, 0..1). De-Identifizierte Dokumente sind über die Sicherheitsstufe (`securityLabel`) entsprechend markiert. Die datenhaltende Stelle ist hier verantwortlich, nur auf entsprechende anonymisierte bzw. pseudonymisierte Varianten anderer MII Module zu verweisen. Wo immer möglich wird ein Fallzusammenhang (MII KDS-Modul Fall) definiert – nach Möglichkeit auf die relevanteste Ebene des Fallstufenmodells (`context.encounter`). Im Paketabhängigkeitsdiagramm (oben) sind die Zusammenhänge zwischen den MII Modulen grün dargestellt.
+Person-related documents are assigned to a person (the base module's Patient / PatientPseudonymisiert profiles) (`subject`, 0..1). De-identified documents are marked accordingly via the security level (`securityLabel`). The data-holding site is responsible here for referencing only the corresponding anonymised or pseudonymised variants of other MII modules. Wherever possible, an encounter relation (MII KDS module Fall) is defined – where feasible at the most relevant level of the encounter-level model (`context.encounter`). In the package dependency diagram (above), the relationships between the MII modules are shown in green.
 
-Wir empfehlen den auch in ISiK verwendeten [DVMD KDL-Standard](https://simplifier.net/kdl) für die präzise Typbeschreibung (`type`) sowie die [IHE XDS Class-Codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) für die gröbere Dokumentkategorie (`category`) zu verwenden. [IHE XDS Type- und Class-Codes können eindeutig aus KDL hergeleitet werden.](https://simplifier.net/kdl/~resources?category=ConceptMap) Weitere Kodierungen wie Hauscodes, SNOMED CT oder LOINC sind optional möglich.
+We recommend the [DVMD KDL standard](https://simplifier.net/kdl), which is also used in ISiK, for the precise type description (`type`), as well as the [IHE XDS class codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) for the coarser document category (`category`). [IHE XDS type and class codes can be derived unambiguously from KDL.](https://simplifier.net/kdl/~resources?category=ConceptMap) Further codings such as in-house codes, SNOMED CT or LOINC are optionally possible.
 
 ---
 
-Die feldweise Gegenüberstellung zu ISiK Dokumentenaustausch, KBV MIO Basis und
-IHE MHD steht auf der Seite [Kompatibilität](kompatibilitaet.html); die
-technischen Artefakte des Moduls finden sich unter [Profile](profiles.html).
-Die KDS-weiten Konformitätsanforderungen (Anforderungssprache, Must-Support,
-Umgang mit fehlenden Daten) pflegt zentral das
-[Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
-sie gelten für dieses Modul unverändert.
+The field-by-field comparison with ISiK document exchange, KBV MIO Basis and
+IHE MHD is on the [Compatibility](kompatibilitaet.html) page; the module's
+technical artifacts are under [Profiles](profiles.html). The KDS-wide
+conformance requirements (requirement language, Must Support, handling of
+missing data) are maintained centrally by the
+[Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance);
+they apply to this module unchanged.

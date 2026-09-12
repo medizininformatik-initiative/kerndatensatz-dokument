@@ -19,7 +19,7 @@
 #
 # WHAT IT TOUCHES
 #   sushi-config.yaml, ig.ini and every build input under input/ — contents AND
-#   file names (input/translations/en/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po
+#   file names (input/translations/de/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.po
 #   must be RENAMED as well as substituted, or the publisher silently ignores it
 #   and English pages fall back to German titles). Nothing is ever committed:
 #   the workflows do not push source.

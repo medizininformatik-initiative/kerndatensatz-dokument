@@ -1,56 +1,61 @@
 <!-- markdownlint-disable MD041 -->
-Diese Seite führt die Beispielinstanzen des Moduls **Dokument** auf.
+<!-- Source: kerndatensatz-basis input/pagecontent/examples.md. -->
+This page lists the example instances of the **Dokument** module.
 
-> **Nur synthetische Daten** — niemals echte oder realistisch wirkende
-> Patientendaten in Beispielen verwenden.
+> **Synthetic data only** — never use real or realistic-looking patient data in
+> examples.
 {: .ig-highlight .ig-highlight-orange}
 
-### Beispielszenario: NLP-Pipeline „Amanda Alzheimer“
+### Example scenario: "Amanda Alzheimer" NLP pipeline
 
-Das folgende Beispiel illustriert die Verarbeitung eines *ärztlichen Entlassbriefes* der Patientin *Amanda Alzheimer* durch eine NLP-Pipeline (siehe Abbildung). Nach der Erschließung (`Ingestion`) des Originaldokuments `Amanda_Alzheimer.docx` wird eine Dokumentreferenz mit dem NLP-Verarbeitungsstatus `unprocessed` angelegt. Anschließend wird das Dokument durch eine Vorverarbeitung (`Preprocessing`) in das Klartextformat `Amanda_Alzheimer.txt` überführt. Die zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus `preprocessed, format-change` und verweist mittels `transforms` auf das Originaldokument. Anschließend wird eine De-Identifikation (`De-Identification`) der Inhalte durchgeführt, um das Ergebnisdokument `De-ID.txt` datenschutzkonform für Forschungszwecke weiterverwenden zu können. Eine zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus `preprocessed, format-change, surrogated` und verweist mittels `transforms` auf das Klartextdokument. Abschließend werden die klinischen Inhalte annotiert, was unter Umständen mehrere Ergebnisdateien produziert und sich als Archiv `Annotat.zip` zusammenfassen lassen. Die zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus durch die akkumulierten Codes der vorangegangenen Stufen als `[annotated, semantic], surrogated, [preprocessed, format-change]` und erweitert mittels `appends` die Dokumentreferenz des vorherigen NLP-Verarbeitungsschritts.
+The following example illustrates the processing of a *physician's discharge letter* of the patient *Amanda Alzheimer* by an NLP pipeline (see figure). After the ingestion (`Ingestion`) of the original document `Amanda_Alzheimer.docx`, a document reference with the NLP processing status `unprocessed` is created. The document is then converted by a preprocessing step (`Preprocessing`) into the plain-text format `Amanda_Alzheimer.txt`. The corresponding document reference marks the NLP processing status `preprocessed, format-change` and points to the original document by means of `transforms`. Afterwards a de-identification (`De-Identification`) of the contents is carried out so that the resulting document `De-ID.txt` can be reused for research purposes in a data-protection-compliant way. A corresponding document reference marks the NLP processing status `preprocessed, format-change, surrogated` and points to the plain-text document by means of `transforms`. Finally the clinical contents are annotated, which may produce several result files that can be combined into the archive `Annotat.zip`. The corresponding document reference marks the NLP processing status through the accumulated codes of the preceding stages as `[annotated, semantic], surrogated, [preprocessed, format-change]` and, by means of `appends`, extends the document reference of the previous NLP processing step.
 
-[![Ablaufdiagramm der NLP-Pipeline: Ingestion, Preprocessing, De-Identification und Annotation mit den jeweils entstehenden Dokumentreferenzen](NLP-Pipeline.svg)](NLP-Pipeline.svg)
+[![Flow diagram of the NLP pipeline: ingestion, preprocessing, de-identification and annotation with the document references created at each step](NLP-Pipeline.svg)](NLP-Pipeline.svg)
 
-_Bitte beachten_: Mit dem Element `relatesTo` können Beziehungen zwischen den unterschiedlichen Referenzen eines Dokumentes hergestellt werden. Die Codebezeichnungen `transforms` und `appends` bezeichnen hierbei die Art der Beziehung:
+_Please note_: with the element `relatesTo`, relationships between the different references of a document can be established. The code designations `transforms` and `appends` denote the kind of relationship:
 
-- `transforms`: Dieses Dokument hat seinen Ursprung im relationierten Original aber wurde inhaltlich oder strukturell verändert. Zum Beispiel wenn ein Original Dokument im CDA-Format in ein Textformat übertragen wurde.
-- `appends`: Dieses Dokument basiert auf dem relationierten Dokument, enthält aber zusätzliche Informationen wie z.B. Annotation in Form von Metadaten erhalten.
+- `transforms`: this document originates from the related original but has been changed in content or structure. For example, when an original document in CDA format has been converted into a text format.
+- `appends`: this document is based on the related document but contains additional information, for example annotations in the form of metadata.
 
-#### Beispielinstanzen
+#### Example instances
 
-Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil ([MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)), um die Ergebnisdokumente und die zugehörigen Dokumentreferenzen jedes Verarbeitungsschrittes der NLP-Pipeline darzustellen.
+The following FHIR DocumentReference resources used the document profile ([MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)) to represent the result documents and the associated document references of each processing step of the NLP pipeline.
 
-| Beispiel | Ressource | Pipeline-Schritt | Ergebnisdokument |
+| Example | Resource | Pipeline step | Result document |
 | --- | --- | --- | --- |
-| [Original-Dokument](DocumentReference-AmandaAlzheimerOriginalDokument.html) | DocumentReference | Ingestion (Original) | `Amanda_Alzheimer.docx` |
-| [Klartext-Dokument](DocumentReference-AmandaAlzheimerKlartextDokument.html) | DocumentReference | Preprocessing (Klartext-Extraktion) | `Amanda_Alzheimer.txt` |
-| [De-identifiziertes Dokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) | DocumentReference | De-Identification | `De-ID.txt` |
-| [Annotiertes Dokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) | DocumentReference | Annotation | `Annotat.zip` |
-| [Patientin](Patient-AmandaAlzheimer.html) | Patient | Kontext | – |
-| [Einrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.html) | Encounter | Kontext | – |
-| [Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html) | Encounter | Kontext | – |
-| [Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) | Encounter | Kontext | – |
+| [Original document](DocumentReference-AmandaAlzheimerOriginalDokument.html) | DocumentReference | Ingestion (original) | `Amanda_Alzheimer.docx` |
+| [Plain-text document](DocumentReference-AmandaAlzheimerKlartextDokument.html) | DocumentReference | Preprocessing (plain-text extraction) | `Amanda_Alzheimer.txt` |
+| [De-identified document](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html) | DocumentReference | De-identification | `De-ID.txt` |
+| [Annotated document](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html) | DocumentReference | Annotation | `Annotat.zip` |
+| [Patient](Patient-AmandaAlzheimer.html) | Patient | Context | – |
+| [Facility encounter](Encounter-AmandaAlzheimerEinrichtungskontakt.html) | Encounter | Context | – |
+| [Department encounter](Encounter-AmandaAlzheimerAbteilungskontakt.html) | Encounter | Context | – |
+| [Care-unit encounter](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html) | Encounter | Context | – |
 
-#### Ablauf als ExampleScenario
+#### The pipeline as an ExampleScenario
 
-Die Pipeline ist zusätzlich als FHIR-Ressource [ExampleScenario „NLP-Pipeline Amanda Alzheimer“](ExampleScenario-NlpPipelineAmandaAlzheimer.html) modelliert: Akteure (Dokumentenquelle, NLP-Pipeline, Annotierende, Dokumentenrepository), die Verarbeitungsschritte der Pipeline und die Ablage ihrer Ergebnisse als Dokumentreferenzen im Repository sowie die beteiligten Instanzen, die auf die Beispielressourcen oben verweisen. Das Repository transformiert nichts; die Dokumentreferenzen dokumentieren die Ergebnisse und verknüpfen sie. Der IG Publisher erzeugt daraus das folgende Sequenzdiagramm und die Prozesstabelle.
+The pipeline is also modelled as a FHIR resource, [ExampleScenario "NLP pipeline Amanda Alzheimer"](ExampleScenario-NlpPipelineAmandaAlzheimer.html): actors (document source, NLP pipeline, annotators, document repository), the pipeline's processing steps and the filing of their results as document references in the repository, and the participating instances, which link to the example resources above. The repository transforms nothing; the document references document the results and link them. The IG Publisher generates the sequence diagram and the process table below from it.
 
-{% capture exs_diagram %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-de.xhtml %}{% endcapture %}
-{% comment %} The publisher renders the ExampleScenario fragments with English labels regardless of the page language (not internationalized in publisher 2.3.2); the replace chains below map them to German on this page. PlantUML writes XML processing instructions (<?plantuml …?>, <?plantuml-src …?>) before the <svg>; browsers show them as text — keep only the SVG {% endcomment %}
+{% capture exs_diagram %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-process-diagram-en.xhtml %}{% endcapture %}
+{% comment %} PlantUML writes XML processing instructions (<?plantuml …?>, <?plantuml-src …?>) before the <svg>; browsers show them as text — keep only the SVG {% endcomment %}
 {{ exs_diagram | split: '<svg' | last | prepend: '<svg' | split: '</svg>' | first | append: '</svg>' }}
 
-{% capture exs_actor_table %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-actor-table-de.xhtml %}{% endcapture %}
-{{ exs_actor_table | replace: '>Step<', '>Schritt<' | replace: '>Description<', '>Beschreibung<' | replace: '>Receiver<', '>Empfänger<' | replace: '>Request<', '>Anfrage<' | replace: '>Response<', '>Antwort<' | replace: '>Type<', '>Typ<' | replace: '>Content<', '>Inhalt<' | replace: 'Process:', 'Prozess:' | replace: 'Pre-conditions:', 'Vorbedingungen:' | replace: 'Post-conditions:', 'Nachbedingungen:' }}
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-actor-table-en.xhtml %}
 
-{% capture exs_processes %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-processes-de.xhtml %}{% endcapture %}
-{{ exs_processes | replace: '>Step<', '>Schritt<' | replace: '>Description<', '>Beschreibung<' | replace: '>Receiver<', '>Empfänger<' | replace: '>Request<', '>Anfrage<' | replace: '>Response<', '>Antwort<' | replace: '>Type<', '>Typ<' | replace: '>Content<', '>Inhalt<' | replace: 'Process:', 'Prozess:' | replace: 'Pre-conditions:', 'Vorbedingungen:' | replace: 'Post-conditions:', 'Nachbedingungen:' }}
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-processes-en.xhtml %}
 
-{% capture exs_instance_table %}{% include ExampleScenario-NlpPipelineAmandaAlzheimer-instance-table-de.xhtml %}{% endcapture %}
-{{ exs_instance_table | replace: '>Step<', '>Schritt<' | replace: '>Description<', '>Beschreibung<' | replace: '>Receiver<', '>Empfänger<' | replace: '>Request<', '>Anfrage<' | replace: '>Response<', '>Antwort<' | replace: '>Type<', '>Typ<' | replace: '>Content<', '>Inhalt<' | replace: 'Process:', 'Prozess:' | replace: 'Pre-conditions:', 'Vorbedingungen:' | replace: 'Post-conditions:', 'Nachbedingungen:' }}
+{% include ExampleScenario-NlpPipelineAmandaAlzheimer-instance-table-en.xhtml %}
 
-#### DocumentReference-Ressourcen der Pipeline
+The actor, process and instance tables above are generated by the IG Publisher and
+render in German: the resource carries English translations for every name and
+description, but the publisher's ExampleScenario renderer does not yet apply
+translation extensions. Consumers reading the resource from the package do get the
+English text.
+{: .ig-highlight .ig-highlight-grey}
 
-Jede Registerkarte zeigt die JSON-Darstellung der Dokumentreferenz eines Verarbeitungsschritts; die Artefaktseite ist jeweils verlinkt.
+#### DocumentReference resources of the pipeline
+
+Each tab shows the JSON representation of one processing step's document reference; the artifact page is linked in each.
 
 <div class="structure-tabs">
   <ul class="nav nav-tabs" role="tablist">
@@ -62,55 +67,55 @@ Jede Registerkarte zeigt die JSON-Darstellung der Dokumentreferenz eines Verarbe
   <div class="tab-content">
     <div class="tab-pane active" id="ex-doc-0" role="tabpanel">
       <p><a href="DocumentReference-AmandaAlzheimerOriginalDokument.html">AmandaAlzheimerOriginalDokument</a> (DocumentReference)</p>
-      {% include DocumentReference-AmandaAlzheimerOriginalDokument-json-html-de.xhtml %}
+      {% include DocumentReference-AmandaAlzheimerOriginalDokument-json-html-en.xhtml %}
     </div>
     <div class="tab-pane" id="ex-doc-1" role="tabpanel">
       <p><a href="DocumentReference-AmandaAlzheimerKlartextDokument.html">AmandaAlzheimerKlartextDokument</a> (DocumentReference)</p>
-      {% include DocumentReference-AmandaAlzheimerKlartextDokument-json-html-de.xhtml %}
+      {% include DocumentReference-AmandaAlzheimerKlartextDokument-json-html-en.xhtml %}
     </div>
     <div class="tab-pane" id="ex-doc-2" role="tabpanel">
       <p><a href="DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html">AmandaAlzheimerDeIdentifiziertesDokument</a> (DocumentReference)</p>
-      {% include DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument-json-html-de.xhtml %}
+      {% include DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument-json-html-en.xhtml %}
     </div>
     <div class="tab-pane" id="ex-doc-3" role="tabpanel">
       <p><a href="DocumentReference-AmandaAlzheimerAnnotiertesDokument.html">AmandaAlzheimerAnnotiertesDokument</a> (DocumentReference)</p>
-      {% include DocumentReference-AmandaAlzheimerAnnotiertesDokument-json-html-de.xhtml %}
+      {% include DocumentReference-AmandaAlzheimerAnnotiertesDokument-json-html-en.xhtml %}
     </div>
   </div>
 </div>
 
-#### Patient- und Encounter-Ressourcen
+#### Patient and Encounter resources
 
-Die zum Beispiel gehörenden FHIR Patienten- und Fall-Ressourcen werden ausschließlich vom
-Originaldokument `Amanda_Alzheimer.docx` und der zugehörigen Dokumentreferenz verwendet.
+The patient and encounter resources belonging to the example are used exclusively by the
+original document `Amanda_Alzheimer.docx` and its associated document reference.
 
 <div class="structure-tabs">
   <ul class="nav nav-tabs" role="tablist">
     <li class="active" role="presentation"><a href="#ex-ctx-0" data-toggle="tab" role="tab">Amanda Alzheimer</a></li>
-    <li role="presentation"><a href="#ex-ctx-1" data-toggle="tab" role="tab">Einrichtungskontakt</a></li>
-    <li role="presentation"><a href="#ex-ctx-2" data-toggle="tab" role="tab">Abteilungskontakt</a></li>
-    <li role="presentation"><a href="#ex-ctx-3" data-toggle="tab" role="tab">Versorgungsstellenkontakt</a></li>
+    <li role="presentation"><a href="#ex-ctx-1" data-toggle="tab" role="tab">Facility encounter</a></li>
+    <li role="presentation"><a href="#ex-ctx-2" data-toggle="tab" role="tab">Department encounter</a></li>
+    <li role="presentation"><a href="#ex-ctx-3" data-toggle="tab" role="tab">Care-unit encounter</a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="ex-ctx-0" role="tabpanel">
       <p><a href="Patient-AmandaAlzheimer.html">AmandaAlzheimer</a> (Patient)</p>
-      {% include Patient-AmandaAlzheimer-json-html-de.xhtml %}
+      {% include Patient-AmandaAlzheimer-json-html-en.xhtml %}
     </div>
     <div class="tab-pane" id="ex-ctx-1" role="tabpanel">
       <p><a href="Encounter-AmandaAlzheimerEinrichtungskontakt.html">AmandaAlzheimerEinrichtungskontakt</a> (Encounter)</p>
-      {% include Encounter-AmandaAlzheimerEinrichtungskontakt-json-html-de.xhtml %}
+      {% include Encounter-AmandaAlzheimerEinrichtungskontakt-json-html-en.xhtml %}
     </div>
     <div class="tab-pane" id="ex-ctx-2" role="tabpanel">
       <p><a href="Encounter-AmandaAlzheimerAbteilungskontakt.html">AmandaAlzheimerAbteilungskontakt</a> (Encounter)</p>
-      {% include Encounter-AmandaAlzheimerAbteilungskontakt-json-html-de.xhtml %}
+      {% include Encounter-AmandaAlzheimerAbteilungskontakt-json-html-en.xhtml %}
     </div>
     <div class="tab-pane" id="ex-ctx-3" role="tabpanel">
       <p><a href="Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html">AmandaAlzheimerVersorgungsstellenKontakt</a> (Encounter)</p>
-      {% include Encounter-AmandaAlzheimerVersorgungsstellenKontakt-json-html-de.xhtml %}
+      {% include Encounter-AmandaAlzheimerVersorgungsstellenKontakt-json-html-en.xhtml %}
     </div>
   </div>
 </div>
 
-Alle Beispiele sind vollständig synthetisch.
+All examples are fully synthetic.
 
-Quelle: [GraSCCo Datensatz, DOI (Zenodo): 10.5281/zenodo.6539130](https://doi.org/10.5281/zenodo.6539130)
+Source: [GraSCCo dataset, DOI (Zenodo): 10.5281/zenodo.6539130](https://doi.org/10.5281/zenodo.6539130)

@@ -66,7 +66,7 @@ survived the probe build:
    - Part of one example instance → `{% fragment %}`.
    - Something across several artifacts → `{% sql %}`.
 2. **Write the directive** into any page under `input/pagecontent/`, and mirror
-   it into the English twin under `input/translations/en/pagecontent/`.
+   it into the German twin under `input/translations/de/pagecontent/`.
 
    To *show* a directive rather than run it, see
    [Escaping a directive](#escaping-a-directive) below — which escape is correct
@@ -136,7 +136,7 @@ artifact name, is handled separately a few lines below, at
 [line 6145](https://github.com/HL7/fhir-ig-publisher/blob/1521577ee46cd28950e6416987f9a2b2eaa55fc3/org.hl7.fhir.publisher.core/src/main/java/org/hl7/fhir/igtools/publisher/PublisherGenerator.java#L6145).
 Four of the eight have a guidance page: `sql`, `fragment`, `json` and
 `multi-map`. Three appear in no guidance page at all — `class-diagram`,
-`lang-fragment` and `dataset` are implemented but undocumented. Measured with publisher 2.3.2 on this module (2026-09-04): `{% lang-fragment X.xhtml %}` is rewritten to `{% include X-en.xhtml %}` on **every** page, German ones included — so this module includes generated fragments with an explicit language suffix instead (`X-de.xhtml` on the German page, `X-en.xhtml` on its English twin; the publisher writes both plus a suffix-less third variant). Note also that the publisher's `-de` fragments carry English rendering phrases ("Search Parameters", "Supported") — the `-de`/`-en` variants differ only in their `Language:` line; that localization gap is the publisher's, not the guide's. The eighth is
+`lang-fragment` and `dataset` are implemented but undocumented. Measured with publisher 2.3.2 on this module (2026-09-04): `{% lang-fragment X.xhtml %}` is rewritten to `{% include X-en.xhtml %}` on **every** page, German ones included — so this module includes generated fragments with an explicit language suffix instead (`X-de.xhtml` on the German page, `X-en.xhtml` on its German twin; the publisher writes both plus a suffix-less third variant). Note also that the publisher's `-de` fragments carry English rendering phrases ("Search Parameters", "Supported") — the `-de`/`-en` variants differ only in their `Language:` line; that localization gap is the publisher's, not the guide's. The eighth is
 the odd one out, below.
 
 **A second silent gap, inside a keyword that does work.** `{% fragment %}`

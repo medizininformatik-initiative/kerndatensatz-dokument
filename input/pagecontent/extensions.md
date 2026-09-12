@@ -1,20 +1,18 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch; DE-first). Englische Übersetzung:
-     input/translations/en/pagecontent/extensions.md (aufgeteilt aus
-     der früheren Kombi-Seite profiles-and-extensions.md). -->
+<!-- Split from the former combined profiles-and-extensions.md per the TF-KDS-agreed
+     menu structure (one page per artifact type). -->
 
-Diese Seite listet die FHIR-Extensions, die das Modul **Dokument**
-definiert. Extensions transportieren
-Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die
-Profile, die sie verwenden, stehen auf der Seite [Profile](profiles.html).
+This page lists the FHIR extensions defined by the **Dokument** module
+Extensions carry information the
+base resources and profiles cannot express; the profiles that use them are on
+the [Profiles](profiles.html) page.
 
-Das Modul definiert eine Extension: die
+The module defines one extension: the
 [NLP Processing Status Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
-(`MII_EX_Dokument_NLP_Processing_Status`) zum Verarbeitungsstatus eines
-Dokuments in einer NLP-Pipeline. Die fachliche Beschreibung steht direkt auf
-der Artefakt-Seite; die Beispiele der Pipeline auf der Seite
-[Beispiele](examples.html).
+(`MII_EX_Dokument_NLP_Processing_Status`) carrying the processing status of a
+document in an NLP pipeline. The description lives on the artifact page; the
+pipeline examples on the [Examples](examples.html) page.
 
-### Struktur der Extension
+### Extension structure
 
-{% include structure-tabs.html artifact="StructureDefinition-mii-ex-dokument-nlp-processing-status" lang="de" %}
+{% include structure-tabs.html artifact="StructureDefinition-mii-ex-dokument-nlp-processing-status" lang="en" %}

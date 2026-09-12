@@ -1,101 +1,89 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch; DE-first). Englische Übersetzung:
-     input/translations/en/pagecontent/security-and-privacy.md.
-     Aufgebaut in den abgestimmten DREI Stufen: (1) das übergreifende
-     übergreifende Datenschutzkonzept, (2) DIMP im Datenportal, (3) die
-     modul-spezifischen Aspekte. Stufen 1 und 2 sind statischer übergreifender
-     Inhalt — behalten; Stufe 3 füllt Ihr Modul aus. Beide Sprachfassungen
-     müssen dasselbe aussagen. -->
 
 
-Dieser Abschnitt richtet sich an Sicherheits- und Datenschutz-Fachleute.
-Allgemeine Anforderungen stehen in der FHIR-Kernspezifikation —
-[Security & Privacy Module](http://hl7.org/fhir/R4/secpriv-module.html) und die
-[Security-Checkliste](http://hl7.org/fhir/R4/security.html). Diese Seite
-wiederholt sie nicht; sie verlinkt den übergreifenden Datenschutzrahmen und nennt,
-was **für dieses Modul spezifisch** ist.
+This section addresses security and privacy experts. General requirements are in
+the FHIR core specification —
+[Security & Privacy Module](http://hl7.org/fhir/R4/secpriv-module.html) and the
+[security checklist](http://hl7.org/fhir/R4/security.html). This page does not
+repeat them; it links the overarching data protection framework and states what is
+**specific to this module**.
 
-### Das übergreifende Datenschutzkonzept
+### The overarching data protection concept
 
-Das
-[übergreifende Datenschutzkonzept der Medizininformatik-Initiative](https://www.medizininformatik-initiative.de/de/datenschutzkonzept)
-regelt, wie Patientendaten über das Netz der Datenintegrationszentren hinweg
-für die Forschung verarbeitet werden
-dürfen: die Rechtsgrundlage (der Broad Consent der MII), die Rollen der
-Datenintegrationszentren und der Use-&-Access-Committees sowie die
-standortübergreifenden Anwendungsszenarien (Machbarkeitsanfragen, verteilte
-Analysen, Daten- und Bioproben-Bereitstellung). Alles, was dieses Modul
-spezifiziert, bewegt sich innerhalb dieses Rahmens — dieser Leitfaden fügt
-keinen eigenen Verarbeitungszweck hinzu.
+The
+[overarching data protection concept of the Medical Informatics Initiative](https://www.medizininformatik-initiative.de/en/data-protection-concept)
+governs how patient data may be processed for research across the network of
+Data Integration Centers: it
+covers the legal basis (the MII Broad Consent), the roles of the Data
+Integration Centers and Use & Access Committees, and the cross-site application
+scenarios (feasibility queries, distributed analyses, data and biosample
+provision). Everything this module specifies operates inside that framework —
+this guide adds no processing purpose of its own.
 
-### De-Identifikation, Minimierung und Pseudonymisierung (DIMP)
+### De-identification, minimisation and pseudonymisation (DIMP)
 
-Wie Daten, die ein Datenintegrationszentrum verlassen, praktisch
-de-identifiziert werden, spezifiziert
+How data leaving a Data Integration Center is de-identified in practice is
+specified by
 [DIMP (De-Identification — Minimisation — Pseudonymisation)](https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html)
-in der Dokumentation des Datenportals: direkte Identifikatoren werden
-entfernt, vom genehmigten Projekt nicht benötigte Datenelemente entfallen, und
-identifizierende Werte werden durch projektspezifische Pseudonyme ersetzt
-(FHIR-Pseudonymizer-Konfiguration). Die Profile dieses Moduls beschreiben die
-Daten *vor* Anwendung von DIMP; welche Elemente eine konkrete
-Datenbereitstellung erreicht, entscheidet je Projekt die DIMP-Konfiguration,
-nicht dieser Leitfaden.
+in the data portal documentation: direct identifiers are removed,
+data elements not needed by the approved project are dropped, and identifying
+values are replaced by project-specific pseudonyms (FHIR Pseudonymizer
+configuration). The profiles of this module describe data *before* DIMP is
+applied; which elements reach a concrete data provision is decided per project
+by the DIMP configuration, not by this guide.
 
-### Modul-spezifische Aspekte
+### Module-specific aspects
 
-Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
-Datenschutz-Eigenschaften, die aus der *Art der Daten dieses Moduls* folgen.
+This is the module's own contribution: the security and privacy properties
+that follow from the *kind of data this module carries*.
 
-Die folgenden modulspezifischen Aspekte wurden aus dem Profil und den
-Modulbeschreibungen abgeleitet (Slices `Binaerdaten`/`Verweis`,
-NLP-Processing-Status, `relatesTo`-Verarbeitungsketten).
+The following module-specific aspects were derived from the profile and the
+module descriptions (slices `Binaerdaten`/`Verweis`, NLP processing status,
+`relatesTo` processing chains).
 
-Dieses Modul transportiert — anders als rein strukturierte KDS-Module — über
-`content.attachment` auch den **Dokumentkörper selbst**. Daraus folgen eigene
-Aspekte:
+Unlike purely structured KDS modules, this module also carries the **document
+body itself** via `content.attachment`. This raises aspects of its own:
 
-**Freitext ist die sensibelste Datenkategorie dieses Moduls.** Der Textkörper
-eines Dokuments kann vielfältige identifizierende Daten und/oder Metadaten
-(z.B. Namen, Patienten-ID) enthalten, die eine strukturierte
-Pseudonymisierung nicht erfasst. Werkzeuge der DIMP-Kette arbeiten auf
-strukturierten Elementen; der Inhalt eines Anhangs bleibt davon unberührt.
+**Free text is this module's most sensitive data category.** A document's
+body can contain a wide range of identifying data and/or metadata (e.g.
+names, patient IDs) that structured pseudonymization does not touch. Tools
+in the DIMP chain operate on structured elements; the content of an
+attachment is not covered by it.
 
-**Einbettung vs. Verweis.** Das Profil erlaubt beide Transportwege für den
-Dokumentkörper: eingebettet als Base64 (`content.attachment.data`, Slice
-`Binaerdaten`) oder als lokal aufzulösender Verweis (`content.attachment.url`,
-Slice `Verweis`). Soweit das Dokument **medizinische oder identifizierende
-Daten zu Patient:innen oder Behandlung** enthält, SOLLTE der Dokumentkörper
-bei einer Datenbereitstellung über das Forschungsdatenportal für Gesundheit
-(FDPG) bzw. in UAC-geprüften Projekten NICHT eingebettet werden: eingebettete
-Inhalte durchlaufen jede Verarbeitungs- und Weitergabestufe mit und entziehen
-sich der Zugriffskontrolle des Dokumentenspeichers. Der Verweis (`Verweis`)
-belässt die Auflösung dagegen unter der Kontrolle der datenhaltenden Stelle
-(DIZ) und kann dort DIMP-konform gefiltert und protokolliert werden. Für
-Dokumente ohne solche Inhalte — etwa vollständig surrogierte Fassungen —
-gilt diese Einschränkung nicht.
+**Embedding vs. reference.** The profile permits both transport forms for the
+document body: embedded as Base64 (`content.attachment.data`, slice
+`Binaerdaten`) or as a locally resolvable reference (`content.attachment.url`,
+slice `Verweis`). Where the document contains **medical or identifying data
+about patients or treatment**, the document body SHOULD NOT be embedded when
+data is provided via the German Portal for Medical Research Data (FDPG) or in
+UAC-approved projects: embedded content travels through every processing and
+transfer stage and escapes the document store's access control. A reference
+(`Verweis`) keeps resolution under the control of the data-holding site (DIZ),
+where it can be filtered and logged in conformance with DIMP. Documents
+without such content — for example fully surrogated versions — are not
+affected by this restriction.
 
-**De-Identifikationsstatus explizit kennzeichnen.** Eine erfolgte
-De-Identifizierung wird über geeignete `securityLabel` und/oder die
-[NLP-Processing-Status-Extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
-(die vier übergeordneten Codes `unprocessed`, `preprocessed`, `annotated`,
-`surrogated` — `preprocessed` und `annotated` jeweils mit den Lvl-2-Codes
-`format-change`/`content-change` bzw. `preanno`/`deid`/`semantic`)
-ausgedrückt. Die datenhaltende Stelle ist verantwortlich, für
-Forschungszwecke ausschließlich auf anonymisierte bzw. pseudonymisierte
-Varianten zu verweisen (`subject` → das pseudonymisierte Patient-Profil des
-Basismoduls; für `context.encounter` existiert keine pseudonymisierte
-Variante im Basismodul).
+**Mark the de-identification status explicitly.** Completed de-identification
+is expressed via suitable `securityLabel` values and/or the
+[NLP Processing Status extension](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
+(the four top-level codes `unprocessed`, `preprocessed`, `annotated`,
+`surrogated` — `preprocessed` and `annotated` each with the level-2 codes
+`format-change`/`content-change` and `preanno`/`deid`/`semantic`
+respectively). The
+data-holding site is responsible for referencing only anonymized or
+pseudonymized variants for research purposes (`subject` → the base module's
+pseudonymized Patient profile; `context.encounter` has no pseudonymized
+variant in the base module).
 
-**Verarbeitungsketten können Re-Identifizierungspfade öffnen.** Die
-NLP-Pipeline verknüpft Original-, Klartext-, de-identifizierte und annotierte
-Fassungen über `relatesTo` (`transforms`/`appends`). Bei einer
-Datenbereitstellung dürfen de-identifizierte bzw. surrogierte Dokumente nicht
-zusammen mit auflösbaren Verweisen auf ihre Originalfassungen ausgeliefert
-werden — die Kette hebt die De-Identifizierung sonst auf.
+**Processing chains can open re-identification paths.** The NLP pipeline
+links original, plain-text, de-identified and annotated versions via
+`relatesTo` (`transforms`/`appends`). A data provision must not deliver
+de-identified or surrogated documents together with resolvable references to
+their original versions — otherwise the chain undoes the de-identification.
 
-**Auch Metadaten können quasi-identifizierend sein.** Einrichtungsart,
-Fachgebiet, Zeitstempel und Kontaktbezüge erlauben in Kombination
-Rückschlüsse; welche Metadatenelemente eine konkrete Datenbereitstellung
-erreicht, entscheidet die projektspezifische DIMP-Konfiguration.
+**Metadata can be quasi-identifying too.** Facility type, practice setting,
+timestamps and encounter references allow inferences in combination; which
+metadata elements reach a concrete data provision is decided by the
+project-specific DIMP configuration.
 
 

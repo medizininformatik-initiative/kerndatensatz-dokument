@@ -17,13 +17,13 @@ Dieses Repository ist auf das
 [mii-kds-module-template](https://github.com/medizininformatik-initiative/mii-kds-module-template)
 migriert (IG Publisher statt Simplifier-Rendering; Migration:
 `migration-log/migration-report.md`). Deutsch ist die Standardsprache des
-Guides, Englisch die Übersetzung unter `input/translations/en/`.
+Guides, Englisch die Übersetzung unter `input/translations/de/`.
 
 | Pfad | Inhalt |
 | --- | --- |
 | `input/fsh/` | FSH-Quellen (Profile, Extensions, Terminologien, Beispiele) |
 | `input/pagecontent/` | Guide-Seiten (deutsch, Standardsprache) |
-| `input/translations/en/` | Englische Übersetzungen |
+| `input/translations/de/` | Deutsche Übersetzungen (das Englische ist die Standardsprache) |
 | `fsh-generated/` | Von SUSHI generierte FHIR-Ressourcen |
 | `docs/` | Arbeitsdokumentation des Moduls (Konzepte, Rezepte, CI, Release) — aus dem Modul-Template übernommen |
 

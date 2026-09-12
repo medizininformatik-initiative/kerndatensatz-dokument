@@ -30,7 +30,9 @@
    * name 1..* MS
    * birthDate 1..1 MS
    ```
-   `Title` and `Description` are authored in **German**, the IG's default
+   `Title` and `Description` follow the MII naming conventions, which prefer
+   German wording for a conformance resource, independently of which language
+   the narrative guide renders in.
    language; English goes in additively via the `Translation` RuleSet, as the
    starter shows.
    > **Why start terminology-light:** a profile that binds to external code systems

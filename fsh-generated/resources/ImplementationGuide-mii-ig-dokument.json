@@ -461,41 +461,41 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "Startseite",
+          "title": "Home",
           "generation": "markdown"
         },
         {
           "nameUrl": "guidance.html",
-          "title": "Anleitung",
+          "title": "Guidance",
           "generation": "markdown",
           "page": [
             {
               "nameUrl": "implementer-guidance.html",
-              "title": "Anleitung für Implementierende",
+              "title": "Guidance for Implementers",
               "generation": "markdown",
               "page": [
                 {
                   "nameUrl": "kompatibilitaet.html",
-                  "title": "Kompatibilität zu anderen Spezifikationen",
+                  "title": "Compatibility with Other Specifications",
                   "generation": "markdown"
                 }
               ]
             },
             {
               "nameUrl": "uml-diagrams.html",
-              "title": "UML-Diagramme",
+              "title": "UML Diagrams",
               "generation": "markdown"
             }
           ]
         },
         {
           "nameUrl": "security-and-privacy.html",
-          "title": "Sicherheit und Datenschutz",
+          "title": "Security and Privacy",
           "generation": "markdown"
         },
         {
           "nameUrl": "profiles.html",
-          "title": "Profile",
+          "title": "Profiles",
           "generation": "markdown"
         },
         {
@@ -505,32 +505,32 @@
         },
         {
           "nameUrl": "capability-statements.html",
-          "title": "CapabilityStatements",
+          "title": "Capability Statements",
           "generation": "markdown"
         },
         {
           "nameUrl": "search-parameters.html",
-          "title": "Suchparameter",
+          "title": "Search Parameters",
           "generation": "markdown"
         },
         {
           "nameUrl": "logical-models.html",
-          "title": "Logische Modelle",
+          "title": "Logical Models",
           "generation": "markdown"
         },
         {
           "nameUrl": "value-sets.html",
-          "title": "ValueSets",
+          "title": "Value Sets",
           "generation": "markdown"
         },
         {
           "nameUrl": "code-systems.html",
-          "title": "CodeSystems",
+          "title": "Code Systems",
           "generation": "markdown"
         },
         {
           "nameUrl": "examples.html",
-          "title": "Beispiele",
+          "title": "Examples",
           "generation": "markdown"
         },
         {
@@ -540,27 +540,27 @@
         },
         {
           "nameUrl": "changes.html",
-          "title": "Änderungshistorie",
+          "title": "Changelog",
           "generation": "markdown"
         },
         {
           "nameUrl": "metadata.html",
-          "title": "Metadaten-Übersicht",
+          "title": "Metadata Overview",
           "generation": "markdown"
         },
         {
           "nameUrl": "version-history.html",
-          "title": "Versionierung",
+          "title": "Versioning",
           "generation": "markdown"
         },
         {
           "nameUrl": "ImplementationGuide-mii-ig-dokument.html",
-          "title": "MII-ImplementationGuide-Ressource",
+          "title": "MII ImplementationGuide Resource",
           "generation": "markdown"
         },
         {
           "nameUrl": "translationinfo.html",
-          "title": "Übersetzungsinformationen",
+          "title": "Translation Information",
           "generation": "markdown"
         }
       ]
@@ -596,15 +596,15 @@
       },
       {
         "code": "i18n-default-lang",
-        "value": "de"
-      },
-      {
-        "code": "i18n-lang",
         "value": "en"
       },
       {
+        "code": "i18n-lang",
+        "value": "de"
+      },
+      {
         "code": "translation-sources",
-        "value": "input/translations/en"
+        "value": "input/translations/de"
       },
       {
         "code": "excludexml",

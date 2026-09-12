@@ -67,7 +67,7 @@ The template supplies **presentation and machinery**: the IG template package
 (layout, branding), the CI workflows, the release automation, the convention
 checks and these docs. The module owns **content**: `input/fsh/**`,
 `input/pagecontent/**` and their English mirrors under
-`input/translations/en/**`, the terminology, the examples and the metadata in
+`input/translations/de/**`, the terminology, the examples and the metadata in
 `sushi-config.yaml`.
 
 The **page set and the menu** came with the template and are the module's to

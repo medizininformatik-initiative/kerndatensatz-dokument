@@ -1,71 +1,73 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Standardsprachseite (Deutsch). Die englische Übersetzung liegt unter
-     input/translations/en/pagecontent/ImplementationGuide-mii-ig-dokument.md —
-     beide Dateien müssen dasselbe aussagen. ALLE erzeugten Fragmente (auch die
-     versionsübergreifende Analyse) werden mit ausdrücklichem Sprachsuffix
-     eingebunden (das lang-Fragment-Schlüsselwort des Publishers löst auf jeder
-     Seite zu -en auf, gemessen am 2026-09-04): Der gepinnte Publisher schreibt
-     _includes/<name>-<lang>.xhtml plus einen Alias ohne Suffix für die
-     Standardsprache, aber keine .html-Variante — die .html-Include-Namen aus
-     kerndatensatz-basis gehören zu einer anderen Publisher-Version und dürfen
-     hier nicht übernommen werden.
-     DER DATEINAME TRÄGT DIE IG-ID — zusammen mit der englischen Seite und dem
-     IG-weiten .po-Katalog umbenennen (bootstrap step, completed). -->
-Diese ImplementationGuide-Ressource definiert die technischen Details dieser
-Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.
+<!-- English translation of the English default page
+     input/pagecontent/ImplementationGuide-mii-ig-dokument.md (EN-first) — keep
+     both files in step. It is the intro for the ImplementationGuide RESOURCE
+     page — the artifact page the IG Publisher generates for the IG resource
+     itself (ImplementationGuide-<id>.html). Without this file the page renders
+     bare: no dependency table, no cross-version analysis, no copyright
+     statements. Ported from kerndatensatz-basis
+     input/pagecontent/ImplementationGuide-mii-ig-base.md and adapted.
+     FILE NAME CARRIES THE IG ID: like the IG-level .po catalogue, this file and
+     the English default page must be RENAMED to your concrete IG id when you
+     create a module (bootstrap step, completed) — the pages: entry in
+     sushi-config.yaml references it by that name. The template repo's CI
+     self-check renames all three automatically for the preview. -->
+This ImplementationGuide resource defines the technical details of this
+publication, including dependencies and publishing parameters.
 
 - [XML](../ImplementationGuide-mii-ig-dokument.xml)
 - [JSON](../ImplementationGuide-mii-ig-dokument.json)
 
-### Versionsübergreifende Analyse
+### Cross Version Analysis
 
-{% include cross-version-analysis-de.xhtml %}
+{% include cross-version-analysis-en.xhtml %}
 
-### IG-Abhängigkeiten
+### IG Dependencies
 
-Dieser IG enthält die folgenden Abhängigkeiten von anderen IGs.
+This IG contains the following dependencies on other IGs.
 
-{% include dependency-table-de.xhtml %}
+{% include dependency-table-en.xhtml %}
 
-> **Woher die Versionen kommen.** Jedes Paket der Tabelle ist direkt in
+> **Where the versions come from.** Every package in the table is pinned
+> directly in
 > [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml)
-> (`dependencies:`) gepinnt — auch `hl7.terminology.r4` (THO) und
-> `hl7.fhir.uv.extensions.r4`, und diese beiden mit Bedacht: Die
-> [Automatik des IG Publishers](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages)
-> liest ausschließlich die **eigene** Abhängigkeitsliste dieses Leitfadens;
-> ohne direkten Pin würde jeder Build stillschweigend das jeweils aktuellste
-> THO-/Extensions-Release injizieren — eine allein im MII-Meta-Paket gepinnte
-> Version kann den Build nicht steuern (verifiziert im Publisher-Quellcode des
-> gepinnten Release). Eine wöchentliche Prüfung warnt, wenn diese beiden Pins
-> von den Vorgaben des gepinnten Meta-Pakets abweichen; die von einem
-> konkreten Build verwendeten Versionen stehen in dessen `qa-versions.json`.
+> (`dependencies:`) — including `hl7.terminology.r4` (THO) and
+> `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG
+> Publisher's
+> [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages)
+> consults only this guide's **own** dependency list, so without a direct pin
+> every build would silently inject the latest THO/extensions release — a
+> version pinned by the MII meta package alone cannot control the build
+> (verified in the publisher source at the pinned release). A weekly check
+> warns when these two pins drift from what the pinned meta package ships,
+> and the exact versions a concrete build used are recorded in its
+> `qa-versions.json` output.
 {: .ig-highlight .ig-highlight-grey}
 
-### Globale Profile
+### Global Profiles
 
-Dieser IG deklariert die folgenden globalen Profile — Profile, die für jede
-unter diesem Leitfaden ausgetauschte Instanz ihres Ressourcentyps gelten. Eine
-leere Tabelle bedeutet: Dieses Modul deklariert keine.
+This IG declares the following global profiles — profiles that apply to every
+instance of their resource type exchanged under this guide. An empty table
+means this module declares none.
 
-{% include globals-table-de.xhtml %}
+{% include globals-table-en.xhtml %}
 
-### Urheberrechte
+### Copyrights
 
-{% include ip-statements-de.xhtml %}
+{% include ip-statements-en.xhtml %}
 
-### IG-Parametereinstellungen und Expansionsparameter
+### IG Parameter Settings and Expansion Parameters
 
-Expansionsparameter sind Query-Parameter, die an eine `ValueSet`-
-`$expand`-Operation übergeben werden können, um zu steuern, wie das ValueSet
-expandiert wird — also wie die vollständige Liste der Codes aus der
-ValueSet-Definition erzeugt wird. Die für diesen IG verwendeten
-[IG-Parameter](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html)
-sind in
+Expansion parameters are query parameters that can be passed to a `ValueSet`
+`$expand` operation to control how the ValueSet is expanded — that is, how the
+full list of codes is generated from the ValueSet definition. The
+[IG Parameters](https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html)
+used for this IG are declared in
 [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml)
-(`parameters:`) deklariert. Dieser Leitfaden pinnt seine Expansionsparameter
-zusätzlich über ein CRMI-Manifest: die Ressource
+(`parameters:`). This guide additionally pins its expansion parameters through
+a CRMI manifest: the resource
 [`Parameters/mii-param-dokument-manifest`](Parameters-mii-param-dokument-manifest.html)
-(SNOMED CT International Edition `20260701`), verlinkt über
-`cqf-expansionParameters` und dem Publisher über `path-expansion-params` /
-`pin-manifest` bekannt gemacht. Einzelheiten beschreibt die Seite
-[Metadaten-Übersicht](metadata.html).
+(SNOMED CT International Edition `20260701`), linked via
+`cqf-expansionParameters` and made known to the publisher through
+`path-expansion-params` / `pin-manifest`. The
+[Metadata Overview](metadata.html) page has the details.

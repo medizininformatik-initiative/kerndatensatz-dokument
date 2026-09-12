@@ -1,37 +1,30 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Standardsprachfassung. Der frühere Abschnitt "Namenskonventionen"
-     (Simplifier-Seite TechnischeImplementierung/FHIRProfile, Index) wurde am
-     2026-09-07 entfernt — Wortlaut in migration-log/source-quotes/, die Seite
-     verweist auf das Meta-Modul-Wiki. Die Seite selbst ist aus der früheren
-     Kombi-Seite profiles-and-extensions.md aufgeteilt (TF-KDS-abgestimmte
-     Menüstruktur — eine Seite je Artefakt-Typ). Die Artefakt-Detailseiten
-     erzeugt der IG-Publisher automatisch. -->
 
-Diese Seite listet die FHIR-Profile des Moduls **Dokument**. Die Extensions
-des Moduls stehen auf der Seite [Extensions](extensions.html).
+This page lists the FHIR profiles of the **Dokument** module. The module's
+extensions are listed on the [Extensions](extensions.html) page.
 
-Das Modul definiert ein Profil:
+The module defines one profile:
 [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
-(`MII_PR_Dokument_Dokument`) auf Basis der Ressource `DocumentReference`. Die
-technischen Detailansichten — Struktur, Differential, XML und JSON — erzeugt der
-IG-Publisher auf der Artefakt-Seite; den zugrunde liegenden fachlichen Datensatz
-beschreibt die Seite [Logische Modelle](logical-models.html).
+(`MII_PR_Dokument_Dokument`), based on the `DocumentReference` resource. The
+technical detail views — structure, differential, XML and JSON — are generated
+by the IG Publisher on the artifact page; the underlying dataset is described on
+the [Logical Models](logical-models.html) page.
 
-### Profil MII PR Dokument Dokument
+### Profile MII PR Dokument Dokument
 
-Das Modul definiert ein Profil: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html) auf `DocumentReference` — „Klinisches Dokument mit zugehörigen Metadaten“. Die fachlichen Hinweise, das Mapping auf den logischen Datensatz und die Beispiele stehen auf der Artefaktseite; die Struktur wird hier direkt gerendert (XML und JSON des Profils sind wegen ihrer Größe nur auf der Artefaktseite eingebunden).
+The module defines one profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html) on `DocumentReference` — "clinical document with its metadata". The domain notes, the mapping to the logical dataset and the examples are on the artifact page; the structure is rendered here directly (the profile's XML and JSON are embedded only on the artifact page because of their size).
 
 <div class="structure-tabs">
   <ul class="nav nav-tabs" role="tablist">
     <li class="active" role="presentation"><a href="#pr-diff" data-toggle="tab" role="tab">Differential</a></li>
-    <li role="presentation"><a href="#pr-snap" data-toggle="tab" role="tab">Struktur (Snapshot)</a></li>
+    <li role="presentation"><a href="#pr-snap" data-toggle="tab" role="tab">Structure (snapshot)</a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="pr-diff" role="tabpanel">
-      {% include StructureDefinition-mii-pr-dokument-dokument-diff-de.xhtml %}
+      {% include StructureDefinition-mii-pr-dokument-dokument-diff-en.xhtml %}
     </div>
     <div class="tab-pane" id="pr-snap" role="tabpanel">
-      {% include StructureDefinition-mii-pr-dokument-dokument-snapshot-de.xhtml %}
+      {% include StructureDefinition-mii-pr-dokument-dokument-snapshot-en.xhtml %}
     </div>
   </div>
 </div>
