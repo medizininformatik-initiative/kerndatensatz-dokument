@@ -95,7 +95,7 @@ Mandatory: 0 element(5 nested mandatory elements)
     }]
   },
   "status" : "active",
-  "date" : "2026-09-12T21:08:11+00:00",
+  "date" : "2026-09-12T22:28:47+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
