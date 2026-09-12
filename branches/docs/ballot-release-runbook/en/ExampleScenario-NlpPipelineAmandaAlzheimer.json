@@ -1,0 +1,260 @@
+{
+  "resourceType" : "ExampleScenario",
+  "id" : "NlpPipelineAmandaAlzheimer",
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ExampleScenario NlpPipelineAmandaAlzheimer</b></p><a name=\"en-NlpPipelineAmandaAlzheimer\"> </a><a name=\"en-hcNlpPipelineAmandaAlzheimer\"> </a><p><b>url</b>: <a href=\"ExampleScenario-NlpPipelineAmandaAlzheimer.html\">NlpPipelineAmandaAlzheimer</a></p><p><b>version</b>: 2027.0.0-ballot.rc2</p><p><b>name</b>: NlpPipelineAmandaAlzheimer</p><p><b>status</b>: Draft</p><p><b>date</b>: 2026-09-12 21:21:58+0000</p><p><b>publisher</b>: NUM-DIZ</p><p><b>contact</b>: NUM-DIZ: <a href=\"https://www.netzwerk-universitaetsmedizin.de\">https://www.netzwerk-universitaetsmedizin.de</a></p><p><b>jurisdiction</b>: <span title=\"Codes:{urn:iso:std:iso:3166 DE}\">Germany</span></p><p><b>purpose</b>: </p><div><p>Shows how the Dokument profile and the MII_EX_Dokument_NLP_Processing_Status extension represent the result documents of an NLP processing chain and their relationships (relatesTo: transforms, appends).</p>\n</div><blockquote><p><b>actor</b></p><p><b>actorId</b>: source</p><p><b>type</b>: System</p><p><b>name</b>: Document source</p><p><b>description</b>: </p><div><p>System or holding the documents to be processed come from — in this example the synthetic corpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), the source of the discharge letter <code>Amanda_Alzheimer.docx</code>; in practice a document archive or document management system, a hospital information system, a research database or a file store.</p>\n</div></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: nlp</p><p><b>type</b>: System</p><p><b>name</b>: NLP pipeline / annotation framework</p><p><b>description</b>: </p><div><p>Tool chain that carries out the processing steps semi- or fully automatically — plain-text extraction, automatic pre-annotation of identifying items, replacement by type-conformant surrogates, semantic annotation (for example the INCEpTION annotation platform with an upstream NLP component, compare the de-identification pipeline of the GeMTeX project) — and creates a document reference for every result document.</p>\n</div></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: annotators</p><p><b>type</b>: Person</p><p><b>name</b>: Annotators</p><p><b>description</b>: </p><div><p>Specialists who review and correct the automatic pre-annotation (curation of the de-identification) and carry out the semantic annotation in the annotation framework.</p>\n</div></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: repo</p><p><b>type</b>: System</p><p><b>name</b>: Document repository (FHIR)</p><p><b>description</b>: </p><div><p>FHIR server that stores the document references of every processing stage with their NLP processing status and <code>relatesTo</code> links. The repository performs no transformation; it documents the results of the pipeline.</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"DocumentReference-AmandaAlzheimerOriginalDokument.html\">DocumentReference: extension = Original document; masterIdentifier = OID:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46341; identifier = UUID:4f8a2e7c-5b3d-4a12-9f87-3c2e9a1d5f04\u00a0(use:\u00a0official,\u00a0); status = current; docStatus = final; type = Ärztlicher Verlaufsbericht; category = Brief; securityLabel = normal</a></p><p><b>resourceId</b>: AmandaAlzheimerOriginalDokument</p><p><b>resourceType</b>: DocumentReference</p><p><b>name</b>: Original document (Amanda_Alzheimer.docx)</p><p><b>description</b>: </p><div><p>Starting point of the chain: <code>Amanda_Alzheimer.docx</code> (<code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code>, <code>attachment.creation</code> 2028-02-06). NLP processing status <code>unprocessed</code>; no <code>relatesTo</code>. References the patient (<code>subject</code>) and the facility contact (<code>context.encounter</code>).</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"DocumentReference-AmandaAlzheimerKlartextDokument.html\">DocumentReference: extension = Preprocessed document; masterIdentifier = OID:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340; identifier = UUID:0c287d32-01e3-4d87-9953-9fcc9404eb21\u00a0(use:\u00a0official,\u00a0); status = current; docStatus = final; type = Ärztlicher Verlaufsbericht; category = Brief; securityLabel = normal</a></p><p><b>resourceId</b>: AmandaAlzheimerKlartextDokument</p><p><b>resourceType</b>: DocumentReference</p><p><b>name</b>: Plain-text document (Amanda_Alzheimer.txt)</p><p><b>description</b>: </p><div><p>Result of the plain-text extraction: <code>Amanda_Alzheimer.txt</code> (<code>text/plain</code>, <code>attachment.creation</code> 2028-02-06). Status <code>preprocessed</code>, <code>format-change</code>; <code>relatesTo.transforms</code> → original document. Still references the patient and the facility contact.</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html\">DocumentReference: extension = Preprocessed document; status = current; docStatus = final; type = Ärztlicher Verlaufsbericht; category = Brief; securityLabel = low</a></p><p><b>resourceId</b>: AmandaAlzheimerDeIdentifiziertesDokument</p><p><b>resourceType</b>: DocumentReference</p><p><b>name</b>: De-identified document (De-ID.txt)</p><p><b>description</b>: </p><div><p>Result of the de-identification: <code>De-ID.txt</code> (<code>text/plain</code>). Status <code>preprocessed</code>, <code>format-change</code>, <code>surrogated</code>; <code>relatesTo.transforms</code> → plain-text document. Without <code>subject</code> and without <code>context.encounter</code> — the identifying items have been replaced by surrogates, so the result document is no longer tied to a patient context.</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"DocumentReference-AmandaAlzheimerAnnotiertesDokument.html\">DocumentReference: extension = Annotated document; status = current; docStatus = final; type = Ärztlicher Verlaufsbericht; category = Brief; securityLabel = low</a></p><p><b>resourceId</b>: AmandaAlzheimerAnnotiertesDokument</p><p><b>resourceType</b>: DocumentReference</p><p><b>name</b>: Annotated document (Annotat.zip)</p><p><b>description</b>: </p><div><p>Result of the semantic annotation: <code>Annotat.zip</code> (<code>application/zip</code>). Status <code>annotated</code>, <code>semantic</code>, <code>surrogated</code>, <code>preprocessed</code>, <code>format-change</code>; <code>relatesTo.appends</code> → de-identified document, because the annotations supplement the document rather than replace it. Likewise without <code>subject</code> and <code>context.encounter</code>.</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"Patient-AmandaAlzheimer.html\">Alzheimer Amanda (official) Female, DoB Unknown ( Medical record number\u00a0(use:\u00a0usual,\u00a0))</a></p><p><b>resourceId</b>: AmandaAlzheimer</p><p><b>resourceType</b>: Patient</p><p><b>name</b>: Patient Amanda Alzheimer</p><p><b>description</b>: </p><div><p>Synthetic patient; <code>subject</code> of the original and the plain-text document. From the de-identification onwards she is no longer referenced.</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"Encounter-AmandaAlzheimerEinrichtungskontakt.html\">Encounter: identifier = Visit number; status = finished; class = inpatient encounter (ActCode#IMP); type = Einrichtungskontakt; period = 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</a></p><p><b>resourceId</b>: AmandaAlzheimerEinrichtungskontakt</p><p><b>resourceType</b>: Encounter</p><p><b>name</b>: Facility contact</p><p><b>description</b>: </p><div><p><code>context.encounter</code> of the original and the plain-text document, and the topmost contact of the contact hierarchy (no <code>partOf</code>).</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"Encounter-AmandaAlzheimerAbteilungskontakt.html\">Encounter: identifier = Visit number; status = finished; class = inpatient encounter (ActCode#IMP); type = Abteilungskontakt; serviceType = Rheumatologie; period = 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</a></p><p><b>resourceId</b>: AmandaAlzheimerAbteilungskontakt</p><p><b>resourceType</b>: Encounter</p><p><b>name</b>: Department contact</p><p><b>description</b>: </p><div><p>Middle level of the contact hierarchy (<code>partOf</code> → facility contact); not referenced directly by any document reference.</p>\n</div></blockquote><blockquote><p><b>instance</b></p><p><b>R5: Example instance data (new)</b>: <a href=\"Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html\">Encounter: identifier = Visit number; status = finished; class = inpatient encounter (ActCode#IMP); type = Versorgungsstellenkontakt; period = 2028-01-24 00:00:00+0100 --&gt; 2028-02-06 00:00:00+0100</a></p><p><b>resourceId</b>: AmandaAlzheimerVersorgungsstellenKontakt</p><p><b>resourceType</b>: Encounter</p><p><b>name</b>: Point-of-care contact</p><p><b>description</b>: </p><div><p>Lowest level of the contact hierarchy (<code>partOf</code> → department contact); not referenced directly by any document reference.</p>\n</div></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: NLP processing of a discharge letter</p><p><b>description</b>: </p><div><p>Four processing steps of the NLP pipeline (semi- or fully automatic, reviewed by annotators); the FHIR DocumentReference resources only document the results of these steps, accumulate the NLP processing status and link the result documents through <code>relatesTo</code>. The document repository transforms nothing — it stores the document references.</p>\n</div><p><b>preConditions</b>: </p><div><p>The discharge letter <code>Amanda_Alzheimer.docx</code> is present in the document source; the patient and the facility contact exist as FHIR resources.</p>\n</div><p><b>postConditions</b>: </p><div><p>Four document references (original, plain text, de-identified, annotated) with their <code>relatesTo</code> chain and NLP processing status are held in the repository; the result documents themselves are carried as an attachment or a reference in the respective document reference.</p>\n</div><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 1</p><p><b>type</b>: Ingestion</p><p><b>name</b>: Take in the original document</p><p><b>initiator</b>: source</p><p><b>receiver</b>: nlp</p><p><b>description</b>: </p><div><p>The pipeline takes the original document <code>Amanda_Alzheimer.docx</code> from the document source.</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerOriginalDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 2</p><p><b>type</b>: Dokumentreferenz ablegen</p><p><b>name</b>: Document the original</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Document reference to the original with NLP processing status <code>unprocessed</code>.</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerOriginalDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 3</p><p><b>type</b>: Preprocessing</p><p><b>name</b>: Plain-text extraction</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: nlp</p><p><b>description</b>: </p><div><p>Automatic conversion to plain text (<code>Amanda_Alzheimer.txt</code>).</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerOriginalDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 4</p><p><b>type</b>: Dokumentreferenz ablegen</p><p><b>name</b>: Document the plain text</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Document reference with status <code>preprocessed, format-change</code>, <code>relatesTo.transforms</code> → original.</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerKlartextDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 5</p><p><b>type</b>: De-Identification</p><p><b>name</b>: De-identification with review</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: annotators</p><p><b>description</b>: </p><div><p>Automatic pre-annotation of identifying items, manual curation by the annotators, then automatic replacement by type-conformant surrogates (<code>De-ID.txt</code>).</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerKlartextDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 6</p><p><b>type</b>: Dokumentreferenz ablegen</p><p><b>name</b>: Document the de-identified document</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Document reference with status <code>preprocessed, format-change, surrogated</code>, <code>relatesTo.transforms</code> → plain-text document.</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerDeIdentifiziertesDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 7</p><p><b>type</b>: Annotation</p><p><b>name</b>: Semantic annotation</p><p><b>initiator</b>: annotators</p><p><b>receiver</b>: nlp</p><p><b>description</b>: </p><div><p>Semantic annotation of the clinical content in the annotation framework by the annotators; the result files are bundled as <code>Annotat.zip</code>.</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerDeIdentifiziertesDokument</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>operation</b></p><p><b>number</b>: 8</p><p><b>type</b>: Dokumentreferenz ablegen</p><p><b>name</b>: Document the annotated document</p><p><b>initiator</b>: nlp</p><p><b>receiver</b>: repo</p><p><b>description</b>: </p><div><p>Document reference with status <code>annotated, semantic, surrogated, preprocessed, format-change</code>, <code>relatesTo.appends</code> → de-identified document.</p>\n</div><h3>Requests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceId</b></td></tr><tr><td style=\"display: none\">*</td><td>AmandaAlzheimerAnnotiertesDokument</td></tr></table></blockquote></blockquote></blockquote></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "NlpPipelineAmandaAlzheimer",
+  "status" : "draft",
+  "date" : "2026-09-12T21:21:58+00:00",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Shows how the Dokument profile and the MII_EX_Dokument_NLP_Processing_Status extension represent the result documents of an NLP processing chain and their relationships (relatesTo: transforms, appends).",
+  "actor" : [{
+    "actorId" : "source",
+    "type" : "entity",
+    "name" : "Document source",
+    "description" : "System or holding the documents to be processed come from — in this example the synthetic corpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), the source of the discharge letter `Amanda_Alzheimer.docx`; in practice a document archive or document management system, a hospital information system, a research database or a file store."
+  },
+  {
+    "actorId" : "nlp",
+    "type" : "entity",
+    "name" : "NLP pipeline / annotation framework",
+    "description" : "Tool chain that carries out the processing steps semi- or fully automatically — plain-text extraction, automatic pre-annotation of identifying items, replacement by type-conformant surrogates, semantic annotation (for example the INCEpTION annotation platform with an upstream NLP component, compare the de-identification pipeline of the GeMTeX project) — and creates a document reference for every result document."
+  },
+  {
+    "actorId" : "annotators",
+    "type" : "person",
+    "name" : "Annotators",
+    "description" : "Specialists who review and correct the automatic pre-annotation (curation of the de-identification) and carry out the semantic annotation in the annotation framework."
+  },
+  {
+    "actorId" : "repo",
+    "type" : "entity",
+    "name" : "Document repository (FHIR)",
+    "description" : "FHIR server that stores the document references of every processing stage with their NLP processing status and `relatesTo` links. The repository performs no transformation; it documents the results of the pipeline."
+  }],
+  "instance" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "DocumentReference/AmandaAlzheimerOriginalDokument"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerOriginalDokument",
+    "resourceType" : "DocumentReference",
+    "name" : "Original document (Amanda_Alzheimer.docx)",
+    "description" : "Starting point of the chain: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP processing status `unprocessed`; no `relatesTo`. References the patient (`subject`) and the facility contact (`context.encounter`)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "DocumentReference/AmandaAlzheimerKlartextDokument"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerKlartextDokument",
+    "resourceType" : "DocumentReference",
+    "name" : "Plain-text document (Amanda_Alzheimer.txt)",
+    "description" : "Result of the plain-text extraction: `Amanda_Alzheimer.txt` (`text/plain`, `attachment.creation` 2028-02-06). Status `preprocessed`, `format-change`; `relatesTo.transforms` → original document. Still references the patient and the facility contact."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerDeIdentifiziertesDokument",
+    "resourceType" : "DocumentReference",
+    "name" : "De-identified document (De-ID.txt)",
+    "description" : "Result of the de-identification: `De-ID.txt` (`text/plain`). Status `preprocessed`, `format-change`, `surrogated`; `relatesTo.transforms` → plain-text document. Without `subject` and without `context.encounter` — the identifying items have been replaced by surrogates, so the result document is no longer tied to a patient context."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "DocumentReference/AmandaAlzheimerAnnotiertesDokument"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerAnnotiertesDokument",
+    "resourceType" : "DocumentReference",
+    "name" : "Annotated document (Annotat.zip)",
+    "description" : "Result of the semantic annotation: `Annotat.zip` (`application/zip`). Status `annotated`, `semantic`, `surrogated`, `preprocessed`, `format-change`; `relatesTo.appends` → de-identified document, because the annotations supplement the document rather than replace it. Likewise without `subject` and `context.encounter`."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "Patient/AmandaAlzheimer"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimer",
+    "resourceType" : "Patient",
+    "name" : "Patient Amanda Alzheimer",
+    "description" : "Synthetic patient; `subject` of the original and the plain-text document. From the de-identification onwards she is no longer referenced."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "Encounter/AmandaAlzheimerEinrichtungskontakt"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerEinrichtungskontakt",
+    "resourceType" : "Encounter",
+    "name" : "Facility contact",
+    "description" : "`context.encounter` of the original and the plain-text document, and the topmost contact of the contact hierarchy (no `partOf`)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "Encounter/AmandaAlzheimerAbteilungskontakt"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerAbteilungskontakt",
+    "resourceType" : "Encounter",
+    "name" : "Department contact",
+    "description" : "Middle level of the contact hierarchy (`partOf` → facility contact); not referenced directly by any document reference."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ExampleScenario.instance.content",
+      "valueReference" : {
+        "reference" : "Encounter/AmandaAlzheimerVersorgungsstellenKontakt"
+      }
+    }],
+    "resourceId" : "AmandaAlzheimerVersorgungsstellenKontakt",
+    "resourceType" : "Encounter",
+    "name" : "Point-of-care contact",
+    "description" : "Lowest level of the contact hierarchy (`partOf` → department contact); not referenced directly by any document reference."
+  }],
+  "process" : [{
+    "title" : "NLP processing of a discharge letter",
+    "description" : "Four processing steps of the NLP pipeline (semi- or fully automatic, reviewed by annotators); the FHIR DocumentReference resources only document the results of these steps, accumulate the NLP processing status and link the result documents through `relatesTo`. The document repository transforms nothing — it stores the document references.",
+    "preConditions" : "The discharge letter `Amanda_Alzheimer.docx` is present in the document source; the patient and the facility contact exist as FHIR resources.",
+    "postConditions" : "Four document references (original, plain text, de-identified, annotated) with their `relatesTo` chain and NLP processing status are held in the repository; the result documents themselves are carried as an attachment or a reference in the respective document reference.",
+    "step" : [{
+      "operation" : {
+        "number" : "1",
+        "type" : "Ingestion",
+        "name" : "Take in the original document",
+        "initiator" : "source",
+        "receiver" : "nlp",
+        "description" : "The pipeline takes the original document `Amanda_Alzheimer.docx` from the document source.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerOriginalDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "2",
+        "type" : "Dokumentreferenz ablegen",
+        "name" : "Document the original",
+        "initiator" : "nlp",
+        "receiver" : "repo",
+        "description" : "Document reference to the original with NLP processing status `unprocessed`.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerOriginalDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "3",
+        "type" : "Preprocessing",
+        "name" : "Plain-text extraction",
+        "initiator" : "nlp",
+        "receiver" : "nlp",
+        "description" : "Automatic conversion to plain text (`Amanda_Alzheimer.txt`).",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerOriginalDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "4",
+        "type" : "Dokumentreferenz ablegen",
+        "name" : "Document the plain text",
+        "initiator" : "nlp",
+        "receiver" : "repo",
+        "description" : "Document reference with status `preprocessed, format-change`, `relatesTo.transforms` → original.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerKlartextDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "5",
+        "type" : "De-Identification",
+        "name" : "De-identification with review",
+        "initiator" : "nlp",
+        "receiver" : "annotators",
+        "description" : "Automatic pre-annotation of identifying items, manual curation by the annotators, then automatic replacement by type-conformant surrogates (`De-ID.txt`).",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerKlartextDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "6",
+        "type" : "Dokumentreferenz ablegen",
+        "name" : "Document the de-identified document",
+        "initiator" : "nlp",
+        "receiver" : "repo",
+        "description" : "Document reference with status `preprocessed, format-change, surrogated`, `relatesTo.transforms` → plain-text document.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerDeIdentifiziertesDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "7",
+        "type" : "Annotation",
+        "name" : "Semantic annotation",
+        "initiator" : "annotators",
+        "receiver" : "nlp",
+        "description" : "Semantic annotation of the clinical content in the annotation framework by the annotators; the result files are bundled as `Annotat.zip`.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerDeIdentifiziertesDokument"
+        }
+      }
+    },
+    {
+      "operation" : {
+        "number" : "8",
+        "type" : "Dokumentreferenz ablegen",
+        "name" : "Document the annotated document",
+        "initiator" : "nlp",
+        "receiver" : "repo",
+        "description" : "Document reference with status `annotated, semantic, surrogated, preprocessed, format-change`, `relatesTo.appends` → de-identified document.",
+        "request" : {
+          "resourceId" : "AmandaAlzheimerAnnotiertesDokument"
+        }
+      }
+    }]
+  }]
+}
