@@ -6,7 +6,7 @@
    "status": "ballot",
    "sequence": "2027",
    "desc": "Ballot release candidate 2 for the 2027 release cycle",
-   "first": false,
+   "first": true,
    "title": "MII IG Dokument",
    "ci-build": "https://medizininformatik-initiative.github.io/kerndatensatz-dokument/branches/dev/",
    "category": "Research",
