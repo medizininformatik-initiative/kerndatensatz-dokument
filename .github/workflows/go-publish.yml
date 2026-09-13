@@ -653,10 +653,24 @@ jobs:
             }' > site/publish-setup.json
           touch site/.nojekyll
 
+          # The Publisher also refuses to -go-publish a website that has no
+          # package registry ("There is no package-registry.json file. Create
+          # one by running the publisher -generate-package-registry {folder}").
+          # A follow-up publication inherits the file from the previous one;
+          # the very first has nothing to inherit, so generate it here over the
+          # webroot we have just seeded. The jar is the pinned, checksum-verified
+          # one from "Install pinned build tools".
+          java -jar "${RUNNER_TEMP}/publisher.jar" -generate-package-registry site
+          if [[ ! -e site/package-registry.json ]]; then
+            echo "::error::-generate-package-registry did not produce site/package-registry.json."
+            exit 1
+          fi
+
           {
             echo "### First-publication webroot seeded"
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
+            echo "- Generated package-registry.json over the webroot"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace

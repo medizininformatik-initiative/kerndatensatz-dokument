@@ -112,13 +112,12 @@ gh run list -R $REPO --workflow module-release.yml -L 1
 gh release view ${TAG} -R $REPO            # draft
 ```
 
-Pull the built package down for the registry upload:
-
-```bash
-gh run download -R $REPO -n module-release-build -D ./release-artifact
-ls -la ./release-artifact/package.tgz
-shasum -a 256 ./release-artifact/package.tgz
-```
+> **This workflow's package is NOT the one to publish.** `module-release.yml`
+> runs the IG Publisher without `-publish`, so its `package.tgz` is a preview
+> build: it carries `notForPublication: true` and a `file://` url. It exists to
+> prove the tagged commit builds, and it is what gets attached to the GitHub
+> release. The archive for the **registry** comes from `go-publish` in step 8.
+{: .ig-highlight .ig-highlight-orange}
 
 Sanity-check it before it goes anywhere:
 
@@ -134,13 +133,24 @@ path. A preview build carries both; a publication-mode build carries neither.
 The wiki's bake-pipeline sub-steps do not apply. Two ways to upload; the result
 is identical.
 
+First fetch the publication-mode archive that step 8's dry run produced:
+
+```bash
+gh run download -R $REPO -n publication-review -D ./publication
+f=./publication/site/${VERSION}/package.tgz
+tar -xzOf "$f" package/package.json | jq '{name,version,url,notForPublication}'
+```
+
+`notForPublication` must be **absent** and `url` must be the publication base.
+If either check fails, stop: the archive is a preview build.
+
 **Firely Terminal.** Install once (`dotnet tool install -g firely.terminal`),
 then:
 
 ```bash
 fhir --version
 fhir login                                  # Simplifier credentials
-fhir push ./release-artifact/package.tgz    # uploads the package to the registry
+fhir push "$f"                              # uploads the package to the registry
 ```
 
 If your Firely Terminal build does not expose `push`, use the web upload below.
@@ -166,7 +176,7 @@ curl -sI https://packages.simplifier.net/$PKG/${VERSION} | head -1   # 200
 
 ```bash
 gh release edit ${TAG} -R $REPO --notes-file release-notes.md
-gh release upload ${TAG} ./release-artifact/package.tgz -R $REPO   # if not already attached
+# the preview package is already attached by module-release.yml
 gh release edit ${TAG} -R $REPO --draft=false
 ```
 
