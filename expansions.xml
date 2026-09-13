@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="12a1e6ee-df0d-4ed2-8f38-e1a1fc44024e"/>
+  <id value="1bd2c9e0-207b-4c3e-97a3-409dbf338694"/>
   <meta>
-    <lastUpdated value="2026-09-13T11:38:12.835+00:00"/>
+    <lastUpdated value="2026-09-13T16:44:42.033+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -7854,12 +7854,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_Einrichtungsart"/>
         <title value="MII VS Dokument Einrichtungsart"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -7868,8 +7868,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1f8fb3fa-59a4-4a9a-bd4d-6f9df2fc4eab"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:530b22b5-c895-49d6-afc0-e1719e694ae3"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -17641,12 +17641,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_Einrichtungsart"/>
         <title value="MII VS Dokument Einrichtungsart"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -17655,8 +17655,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1f8fb3fa-59a4-4a9a-bd4d-6f9df2fc4eab"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:530b22b5-c895-49d6-afc0-e1719e694ae3"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -27428,12 +27428,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_Einrichtungsart"/>
         <title value="MII VS Dokument Einrichtungsart"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -27442,8 +27442,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a914469e-f9af-4757-a8a4-84cc94605220"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:2e2583e5-4693-41aa-851a-0cf4168793c5"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -36593,12 +36593,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_Fachgebiet"/>
         <title value="MII VS Dokument Fachgebiet"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -36607,8 +36607,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:31ef08b6-9bb2-495c-96e0-e04034bfb1d0"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:77843675-4630-4b02-9361-47afa1d15c9f"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -46064,12 +46064,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_Fachgebiet"/>
         <title value="MII VS Dokument Fachgebiet"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -46078,8 +46078,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:31ef08b6-9bb2-495c-96e0-e04034bfb1d0"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:77843675-4630-4b02-9361-47afa1d15c9f"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -55535,12 +55535,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_Fachgebiet"/>
         <title value="MII VS Dokument Fachgebiet"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -55549,8 +55549,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d48e79f0-3164-4e01-8345-f6c09dc53fcb"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:a9e41f8d-aa60-4d4f-891d-db6ef3f45f41"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -57142,9 +57142,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc2 (CodeSystem)</a>
+              <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 9 concepts</p>
@@ -57186,12 +57186,12 @@
                 <td>Dokument im Original</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57209,12 +57209,12 @@
                 <td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Preprocessed document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Preprocessed document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Preprocessed document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Preprocessed document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57232,12 +57232,12 @@
                 <td>Vorverarbeitung mit Transformation des Formats</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Format changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Format changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Format changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Format changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57255,12 +57255,12 @@
                 <td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Content changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Content changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Content changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Content changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57278,12 +57278,12 @@
                 <td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57301,12 +57301,12 @@
                 <td>Maschinelle Vorannotation</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Pre-annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Pre-annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Pre-annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Pre-annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57324,12 +57324,12 @@
                 <td>Annotationen zum Zwecke einer Deidentifizierung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;De-identified document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;De-identified document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;De-identified document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;De-identified document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57347,12 +57347,12 @@
                 <td>Semantische Annotationen</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantically annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantically annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantically annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantically annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57370,12 +57370,12 @@
                 <td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57383,12 +57383,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_NLP_Processing_Status"/>
         <title value="MII VS Dokument NLP Processing Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -57397,8 +57397,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d7561ccb-e468-4ee5-94c1-af32a0fcb4f4"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:4c9a89f0-ad20-42bc-b279-86d2e011030a"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -57435,11 +57435,11 @@
           </parameter>
           <parameter>
             <name value="system-version"/>
-            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
+            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
+            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot"/>
           </parameter>
           <contains>
             <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status"/>
@@ -57503,9 +57503,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc2 (CodeSystem)</a>
+              <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 9 concepts</p>
@@ -57547,12 +57547,12 @@
                 <td>Dokument im Original</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57570,12 +57570,12 @@
                 <td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Preprocessed document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Preprocessed document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Preprocessed document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Preprocessed document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57593,12 +57593,12 @@
                 <td>Vorverarbeitung mit Transformation des Formats</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Format changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Format changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Format changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Format changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57616,12 +57616,12 @@
                 <td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Content changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Content changed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Content changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Content changed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57639,12 +57639,12 @@
                 <td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57662,12 +57662,12 @@
                 <td>Maschinelle Vorannotation</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Pre-annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Pre-annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Pre-annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Pre-annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57685,12 +57685,12 @@
                 <td>Annotationen zum Zwecke einer Deidentifizierung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;De-identified document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;De-identified document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;De-identified document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;De-identified document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57708,12 +57708,12 @@
                 <td>Semantische Annotationen</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantically annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantically annotated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantically annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantically annotated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57731,12 +57731,12 @@
                 <td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogated document&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogated document&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57744,12 +57744,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_NLP_Processing_Status"/>
         <title value="MII VS Dokument NLP Processing Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -57758,8 +57758,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d7561ccb-e468-4ee5-94c1-af32a0fcb4f4"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:4c9a89f0-ad20-42bc-b279-86d2e011030a"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -57796,11 +57796,11 @@
           </parameter>
           <parameter>
             <name value="system-version"/>
-            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
+            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
+            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot"/>
           </parameter>
           <contains>
             <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status"/>
@@ -57864,9 +57864,9 @@
           <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot.rc2 (CodeSystem)</a>
+              <a href="CodeSystem-mii-cs-dokument-nlp-processing-status.html">codesystem MII CS Dokument NLP Processing Status v2027.0.0-ballot (CodeSystem)</a>
               <span class="copy-text-inline">
-                <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2" title="Click to Copy URL" class="btn-copy"> </button>
+                <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
             </p>
             <p>This value set contains 9 concepts</p>
@@ -57908,12 +57908,12 @@
                 <td>Dokument im Original</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;unprocessed&quot;, &quot;display&quot;: &quot;Original&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;unprocessed&quot;&gt;&lt;display value=&quot;Original&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57931,12 +57931,12 @@
                 <td>Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Vorverarbeitetes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;preprocessed&quot;, &quot;display&quot;: &quot;Vorverarbeitetes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Vorverarbeitetes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;preprocessed&quot;&gt;&lt;display value=&quot;Vorverarbeitetes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57954,12 +57954,12 @@
                 <td>Vorverarbeitung mit Transformation des Formats</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Formatänderung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;format-change&quot;, &quot;display&quot;: &quot;Formatänderung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Formatänderung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;format-change&quot;&gt;&lt;display value=&quot;Formatänderung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -57977,12 +57977,12 @@
                 <td>Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Inhaltsänderung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;content-change&quot;, &quot;display&quot;: &quot;Inhaltsänderung&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Inhaltsänderung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;content-change&quot;&gt;&lt;display value=&quot;Inhaltsänderung&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -58000,12 +58000,12 @@
                 <td>Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;annotated&quot;, &quot;display&quot;: &quot;Annotiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;annotated&quot;&gt;&lt;display value=&quot;Annotiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -58023,12 +58023,12 @@
                 <td>Maschinelle Vorannotation</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Vorannotiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;preanno&quot;, &quot;display&quot;: &quot;Vorannotiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Vorannotiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;preanno&quot;&gt;&lt;display value=&quot;Vorannotiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -58046,12 +58046,12 @@
                 <td>Annotationen zum Zwecke einer Deidentifizierung</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;Deidentifiziertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;deid&quot;, &quot;display&quot;: &quot;Deidentifiziertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;Deidentifiziertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;deid&quot;&gt;&lt;display value=&quot;Deidentifiziertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -58069,12 +58069,12 @@
                 <td>Semantische Annotationen</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantisch annotiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;semantic&quot;, &quot;display&quot;: &quot;Semantisch annotiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantisch annotiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;semantic&quot;&gt;&lt;display value=&quot;Semantisch annotiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -58092,12 +58092,12 @@
                 <td>Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte werden beispielsweise durch fiktive Konzepte ersetzt.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot.rc2&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;, &quot;version&quot;: &quot;2027.0.0-ballot&quot;, &quot;code&quot;: &quot;surrogated&quot;, &quot;display&quot;: &quot;Surrogiertes Dokument&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot.rc2&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status&quot;&gt;&lt;version value=&quot;2027.0.0-ballot&quot;&gt;&lt;code value=&quot;surrogated&quot;&gt;&lt;display value=&quot;Surrogiertes Dokument&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -58105,12 +58105,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_NLP_Processing_Status"/>
         <title value="MII VS Dokument NLP Processing Status"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -58119,8 +58119,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2f567369-242e-407c-8a16-ff73a62beada"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:fe48ff2b-d01f-4808-a15d-c5725b89decc"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -58157,11 +58157,11 @@
           </parameter>
           <parameter>
             <name value="system-version"/>
-            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
+            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot.rc2"/>
+            <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|2027.0.0-ballot"/>
           </parameter>
           <contains>
             <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status"/>
@@ -63032,12 +63032,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_SCT_Dokument_Kategorie"/>
         <title value="MII VS Dokument SCT Dokument Kategorie"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -63046,8 +63046,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:045997a4-3255-4aa7-bb47-752411a12b1f"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:ffe9621c-f75a-4cb5-b273-ac587b012c9c"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -69112,12 +69112,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_SCT_Dokument_Kategorie"/>
         <title value="MII VS Dokument SCT Dokument Kategorie"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -69126,8 +69126,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:045997a4-3255-4aa7-bb47-752411a12b1f"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:ffe9621c-f75a-4cb5-b273-ac587b012c9c"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -75192,12 +75192,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_SCT_Dokument_Kategorie"/>
         <title value="MII VS Dokument SCT Dokument Kategorie"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -75206,8 +75206,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a4d34d38-9c0f-492b-bcc4-36d2679d1516"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:ddd77af0-eb14-42c5-9fe5-ccc319fb4a8a"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -80633,12 +80633,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_SCT_Dokument_Typ"/>
         <title value="MII VS Dokument SCT Dokument Typ"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -80647,8 +80647,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:08f09fde-48c8-47db-8828-1d1a0d98a415"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:90dbc2cc-c222-4ae1-a344-904b95d8eaf0"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -86213,12 +86213,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_SCT_Dokument_Typ"/>
         <title value="MII VS Dokument SCT Dokument Typ"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -86227,8 +86227,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:08f09fde-48c8-47db-8828-1d1a0d98a415"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:90dbc2cc-c222-4ae1-a344-904b95d8eaf0"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>
@@ -91793,12 +91793,12 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ"/>
-        <version value="2027.0.0-ballot.rc2"/>
+        <version value="2027.0.0-ballot"/>
         <name value="MII_VS_Dokument_SCT_Dokument_Typ"/>
         <title value="MII VS Dokument SCT Dokument Typ"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-09-13T11:38:12+00:00"/>
+        <date value="2026-09-13T16:44:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -91807,8 +91807,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:17257791-4bfb-4021-be9b-03a3178ac373"/>
-          <timestamp value="2026-09-13T11:39:06+00:00"/>
+          <identifier value="urn:uuid:d81841ce-6f3f-4ebd-a894-88839a44262d"/>
+          <timestamp value="2026-09-13T16:45:35+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="default-valueset-version"/>

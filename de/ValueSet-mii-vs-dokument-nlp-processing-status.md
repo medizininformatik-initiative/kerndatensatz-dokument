@@ -1,4 +1,4 @@
-# MII VS Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot.rc2
+# MII VS Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status | *Version*:2027.0.0-ballot |
 | Active Stand: 2026-09-13 | *Maschinenlesbarer Name*:MII_VS_Dokument_NLP_Processing_Status |
 
  
@@ -41,12 +41,12 @@ ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments
   },
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Dokument_NLP_Processing_Status",
   "title" : "MII VS Dokument NLP Processing Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T11:38:12+00:00",
+  "date" : "2026-09-13T16:44:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

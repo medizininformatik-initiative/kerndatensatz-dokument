@@ -1,4 +1,4 @@
-# MII VS Dokument Einrichtungsart - MII IG Dokument v2027.0.0-ballot.rc2
+# MII VS Dokument Einrichtungsart - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart | *Version*:2027.0.0-ballot |
 | Active as of 2026-09-13 | *Computable Name*:MII_VS_Dokument_Einrichtungsart |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
@@ -42,12 +42,12 @@ ValueSet zur Art der erzeugenden Einrichtung eines Dokuments
   },
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Dokument_Einrichtungsart",
   "title" : "MII VS Dokument Einrichtungsart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T11:38:12+00:00",
+  "date" : "2026-09-13T16:44:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

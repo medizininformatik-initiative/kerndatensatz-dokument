@@ -1,4 +1,4 @@
-# Original-Dokument (DOCX) - MII IG Dokument v2027.0.0-ballot.rc2
+# Original-Dokument (DOCX) - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

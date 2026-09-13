@@ -4,12 +4,23 @@
     <description>FHIR Implementation Guide releases published by the Medical Informatics Initiative</description>
     <link>https://medizininformatik-initiative.github.io/kerndatensatz-dokument</link>
     <generator>Medical Informatics Initiative (MII)</generator>
-    <lastBuildDate>Sun, 13 Sep 2026 11:35:48 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 04:42:12 +0000</lastBuildDate>
     <atom:link href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/publication-feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Sep 2026 11:35:48 +0000</pubDate>
+    <pubDate>Sun, 13 Sep 2026 04:42:12 +0000</pubDate>
     <language>en</language>
     <ttl>600</ttl>
   
+    <item>
+      <title>MII IG Dokument version 2027.0.0-ballot</title>
+      <description>Ballot release for the 2027 release cycle</description>
+      <link>https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot/index.html</link>
+      <guid isPermaLink="true">https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot/index.html</guid>
+      <dc:creator>Medical Informatics Initiative (MII)</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Sun, 13 Sep 2026 04:42:12 +0000</pubDate>
+      <fhir:details>Publication run at 13/09/2026 by runner using Version 2.3.2 (Git# 04466d0486ed). Built 2026-08-13T02:20:51.957Z (31 days old) source id Unknown (todo)</fhir:details>
+    </item>
     <item>
       <title>MII IG Dokument version 2027.0.0-ballot.rc2</title>
       <description>Ballot release candidate 2 for the 2027 release cycle</description>
