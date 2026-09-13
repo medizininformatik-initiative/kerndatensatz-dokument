@@ -14,7 +14,7 @@ migrated from Simplifier onto the
 scaffold (v0.13.1) and is built with the HL7 IG Publisher; the migration record
 is [`migration-log/migration-report.md`](migration-log/migration-report.md).
 
-It releases with **CalVer `YYYY.n.n`** (currently `2027.0.0-ballot.rc2`) via
+It releases with **CalVer `YYYY.n.n`** (currently `2027.0.0-ballot`) via
 `.github/workflows/module-release.yml` — **never SemVer, never Release Please**.
 
 The **look** of the IG comes from the MII IG template

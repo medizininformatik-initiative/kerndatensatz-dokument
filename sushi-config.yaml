@@ -20,7 +20,7 @@ name: MII_IG_Dokument
 title: "MII IG Dokument"
 description: "Medizininformatik Initiative - KDS-Modul Dokument"
 status: draft # ballot release candidate — source value carried
-version: 2027.0.0-ballot.rc2
+version: 2027.0.0-ballot
 packageId: de.medizininformatikinitiative.kerndatensatz.dokument
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
@@ -31,7 +31,7 @@ license: CC-BY-4.0 # owner decision 2026-08-30 (was CC0-1.0; guide already claim
 # stated, so the owner's fallback 2026-09-01 applies. go-publish.yml requires
 # this to equal the publication_date at Gate D. (Package registry release of
 # the RC was 2026-08-28.)
-date: "2026-09-01"
+date: "2026-09-13"
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # IG-level publisher = NUM-DIZ (owner decision 2026-08-30, template default;
 # resource-level publisher stays "Medizininformatik Initiative" per the
@@ -69,7 +69,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.dokument
       - url: version
-        valueString: 2027.0.0-ballot.rc2
+        valueString: 2027.0.0-ballot
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument
   - url: http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod
