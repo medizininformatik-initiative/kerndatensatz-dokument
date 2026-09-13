@@ -74,6 +74,28 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+### Version 2027.0.0-ballot
+
+**Date** 2026-09-13 · **Status** ballot release (2027 cycle)
+
+The ballot release of the 2027 cycle. Content is that of release candidate 2,
+which was published to the package registry and reviewed without change
+requests; this version supersedes both candidates and is the one to ballot
+against.
+
+* **No changes to the artifacts** relative to `2027.0.0-ballot.rc2` — the
+  profile, the extension, the terminologies, the logical model, the
+  CapabilityStatement and the examples are identical. Only the version
+  identifiers, the publication descriptor and this changelog differ.
+* **Supersedes** `2027.0.0-ballot.rc1` and `2027.0.0-ballot.rc2`. Both remain
+  resolvable in the package registry; neither should be used for the ballot.
+
+> **Known Issue**: 2 validation errors on examples with `context.event`
+> (eventCodeList expansion, upstream defect in `de.ihe-d.terminology 3.0.1`) —
+> see
+> [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
+{: .ig-highlight .ig-highlight-grey}
+
 ### Version 2027.0.0-ballot.rc2
 
 **Date** 2026-09-08 · **Status** ballot release candidate 2 (2027 cycle)
