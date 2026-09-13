@@ -33,7 +33,7 @@ Das Szenario beschreibt die NLP-Verarbeitungskette des Beispiels „Amanda Alzhe
   "version" : "2027.0.0-ballot.rc2",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-13T06:11:01+00:00",
+  "date" : "2026-09-13T16:03:26+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
