@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_VS_Dokument_Fachgebiet |
+| Active Stand: 2026-09-13 | *Maschinenlesbarer Name*:MII_VS_Dokument_Fachgebiet |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -47,7 +47,7 @@ ValueSet zum erzeugenden Fachgebiet eines Dokuments
   "title" : "MII VS Dokument Fachgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T23:05:35+00:00",
+  "date" : "2026-09-13T05:04:18+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
