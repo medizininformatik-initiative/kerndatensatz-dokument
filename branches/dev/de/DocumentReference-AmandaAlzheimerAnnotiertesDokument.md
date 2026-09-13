@@ -1,4 +1,4 @@
-# Annotiertes Dokument - MII IG Dokument v2027.0.0-ballot.rc2
+# Annotiertes Dokument - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

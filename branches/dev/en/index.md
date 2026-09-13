@@ -1,4 +1,4 @@
-# Home - MII IG Dokument v2027.0.0-ballot.rc2
+# Home - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc2 |
-| Draft as of 2026-09-01 | *Computable Name*:MII_IG_Dokument |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot |
+| Draft as of 2026-09-13 | *Computable Name*:MII_IG_Dokument |
 
 ### Introduction
 
@@ -21,7 +21,7 @@ The Core Dataset of the Medical Informatics Initiative (MII) enables the standar
 | | | |
 | :--- | :--- | :--- |
 | Version | Date | Status |
-| 2027.0.0-ballot.rc2 | 2026-09-01 | draft |
+| 2027.0.0-ballot | 2026-09-13 | draft |
 
 Realm: DE (jurisdiction Germany). Versioning follows CalVer `YYYY.n.n`.
 

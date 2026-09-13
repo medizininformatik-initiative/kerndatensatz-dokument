@@ -1,4 +1,4 @@
-# NLP-Pipeline „Amanda Alzheimer“ - MII IG Dokument v2027.0.0-ballot.rc2
+# NLP-Pipeline „Amanda Alzheimer“ - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer | *Version*:2027.0.0-ballot |
 | Draft as of 2026-09-13 | *Computable Name*:NlpPipelineAmandaAlzheimer |
 
 The scenario describes the NLP processing chain of the "Amanda Alzheimer" example; the example instances, the flow diagram and the explanation of the `relatesTo` relationships are on the [Examples](examples.md#example-scenario-amanda-alzheimer-nlp-pipeline) page.
@@ -30,10 +30,10 @@ The scenario describes the NLP processing chain of the "Amanda Alzheimer" exampl
   "resourceType" : "ExampleScenario",
   "id" : "NlpPipelineAmandaAlzheimer",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "NlpPipelineAmandaAlzheimer",
   "status" : "draft",
-  "date" : "2026-09-13T11:26:09+00:00",
+  "date" : "2026-09-13T16:57:07+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

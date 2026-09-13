@@ -1,4 +1,4 @@
-# Capability Statements - MII IG Dokument v2027.0.0-ballot.rc2
+# Capability Statements - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Capability Statements**

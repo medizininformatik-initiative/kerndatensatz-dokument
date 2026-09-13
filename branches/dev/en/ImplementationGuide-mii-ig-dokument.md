@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII IG Dokument v2027.0.0-ballot.rc2
+# MII ImplementationGuide Resource - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -133,7 +133,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc2"
+      "valueString" : "2027.0.0-ballot"
     },
     {
       "url" : "uri",
@@ -233,12 +233,12 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_IG_Dokument",
   "title" : "MII IG Dokument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-01",
+  "date" : "2026-09-13",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

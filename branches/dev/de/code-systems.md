@@ -1,4 +1,4 @@
-# CodeSystems - MII IG Dokument v2027.0.0-ballot.rc2
+# CodeSystems - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **CodeSystems**
