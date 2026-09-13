@@ -698,6 +698,12 @@ jobs:
             test -s site/dist-hist/js/bootstrap.min.js
           fi
 
+      # -fhir-settings: -go-publish re-runs the IG build internally and reaches
+      # the same -tx target, so it needs the same allowlist the clean release
+      # build above passes. Without it, publisher 2.3.1+ SSRF hardening refuses
+      # the local SU-TermServ proxy ("Refusing to fetch from non-https URL:
+      # http://127.0.0.1:8090/fhir/metadata") and the internal build dies before
+      # it writes qa.json.
       - name: Run Publisher -go-publish
         shell: bash
         env:
@@ -715,6 +721,7 @@ jobs:
             -zips "${RUNNER_TEMP}/publication-zips" \
             -date "${PUBLICATION_DATE}" \
             -tx "${TX_URL}" \
+            -fhir-settings "${GITHUB_WORKSPACE}/source/.github/fhir-settings.json" \
             2>&1 | tee "${RUNNER_TEMP}/go-publish.log"
 
       - name: Correct and validate FHIR IG registry entry
