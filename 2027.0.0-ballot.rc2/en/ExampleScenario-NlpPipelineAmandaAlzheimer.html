@@ -1,0 +1,656 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>NLP-Pipeline „Amanda Alzheimer“ - MII IG Dokument v2027.0.0-ballot.rc2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- MODULE OVERRIDE of the template's includes/fragment-css.html (ig-template-mii-kds 1.3.4).
+     The template occupies the base's CSS extension point, so a module that needs
+     one more rule has to carry the template's include verbatim and append to it.
+     Everything above the <style> block is the template's file, unchanged.
+     Module rules (2026-09-07, review on migration/2027.0.0-ballot.rc2):
+       1. narrative Markdown tables and this module's sql tables (class "grid sql-table",
+          set through the directive's "class" property — the publisher's own grid
+          tables stay untouched, template styleguide §5)
+          use the full width of the content column instead of shrink-to-fit;
+       2. the publisher adds Prism's class="language-json" to SOME of its own
+          JSON renderings (one of the four DocumentReference examples), which
+          re-colours that block green; inside pre.json the Prism tokens now
+          inherit the publisher's own colouring, so all JSON blocks look alike.
+     REMOVAL: delete this file the day the template ships both rules
+     (ig-template-mii-kds PR "fix(css): full-width narrative tables, uniform JSON blocks"). -->
+<!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+<style>
+  /* 1. tables use the content width (same selector chain as template-base.css, see its comment) */
+  table:not([class]):not([style]):not([border]):not([data-fhir]),
+  table.sql-table { width: 100%; }
+  /* 2. publisher JSON blocks: neutralise Prism's re-colouring where the publisher added its class */
+  /*    Prism.js also copies its language class onto the parent <pre> at load time, which
+        swaps fhir.css's pre.json look (green #EFFFEF, 11px, 5px padding) for Prism's grey theme;
+        the pre-level rule puts the publisher's values back. */
+  pre.json[class*="language-"] { background: #EFFFEF; padding: 5px; margin: 0 0 10px; font-size: 11px; text-shadow: none; }
+  pre.json code[class*="language-"] { color: inherit; text-shadow: none; }
+  pre.json code[class*="language-"] .token { color: inherit; background: transparent; text-shadow: none; font-weight: inherit; }
+  /* 3. publisher-generated PlantUML diagrams (ExampleScenario, class/sequence): the SVG carries a fixed
+        pixel width and height inline; cap it at the content width and let the height follow the viewBox
+        so a wide diagram scales instead of overflowing the column (same guard template-base.css has for img) */
+  #segment-content svg[data-diagram-type] { max-width: 100%; height: auto !important; }
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18.15"}
+    h3,h4,h5,h6{--heading-prefix:"18.15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" src="assets/images/logo-num-diz-en.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Font size">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Font size: default">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Font size: larger">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Font size: largest">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Dokument</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+
+
+
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- Menu in the IG's DEFAULT language (English); the German translation is
+     input/translations/de/includes/menu.xml.
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     the `menu:` property in sushi-config.yaml generates a single menu.xml and
+     cannot be translated. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <li><a href="kompatibilitaet.html">Compatibility with Other Specifications</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="extensions.html">Extensions</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="search-parameters.html">Search Parameters</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <li><a href="value-sets.html">Value Sets</a></li>
+      <li><a href="code-systems.html">Code Systems</a></li>
+      <li><a href="examples.html">Examples</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changelog</a></li>
+  <li class="dropdown">
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="metadata.html">Metadata Overview</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/ExampleScenario-NlpPipelineAmandaAlzheimer.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>NLP-Pipeline „Amanda Alzheimer“</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-examplescenario -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Dokument (v2027.0.0-ballot.rc2: 2027 Ballot 1) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ExampleScenario-NlpPipelineAmandaAlzheimer.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ExampleScenario-NlpPipelineAmandaAlzheimer.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">ExampleScenario: NLP-Pipeline „Amanda Alzheimer“
+
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2027.0.0-ballot.rc2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ExampleScenario/NlpPipelineAmandaAlzheimer|2027.0.0-ballot.rc2"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+
+            as of 
+2026-09-13
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">NlpPipelineAmandaAlzheimer</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+<p>
+
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+<div style="display:inline-block" markdown="1">
+
+<!-- markdownlint-disable MD041 -->
+<p>The scenario describes the NLP processing chain of the "Amanda Alzheimer" example; the example instances, the flow diagram and the explanation of the <code class="language-plaintext highlighter-rouge">relatesTo</code> relationships are on the <a href="examples.html#example-scenario-amanda-alzheimer-nlp-pipeline">Examples</a> page.</p>
+
+
+</div>
+
+
+
+
+<a name="actors"> </a>
+<h4>Actors</h4>
+  <div data-fhir="generated"><p class="res-header-id"></p><a name="NlpPipelineAmandaAlzheimer"> </a><a name="hcNlpPipelineAmandaAlzheimer"> </a>
+<table class="table-striped table-bordered" data-fhir="generated"><tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td><a name="a_source"> </a>Dokumentenquelle</td>
+<td>System</td>
+<td style="overflow-wrap:break-word"><div><p>System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen — im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief <code>Amanda_Alzheimer.docx</code> stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher.</p>
+</div></td></tr>
+<tr><td><a name="a_nlp"> </a>NLP-Pipeline / Annotationsframework</td>
+<td>System</td>
+<td style="overflow-wrap:break-word"><div><p>Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.</p>
+</div></td></tr>
+<tr><td><a name="a_annotators"> </a>Annotierende</td>
+<td>Person</td>
+<td style="overflow-wrap:break-word"><div><p>Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen.</p>
+</div></td></tr>
+<tr><td><a name="a_repo"> </a>Dokumentenrepository (FHIR)</td>
+<td>System</td>
+<td style="overflow-wrap:break-word"><div><p>FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und <code>relatesTo</code>-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.</p>
+</div></td></tr></table></div>
+
+<a name="diagram"> </a>
+<h4>Diagram</h4>
+  <?plantuml 1.2026.1?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="496px" preserveAspectRatio="none" style="width:966px;height:496px;background:#FFFFFF;" version="1.1" viewBox="0 0 966 496" width="966px" zoomAndPan="magnify"><title xmlns="">NlpPipelineAmandaAlzheimer</title><defs xmlns=""/><g xmlns=""><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="233.5088" x="367.7734" y="27.9951">NlpPipelineAmandaAlzheimer</text><rect fill="none" height="263.1953" style="stroke:#000000;stroke-width:1.5;" width="950.0557" x="10" y="135.5938"/><g class="participant-lifeline" data-entity-uid="part1" data-qualified-name="source" id="part1-lifeline"><g><title>...a_source.System oder Bestand. aus dem die zu verarbeitenden Dokumente stammen . im Beispiel der synthetische Korpus GraSCCo .Graz Synthetic Clinical text Corpus. DOI 10.5281.zenodo.6539130.. aus dem der Entlassbrief .Amanda_Alzheimer.docx. stammt. in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem. ein Krankenhausinformationssystem. eine Forschungsdatenbank oder ein Dateispeicher.. Dokumentenquelle..</title><rect fill="#000000" fill-opacity="0.00000" height="297.1953" width="8" x="89.5957" y="118.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="93" x2="93" y1="118.5938" y2="415.7891"/></g></g><g class="participant-lifeline" data-entity-uid="part2" data-qualified-name="nlp" id="part2-lifeline"><g><title>...a_nlp.Werkzeugkette. die die Verarbeitungsschritte teil- oder vollautomatisch ausf.hrt . Klartext-Extraktion. automatische Vorannotation identifizierender Angaben. Ersetzung durch typkonforme Surrogate. semantische Annotation .z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente. vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts. . und f.r jedes Ergebnisdokument eine Dokumentreferenz erzeugt.. NLP-Pipeline . Annotationsframework..</title><rect fill="#000000" fill-opacity="0.00000" height="297.1953" width="8" x="383.752" y="118.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="386.7803" x2="386.7803" y1="118.5938" y2="415.7891"/></g></g><g class="participant-lifeline" data-entity-uid="part3" data-qualified-name="annotators" id="part3-lifeline"><g><title>...a_annotators.Fachpersonen. die die automatische Vorannotation pr.fen und korrigieren .Kuratierung der De-Identifikation. und die semantische Annotation im Annotationsframework vornehmen.. Annotierende..</title><rect fill="#000000" fill-opacity="0.00000" height="297.1953" width="8" x="662.4072" y="118.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="666.0957" x2="666.0957" y1="118.5938" y2="415.7891"/></g></g><g class="participant-lifeline" data-entity-uid="part4" data-qualified-name="repo" id="part4-lifeline"><g><title>...a_repo.FHIR-Server. der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und .relatesTo.-Verkn.pfungen ablegt. Das Repository f.hrt keine Transformation aus. es dokumentiert die Ergebnisse der Pipeline.. Dokumentenrepository .FHIR...</title><rect fill="#000000" fill-opacity="0.00000" height="297.1953" width="8" x="834.3872" y="118.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="837.7188" x2="837.7188" y1="118.5938" y2="415.7891"/></g></g><g class="participant participant-head" data-entity-uid="part1" data-qualified-name="source" id="part1-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147.1914" x="20" y="87.2969"/><a href="#a_source" target="_top" title="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen &#x2014; im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher." xlink:actuate="onRequest" xlink:href="#a_source" xlink:show="new" xlink:title="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen &#x2014; im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="133.1914" x="27" y="107.292">Dokumentenquelle</text></a></g><g class="participant participant-tail" data-entity-uid="part1" data-qualified-name="source" id="part1-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147.1914" x="20" y="414.7891"/><a href="#a_source" target="_top" title="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen &#x2014; im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher." xlink:actuate="onRequest" xlink:href="#a_source" xlink:show="new" xlink:title="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen &#x2014; im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="133.1914" x="27" y="434.7842">Dokumentenquelle</text></a></g><g class="participant participant-head" data-entity-uid="part2" data-qualified-name="nlp" id="part2-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="273.9434" x="250.7803" y="87.2969"/><a href="#a_nlp" target="_top" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausf&#xfc;hrt &#x2014; Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) &#x2014; und f&#xfc;r jedes Ergebnisdokument eine Dokumentreferenz erzeugt." xlink:actuate="onRequest" xlink:href="#a_nlp" xlink:show="new" xlink:title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausf&#xfc;hrt &#x2014; Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) &#x2014; und f&#xfc;r jedes Ergebnisdokument eine Dokumentreferenz erzeugt." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="259.9434" x="257.7803" y="107.292">NLP-Pipeline / Annotationsframework</text></a></g><g class="participant participant-tail" data-entity-uid="part2" data-qualified-name="nlp" id="part2-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="273.9434" x="250.7803" y="414.7891"/><a href="#a_nlp" target="_top" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausf&#xfc;hrt &#x2014; Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) &#x2014; und f&#xfc;r jedes Ergebnisdokument eine Dokumentreferenz erzeugt." xlink:actuate="onRequest" xlink:href="#a_nlp" xlink:show="new" xlink:title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausf&#xfc;hrt &#x2014; Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) &#x2014; und f&#xfc;r jedes Ergebnisdokument eine Dokumentreferenz erzeugt." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="259.9434" x="257.7803" y="434.7842">NLP-Pipeline / Annotationsframework</text></a></g><g class="participant participant-head" data-entity-uid="part3" data-qualified-name="annotators" id="part3-head"><a href="#a_annotators" target="_top" title="Fachpersonen, die die automatische Vorannotation pr&#xfc;fen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen." xlink:actuate="onRequest" xlink:href="#a_annotators" xlink:show="new" xlink:title="Fachpersonen, die die automatische Vorannotation pr&#xfc;fen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="94.623" x="616.0957" y="115.292">Annotierende</text></a><ellipse cx="666.4072" cy="50.7969" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M666.4072,58.7969 L666.4072,85.7969 M653.4072,66.7969 L679.4072,66.7969 M666.4072,85.7969 L653.4072,100.7969 M666.4072,85.7969 L679.4072,100.7969" fill="none" style="stroke:#181818;stroke-width:0.5;"/></g><g class="participant participant-tail" data-entity-uid="part3" data-qualified-name="annotators" id="part3-tail"><a href="#a_annotators" target="_top" title="Fachpersonen, die die automatische Vorannotation pr&#xfc;fen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen." xlink:actuate="onRequest" xlink:href="#a_annotators" xlink:show="new" xlink:title="Fachpersonen, die die automatische Vorannotation pr&#xfc;fen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="94.623" x="616.0957" y="427.7842">Annotierende</text></a><ellipse cx="666.4072" cy="439.5859" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M666.4072,447.5859 L666.4072,474.5859 M653.4072,455.5859 L679.4072,455.5859 M666.4072,474.5859 L653.4072,489.5859 M666.4072,474.5859 L679.4072,489.5859" fill="none" style="stroke:#181818;stroke-width:0.5;"/></g><g class="participant participant-head" data-entity-uid="part4" data-qualified-name="repo" id="part4-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="223.3369" x="726.7188" y="87.2969"/><a href="#a_repo" target="_top" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verkn&#xfc;pfungen ablegt. Das Repository f&#xfc;hrt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline." xlink:actuate="onRequest" xlink:href="#a_repo" xlink:show="new" xlink:title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verkn&#xfc;pfungen ablegt. Das Repository f&#xfc;hrt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="209.3369" x="733.7188" y="107.292">Dokumentenrepository (FHIR)</text></a></g><g class="participant participant-tail" data-entity-uid="part4" data-qualified-name="repo" id="part4-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="223.3369" x="726.7188" y="414.7891"/><a href="#a_repo" target="_top" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verkn&#xfc;pfungen ablegt. Das Repository f&#xfc;hrt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline." xlink:actuate="onRequest" xlink:href="#a_repo" xlink:show="new" xlink:title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verkn&#xfc;pfungen ablegt. Das Repository f&#xfc;hrt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="209.3369" x="733.7188" y="434.7842">Dokumentenrepository (FHIR)</text></a></g><path d="M10,135.5938 L334.2651,135.5938 L334.2651,142.7266 L324.2651,152.7266 L10,152.7266 L10,135.5938" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="263.1953" style="stroke:#000000;stroke-width:1.5;" width="950.0557" x="10" y="135.5938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="274.7393" x="25" y="148.6606">NLP-Verarbeitung eines Entlassbriefs</text><a href="#node1" target="_top" title="Vier Verarbeitungsschritte der NLP-Pipeline (teil- oder vollautomatisch, mit Pr&#xfc;fung durch Annotierende); die FHIR-DocumentReference-Ressourcen dokumentieren nur die Ergebnisse dieser Schritte, kumulieren den NLP-Verarbeitungsstatus und verkn&#xfc;pfen die Ergebnisdokumente &#xfc;ber `relatesTo`. Das Dokumentenrepository transformiert nichts &#x2014; es speichert die Dokumentreferenzen." xlink:actuate="onRequest" xlink:href="#node1" xlink:show="new" xlink:title="Vier Verarbeitungsschritte der NLP-Pipeline (teil- oder vollautomatisch, mit Pr&#xfc;fung durch Annotierende); die FHIR-DocumentReference-Ressourcen dokumentieren nur die Ergebnisse dieser Schritte, kumulieren den NLP-Verarbeitungsstatus und verkn&#xfc;pfen die Ergebnisdokumente &#xfc;ber `relatesTo`. Das Dokumentenrepository transformiert nichts &#x2014; es speichert die Dokumentreferenzen." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" text-decoration="underline" textLength="42.104" x="349.2651" y="147.8042">details</text></a><g class="message" data-entity-1="part1" data-entity-2="part2" id="msg1"><polygon fill="#181818" points="375.752,169.8594,385.752,173.8594,375.752,177.8594,379.752,173.8594" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="93.5957" x2="381.752" y1="173.8594" y2="173.8594"/><a href="#node2" target="_top" title="Die Pipeline &#xfc;bernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle." xlink:actuate="onRequest" xlink:href="#node2" xlink:show="new" xlink:title="Die Pipeline &#xfc;bernimmt das Originaldokument `Amanda_Alzheimer.docx` aus der Dokumentenquelle." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="204.1851" x="100.5957" y="168.7935">Originaldokument &#xfc;bernehmen</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="308.9131" y="168.7935">(</text><a href="#i_AmandaAlzheimerOriginalDokument" target="_top" title="#i_AmandaAlzheimerOriginalDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerOriginalDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerOriginalDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="313.9849" y="168.7935">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="365.6802" y="168.7935">)</text></g><g class="message" data-entity-1="part2" data-entity-2="part4" id="msg2"><polygon fill="#181818" points="826.3872,198.9922,836.3872,202.9922,826.3872,206.9922,830.3872,202.9922" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="387.752" x2="832.3872" y1="202.9922" y2="202.9922"/><a href="#node3" target="_top" title="Dokumentreferenz auf das Original mit NLP-Verarbeitungsstatus `unprocessed`." xlink:actuate="onRequest" xlink:href="#node3" xlink:show="new" xlink:title="Dokumentreferenz auf das Original mit NLP-Verarbeitungsstatus `unprocessed`." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="154.1655" x="394.752" y="197.9263">Original dokumentieren</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="553.0498" y="197.9263">(</text><a href="#i_AmandaAlzheimerOriginalDokument" target="_top" title="#i_AmandaAlzheimerOriginalDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerOriginalDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerOriginalDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="558.1216" y="197.9263">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="609.8169" y="197.9263">)</text></g><g class="message" data-entity-1="part2" data-entity-2="part2" id="msg3"><line style="stroke:#181818;stroke-width:1;" x1="387.752" x2="429.752" y1="232.125" y2="232.125"/><line style="stroke:#181818;stroke-width:1;" x1="429.752" x2="429.752" y1="232.125" y2="245.125"/><line style="stroke:#181818;stroke-width:1;" x1="388.752" x2="429.752" y1="245.125" y2="245.125"/><polygon fill="#181818" points="398.752,241.125,388.752,245.125,398.752,249.125,394.752,245.125" style="stroke:#181818;stroke-width:1;"/><a href="#node4" target="_top" title="Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`)." xlink:actuate="onRequest" xlink:href="#node4" xlink:show="new" xlink:title="Automatische Umwandlung in Klartext (`Amanda_Alzheimer.txt`)." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="122.77" x="394.752" y="227.0591">Klartext-Extraktion</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="521.6543" y="227.0591">(</text><a href="#i_AmandaAlzheimerOriginalDokument" target="_top" title="#i_AmandaAlzheimerOriginalDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerOriginalDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerOriginalDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="526.7261" y="227.0591">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="578.4214" y="227.0591">)</text></g><g class="message" data-entity-1="part2" data-entity-2="part4" id="msg4"><polygon fill="#181818" points="826.3872,270.2578,836.3872,274.2578,826.3872,278.2578,830.3872,274.2578" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="387.752" x2="832.3872" y1="274.2578" y2="274.2578"/><a href="#node5" target="_top" title="Dokumentreferenz mit Status `preprocessed, format-change`, `relatesTo.transforms` &#x2192; Original." xlink:actuate="onRequest" xlink:href="#node5" xlink:show="new" xlink:title="Dokumentreferenz mit Status `preprocessed, format-change`, `relatesTo.transforms` &#x2192; Original." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="154.6289" x="394.752" y="269.1919">Klartext dokumentieren</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="553.5132" y="269.1919">(</text><a href="#i_AmandaAlzheimerKlartextDokument" target="_top" title="#i_AmandaAlzheimerKlartextDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerKlartextDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerKlartextDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="558.585" y="269.1919">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="610.2803" y="269.1919">)</text></g><g class="message" data-entity-1="part2" data-entity-2="part3" id="msg5"><polygon fill="#181818" points="654.4072,299.3906,664.4072,303.3906,654.4072,307.3906,658.4072,303.3906" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="387.752" x2="660.4072" y1="303.3906" y2="303.3906"/><a href="#node6" target="_top" title="Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`)." xlink:actuate="onRequest" xlink:href="#node6" xlink:show="new" xlink:title="Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (`De-ID.txt`)." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="188.6841" x="394.752" y="298.3247">De-Identifikation mit Pr&#xfc;fung</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="587.5684" y="298.3247">(</text><a href="#i_AmandaAlzheimerKlartextDokument" target="_top" title="#i_AmandaAlzheimerKlartextDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerKlartextDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerKlartextDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="592.6401" y="298.3247">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="644.3354" y="298.3247">)</text></g><g class="message" data-entity-1="part2" data-entity-2="part4" id="msg6"><polygon fill="#181818" points="826.3872,328.5234,836.3872,332.5234,826.3872,336.5234,830.3872,332.5234" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="387.752" x2="832.3872" y1="332.5234" y2="332.5234"/><a href="#node7" target="_top" title="Dokumentreferenz mit Status `preprocessed, format-change, surrogated`, `relatesTo.transforms` &#x2192; Klartext-Dokument." xlink:actuate="onRequest" xlink:href="#node7" xlink:show="new" xlink:title="Dokumentreferenz mit Status `preprocessed, format-change, surrogated`, `relatesTo.transforms` &#x2192; Klartext-Dokument." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="286.5015" x="394.752" y="327.4575">De-identifiziertes Dokument dokumentieren</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="685.3857" y="327.4575">(</text><a href="#i_AmandaAlzheimerDeIdentifiziertesDokument" target="_top" title="#i_AmandaAlzheimerDeIdentifiziertesDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerDeIdentifiziertesDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerDeIdentifiziertesDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="690.4575" y="327.4575">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="742.1528" y="327.4575">)</text></g><g class="message" data-entity-1="part3" data-entity-2="part2" id="msg7"><polygon fill="#181818" points="398.752,357.6563,388.752,361.6563,398.752,365.6563,394.752,361.6563" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="392.752" x2="665.4072" y1="361.6563" y2="361.6563"/><a href="#node8" target="_top" title="Semantische Annotation der klinischen Inhalte im Annotationsframework durch die Annotierenden; die Ergebnisdateien werden als `Annotat.zip` zusammengefasst." xlink:actuate="onRequest" xlink:href="#node8" xlink:show="new" xlink:title="Semantische Annotation der klinischen Inhalte im Annotationsframework durch die Annotierenden; die Ergebnisdateien werden als `Annotat.zip` zusammengefasst." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="159.4087" x="404.752" y="356.5903">Semantische Annotation</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="568.293" y="356.5903">(</text><a href="#i_AmandaAlzheimerDeIdentifiziertesDokument" target="_top" title="#i_AmandaAlzheimerDeIdentifiziertesDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerDeIdentifiziertesDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerDeIdentifiziertesDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="573.3647" y="356.5903">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="625.0601" y="356.5903">)</text></g><g class="message" data-entity-1="part2" data-entity-2="part4" id="msg8"><polygon fill="#181818" points="826.3872,386.7891,836.3872,390.7891,826.3872,394.7891,830.3872,390.7891" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="387.752" x2="832.3872" y1="390.7891" y2="390.7891"/><a href="#node9" target="_top" title="Dokumentreferenz mit Status `annotated, semantic, surrogated, preprocessed, format-change`, `relatesTo.appends` &#x2192; de-identifiziertes Dokument." xlink:actuate="onRequest" xlink:href="#node9" xlink:show="new" xlink:title="Dokumentreferenz mit Status `annotated, semantic, surrogated, preprocessed, format-change`, `relatesTo.appends` &#x2192; de-identifiziertes Dokument." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="250.4023" x="394.752" y="385.7231">Annotiertes Dokument dokumentieren</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="649.2866" y="385.7231">(</text><a href="#i_AmandaAlzheimerAnnotiertesDokument" target="_top" title="#i_AmandaAlzheimerAnnotiertesDokument" xlink:actuate="onRequest" xlink:href="#i_AmandaAlzheimerAnnotiertesDokument" xlink:show="new" xlink:title="#i_AmandaAlzheimerAnnotiertesDokument" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="51.6953" x="654.3584" y="385.7231">payload</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5.0718" x="706.0537" y="385.7231">)</text></g><?plantuml-src hLVRRXit47tNLmpI5mcGb3YkqwG62ZYMtGfkRSDoqmA1O56x8udP5RaXkRv8AD2dVa3Hp_6R_oHVqXdkHQkRwzPzCB3U7GxdN6P8NKeN8vp6oRbCC9OA3wP2XU8WdarGJj7KQeamJWOo4Sh1YuyVln9NLgScm7dlpZgSWWxHm7kqZjOrGQGMGdeRIeHP2jTeX1cYTAX2LD3HKJf5vH0eV4fFyENtlq1EQRsqYSGOE9czKsw2JjfWWd2YJK8vlpUYTtYeeKuFC-Zb4G4SKiqo434ul7Lmw8ERq3dhmiwhzjxhjpilPwXqgDjlzdRVxUo-QbHAfAsEb8k5jKCZSGI33FjL2RuTwk1saDNgza4gl-RSY5jf0TsD09GLK4gOO2AlCqOMRocf62C_MyzOqwywCK95g2PKZLGZRQR2IQri9GJXM1lY85LZ6mfADAGLMNA_BRqYqb0IIwRzMsN3pod6CVRxBq1OoCJQeAAAa_alQA8PfkC8dSEc5ut_FXIgyTPKWP7qcHYMSIlR_rh7iKYTvgBfErCwUhYV6EVrF8bfCvAZTNJhZ8WO5xDUXjC6cj0hxJnca6GD9qTo9j6mJmmSgB4O8gqwCXRTZCg0a61CmDqbaVPq8VHIO_HOSE4MYUGyzy4YSNtMXlVjoXkRnC8vNWxTqyEZvB9xTWfJwGYG6ICj5x53HmMS_dZUEj7JH2jcj0dNuxZjgUbWgvkN6sKfMqNda3d8f_ZJ9VxQEZVw4qREDZmXgGg1-37m2JdcYFOQAcd3NB5Cx48_WoEcOGPeM1f7qd8rvIulgtX6HapnHfieLvj4hOd0QPEBdBDCFfeVYs2IeB4CQI7r8x8avk5-H2tArKVQ63ds-a3z93KKWSRBmbPVvQJXrt3wBS9Gnsy2mJ8ed10B1De7v8x8qItGRF2pmKJFZt_eNhHwQ6ZkD7rjNhCLPWc3e0OnApvtAQDbDyW9usJMLoA4ezd1s0O6oKbeB_M0OoBrS9-CA8PJ3sCarQW_BLnGJLPImNUGzqVajRuadctPzDm--q36A0n1g9sll72AnMpov1vOwdQpsAFEy1ivMVo-LXiRdIPhKBpZxDBqiq0iqgJ4dVa7kSPDCGF2l3TADzQtJuMcv_ASNRHeuAggZNqFqclMqO77Sv5f563h0cqskrIL5_fFfMQD78cM2kZbPJQ1ujCu2m__GShhGZwEhQGDoxFguNv8oIkIP-9kbC0LodeDwMYQEEjd0D5T36ktnPKaQuXEoDZs-xKCExI-uvx-jX3dzRn3IqlsVMLAqka48LLqnZsgH5mEbcqdMdO4chKpWofOov7juRkotuSw5IAlLYu9nPeY7IJYBjOYxFSRDQgUGJ159OhT-Tgm4-be2OBtpZRP1gbAZ0x881WEAZKl6-KPrLOf_tf-K9sHFqzlA5lCZkPJF3_geBvEjRjrWmPLj-4u_B-8t5idaddhvJGb55pmr8HithJeaACvDMXM3DqkNMi7yEMFFqj2AzK_ZTiY-X40Yo5UmdYpJF6JRmUqjxSjB9r8VivmXrLd3HzvT0_pTvNALa-wNv2uVCHrIaNN3hobIVSCRfR4_UO_YqiNegBsy76XIsyMMsNegfpJmd9EFCq47Umkhz-4U663rOPxE-zjlZMmzX7Vz_c3WgxorxMjbuajHjXVdl9yYwPaDsX2VoyWPlDixPbC1lGZnlfVAcCSqL79_6okxbbaR9B_tUFov_onzlabAwZAteGdDxz84Y8cDqIuNVpAdUpVUwAoSXC1L43jRm00?></g></svg>
+
+<a name="processes"> </a>
+<h4>Processes</h4>
+  <div data-fhir="generated"><p class="res-header-id"></p>
+<div><a name="node1"> </a><b>Process: NLP-Verarbeitung eines Entlassbriefs </b>
+<div><p>Vier Verarbeitungsschritte der NLP-Pipeline (teil- oder vollautomatisch, mit Prüfung durch Annotierende); die FHIR-DocumentReference-Ressourcen dokumentieren nur die Ergebnisse dieser Schritte, kumulieren den NLP-Verarbeitungsstatus und verknüpfen die Ergebnisdokumente über <code>relatesTo</code>. Das Dokumentenrepository transformiert nichts — es speichert die Dokumentreferenzen.</p>
+</div><p><b><i>Pre-conditions:</i></b></p>
+<div><p>Der Entlassbrief <code>Amanda_Alzheimer.docx</code> liegt in der Dokumentenquelle vor; Patientin und Einrichtungskontakt sind als FHIR-Ressourcen vorhanden.</p>
+</div><p><b><i>Post-conditions:</i></b></p>
+<div><p>Vier Dokumentreferenzen (Original, Klartext, de-identifiziert, annotiert) mit <code>relatesTo</code>-Kette und NLP-Verarbeitungsstatus liegen im Repository; die Ergebnisdokumente selbst liegen als Anhang oder Verweis in der jeweiligen Dokumentreferenz.</p>
+</div>
+<table style="width:100%" class="table-striped table-bordered" data-fhir="generated"><tr><th>Step</th><th>Name</th><th>Description</th><th>Initiator</th><th>Receiver</th><th>Request</th><th>Response</th></tr>
+<tr><td><a name="node2"> </a>1</td>
+<td>Originaldokument übernehmen - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Ingestion (Details: FHIR Restful Interactions code Ingestion)</a></td>
+<td><div><p>Die Pipeline übernimmt das Originaldokument <code>Amanda_Alzheimer.docx</code> aus der Dokumentenquelle.</p>
+</div></td>
+<td><a href="#a_source" title="System oder Bestand, aus dem die zu verarbeitenden Dokumente stammen — im Beispiel der synthetische Korpus GraSCCo (Graz Synthetic Clinical text Corpus, DOI 10.5281/zenodo.6539130), aus dem der Entlassbrief `Amanda_Alzheimer.docx` stammt; in der Praxis etwa ein Dokumentenarchiv oder Dokumentenmanagementsystem, ein Krankenhausinformationssystem, eine Forschungsdatenbank oder ein Dateispeicher.">Dokumentenquelle</a></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#i_AmandaAlzheimerOriginalDokument" title="Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`).">Originaldokument (Amanda_Alzheimer.docx)</a></td>
+<td></td></tr>
+<tr><td><a name="node3"> </a>2</td>
+<td>Original dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
+<td><div><p>Dokumentreferenz auf das Original mit NLP-Verarbeitungsstatus <code>unprocessed</code>.</p>
+</div></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
+<td><a href="#i_AmandaAlzheimerOriginalDokument" title="Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`).">Originaldokument (Amanda_Alzheimer.docx)</a></td>
+<td></td></tr>
+<tr><td><a name="node4"> </a>3</td>
+<td>Klartext-Extraktion - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Preprocessing (Details: FHIR Restful Interactions code Preprocessing)</a></td>
+<td><div><p>Automatische Umwandlung in Klartext (<code>Amanda_Alzheimer.txt</code>).</p>
+</div></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#i_AmandaAlzheimerOriginalDokument" title="Ausgangspunkt der Kette: `Amanda_Alzheimer.docx` (`application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `attachment.creation` 2028-02-06). NLP-Verarbeitungsstatus `unprocessed`; kein `relatesTo`. Verweist auf die Patientin (`subject`) und den Einrichtungskontakt (`context.encounter`).">Originaldokument (Amanda_Alzheimer.docx)</a></td>
+<td></td></tr>
+<tr><td><a name="node5"> </a>4</td>
+<td>Klartext dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
+<td><div><p>Dokumentreferenz mit Status <code>preprocessed, format-change</code>, <code>relatesTo.transforms</code> → Original.</p>
+</div></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
+<td><a href="#i_AmandaAlzheimerKlartextDokument" title="Ergebnis der Klartext-Extraktion: `Amanda_Alzheimer.txt` (`text/plain`, `attachment.creation` 2028-02-06). Status `preprocessed`, `format-change`; `relatesTo.transforms` → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt.">Klartext-Dokument (Amanda_Alzheimer.txt)</a></td>
+<td></td></tr>
+<tr><td><a name="node6"> </a>5</td>
+<td>De-Identifikation mit Prüfung - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">De-Identification (Details: FHIR Restful Interactions code De-Identification)</a></td>
+<td><div><p>Automatische Vorannotation identifizierender Angaben, manuelle Kuratierung durch die Annotierenden, danach automatische Ersetzung durch typkonforme Surrogate (<code>De-ID.txt</code>).</p>
+</div></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#a_annotators" title="Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen.">Annotierende</a></td>
+<td><a href="#i_AmandaAlzheimerKlartextDokument" title="Ergebnis der Klartext-Extraktion: `Amanda_Alzheimer.txt` (`text/plain`, `attachment.creation` 2028-02-06). Status `preprocessed`, `format-change`; `relatesTo.transforms` → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt.">Klartext-Dokument (Amanda_Alzheimer.txt)</a></td>
+<td></td></tr>
+<tr><td><a name="node7"> </a>6</td>
+<td>De-identifiziertes Dokument dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
+<td><div><p>Dokumentreferenz mit Status <code>preprocessed, format-change, surrogated</code>, <code>relatesTo.transforms</code> → Klartext-Dokument.</p>
+</div></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
+<td><a href="#i_AmandaAlzheimerDeIdentifiziertesDokument" title="Ergebnis der De-Identifikation: `De-ID.txt` (`text/plain`). Status `preprocessed`, `format-change`, `surrogated`; `relatesTo.transforms` → Klartext-Dokument. Ohne `subject` und ohne `context.encounter` — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet.">De-identifiziertes Dokument (De-ID.txt)</a></td>
+<td></td></tr>
+<tr><td><a name="node8"> </a>7</td>
+<td>Semantische Annotation - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Annotation (Details: FHIR Restful Interactions code Annotation)</a></td>
+<td><div><p>Semantische Annotation der klinischen Inhalte im Annotationsframework durch die Annotierenden; die Ergebnisdateien werden als <code>Annotat.zip</code> zusammengefasst.</p>
+</div></td>
+<td><a href="#a_annotators" title="Fachpersonen, die die automatische Vorannotation prüfen und korrigieren (Kuratierung der De-Identifikation) und die semantische Annotation im Annotationsframework vornehmen.">Annotierende</a></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#i_AmandaAlzheimerDeIdentifiziertesDokument" title="Ergebnis der De-Identifikation: `De-ID.txt` (`text/plain`). Status `preprocessed`, `format-change`, `surrogated`; `relatesTo.transforms` → Klartext-Dokument. Ohne `subject` und ohne `context.encounter` — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet.">De-identifiziertes Dokument (De-ID.txt)</a></td>
+<td></td></tr>
+<tr><td><a name="node9"> </a>8</td>
+<td>Annotiertes Dokument dokumentieren - <a href="http://hl7.org/fhir/R4/codesystem-restful-interaction.html">Dokumentreferenz ablegen (Details: FHIR Restful Interactions code Dokumentreferenz ablegen)</a></td>
+<td><div><p>Dokumentreferenz mit Status <code>annotated, semantic, surrogated, preprocessed, format-change</code>, <code>relatesTo.appends</code> → de-identifiziertes Dokument.</p>
+</div></td>
+<td><a href="#a_nlp" title="Werkzeugkette, die die Verarbeitungsschritte teil- oder vollautomatisch ausführt — Klartext-Extraktion, automatische Vorannotation identifizierender Angaben, Ersetzung durch typkonforme Surrogate, semantische Annotation (z. B. Annotationsplattform INCEpTION mit vorgeschalteter NLP-Komponente, vgl. die De-Identifikations-Pipeline des GeMTeX-Projekts) — und für jedes Ergebnisdokument eine Dokumentreferenz erzeugt.">NLP-Pipeline / Annotationsframework</a></td>
+<td><a href="#a_repo" title="FHIR-Server, der die Dokumentreferenzen aller Verarbeitungsstufen mit ihren NLP-Verarbeitungsstatus und `relatesTo`-Verknüpfungen ablegt. Das Repository führt keine Transformation aus; es dokumentiert die Ergebnisse der Pipeline.">Dokumentenrepository (FHIR)</a></td>
+<td><a href="#i_AmandaAlzheimerAnnotiertesDokument" title="Ergebnis der semantischen Annotation: `Annotat.zip` (`application/zip`). Status `annotated`, `semantic`, `surrogated`, `preprocessed`, `format-change`; `relatesTo.appends` → de-identifiziertes Dokument, da die Annotationen das Dokument ergänzen und nicht ersetzen. Ebenfalls ohne `subject` und `context.encounter`.">Annotiertes Dokument (Annotat.zip)</a></td>
+<td></td></tr></table></div></div>
+
+<a name="instances"> </a>
+<h4>Instances</h4>
+  <div data-fhir="generated"><p class="res-header-id"></p>
+<table class="table-striped table-bordered" data-fhir="generated"><tr><th>Name</th><th>Type</th><th>Content</th><th>Description</th></tr>
+<tr><td><a name="i_AmandaAlzheimerOriginalDokument"> </a>Originaldokument (Amanda_Alzheimer.docx)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerOriginalDokument.html">here</a></td>
+<td><div><p>Ausgangspunkt der Kette: <code>Amanda_Alzheimer.docx</code> (<code>application/vnd.openxmlformats-officedocument.wordprocessingml.document</code>, <code>attachment.creation</code> 2028-02-06). NLP-Verarbeitungsstatus <code>unprocessed</code>; kein <code>relatesTo</code>. Verweist auf die Patientin (<code>subject</code>) und den Einrichtungskontakt (<code>context.encounter</code>).</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerKlartextDokument"> </a>Klartext-Dokument (Amanda_Alzheimer.txt)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerKlartextDokument.html">here</a></td>
+<td><div><p>Ergebnis der Klartext-Extraktion: <code>Amanda_Alzheimer.txt</code> (<code>text/plain</code>, <code>attachment.creation</code> 2028-02-06). Status <code>preprocessed</code>, <code>format-change</code>; <code>relatesTo.transforms</code> → Originaldokument. Verweist weiterhin auf die Patientin und den Einrichtungskontakt.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerDeIdentifiziertesDokument"> </a>De-identifiziertes Dokument (De-ID.txt)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html">here</a></td>
+<td><div><p>Ergebnis der De-Identifikation: <code>De-ID.txt</code> (<code>text/plain</code>). Status <code>preprocessed</code>, <code>format-change</code>, <code>surrogated</code>; <code>relatesTo.transforms</code> → Klartext-Dokument. Ohne <code>subject</code> und ohne <code>context.encounter</code> — die identifizierenden Angaben sind durch Surrogate ersetzt, das Ergebnisdokument ist keinem Patientenkontext mehr zugeordnet.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerAnnotiertesDokument"> </a>Annotiertes Dokument (Annotat.zip)</td>
+<td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td>
+<td><a href="DocumentReference-AmandaAlzheimerAnnotiertesDokument.html">here</a></td>
+<td><div><p>Ergebnis der semantischen Annotation: <code>Annotat.zip</code> (<code>application/zip</code>). Status <code>annotated</code>, <code>semantic</code>, <code>surrogated</code>, <code>preprocessed</code>, <code>format-change</code>; <code>relatesTo.appends</code> → de-identifiziertes Dokument, da die Annotationen das Dokument ergänzen und nicht ersetzen. Ebenfalls ohne <code>subject</code> und <code>context.encounter</code>.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimer"> </a>Patientin Amanda Alzheimer</td>
+<td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td>
+<td><a href="Patient-AmandaAlzheimer.html">here</a></td>
+<td><div><p>Synthetische Patientin; <code>subject</code> des Original- und des Klartext-Dokuments. Ab der De-Identifikation wird sie nicht mehr referenziert.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerEinrichtungskontakt"> </a>Einrichtungskontakt</td>
+<td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+<td><a href="Encounter-AmandaAlzheimerEinrichtungskontakt.html">here</a></td>
+<td><div><p><code>context.encounter</code> des Original- und des Klartext-Dokuments und oberster Kontakt der Kontakthierarchie (ohne <code>partOf</code>).</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerAbteilungskontakt"> </a>Abteilungskontakt</td>
+<td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+<td><a href="Encounter-AmandaAlzheimerAbteilungskontakt.html">here</a></td>
+<td><div><p>Mittlere Ebene der Kontakthierarchie (<code>partOf</code> → Einrichtungskontakt); von keiner Dokumentreferenz unmittelbar referenziert.</p>
+</div></td></tr>
+<tr><td><a name="i_AmandaAlzheimerVersorgungsstellenKontakt"> </a>Versorgungsstellenkontakt</td>
+<td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+<td><a href="Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html">here</a></td>
+<td><div><p>Unterste Ebene der Kontakthierarchie (<code>partOf</code> → Abteilungskontakt); von keiner Dokumentreferenz unmittelbar referenziert.</p>
+</div></td></tr></table></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Sun, Sep 13, 2026 11:35+0000">2026-09-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">Legal notice</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

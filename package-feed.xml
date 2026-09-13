@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+  <channel>
+    <title>MII Core Dataset Dokument FHIR packages</title>
+    <description>FHIR packages published by the Medical Informatics Initiative</description>
+    <link>https://medizininformatik-initiative.github.io/kerndatensatz-dokument</link>
+    <generator>Medical Informatics Initiative (MII)</generator>
+    <lastBuildDate>Sun, 13 Sep 2026 11:35:48 +0000</lastBuildDate>
+    <atom:link href="https://medizininformatik-initiative.github.io/kerndatensatz-dokument/package-feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 13 Sep 2026 11:35:48 +0000</pubDate>
+    <language>en</language>
+    <ttl>600</ttl>
+  
+    <item>
+      <title>de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.rc2</title>
+      <description>Ballot release candidate 2 for the 2027 release cycle</description>
+      <link>https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot.rc2/package.tgz</link>
+      <guid isPermaLink="true">https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot.rc2/package.tgz</guid>
+      <dc:creator>Medical Informatics Initiative (MII)</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Sun, 13 Sep 2026 11:35:48 +0000</pubDate>
+      <fhir:details>Publication run at 01/09/2026 by runner using Version 2.3.2 (Git# 04466d0486ed). Built 2026-08-13T02:20:51.957Z (31 days old) source id Unknown (todo)</fhir:details>
+    </item></channel>
+</rss>
