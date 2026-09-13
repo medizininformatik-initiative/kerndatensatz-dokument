@@ -666,11 +666,45 @@ jobs:
             exit 1
           fi
 
+          # publish-setup.json names two RSS feeds, and -go-publish APPENDS to
+          # them rather than creating them ("Attempt to copy site/package-feed.xml
+          # but it doesn't exist"). A follow-up publication inherits both from the
+          # previous run; the first has to seed empty channels. Shape copied from
+          # the reference module's live webroot (kerndatensatz-basis
+          # package-feed.xml / publication-feed.xml).
+          seed_feed() {
+            local file="$1" title="$2" description="$3"
+            local now
+            now="$(date -u '+%a, %d %b %Y %H:%M:%S +0000')"
+            cat > "site/${file}" <<FEED
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+  <channel>
+    <title>${title}</title>
+    <description>${description}</description>
+    <link>${PUBLICATION_BASE}</link>
+    <generator>Medical Informatics Initiative (MII)</generator>
+    <lastBuildDate>${now}</lastBuildDate>
+    <atom:link href="${PUBLICATION_BASE}/${file}" rel="self" type="application/rss+xml"/>
+    <pubDate>${now}</pubDate>
+    <language>en</language>
+    <ttl>600</ttl>
+  </channel>
+</rss>
+FEED
+          }
+          seed_feed package-feed.xml \
+            "MII Core Dataset Dokument FHIR packages" \
+            "FHIR packages published by the Medical Informatics Initiative"
+          seed_feed publication-feed.xml \
+            "MII Core Dataset Dokument FHIR publications" \
+            "FHIR Implementation Guide releases published by the Medical Informatics Initiative"
+
           {
             echo "### First-publication webroot seeded"
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
             echo "- Generated package-registry.json over the webroot"
+            echo "- Seeded package-feed.xml and publication-feed.xml"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace
