@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-    "version" : "2027.0.0-ballot.rc2",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "UNSDM49Fragment",
     "title" : "UN M49 Regionen (Fragment: Welt, Europa)",
@@ -9,7 +9,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-    "version" : "2027.0.0-ballot.rc2",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "MII_CS_Dokument_NLP_Processing_Status",
     "title" : "MII CS Dokument NLP Processing Status",
@@ -20,7 +20,7 @@
   },
   {
     "url" : "urn:iso:std:iso:3166",
-    "version" : "2027.0.0-ballot.rc2",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "ISO3166Part1Fragment",
     "title" : "ISO 3166-1 Ländercodes (Fragment: Deutschland)",
@@ -28,7 +28,7 @@
   },
   {
     "url" : "urn:iso:std:iso:3166:-2",
-    "version" : "2027.0.0-ballot.rc2",
+    "version" : "2027.0.0-ballot",
     "status" : "active",
     "name" : "ISO3166Part2Fragment",
     "title" : "ISO 3166-2 Subdivisionscodes (Fragment: Sachsen)",

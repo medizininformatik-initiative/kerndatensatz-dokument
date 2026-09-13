@@ -1,4 +1,4 @@
-# MII VS Dokument Format Code - MII IG Dokument v2027.0.0-ballot.rc2
+# MII VS Dokument Format Code - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code | *Version*:2027.0.0-ballot |
 | Active as of 2026-09-13 | *Computable Name*:MII_VS_Dokument_Format_Code |
 
  
@@ -43,12 +43,12 @@ No Expansion for this valueset (Unknown Code System)
   },
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Dokument_Format_Code",
   "title" : "MII VS Dokument Format Code",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T16:03:26+00:00",
+  "date" : "2026-09-13T16:20:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

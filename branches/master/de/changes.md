@@ -1,4 +1,4 @@
-# Änderungshistorie - MII IG Dokument v2027.0.0-ballot.rc2
+# Änderungshistorie - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Änderungshistorie**
@@ -39,6 +39,17 @@ Ein Versionsabschnitt mit einer Breaking Change ist erst vollständig, wenn er a
 Kennzeichnen Sie solche Einträge deutlich (zum Beispiel mit dem Präfix **BREAKING:**), damit sie beim Überfliegen des Abschnitts nicht übersehen werden können.
 
 -------
+
+### Version 2027.0.0-ballot
+
+**Datum** 2026-09-13 · **Status** Ballot-Release (Zyklus 2027)
+
+Das Ballot-Release des Zyklus 2027. Inhaltlich der Stand des Release-Kandidaten 2, der in der Paket-Registry veröffentlicht und ohne Änderungswünsche geprüft wurde; diese Version löst beide Kandidaten ab und ist die für das Ballot maßgebliche.
+
+* **Keine Änderungen an den Artefakten** gegenüber `2027.0.0-ballot.rc2` — Profil, Extension, Terminologien, logisches Modell, CapabilityStatement und Beispiele sind identisch. Es unterscheiden sich nur die Versionsbezeichnungen, der Publikationsdeskriptor und diese Änderungshistorie.
+* **Löst ab**: `2027.0.0-ballot.rc1` und `2027.0.0-ballot.rc2`. Beide bleiben in der Paket-Registry auflösbar; für das Ballot ist keiner von beiden zu verwenden.
+
+> **Known Issue**: 2 Validierungsfehler bei Beispielen mit `context.event` (eventCodeList-Expansion, Upstream-Bug in `de.ihe-d.terminology 3.0.1`) — siehe [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
 
 ### Version 2027.0.0-ballot.rc2
 

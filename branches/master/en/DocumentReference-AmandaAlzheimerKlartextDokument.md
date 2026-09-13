@@ -1,4 +1,4 @@
-# Klartext-Dokument - MII IG Dokument v2027.0.0-ballot.rc2
+# Klartext-Dokument - MII IG Dokument v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
