@@ -673,24 +673,24 @@ jobs:
           # the reference module's live webroot (kerndatensatz-basis
           # package-feed.xml / publication-feed.xml).
           seed_feed() {
-            local file="$1" title="$2" description="$3"
-            local now
+            local file="$1" title="$2" description="$3" now
             now="$(date -u '+%a, %d %b %Y %H:%M:%S +0000')"
-            cat > "site/${file}" <<FEED
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
-  <channel>
-    <title>${title}</title>
-    <description>${description}</description>
-    <link>${PUBLICATION_BASE}</link>
-    <generator>Medical Informatics Initiative (MII)</generator>
-    <lastBuildDate>${now}</lastBuildDate>
-    <atom:link href="${PUBLICATION_BASE}/${file}" rel="self" type="application/rss+xml"/>
-    <pubDate>${now}</pubDate>
-    <language>en</language>
-    <ttl>600</ttl>
-  </channel>
-</rss>
-FEED
+            {
+              printf '%s' '<?xml version="1.0" encoding="UTF-8"?>'
+              printf '%s\n' '<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">'
+              printf '  <channel>\n'
+              printf '    <title>%s</title>\n' "${title}"
+              printf '    <description>%s</description>\n' "${description}"
+              printf '    <link>%s</link>\n' "${PUBLICATION_BASE}"
+              printf '    <generator>Medical Informatics Initiative (MII)</generator>\n'
+              printf '    <lastBuildDate>%s</lastBuildDate>\n' "${now}"
+              printf '    <atom:link href="%s/%s" rel="self" type="application/rss+xml"/>\n' "${PUBLICATION_BASE}" "${file}"
+              printf '    <pubDate>%s</pubDate>\n' "${now}"
+              printf '    <language>en</language>\n'
+              printf '    <ttl>600</ttl>\n'
+              printf '  </channel>\n'
+              printf '</rss>\n'
+            } > "site/${file}"
           }
           seed_feed package-feed.xml \
             "MII Core Dataset Dokument FHIR packages" \
