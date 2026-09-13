@@ -265,12 +265,16 @@ function validateEntry(
     );
   } else {
     const edition = editions[0];
-    assertEqual(
-      edition.name,
-      requiredString(request, "sequence", "Publication request"),
-      "edition.name",
-      errors,
-    );
+    // The Publisher names a ballot edition "<sequence> Ballot" and a normal
+    // release just "<sequence>", which is what the live FHIR IG registry
+    // carries: hl7.fhir.us.ecr "STU 3 Ballot", hl7.fhir.uv.livd "STU1 Ballot".
+    // Expecting the bare sequence rejected every ballot publication.
+    const sequence = requiredString(request, "sequence", "Publication request");
+    const expectedEditionName =
+      String(request?.status ?? "").toLowerCase() === "ballot"
+        ? `${sequence} Ballot`
+        : sequence;
+    assertEqual(edition.name, expectedEditionName, "edition.name", errors);
     assertEqual(edition.package, `${packageId}#${version}`, "edition.package", errors);
     assertEqual(
       normalizeUrl(edition.url ?? "", "Generated edition URL"),
