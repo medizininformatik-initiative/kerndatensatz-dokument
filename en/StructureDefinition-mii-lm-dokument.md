@@ -1,4 +1,4 @@
-# MII LM Dokument - MII IG Dokument v2027.0.0-ballot
+# MII LM Dokument - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,8 +12,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-dokument.c
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-13 | *Computable Name*:MII_LM_Dokument |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument | *Version*:2027.0.0-ballot.2 |
+| Active as of 2026-09-14 | *Computable Name*:MII_LM_Dokument |
 
  
 MII Logical Model KDS-Modul Dokument 
@@ -65,11 +65,11 @@ Mandatory: 0 element(5 nested mandatory elements)
   "resourceType" : "StructureDefinition",
   "id" : "mii-lm-dokument",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.2",
   "name" : "MII_LM_Dokument",
   "title" : "MII LM Dokument",
   "status" : "active",
-  "date" : "2026-09-13T16:44:42+00:00",
+  "date" : "2026-09-14T07:45:33+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
