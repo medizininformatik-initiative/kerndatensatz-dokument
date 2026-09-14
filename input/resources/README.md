@@ -29,7 +29,7 @@ each MII CalVer release is bound to one SNOMED CT International release.
 
 The shipped file carries the **verified `v2027.*` pin**, matching the 2027
 dependency line this module pins in `sushi-config.yaml` (`version:
-2027.0.0-ballot`). When your module moves to a later CalVer line, look the
+2027.0.0-ballot.2`). When your module moves to a later CalVer line, look the
 release up in that wiki table and update **both** pin sites:
 
 - this file (`Parameters-expansion-manifest.json`), and

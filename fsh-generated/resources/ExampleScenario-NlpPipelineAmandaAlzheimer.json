@@ -116,7 +116,7 @@
       "description": "Unterste Ebene der Kontakthierarchie (`partOf` → Abteilungskontakt); von keiner Dokumentreferenz unmittelbar referenziert."
     }
   ],
-  "version": "2027.0.0-ballot",
+  "version": "2027.0.0-ballot.2",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
