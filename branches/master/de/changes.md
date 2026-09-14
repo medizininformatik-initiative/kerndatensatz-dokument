@@ -1,4 +1,4 @@
-# Änderungshistorie - MII IG Dokument v2027.0.0-ballot
+# Änderungshistorie - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * **Änderungshistorie**
@@ -39,6 +39,18 @@ Ein Versionsabschnitt mit einer Breaking Change ist erst vollständig, wenn er a
 Kennzeichnen Sie solche Einträge deutlich (zum Beispiel mit dem Präfix **BREAKING:**), damit sie beim Überfliegen des Abschnitts nicht übersehen werden können.
 
 -------
+
+### Version 2027.0.0-ballot.2
+
+**Datum** 2026-09-14 · **Status** Ballot-Release (Zyklus 2027)
+
+Neubau von `2027.0.0-ballot` gegen die **veröffentlichten** Ballot-Pakete der Module Meta und Basis. Das vorherige Release war auf deren Release-Kandidaten gepinnt — zum Zeitpunkt seiner Vorbereitung die jeweils neuesten Versionen; beide Module haben ihr finales Ballot am 10.09.2026 veröffentlicht.
+
+* **Abhängigkeiten** — `kerndatensatz.meta` und `kerndatensatz.base` wechseln von ihren Release-Kandidaten (`2027.0.0-ballot.rc3` bzw. `2027.0.0-ballot.rc1`) auf `2027.0.0-ballot`.
+* **Keine Änderung an den Artefakten dieses Moduls.** Jede von diesem Modul referenzierte Ressource ist in den veröffentlichten Paketen bis auf ihre eigene Versionsangabe identisch: die drei `SearchParameter`-Definitionen, auf die das CapabilityStatement verweist, sowie die Profile `Patient`, `PatientPseudonymisiert` und `KontaktGesundheitseinrichtung`, die die Beispiele verwenden. Aus keiner der beiden Abhängigkeiten wurde etwas entfernt.
+* **Löst ab**: `2027.0.0-ballot`, das auflösbar bleibt. Für das Ballot ist diese Version zu verwenden.
+
+> **Known Issue**: 2 Validierungsfehler bei Beispielen mit `context.event` (eventCodeList-Expansion, Upstream-Bug in `de.ihe-d.terminology 3.0.1`) — siehe [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
 
 ### Version 2027.0.0-ballot
 

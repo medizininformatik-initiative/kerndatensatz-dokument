@@ -1,4 +1,4 @@
-# Startseite - MII IG Dokument v2027.0.0-ballot
+# Startseite - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * **Startseite**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot |
-| Draft Stand: 2026-09-13 | *Maschinenlesbarer Name*:MII_IG_Dokument |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.2 |
+| Draft Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_IG_Dokument |
 
 ### Einleitung
 
@@ -21,7 +21,7 @@ Der Kerndatensatz der Medizininformatik-Initiative (MII) dient der standardisier
 | | | |
 | :--- | :--- | :--- |
 | Version | Datum | Status |
-| 2027.0.0-ballot | 2026-09-13 | draft |
+| 2027.0.0-ballot.2 | 2026-09-14 | draft |
 
 Realm: DE (Jurisdiktion Deutschland). Versionierung nach CalVer `JJJJ.n.n`.
 
@@ -73,8 +73,8 @@ Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sushi-config.yam
 | de.basisprofil.r4 | 1.6.0 |
 | de.gematik.isik | 6.0.0 |
 | de.ihe-d.terminology | 3.0.1 |
-| de.medizininformatikinitiative.kerndatensatz.base | 2027.0.0-ballot.rc1 |
-| de.medizininformatikinitiative.kerndatensatz.meta | 2027.0.0-ballot.rc3 |
+| de.medizininformatikinitiative.kerndatensatz.base | 2027.0.0-ballot |
+| de.medizininformatikinitiative.kerndatensatz.meta | 2027.0.0-ballot |
 | dvmd.kdl.r4 | 2025.0.1 |
 | hl7.fhir.uv.extensions.r4 | 5.2.0 |
 | hl7.terminology.r4 | 7.1.0 |

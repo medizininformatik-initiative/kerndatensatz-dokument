@@ -1,4 +1,4 @@
-# Abteilungskontakt - MII IG Dokument v2027.0.0-ballot
+# Abteilungskontakt - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-fall-kontakt-gesundheitseinrichtung.html)
+Profile: [MII PR Fall Kontakt mit einer Gesundheitseinrichtung](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot/StructureDefinition-mii-pr-fall-kontakt-gesundheitseinrichtung.html)
 
 **identifier**: Fallnummer/123456
 

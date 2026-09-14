@@ -1,4 +1,4 @@
-# ISO 3166-1 (Build-Fragment) - MII IG Dokument v2027.0.0-ballot
+# ISO 3166-1 (Build-Fragment) - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:urn:iso:std:iso:3166 | *Version*:2027.0.0-ballot |
+| *Official URL*:urn:iso:std:iso:3166 | *Version*:2027.0.0-ballot.2 |
 | Active as of 2026-09-08 | *Computable Name*:ISO3166Part1Fragment |
 
  
@@ -31,7 +31,7 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "iso3166-1-fragment",
   "url" : "urn:iso:std:iso:3166",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.2",
   "name" : "ISO3166Part1Fragment",
   "title" : "ISO 3166-1 Ländercodes (Fragment: Deutschland)",
   "status" : "active",

@@ -1,4 +1,4 @@
-# Logical Models - MII IG Dokument v2027.0.0-ballot
+# Logical Models - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * **Logical Models**

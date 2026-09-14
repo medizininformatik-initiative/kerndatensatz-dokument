@@ -1,4 +1,4 @@
-# UN M49 (Build-Fragment) - MII IG Dokument v2027.0.0-ballot
+# UN M49 (Build-Fragment) - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:http://unstats.un.org/unsd/methods/m49/m49.htm | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:http://unstats.un.org/unsd/methods/m49/m49.htm | *Version*:2027.0.0-ballot.2 |
 | Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:UNSDM49Fragment |
 
  
@@ -31,7 +31,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "unsd-m49-fragment",
   "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.2",
   "name" : "UNSDM49Fragment",
   "title" : "UN M49 Regionen (Fragment: Welt, Europa)",
   "status" : "active",
