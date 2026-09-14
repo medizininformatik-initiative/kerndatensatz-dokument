@@ -1,4 +1,4 @@
-# MII VS Dokument Fachgebiet - MII IG Dokument v2027.0.0-ballot
+# MII VS Dokument Fachgebiet - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-13 | *Computable Name*:MII_VS_Dokument_Fachgebiet |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet | *Version*:2027.0.0-ballot.2 |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Dokument_Fachgebiet |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -42,12 +42,12 @@ ValueSet zum erzeugenden Fachgebiet eines Dokuments
   },
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.2",
   "name" : "MII_VS_Dokument_Fachgebiet",
   "title" : "MII VS Dokument Fachgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T16:57:07+00:00",
+  "date" : "2026-09-14T08:05:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

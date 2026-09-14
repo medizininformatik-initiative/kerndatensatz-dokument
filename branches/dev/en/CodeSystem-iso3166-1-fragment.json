@@ -7,7 +7,7 @@
     "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem iso3166-1-fragment</b></p><a name=\"iso3166-1-fragment\"> </a><a name=\"hciso3166-1-fragment\"> </a><p>This case-sensitive code system <code>urn:iso:std:iso:3166</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">DE<a name=\"iso3166-1-fragment-DE\"> </a></td><td>Germany</td></tr><tr><td style=\"white-space:nowrap\">DEU<a name=\"iso3166-1-fragment-DEU\"> </a></td><td>Germany</td></tr><tr><td style=\"white-space:nowrap\">276<a name=\"iso3166-1-fragment-276\"> </a></td><td>Germany</td></tr></table></div>"
   },
   "url" : "urn:iso:std:iso:3166",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.2",
   "name" : "ISO3166Part1Fragment",
   "title" : "ISO 3166-1 Ländercodes (Fragment: Deutschland)",
   "status" : "active",

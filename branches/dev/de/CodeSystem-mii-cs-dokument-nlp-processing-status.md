@@ -1,4 +1,4 @@
-# MII CS Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot
+# MII CS Dokument NLP Processing Status - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-13 | *Maschinenlesbarer Name*:MII_CS_Dokument_NLP_Processing_Status |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.2 |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_CS_Dokument_NLP_Processing_Status |
 
  
 Status der NLP-Verarbeitung des referenzierten Dokuments 
@@ -35,12 +35,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.2",
   "name" : "MII_CS_Dokument_NLP_Processing_Status",
   "title" : "MII CS Dokument NLP Processing Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-13T16:57:07+00:00",
+  "date" : "2026-09-14T08:05:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -128,10 +128,10 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-mii-vs-dokument-fachgebiet.html" : "MII VS Dokument Fachgebiet",
     "ValueSet-mii-vs-dokument-sct-dokument-typ.html" : "MII VS Dokument SCT Dokument Typ",
-    "ValueSet-mii-vs-dokument-einrichtungsart.html" : "MII VS Dokument Einrichtungsart",
-    "ValueSet-mii-vs-dokument-sct-dokument-kategorie.html" : "MII VS Dokument SCT Dokument Kategorie"
+    "ValueSet-mii-vs-dokument-sct-dokument-kategorie.html" : "MII VS Dokument SCT Dokument Kategorie",
+    "ValueSet-mii-vs-dokument-fachgebiet.html" : "MII VS Dokument Fachgebiet",
+    "ValueSet-mii-vs-dokument-einrichtungsart.html" : "MII VS Dokument Einrichtungsart"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
@@ -147,7 +147,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0-ballot.2",
     "status" : "active",
     "name" : "MII_CS_Dokument_NLP_Processing_Status",
     "title" : "MII CS Dokument NLP Processing Status",
