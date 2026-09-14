@@ -1,4 +1,4 @@
-# Recipe: cut the 2027 ballot release (`2027.0.0-ballot`)
+# Recipe: cut the 2027 ballot release (`2027.0.0-ballot.2`)
 
 Every step and every command, in order, mapped onto the MII
 [Module Release Workflow](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow).
@@ -16,7 +16,7 @@ cut the release.
 Shell variables used throughout:
 
 ```bash
-VERSION=2027.0.0-ballot
+VERSION=2027.0.0-ballot.2
 TAG=v${VERSION}
 REPO=medizininformatik-initiative/kerndatensatz-dokument
 PKG=de.medizininformatikinitiative.kerndatensatz.dokument
@@ -205,7 +205,7 @@ It writes the rendered guide to the **versioned** webroot declared in
 `publication-request.json`:
 
 ```
-https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot/
+https://medizininformatik-initiative.github.io/kerndatensatz-dokument/2027.0.0-ballot.2/
 ```
 
 > **Why this is the URL to ballot against.** Branch previews live under
@@ -234,6 +234,6 @@ curl -s  https://medizininformatik-initiative.github.io/kerndatensatz-dokument/$
 
 ## Expected result
 
-A `v2027.0.0-ballot` tag, a published GitHub release with the package
+A `v2027.0.0-ballot.2` tag, a published GitHub release with the package
 attached, the package resolvable from the Simplifier registry, and a frozen
 guide at the versioned URL that will not move while the ballot runs.

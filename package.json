@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.dokument",
-  "version": "2027.0.0-ballot",
+  "version": "2027.0.0-ballot.2",
   "description": "Medizininformatik Initiative - KDS-Modul Dokument",
   "keywords": [
     "MII",
@@ -36,8 +36,8 @@
     "de.basisprofil.r4": "1.6.0",
     "de.gematik.isik": "6.0.0",
     "de.ihe-d.terminology": "3.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot.rc1",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot.rc3",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot",
     "dvmd.kdl.r4": "2025.0.1",
     "hl7.fhir.uv.extensions.r4": "5.2.0",
     "hl7.terminology.r4": "7.1.0",
