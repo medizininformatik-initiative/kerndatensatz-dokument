@@ -1,4 +1,4 @@
-# ISO 3166-2 (Build-Fragment) - MII IG Dokument v2027.0.0-ballot.rc2
+# ISO 3166-2 (Build-Fragment) - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:urn:iso:std:iso:3166:-2 | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:urn:iso:std:iso:3166:-2 | *Version*:2027.0.0-ballot.2 |
 | Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:ISO3166Part2Fragment |
 
  
@@ -31,7 +31,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "iso3166-2-fragment",
   "url" : "urn:iso:std:iso:3166:-2",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.2",
   "name" : "ISO3166Part2Fragment",
   "title" : "ISO 3166-2 Subdivisionscodes (Fragment: Sachsen)",
   "status" : "active",

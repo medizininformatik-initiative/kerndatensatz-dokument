@@ -1,4 +1,4 @@
-# MII-ImplementationGuide-Ressource - MII IG Dokument v2027.0.0-ballot.rc2
+# MII-ImplementationGuide-Ressource - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * **MII-ImplementationGuide-Ressource**
@@ -17,6 +17,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
 ### IG-Abhängigkeiten
 
 Dieser IG enthält die folgenden Abhängigkeiten von anderen IGs.
+
 
 
 
@@ -133,7 +134,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc2"
+      "valueString" : "2027.0.0-ballot.2"
     },
     {
       "url" : "uri",
@@ -233,12 +234,12 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.2",
   "name" : "MII_IG_Dokument",
   "title" : "MII IG Dokument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-01",
+  "date" : "2026-09-14",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -280,13 +281,13 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     "id" : "de_medizininformatikinitiative_kerndatensatz_base",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.base",
-    "version" : "2027.0.0-ballot.rc1"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_meta",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.meta",
-    "version" : "2027.0.0-ballot.rc3"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "dvmd_kdl_r4",

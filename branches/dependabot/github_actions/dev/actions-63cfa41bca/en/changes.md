@@ -1,4 +1,4 @@
-# Changelog - MII IG Dokument v2027.0.0-ballot.rc2
+# Changelog - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * **Changelog**
@@ -39,6 +39,29 @@ A version section that contains a breaking change is not complete until it answe
 Mark such entries clearly (for example, prefix them with **BREAKING:**) so a reader scanning the section cannot miss them.
 
 -------
+
+### Version 2027.0.0-ballot.2
+
+**Date** 2026-09-14 · **Status** ballot release (2027 cycle)
+
+Rebuilds `2027.0.0-ballot` against the **released** Meta and Base ballot packages. The previous release pinned their release candidates, which were the newest versions at the time it was prepared; both modules published their final ballot on 2026-09-10.
+
+* **Dependencies** — `kerndatensatz.meta` and `kerndatensatz.base` both move from their release candidates (`2027.0.0-ballot.rc3` and `2027.0.0-ballot.rc1`) to `2027.0.0-ballot`.
+* **No change to this module's artifacts.** Every resource this module references is identical in the released packages apart from its own version string: the three `SearchParameter` definitions the CapabilityStatement points at, and the `Patient`, `PatientPseudonymisiert` and `KontaktGesundheitseinrichtung` profiles the examples use. Nothing was removed from either dependency.
+* **Supersedes** `2027.0.0-ballot`, which remains resolvable. Ballot against this version.
+
+> **Known Issue**: 2 validation errors on examples with `context.event` (eventCodeList expansion, upstream defect in `de.ihe-d.terminology 3.0.1`) — see [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
+
+### Version 2027.0.0-ballot
+
+**Date** 2026-09-13 · **Status** ballot release (2027 cycle)
+
+The ballot release of the 2027 cycle. Content is that of release candidate 2, which was published to the package registry and reviewed without change requests; this version supersedes both candidates and is the one to ballot against.
+
+* **No changes to the artifacts** relative to `2027.0.0-ballot.rc2` — the profile, the extension, the terminologies, the logical model, the CapabilityStatement and the examples are identical. Only the version identifiers, the publication descriptor and this changelog differ.
+* **Supersedes** `2027.0.0-ballot.rc1` and `2027.0.0-ballot.rc2`. Both remain resolvable in the package registry; neither should be used for the ballot.
+
+> **Known Issue**: 2 validation errors on examples with `context.event` (eventCodeList expansion, upstream defect in `de.ihe-d.terminology 3.0.1`) — see [Issue #33](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/33)
 
 ### Version 2027.0.0-ballot.rc2
 

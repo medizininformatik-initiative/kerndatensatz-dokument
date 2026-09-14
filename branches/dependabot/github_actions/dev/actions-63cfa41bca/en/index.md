@@ -1,4 +1,4 @@
-# Home - MII IG Dokument v2027.0.0-ballot.rc2
+# Home - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.rc2 |
-| Draft as of 2026-09-01 | *Computable Name*:MII_IG_Dokument |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument | *Version*:2027.0.0-ballot.2 |
+| Draft as of 2026-09-14 | *Computable Name*:MII_IG_Dokument |
 
 ### Introduction
 
@@ -21,7 +21,7 @@ The Core Dataset of the Medical Informatics Initiative (MII) enables the standar
 | | | |
 | :--- | :--- | :--- |
 | Version | Date | Status |
-| 2027.0.0-ballot.rc2 | 2026-09-01 | draft |
+| 2027.0.0-ballot.2 | 2026-09-14 | draft |
 
 Realm: DE (jurisdiction Germany). Versioning follows CalVer `YYYY.n.n`.
 
@@ -73,8 +73,8 @@ Formal dependencies of this module (see `dependencies` in `sushi-config.yaml`): 
 | de.basisprofil.r4 | 1.6.0 |
 | de.gematik.isik | 6.0.0 |
 | de.ihe-d.terminology | 3.0.1 |
-| de.medizininformatikinitiative.kerndatensatz.base | 2027.0.0-ballot.rc1 |
-| de.medizininformatikinitiative.kerndatensatz.meta | 2027.0.0-ballot.rc3 |
+| de.medizininformatikinitiative.kerndatensatz.base | 2027.0.0-ballot |
+| de.medizininformatikinitiative.kerndatensatz.meta | 2027.0.0-ballot |
 | dvmd.kdl.r4 | 2025.0.1 |
 | hl7.fhir.uv.extensions.r4 | 5.2.0 |
 | hl7.terminology.r4 | 7.1.0 |

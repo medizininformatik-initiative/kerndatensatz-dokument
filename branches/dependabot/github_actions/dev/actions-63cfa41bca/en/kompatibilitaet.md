@@ -1,4 +1,4 @@
-# Compatibility with Other Specifications - MII IG Dokument v2027.0.0-ballot.rc2
+# Compatibility with Other Specifications - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)

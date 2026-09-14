@@ -1,4 +1,4 @@
-# Patientin Amanda Alzheimer - MII IG Dokument v2027.0.0-ballot.rc2
+# Patientin Amanda Alzheimer - MII IG Dokument v2027.0.0-ballot.2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Person Patient](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-person-patient.html)
+Profile: [MII PR Person Patient](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot/StructureDefinition-mii-pr-person-patient.html)
 
 Alzheimer Amanda (official) Female, DoB Unknown ( Krankenaktennummer (use: usual, ))
 
