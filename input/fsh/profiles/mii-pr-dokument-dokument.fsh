@@ -105,8 +105,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK: 1..1, MS | MIO: 0..1 (R4 default), Extended Custom Profiles | IHE MHD: 1..1, MS Restricted Patient
 * subject 0..1 MS
 * subject only Reference(Patient or MII_PR_Person_Patient or MII_PR_Person_PatientPseudonymisiert)
-* insert Description(subject, Referenz auf den Patient des Dokumentes, Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST].)
-* insert DescriptionIntl(subject, en, Patient reference to the document, Patient reference to the document [MUST].)
+* insert Description(subject, Referenz auf den Patient des Dokumentes, Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST]\, sofern das Dokument einen Patientenbezug hat.)
+* insert DescriptionIntl(subject, en, Patient reference to the document, Patient reference to the document [MUST]\\, when the document relates to a patient.)
 
 // ISiK: 0..1 (R4 default), MS | MIO: 0..1 (R4 default) | IHE MHD: 0..1 (R4 default), MS
 // * date 0..1
@@ -120,8 +120,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert DescriptionIntl(relatesTo, en, Document relationships, Document relationships)
 
 * relatesTo.code 1..1 MS
-* insert CommentedDescription(relatesTo.code, Beziehung zu anderem Dokument, Beziehung zu anderem Dokument. Die Angabe ist optional [MAY]., Typisch: `appends`\, z.B. ergänzende Annotation\, oder `transforms`\, z.B. Formatwandlung. CAVE: `transforms` meint Dokument wurde transformiert)
-* insert CommentedDescriptionIntl(relatesTo.code, en, Relationship to other document, Relationship to other document [MAY]., Typically: `appends`\\, e.g. additional annotation\\, or `transforms`\\, e.g. format conversion. CAVE: `transforms` means the document was transformed)
+* insert CommentedDescription(relatesTo.code, Beziehung zu anderem Dokument, Beziehung zu anderem Dokument. Die Angabe ist verpflichtend [MUST]\, wenn eine Dokumentenbeziehung angegeben ist., Typisch: `appends`\, z.B. ergänzende Annotation\, oder `transforms`\, z.B. Formatwandlung. CAVE: `transforms` meint Dokument wurde transformiert)
+* insert CommentedDescriptionIntl(relatesTo.code, en, Relationship to other document, Relationship to other document [MUST]\\, when a document relationship is present., Typically: `appends`\\, e.g. additional annotation\\, or `transforms`\\, e.g. format conversion. CAVE: `transforms` means the document was transformed)
 
 * relatesTo.target 1..1 MS
 * insert Description(relatesTo.target, Referenz auf DocumentReference, Referenz auf DocumentReference. Die Angabe ist verpflichtend [MUST]\, wenn Beziehungstyp angegeben.)
