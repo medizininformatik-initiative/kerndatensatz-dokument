@@ -152,7 +152,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-11-13T12:46:38+00:00",
+  "date" : "2026-11-13T13:20:22+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -711,7 +711,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST].",
+      "definition" : "Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST], sofern das Dokument einen Patientenbezug hat.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -720,7 +720,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Patient reference to the document [MUST]."
+            "valueString" : "Patient reference to the document [MUST], when the document relates to a patient."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -783,7 +783,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Beziehung zu anderem Dokument. Die Angabe ist optional [MAY].",
+      "definition" : "Beziehung zu anderem Dokument. Die Angabe ist verpflichtend [MUST], wenn eine Dokumentenbeziehung angegeben ist.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -792,7 +792,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Relationship to other document [MAY]."
+            "valueString" : "Relationship to other document [MUST], when a document relationship is present."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
