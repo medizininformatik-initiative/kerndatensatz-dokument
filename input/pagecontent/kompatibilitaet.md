@@ -77,6 +77,7 @@ Notes:
 - **Security labels:** optional in MII KDS Dokument, mandatory in ISiK. When transforming from MII to ISiK, security labels may have to be supplied.
 - **Context:** ISiK requires context information, MII KDS Dokument leaves it optional. For ISiK compatibility, context data has to be supplied.
 - **Category:** ISiK limits `category` to at most one entry (0..1), the MII KDS Dokument profile allows several (0..*). In a transformation to ISiK it has to be reduced to one category; the ISiK-specific derivation of the category from the KDL code has to be observed in doing so.
+- **KDL version:** the MII KDS Dokument profile is built against KDL 2026 (`dvmd.kdl.r4` 2026.0.0), ISiK 6.0.0 against KDL 2025 (`dvmd.kdl.r4` 2025.0.1). MII → ISiK: the codes added in KDL 2026 (`AM160114`, `DG020116`, `VL010109`) are not part of KDL 2025 and have to be replaced by a KDL 2025 code. ISiK → MII: every KDL 2025 code remains valid, but the displays of `AM010103` and `UB140102` changed in KDL 2026 and have to be updated.
 
 > **Note on reading Validator comparison reports:** the FHIR Validator's value set comparisons operate on the `compose` definition, not on the expansion. For the four compared value sets (`securityLabel`, `content.format`, `context.facilityType`, `context.practiceSetting`) the report therefore states an *empty* intersection in each case, although the code sets do overlap in substance: ISiK enumerates the codes or sub-value-sets directly, whereas the MII KDS Dokument profile includes the respective ihe-d value set by reference. An empty intersection in these reports is therefore not evidence of terminology incompatibility.
 {: .ig-highlight .ig-highlight-blue}
@@ -207,7 +208,7 @@ The MII KDS Dokument profile is designed as a flexible superset and enables the 
 
 | Source profile          | Compatibility            | Main limitations                                |
 |-------------------------|--------------------------|-------------------------------------------------|
-| ISiK document exchange | Very high         | Security label, context, mandatory fields (MII→ISiK) |
+| ISiK document exchange | Very high         | Security label, context, mandatory fields (MII→ISiK), KDL version (2026 vs. 2025) |
 | KBV MIO Basis   | High                     | Reference targets (`subject`, `context.encounter`), required bindings in `context`, `coding` 1..* at `type`/`category`, Must Support differences |
 | IHE MHD (UnContained Comprehensive) | Medium, with adaptations in both directions | 14 mandatory fields (among others masterIdentifier, subject, context, attachment.url); elements prohibited in MHD (docStatus, attachment.data, multiple content); status without `entered-in-error`; required MII bindings at facilityType/practiceSetting/event; masterIdentifier is required by ISiK as well from 6.0.0 |
 
