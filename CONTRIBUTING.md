@@ -28,10 +28,18 @@ Two long-lived branches, short-lived working branches:
   name arms the convention check's strict release mode (an unresolved
   placeholder or an undecided optional page fails there); see
   [docs/release.md](docs/release.md).
-- **`feature/*`, `change/*`, `fix/*` — short-lived working branches.** Branched
-  **off `dev`**, one focused change each, merged back into `dev` via PR, then
-  deleted. Name them descriptively (`feature/add-terminology-page`,
+- **`feat/*`, `fix/*`, `docs/*`, `chore/*`, `refactor/*` — short-lived working
+  branches.** Branched **off `dev`**, one focused change each, merged back into
+  `dev` via PR, then deleted. Pick the prefix that matches the change's
+  Conventional Commit type (cheat-sheet below; `ci` and `test` changes use
+  `chore/`) and name the rest descriptively (`feat/add-terminology-page`,
   `fix/footer-contrast`).
+  > **Why these prefixes:** the repository's `github-pages` environment only
+  > lets branches matching its allowed patterns deploy a preview (Settings →
+  > Environments → `github-pages` → Deployment branches and tags). These five,
+  > and `release/**` above, are among them. A branch that matches none of the
+  > patterns still builds, but its preview deploy is rejected.
+  >
   > **Why short-lived off dev:** long-running branches diverge and become
   > painful to merge; small branches keep review cheap and history legible.
 
@@ -41,22 +49,23 @@ gitGraph
   branch dev
   checkout dev
   commit
-  branch feature/add-page
+  branch feat/add-page
   commit
   checkout dev
-  merge feature/add-page
+  merge feat/add-page
   commit
   checkout main
   merge dev tag: "v0.2.0"
 ```
 
-> Reads as: work happens on short-lived `feature/*` off `dev`; `dev`
+> Reads as: work happens on short-lived `feat/*` off `dev`; `dev`
 > integrates; `dev → main` is the release gate, and a human pushes the CalVer
 > tag `vYYYY.n.n` on `main`.
 
 ### Flow — making one change
 
-1. Branch `feature|change|fix/<topic>` off `dev`.
+1. Branch `<prefix>/<topic>` off `dev`, with `feat`, `fix`, `docs`, `chore` or
+   `refactor` as the prefix.
 2. Commit using Conventional Commits (cheat-sheet below); open a PR
    **targeting `dev`**.
 3. On green CI + review, **squash-merge** into `dev` (one clean Conventional
