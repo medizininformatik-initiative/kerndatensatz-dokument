@@ -33,7 +33,12 @@ Full walkthrough in [`CONTRIBUTING.md`](CONTRIBUTING.md). The short form the
 agent must follow:
 
 - **Never commit to `main` or `dev` directly.** All work happens on a
-  short-lived branch (`feature/*`, `change/*`, `fix/*`) **off `dev`**.
+  short-lived branch **off `dev`**, named `<prefix>/<topic>` with a prefix
+  that matches the commit type and that the `github-pages` environment lets
+  deploy a preview: `feat/`, `fix/`, `docs/`, `chore/`, `refactor/` (`ci` and
+  `test` changes use `chore/`; `release/` for release preparation). A branch
+  that matches none of the environment's allowed patterns builds, but its
+  preview deploy is rejected.
 - Every change arrives as a **pull request targeting `dev`** — one focused
   change per PR. PRs into `dev` are squash-merged after green CI and human
   review; the working branch is then deleted.

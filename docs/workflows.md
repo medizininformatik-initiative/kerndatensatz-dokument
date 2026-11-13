@@ -7,8 +7,8 @@ undocumented, and that is a defect.
 ## Branching
 
 Same model as described in [CONTRIBUTING.md](../CONTRIBUTING.md): `main`
-(stable, default) · `dev` (integration) · short-lived `feature|change|fix/*`
-off `dev`; `dev → main` is a **merge commit**. Anything that lands on `main`
+(stable, default) · `dev` (integration) · short-lived
+`feat|fix|docs|chore|refactor/*` off `dev`; `dev → main` is a **merge commit**. Anything that lands on `main`
 without going through `dev` has to be back-merged into `dev` before the next
 `dev → main` merge.
 
@@ -42,7 +42,14 @@ Notes:
   Pages ("Deploy from a branch → `gh-pages`" ⇒ leave it unset; "GitHub Actions"
   ⇒ set it to `true`); a mismatch is what makes a preview URL 404. Only
   `go-publish.yml` with `publish: true` *requires* the value `true` — it hard-fails
-  without it.
+  without it. On the Actions path the deploy job runs in the `github-pages`
+  environment, and that environment's deployment-branch rules (Settings →
+  Environments → `github-pages`) decide which branches may deploy a preview. A
+  branch outside them still builds, but "Deploy GitHub Pages (Actions mode)"
+  fails with "not allowed to deploy to github-pages due to environment
+  protection rules". The working-branch prefixes in
+  [`CONTRIBUTING.md`](../CONTRIBUTING.md) are the ones the rules allow;
+  Dependabot's `dependabot/**` branches are not among them.
 - **Dependabot** is switched by its config presence, not an `if:`.
 - A few steps in `ig-publisher.yml` are guarded by a
   `endsWith(github.repository, '/mii-kds-module-template')` check — the

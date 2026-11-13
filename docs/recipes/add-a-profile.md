@@ -44,7 +44,7 @@
 4. Add the profile's page to the nav if you want it prominent (the `Profiles and
    Extensions` page auto-lists artifacts).
 5. Build: `sushi .` (fast — catches FSH errors), then the IG Publisher for the full
-   QA. Or push a `feature/*` branch for the CI preview.
+   QA. Or push a `feat/*` branch for the CI preview.
 6. **Read the QA report:** open `output/qa.html`. It lists errors (must fix),
    warnings (review), and information. Aim for **0 errors**.
 

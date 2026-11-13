@@ -21,7 +21,7 @@
 #            A skipped job is expected, not an error.
 #
 # Placeholder-aware, branch-sensitive severity:
-#   - On normal branches (dev, feature/*), a {{PLACEHOLDER}} value is treated
+#   - On normal branches (dev, feat/*, fix/*, …), a {{PLACEHOLDER}} value is treated
 #     as "parameterized — pattern checked" and PASSES. This keeps THIS template
 #     scaffold (whose sushi-config is all placeholders) green.
 #   - On a release branch (release/**), or via workflow_dispatch strict=true,
