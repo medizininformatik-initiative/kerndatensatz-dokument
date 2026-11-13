@@ -303,14 +303,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/iso3166-1-fragment"
-        },
-        "description": "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
-        "exampleBoolean": false,
-        "name": "ISO 3166-1 (Build-Fragment)"
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/iso3166-2-fragment"
         },
         "description": "Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets.",
@@ -573,10 +565,6 @@
       {
         "code": "releaselabel",
         "value": "ballot"
-      },
-      {
-        "code": "special-url",
-        "value": "urn:iso:std:iso:3166"
       },
       {
         "code": "special-url",
