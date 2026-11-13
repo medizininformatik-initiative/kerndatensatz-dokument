@@ -46,7 +46,7 @@ ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments
   "title" : "MII VS Dokument NLP Processing Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-13T11:21:39+00:00",
+  "date" : "2026-11-13T16:41:12+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
