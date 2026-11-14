@@ -16,7 +16,7 @@ Die NLP Extension stellt hierfür ein Codesystem bereit, mit dem die verschieden
 Das Codesystem der NLP Extension ist hierarchisch aufgebaut und umfasst zwei Ebenen: Level 1 (Lvl 1) und Level 2 (Lvl 2). Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: `annotated`, Lvl 2: `deid`, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde.
 
 Die Nutzung beider Hierarchieebenen ist nicht verpflichtend. Abhängig vom jeweiligen Anwendungsszenario kann frei entschieden werden, ob nur der übergeordnete Status (Lvl 1) oder zusätzlich eine spezifische Ausdifferenzierung über Lvl 2 verwendet wird.
-Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden. Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden.
+Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden (Invariante `mii-iv-dokument-nlp-4`, siehe unten). Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden.
 
 Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationsprojekts, das bereits aus einem Quellsystem extrahiert und anonymisiert wurde. Bis zum aktuellen Bearbeitungsstand können mehrere Verarbeitungsschritte erfolgt sein, beispielsweise:
 
@@ -27,6 +27,41 @@ Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationspr
 - irreversible Ersetzung aller identifizierenden Annotationen durch Surrogate (`surrogated`)
 
 Die NLP Extension lässt bewusst Freiheitsgrade bei der Dokumentation solcher Prozessketten. Es ist möglich, sämtliche Verarbeitungsschritte eines Dokuments abzubilden. Alternativ kann sich die Beschreibung auf ausgewählte, für den jeweiligen Anwendungsfall wesentliche Bearbeitungszustände beschränken, beispielsweise ausschließlich auf den finalen Status surrogated.
+
+### Mehrere Verarbeitungsstatus erfassen
+
+Ein Dokument hat in der Regel mehrere Verarbeitungsstatus erreicht, zum Beispiel `preprocessed`, `format-change` und `surrogated`. Jeder erreichte Status wird als **eine Wiederholung dieser Extension** mit genau einem `valueCoding` angegeben. Die Reihenfolge der Wiederholungen trägt keine Bedeutung; die Abfolge der Verarbeitungsschritte bildet `DocumentReference.relatesTo` zwischen den Dokumenten der Prozesskette ab.
+
+```json
+"extension": [
+  {
+    "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
+    "valueCoding": {
+      "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+      "code": "preprocessed"
+    }
+  },
+  {
+    "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status",
+    "valueCoding": {
+      "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+      "code": "format-change"
+    }
+  }
+]
+```
+
+Das Profil [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html) prüft die Kombination der angegebenen Status mit diesen Invarianten:
+
+| Key | Regel | Schwere |
+|---|---|---|
+| `mii-iv-dokument-nlp-1` | `unprocessed` steht mit keinem anderen Status | error |
+| `mii-iv-dokument-nlp-2` | jeder Status höchstens einmal | error |
+| `mii-iv-dokument-nlp-3` | `format-change` und `content-change` nur zusammen mit `preprocessed` | error |
+| `mii-iv-dokument-nlp-4` | `preanno`, `deid` und `semantic` nur zusammen mit `annotated` | error |
+| `mii-iv-dokument-nlp-5` | `preanno` sollte mit `deid` oder `semantic` stehen | warning (Best Practice) |
+
+Bis einschließlich Version 2027.0.0-ballot.2 kam die Extension höchstens einmal vor und trug ein `valueCodeableConcept` mit je einem Coding pro Status. In FHIR stellen die Codings eines `CodeableConcept` alternative Kodierungen desselben Konzepts dar; ein Empfänger darf also ein beliebiges davon wählen und verliert die übrigen. Die Migration bestehender Daten beschreibt das Changelog.
 
 ### Inhalt
 

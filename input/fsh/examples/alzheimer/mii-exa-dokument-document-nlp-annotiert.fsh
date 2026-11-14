@@ -25,8 +25,8 @@ Usage: #example
 //   Annotation        → annotated (Lvl 1), semantic     (Lvl 2)
 //   De-Identifikation → surrogated (Lvl 1)
 //   Preprocessing     → preprocessed (Lvl 1), format-change (Lvl 2)
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #annotated
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #semantic
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #surrogated
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #preprocessed
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #format-change
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#annotated
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#semantic
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#surrogated
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#preprocessed
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#format-change

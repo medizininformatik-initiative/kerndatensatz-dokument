@@ -59,7 +59,7 @@ class Dokument <<DocumentReference>> {
 }
 
 class NlpProcessingStatus as "NLP Processing Status" <<Extension>> #LightYellow {
-    + {field} Status: CodeableConcept [1..1]
+    + {field} Status: code [1..1]
 }
 
 class Dokumentenbeziehungen {

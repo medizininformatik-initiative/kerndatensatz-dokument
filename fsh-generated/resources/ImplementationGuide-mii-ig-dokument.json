@@ -346,7 +346,7 @@
           "reference": "StructureDefinition/mii-ex-dokument-nlp-processing-status"
         },
         "name": "MII EX Dokument NLP Processing Status",
-        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments. Je erreichtem Verarbeitungsstatus wird eine Instanz dieser Extension angegeben.",
         "exampleBoolean": false
       },
       {

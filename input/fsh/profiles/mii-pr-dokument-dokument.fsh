@@ -253,6 +253,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.practiceSetting from $mii-vs-dokument-fachgebiet (required)
 
 // Extension to classify a NLP processing status
-* extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..1 MS
+* extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..* MS
 * extension[nlp-processing-status] ^short = "NLP Processing Status"
-* extension[nlp-processing-status] ^definition = "Status der NLP-Verarbeitung des referenzierten Dokuments"
+* extension[nlp-processing-status] ^definition = "Status der NLP-Verarbeitung des referenzierten Dokuments. Je erreichtem Verarbeitungsstatus eine Wiederholung der Extension; die Reihenfolge der Wiederholungen trägt keine Bedeutung, die Abfolge der Verarbeitung bildet relatesTo ab."
+* obeys mii-iv-dokument-nlp-1 and mii-iv-dokument-nlp-2 and mii-iv-dokument-nlp-3 and mii-iv-dokument-nlp-4 and mii-iv-dokument-nlp-5

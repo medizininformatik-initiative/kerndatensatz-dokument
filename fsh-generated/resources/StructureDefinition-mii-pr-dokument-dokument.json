@@ -27,6 +27,53 @@
   "differential": {
     "element": [
       {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "constraint": [
+          {
+            "key": "mii-iv-dokument-nlp-1",
+            "severity": "error",
+            "human": "`unprocessed` DARF NICHT zusammen mit einem anderen NLP-Verarbeitungsstatus angegeben werden",
+            "expression": "extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'unprocessed').exists() implies extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').count() = 1",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+          },
+          {
+            "key": "mii-iv-dokument-nlp-2",
+            "severity": "error",
+            "human": "Jeder NLP-Verarbeitungsstatus DARF höchstens einmal angegeben werden",
+            "expression": "extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.isDistinct()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+          },
+          {
+            "key": "mii-iv-dokument-nlp-3",
+            "severity": "error",
+            "human": "`format-change` und `content-change` MÜSSEN zusammen mit `preprocessed` angegeben werden",
+            "expression": "extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'format-change' or $this = 'content-change').exists() implies extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'preprocessed').exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+          },
+          {
+            "key": "mii-iv-dokument-nlp-4",
+            "severity": "error",
+            "human": "`preanno`, `deid` und `semantic` MÜSSEN zusammen mit `annotated` angegeben werden",
+            "expression": "extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'preanno' or $this = 'deid' or $this = 'semantic').exists() implies extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'annotated').exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+          },
+          {
+            "key": "mii-iv-dokument-nlp-5",
+            "severity": "warning",
+            "human": "Empfehlung: `preanno` SOLLTE zusammen mit `deid` oder `semantic` angegeben werden",
+            "expression": "extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'preanno').exists() implies extension.where(url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.ofType(Coding).code.where($this = 'deid' or $this = 'semantic').exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "DocumentReference.meta",
         "path": "DocumentReference.meta",
         "mustSupport": true
@@ -41,9 +88,9 @@
         "path": "DocumentReference.extension",
         "sliceName": "nlp-processing-status",
         "short": "NLP Processing Status",
-        "definition": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "definition": "Status der NLP-Verarbeitung des referenzierten Dokuments. Je erreichtem Verarbeitungsstatus eine Wiederholung der Extension; die Reihenfolge der Wiederholungen trägt keine Bedeutung, die Abfolge der Verarbeitung bildet relatesTo ab.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Extension",
