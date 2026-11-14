@@ -1,6 +1,6 @@
 # `input/fsh/` — FHIR Shorthand sources of the module
 
-SUSHI (pinned to 3.20.1 in the workflows) compiles everything here into
+SUSHI (pinned to 3.21.0 in the workflows) compiles everything here into
 `fsh-generated/resources/`, which is committed. Change the `.fsh` files, never
 the generated JSON.
 

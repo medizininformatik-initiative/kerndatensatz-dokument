@@ -62,7 +62,7 @@ The template repo releases with **SemVer** (`vMAJOR.MINOR.PATCH`) — *not* CalV
   local template folder.
 - The module already builds green today against the current template reference (so you
   have a clean baseline to compare against).
-- `sushi` (`3.20.1`), the IG Publisher jar, and `jq` are available —
+- `sushi` (`3.21.0`), the IG Publisher jar, and `jq` are available —
   the dev container has all three. Or push the branch and let the
   `IG build and preview` workflow build it for you.
 
