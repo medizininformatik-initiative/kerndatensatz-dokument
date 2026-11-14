@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-dokument-projekt"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-dokument-projekt</b></p><a name="de-mii-cs-dokument-projekt"> </a><a name="de-hcmii-cs-dokument-projekt"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html">Shareable CodeSystem</a></p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>foerderer</td><td>foerderer</td><td>string</td><td>Fördermittelgeber des Projekts als ROR-ID</td></tr><tr><td>fkz</td><td>fkz</td><td>string</td><td>Förderkennzeichen eines Teilvorhabens laut Förderkatalog des Bundes; je Teilvorhaben eine Angabe</td></tr><tr><td>beginn</td><td>beginn</td><td>dateTime</td><td>Beginn der Projektlaufzeit</td></tr><tr><td>ende</td><td>ende</td><td>dateTime</td><td>Ende der Projektlaufzeit</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>foerderer</b></td><td><b>fkz</b></td><td><b>beginn</b></td><td><b>ende</b></td><td><b>English (English, en)</b></td></tr><tr><td style="white-space:nowrap">GEMTEX<a name="de-mii-cs-dokument-projekt-GEMTEX"> </a></td><td>GeMTeX</td><td>Ressource wurde im Rahmen der MII-Methodenplattform GeMTeX (German Medical Text Corpus) erzeugt oder aufbereitet.</td><td><code>https://ror.org/04pz7b180</code></td><td>01ZZ2314A, 01ZZ2314B, 01ZZ2314D, 01ZZ2314E, 01ZZ2314F, 01ZZ2314G, 01ZZ2314H, 01ZZ2314I, 01ZZ2314J, 01ZZ2314K, 01ZZ2314L, 01ZZ2314M, 01ZZ2314N, 01ZZ2314O, 01ZZ2314P, 01ZZ2314Q</td><td>2023-06-01</td><td>2026-12-31</td><td>GeMTeX</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt"/>
+  <version value="2027.0.0-ballot.2"/>
+  <name value="MII_CS_Dokument_Projekt"/>
+  <title value="MII CS Dokument Projekt"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-11-14T19:50:41+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <description value="Projekte der Medizininformatik-Initiative zur Kennzeichnung von Ressourcen über Resource.meta.tag"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <property>
+    <code value="foerderer"/>
+    <description value="Fördermittelgeber des Projekts als ROR-ID"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="fkz"/>
+    <description value="Förderkennzeichen eines Teilvorhabens laut Förderkatalog des Bundes; je Teilvorhaben eine Angabe"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="beginn"/>
+    <description value="Beginn der Projektlaufzeit"/>
+    <type value="dateTime"/>
+  </property>
+  <property>
+    <code value="ende"/>
+    <description value="Ende der Projektlaufzeit"/>
+    <type value="dateTime"/>
+  </property>
+  <concept>
+    <code value="GEMTEX"/>
+    <display value="GeMTeX"/>
+    <definition value="Ressource wurde im Rahmen der MII-Methodenplattform GeMTeX (German Medical Text Corpus) erzeugt oder aufbereitet."/>
+    <designation>
+      <language value="en"/>
+      <value value="GeMTeX"/>
+    </designation>
+    <property>
+      <code value="foerderer"/>
+      <valueString value="https://ror.org/04pz7b180"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314A"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314B"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314D"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314E"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314F"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314G"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314H"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314I"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314J"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314K"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314L"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314M"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314N"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314O"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314P"/>
+    </property>
+    <property>
+      <code value="fkz"/>
+      <valueString value="01ZZ2314Q"/>
+    </property>
+    <property>
+      <code value="beginn"/>
+      <valueDateTime value="2023-06-01"/>
+    </property>
+    <property>
+      <code value="ende"/>
+      <valueDateTime value="2026-12-31"/>
+    </property>
+  </concept>
+</CodeSystem>
