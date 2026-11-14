@@ -9,7 +9,7 @@ the generated JSON.
 | `aliases.fsh` | Canonical and code-system aliases (`$mii-…`, `$sct`, `$loinc`, …) shared by every file. |
 | `common/` | Module-wide constants applied by RuleSet: `Header.fsh` (identity), `Meta.fsh`, `Publisher.fsh`, `Status.fsh`, `Version.fsh` (the CalVer literal — bump it with `package.json` and `sushi-config.yaml`), `rulesets.fsh`. |
 | `rulesets/` | Reusable RuleSets (`crmi.fsh`, `extension-context.fsh`, `license.fsh`, `license-terms.fsh`, `meta-profile.fsh`, `test-data-label.fsh`) with their own README. |
-| `profiles/` | The profile `MII_PR_Dokument_Dokument` (`mii-pr-dokument-dokument.fsh`) and its two invariants (`mii-iv-dokument-dokument-category.fsh`, `mii-iv-dokument-dokument-type.fsh`). |
+| `profiles/` | The profile `MII_PR_Dokument_Dokument` (`mii-pr-dokument-dokument.fsh`) and its invariants: `mii-iv-dokument-dokument-category.fsh` and `mii-iv-dokument-dokument-type.fsh` (best-practice warnings on `category` and `type`), `mii-iv-dokument-nlp-processing-status.fsh` (`mii-iv-dokument-nlp-1` to `-5` across the repetitions of the NLP processing status extension). |
 | `extensions/` | `MII_EX_Dokument_NLP_Processing_Status`. |
 | `terminology/` | The module's CodeSystem (`mii-cs-dokument-nlp-processing-status`) and ValueSets (`mii-vs-dokument-*`). |
 | `logical-model/` | The logical model `MII_LM_Dokument` and its element mapping onto `DocumentReference` (`Mapping: MII_MAP_Dokument` in `mii-map-dokument.fsh`). |

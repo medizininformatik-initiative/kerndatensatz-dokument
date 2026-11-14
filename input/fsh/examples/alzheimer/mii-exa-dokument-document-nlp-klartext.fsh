@@ -34,5 +34,5 @@ Usage: #example
 * context.period.end = "2028-02-06"
 * context.facilityType = $ihe-patient-bezogene-gesundheitsversorgung#KHS // Krankenhaus
 * context.practiceSetting = $ihe-aerztliche-fachrichtungen#INTZ // Interdisziplinäre Zusammenarbeit
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #preprocessed
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #format-change
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#preprocessed
+* extension[nlp-processing-status][+].valueCoding = $mii-cs-dokument-nlp-processing-status#format-change
