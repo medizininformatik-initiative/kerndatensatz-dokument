@@ -80,7 +80,7 @@ place and a prompt) · ➖ not applicable.
 | Check | State | Evidence / what to do |
 |---|---|---|
 | External code systems are not re-published in the module | ✅ | `code-systems.md` states that ICD-10-GM/OPS/SNOMED CT come from SU-TermServ |
-| Value-set expansions are produced by a terminology server | ✅ | Builds use SU-TermServ when the client certificate is configured, else the HL7 `tx.fhir.org` fallback (`ig-publisher.yml`, `docs/secrets.md`) |
+| Value-set expansions are produced by a terminology server | ✅ | Builds use SU-TermServ when the client certificate is configured, else the public Ontoserver `tx.ontoserver.csiro.au` as fallback (`ig-publisher.yml`, `docs/secrets.md`) |
 | Terminology versions follow the MII Terminology Version Policy | 📝 | State the SNOMED CT edition/version you expand against in `value-sets.md` |
 
 ## 6. Security and privacy (S1, S7)

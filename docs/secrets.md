@@ -1,7 +1,7 @@
 # Secrets & variables — enabling the gated features
 
 This module builds and previews **without any secrets** (it falls back to the
-public HL7 terminology server; announcements skip cleanly). This page lists the
+public Ontoserver `tx.ontoserver.csiro.au`; announcements skip cleanly). This page lists the
 optional secrets that turn on the human-gated features, with the exact commands.
 The workflows are already wired — adding the secret is the only step. Replace
 `<owner>/<module-repo>` with this repository.
@@ -13,8 +13,8 @@ gh variable set NAME --repo <owner>/<module-repo> --body "value"
 
 ## SU-TermServ terminology server (optional)
 
-The IG build/preview and `go-publish` resolve terminology against the public HL7
-server `tx.ontoserver.csiro.au` by default. To use the **MII SU-TermServ**
+The IG build/preview and `go-publish` resolve terminology against the public
+Ontoserver `tx.ontoserver.csiro.au` by default. To use the **MII SU-TermServ**
 (`ontoserver.mii-termserv.de`), which fully expands MII value sets (SNOMED CT,
 ICD-10-GM, OPS, …), supply the client certificate. It is client-certificate-gated
 and granted only to entities in Germany.

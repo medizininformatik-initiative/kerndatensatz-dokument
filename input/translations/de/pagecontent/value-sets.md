@@ -19,9 +19,9 @@ zugrunde liegenden CodeSystems beschreibt die Seite
 
 > **Expansionen:** ValueSet-Expansionen dieses Leitfadens werden über einen
 > FHIR-Terminologieserver erzeugt — über SU-TermServ, sofern das
-> Client-Zertifikat konfiguriert ist, sonst über den öffentlichen HL7-Server
-> `tx.fhir.org` (dann expandieren einige KDS-spezifische ValueSets ggf. nicht
-> vollständig).
+> Client-Zertifikat konfiguriert ist, sonst über den öffentlichen Ontoserver
+> `tx.ontoserver.csiro.au` (dann expandieren einige KDS-spezifische ValueSets ggf.
+> nicht vollständig).
 {: .ig-highlight .ig-highlight-blue}
 
 SNOMED-CT-Inhalte dieses Moduls verwenden die **International Edition,
@@ -29,6 +29,18 @@ Version 20260701** (`http://snomed.info/sct/900000000000207008/version/20260701`
 gemäß der MII Terminology Version Policy; die Festlegung ist im
 Expansion-Manifest (`Parameters/mii-param-dokument-manifest`) sowie in den
 ValueSet-Definitionen selbst verankert.
+
+> **Known Issue (SNOMED-CT-Edition):** Die International Edition 20260701 führen
+> nur SU-TermServ und `tx.ontoserver.csiro.au`. Auf `tx.fhir.org` und auf
+> `tx.fhir.de`, dem für die German Edition registrierten Server, lassen sich die
+> vier ValueSets dieses Moduls mit SNOMED-CT-Anteil nicht expandieren. Die German
+> Edition 20260815 baut auf International 20260701 auf und liefert für sie genau
+> dieselben SNOMED-CT-Codes (Typ 219, Kategorie 239, Einrichtungsart 346,
+> Fachgebiet 266 SNOMED-CT-Codes; am 14.11.2026 Code für Code verglichen). Für einen Wechsel auf die
+> German Edition muss SU-TermServ 20260815 führen und die MII Terminology Version
+> Policy sie festlegen; siehe
+> [Issue #70](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/70).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 

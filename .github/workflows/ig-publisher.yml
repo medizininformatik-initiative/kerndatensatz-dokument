@@ -221,7 +221,7 @@ jobs:
         run: |
           set -euo pipefail
           # Prefer the MII terminology server (SU-TermServ) through a client-cert
-          # nginx proxy; otherwise fall back to the public HL7 server. The build
+          # nginx proxy; otherwise fall back to the public Ontoserver. The build
           # must not hard-fail without the certificate.
           if [[ -n "${SU_TERMSERV_CLIENT_CERT}" ]] && [[ -n "${SU_TERMSERV_CLIENT_KEY}" ]] && [[ -n "${SU_TERMSERV_CLIENT_PASSWORD}" ]]; then
             nginx_dir="${RUNNER_TEMP}/nginx"
