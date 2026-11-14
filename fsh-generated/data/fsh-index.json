@@ -16,20 +16,12 @@
     "endLine": 37
   },
   {
-    "outputFile": "CodeSystem-mii-cs-dokument-projekt.json",
-    "fshName": "MII_CS_Dokument_Projekt",
-    "fshType": "CodeSystem",
-    "fshFile": "terminology/mii-cs-dokument-projekt.fsh",
-    "startLine": 1,
-    "endLine": 58
-  },
-  {
     "outputFile": "DocumentReference-AmandaAlzheimerAnnotiertesDokument.json",
     "fshName": "AmandaAlzheimerAnnotiertesDokument",
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh",
     "startLine": 1,
-    "endLine": 33
+    "endLine": 32
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json",
@@ -37,7 +29,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 26
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerKlartextDokument.json",
@@ -45,7 +37,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-klartext.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 38
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerOriginalDokument.json",
@@ -53,7 +45,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh",
     "startLine": 1,
-    "endLine": 36
+    "endLine": 35
   },
   {
     "outputFile": "Encounter-AmandaAlzheimerAbteilungskontakt.json",
@@ -117,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 5,
-    "endLine": 270
+    "endLine": 258
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-einrichtungsart.json",
@@ -148,14 +140,6 @@
     "fshName": "MII_VS_Dokument_NLP_Processing_Status",
     "fshType": "ValueSet",
     "fshFile": "terminology/mii-vs-dokument-nlp-processing-status.fsh",
-    "startLine": 1,
-    "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-mii-vs-dokument-projekt.json",
-    "fshName": "MII_VS_Dokument_Projekt",
-    "fshType": "ValueSet",
-    "fshFile": "terminology/mii-vs-dokument-projekt.fsh",
     "startLine": 1,
     "endLine": 6
   },
