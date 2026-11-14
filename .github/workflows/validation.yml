@@ -73,7 +73,7 @@ jobs:
     uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # master @ 2026-07-15
     with:
       ref: ${{ github.event.pull_request.head.ref || github.ref }}
-      SUSHI_VERSION: ${{ vars.SUSHI_VERSION || '3.20.1' }}
+      SUSHI_VERSION: ${{ vars.SUSHI_VERSION || '3.21.0' }}
     secrets: inherit
 
   # ---------------------------------------------------------------------------
