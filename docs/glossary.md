@@ -30,7 +30,7 @@ build on earlier ones.
 | **`ig.ini`** | The IG Publisher's entry-point config: which IG resource to build and which **template** to apply (`template = …`). |
 | **CapabilityStatement** | A FHIR resource describing what a server/API can do (which resources, which interactions). |
 | **ValueSet / CodeSystem** | A *CodeSystem* defines codes and their meanings; a *ValueSet* selects a set of codes (often from one or more CodeSystems) for use in a profile. |
-| **Terminology server** | A server that validates and expands codes/value sets (e.g. SNOMED CT, ICD-10-GM). This project prefers **SU-TermServ** and falls back to HL7's `tx.fhir.org`. |
+| **Terminology server** | A server that validates and expands codes/value sets (e.g. SNOMED CT, ICD-10-GM). This project prefers **SU-TermServ** and falls back to the public Ontoserver `tx.ontoserver.csiro.au`. |
 | **Snapshot** | The fully-resolved form of a profile (base + all constraints flattened), as opposed to the "differential" (only what this profile changes). |
 | **CalVer vs SemVer** | *SemVer* (`MAJOR.MINOR.PATCH`, e.g. `0.2.0`) signals breaking vs compatible change — used for the **template tooling** this module consumes. *CalVer* (`YYYY.n.n`, e.g. `2027.0.0-ballot.rc1`) is date-sequenced — used for MII **modules**, including this one. See [concepts.md](concepts.md). |
 | **Conventional Commits** | A commit-message convention (`feat:`, `fix:`, `docs:` …) that keeps the history legible and drives the generated release notes. See [CONTRIBUTING.md](../CONTRIBUTING.md). |
