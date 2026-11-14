@@ -161,7 +161,7 @@ Diese Struktur ist abgeleitet von [DocumentReference](http://hl7.org/fhir/R4/doc
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-11-14T19:50:41+00:00",
+  "date" : "2026-11-14T19:57:08+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
