@@ -17,7 +17,7 @@ built on them are described on the [Value Sets](value-sets.html) page.
 > [https://mii-termserv.de/](https://mii-termserv.de/).
 {: .ig-highlight .ig-highlight-blue}
 
-The following section describes the module's own CodeSystem; license information on external terminologies is held by the respective publishers (see [Copyright and License](index.html#copyright-and-license)).
+The following sections describe the module's own CodeSystems; license information on external terminologies is held by the respective publishers (see [Copyright and License](index.html#copyright-and-license)).
 
 ---
 
@@ -43,6 +43,17 @@ are shown below; the corresponding ValueSet is
 [NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)).
 
 {% include CodeSystem-mii-cs-dokument-nlp-processing-status-content-en.xhtml %}
+
+### Project marking
+
+The CodeSystem
+[MII CS Dokument Projekt](CodeSystem-mii-cs-dokument-projekt.html)
+lists the projects whose documents can be marked via `meta.tag`; the
+corresponding ValueSet is
+[MII VS Dokument Projekt](ValueSet-mii-vs-dokument-projekt.html). Funder, grant
+numbers and duration of a project are recorded as properties of its code.
+
+{% include CodeSystem-mii-cs-dokument-projekt-content-en.xhtml %}
 
 The ValueSets defined in this module, and those used from other specifications,
 are described on the [Value Sets](value-sets.html) page.

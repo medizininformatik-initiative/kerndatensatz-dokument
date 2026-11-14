@@ -9,6 +9,18 @@ Title: "MII PR Dokument Dokument"
 Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert PR_Header
 
+// Projektkennzeichnung über meta.tag (issue #75)
+* meta.tag ^slicing.discriminator.type = #value
+* meta.tag ^slicing.discriminator.path = "system"
+* meta.tag ^slicing.rules = #open
+* meta.tag contains projekt 0..*
+* insert Description(meta.tag[projekt], Projektkennzeichen, Projekt\, in dessen Rahmen das Dokument erzeugt oder aufbereitet wurde. Die Angabe ist optional [MAY].)
+* insert DescriptionIntl(meta.tag[projekt], en, Project tag, Project in whose context the document was created or processed [MAY].)
+* meta.tag[projekt].system 1..1
+* meta.tag[projekt].system = $mii-cs-dokument-projekt (exactly)
+* meta.tag[projekt].code 1..1
+* meta.tag[projekt] from MII_VS_Dokument_Projekt (required)
+
 // ISiK: 1..1, MS | MIO: 0..1 (R4 default) | IHE MHD: 1..1
 * masterIdentifier 0..1 MS
 * insert Description(masterIdentifier, Versionsspezifische OID des Dokuments, Versionsspezifische OID des Dokuments. Die Angabe ist dringend empfohlen [SHALL].)

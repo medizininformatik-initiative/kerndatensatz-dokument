@@ -11,7 +11,7 @@ the generated JSON.
 | `rulesets/` | Reusable RuleSets (`crmi.fsh`, `extension-context.fsh`, `license.fsh`, `license-terms.fsh`, `meta-profile.fsh`, `test-data-label.fsh`) with their own README. |
 | `profiles/` | The profile `MII_PR_Dokument_Dokument` (`mii-pr-dokument-dokument.fsh`) and its two invariants (`mii-iv-dokument-dokument-category.fsh`, `mii-iv-dokument-dokument-type.fsh`). |
 | `extensions/` | `MII_EX_Dokument_NLP_Processing_Status`. |
-| `terminology/` | The module's CodeSystem (`mii-cs-dokument-nlp-processing-status`) and ValueSets (`mii-vs-dokument-*`). |
+| `terminology/` | The module's CodeSystems (`mii-cs-dokument-nlp-processing-status`, `mii-cs-dokument-projekt`) and ValueSets (`mii-vs-dokument-*`). |
 | `logical-model/` | The logical model `MII_LM_Dokument` and its element mapping onto `DocumentReference` (`Mapping: MII_MAP_Dokument` in `mii-map-dokument.fsh`). |
 | `definitions/` | The CapabilityStatement `mii-cps-dokument-capabilitystatement` — the normative list of supported search parameters. |
 | `parameters/` | `manifest.fsh` — a commented-out FSH draft of the expansion manifest, kept for reference; the live manifest is `input/resources/Parameters-expansion-manifest.json` (pins SNOMED CT 20260701). |

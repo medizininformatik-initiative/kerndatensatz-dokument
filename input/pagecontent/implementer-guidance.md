@@ -63,6 +63,21 @@ Person-related documents are assigned to a person (the base module's Patient / P
 
 We recommend the [DVMD KDL standard](https://simplifier.net/kdl), which is also used in ISiK, for the precise type description (`type`), as well as the [IHE XDS class codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) for the coarser document category (`category`). [IHE XDS type and class codes can be derived unambiguously from KDL.](https://simplifier.net/kdl/~resources?category=ConceptMap) Further codings such as in-house codes, SNOMED CT or LOINC are optionally possible.
 
+### Project marking
+
+Data integration centres that build project-specific document archives and
+corpora, for example in GeMTeX, can mark the documents of a project — including
+the intermediate results of an NLP pipeline — with `meta.tag`. The profile
+offers the optional slice `meta.tag:projekt` for this, bound (required) to
+[MII VS Dokument Projekt](ValueSet-mii-vs-dokument-projekt.html); the codes come
+from [MII CS Dokument Projekt](CodeSystem-mii-cs-dokument-projekt.html). A
+document that belongs to several projects carries several tags. New projects are
+added to the code system with a new version of this module.
+
+The documents of a project are found with the standard search parameter `_tag`:
+
+`GET [base]/DocumentReference?_tag=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt|GEMTEX`
+
 ---
 
 The field-by-field comparison with ISiK document exchange, KBV MIO Basis and

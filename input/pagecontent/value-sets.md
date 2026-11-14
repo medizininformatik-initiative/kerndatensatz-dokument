@@ -4,7 +4,7 @@
      "Terminology Version Policy". The IG Publisher lists the ValueSets on the
      artifact pages automatically; this page carries the MII notes on them plus
      the sections on the defined and the used ValueSets (moved here from
-     code-systems.md). Only the two small module-owned ValueSets are rendered
+     code-systems.md). Only the three small module-owned ValueSets are rendered
      inline, and as a content logical definition (-cld) rather than as an
      expansion, because expansions depend on the build environment's
      terminology server. -->
@@ -109,6 +109,16 @@ it is bound by the extension
 [NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html).
 
 {% include ValueSet-mii-vs-dokument-nlp-processing-status-cld-en.xhtml %}
+
+#### Project marking
+
+The ValueSet
+[MII VS Dokument Projekt](ValueSet-mii-vs-dokument-projekt.html)
+collects the codes of the module's own CodeSystem
+[MII CS Dokument Projekt](CodeSystem-mii-cs-dokument-projekt.html);
+the profile binds it (required) to the optional slice `meta.tag:projekt`.
+
+{% include ValueSet-mii-vs-dokument-projekt-cld-en.xhtml %}
 
 ---
 

@@ -37,6 +37,77 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.meta.tag",
+        "path": "DocumentReference.meta.tag",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DocumentReference.meta.tag:projekt",
+        "path": "DocumentReference.meta.tag",
+        "sliceName": "projekt",
+        "short": "Projektkennzeichen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Project tag"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Projekt, in dessen Rahmen das Dokument erzeugt oder aufbereitet wurde. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Project in whose context the document was created or processed [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-projekt"
+        }
+      },
+      {
+        "id": "DocumentReference.meta.tag:projekt.system",
+        "path": "DocumentReference.meta.tag.system",
+        "min": 1,
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt"
+      },
+      {
+        "id": "DocumentReference.meta.tag:projekt.code",
+        "path": "DocumentReference.meta.tag.code",
+        "min": 1
+      },
+      {
         "id": "DocumentReference.extension:nlp-processing-status",
         "path": "DocumentReference.extension",
         "sliceName": "nlp-processing-status",

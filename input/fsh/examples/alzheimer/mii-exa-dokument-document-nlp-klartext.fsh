@@ -4,6 +4,7 @@ Title: "Klartext-Dokument"
 Description: "Beispiel der NLP-Pipeline, Schritt Preprocessing: Klartextfassung `Amanda_Alzheimer.txt`, Status `preprocessed, format-change`, verweist mit `transforms` auf das Original."
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+* meta.tag[projekt] = $mii-cs-dokument-projekt#GEMTEX "GeMTeX"
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340"
 * identifier.system = "urn:ietf:rfc:3986"
