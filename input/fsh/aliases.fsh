@@ -14,6 +14,8 @@ Alias: $mii-ex-dokument-nlp-processing-status = https://www.medizininformatik-in
 Alias: $mii-cs-dokument-nlp-processing-status = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status
 Alias: $mii-vs-dokument-nlp-processing-status = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status
 Alias: $mii-vs-dokument-format-code = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code
+Alias: $mii-cs-dokument-projekt = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt
+Alias: $mii-vs-dokument-projekt = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-projekt
 
 // Aliases für HL7 FHIR Definitionen
 Alias: $cps-exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation

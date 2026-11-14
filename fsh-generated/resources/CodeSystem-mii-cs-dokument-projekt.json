@@ -1,0 +1,144 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MII_CS_Dokument_Projekt",
+  "id": "mii-cs-dokument-projekt",
+  "title": "MII CS Dokument Projekt",
+  "description": "Projekte der Medizininformatik-Initiative zur Kennzeichnung von Ressourcen über Resource.meta.tag",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt",
+  "concept": [
+    {
+      "code": "GEMTEX",
+      "display": "GeMTeX",
+      "definition": "Ressource wurde im Rahmen der MII-Methodenplattform GeMTeX (German Medical Text Corpus) erzeugt oder aufbereitet.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "GeMTeX"
+        }
+      ],
+      "property": [
+        {
+          "code": "foerderer",
+          "valueString": "https://ror.org/04pz7b180"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314A"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314B"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314D"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314E"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314F"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314G"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314H"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314I"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314J"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314K"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314L"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314M"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314N"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314O"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314P"
+        },
+        {
+          "code": "fkz",
+          "valueString": "01ZZ2314Q"
+        },
+        {
+          "code": "beginn",
+          "valueDateTime": "2023-06-01"
+        },
+        {
+          "code": "ende",
+          "valueDateTime": "2026-12-31"
+        }
+      ]
+    }
+  ],
+  "version": "2027.0.0-ballot.2",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "language": "de",
+  "caseSensitive": true,
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "property": [
+    {
+      "code": "foerderer",
+      "description": "Fördermittelgeber des Projekts als ROR-ID",
+      "type": "string"
+    },
+    {
+      "code": "fkz",
+      "description": "Förderkennzeichen eines Teilvorhabens laut Förderkatalog des Bundes; je Teilvorhaben eine Angabe",
+      "type": "string"
+    },
+    {
+      "code": "beginn",
+      "description": "Beginn der Projektlaufzeit",
+      "type": "dateTime"
+    },
+    {
+      "code": "ende",
+      "description": "Ende der Projektlaufzeit",
+      "type": "dateTime"
+    }
+  ],
+  "count": 1
+}

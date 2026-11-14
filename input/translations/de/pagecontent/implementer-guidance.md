@@ -66,6 +66,22 @@ Personenbezogene Dokumente werden einer Person (Profile Patient bzw. PatientPseu
 
 Wir empfehlen den auch in ISiK verwendeten [DVMD KDL-Standard](https://simplifier.net/kdl) für die präzise Typbeschreibung (`type`) sowie die [IHE XDS Class-Codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) für die gröbere Dokumentkategorie (`category`) zu verwenden. [IHE XDS Type- und Class-Codes können eindeutig aus KDL hergeleitet werden.](https://simplifier.net/kdl/~resources?category=ConceptMap) Weitere Kodierungen wie Hauscodes, SNOMED CT oder LOINC sind optional möglich.
 
+### Projektkennzeichnung
+
+Datenintegrationszentren, die projektspezifische Dokumentenarchive und Korpora
+aufbauen, zum Beispiel in GeMTeX, können die Dokumente eines Projekts —
+einschließlich der Zwischenergebnisse einer NLP-Pipeline — über `meta.tag`
+kennzeichnen. Das Profil bietet dafür den optionalen Slice `meta.tag:projekt`,
+gebunden (required) an
+[MII VS Dokument Projekt](ValueSet-mii-vs-dokument-projekt.html); die Codes stammen
+aus [MII CS Dokument Projekt](CodeSystem-mii-cs-dokument-projekt.html). Ein
+Dokument, das zu mehreren Projekten gehört, trägt mehrere Tags. Neue Projekte
+werden mit einer neuen Version dieses Moduls in das CodeSystem aufgenommen.
+
+Die Dokumente eines Projekts findet der Standard-Suchparameter `_tag`:
+
+`GET [base]/DocumentReference?_tag=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt|GEMTEX`
+
 ---
 
 Die feldweise Gegenüberstellung zu ISiK Dokumentenaustausch, KBV MIO Basis und

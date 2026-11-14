@@ -343,6 +343,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-dokument-projekt"
+        },
+        "name": "MII CS Dokument Projekt",
+        "description": "Projekte der Medizininformatik-Initiative zur Kennzeichnung von Ressourcen über Resource.meta.tag",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-dokument-nlp-processing-status"
         },
         "name": "MII EX Dokument NLP Processing Status",
@@ -395,6 +403,14 @@
         },
         "name": "MII VS Dokument NLP Processing Status",
         "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-dokument-projekt"
+        },
+        "name": "MII VS Dokument Projekt",
+        "description": "Projektkennzeichen für Resource.meta.tag",
         "exampleBoolean": false
       },
       {

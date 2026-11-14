@@ -4,6 +4,7 @@ Title: "De-identifiziertes Dokument"
 Description: "Beispiel der NLP-Pipeline, Schritt De-Identification: `De-ID.txt`, Status `preprocessed, format-change, surrogated`, verweist mit `transforms` auf das Klartextdokument."
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+* meta.tag[projekt] = $mii-cs-dokument-projekt#GEMTEX "GeMTeX"
 * status = #current
 * docStatus = #final
 * type.coding[+] = $dvmd-kdl#AD010110 "Ärztlicher Verlaufsbericht"

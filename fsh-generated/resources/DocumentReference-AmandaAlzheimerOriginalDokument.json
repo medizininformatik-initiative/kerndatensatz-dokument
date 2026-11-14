@@ -2,6 +2,13 @@
   "resourceType": "DocumentReference",
   "id": "AmandaAlzheimerOriginalDokument",
   "meta": {
+    "tag": [
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-projekt",
+        "code": "GEMTEX",
+        "display": "GeMTeX"
+      }
+    ],
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
     ]

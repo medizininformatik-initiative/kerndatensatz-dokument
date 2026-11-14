@@ -7,7 +7,7 @@
      Der IG-Publisher listet die ValueSets auf den Artefakt-Seiten automatisch;
      hier stehen die MII-Hinweise dazu sowie die Abschnitte zu den definierten
      und den verwendeten ValueSets (von code-systems.md hierher verschoben).
-     Inline gerendert werden nur die beiden kleinen modul-eigenen ValueSets,
+     Inline gerendert werden nur die drei kleinen modul-eigenen ValueSets,
      und zwar als Content Logical Definition (-cld) statt als Expansion, weil
      Expansionen vom Terminologieserver der Build-Umgebung abhängen. -->
 
@@ -114,6 +114,16 @@ zusammen; es wird von der Extension
 gebunden.
 
 {% include ValueSet-mii-vs-dokument-nlp-processing-status-cld-de.xhtml %}
+
+#### Projektkennzeichnung
+
+Das ValueSet
+[MII VS Dokument Projekt](ValueSet-mii-vs-dokument-projekt.html)
+fasst die Codes des modul-eigenen CodeSystems
+[MII CS Dokument Projekt](CodeSystem-mii-cs-dokument-projekt.html)
+zusammen; das Profil bindet es (required) an den optionalen Slice `meta.tag:projekt`.
+
+{% include ValueSet-mii-vs-dokument-projekt-cld-de.xhtml %}
 
 ---
 
