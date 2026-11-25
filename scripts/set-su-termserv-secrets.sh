@@ -5,7 +5,7 @@
 # WHY THIS EXISTS
 #   The build routes terminology to the MII terminology server (SU-TermServ) when
 #   a client certificate is configured, and otherwise falls back to the public
-#   HL7 server. A wrong encoding, the wrong key out of a bundle, or a bad password
+#   Ontoserver (tx.ontoserver.csiro.au). A wrong encoding, the wrong key out of a bundle, or a bad password
 #   surfaces as an opaque TLS failure deep inside a CI run — so this script checks
 #   the material locally FIRST, can prove it against the live server, and only
 #   then uploads.
@@ -161,4 +161,4 @@ echo
 echo "Done — the SU-TermServ credential is configured."
 echo "Verify in CI: push any branch and read the terminology step's log."
 echo "  enabled  -> 'Terminology: SU-TermServ via client-certificate proxy'"
-echo "  fallback -> 'No SU-TermServ credential — falling back to the public HL7 terminology server'"
+echo "  fallback -> 'No SU-TermServ client certificate configured — falling back to https://tx.ontoserver.csiro.au/fhir …'"

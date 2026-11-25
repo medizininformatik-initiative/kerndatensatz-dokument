@@ -16,8 +16,8 @@ the sets draw from are described on the [Code Systems](code-systems.html) page.
 
 > **Expansions:** ValueSet expansions in this guide are produced by a FHIR
 > terminology server — SU-TermServ if the client certificate is configured,
-> otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific
-> ValueSets may not expand completely).
+> otherwise the public Ontoserver `tx.ontoserver.csiro.au` (in which case some
+> KDS-specific ValueSets may not expand completely).
 {: .ig-highlight .ig-highlight-blue}
 
 SNOMED CT content of this module uses the **International Edition, version
@@ -25,6 +25,19 @@ SNOMED CT content of this module uses the **International Edition, version
 the MII Terminology Version Policy; the pin is anchored in the expansion
 manifest (`Parameters/mii-param-dokument-manifest`) and in the ValueSet
 definitions themselves.
+
+> **Known Issue (SNOMED CT edition):** Only SU-TermServ and
+> `tx.ontoserver.csiro.au` carry the International Edition 20260701. On
+> `tx.fhir.org` and on `tx.fhir.de`, the server registered for the German
+> Edition, the four ValueSets of this module with SNOMED CT content cannot be
+> expanded. The German Edition 20260815 builds on International 20260701 and
+> yields exactly the same SNOMED CT codes for them (Typ 219, Kategorie 239,
+> Einrichtungsart 346, Fachgebiet 266 SNOMED CT codes; compared code by code on
+> 2026-11-14). Switching to the
+> German Edition requires SU-TermServ to carry 20260815 and the MII Terminology
+> Version Policy to name it; see
+> [Issue #70](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/70).
+{: .ig-highlight .ig-highlight-grey}
 
 ---
 
