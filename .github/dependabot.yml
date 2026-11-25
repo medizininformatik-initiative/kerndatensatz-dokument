@@ -21,6 +21,13 @@ updates:
     groups:
       actions:
         patterns: ["*"]
+    # The MII reusable validation workflows are pinned by hand (docs/maintenance.md).
+    # On newer kerndatensatz-meta commits they live under .github/disabled-workflows/,
+    # so the path validation.yml uses resolves to nothing there; a Dependabot bump of
+    # these two refs switches validation off (seen in PR #69).
+    ignore:
+      - dependency-name: "medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml"
+      - dependency-name: "medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml"
 
 
   # Dev container (.devcontainer/devcontainer.json). It is image-only — no
