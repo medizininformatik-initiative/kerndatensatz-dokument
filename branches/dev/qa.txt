@@ -1,12 +1,12 @@
 MII_IG_Dokument : Validation Results
 =========================================
 
-err = 402, warn = 135, info = 421
-IG Publisher Version: 2.3.2 Out of date - current version is 3.0.5
-Generated Wed Nov 25 14:25:20 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.2 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
+err = 402, warn = 150, info = 405
+IG Publisher Version: 2.3.2 Out of date - current version is null
+Generated Wed Nov 25 15:36:40 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.2 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
  Build Errors : 1 / 3 / 0
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 2 / 28
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 12 / 3
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 3 / 27
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 13 / 2
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument : 2 / 1 / 4
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument : 2 / 1 / 4
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/DocumentReference-AmandaAlzheimerKlartextDokument : 3 / 3 / 4
@@ -14,21 +14,20 @@ Generated Wed Nov 25 14:25:20 UTC 2026. FHIR version 4.0.1 for de.medizininforma
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerAbteilungskontakt : 0 / 2 / 2
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerEinrichtungskontakt : 0 / 2 / 2
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Encounter-AmandaAlzheimerVersorgungsstellenKontakt : 0 / 2 / 2
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ExampleScenario-NlpPipelineAmandaAlzheimer : 0 / 1 / 3
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 43 / 14 / 46
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ExampleScenario-NlpPipelineAmandaAlzheimer : 0 / 2 / 2
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 43 / 15 / 45
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/Patient-AmandaAlzheimer : 0 / 2 / 1
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 0 / 22
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 66 / 27
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 348 / 8 / 266
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 0 / 3 / 4
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 0 / 3 / 4
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 6 / 5
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 3 / 5
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 0 / 3 / 3
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 0 / 3 / 3
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/CodeSystem-iso3166-1-fragment : 0 / 1 / 2
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/CodeSystem-iso3166-2-fragment : 0 / 1 / 2
- /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/CodeSystem-unsd-m49-fragment : 0 / 1 / 3
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 1 / 21
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 67 / 26
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 348 / 9 / 265
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 0 / 4 / 3
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 0 / 4 / 3
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 7 / 4
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 4 / 4
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 0 / 4 / 2
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 0 / 4 / 2
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/CodeSystem-iso3166-2-fragment : 0 / 2 / 1
+ /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/CodeSystem-unsd-m49-fragment : 0 / 2 / 2
  /home/runner/work/kerndatensatz-dokument/kerndatensatz-dokument/input/resources/Parameters-expansion-manifest : 0 / 0 / 1
 </table>
 == n/a ==
@@ -62,14 +61,14 @@ INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[20].definition:
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[21].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-facility to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[22].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/DocumentReference-setting to 4.0.1
 INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[23].definition: Pinned the version of https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-dokument-documentreference-nlp-processing-status to 2027.0.0-ballot
-INFORMATION: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.format[0].code: Unknown Code 'xml' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 WARNING: CapabilityStatement/mii-cps-dokument-capabilitystatement: CapabilityStatement.format[1].code: Unknown Code 'json' in the CodeSystem 'urn:ietf:bcp:13' version '6.0.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 INFORMATION: Resource: The resource CapabilityStatement/mii-cps-dokument-capabilitystatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status.json ==
 INFORMATION: CodeSystem.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablecodesystem to 4.0.2
 WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.language: A definition for CodeSystem 'urn:ietf:bcp:47' could not be found, so the code cannot be validated
-INFORMATION: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[0].designation[0].language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
 WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].designation[0].language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
 WARNING: CodeSystem/mii-cs-dokument-nlp-processing-status: CodeSystem.concept[1].concept[0].designation[0].language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
@@ -127,7 +126,7 @@ WARNING: Encounter/AmandaAlzheimerVersorgungsstellenKontakt: Encounter.meta.prof
 WARNING: Encounter/AmandaAlzheimerVersorgungsstellenKontakt: Encounter.identifier[0].system: No definition could be found for URL value 'http://uk-musterstadt.de/fid'
 INFORMATION: Encounter/AmandaAlzheimerVersorgungsstellenKontakt: Encounter.status: Reference to draft CodeSystem http://hl7.org/fhir/encounter-status|4.0.1
 == fsh-generated/resources/ExampleScenario-NlpPipelineAmandaAlzheimer.json ==
-INFORMATION: ExampleScenario/NlpPipelineAmandaAlzheimer: ExampleScenario.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ExampleScenario/NlpPipelineAmandaAlzheimer: ExampleScenario.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: Resource: The resource ExampleScenario/NlpPipelineAmandaAlzheimer could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 WARNING: IG: "The narrative includes custom content for the default language (en), but does not include translated content for the de language, so the default language has been used
 == fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json ==
@@ -136,16 +135,16 @@ INFORMATION: ImplementationGuide.meta.profile[1]: Pinned the version of http://h
 INFORMATION: ImplementationGuide.meta.profile[2]: Pinned the version of http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide to 2.0.0
 INFORMATION: ImplementationGuide.definition.resource[1].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.2
 INFORMATION: ImplementationGuide.definition.resource[2].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.2
-INFORMATION: ImplementationGuide.definition.resource[7].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.2
-INFORMATION: ImplementationGuide.definition.resource[20].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.2
+INFORMATION: ImplementationGuide.definition.resource[6].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.2
+INFORMATION: ImplementationGuide.definition.resource[19].profile[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument to 2027.0.0-ballot.2
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[4].extension[2].value.ofType(uri): No definition could be found for URL value 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument'
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.extension[16].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' could not be found, so the code cannot be validated
-INFORMATION: ImplementationGuide/mii-ig-dokument: ImplementationGuide.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[0].uri: A definition could not be found for Canonical URL 'http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4'
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[1].uri: A definition could not be found for Canonical URL 'http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik'
 WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.dependsOn[5].uri: A definition could not be found for Canonical URL 'http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4'
-WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.resource[8].description: value should not start or finish with whitespace '\n    Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss,\n    um das Modul Dokument der Medizininformatik Initiative zu implementieren.'
+WARNING: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.resource[7].description: value should not start or finish with whitespace '\n    Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss,\n    um das Modul Dokument der Medizininformatik Initiative zu implementieren.'
 ERROR: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.title.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.title.extension[0].extension[0].value.ofType(code): The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
 ERROR: ImplementationGuide/mii-ig-dokument: ImplementationGuide.definition.page.page[0].title.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
@@ -253,7 +252,7 @@ INFORMATION: StructureDefinition.snapshot.element[13].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[14].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[15].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.differential.element[4].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status to 2027.0.0-ballot.2
-INFORMATION: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: StructureDefinition/mii-ex-dokument-nlp-processing-status: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: Resource: The resource StructureDefinition/mii-ex-dokument-nlp-processing-status could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-mii-lm-dokument.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
@@ -280,7 +279,7 @@ INFORMATION: StructureDefinition.snapshot.element[33].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[33].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition/mii-lm-dokument: StructureDefinition.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/mii-lm-dokument: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
@@ -611,7 +610,7 @@ INFORMATION: StructureDefinition.differential.element[62].type[0].targetProfile[
 INFORMATION: StructureDefinition.differential.element[63].binding.valueSet: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSeventCodeList to 2021-07-06T21:19:41
 INFORMATION: StructureDefinition.differential.element[68].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart to 2027.0.0-ballot.2
 INFORMATION: StructureDefinition.differential.element[72].binding.valueSet: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet to 2027.0.0-ballot.2
-INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[12].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 ERROR: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[18].short.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: StructureDefinition/mii-pr-dokument-dokument: StructureDefinition.snapshot.element[18].short.extension[0].extension[0].value.ofType(code): The value provided ('en') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
@@ -974,48 +973,46 @@ INFORMATION: Resource: The resource StructureDefinition/mii-pr-dokument-dokument
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 INFORMATION: ValueSet.compose.include[3].valueSet[0]: Pinned the version of http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode to 2021-07-06T21:23:52
 WARNING: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
-INFORMATION: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-einrichtungsart: ValueSet: Resource has a language (de), and the XHTML has a lang (en), but they differ
 == fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 INFORMATION: ValueSet.compose.include[1].valueSet[0]: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode to 2019-05-17T13:46:31
 WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
-INFORMATION: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-fachgebiet: ValueSet: Resource has a language (de), and the XHTML has a lang (en), but they differ
 == fsh-generated/resources/ValueSet-mii-vs-dokument-format-code.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 INFORMATION: ValueSet.compose.include[0].valueSet[0]: Pinned the version of http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode to 1.4.0
 INFORMATION: ValueSet.compose.include[1].valueSet[0]: Pinned the version of http://ihe-d.de/ValueSets/IHEXDSformatCodeDE to 2018-12-14T17:07:12
 WARNING: ValueSet/mii-vs-dokument-format-code: ValueSet.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
-INFORMATION: ValueSet/mii-vs-dokument-format-code: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ValueSet/mii-vs-dokument-format-code: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-format-code: ValueSet: Resource has a language (de), and the XHTML has a lang (en), but they differ
 WARNING: ValueSet.where(id = 'mii-vs-dokument-format-code'): Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [ad3c460d-1aca-4ebb-8c2e-e5d3500ae790]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 80d60fe9-6a78-4807-b66e-09d3f249d2fa)
+Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [d3de04ed-e6c9-4aae-b575-90ed49cbfc90]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
+Information: X-Request-Id: 6d2bc3ed-7a9a-42e5-9e22-410e14265eff)
 WARNING: ValueSet.where(id = 'mii-vs-dokument-format-code'): Unable to expand included value set 'http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode': Error from https://tx.ontoserver.csiro.au/fhir: Error: [f3f5b627-d48e-4719-aaec-7122bc48db8b]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [4b0dcb8c-2562-4ce2-b719-23c56eb65529]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
-Information: X-Request-Id: 3362bd4d-349b-47b4-84bf-70f5eb8df256)
+Information: X-Request-Id: 7e91e1fb-575e-4f56-9fc2-48e5b46cc978 (and Error from http://127.0.0.1:8090/fhir: Error: [49957f64-1467-492e-86c4-f7d51ff38964]: A usable code system with URL http://dicom.nema.org/resources/ontology/DCMUID could not be resolved.
+Information: X-Request-Id: 84221a5f-22a1-4b51-8d14-007f5cf9a8e0)
 == fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status.json ==
 INFORMATION: ValueSet.compose.include[0]: Pinned the version of https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status to 2027.0.0-ballot.2
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 WARNING: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
-INFORMATION: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-nlp-processing-status: ValueSet: Resource has a language (de), and the XHTML has a lang (en), but they differ
 == fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
-INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-kategorie: ValueSet: Resource has a language (de), and the XHTML has a lang (en), but they differ
 == fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ.json ==
 INFORMATION: ValueSet.meta.profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/shareablevalueset to 4.0.2
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.language: A definition for CodeSystem 'null' could not be found, so the code cannot be validated
-INFORMATION: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 WARNING: ValueSet/mii-vs-dokument-sct-dokument-typ: ValueSet: Resource has a language (de), and the XHTML has a lang (en), but they differ
-== input/resources/CodeSystem-iso3166-1-fragment.json ==
-INFORMATION: CodeSystem/iso3166-1-fragment: CodeSystem.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
 == input/resources/CodeSystem-iso3166-2-fragment.json ==
-INFORMATION: CodeSystem/iso3166-2-fragment: CodeSystem.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: CodeSystem/iso3166-2-fragment: CodeSystem.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 == input/resources/CodeSystem-unsd-m49-fragment.json ==
-INFORMATION: CodeSystem/unsd-m49-fragment: CodeSystem.jurisdiction[0]: Reference to experimental CodeSystem urn:iso:std:iso:3166|2027.0.0-ballot.2
+WARNING: CodeSystem/unsd-m49-fragment: CodeSystem.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: CodeSystem/unsd-m49-fragment: CodeSystem.property[0]: This property has only a code ('class') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
 == input/resources/Parameters-expansion-manifest.json ==

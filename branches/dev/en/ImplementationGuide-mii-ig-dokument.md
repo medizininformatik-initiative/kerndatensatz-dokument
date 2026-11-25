@@ -65,6 +65,11 @@ This publication includes IP covered under the following statements.
 * [Fachabteilungsschluessel](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md)
 
 
+* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
+
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ISO3166Part2Fragment](CodeSystem-iso3166-2-fragment.md), [MII_CPS_Dokument_CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md)... Show 13 more, [MII_CS_Dokument_NLP_Processing_Status](CodeSystem-mii-cs-dokument-nlp-processing-status.md), [MII_EX_Dokument_NLP_Processing_Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md), [MII_IG_Dokument](index.md), [MII_LM_Dokument](StructureDefinition-mii-lm-dokument.md), [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md), [MII_VS_Dokument_Einrichtungsart](ValueSet-mii-vs-dokument-einrichtungsart.md), [MII_VS_Dokument_Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.md), [MII_VS_Dokument_Format_Code](ValueSet-mii-vs-dokument-format-code.md), [MII_VS_Dokument_NLP_Processing_Status](ValueSet-mii-vs-dokument-nlp-processing-status.md), [MII_VS_Dokument_SCT_Dokument_Kategorie](ValueSet-mii-vs-dokument-sct-dokument-kategorie.md), [MII_VS_Dokument_SCT_Dokument_Typ](ValueSet-mii-vs-dokument-sct-dokument-typ.md), [NlpPipelineAmandaAlzheimer](ExampleScenario-NlpPipelineAmandaAlzheimer.md) and [UNSDM49Fragment](CodeSystem-unsd-m49-fragment.md)
+
+
 * Some content from IHE® Copyright © 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property) .
 
 * [IHE Format Code set for use with Document Sharing](https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html): [DocumentReference/AmandaAlzheimerAnnotiertesDokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md), [DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md), [DocumentReference/AmandaAlzheimerKlartextDokument](DocumentReference-AmandaAlzheimerKlartextDokument.md), [DocumentReference/AmandaAlzheimerOriginalDokument](DocumentReference-AmandaAlzheimerOriginalDokument.md) and [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md)
@@ -346,17 +351,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "ballot"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "special-url"
-      },
-      {
-        "url" : "value",
-        "valueString" : "urn:iso:std:iso:3166"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -873,17 +867,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "ballot"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "special-url"
-      },
-      {
-        "url" : "value",
-        "valueString" : "urn:iso:std:iso:3166"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1449,22 +1432,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       "name" : "Expansion-Manifest",
       "description" : "Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "CodeSystem-iso3166-1-fragment.html"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/iso3166-1-fragment"
-      },
-      "name" : "ISO 3166-1 (Build-Fragment)",
-      "description" : "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
       "exampleBoolean" : false
     },
     {

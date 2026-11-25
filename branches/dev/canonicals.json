@@ -97,13 +97,6 @@
   "name" : "MII_VS_Dokument_SCT_Dokument_Typ"
 },
 {
-  "id" : "iso3166-1-fragment",
-  "type" : "CodeSystem",
-  "url" : "urn:iso:std:iso:3166",
-  "version" : "2027.0.0-ballot.2",
-  "name" : "ISO3166Part1Fragment"
-},
-{
   "id" : "iso3166-2-fragment",
   "type" : "CodeSystem",
   "url" : "urn:iso:std:iso:3166:-2",

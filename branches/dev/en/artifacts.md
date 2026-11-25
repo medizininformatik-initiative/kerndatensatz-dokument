@@ -63,7 +63,6 @@ These define new code systems used by systems conforming to this implementation 
 
 | | |
 | :--- | :--- |
-| [ ISO 3166-1 (Build-Fragment)  ](CodeSystem-iso3166-1-fragment.md) | Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann. |
 | [ ISO 3166-2 (Build-Fragment)  ](CodeSystem-iso3166-2-fragment.md) | Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets. |
 | [ MII CS Dokument NLP Processing Status  ](CodeSystem-mii-cs-dokument-nlp-processing-status.md) | Status der NLP-Verarbeitung des referenzierten Dokuments |
 | [ UN M49 (Build-Fragment)  ](CodeSystem-unsd-m49-fragment.md) | Build-Terminologie — UN-M49-Regionen-Fragment, Mitglied des Jurisdiktions-ValueSets. |

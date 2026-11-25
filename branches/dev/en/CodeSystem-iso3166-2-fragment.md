@@ -12,7 +12,7 @@
 | Active as of 2026-09-08 | *Computable Name*:ISO3166Part2Fragment |
 
  
-Build-Terminologie: Fragment des Codesystems, das dieser Leitfaden mitliefert, damit der IG Publisher die Jurisdiktion `urn:iso:std:iso:3166#DE` auf jedem Terminologieserver validieren kann (SU-TermServ und Ontoserver führen ISO 3166 nur als Stub ohne Inhalt). Kein Bestandteil der fachlichen Festlegungen des Moduls; die normativen Codes stehen beim jeweiligen Herausgeber. 
+Build-Terminologie: Fragment des Codesystems, das dieser Leitfaden mitliefert, damit der IG Publisher die Jurisdiktion `urn:iso:std:iso:3166#DE` gegen das FHIR-Jurisdiktions-ValueSet validieren kann. Dieses ValueSet umfasst neben ISO 3166-1 auch ISO 3166-2 (`urn:iso:std:iso:3166:-2`) und UN M49, die SU-TermServ (Stand November 2026) nicht führt. Kein Bestandteil der fachlichen Festlegungen des Moduls; die normativen Codes stehen beim jeweiligen Herausgeber. 
 
 This Code system is referenced in the definition of the following value sets:
 
@@ -45,7 +45,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "https://www.netzwerk-universitaetsmedizin.de"
     }]
   }],
-  "description" : "Build-Terminologie: Fragment des Codesystems, das dieser Leitfaden mitliefert, damit der IG Publisher die Jurisdiktion `urn:iso:std:iso:3166#DE` auf jedem Terminologieserver validieren kann (SU-TermServ und Ontoserver führen ISO 3166 nur als Stub ohne Inhalt). Kein Bestandteil der fachlichen Festlegungen des Moduls; die normativen Codes stehen beim jeweiligen Herausgeber.",
+  "description" : "Build-Terminologie: Fragment des Codesystems, das dieser Leitfaden mitliefert, damit der IG Publisher die Jurisdiktion `urn:iso:std:iso:3166#DE` gegen das FHIR-Jurisdiktions-ValueSet validieren kann. Dieses ValueSet umfasst neben ISO 3166-1 auch ISO 3166-2 (`urn:iso:std:iso:3166:-2`) und UN M49, die SU-TermServ (Stand November 2026) nicht führt. Kein Bestandteil der fachlichen Festlegungen des Moduls; die normativen Codes stehen beim jeweiligen Herausgeber.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
