@@ -86,17 +86,41 @@ FSH `Instance:`. Use **either** the hand-authored JSON here **or** the FSH — n
 both, or the IG Publisher sees two resources with the same id. basis keeps the
 JSON authoritative and the FSH commented out; this template does the same.
 
-### `CodeSystem-iso3166-1-fragment.json`, `CodeSystem-iso3166-2-fragment.json`, `CodeSystem-unsd-m49-fragment.json` — build terminology
+### `CodeSystem-iso3166-2-fragment.json`, `CodeSystem-unsd-m49-fragment.json` — build terminology
 
-The IG Publisher renders the country flag in the page header only after the
-terminology server has validated the guide's jurisdiction (`urn:iso:std:iso:3166#DE`)
+The IG Publisher validates the guide's jurisdiction (`urn:iso:std:iso:3166#DE`)
 against the FHIR jurisdiction value set, which is composed of ISO 3166-1,
-ISO 3166-2 and the UN M49 regions. SU-TermServ and Ontoserver carry ISO 3166 only
-as a content-less stub, so the validation failed and the header fell back to the
-text "Germany" (and the QA report carried twelve ISO 3166 warnings). These three
-`content: fragment` code systems supply just enough content (Germany, one
-subdivision, the world/Europe regions) for the validation and the publisher's
-country-code expansions to succeed on any server. They are build terminology,
-not module content: the normative codes belong to ISO and the UN, and the
-fragments are excluded from the module's own code-system table on
-`code-systems.md`.
+ISO 3166-2 (`urn:iso:std:iso:3166:-2`) and the UN M49 regions. Only when that
+succeeds does it render the country flag in the page header. Otherwise the
+header falls back to the text "Germany", and every jurisdiction in the QA report
+carries a warning. Up to Ontoserver 6.25.3 (until 2026-11-23) SU-TermServ
+carried ISO 3166-1 (`urn:iso:std:iso:3166`, version `20240629`), but neither
+ISO 3166-2 under that URL nor UN M49. These two `content: fragment` code systems
+supply just enough content (one subdivision, the world/Europe regions) for the
+server to evaluate the value set. Since its upgrade to Ontoserver 6.32.1 on
+2026-11-24, SU-TermServ lists no ISO 3166 at all. Until the server carries it
+again, every jurisdiction gets the warning "A definition for CodeSystem
+'urn:iso:std:iso:3166' could not be found" and the header shows "Germany", as in
+the other KDS modules, which ship no ISO 3166 copy either. They are build terminology, not module content: the normative
+codes belong to ISO and the UN, and the fragments are excluded from the module's
+own code-system table on `code-systems.md`.
+
+**Mind the side effect.** Everything in this directory goes into the published
+package, and the IG Publisher stamps each resource with the module version (the
+fragments are published as e.g. `urn:iso:std:iso:3166:-2|2027.0.0-ballot.2`). A
+copy under a foreign canonical therefore competes with the real code system on
+any terminology server that loads the package and also carries the real one.
+Ontoserver, which SU-TermServ runs, cannot pick a default between a date-like
+version and the module version. That is why the former ISO 3166-1 fragment was removed: once
+SU-TermServ carried the real ISO 3166-1, the copy broke the jurisdiction
+validation of other modules
+([#67](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues/67)).
+Remove the two remaining fragments, and their `special-url` and `resources`
+entries in `sushi-config.yaml`, as soon as SU-TermServ carries ISO 3166-2 under
+`urn:iso:std:iso:3166:-2` and UN M49.
+
+Builds without the SU-TermServ certificate fall back to `tx.ontoserver.csiro.au`.
+That server carries no ISO 3166 at all (checked November 2026), so those builds
+cannot validate the jurisdiction. Expect one warning per jurisdiction and the
+text "Germany" instead of the flag. CI uses SU-TermServ; see above for its current
+state.

@@ -3,7 +3,6 @@
 [AmandaAlzheimerDeIdentifiziertesDokument]: DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html
 [AmandaAlzheimerEinrichtungskontakt]: Encounter-AmandaAlzheimerEinrichtungskontakt.html
 [mii-param-dokument-manifest]: Parameters-mii-param-dokument-manifest.html
-[ISO3166Part1Fragment]: CodeSystem-iso3166-1-fragment.html
 [ISO3166Part2Fragment]: CodeSystem-iso3166-2-fragment.html
 [AmandaAlzheimerKlartextDokument]: DocumentReference-AmandaAlzheimerKlartextDokument.html
 [mii-cps-dokument-capabilitystatement]: CapabilityStatement-mii-cps-dokument-capabilitystatement.html
