@@ -93,11 +93,15 @@ against the FHIR jurisdiction value set, which is composed of ISO 3166-1,
 ISO 3166-2 (`urn:iso:std:iso:3166:-2`) and the UN M49 regions. Only when that
 succeeds does it render the country flag in the page header. Otherwise the
 header falls back to the text "Germany", and every jurisdiction in the QA report
-carries a warning. SU-TermServ carries ISO 3166-1 (`urn:iso:std:iso:3166`,
-version `20240629`) but neither ISO 3166-2 under that URL nor UN M49 (checked
-November 2026). These two `content: fragment` code systems supply just enough
-content (one subdivision, the world/Europe regions) for the server to evaluate
-the value set. They are build terminology, not module content: the normative
+carries a warning. Up to Ontoserver 6.25.3 (until 2026-11-23) SU-TermServ
+carried ISO 3166-1 (`urn:iso:std:iso:3166`, version `20240629`), but neither
+ISO 3166-2 under that URL nor UN M49. These two `content: fragment` code systems
+supply just enough content (one subdivision, the world/Europe regions) for the
+server to evaluate the value set. Since its upgrade to Ontoserver 6.32.1 on
+2026-11-24, SU-TermServ lists no ISO 3166 at all. Until the server carries it
+again, every jurisdiction gets the warning "A definition for CodeSystem
+'urn:iso:std:iso:3166' could not be found" and the header shows "Germany", as in
+the other KDS modules, which ship no ISO 3166 copy either. They are build terminology, not module content: the normative
 codes belong to ISO and the UN, and the fragments are excluded from the module's
 own code-system table on `code-systems.md`.
 
@@ -118,4 +122,5 @@ entries in `sushi-config.yaml`, as soon as SU-TermServ carries ISO 3166-2 under
 Builds without the SU-TermServ certificate fall back to `tx.ontoserver.csiro.au`.
 That server carries no ISO 3166 at all (checked November 2026), so those builds
 cannot validate the jurisdiction. Expect one warning per jurisdiction and the
-text "Germany" instead of the flag. CI uses SU-TermServ and is not affected.
+text "Germany" instead of the flag. CI uses SU-TermServ; see above for its current
+state.
