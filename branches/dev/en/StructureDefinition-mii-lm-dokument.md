@@ -69,7 +69,7 @@ Mandatory: 0 element(5 nested mandatory elements)
   "name" : "MII_LM_Dokument",
   "title" : "MII LM Dokument",
   "status" : "active",
-  "date" : "2026-11-25T14:06:48+00:00",
+  "date" : "2026-11-25T14:21:38+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
