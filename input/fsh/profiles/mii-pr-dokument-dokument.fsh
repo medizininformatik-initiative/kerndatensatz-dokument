@@ -11,8 +11,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK: 1..1, MS | MIO: 0..1 (R4 default) | IHE MHD: 1..1
 * masterIdentifier 0..1 MS
-* insert Description(masterIdentifier, Versionsspezifische OID des Dokuments, Versionsspezifische OID des Dokuments. Die Angabe ist dringend empfohlen [SHALL].)
-* insert DescriptionIntl(masterIdentifier, en, Specific Identifier for this version of the document, Specific Identifier for this version of the document [SHALL].)
+* insert Description(masterIdentifier, Versionsspezifische OID des Dokuments, Versionsspezifische OID des Dokuments. Die Angabe ist dringend empfohlen [SHOULD].)
+* insert DescriptionIntl(masterIdentifier, en, Specific Identifier for this version of the document, Specific Identifier for this version of the document [SHOULD].)
 
 // ISiK: 0..*, MS | MIO: 0..* (R4 default) | IHE MHD: 0..*, MS, Slicing entryUUID
 * identifier 0..* MS
@@ -21,18 +21,18 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK: 1..1, MS, DocumentReferenceStatus (required) | MIO: 1..1, DocumentReferenceStatus (required) (R4 default) | IHE MHD: 1..1, MHD DocumentReference status codes (required)
 * status 1..1 MS
-* insert CommentedDescription(status, Zustand des Dokumentenmetadatensatzes, Zustand des Dokumentenmetadatensatzes. Die Angabe ist dringend empfohlen [SHALL]., Typisch: `current`)
-* insert CommentedDescriptionIntl(status, en, Status about the condition of the document reference, Status about the condition of the document reference [SHALL]., Typically: `current`)
+* insert CommentedDescription(status, Zustand des Dokumentenmetadatensatzes, Zustand des Dokumentenmetadatensatzes. Die Angabe ist verpflichtend [MUST]., Typisch: `current`)
+* insert CommentedDescriptionIntl(status, en, Status about the condition of the document reference, Status about the condition of the document reference [MUST]., Typically: `current`)
 
 // ISiK: 0..1, MS, CompositionStatus (required) | MIO: 0..1, CompositionStatus (required) (R4 default) | IHE MHD: 0..0
 * docStatus 0..1 MS
-* insert CommentedDescription(docStatus, Bearbeitungsstatus des Dokumentes, Bearbeitungsstatus des Dokumentes. Die Angabe ist dringend empfohlen [SHALL]., Typisch: `final`)
-* insert CommentedDescriptionIntl(docStatus, en, Status about the referenced document itself, Status about the referenced document itself [SHALL]., Typically: `final`)
+* insert CommentedDescription(docStatus, Bearbeitungsstatus des Dokumentes, Bearbeitungsstatus des Dokumentes. Die Angabe ist dringend empfohlen [SHOULD]., Typisch: `final`)
+* insert CommentedDescriptionIntl(docStatus, en, Status about the referenced document itself, Status about the referenced document itself [SHOULD]., Typically: `final`)
 
 // ISiK: 1..1, MS, Slicing KDL/XDS | MIO: 0..1 (R4 default), Slicing XDS | IHE MHD: 1..1, MS, DocumentTypeValueSet (preferred)
 * type 0..1 MS
-* insert CommentedDescription(type, Charakterisierung der Dokumentart im Detail, Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: KDL und aus KDL abgeleiteter XDS-Type-Code)
-* insert CommentedDescriptionIntl(type, en, Precise description of the document type, Precise description of the document type [SHALL]., Recommended: KDL and from KDL derived XDS-Type-Code)
+* insert CommentedDescription(type, Charakterisierung der Dokumentart im Detail, Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHOULD]., Empfohlen: KDL und aus KDL abgeleiteter XDS-Type-Code)
+* insert CommentedDescriptionIntl(type, en, Precise description of the document type, Precise description of the document type [SHOULD]., Recommended: KDL and from KDL derived XDS-Type-Code)
 
 // Invariante für Existenz eines KDS- oder XDS-Codes
 * type obeys mii-iv-dokument-dokument-type
@@ -70,8 +70,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK: 0..1, MS, Slicing XDS | MIO: 0..* (R4 default), Slicing XDS | IHE MHD: 1..1, MS, DocumentClassValueSet (example)
 * category 0..* MS
-* insert CommentedDescription(category, Charakterisierung der Dokumentenart in Übersicht, Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: Aus KDL abgeleiteter XDS-Category-Code)
-* insert CommentedDescriptionIntl(category, en, General description of the document type, General description of the document type [SHALL]., Recommended: From KDL derived XDS-Category-Code)
+* insert CommentedDescription(category, Charakterisierung der Dokumentenart in Übersicht, Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHOULD]., Empfohlen: Aus KDL abgeleiteter XDS-Category-Code)
+* insert CommentedDescriptionIntl(category, en, General description of the document type, General description of the document type [SHOULD]., Recommended: From KDL derived XDS-Category-Code)
 
 // Invariante für Existenz eines KDS- oder XDS-Codes
 * category obeys mii-iv-dokument-dokument-category
@@ -105,8 +105,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK: 1..1, MS | MIO: 0..1 (R4 default), Extended Custom Profiles | IHE MHD: 1..1, MS Restricted Patient
 * subject 0..1 MS
 * subject only Reference(Patient or MII_PR_Person_Patient or MII_PR_Person_PatientPseudonymisiert)
-* insert Description(subject, Referenz auf den Patient des Dokumentes, Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST].)
-* insert DescriptionIntl(subject, en, Patient reference to the document, Patient reference to the document [MUST].)
+* insert Description(subject, Referenz auf den Patient des Dokumentes, Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST]\, sofern das Dokument einen Patientenbezug hat.)
+* insert DescriptionIntl(subject, en, Patient reference to the document, Patient reference to the document [MUST]\\, when the document relates to a patient.)
 
 // ISiK: 0..1 (R4 default), MS | MIO: 0..1 (R4 default) | IHE MHD: 0..1 (R4 default), MS
 // * date 0..1
@@ -120,8 +120,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert DescriptionIntl(relatesTo, en, Document relationships, Document relationships)
 
 * relatesTo.code 1..1 MS
-* insert CommentedDescription(relatesTo.code, Beziehung zu anderem Dokument, Beziehung zu anderem Dokument. Die Angabe ist optional [MAY]., Typisch: `appends`\, z.B. ergänzende Annotation\, oder `transforms`\, z.B. Formatwandlung. CAVE: `transforms` meint Dokument wurde transformiert)
-* insert CommentedDescriptionIntl(relatesTo.code, en, Relationship to other document, Relationship to other document [MAY]., Typically: `appends`\\, e.g. additional annotation\\, or `transforms`\\, e.g. format conversion. CAVE: `transforms` means the document was transformed)
+* insert CommentedDescription(relatesTo.code, Beziehung zu anderem Dokument, Beziehung zu anderem Dokument. Die Angabe ist verpflichtend [MUST]\, wenn eine Dokumentenbeziehung angegeben ist., Typisch: `appends`\, z.B. ergänzende Annotation\, oder `transforms`\, z.B. Formatwandlung. CAVE: `transforms` meint Dokument wurde transformiert)
+* insert CommentedDescriptionIntl(relatesTo.code, en, Relationship to other document, Relationship to other document [MUST]\\, when a document relationship is present., Typically: `appends`\\, e.g. additional annotation\\, or `transforms`\\, e.g. format conversion. CAVE: `transforms` means the document was transformed)
 
 * relatesTo.target 1..1 MS
 * insert Description(relatesTo.target, Referenz auf DocumentReference, Referenz auf DocumentReference. Die Angabe ist verpflichtend [MUST]\, wenn Beziehungstyp angegeben.)
@@ -134,8 +134,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK: 1..*, MS, ISiKConfidentialityCode (required) | MIO: 0..* (R4 default) | IHE MHD: 1..*, MS
 * securityLabel 0..* MS
-* insert CommentedDescription(securityLabel, Status über den Sicherheitsbedarf des Dokuments, Status über den Sicherheitsbedarf des Dokuments. Die Angabe wird dringend empfohlen [SHALL]., Siehe IG Terminologien)
-* insert CommentedDescriptionIntl(securityLabel, en, Security level of the document, Security level of the document [SHALL]., See IG Terminology)
+* insert CommentedDescription(securityLabel, Status über den Sicherheitsbedarf des Dokuments, Status über den Sicherheitsbedarf des Dokuments. Die Angabe wird dringend empfohlen [SHOULD]., Siehe IG Terminologien)
+* insert CommentedDescriptionIntl(securityLabel, en, Security level of the document, Security level of the document [SHOULD]., See IG Terminology)
 
 // ISiK: 1..1, MS | MIO: 1..* (R4 default), Slicing Anhang/ Verweis | IHE MHD: 1..1
 * content 1..* MS
@@ -181,21 +181,21 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK: 1..1, MS, MimeTypes (required) | MIO 1.7.0 Verweis: 0..1 (R4 default) | MIO 1.7.0 Anhang: 1..1 | IHE MHD: 1..1
 * content.attachment.contentType 0..1 MS
-* insert CommentedDescription(content.attachment.contentType, MIME-Typ des Dokumenteninhalts, MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHALL]., Typisch: `text/plain`)
-* insert CommentedDescriptionIntl(content.attachment.contentType, en, MIME type of the document content, MIME type of the document content [SHALL]., Typically: `text/plain`)
+* insert CommentedDescription(content.attachment.contentType, MIME-Typ des Dokumenteninhalts, MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHOULD]., Typisch: `text/plain`)
+* insert CommentedDescriptionIntl(content.attachment.contentType, en, MIME type of the document content, MIME type of the document content [SHOULD]., Typically: `text/plain`)
 
 // ISiK: 1..1, MS, CommonLanguages (required) | MIO: 0..1 (R4 default) | IHE MHD: 1..1, MS
 * content.attachment.language 0..1 MS
-* insert CommentedDescription(content.attachment.language, Verwendete Sprache in dem Dokument, Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: 5-stellige Angabe. Typisch: `de-DE`)
-* insert CommentedDescriptionIntl(content.attachment.language, en, Used language in the document, Used language in the document [SHALL]., Recommended: 5-digit entry Typically: `de-DE`)
+* insert CommentedDescription(content.attachment.language, Verwendete Sprache in dem Dokument, Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHOULD]., Empfohlen: 5-stellige Angabe. Typisch: `de-DE`)
+* insert CommentedDescriptionIntl(content.attachment.language, en, Used language in the document, Used language in the document [SHOULD]., Recommended: 5-digit entry Typically: `de-DE`)
 
 // ISiK: 1..1, MS | MIO: 1..1 | IHE MHD: 0..1 (R4 default)
 // * content.attachment.title 0..1
 
 // ISiK: 1..1, MS | MIO: 0..1 (R4 default) | IHE MHD: 1..1, MS
 * content.attachment.creation 0..1 MS
-* insert CommentedDescription(content.attachment.creation, Datum der Erstellung des Dokumentes, Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHALL]., Bezogen auf letzte Änderung gemäß MII_EX_Dokument_NLP_Processing_Status)
-* insert CommentedDescriptionIntl(content.attachment.creation, en, Date of the creation of the document, Date of the creation of the document [SHALL]., Related to the last change regarding MII_EX_Dokument_NLP_Processing_Status)
+* insert CommentedDescription(content.attachment.creation, Datum der Erstellung des Dokumentes, Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHOULD]., Bezogen auf letzte Änderung gemäß MII_EX_Dokument_NLP_Processing_Status)
+* insert CommentedDescriptionIntl(content.attachment.creation, en, Date of the creation of the document, Date of the creation of the document [SHOULD]., Related to the last change regarding MII_EX_Dokument_NLP_Processing_Status)
 
 // ISiK: 1..1, MS, IHEXDSformatCodeDE (required) | MIO: 0..1, DocumentReferenceFormatCodeSet (preferred) (R4 default) | IHE MHD: 1..1, MS, IHE_FormatCode_vs (preferred)
 * content.format 0..1 MS
@@ -211,8 +211,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK: 0..1, MS | MIO: 0..* (R4 default) | IHE MHD: 0..* (R4 default)
 * context.encounter 0..* MS
 * context.encounter only Reference(Encounter or MII_PR_Fall_KontaktGesundheitseinrichtung)
-* insert Description(context.encounter, Referenz zum FALL, Referenz zur semantisch geeignetsten Ebene des Moduls FALL. Die Angabe ist dringend empfohlen [SHALL].)
-* insert DescriptionIntl(context.encounter, en, Reference to FALL, Reference to the semantically most suitable level of the module FALL [SHALL].)
+* insert Description(context.encounter, Referenz zum FALL, Referenz zur semantisch geeignetsten Ebene des Moduls FALL. Die Angabe ist dringend empfohlen [SHOULD].)
+* insert DescriptionIntl(context.encounter, en, Reference to FALL, Reference to the semantically most suitable level of the module FALL [SHOULD].)
 
 // ISiK: 0..*, IHEXDSeventCodeList (required) | MIO: 0..* (R4 default) | IHE MHD: 0..* (R4 default)
 * context.event 0..* MS

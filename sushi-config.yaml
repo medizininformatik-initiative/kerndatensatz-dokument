@@ -136,7 +136,7 @@ dependencies:
   de.ihe-d.terminology: 3.0.1
   de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot
   de.medizininformatikinitiative.kerndatensatz.meta: 2027.0.0-ballot
-  dvmd.kdl.r4: 2025.0.1
+  dvmd.kdl.r4: 2026.0.0
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.terminology.r4: 7.1.0
   ihe.formatcode.fhir: 1.4.0
@@ -150,9 +150,6 @@ dependencies:
 # catalogue input/translations/de/ImplementationGuide-mii-ig-dokument.po.
 # Metadata for resources that are not authored in FSH (input/resources/*.json).
 resources:
-  CodeSystem/iso3166-1-fragment:
-    name: ISO 3166-1 (Build-Fragment)
-    description: Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.
   CodeSystem/iso3166-2-fragment:
     name: ISO 3166-2 (Build-Fragment)
     description: Build-Terminologie — ISO-3166-2-Fragment, Mitglied des Jurisdiktions-ValueSets.
@@ -205,10 +202,9 @@ pages:
   translationinfo.md:
     title: Translation Information
 parameters:
-  # Canonical URLs defined by this IG that do not start with its canonical: the three
-  # build-terminology fragments (see input/resources/README.md).
+  # Canonical URLs defined by this IG that do not start with its canonical: the two
+  # remaining build-terminology fragments (see input/resources/README.md).
   special-url:
-    - urn:iso:std:iso:3166
     - urn:iso:std:iso:3166:-2
     - http://unstats.un.org/unsd/methods/m49/m49.htm
   path-resource:

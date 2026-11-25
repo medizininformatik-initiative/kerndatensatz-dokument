@@ -27,7 +27,7 @@ for the step-by-step mapping to the MII wiki's Module Release Workflow.
    `release/vYYYY.n.n` branch (e.g. `release/v2027.0.0`) → PR → `dev` — the
    `release/**` name is what makes the convention check run in strict release
    mode (an unresolved placeholder, an undecided optional page or a leftover
-   review marker fail there, not on a `feature/*` branch). While you are in the
+   review marker fail there, not on a `feat/*` branch). While you are in the
    pages, sweep both trees for unresolved authoring prompts —
    `grep -rn '\[TODO' input/pagecontent input/translations` must come back
    empty; the translated pages render at `/en/` and ship whatever is left in
