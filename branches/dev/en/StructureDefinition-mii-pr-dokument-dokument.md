@@ -152,7 +152,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-11-25T15:33:57+00:00",
+  "date" : "2026-11-25T17:22:24+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
