@@ -47,7 +47,7 @@ SNOMED CT ValueSet zum Typ eines Dokuments
   "title" : "MII VS Dokument SCT Dokument Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-25T17:22:24+00:00",
+  "date" : "2026-11-25T18:56:08+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
