@@ -47,7 +47,7 @@ SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments
   "title" : "MII VS Dokument SCT Dokument Kategorie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-25T14:28:54+00:00",
+  "date" : "2026-11-25T15:24:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -104,7 +104,7 @@ Simple Extension with the type CodeableConcept: Status der NLP-Verarbeitung des 
   "name" : "MII_EX_Dokument_NLP_Processing_Status",
   "title" : "MII EX Dokument NLP Processing Status",
   "status" : "active",
-  "date" : "2026-11-25T14:28:54+00:00",
+  "date" : "2026-11-25T15:24:42+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
