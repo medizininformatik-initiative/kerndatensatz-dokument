@@ -47,7 +47,7 @@ ValueSet zur Art der erzeugenden Einrichtung eines Dokuments
   "title" : "MII VS Dokument Einrichtungsart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-25T18:56:08+00:00",
+  "date" : "2026-11-25T19:09:31+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
