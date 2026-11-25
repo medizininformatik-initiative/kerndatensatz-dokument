@@ -59,7 +59,7 @@
   ],
 
   // Toolchain installs, all pinned:
-  // - fsh-sushi 3.21.0 = latest release on npm (re-verified 2026-11-14)
+  // - fsh-sushi 3.21.0 = the pin of kerndatensatz-meta (re-verified 2026-11-25)
   // NOTE on Node/Ruby: the features below pin EXACT versions for container
   // reproducibility, while CI deliberately floats the patch level
   // (setup-node "22", setup-ruby "3.3") — on divergence, CI wins.
