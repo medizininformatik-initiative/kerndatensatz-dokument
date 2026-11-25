@@ -184,7 +184,7 @@
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>
-    <valueCanonical value="http://dvmd.de/fhir/ValueSet/kdl|2025"/>
+    <valueCanonical value="http://dvmd.de/fhir/ValueSet/kdl|2026.0.0"/>
   </parameter>
   <parameter>
     <name value="default-valueset-version"/>

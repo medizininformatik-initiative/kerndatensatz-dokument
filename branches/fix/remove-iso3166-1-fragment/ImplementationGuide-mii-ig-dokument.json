@@ -200,7 +200,7 @@
     "id" : "dvmd_kdl_r4",
     "uri" : "http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4",
     "packageId" : "dvmd.kdl.r4",
-    "version" : "2025.0.1"
+    "version" : "2026.0.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",

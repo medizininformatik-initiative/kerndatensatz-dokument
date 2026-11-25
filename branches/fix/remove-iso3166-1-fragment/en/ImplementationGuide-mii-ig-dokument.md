@@ -41,6 +41,7 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -53,9 +54,9 @@ This IG declares the following global profiles — profiles that apply to every 
 
 This publication includes IP covered under the following statements.
 
-* 2025 DVMD e.V.
+* 2026 DVMD e.V.
 
-* [CodeSystem Klinische Dokumentenklassen-Liste (Version 2025)](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=http://dvmd.de/fhir/CodeSystem/kdl): [DocumentReference/AmandaAlzheimerAnnotiertesDokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md), [DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md), [DocumentReference/AmandaAlzheimerKlartextDokument](DocumentReference-AmandaAlzheimerKlartextDokument.md), [DocumentReference/AmandaAlzheimerOriginalDokument](DocumentReference-AmandaAlzheimerOriginalDokument.md) and [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md)
+* [CodeSystem Klinische Dokumentenklassen-Liste 2026](https://simplifier.net/resolve?scope=dvmd.kdl.r4@2026.0.0&canonical=http://dvmd.de/fhir/CodeSystem/kdl): [DocumentReference/AmandaAlzheimerAnnotiertesDokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md), [DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md), [DocumentReference/AmandaAlzheimerKlartextDokument](DocumentReference-AmandaAlzheimerKlartextDokument.md), [DocumentReference/AmandaAlzheimerOriginalDokument](DocumentReference-AmandaAlzheimerOriginalDokument.md) and [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md)
 
 
 * HL7 Deutschland e.V.
@@ -298,7 +299,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "dvmd_kdl_r4",
     "uri" : "http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4",
     "packageId" : "dvmd.kdl.r4",
-    "version" : "2025.0.1"
+    "version" : "2026.0.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",
