@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.2 |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Dokument_NLP_Processing_Status |
+| Active as of 2026-11-25 | *Computable Name*:MII_VS_Dokument_NLP_Processing_Status |
 
  
 ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments 
@@ -46,7 +46,7 @@ ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments
   "title" : "MII VS Dokument NLP Processing Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:05:42+00:00",
+  "date" : "2026-11-25T14:06:48+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

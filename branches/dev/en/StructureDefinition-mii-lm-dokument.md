@@ -13,7 +13,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-dokument.c
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument | *Version*:2027.0.0-ballot.2 |
-| Active as of 2026-09-14 | *Computable Name*:MII_LM_Dokument |
+| Active as of 2026-11-25 | *Computable Name*:MII_LM_Dokument |
 
  
 MII Logical Model KDS-Modul Dokument 
@@ -69,7 +69,7 @@ Mandatory: 0 element(5 nested mandatory elements)
   "name" : "MII_LM_Dokument",
   "title" : "MII LM Dokument",
   "status" : "active",
-  "date" : "2026-09-14T08:05:42+00:00",
+  "date" : "2026-11-25T14:06:48+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status | *Version*:2027.0.0-ballot.2 |
-| Active as of 2026-09-14 | *Computable Name*:MII_CS_Dokument_NLP_Processing_Status |
+| Active as of 2026-11-25 | *Computable Name*:MII_CS_Dokument_NLP_Processing_Status |
 
  
 Status der NLP-Verarbeitung des referenzierten Dokuments 
@@ -40,7 +40,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Dokument NLP Processing Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:05:42+00:00",
+  "date" : "2026-11-25T14:06:48+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
