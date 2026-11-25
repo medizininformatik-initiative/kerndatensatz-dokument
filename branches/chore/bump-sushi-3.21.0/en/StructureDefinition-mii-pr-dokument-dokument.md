@@ -13,7 +13,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-d
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument | *Version*:2027.0.0-ballot.2 |
-| Active as of 2026-11-14 | *Computable Name*:MII_PR_Dokument_Dokument |
+| Active as of 2026-11-25 | *Computable Name*:MII_PR_Dokument_Dokument |
 
  
 Klinisches Dokument mit zugehörigen Metadaten 
@@ -152,7 +152,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-11-14T20:12:38+00:00",
+  "date" : "2026-11-25T17:30:03+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -258,7 +258,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Versionsspezifische OID des Dokuments. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Versionsspezifische OID des Dokuments. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -267,7 +267,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Specific Identifier for this version of the document [SHALL]."
+            "valueString" : "Specific Identifier for this version of the document [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -338,7 +338,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Zustand des Dokumentenmetadatensatzes. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Zustand des Dokumentenmetadatensatzes. Die Angabe ist verpflichtend [MUST].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -347,7 +347,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Status about the condition of the document reference [SHALL]."
+            "valueString" : "Status about the condition of the document reference [MUST]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -385,7 +385,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Bearbeitungsstatus des Dokumentes. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Bearbeitungsstatus des Dokumentes. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -394,7 +394,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Status about the referenced document itself [SHALL]."
+            "valueString" : "Status about the referenced document itself [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -432,7 +432,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -441,7 +441,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Precise description of the document type [SHALL]."
+            "valueString" : "Precise description of the document type [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -580,7 +580,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -589,7 +589,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "General description of the document type [SHALL]."
+            "valueString" : "General description of the document type [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -711,7 +711,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST].",
+      "definition" : "Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST], sofern das Dokument einen Patientenbezug hat.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -720,7 +720,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Patient reference to the document [MUST]."
+            "valueString" : "Patient reference to the document [MUST], when the document relates to a patient."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -783,7 +783,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Beziehung zu anderem Dokument. Die Angabe ist optional [MAY].",
+      "definition" : "Beziehung zu anderem Dokument. Die Angabe ist verpflichtend [MUST], wenn eine Dokumentenbeziehung angegeben ist.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -792,7 +792,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Relationship to other document [MAY]."
+            "valueString" : "Relationship to other document [MUST], when a document relationship is present."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -896,7 +896,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Status über den Sicherheitsbedarf des Dokuments. Die Angabe wird dringend empfohlen [SHALL].",
+      "definition" : "Status über den Sicherheitsbedarf des Dokuments. Die Angabe wird dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -905,7 +905,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Security level of the document [SHALL]."
+            "valueString" : "Security level of the document [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1018,7 +1018,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -1027,7 +1027,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "MIME type of the document content [SHALL]."
+            "valueString" : "MIME type of the document content [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1065,7 +1065,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -1074,7 +1074,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Used language in the document [SHALL]."
+            "valueString" : "Used language in the document [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1204,7 +1204,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -1213,7 +1213,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Date of the creation of the document [SHALL]."
+            "valueString" : "Date of the creation of the document [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -1421,7 +1421,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Referenz zur semantisch geeignetsten Ebene des Moduls FALL. Die Angabe ist dringend empfohlen [SHALL].",
+      "definition" : "Referenz zur semantisch geeignetsten Ebene des Moduls FALL. Die Angabe ist dringend empfohlen [SHOULD].",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -1430,7 +1430,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "Reference to the semantically most suitable level of the module FALL [SHALL]."
+            "valueString" : "Reference to the semantically most suitable level of the module FALL [SHOULD]."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

@@ -39,7 +39,7 @@ Profile: [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument
 | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
-| * | application/vnd.openxmlformats-officedocument.wordprocessingml.document | German (Austria) | `UEsDBAoAAAAAAGtjrFwAAAAAAAAAAAAA...`(base64 data - 17,156 base64 chars) | 12865 | `lVW+O8g3uswHHW0s8kirGXp3hJU=` | Amanda_Alzheimer.docx | 2028-02-06 |
+| * | application/vnd.openxmlformats-officedocument.wordprocessingml.document | de-AT | `UEsDBAoAAAAAAGtjrFwAAAAAAAAAAAAA...`(base64 data - 17,156 base64 chars) | 12865 | `lVW+O8g3uswHHW0s8kirGXp3hJU=` | Amanda_Alzheimer.docx | 2028-02-06 |
 
 **format**: [IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds:2017:mimeTypeSufficient](https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds.582017.58mimeTypeSufficient) (mimeType Sufficient)
 

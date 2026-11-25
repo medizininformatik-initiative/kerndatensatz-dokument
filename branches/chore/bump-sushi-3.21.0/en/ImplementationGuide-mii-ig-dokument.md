@@ -41,6 +41,7 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -53,15 +54,20 @@ This IG declares the following global profiles — profiles that apply to every 
 
 This publication includes IP covered under the following statements.
 
-* 2025 DVMD e.V.
+* 2026 DVMD e.V.
 
-* [CodeSystem Klinische Dokumentenklassen-Liste (Version 2025)](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=http://dvmd.de/fhir/CodeSystem/kdl): [DocumentReference/AmandaAlzheimerAnnotiertesDokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md), [DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md), [DocumentReference/AmandaAlzheimerKlartextDokument](DocumentReference-AmandaAlzheimerKlartextDokument.md), [DocumentReference/AmandaAlzheimerOriginalDokument](DocumentReference-AmandaAlzheimerOriginalDokument.md) and [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md)
+* [CodeSystem Klinische Dokumentenklassen-Liste 2026](https://simplifier.net/resolve?scope=dvmd.kdl.r4@2026.0.0&canonical=http://dvmd.de/fhir/CodeSystem/kdl): [DocumentReference/AmandaAlzheimerAnnotiertesDokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.md), [DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md), [DocumentReference/AmandaAlzheimerKlartextDokument](DocumentReference-AmandaAlzheimerKlartextDokument.md), [DocumentReference/AmandaAlzheimerOriginalDokument](DocumentReference-AmandaAlzheimerOriginalDokument.md) and [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md)
 
 
 * HL7 Deutschland e.V.
 
 * [Kontaktebene](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/Kontaktebene): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md), [Encounter/AmandaAlzheimerEinrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.md) and [Encounter/AmandaAlzheimerVersorgungsstellenKontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
 * [Fachabteilungsschluessel](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel): [Encounter/AmandaAlzheimerAbteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.md)
+
+
+* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
+
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ISO3166Part2Fragment](CodeSystem-iso3166-2-fragment.md), [MII_CPS_Dokument_CapabilityStatement](CapabilityStatement-mii-cps-dokument-capabilitystatement.md)... Show 13 more, [MII_CS_Dokument_NLP_Processing_Status](CodeSystem-mii-cs-dokument-nlp-processing-status.md), [MII_EX_Dokument_NLP_Processing_Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md), [MII_IG_Dokument](index.md), [MII_LM_Dokument](StructureDefinition-mii-lm-dokument.md), [MII_PR_Dokument_Dokument](StructureDefinition-mii-pr-dokument-dokument.md), [MII_VS_Dokument_Einrichtungsart](ValueSet-mii-vs-dokument-einrichtungsart.md), [MII_VS_Dokument_Fachgebiet](ValueSet-mii-vs-dokument-fachgebiet.md), [MII_VS_Dokument_Format_Code](ValueSet-mii-vs-dokument-format-code.md), [MII_VS_Dokument_NLP_Processing_Status](ValueSet-mii-vs-dokument-nlp-processing-status.md), [MII_VS_Dokument_SCT_Dokument_Kategorie](ValueSet-mii-vs-dokument-sct-dokument-kategorie.md), [MII_VS_Dokument_SCT_Dokument_Typ](ValueSet-mii-vs-dokument-sct-dokument-typ.md), [NlpPipelineAmandaAlzheimer](ExampleScenario-NlpPipelineAmandaAlzheimer.md) and [UNSDM49Fragment](CodeSystem-unsd-m49-fragment.md)
 
 
 * Some content from IHE® Copyright © 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property) .
@@ -293,7 +299,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "dvmd_kdl_r4",
     "uri" : "http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4",
     "packageId" : "dvmd.kdl.r4",
-    "version" : "2025.0.1"
+    "version" : "2026.0.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",
@@ -345,17 +351,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "ballot"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "special-url"
-      },
-      {
-        "url" : "value",
-        "valueString" : "urn:iso:std:iso:3166"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -872,17 +867,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "url" : "value",
         "valueString" : "ballot"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "special-url"
-      },
-      {
-        "url" : "value",
-        "valueString" : "urn:iso:std:iso:3166"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1448,22 +1432,6 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       "name" : "Expansion-Manifest",
       "description" : "Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "CodeSystem-iso3166-1-fragment.html"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/iso3166-1-fragment"
-      },
-      "name" : "ISO 3166-1 (Build-Fragment)",
-      "description" : "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
       "exampleBoolean" : false
     },
     {

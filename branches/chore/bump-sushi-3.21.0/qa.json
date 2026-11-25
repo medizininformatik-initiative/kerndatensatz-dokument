@@ -7,14 +7,14 @@
   "status" : "draft",
   "package-id" : "de.medizininformatikinitiative.kerndatensatz.dokument",
   "ig-ver" : "2027.0.0-ballot.2",
-  "date" : "Sat, 14 Nov, 2026 20:12:38 +0000",
-  "dateISO8601" : "2026-11-14T20:12:38+00:00",
-  "errs" : 4,
-  "warnings" : 115,
-  "hints" : 456,
+  "date" : "Wed, 25 Nov, 2026 17:30:03 +0000",
+  "dateISO8601" : "2026-11-25T17:30:03+00:00",
+  "errs" : 402,
+  "warnings" : 150,
+  "hints" : 405,
   "suppressed-hints" : 0,
-  "suppressed-warnings" : 10,
+  "suppressed-warnings" : 9,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 3376043416
+  "maxMemory" : 2693303120
 }

@@ -200,7 +200,7 @@
     "id" : "dvmd_kdl_r4",
     "uri" : "http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4",
     "packageId" : "dvmd.kdl.r4",
-    "version" : "2025.0.1"
+    "version" : "2026.0.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",
@@ -252,17 +252,6 @@
       {
         "url" : "value",
         "valueString" : "ballot"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "special-url"
-      },
-      {
-        "url" : "value",
-        "valueString" : "urn:iso:std:iso:3166"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -779,17 +768,6 @@
       {
         "url" : "value",
         "valueString" : "ballot"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "special-url"
-      },
-      {
-        "url" : "value",
-        "valueString" : "urn:iso:std:iso:3166"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1335,18 +1313,6 @@
       },
       "name" : "Expansion-Manifest",
       "description" : "Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/iso3166-1-fragment"
-      },
-      "name" : "ISO 3166-1 (Build-Fragment)",
-      "description" : "Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann.",
       "exampleBoolean" : false
     },
     {

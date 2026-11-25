@@ -175,7 +175,7 @@
   <dependsOn id="dvmd_kdl_r4">
     <uri value="http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4"/>
     <packageId value="dvmd.kdl.r4"/>
-    <version value="2025.0.1"/>
+    <version value="2026.0.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_extensions_r4">
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
@@ -217,14 +217,6 @@
       </extension>
       <extension url="value">
         <valueString value="ballot"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="special-url"/>
-      </extension>
-      <extension url="value">
-        <valueString value="urn:iso:std:iso:3166"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -601,14 +593,6 @@
       </extension>
       <extension url="value">
         <valueString value="ballot"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="special-url"/>
-      </extension>
-      <extension url="value">
-        <valueString value="urn:iso:std:iso:3166"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -1016,17 +1000,6 @@
       </reference>
       <name value="Expansion-Manifest"/>
       <description value="Expansions-Parameter des Moduls — pinnt die Editionen der verwendeten Codesysteme (SNOMED CT 20260701) für die ValueSet-Expansionen dieses Leitfadens."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/iso3166-1-fragment"/>
-      </reference>
-      <name value="ISO 3166-1 (Build-Fragment)"/>
-      <description value="Build-Terminologie — ISO-3166-1-Fragment (Deutschland), damit der Publisher die Jurisdiktion auf jedem Terminologieserver auflösen kann."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
