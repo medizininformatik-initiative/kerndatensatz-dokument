@@ -30,7 +30,7 @@ Guides, Englisch die Übersetzung unter `input/translations/de/`.
 ## Build
 
 ```bash
-npx --yes fsh-sushi@3.20.1 .          # FSH → FHIR-Ressourcen (Pin wie in der CI)
+npx --yes fsh-sushi@3.21.0 .          # FSH → FHIR-Ressourcen (Pin wie in der CI)
 # vollständiger Guide-Build: siehe .github/workflows/ig-publisher.yml
 # bzw. docs/recipes/first-build-in-devcontainer.md
 ```
