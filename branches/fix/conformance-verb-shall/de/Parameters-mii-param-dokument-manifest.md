@@ -195,7 +195,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://dvmd.de/fhir/ValueSet/kdl|2025"
+    "valueCanonical" : "http://dvmd.de/fhir/ValueSet/kdl|2026.0.0"
   },
   {
     "name" : "default-valueset-version",

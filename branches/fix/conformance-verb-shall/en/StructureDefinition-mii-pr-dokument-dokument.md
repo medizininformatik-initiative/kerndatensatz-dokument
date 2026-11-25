@@ -13,7 +13,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-dokument-d
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument | *Version*:2027.0.0-ballot.2 |
-| Active as of 2026-11-13 | *Computable Name*:MII_PR_Dokument_Dokument |
+| Active as of 2026-11-25 | *Computable Name*:MII_PR_Dokument_Dokument |
 
  
 Klinisches Dokument mit zugehörigen Metadaten 
@@ -152,7 +152,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-11-13T17:36:29+00:00",
+  "date" : "2026-11-25T14:13:38+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
