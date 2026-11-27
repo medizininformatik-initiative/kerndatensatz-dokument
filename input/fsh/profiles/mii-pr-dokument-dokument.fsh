@@ -251,7 +251,10 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // Extension to classify a NLP processing status. Information model: Dokument 0..* NLP Processing
 // Status. Several statuses may be given as several codings of one extension or as several
-// repetitions; receivers read all of them.
+// repetitions; the combination rules (mii-iv-dokument-nlp-processing-status.fsh) look at all of them.
 * extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..* MS
-* insert CommentedDescription(extension[nlp-processing-status], NLP-Verarbeitungsstatus, Erreichter Status der NLP-Verarbeitung des Dokuments. Die Angabe ist optional [MAY]; sie kann wiederholt werden., Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung.)
-* insert CommentedDescriptionIntl(extension[nlp-processing-status], en, NLP processing status, Status of the NLP processing the document has reached [MAY]; it may repeat., All codings of all repetitions together describe the processing state reached; their order carries no meaning.)
+* insert CommentedDescription(extension[nlp-processing-status], NLP-Verarbeitungsstatus, Erreichter Status der NLP-Verarbeitung des Dokuments. Die Angabe ist optional [MAY]; sie kann wiederholt werden., Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung. Die Regeln mii-iv-dokument-nlp-1 bis mii-iv-dokument-nlp-5 prüfen die Kombination der Status als Best Practice.)
+* insert CommentedDescriptionIntl(extension[nlp-processing-status], en, NLP processing status, Status of the NLP processing the document has reached [MAY]; it may repeat., All codings of all repetitions together describe the processing state reached; their order carries no meaning. The rules mii-iv-dokument-nlp-1 to mii-iv-dokument-nlp-5 check the combination of statuses as best practice.)
+
+// Combination rules for the NLP processing status, checked as best practice (warning)
+* obeys mii-iv-dokument-nlp-1 and mii-iv-dokument-nlp-2 and mii-iv-dokument-nlp-3 and mii-iv-dokument-nlp-4 and mii-iv-dokument-nlp-5

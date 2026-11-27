@@ -16,7 +16,7 @@ Die NLP Extension stellt hierfür ein Codesystem bereit, mit dem die verschieden
 Das Codesystem der NLP Extension ist hierarchisch aufgebaut und umfasst zwei Ebenen: Level 1 (Lvl 1) und Level 2 (Lvl 2). Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: `annotated`, Lvl 2: `deid`, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde.
 
 Die Nutzung beider Hierarchieebenen ist nicht verpflichtend. Abhängig vom jeweiligen Anwendungsszenario kann frei entschieden werden, ob nur der übergeordnete Status (Lvl 1) oder zusätzlich eine spezifische Ausdifferenzierung über Lvl 2 verwendet wird.
-Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden. Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden.
+Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden. Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden. Die Regeln im Abschnitt [Kombinationsregeln](#kombinationsregeln) prüfen das.
 
 Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationsprojekts, das bereits aus einem Quellsystem extrahiert und anonymisiert wurde. Bis zum aktuellen Bearbeitungsstand können mehrere Verarbeitungsschritte erfolgt sein, beispielsweise:
 
@@ -38,6 +38,23 @@ Ein Dokument trägt oft mehrere Status zugleich, etwa `preprocessed` und `format
 Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand des Dokuments; Empfänger werten alle aus. Ihre Reihenfolge trägt keine Bedeutung. Die Abfolge der Verarbeitungsschritte geben die Beziehungen zwischen den Dokumenten an (`relatesTo`).
 
 In FHIR stehen mehrere Codings eines `CodeableConcept` üblicherweise für dasselbe Konzept. In dieser Extension stehen sie für verschiedene, gemeinsam erreichte Status. Diese Form bleibt gültig, damit bereits nach dem Vorbild der Beispiele erzeugte Dokumente gültig bleiben.
+
+### Kombinationsregeln
+
+Fünf Regeln prüfen, wie die Status eines Dokuments kombiniert sind. Sie sind am [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) definiert, gelten über alle Codings und Wiederholungen und stehen dort in der Tabelle der Constraints. Die Regeln haben nicht alle dieselbe Grundlage: `mii-iv-dokument-nlp-3` und `-4` geben die Vorgabe aus der Beschreibung oben wieder (zu einer Lvl-2-Angabe gehört der Lvl-1-Status), `mii-iv-dokument-nlp-1` folgt aus der Definition des Codes `unprocessed`, und `mii-iv-dokument-nlp-2` und `-5` sind Empfehlungen.
+
+| Regel | Inhalt | Grundlage |
+| --- | --- | --- |
+| `mii-iv-dokument-nlp-1` | `unprocessed` DARF NICHT zusammen mit einem anderen Status angegeben werden. | Definition des Codes: `unprocessed` ist das Dokument im Original. Jeder andere Status gibt eine erfolgte Verarbeitung an; beide Angaben zusammen widersprechen sich. |
+| `mii-iv-dokument-nlp-2` | Jeder Status SOLLTE nur einmal angegeben werden. | Empfehlung: Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Stand (siehe [Mehrere Status](#mehrere-status)); eine doppelte Angabe fügt nichts hinzu. |
+| `mii-iv-dokument-nlp-3` | `format-change` und `content-change` MÜSSEN zusammen mit `preprocessed` angegeben werden. | Vorgabe aus der Beschreibung oben: Zu einer Lvl-2-Angabe gehört der Lvl-1-Status. Die Suche vergleicht Codes wörtlich (siehe [Suche](#suche)); ohne `preprocessed` findet eine Suche nach `preprocessed` das Dokument nicht. |
+| `mii-iv-dokument-nlp-4` | `preanno`, `deid` und `semantic` MÜSSEN zusammen mit `annotated` angegeben werden. | Vorgabe aus der Beschreibung oben: Ohne `annotated` könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden. Ohne `annotated` findet auch eine Suche nach `annotated` das Dokument nicht. |
+| `mii-iv-dokument-nlp-5` | `preanno` SOLLTE zusammen mit `deid` oder `semantic` angegeben werden. | Empfehlung: `preanno` gibt an, dass die Annotationen maschinell entstanden sind, `deid` und `semantic` geben an, worauf sie sich beziehen, wie im Beispiel „maschinelle Vorannotation identifizierender Strukturen“ oben. `annotated` mit `preanno` allein bleibt eine zulässige Angabe. |
+{: .grid}
+
+Das Profil führt dieselben Begründungen an jeder Regel (`constraint.requirements`).
+
+Die Regeln werden als Best Practice geprüft: Validatoren melden einen Verstoß als Warnung und weisen die Ressource nicht ab. Das gilt auch für die mit MUSS oder DARF NICHT formulierten Regeln (`mii-iv-dokument-nlp-1`, `-3` und `-4`): Sie legen fest, was die Daten erfüllen müssen, werden aber nur als Best Practice geprüft, damit bestehende Daten nicht abgewiesen werden. Die Beispiele der Versionen 2026.0.0 und 2026.0.1 etwa geben `deid` ohne `annotated` und `format-change` ohne `preprocessed` an. Beim HL7 FHIR Validator legt die Option `-best-practice` fest, wie streng die Regeln gemeldet werden (`hint`, `warning` als Standard, `error` oder `ignore`); sie gilt für alle Best-Practice-Regeln zugleich.
 
 ### Suche
 
