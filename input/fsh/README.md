@@ -12,7 +12,7 @@ the generated JSON.
 | `profiles/` | The profile `MII_PR_Dokument_Dokument` (`mii-pr-dokument-dokument.fsh`) and its two invariants (`mii-iv-dokument-dokument-category.fsh`, `mii-iv-dokument-dokument-type.fsh`). |
 | `extensions/` | `MII_EX_Dokument_NLP_Processing_Status`. |
 | `terminology/` | The module's CodeSystem (`mii-cs-dokument-nlp-processing-status`) and ValueSets (`mii-vs-dokument-*`). |
-| `logical-model/` | The logical model `MII_LM_Dokument` and its element mapping onto `DocumentReference` (`Mapping: MII_MAP_Dokument` in `mii-map-dokument.fsh`). |
+| `logical-model/` | The logical model `MII_LM_Dokument` with its invariant `mii-iv-dokument-anhang` and its element mapping onto `DocumentReference` (`Mapping: MII_MAP_Dokument` in `mii-map-dokument.fsh`). |
 | `definitions/` | The CapabilityStatement `mii-cps-dokument-capabilitystatement` — the normative list of supported search parameters. |
 | `parameters/` | `manifest.fsh` — a commented-out FSH draft of the expansion manifest, kept for reference; the live manifest is `input/resources/Parameters-expansion-manifest.json` (pins SNOMED CT 20260701). |
 | `examples/` | Synthetic example instances only (`alzheimer/`: the "Amanda Alzheimer" NLP-pipeline scenario). Never real or realistic-looking patient data. |

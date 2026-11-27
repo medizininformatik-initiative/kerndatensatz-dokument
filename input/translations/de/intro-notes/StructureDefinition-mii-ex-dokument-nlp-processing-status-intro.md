@@ -5,7 +5,7 @@
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md
      des Simplifier-Leitfadens mii-ig-dokument-de. Der IG-Publisher rendert diesen
      Text oberhalb der generierten Tabellen der Artefakt-Seite; englische
-     Übersetzung: input/translations/en/intro-notes/ (gleicher Dateiname). -->
+     Ausgangsseite: input/intro-notes/ (gleicher Dateiname). -->
 
 ### Beschreibung
 
@@ -27,6 +27,21 @@ Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationspr
 - irreversible Ersetzung aller identifizierenden Annotationen durch Surrogate (`surrogated`)
 
 Die NLP Extension lässt bewusst Freiheitsgrade bei der Dokumentation solcher Prozessketten. Es ist möglich, sämtliche Verarbeitungsschritte eines Dokuments abzubilden. Alternativ kann sich die Beschreibung auf ausgewählte, für den jeweiligen Anwendungsfall wesentliche Bearbeitungszustände beschränken, beispielsweise ausschließlich auf den finalen Status surrogated.
+
+### Mehrere Status
+
+Ein Dokument trägt oft mehrere Status zugleich, etwa `preprocessed` und `format-change` nach einer Formatwandlung. Das Informationsmodell erlaubt beliebig viele NLP-Verarbeitungsstatus je Dokument (`0..*`); sie lassen sich auf zwei gleichwertige Arten angeben:
+
+- als mehrere Codings einer Extension, wie in den [Beispielen](examples.html#beispielszenario-nlp-pipeline-amanda-alzheimer), oder
+- als mehrere Wiederholungen der Extension mit je einem Status.
+
+Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand des Dokuments; Empfänger werten alle aus. Ihre Reihenfolge trägt keine Bedeutung. Die Abfolge der Verarbeitungsschritte geben die Beziehungen zwischen den Dokumenten an (`relatesTo`).
+
+In FHIR stehen mehrere Codings eines `CodeableConcept` üblicherweise für dasselbe Konzept. In dieser Extension stehen sie für verschiedene, gemeinsam erreichte Status. Diese Form bleibt gültig, damit bereits nach dem Vorbild der Beispiele erzeugte Dokumente gültig bleiben.
+
+### Suche
+
+Der Suchparameter `nlp-processing-status` findet ein Dokument über jedes Coding jeder Wiederholung. Die Suche vergleicht Codes wörtlich, ohne die Hierarchie des CodeSystems: Eine Suche nach `annotated` findet nur Dokumente, die `annotated` selbst angeben. Einzelheiten und Beispiele stehen auf der Seite [Suchparameter](search-parameters.html).
 
 ### Inhalt
 

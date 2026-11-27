@@ -2,8 +2,8 @@
 <!-- Intro note for the extension MII_EX_Dokument_NLP_Processing_Status. Migrated from
      MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md
      of the Simplifier guide mii-ig-dokument-de. The IG Publisher renders this text
-     above the generated tables of the artifact page; English default page:
-     input/intro-notes/ (same file name). -->
+     above the generated tables of the artifact page; German translation:
+     input/translations/de/intro-notes/ (same file name). -->
 
 ### Description
 
@@ -25,6 +25,21 @@ An exemplary use case is a document within an annotation project that has alread
 - irreversible replacement of all identifying annotations by surrogates (`surrogated`)
 
 The NLP extension deliberately leaves degrees of freedom in documenting such process chains. It is possible to represent every processing step of a document. Alternatively, the description may be limited to selected processing states that are essential for the respective use case, for example exclusively to the final status surrogated.
+
+### Several statuses
+
+A document often carries several statuses at once, for example `preprocessed` and `format-change` after a format conversion. The information model allows any number of NLP processing statuses per document (`0..*`); there are two equivalent ways to record them:
+
+- as several codings of one extension, as in the [examples](examples.html#example-scenario-amanda-alzheimer-nlp-pipeline), or
+- as several repetitions of the extension, one status each.
+
+All codings of all repetitions together describe the processing state the document has reached; receivers evaluate all of them. Their order carries no meaning. The order of the processing steps is expressed by the relations between the documents (`relatesTo`).
+
+In FHIR, several codings of one `CodeableConcept` usually represent the same concept. In this extension they stand for different statuses reached together. This form stays valid so that documents already produced following the examples remain valid.
+
+### Searching
+
+The search parameter `nlp-processing-status` finds a document by every coding of every repetition. The search compares codes literally, without the hierarchy of the code system: a search for `annotated` only finds documents that record `annotated` itself. Details and examples are on the [Search Parameters](search-parameters.html) page.
 
 ### Content
 

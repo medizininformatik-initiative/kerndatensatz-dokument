@@ -40,10 +40,62 @@
         "id": "DocumentReference.extension:nlp-processing-status",
         "path": "DocumentReference.extension",
         "sliceName": "nlp-processing-status",
-        "short": "NLP Processing Status",
-        "definition": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "short": "NLP-Verarbeitungsstatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "NLP processing status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Erreichter Status der NLP-Verarbeitung des Dokuments. Die Angabe ist optional [MAY]; sie kann wiederholt werden.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status of the NLP processing the document has reached [MAY]; it may repeat."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "All codings of all repetitions together describe the processing state reached; their order carries no meaning."
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Extension",
@@ -886,7 +938,7 @@
             }
           ],
           "rules": "open",
-          "description": "Slice für ein Dokument, dessen Lokalisation verlinkt ist",
+          "description": "Slices nach Zugang zum Dokument: als Binärdaten eingebettet (Binaerdaten) oder über einen Verweis auf den Ablageort (Verweis)",
           "ordered": false
         },
         "short": "Inhalt des Dokuments",
@@ -1107,7 +1159,7 @@
             }
           ]
         },
-        "definition": "Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY].",
+        "definition": "Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen nach extern und wenn `url` nicht angegeben ist; zusammen mit `url` ist sie nicht zulässig [MUST NOT].",
         "_definition": {
           "extension": [
             {
@@ -1119,7 +1171,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]."
+                  "valueString": "Document as binary data [Base64] [MUST] for external transfer and when `url` is not present; it SHALL NOT be combined with `url` [MUST NOT]."
                 }
               ]
             }
@@ -1165,7 +1217,7 @@
             }
           ]
         },
-        "definition": "Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben wurde; ansonsten optional [MAY].",
+        "definition": "Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben ist; zusammen mit `data` ist sie nicht zulässig [MUST NOT].",
         "_definition": {
           "extension": [
             {
@@ -1177,7 +1229,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Link to the local location where the document is kept [MUST], when `data` not present; otherwise optional [MAY]."
+                  "valueString": "Link to the local location where the document is kept [MUST], when `data` is not present; it SHALL NOT be combined with `data` [MUST NOT]."
                 }
               ]
             }
