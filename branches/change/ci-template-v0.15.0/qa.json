@@ -1,0 +1,21 @@
+{
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
+  "name" : "MII_IG_Dokument",
+  "title" : "MII IG Dokument",
+  "description" : "Medizininformatik Initiative - KDS-Modul Dokument",
+  "ig-date" : "2026-09-14",
+  "status" : "draft",
+  "package-id" : "de.medizininformatikinitiative.kerndatensatz.dokument",
+  "ig-ver" : "2027.0.0-ballot.2",
+  "date" : "Fri, 27 Nov, 2026 14:08:57 +0000",
+  "dateISO8601" : "2026-11-27T14:08:57+00:00",
+  "errs" : 324,
+  "warnings" : 173,
+  "hints" : 403,
+  "broken-links" : 0,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 2371236352
+}
