@@ -59,6 +59,25 @@
         ]
       },
       {
+        "id": "mii-lm-dokument.Dokument.Erweiterung",
+        "path": "mii-lm-dokument.Dokument.Erweiterung",
+        "short": "Erweiterungen des Dokuments",
+        "definition": "Zusätzliche Angaben zum Dokument, die über die Basisressource hinausgehen, z. B. der NLP-Verarbeitungsstatus",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mii-map-dokument",
+            "map": "DocumentReference.extension"
+          }
+        ]
+      },
+      {
         "id": "mii-lm-dokument.Dokument.Masteridentifikator",
         "path": "mii-lm-dokument.Dokument.Masteridentifikator",
         "short": "Versionsspezifische Kennung",
@@ -230,9 +249,9 @@
         ]
       },
       {
-        "id": "mii-lm-dokument.Dokument.Dokumentenbeziehung",
-        "path": "mii-lm-dokument.Dokument.Dokumentenbeziehung",
-        "short": "Beziehung des Dokuments",
+        "id": "mii-lm-dokument.Dokument.Dokumentenbeziehungen",
+        "path": "mii-lm-dokument.Dokument.Dokumentenbeziehungen",
+        "short": "Beziehungen des Dokuments",
         "definition": "Beziehungen des verwiesenen Dokuments zu anderen Dokumenten",
         "min": 0,
         "max": "*",
@@ -249,8 +268,8 @@
         ]
       },
       {
-        "id": "mii-lm-dokument.Dokument.Dokumentenbeziehung.Beziehungstyp",
-        "path": "mii-lm-dokument.Dokument.Dokumentenbeziehung.Beziehungstyp",
+        "id": "mii-lm-dokument.Dokument.Dokumentenbeziehungen.Beziehungstyp",
+        "path": "mii-lm-dokument.Dokument.Dokumentenbeziehungen.Beziehungstyp",
         "short": "Art der Beziehung",
         "definition": "Beziehung zu anderen Dokumenten",
         "min": 1,
@@ -268,8 +287,8 @@
         ]
       },
       {
-        "id": "mii-lm-dokument.Dokument.Dokumentenbeziehung.Beziehungsreferenz",
-        "path": "mii-lm-dokument.Dokument.Dokumentenbeziehung.Beziehungsreferenz",
+        "id": "mii-lm-dokument.Dokument.Dokumentenbeziehungen.Beziehungsreferenz",
+        "path": "mii-lm-dokument.Dokument.Dokumentenbeziehungen.Beziehungsreferenz",
         "short": "Verweis auf Dokument",
         "definition": "Ziel der Dokumentenbeziehung",
         "min": 1,
@@ -290,12 +309,38 @@
         "id": "mii-lm-dokument.Dokument.Anhang",
         "path": "mii-lm-dokument.Dokument.Anhang",
         "short": "Inhalt des Dokuments",
-        "definition": "Dokument (Base64-kodierte Daten) oder Verweis (URL) mit relevanten Metadaten zum Anhang",
+        "definition": "Inhalt des Dokuments mit relevanten Metadaten zum Anhang: entweder Binärdaten (Base64-kodierte Daten) oder Verweis (URL); genau eines von Daten und DokumentenUrl ist anzugeben",
         "min": 1,
         "max": "*",
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "mii-iv-dokument-anhang",
+            "severity": "error",
+            "human": "Ein Anhang ist entweder Binärdaten oder Verweis: genau eines von Daten und DokumentenUrl MUSS angegeben sein.",
+            "_human": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "en"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "An attachment is either binary data or a reference: exactly one of Daten and DokumentenUrl SHALL be present."
+                    }
+                  ]
+                }
+              ]
+            },
+            "expression": "$this.Daten.exists() xor $this.DokumentenUrl.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument"
           }
         ],
         "mapping": [
@@ -320,7 +365,7 @@
         "mapping": [
           {
             "identity": "mii-map-dokument",
-            "map": "DocumentReference.attachment.language"
+            "map": "DocumentReference.content.attachment.language"
           }
         ]
       },
@@ -339,7 +384,7 @@
         "mapping": [
           {
             "identity": "mii-map-dokument",
-            "map": "DocumentReference.attachment.creation"
+            "map": "DocumentReference.content.attachment.creation"
           }
         ]
       },
@@ -347,7 +392,7 @@
         "id": "mii-lm-dokument.Dokument.Anhang.Daten",
         "path": "mii-lm-dokument.Dokument.Anhang.Daten",
         "short": "Binärdaten zum Inhalt",
-        "definition": "Dokument als Binärdaten",
+        "definition": "Dokument als Binärdaten (Anhang vom Typ Binärdaten)",
         "min": 0,
         "max": "1",
         "type": [
@@ -358,7 +403,7 @@
         "mapping": [
           {
             "identity": "mii-map-dokument",
-            "map": "DocumentReference.attachment.data"
+            "map": "DocumentReference.content:Binaerdaten.attachment.data"
           }
         ]
       },
@@ -366,7 +411,7 @@
         "id": "mii-lm-dokument.Dokument.Anhang.DokumentenUrl",
         "path": "mii-lm-dokument.Dokument.Anhang.DokumentenUrl",
         "short": "URL zum Inhalt",
-        "definition": "Verweis auf den (lokalen) Ablageort des Dokuments",
+        "definition": "Verweis auf den (lokalen) Ablageort des Dokuments (Anhang vom Typ Verweis)",
         "min": 0,
         "max": "1",
         "type": [
@@ -377,7 +422,7 @@
         "mapping": [
           {
             "identity": "mii-map-dokument",
-            "map": "DocumentReference.attachment.url"
+            "map": "DocumentReference.content:Verweis.attachment.url"
           }
         ]
       },
@@ -396,7 +441,7 @@
         "mapping": [
           {
             "identity": "mii-map-dokument",
-            "map": "DocumentReference.attachment.contentType"
+            "map": "DocumentReference.content.attachment.contentType"
           }
         ]
       },
@@ -422,8 +467,8 @@
       {
         "id": "mii-lm-dokument.Dokument.Kontext.Gesundheitseinrichtungskontakt",
         "path": "mii-lm-dokument.Dokument.Kontext.Gesundheitseinrichtungskontakt",
-        "short": "Verweis auf Einrichtungskontakt",
-        "definition": "Kontakt zur Gesundheitseinrichtung oder die Art der Versorgung, die mit dem Dokumenteninhalt assoziiert ist",
+        "short": "Verweis auf Kontakt (Modul Fall)",
+        "definition": "Kontakt zur Gesundheitseinrichtung (Einrichtungs-, Abteilungs- oder Versorgungsstellenkontakt des Moduls Fall), der mit dem Dokumenteninhalt assoziiert ist",
         "min": 0,
         "max": "*",
         "type": [
@@ -511,6 +556,44 @@
           {
             "identity": "mii-map-dokument",
             "map": "DocumentReference.context.facilityType"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-dokument.Dokument.NlpProcessingStatus",
+        "path": "mii-lm-dokument.Dokument.NlpProcessingStatus",
+        "short": "NLP-Verarbeitungsstatus",
+        "definition": "Erreichter Verarbeitungsstatus des Dokuments in einer NLP-Pipeline; mehrere Angaben beschreiben zusammen den erreichten Verarbeitungsstand",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mii-map-dokument",
+            "map": "DocumentReference.extension:nlp-processing-status"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-dokument.Dokument.NlpProcessingStatus.Status",
+        "path": "mii-lm-dokument.Dokument.NlpProcessingStatus.Status",
+        "short": "Verarbeitungsstatus",
+        "definition": "Erreichter Verarbeitungsstatus aus dem CodeSystem MII CS Dokument NLP Processing Status",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mii-map-dokument",
+            "map": "DocumentReference.extension:nlp-processing-status.value[x]"
           }
         ]
       }

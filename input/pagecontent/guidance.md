@@ -53,8 +53,9 @@ For data transport, it is recommended to embed the document body in the resource
      https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
 * **[Datasets and Descriptions](logical-models.html)** — the module's data
   elements, described as logical models.
-* **[UML Diagrams](uml-diagrams.html)** — visual representation of the data
-  models and their relationships.
+* **[UML Diagrams](uml-diagrams.html)** — the information model decided by
+  the MII National Steering Committee (NSG), which the logical model and the
+  profiles implement.
 * **[Guidance for Implementers](implementer-guidance.html)** — technical
   guidance for DIC implementers.
 
