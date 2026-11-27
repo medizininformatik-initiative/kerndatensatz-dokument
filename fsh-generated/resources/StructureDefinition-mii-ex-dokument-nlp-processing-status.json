@@ -51,8 +51,42 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "NLP Processing Status",
-        "definition": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "short": "NLP-Verarbeitungsstatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "NLP processing status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Erreichter Status der NLP-Verarbeitung des referenzierten Dokuments. Die Angabe ist verpflichtend [MUST].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status of the NLP processing the referenced document has reached [MUST]."
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "type": [
           {
@@ -64,6 +98,60 @@
       {
         "id": "Extension.value[x].coding",
         "path": "Extension.value[x].coding",
+        "short": "Erreichter Verarbeitungsstatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Reached processing status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code eines erreichten Verarbeitungsstatus. Mindestens ein Code ist verpflichtend [MUST].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Code of a reached processing status. At least one code is required [MUST]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Mehrere Codings geben gemeinsam erreichte Status an, z. B. `annotated` und `deid`; anders als sonst bei CodeableConcept sind sie keine alternativen Kodierungen desselben Konzepts. Jeder Status kann ebenso als eigene Wiederholung der Extension angegeben werden. Empfänger werten alle Codings aller Wiederholungen aus; die Reihenfolge trägt keine Bedeutung.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Several codings state statuses reached together, e.g. `annotated` and `deid`; unlike other uses of CodeableConcept they are not alternative codings of the same concept. Each status may equally be given as its own repetition of the extension. Receivers evaluate all codings of all repetitions; their order carries no meaning."
+                }
+              ]
+            }
+          ]
+        },
         "min": 1,
         "mustSupport": true,
         "binding": {

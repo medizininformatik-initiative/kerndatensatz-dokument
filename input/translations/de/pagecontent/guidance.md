@@ -55,8 +55,9 @@ Für den Datentransport wird empfohlen den Dokumentkörper in die Ressource einz
      https://github.com/medizininformatik-initiative/kerndatensatz-dokument/blob/master/docs/page-structure.md -->
 * **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente
   des Moduls, beschrieben als logische Modelle.
-* **[UML-Diagramme](uml-diagrams.html)** — visuelle Darstellung der Datenmodelle
-  und ihrer Beziehungen.
+* **[UML-Diagramme](uml-diagrams.html)** — das vom Nationalen
+  Steuerungsgremium (NSG) der MII beschlossene Informationsmodell, das Logical
+  Model und Profile umsetzen.
 * **[Anleitung für Implementierende](implementer-guidance.html)** — technische
   Hinweise für DIZ-Implementierende.
 

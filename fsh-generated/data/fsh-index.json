@@ -93,7 +93,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/mii-ex-dokument-nlp-processing-status.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-mii-lm-dokument.json",
@@ -101,7 +101,7 @@
     "fshType": "Logical",
     "fshFile": "logical-model/mii-lm-dokument.fsh",
     "startLine": 1,
-    "endLine": 31
+    "endLine": 38
   },
   {
     "outputFile": "StructureDefinition-mii-pr-dokument-dokument.json",
@@ -109,7 +109,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 5,
-    "endLine": 258
+    "endLine": 260
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-einrichtungsart.json",

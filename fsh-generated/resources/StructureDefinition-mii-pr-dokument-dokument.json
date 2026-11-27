@@ -27,6 +27,162 @@
   "differential": {
     "element": [
       {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "constraint": [
+          {
+            "key": "mii-iv-dokument-nlp-1",
+            "severity": "warning",
+            "human": "Der NLP-Verarbeitungsstatus `unprocessed` DARF NICHT zusammen mit einem anderen Status angegeben werden.",
+            "_human": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "en"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "The NLP processing status `unprocessed` SHALL NOT be given together with any other status."
+                    }
+                  ]
+                }
+              ]
+            },
+            "expression": "(extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'unprocessed') implies extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this != 'unprocessed').empty()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "key": "mii-iv-dokument-nlp-2",
+            "severity": "warning",
+            "human": "Jeder NLP-Verarbeitungsstatus SOLLTE nur einmal angegeben werden.",
+            "_human": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "en"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Each NLP processing status SHOULD be given only once."
+                    }
+                  ]
+                }
+              ]
+            },
+            "expression": "extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.isDistinct()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "key": "mii-iv-dokument-nlp-3",
+            "severity": "warning",
+            "human": "Die Status `format-change` und `content-change` MÜSSEN zusammen mit dem übergeordneten Status `preprocessed` angegeben werden.",
+            "_human": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "en"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "The statuses `format-change` and `content-change` SHALL be given together with their parent status `preprocessed`."
+                    }
+                  ]
+                }
+              ]
+            },
+            "expression": "extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this in ('format-change' | 'content-change')).exists() implies (extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'preprocessed')",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "key": "mii-iv-dokument-nlp-4",
+            "severity": "warning",
+            "human": "Die Status `preanno`, `deid` und `semantic` MÜSSEN zusammen mit dem übergeordneten Status `annotated` angegeben werden.",
+            "_human": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "en"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "The statuses `preanno`, `deid` and `semantic` SHALL be given together with their parent status `annotated`."
+                    }
+                  ]
+                }
+              ]
+            },
+            "expression": "extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this in ('preanno' | 'deid' | 'semantic')).exists() implies (extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'annotated')",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "key": "mii-iv-dokument-nlp-5",
+            "severity": "warning",
+            "human": "Empfehlung: Der Status `preanno` SOLLTE zusammen mit `deid` oder `semantic` angegeben werden.",
+            "_human": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "en"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Recommendation: the status `preanno` SHOULD be given together with `deid` or `semantic`."
+                    }
+                  ]
+                }
+              ]
+            },
+            "expression": "(extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'preanno') implies extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this in ('deid' | 'semantic')).exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "DocumentReference.meta",
         "path": "DocumentReference.meta",
         "mustSupport": true
@@ -40,10 +196,62 @@
         "id": "DocumentReference.extension:nlp-processing-status",
         "path": "DocumentReference.extension",
         "sliceName": "nlp-processing-status",
-        "short": "NLP Processing Status",
-        "definition": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "short": "NLP-Verarbeitungsstatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "NLP processing status"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Erreichter Status der NLP-Verarbeitung des Dokuments. Die Angabe ist optional [MAY]; sie kann wiederholt werden.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status of the NLP processing the document has reached [MAY]; it may repeat."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung. Die Regeln mii-iv-dokument-nlp-1 bis mii-iv-dokument-nlp-5 prüfen die Kombination der Status als Best Practice.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "All codings of all repetitions together describe the processing state reached; their order carries no meaning. The rules mii-iv-dokument-nlp-1 to mii-iv-dokument-nlp-5 check the combination of statuses as best practice."
+                }
+              ]
+            }
+          ]
+        },
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Extension",
@@ -886,7 +1094,7 @@
             }
           ],
           "rules": "open",
-          "description": "Slice für ein Dokument, dessen Lokalisation verlinkt ist",
+          "description": "Slices nach Zugang zum Dokument: als Binärdaten eingebettet (Binaerdaten) oder über einen Verweis auf den Ablageort (Verweis)",
           "ordered": false
         },
         "short": "Inhalt des Dokuments",
@@ -1107,7 +1315,7 @@
             }
           ]
         },
-        "definition": "Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY].",
+        "definition": "Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen nach extern und wenn `url` nicht angegeben ist; zusammen mit `url` ist sie nicht zulässig [MUST NOT].",
         "_definition": {
           "extension": [
             {
@@ -1119,7 +1327,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]."
+                  "valueString": "Document as binary data [Base64] [MUST] for external transfer and when `url` is not present; it SHALL NOT be combined with `url` [MUST NOT]."
                 }
               ]
             }
@@ -1165,7 +1373,7 @@
             }
           ]
         },
-        "definition": "Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben wurde; ansonsten optional [MAY].",
+        "definition": "Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben ist; zusammen mit `data` ist sie nicht zulässig [MUST NOT].",
         "_definition": {
           "extension": [
             {
@@ -1177,7 +1385,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Link to the local location where the document is kept [MUST], when `data` not present; otherwise optional [MAY]."
+                  "valueString": "Link to the local location where the document is kept [MUST], when `data` is not present; it SHALL NOT be combined with `data` [MUST NOT]."
                 }
               ]
             }

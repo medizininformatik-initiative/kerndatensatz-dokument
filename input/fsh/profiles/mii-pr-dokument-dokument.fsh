@@ -142,37 +142,34 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert Description(content, Inhalt des Dokuments, Dokument\, als Base64-kodierte Daten\, oder Verweis\, als URL\, mit relevanten Metadaten zum Anhang.)
 * insert DescriptionIntl(content, en, Document content, Embedded Base64 encoded document content or URL reference to document.)
 
-// Slices for documents, embedded as encoded binary data
+// Slices for the access to the document (information model: Anhang is either Binärdaten or
+// Verweis). One slicing for both slices: an entry without attachment.url is Binaerdaten, an
+// entry with attachment.url is Verweis, so every entry carries exactly one of data and url.
 * content ^slicing.discriminator.type = #exists
-* content ^slicing.discriminator.path = "attachment.data"
+* content ^slicing.discriminator.path = "attachment.url"
 * content ^slicing.rules = #open
-* content ^slicing.description = "Slice für ein Dokument, das als Binärdaten eingebettet ist"
+* content ^slicing.description = "Slices nach Zugang zum Dokument: als Binärdaten eingebettet (Binaerdaten) oder über einen Verweis auf den Ablageort (Verweis)"
 * content ^slicing.ordered = false
 
+// Slice for documents, embedded as encoded binary data
 * content contains Binaerdaten 0..* MS
 * content[Binaerdaten].attachment.data 1..1
 * content[Binaerdaten].attachment.url 0..0
 
 // ISiK: 0..1, MS | MIO 1.7.0 Verweis: 0..1 (R4 default) | MIO 1.7.0 Anhang: 1..1 | IHE MHD: 0..0
 //* content.attachment.data 0..1
-* insert CommentedDescription(content.attachment.data, Dokument als Binärdaten, Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY]., Typisch: Nutzung bei Datentransfer)
-* insert CommentedDescriptionIntl(content.attachment.data, en, Document as binary data [Base64], Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]., Typically: Use for data transfer)
+* insert CommentedDescription(content.attachment.data, Dokument als Binärdaten, Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen nach extern und wenn `url` nicht angegeben ist; zusammen mit `url` ist sie nicht zulässig [MUST NOT]., Typisch: Nutzung bei Datentransfer)
+* insert CommentedDescriptionIntl(content.attachment.data, en, Document as binary data [Base64], Document as binary data [Base64] [MUST] for external transfer and when `url` is not present; it SHALL NOT be combined with `url` [MUST NOT]., Typically: Use for data transfer)
 
-// Slices for documents, referenced by document location
-* content ^slicing.discriminator.type = #exists
-* content ^slicing.discriminator.path = "attachment.url"
-* content ^slicing.rules = #open
-* content ^slicing.description = "Slice für ein Dokument, dessen Lokalisation verlinkt ist"
-* content ^slicing.ordered = false
-
+// Slice for documents, referenced by document location
 * content contains Verweis 0..* MS
 * content[Verweis].attachment.data 0..0
 * content[Verweis].attachment.url 1..1
 
 // ISiK: 0..1, MS | MIO 1.7.0 Verweis: 1..1 | MIO 1.7.0 Anhang: 0..0 | IHE MHD: 1..1
 //* content.attachment.url 0..1 MS
-* insert CommentedDescription(content.attachment.url, Verweis auf den lokalen Ablageort des Dokumentes, Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST]\, wenn `data` nicht angegeben wurde; ansonsten optional [MAY]., Typisch: Lokal auflösbare URL)
-* insert CommentedDescriptionIntl(content.attachment.url, en, Link to the local location where the document is kept, Link to the local location where the document is kept [MUST]\\, when `data` not present; otherwise optional [MAY]., Typically: Local resolvable URL)
+* insert CommentedDescription(content.attachment.url, Verweis auf den lokalen Ablageort des Dokumentes, Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST]\, wenn `data` nicht angegeben ist; zusammen mit `data` ist sie nicht zulässig [MUST NOT]., Typisch: Lokal auflösbare URL)
+* insert CommentedDescriptionIntl(content.attachment.url, en, Link to the local location where the document is kept, Link to the local location where the document is kept [MUST]\\, when `data` is not present; it SHALL NOT be combined with `data` [MUST NOT]., Typically: Local resolvable URL)
 
 // ISiK: 1..1, MS | MIO: 1..1 (R4 default) | IHE MHD: 1..1 (R4 default)
 * content.attachment 1..1 MS
@@ -252,7 +249,12 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.practiceSetting.coding.code 1..1 MS
 * context.practiceSetting from $mii-vs-dokument-fachgebiet (required)
 
-// Extension to classify a NLP processing status
-* extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..1 MS
-* extension[nlp-processing-status] ^short = "NLP Processing Status"
-* extension[nlp-processing-status] ^definition = "Status der NLP-Verarbeitung des referenzierten Dokuments"
+// Extension to classify a NLP processing status. Information model: Dokument 0..* NLP Processing
+// Status. Several statuses may be given as several codings of one extension or as several
+// repetitions; the combination rules (mii-iv-dokument-nlp-processing-status.fsh) look at all of them.
+* extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..* MS
+* insert CommentedDescription(extension[nlp-processing-status], NLP-Verarbeitungsstatus, Erreichter Status der NLP-Verarbeitung des Dokuments. Die Angabe ist optional [MAY]; sie kann wiederholt werden., Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung. Die Regeln mii-iv-dokument-nlp-1 bis mii-iv-dokument-nlp-5 prüfen die Kombination der Status als Best Practice.)
+* insert CommentedDescriptionIntl(extension[nlp-processing-status], en, NLP processing status, Status of the NLP processing the document has reached [MAY]; it may repeat., All codings of all repetitions together describe the processing state reached; their order carries no meaning. The rules mii-iv-dokument-nlp-1 to mii-iv-dokument-nlp-5 check the combination of statuses as best practice.)
+
+// Combination rules for the NLP processing status, checked as best practice (warning)
+* obeys mii-iv-dokument-nlp-1 and mii-iv-dokument-nlp-2 and mii-iv-dokument-nlp-3 and mii-iv-dokument-nlp-4 and mii-iv-dokument-nlp-5

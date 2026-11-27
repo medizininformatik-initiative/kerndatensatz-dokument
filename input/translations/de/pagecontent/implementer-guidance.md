@@ -55,7 +55,7 @@ Die im Diagramm gezeigten Pakete
 KDS-Release 2026 innerhalb des Basismoduls
 (`de.medizininformatikinitiative.kerndatensatz.base`) ausgeliefert; die
 Canonical-URLs der referenzierten Profile sind unverändert. Das Diagramm zeigt
-den von der NSG freigegebenen Stand.
+den vom NSG freigegebenen Stand.
 
 
 Dadurch ist es möglich Ressourcen so zu attributieren, dass sie gleichzeitig MII KDS als auch ISiK bzw. IHE valide sind. Auch sind ISiK und IHE Module prinzipiell kompatibel, jedoch empfehlen wir in der Nutzung sowohl die Angabe des `type` (aus KDL /ISiK) und `category` (aus IHE), die keines der beides Profile ISiK, IHE gleichzeitig anbietet.

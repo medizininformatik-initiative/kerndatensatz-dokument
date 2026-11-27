@@ -4,7 +4,7 @@
 
 Die logischen Datenmodelle des Moduls **Dokument** beschreiben den fachlichen Datensatz unabhängig von der konkreten FHIR-Repräsentation.
 
-Die offiziell beschlossene Version des Informationsmodells befinden sich auf [ART DECOR](https://art-decor.org/ad/#/mide-/datasets/dataset/2.16.840.1.113883.3.1937.777.24.1.1/2018-06-05T12:44:12/concept/2.16.840.1.113883.3.1937.777.24.2.3740/2024-06-07T10:17:01). Zur Vereinheitlichung der Repräsentation wurde das Informationsmodell zusätzlich als FHIR Logical Model abgebildet:
+Das vom Nationalen Steuerungsgremium (NSG) der MII beschlossene Informationsmodell steht auf der Seite [UML-Diagramme](uml-diagrams.html); es ist für dieses Modul maßgeblich. Das Logical Model bildet es als FHIR Logical Model ab, das FHIR-Profil setzt es um:
 
 [MII LM Dokument](StructureDefinition-mii-lm-dokument.html)
 
@@ -14,7 +14,7 @@ Das folgende Verzeichnis listet jedes Element des logischen Modells mit Pfad und
 
 {% include StructureDefinition-mii-lm-dokument-dict-de.xhtml %}
 
-*Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Datenelemente und deren Beschreibung abzielt. Verwendete Datentypen und Kardinalitäten sind nicht als verpflichtend anzusehen. Dies wird abschließend durch die FHIR-Profile festgelegt. Für jedes Element innerhalb des Logical Models existiert ein 1:1 Mapping auf ein Element einer konkreten FHIR Ressource.*
+Das Logical Model übernimmt die Datenelemente des Informationsmodells mit ihren Datentypen und Kardinalitäten. Der abstrakte *Anhang* des Informationsmodells ist entweder *Binärdaten* oder *Verweis*; das Logical Model bildet das als genau eines von `Daten` und `DokumentenUrl` ab (Constraint `mii-iv-dokument-anhang`). Für jedes Element des Logical Models existiert ein 1:1 Mapping auf ein Element der FHIR-Ressource (siehe unten). Der Datensatz des Moduls ist außerdem in [ART DECOR](https://art-decor.org/ad/#/mide-/datasets/dataset/2.16.840.1.113883.3.1937.777.24.1.1/2018-06-05T12:44:12/concept/2.16.840.1.113883.3.1937.777.24.2.3740/2024-06-07T10:17:01) hinterlegt; wo er vom Informationsmodell abweicht, gilt das Informationsmodell.
 
 ### Mapping auf die FHIR-Ressource
 
@@ -32,3 +32,17 @@ Der IG-Publisher rendert dieses Element-zu-Ressource-Mapping auf der Artefaktsei
   { "title" : "Beschreibung", "type" : "markdown", "source" : "Definition" }
  ]
 } %}
+
+### Abweichungen des FHIR-Profils vom Informationsmodell
+
+Das FHIR-Profil ist derzeit an folgenden Elementen offener als das Informationsmodell (siehe auch die Seite [Kompatibilität](kompatibilitaet.html)):
+
+| Informationsmodell | FHIR-Profil |
+| --- | --- |
+| *Businessidentifikator* 0..1 | `identifier` 0..* |
+| *Patient* verweist auf Patient oder PatientPseudonymisiert des Moduls Person (Basismodul) | `subject` erlaubt auch jeden `Patient` |
+| *Gesundheitseinrichtungskontakt* verweist auf einen Kontakt des Moduls Fall (Basismodul) | `context.encounter` erlaubt auch jeden `Encounter` |
+| *Beziehungsreferenz* verweist auf ein *Dokument* | `relatesTo.target` erlaubt jede `DocumentReference` |
+| keine Entsprechung; *Dokumentenformat* ist der MIME-Typ | `content.format` ist ein zusätzliches Must-Support-Element |
+| *NLP Processing Status* 0..*, je ein *Status* | mehrere Status dürfen auch als mehrere Codings einer `nlp-processing-status`-Extension angegeben werden (siehe [Mehrere Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html#mehrere-status)) |
+{: .grid}
