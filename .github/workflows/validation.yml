@@ -70,7 +70,7 @@ jobs:
     if: ${{ vars.ENABLE_VALIDATION != 'false' }} # toggle: ON by default
     permissions:
       contents: write
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # master @ 2026-07-15
+    uses: medizininformatik-initiative/mii-kds-module-template/.github/workflows/ci_dotnet_validation.yml@0fe43b730ff59ab6fea9c87ffb708f5c64a2dfa0 # v0.15.0
     with:
       ref: ${{ github.event.pull_request.head.ref || github.ref }}
       SUSHI_VERSION: ${{ vars.SUSHI_VERSION || '3.21.0' }}
@@ -92,7 +92,7 @@ jobs:
     if: ${{ vars.ENABLE_VALIDATION != 'false' }} # toggle: ON by default
     permissions:
       contents: read
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # master @ 2026-07-15
+    uses: medizininformatik-initiative/mii-kds-module-template/.github/workflows/ci_java_validation.yml@0fe43b730ff59ab6fea9c87ffb708f5c64a2dfa0 # v0.15.0
     with:
       ref: ${{ github.event.pull_request.head.ref || github.ref }}
       PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
