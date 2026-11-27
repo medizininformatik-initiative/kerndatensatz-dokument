@@ -19,8 +19,11 @@ updates:
       day: monday
     target-branch: dev # updates land on the integration branch, never on main
     groups:
+      mii-kds-module-template:
+        patterns: ["medizininformatik-initiative/mii-kds-module-template*"]
       actions:
         patterns: ["*"]
+        exclude-patterns: ["medizininformatik-initiative/mii-kds-module-template*"]
     # The MII reusable validation workflows are pinned by hand (docs/maintenance.md).
     # On newer kerndatensatz-meta commits they live under .github/disabled-workflows/,
     # so the path validation.yml uses resolves to nothing there; a Dependabot bump of
