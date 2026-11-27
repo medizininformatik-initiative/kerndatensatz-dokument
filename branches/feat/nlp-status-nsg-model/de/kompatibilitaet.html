@@ -436,8 +436,8 @@ sie führt jedes Paket mit der Version, gegen die dieser Build erstellt wurde.</
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">securityLabel</code></td>
-      <td>1..<em>, required (<code class="language-plaintext highlighter-rouge">ISiKConfidentialityCodes</code>: N | 0..</em>, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
-      <td>R | V)</td>
+      <td>1..*, required (<code class="language-plaintext highlighter-rouge">ISiKConfidentialityCodes</code>: N | R | V)</td>
+      <td>0..*, Must Support, extensible (<code class="language-plaintext highlighter-rouge">security-labels</code>)</td>
       <td>⚠️ MII KDS Dokument macht Sicherheitslabels optional</td>
     </tr>
     <tr>
@@ -570,8 +570,8 @@ sie führt jedes Paket mit der Version, gegen die dieser Build erstellt wurde.</
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>MII Patient | 0..1, Must Support, nur Reference(Patient | MII PatientPseudonymisiert)</td>
       <td>0..1, Reference(Patient | Practitioner | Group | Device | KBV_PR_Base_*)</td>
+      <td>0..1, Must Support, nur Reference(Patient | MII Patient | MII PatientPseudonymisiert)</td>
       <td>⚠️ Gleiche Kardinalität, aber MII schränkt die zulässigen Referenzziele ein</td>
     </tr>
     <tr>
@@ -624,8 +624,8 @@ sie führt jedes Paket mit der Version, gegen die dieser Build erstellt wurde.</
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context.encounter</code></td>
-      <td>MII KontaktGesundheitseinrichtung)</td>
-      <td>0..<em>, Must Support, Reference(Encounter | 0..</em>, Reference(Encounter | EpisodeOfCare)</td>
+      <td>0..*, Reference(Encounter | EpisodeOfCare)</td>
+      <td>0..*, Must Support, Reference(Encounter | MII KontaktGesundheitseinrichtung)</td>
       <td>⚠️ MII lässt <code class="language-plaintext highlighter-rouge">EpisodeOfCare</code> nicht zu</td>
     </tr>
   </tbody>
@@ -676,8 +676,8 @@ sie führt jedes Paket mit der Version, gegen die dieser Build erstellt wurde.</
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">status</code></td>
-      <td>superseded | 1..1, Must Support, required (<code class="language-plaintext highlighter-rouge">document-reference-status</code>: current | entered-in-error)</td>
       <td>1..1, required (<code class="language-plaintext highlighter-rouge">DocumentReferenceStats</code>: nur current | superseded)</td>
+      <td>1..1, Must Support, required (<code class="language-plaintext highlighter-rouge">document-reference-status</code>: current | superseded | entered-in-error)</td>
       <td>⚠️ <code class="language-plaintext highlighter-rouge">entered-in-error</code> ist in IHE MHD nicht zulässig</td>
     </tr>
     <tr>
@@ -700,8 +700,8 @@ sie führt jedes Paket mit der Version, gegen die dieser Build erstellt wurde.</
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">subject</code></td>
-      <td>MII Patient | 0..1, Must Support, Reference(Patient | MII PatientPseudonymisiert)</td>
       <td>1..1, Reference(Patient)</td>
+      <td>0..1, Must Support, Reference(Patient | MII Patient | MII PatientPseudonymisiert)</td>
       <td>⚠️ IHE MHD fordert die Patientenreferenz</td>
     </tr>
     <tr>
@@ -916,7 +916,7 @@ die Liste der berücksichtigten externen Standards führt die Seite
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 04:49+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 20:15+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

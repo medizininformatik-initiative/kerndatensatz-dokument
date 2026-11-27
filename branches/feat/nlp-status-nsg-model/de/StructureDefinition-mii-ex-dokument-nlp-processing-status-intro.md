@@ -16,7 +16,7 @@ Die NLP Extension stellt hierfür ein Codesystem bereit, mit dem die verschieden
 Das Codesystem der NLP Extension ist hierarchisch aufgebaut und umfasst zwei Ebenen: Level 1 (Lvl 1) und Level 2 (Lvl 2). Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: `annotated`, Lvl 2: `deid`, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde.
 
 Die Nutzung beider Hierarchieebenen ist nicht verpflichtend. Abhängig vom jeweiligen Anwendungsszenario kann frei entschieden werden, ob nur der übergeordnete Status (Lvl 1) oder zusätzlich eine spezifische Ausdifferenzierung über Lvl 2 verwendet wird.
-Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden. Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden. Die Regeln im Abschnitt [Kombinationsregeln](#kombinationsregeln) prüfen das.
+Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. `deid` muss auch zwingend das dazugehörige Lvl 1 `annotated` verwendet werden. Andernfalls könnte `deid` als vollständig de-identifiziertes Dokument missverstanden werden.
 
 Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationsprojekts, das bereits aus einem Quellsystem extrahiert und anonymisiert wurde. Bis zum aktuellen Bearbeitungsstand können mehrere Verarbeitungsschritte erfolgt sein, beispielsweise:
 
@@ -38,21 +38,6 @@ Ein Dokument trägt oft mehrere Status zugleich, etwa `preprocessed` und `format
 Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand des Dokuments; Empfänger werten alle aus. Ihre Reihenfolge trägt keine Bedeutung. Die Abfolge der Verarbeitungsschritte geben die Beziehungen zwischen den Dokumenten an (`relatesTo`).
 
 In FHIR stehen mehrere Codings eines `CodeableConcept` üblicherweise für dasselbe Konzept. In dieser Extension stehen sie für verschiedene, gemeinsam erreichte Status. Diese Form bleibt gültig, damit bereits nach dem Vorbild der Beispiele erzeugte Dokumente gültig bleiben.
-
-### Kombinationsregeln
-
-Die folgenden Regeln formalisieren die Beschreibung oben. Sie sind am [Dokument-Profil](StructureDefinition-mii-pr-dokument-dokument.html) definiert, gelten über alle Codings und Wiederholungen und stehen dort in der Tabelle der Constraints.
-
-| Regel | Inhalt |
-| --- | --- |
-| `mii-iv-dokument-nlp-1` | `unprocessed` DARF NICHT zusammen mit einem anderen Status angegeben werden. |
-| `mii-iv-dokument-nlp-2` | Jeder Status SOLLTE nur einmal angegeben werden. |
-| `mii-iv-dokument-nlp-3` | `format-change` und `content-change` MÜSSEN zusammen mit `preprocessed` angegeben werden. |
-| `mii-iv-dokument-nlp-4` | `preanno`, `deid` und `semantic` MÜSSEN zusammen mit `annotated` angegeben werden. |
-| `mii-iv-dokument-nlp-5` | `preanno` SOLLTE zusammen mit `deid` oder `semantic` angegeben werden. |
-{: .grid}
-
-Die Regeln werden als Best Practice geprüft: Validatoren melden einen Verstoß als Warnung und weisen die Ressource nicht ab. Das gilt auch für die mit MUSS oder DARF NICHT formulierten Regeln (`mii-iv-dokument-nlp-1`, `-3` und `-4`): Sie legen fest, was die Daten erfüllen müssen, werden aber nur als Best Practice geprüft, damit bestehende Daten nicht abgewiesen werden. Beim HL7 FHIR Validator legt die Option `-best-practice` fest, wie streng sie gemeldet werden (`hint`, `warning` als Standard, `error` oder `ignore`); sie gilt für alle Best-Practice-Regeln zugleich.
 
 ### Suche
 

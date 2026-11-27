@@ -152,7 +152,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "name" : "MII_PR_Dokument_Dokument",
   "title" : "MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2026-11-27T04:49:22+00:00",
+  "date" : "2026-11-27T20:15:07+00:00",
   "publisher" : "NUM-DIZ",
   "contact" : [{
     "name" : "NUM-DIZ",
@@ -203,127 +203,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
   "differential" : {
     "element" : [{
       "id" : "DocumentReference",
-      "path" : "DocumentReference",
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-          "valueBoolean" : true
-        }],
-        "key" : "mii-iv-dokument-nlp-1",
-        "severity" : "warning",
-        "human" : "Der NLP-Verarbeitungsstatus `unprocessed` DARF NICHT zusammen mit einem anderen Status angegeben werden.",
-        "_human" : {
-          "extension" : [{
-            "extension" : [{
-              "url" : "lang",
-              "valueCode" : "en"
-            },
-            {
-              "url" : "content",
-              "valueString" : "The NLP processing status `unprocessed` SHALL NOT be given together with any other status."
-            }],
-            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-          }]
-        },
-        "expression" : "(extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'unprocessed') implies extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this != 'unprocessed').empty()",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-          "valueBoolean" : true
-        }],
-        "key" : "mii-iv-dokument-nlp-2",
-        "severity" : "warning",
-        "human" : "Jeder NLP-Verarbeitungsstatus SOLLTE nur einmal angegeben werden.",
-        "_human" : {
-          "extension" : [{
-            "extension" : [{
-              "url" : "lang",
-              "valueCode" : "en"
-            },
-            {
-              "url" : "content",
-              "valueString" : "Each NLP processing status SHOULD be given only once."
-            }],
-            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-          }]
-        },
-        "expression" : "extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.isDistinct()",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-          "valueBoolean" : true
-        }],
-        "key" : "mii-iv-dokument-nlp-3",
-        "severity" : "warning",
-        "human" : "Die Status `format-change` und `content-change` MÜSSEN zusammen mit dem übergeordneten Status `preprocessed` angegeben werden.",
-        "_human" : {
-          "extension" : [{
-            "extension" : [{
-              "url" : "lang",
-              "valueCode" : "en"
-            },
-            {
-              "url" : "content",
-              "valueString" : "The statuses `format-change` and `content-change` SHALL be given together with their parent status `preprocessed`."
-            }],
-            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-          }]
-        },
-        "expression" : "extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this in ('format-change' | 'content-change')).exists() implies (extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'preprocessed')",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-          "valueBoolean" : true
-        }],
-        "key" : "mii-iv-dokument-nlp-4",
-        "severity" : "warning",
-        "human" : "Die Status `preanno`, `deid` und `semantic` MÜSSEN zusammen mit dem übergeordneten Status `annotated` angegeben werden.",
-        "_human" : {
-          "extension" : [{
-            "extension" : [{
-              "url" : "lang",
-              "valueCode" : "en"
-            },
-            {
-              "url" : "content",
-              "valueString" : "The statuses `preanno`, `deid` and `semantic` SHALL be given together with their parent status `annotated`."
-            }],
-            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-          }]
-        },
-        "expression" : "extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this in ('preanno' | 'deid' | 'semantic')).exists() implies (extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'annotated')",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-          "valueBoolean" : true
-        }],
-        "key" : "mii-iv-dokument-nlp-5",
-        "severity" : "warning",
-        "human" : "Empfehlung: Der Status `preanno` SOLLTE zusammen mit `deid` oder `semantic` angegeben werden.",
-        "_human" : {
-          "extension" : [{
-            "extension" : [{
-              "url" : "lang",
-              "valueCode" : "en"
-            },
-            {
-              "url" : "content",
-              "valueString" : "Recommendation: the status `preanno` SHOULD be given together with `deid` or `semantic`."
-            }],
-            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-          }]
-        },
-        "expression" : "(extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code contains 'preanno') implies extension('https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-processing-status').value.coding.code.where($this in ('deid' | 'semantic')).exists()",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      }]
+      "path" : "DocumentReference"
     },
     {
       "id" : "DocumentReference.meta",
@@ -379,7 +259,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "comment" : "Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung. Die Regeln mii-iv-dokument-nlp-1 bis mii-iv-dokument-nlp-5 prüfen die Kombination der Status als Best Practice.",
+      "comment" : "Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand; ihre Reihenfolge trägt keine Bedeutung.",
       "_comment" : {
         "extension" : [{
           "extension" : [{
@@ -388,7 +268,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
           },
           {
             "url" : "content",
-            "valueString" : "All codings of all repetitions together describe the processing state reached; their order carries no meaning. The rules mii-iv-dokument-nlp-1 to mii-iv-dokument-nlp-5 check the combination of statuses as best practice."
+            "valueString" : "All codings of all repetitions together describe the processing state reached; their order carries no meaning."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

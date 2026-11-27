@@ -447,7 +447,7 @@ Element ID:     <code>
 <p>Das Codesystem der NLP Extension ist hierarchisch aufgebaut und umfasst zwei Ebenen: Level 1 (Lvl 1) und Level 2 (Lvl 2). Lvl 1 beschreibt einen übergeordneten Prozessstatus, beispielsweise annotated. Lvl 2 dient der Spezifikation dieses Status. Ein Beispiel ist die Kombination Lvl 1: <code class="language-plaintext highlighter-rouge">annotated</code>, Lvl 2: <code class="language-plaintext highlighter-rouge">deid</code>, die anzeigt, dass ein Dokument mit de-identifizierenden Annotationen versehen wurde.</p>
 
 <p>Die Nutzung beider Hierarchieebenen ist nicht verpflichtend. Abhängig vom jeweiligen Anwendungsszenario kann frei entschieden werden, ob nur der übergeordnete Status (Lvl 1) oder zusätzlich eine spezifische Ausdifferenzierung über Lvl 2 verwendet wird.
-Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. <code class="language-plaintext highlighter-rouge">deid</code> muss auch zwingend das dazugehörige Lvl 1 <code class="language-plaintext highlighter-rouge">annotated</code> verwendet werden. Andernfalls könnte <code class="language-plaintext highlighter-rouge">deid</code> als vollständig de-identifiziertes Dokument missverstanden werden. Die Regeln im Abschnitt <a href="#kombinationsregeln">Kombinationsregeln</a> prüfen das.</p>
+Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. <code class="language-plaintext highlighter-rouge">deid</code> muss auch zwingend das dazugehörige Lvl 1 <code class="language-plaintext highlighter-rouge">annotated</code> verwendet werden. Andernfalls könnte <code class="language-plaintext highlighter-rouge">deid</code> als vollständig de-identifiziertes Dokument missverstanden werden.</p>
 
 <p>Ein exemplarischer Anwendungsfall ist ein Dokument innerhalb eines Annotationsprojekts, das bereits aus einem Quellsystem extrahiert und anonymisiert wurde. Bis zum aktuellen Bearbeitungsstand können mehrere Verarbeitungsschritte erfolgt sein, beispielsweise:</p>
 
@@ -473,43 +473,6 @@ Bitte beachten: wird eine Lvl 2 Spezifikation genutzt wie z.B. <code class="lang
 <p>Alle Codings aller Wiederholungen beschreiben zusammen den erreichten Verarbeitungsstand des Dokuments; Empfänger werten alle aus. Ihre Reihenfolge trägt keine Bedeutung. Die Abfolge der Verarbeitungsschritte geben die Beziehungen zwischen den Dokumenten an (<code class="language-plaintext highlighter-rouge">relatesTo</code>).</p>
 
 <p>In FHIR stehen mehrere Codings eines <code class="language-plaintext highlighter-rouge">CodeableConcept</code> üblicherweise für dasselbe Konzept. In dieser Extension stehen sie für verschiedene, gemeinsam erreichte Status. Diese Form bleibt gültig, damit bereits nach dem Vorbild der Beispiele erzeugte Dokumente gültig bleiben.</p>
-
-<h3 id="kombinationsregeln">Kombinationsregeln</h3>
-
-<p>Die folgenden Regeln formalisieren die Beschreibung oben. Sie sind am <a href="StructureDefinition-mii-pr-dokument-dokument.html">Dokument-Profil</a> definiert, gelten über alle Codings und Wiederholungen und stehen dort in der Tabelle der Constraints.</p>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th>Regel</th>
-      <th>Inhalt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-iv-dokument-nlp-1</code></td>
-      <td><code class="language-plaintext highlighter-rouge">unprocessed</code> DARF NICHT zusammen mit einem anderen Status angegeben werden.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-iv-dokument-nlp-2</code></td>
-      <td>Jeder Status SOLLTE nur einmal angegeben werden.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-iv-dokument-nlp-3</code></td>
-      <td><code class="language-plaintext highlighter-rouge">format-change</code> und <code class="language-plaintext highlighter-rouge">content-change</code> MÜSSEN zusammen mit <code class="language-plaintext highlighter-rouge">preprocessed</code> angegeben werden.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-iv-dokument-nlp-4</code></td>
-      <td><code class="language-plaintext highlighter-rouge">preanno</code>, <code class="language-plaintext highlighter-rouge">deid</code> und <code class="language-plaintext highlighter-rouge">semantic</code> MÜSSEN zusammen mit <code class="language-plaintext highlighter-rouge">annotated</code> angegeben werden.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-iv-dokument-nlp-5</code></td>
-      <td><code class="language-plaintext highlighter-rouge">preanno</code> SOLLTE zusammen mit <code class="language-plaintext highlighter-rouge">deid</code> oder <code class="language-plaintext highlighter-rouge">semantic</code> angegeben werden.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Die Regeln werden als Best Practice geprüft: Validatoren melden einen Verstoß als Warnung und weisen die Ressource nicht ab. Das gilt auch für die mit MUSS oder DARF NICHT formulierten Regeln (<code class="language-plaintext highlighter-rouge">mii-iv-dokument-nlp-1</code>, <code class="language-plaintext highlighter-rouge">-3</code> und <code class="language-plaintext highlighter-rouge">-4</code>): Sie legen fest, was die Daten erfüllen müssen, werden aber nur als Best Practice geprüft, damit bestehende Daten nicht abgewiesen werden. Beim HL7 FHIR Validator legt die Option <code class="language-plaintext highlighter-rouge">-best-practice</code> fest, wie streng sie gemeldet werden (<code class="language-plaintext highlighter-rouge">hint</code>, <code class="language-plaintext highlighter-rouge">warning</code> als Standard, <code class="language-plaintext highlighter-rouge">error</code> oder <code class="language-plaintext highlighter-rouge">ignore</code>); sie gilt für alle Best-Practice-Regeln zugleich.</p>
 
 <h3 id="suche">Suche</h3>
 
@@ -623,7 +586,7 @@ mit seiner zweistufigen Hierarchie; gebunden wird die Extension über das ValueS
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // c2525e20-45c7-4390-a483-46e272727ad6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 170f6ec2-02e0-4e5b-af6f-678e459307c9
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusD'), 'binding', document.getElementById('cbmii-ex-dokument-nlp-processing-statusD-binding').checked, document.getElementById('ppmii-ex-dokument-nlp-processing-statusD'));
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -766,7 +729,7 @@ filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusD'), 'o
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Plain text representation of the concept</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // c2525e20-45c7-4390-a483-46e272727ad6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 170f6ec2-02e0-4e5b-af6f-678e459307c9
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusS'), 'binding', document.getElementById('cbmii-ex-dokument-nlp-processing-statusS-binding').checked, document.getElementById('ppmii-ex-dokument-nlp-processing-statusS'));
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -972,7 +935,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Symbol in syntax defined by the system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // c2525e20-45c7-4390-a483-46e272727ad6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 170f6ec2-02e0-4e5b-af6f-678e459307c9
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusDA'), 'binding', document.getElementById('cbmii-ex-dokument-nlp-processing-statusDA-binding').checked, document.getElementById('ppmii-ex-dokument-nlp-processing-statusDA'));
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1111,7 +1074,7 @@ filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusDA'), '
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Plain text representation of the concept</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // c2525e20-45c7-4390-a483-46e272727ad6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 170f6ec2-02e0-4e5b-af6f-678e459307c9
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-dokument-nlp-processing-statusSA'), 'binding', document.getElementById('cbmii-ex-dokument-nlp-processing-statusSA-binding').checked, document.getElementById('ppmii-ex-dokument-nlp-processing-statusSA'));
 document.getElementById('cbmii-ex-dokument-nlp-processing-statusSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1301,7 +1264,7 @@ Summary
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.dokument#2027.0.0-ballot.2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 04:49+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 20:15+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
