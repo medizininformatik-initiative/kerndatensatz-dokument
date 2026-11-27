@@ -2,7 +2,17 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
-#
+
+# How the IG Publisher reads this file:
+# - Every non-empty line that does not start with "# " (hash, space) is a pattern; a lone "#" is a pattern
+#   too, so separate groups with empty lines.
+# - The last "# " line before a pattern is shown as its reason in the QA report, so end each group's
+#   comment with a one-line justification.
+# - A pattern matches a message case-insensitively, either exactly or with % at its start and/or end
+#   (not in the middle).
+# - The publisher in CI emits these messages in English; copy a message from qa.txt, without the
+#   "<resource>: <location>: " prefix.
+
 # The publisher cannot suppress ERRORs here; the four errors of a CI build are known and tracked:
 #   2x DocumentReference.context.event not in 'IHE XDS eventCodeList' — the IHE-D value set cannot be
 #      expanded (issue #33; watch the replacement package ihe-de.iti.xds-vs);
@@ -12,11 +22,9 @@
 #      resource, so no canonical with '/ImplementationGuide/' exists for it.
 # A local build against Ontoserver shows eight more (MimeType inference for attachment.contentType);
 # they do not occur with SU-TermServ in CI.
-#
-# Messages are emitted in the guide's language (German for jurisdiction DE); patterns must match that text.
-#
+
+# One line per resource: the resource name sits in the middle of the message, where % does not work.
 # The MII assigns no OIDs to its terminology resources; CDA/OID-based use is out of scope for this module.
-# (The publisher matches the full message text, so one line per resource.)
 The resource CodeSystem/mii-cs-dokument-nlp-processing-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 The resource ValueSet/mii-vs-dokument-einrichtungsart should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 The resource ValueSet/mii-vs-dokument-fachgebiet should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
@@ -27,5 +35,16 @@ The resource ValueSet/mii-vs-dokument-sct-dokument-typ should have an OID assign
 # The two build-terminology fragments (input/resources/README.md) carry no OIDs either.
 The resource CodeSystem/iso3166-2-fragment should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 The resource CodeSystem/unsd-m49-fragment should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-# Synthetic example identifier namespace of the fictitious 'Universitätsklinikum Musterstadt' (Encounter.identifier.system).
-URL-Wert 'http://uk-musterstadt.de/fid' löst nicht auf
+
+# Synthetic example identifier namespaces of the fictitious 'Universitätsklinikum Musterstadt' (Encounter and Patient identifier.system).
+No definition could be found for URL value 'http://uk-musterstadt.de/fid'
+No definition could be found for URL value 'https://uk-musterstadt.de/pid'
+
+# eld-20 fails on every path of the logical model StructureDefinition/mii-lm-dokument, for two reasons:
+# the root segment is the tail of its canonical URL (mii-lm-dokument, with hyphens), and the element names
+# are the capitalised German names of the information model decided by the NSG, which the logical model
+# has to follow. eld-20 is a warning for code generators, not a conformance rule, and FHIR exempts logical
+# models from this naming convention ("logical models are not required to do so", R4 ElementDefinition).
+# The pattern applies to the whole guide; only the logical model raises eld-20. Labor and Mikrobiologie suppress it with the same line.
+# Logical model element names follow the NSG information model; FHIR does not require logical models to meet the eld-20 naming convention.
+Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
